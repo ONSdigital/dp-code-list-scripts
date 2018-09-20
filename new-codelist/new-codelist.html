@@ -43,12 +43,19 @@
                     "`) ASSERT n.value IS UNIQUE;");
                 node.appendChild(textnode);
                 document.getElementById("constraint").appendChild(node);
+
                 let node2 = document.createElement("p");
+                let textnode2 = document.createTextNode("CREATE CONSTRAINT ON (n:`_code_list_" + codelist +
+                    "`) ASSERT n.edition IS UNIQUE;");
+                node2.appendChild(textnode2);
+                document.getElementById("constraint").appendChild(node2);
+                
+                let node3 = document.createElement("p");
                 let text = document.createTextNode("CREATE (node:`_code_list`:`_code_list_" + codelist +
                     "` { label:'" +
                     label + "', edition:'" + edition + "' });");
-                node2.appendChild(text);
-                document.getElementById("cypher").appendChild(node2);
+                node3.appendChild(text);
+                document.getElementById("cypher").appendChild(node3);
             }
             //the codes themselves need to be treated differnetly if Geo codes so check if this is
             if (label === "geography") {
