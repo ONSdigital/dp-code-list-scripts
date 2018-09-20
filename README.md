@@ -18,3 +18,10 @@ Note: Create codelist CSV to upload from v4 file by extracting the two coluns an
 
 ## Code-list scripts
 Contains a store of all cypher queries to populate Neo and load existing datasets. New codelists should also be stored here.
+
+## Import to a new development environment
+
+In order to import data in a development environment, the code lists must be present in the database first.
+
+Run this command to import code-lists required to test CPIH and ASHE locally:
+`cypher-shell < code-list-scripts/migration-scripts/codelist-dev.cypher`

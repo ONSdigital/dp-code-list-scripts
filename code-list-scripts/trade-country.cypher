@@ -602,9 +602,9 @@ MERGE (node:`_code`:`_code_trade-country` { value:'MZ' });
 
 MATCH (parent:`_code_list`:`_code_list_trade-country`),(node:`_code`:`_code_trade-country` { value:'MZ' }) MERGE (node)-[:usedBy { label:"Mozambique"}]->(parent);
 
-MERGE (node:`_code`:`_code_trade-country` { value:'' });
+MERGE (node:`_code`:`_code_trade-country` { value:'NA' });
 
-MATCH (parent:`_code_list`:`_code_list_trade-country`),(node:`_code`:`_code_trade-country` { value:'' }) MERGE (node)-[:usedBy { label:"Namibia"}]->(parent);
+MATCH (parent:`_code_list`:`_code_list_trade-country`),(node:`_code`:`_code_trade-country` { value:'NA' }) MERGE (node)-[:usedBy { label:"Namibia"}]->(parent);
 
 MERGE (node:`_code`:`_code_trade-country` { value:'NC' });
 
