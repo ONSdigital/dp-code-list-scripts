@@ -1,85 +1,122 @@
-CREATE (node:`_code_list`:`_code_list_mid-year-pop-age` { label:'age', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_mid-year-pop-age`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_uk-only` { label:'geography', edition:'one-off' });
 CREATE CONSTRAINT ON (n:`_code_geography`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_mid-year-pop-geography` { label:'geography', edition:'one-off' });
-CREATE (node:`_code_list`:`_code_list_65107A9f-7da3-4b41-a410-6f6d9fbd68c3` { label:'geography', edition:'one-off' });
-CREATE (node:`_code_list`:`_code_list_mid-year-pop-sex` { label:'sex', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_mid-year-pop-sex`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_cpi1dim1aggid` { label:'Aggregate', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_cpi1dim1aggid`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_cpih1dim1aggid` { label:'aggregate', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_cpih1dim1aggid`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_time` { label:'time', edition:'one-off' });CREATE (node:`_code_list`:`_code_list_ashe-working-pattern` { label:'workingpattern', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_ashe-working-pattern`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_ashe-table-7-geography` { label:'geography', edition:'one-off' });
-CREATE (node:`_code_list`:`_code_list_ashe-table-8-geography` { label:'geography', edition:'one-off' });
-CREATE (node:`_code_list`:`_code_list_opss-benefit-type` { label:'benefittype', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_opss-benefit-type`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_opss-contributor` { label:'contributor', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_opss-contributor`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_ashe-hours` { label:'hours', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_ashe-hours`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_opss-membership-type` { label:'membershiptype', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_opss-membership-type`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_opss-public-private-sector` { label:'publicprivatesector', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_opss-public-private-sector`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_opss-scheme-membership-sizeband` { label:'schememembershipsizeband', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_opss-scheme-membership-sizeband`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_ashe-statistics` { label:'statistics', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_ashe-statistics`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_opss-status` { label:'status', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_opss-status`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_ashe-sex` { label:'sex', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_ashe-sex`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_ashe-earnings` { label:'earnings', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_ashe-earnings`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_england-and-wales-only` { label:'geography', edition:'one-off' });
-CREATE (node:`_code_list`:`_code_list_crime-measurement-type` { label:'measurementtype', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_crime-measurement-type`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_crime-accommodation-type` { label:'accommodationtype', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_crime-accommodation-type`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_crime-sex` { label:'sex', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_crime-sex`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_crime-type` { label:'crimetype', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_crime-type`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_crime-age` { label:'age', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_crime-age`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_npp-sex` { label:'sex', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_npp-sex`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_npp-age` { label:'age', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_npp-age`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_calendar-years` { label:'time', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_calendar-years`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_npp-projection-type` { label:'projectiontype', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_npp-projection-type`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_npp-population-measure` { label:'populationmeasure', edition:'one-off' });
-CREATE CONSTRAINT ON (n:`_code_npp-population-measure`) ASSERT n.value IS UNIQUE;
 
-CREATE CONSTRAINT ON (n:`_code_list_cpi1dim1aggid`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_geography`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_cpih1dim1aggid`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_mid-year-pop-sex`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_calendar-years`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_geography`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_time`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_wellbeing-estimate`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_wellbeing-measureofwellbeing`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_ashe-hours`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_ashe-sex`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_year-ending`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_ashe-working-pattern`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_geography`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_ashe-statistics`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_opss-benefit-type`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_ashe-earnings`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_mid-year-pop-age`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_opss-membership-type`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_opss-contributor`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_opss-public-private-sector`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_opss-scheme-membership-sizeband`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_opss-status`) ASSERT n.edition IS UNIQUE;
-CREATE CONSTRAINT ON (n:`_code_list_geography`) ASSERT n.edition IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_mid-year-pop-age` { label:'age', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_mid-year-pop-age`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_mid-year-pop-age`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_uk-only` { label:'geography', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_uk-only`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_mid-year-pop-geography` { label:'geography', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_mid-year-pop-geography`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_mid-year-pop-sex` { label:'sex', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_mid-year-pop-sex`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_mid-year-pop-sex`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_cpi1dim1aggid` { label:'Aggregate', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_cpi1dim1aggid`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_cpi1dim1aggid`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_cpih1dim1aggid` { label:'aggregate', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_cpih1dim1aggid`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_cpih1dim1aggid`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_time` { label:'time', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_time`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_ashe-working-pattern` { label:'workingpattern', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_ashe-working-pattern`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_ashe-working-pattern`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_ashe-table-7-geography` { label:'geography', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_ashe-table-7-geography`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_ashe-table-8-geography` { label:'geography', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_ashe-table-8-geography`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_opss-benefit-type` { label:'benefittype', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_opss-benefit-type`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_opss-benefit-type`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_opss-contributor` { label:'contributor', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_opss-contributor`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_opss-contributor`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_ashe-hours` { label:'hours', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_ashe-hours`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_ashe-hours`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_opss-membership-type` { label:'membershiptype', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_opss-membership-type`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_opss-membership-type`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_opss-public-private-sector` { label:'publicprivatesector', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_opss-public-private-sector`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_opss-public-private-sector`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_opss-scheme-membership-sizeband` { label:'schememembershipsizeband', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_opss-scheme-membership-sizeband`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_opss-scheme-membership-sizeband`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_ashe-statistics` { label:'statistics', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_ashe-statistics`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_ashe-statistics`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_opss-status` { label:'status', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_opss-status`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_opss-status`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_ashe-sex` { label:'sex', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_ashe-sex`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_ashe-sex`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_ashe-earnings` { label:'earnings', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_ashe-earnings`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_ashe-earnings`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_england-and-wales-only` { label:'geography', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_england-and-wales-only`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_crime-measurement-type` { label:'measurementtype', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_crime-measurement-type`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_crime-measurement-type`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_crime-accommodation-type` { label:'accommodationtype', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_crime-accommodation-type`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_crime-accommodation-type`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_crime-sex` { label:'sex', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_crime-sex`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_crime-sex`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_crime-type` { label:'crimetype', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_crime-type`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_crime-type`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_crime-age` { label:'age', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_crime-age`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_crime-age`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_npp-sex` { label:'sex', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_npp-sex`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_npp-sex`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_npp-age` { label:'age', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_npp-age`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_npp-age`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_calendar-years` { label:'time', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_calendar-years`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_calendar-years`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_npp-projection-type` { label:'projectiontype', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_npp-projection-type`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_npp-projection-type`) ASSERT n.value IS UNIQUE;
+
+CREATE (node:`_code_list`:`_code_list_npp-population-measure` { label:'populationmeasure', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_npp-population-measure`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_npp-population-measure`) ASSERT n.value IS UNIQUE;
 
 MERGE (node:`_code`:`_code_mid-year-pop-age` { value:'44' });
 MATCH (parent:`_code_list`:`_code_list_mid-year-pop-age`),(node:`_code`:`_code_mid-year-pop-age` { value:'44' }) MERGE (node)-[:usedBy { label:"44"}]->(parent);
