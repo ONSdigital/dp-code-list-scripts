@@ -1,0 +1,26 @@
+CREATE (node:`_code_list`:`_code_list_npp-population-measure` { label:'populationmeasure', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_npp-population-measure`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_npp-population-measure`) ASSERT n.value IS UNIQUE;
+
+MERGE (node:`_code`:`_code_npp-population-measure` { value:'4' });
+MATCH (parent:`_code_list`:`_code_list_npp-population-measure`),(node:`_code`:`_code_npp-population-measure` { value:'4' }) MERGE (node)-[:usedBy { label:"International migration (in)"}]->(parent);
+MERGE (node:`_code`:`_code_npp-population-measure` { value:'11' });
+MATCH (parent:`_code_list`:`_code_list_npp-population-measure`),(node:`_code`:`_code_npp-population-measure` { value:'11' }) MERGE (node)-[:usedBy { label:"Total migration (net)"}]->(parent);
+MERGE (node:`_code`:`_code_npp-population-measure` { value:'9' });
+MATCH (parent:`_code_list`:`_code_list_npp-population-measure`),(node:`_code`:`_code_npp-population-measure` { value:'9' }) MERGE (node)-[:usedBy { label:"Total migration (in)"}]->(parent);
+MERGE (node:`_code`:`_code_npp-population-measure` { value:'1' });
+MATCH (parent:`_code_list`:`_code_list_npp-population-measure`),(node:`_code`:`_code_npp-population-measure` { value:'1' }) MERGE (node)-[:usedBy { label:"Births"}]->(parent);
+MERGE (node:`_code`:`_code_npp-population-measure` { value:'3' });
+MATCH (parent:`_code_list`:`_code_list_npp-population-measure`),(node:`_code`:`_code_npp-population-measure` { value:'3' }) MERGE (node)-[:usedBy { label:"Fertility assumptions"}]->(parent);
+MERGE (node:`_code`:`_code_npp-population-measure` { value:'8' });
+MATCH (parent:`_code_list`:`_code_list_npp-population-measure`),(node:`_code`:`_code_npp-population-measure` { value:'8' }) MERGE (node)-[:usedBy { label:"Population"}]->(parent);
+MERGE (node:`_code`:`_code_npp-population-measure` { value:'2' });
+MATCH (parent:`_code_list`:`_code_list_npp-population-measure`),(node:`_code`:`_code_npp-population-measure` { value:'2' }) MERGE (node)-[:usedBy { label:"Deaths"}]->(parent);
+MERGE (node:`_code`:`_code_npp-population-measure` { value:'10' });
+MATCH (parent:`_code_list`:`_code_list_npp-population-measure`),(node:`_code`:`_code_npp-population-measure` { value:'10' }) MERGE (node)-[:usedBy { label:"Total migration (out)"}]->(parent);
+MERGE (node:`_code`:`_code_npp-population-measure` { value:'7' });
+MATCH (parent:`_code_list`:`_code_list_npp-population-measure`),(node:`_code`:`_code_npp-population-measure` { value:'7' }) MERGE (node)-[:usedBy { label:"Mortality assumptions"}]->(parent);
+MERGE (node:`_code`:`_code_npp-population-measure` { value:'5' });
+MATCH (parent:`_code_list`:`_code_list_npp-population-measure`),(node:`_code`:`_code_npp-population-measure` { value:'5' }) MERGE (node)-[:usedBy { label:"International migration (out)"}]->(parent);
+MERGE (node:`_code`:`_code_npp-population-measure` { value:'6' });
+MATCH (parent:`_code_list`:`_code_list_npp-population-measure`),(node:`_code`:`_code_npp-population-measure` { value:'6' }) MERGE (node)-[:usedBy { label:"International migration (net)"}]->(parent);
