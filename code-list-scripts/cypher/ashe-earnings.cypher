@@ -1,0 +1,20 @@
+CREATE (node:`_code_list`:`_code_list_ashe-earnings` { label:'earnings', edition:'one-off' });
+CREATE CONSTRAINT ON (n:`_code_list_ashe-earnings`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_ashe-earnings`) ASSERT n.value IS UNIQUE;
+
+MERGE (node:`_code`:`_code_ashe-earnings` { value:'weekly-pay-excluding-overtime' });
+MATCH (parent:`_code_list`:`_code_list_ashe-earnings`),(node:`_code`:`_code_ashe-earnings` { value:'weekly-pay-excluding-overtime' }) MERGE (node)-[:usedBy { label:"Weekly pay - Excluding overtime"}]->(parent);
+MERGE (node:`_code`:`_code_ashe-earnings` { value:'overtime-pay' });
+MATCH (parent:`_code_list`:`_code_list_ashe-earnings`),(node:`_code`:`_code_ashe-earnings` { value:'overtime-pay' }) MERGE (node)-[:usedBy { label:"Overtime pay"}]->(parent);
+MERGE (node:`_code`:`_code_ashe-earnings` { value:'hourly-pay-gross' });
+MATCH (parent:`_code_list`:`_code_list_ashe-earnings`),(node:`_code`:`_code_ashe-earnings` { value:'hourly-pay-gross' }) MERGE (node)-[:usedBy { label:"Hourly pay - Gross"}]->(parent);
+MERGE (node:`_code`:`_code_ashe-earnings` { value:'weekly-pay-gross' });
+MATCH (parent:`_code_list`:`_code_list_ashe-earnings`),(node:`_code`:`_code_ashe-earnings` { value:'weekly-pay-gross' }) MERGE (node)-[:usedBy { label:"Weekly pay - Gross"}]->(parent);
+MERGE (node:`_code`:`_code_ashe-earnings` { value:'basic-pay-including-other-pay' });
+MATCH (parent:`_code_list`:`_code_list_ashe-earnings`),(node:`_code`:`_code_ashe-earnings` { value:'basic-pay-including-other-pay' }) MERGE (node)-[:usedBy { label:"Basic Pay - Including other pay"}]->(parent);
+MERGE (node:`_code`:`_code_ashe-earnings` { value:'hourly-pay-excluding-overtime' });
+MATCH (parent:`_code_list`:`_code_list_ashe-earnings`),(node:`_code`:`_code_ashe-earnings` { value:'hourly-pay-excluding-overtime' }) MERGE (node)-[:usedBy { label:"Hourly pay - Excluding overtime"}]->(parent);
+MERGE (node:`_code`:`_code_ashe-earnings` { value:'annual-pay-gross' });
+MATCH (parent:`_code_list`:`_code_list_ashe-earnings`),(node:`_code`:`_code_ashe-earnings` { value:'annual-pay-gross' }) MERGE (node)-[:usedBy { label:"Annual pay - Gross"}]->(parent);
+MERGE (node:`_code`:`_code_ashe-earnings` { value:'annual-pay-incentive' });
+MATCH (parent:`_code_list`:`_code_list_ashe-earnings`),(node:`_code`:`_code_ashe-earnings` { value:'annual-pay-incentive' }) MERGE (node)-[:usedBy { label:"Annual pay - Incentive"}]->(parent);
