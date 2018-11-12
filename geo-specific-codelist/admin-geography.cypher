@@ -1,4 +1,5 @@
 CREATE CONSTRAINT ON (n:`_code_admin-geography`) ASSERT n.code IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_admin-geography`) ASSERT n.code IS UNIQUE;
 CREATE (node:`_code_list`:`_code_list_admin-geography` { label:"geography", edition:"one-off" });
 MERGE (node:`_code`:`_code_admin-geography` { value:"E05008942" });
 MATCH (parent:`_code_list`:`_code_list_admin-geography`),                (node:`_code`:`_code_admin-geography` { value:"E05008942" })                 MERGE (node)-[:usedBy { label:"Burn Valley"}]->(parent);
