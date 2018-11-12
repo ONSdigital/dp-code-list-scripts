@@ -6,3 +6,4 @@ cypher-shell < ./migration-scripts/year-ending.cypher
 cypher-shell < ./migration-scripts/wellbeing-geography.cypher
 cypher-shell < ./cypher/wellbeing-estimate.cypher
 cypher-shell < ./cypher/wellbeing-measureofwellbeing.cypher
+cypher-shell < ./cypher/yyyy-yy.cypher
