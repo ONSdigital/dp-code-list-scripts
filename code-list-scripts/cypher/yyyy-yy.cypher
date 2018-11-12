@@ -1,4 +1,5 @@
 CREATE CONSTRAINT ON (n:`_code_yyyy-yy`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_yyyy-yy`) ASSERT n.value IS UNIQUE;
 CREATE (node:`_code_list`:`_code_list_yyyy-yy` { label:'time', edition:'one-off' });
 MERGE (node:`_code`:`_code_yyyy-yy` { value:"2008-09" });
 MATCH (parent:`_code_list`:`_code_list_yyyy-yy`),(node:`_code`:`_code_yyyy-yy` { value:"2008-09" }) MERGE (node)-[:usedBy { label:"2008-09"}]->(parent);
