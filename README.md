@@ -25,3 +25,4 @@ In order to import data in a development environment, the code lists must be pre
 
 Run this command to import code-lists required to test CPIH and ASHE locally:
 `cypher-shell < code-list-scripts/migration-scripts/codelist-dev.cypher`
+
