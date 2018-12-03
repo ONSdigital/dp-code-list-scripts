@@ -1,0 +1,17 @@
+CREATE CONSTRAINT ON (n:`_code_construction-series-type`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_construction-series-type`) ASSERT n.value IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_construction-series-type` { label:'seriestype', edition:'one-off' });
+MERGE (node:`_code`:`_code_construction-series-type` { value:"g11-4dp" });
+MATCH (parent:`_code_list`:`_code_list_construction-series-type`),(node:`_code`:`_code_construction-series-type` { value:"g11-4dp" }) MERGE (node)-[:usedBy { label:"Period on period"}]->(parent);
+MERGE (node:`_code`:`_code_construction-series-type` { value:"g121-4dp" });
+MATCH (parent:`_code_list`:`_code_list_construction-series-type`),(node:`_code`:`_code_construction-series-type` { value:"g121-4dp" }) MERGE (node)-[:usedBy { label:"Month on month a year ago"}]->(parent);
+MERGE (node:`_code`:`_code_construction-series-type` { value:"g33-4dp" });
+MATCH (parent:`_code_list`:`_code_list_construction-series-type`),(node:`_code`:`_code_construction-series-type` { value:"g33-4dp" }) MERGE (node)-[:usedBy { label:"Three months on previous three months"}]->(parent);
+MERGE (node:`_code`:`_code_construction-series-type` { value:"g123-4dp" });
+MATCH (parent:`_code_list`:`_code_list_construction-series-type`),(node:`_code`:`_code_construction-series-type` { value:"g123-4dp" }) MERGE (node)-[:usedBy { label:"Three months on three months a year ago"}]->(parent);
+MERGE (node:`_code`:`_code_construction-series-type` { value:"g41-4dp" });
+MATCH (parent:`_code_list`:`_code_list_construction-series-type`),(node:`_code`:`_code_construction-series-type` { value:"g41-4dp" }) MERGE (node)-[:usedBy { label:"Quarter on quarter a year ago"}]->(parent);
+MERGE (node:`_code`:`_code_construction-series-type` { value:"oc" });
+MATCH (parent:`_code_list`:`_code_list_construction-series-type`),(node:`_code`:`_code_construction-series-type` { value:"oc" }) MERGE (node)-[:usedBy { label:"Output Constrained"}]->(parent);
+MERGE (node:`_code`:`_code_construction-series-type` { value:"ic" });
+MATCH (parent:`_code_list`:`_code_list_construction-series-type`),(node:`_code`:`_code_construction-series-type` { value:"ic" }) MERGE (node)-[:usedBy { label:"Index Constrained"}]->(parent);
