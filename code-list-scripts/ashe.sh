@@ -13,3 +13,7 @@ cypher-shell < ./cypher/ashe-hours.cypher
 cypher-shell < ./cypher/ashe-earnings.cypher
 cypher-shell < ./cypher/ashe-statistics.cypher
 cypher-shell < ./migration-scripts/ashe-geography.cypher
+cypher-shell < ./cypher/ashe-hours-and-earnings.cypher
+cypher-shell < ./cypher/ashe-workplace-or-residence.cypher
+cypher-shell < ../geo-specific-codelist/admin-geography.cypher
+cypher-shell < ../geo-specific-codelist/parliamentary-geography.cypher
