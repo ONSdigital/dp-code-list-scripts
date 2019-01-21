@@ -1,0 +1,11 @@
+CREATE CONSTRAINT ON (n:`_code_birth-cohort`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_birth-cohort`) ASSERT n.value IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_birth-cohort` { label:'birthcohort', edition:'one-off' });
+MERGE (node:`_code`:`_code_birth-cohort` { value:"birth-males" });
+MATCH (parent:`_code_list`:`_code_list_birth-cohort`),(node:`_code`:`_code_birth-cohort` { value:"birth-males" }) MERGE (node)-[:usedBy { label:"Males at birth"}]->(parent);
+MERGE (node:`_code`:`_code_birth-cohort` { value:"birth-females" });
+MATCH (parent:`_code_list`:`_code_list_birth-cohort`),(node:`_code`:`_code_birth-cohort` { value:"birth-females" }) MERGE (node)-[:usedBy { label:"Females at birth"}]->(parent);
+MERGE (node:`_code`:`_code_birth-cohort` { value:"age-65-males" });
+MATCH (parent:`_code_list`:`_code_list_birth-cohort`),(node:`_code`:`_code_birth-cohort` { value:"age-65-males" }) MERGE (node)-[:usedBy { label:"Males at age 65"}]->(parent);
+MERGE (node:`_code`:`_code_birth-cohort` { value:"age-65-females" });
+MATCH (parent:`_code_list`:`_code_list_birth-cohort`),(node:`_code`:`_code_birth-cohort` { value:"age-65-females" }) MERGE (node)-[:usedBy { label:"Females at age 65"}]->(parent);
