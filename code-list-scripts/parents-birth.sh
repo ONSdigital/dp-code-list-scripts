@@ -5,4 +5,4 @@
 cypher-shell < ./migration-scripts/calendar-years.cypher
 cypher-shell < ../geo-specific-codelist/admin-geography.cypher
 cypher-shell < ./cypher/parents-country-birth.cypher
-cypher-shell < ./cypher/type-of-number.cypher
+cypher-shell < ./cypher/unit-of-measure.cypher
