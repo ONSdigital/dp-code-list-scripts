@@ -9,3 +9,4 @@ cypher-shell < ./cypher/unit-of-measure.cypher
 cypher-shell < ./cypher/mmm-mmm-yyyy.cypher
 cypher-shell < ./migration-scripts/ashe-sex.cypher
 cypher-shell < ./cypher/seasonal-adjustment.cypher
+cypher-shell < ./migration-scripts/uk-only.cypher
