@@ -10,6 +10,7 @@
 # NPP - cross border rates
 
 cypher-shell < ./migration-scripts/calendar-years.cypher
+cypher-shell < ./cypher/yyyy-yy.cypher
 cypher-shell < ./migration-scripts/uk-only.cypher
 cypher-shell < ./cypher/npp-all-projectiontype.cypher
 cypher-shell < ./cypher/npp-age.cypher
