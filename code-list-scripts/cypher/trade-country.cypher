@@ -244,7 +244,7 @@ MATCH (parent:`_code_list`:`_code_list_trade-country`),                (node:`_c
 MERGE (node:`_code`:`_code_trade-country` { value:"GR" });
 MATCH (parent:`_code_list`:`_code_list_trade-country`),                (node:`_code`:`_code_trade-country` { value:"GR" })                 MERGE (node)-[:usedBy { label:"GR - Greece"}]->(parent);
 MERGE (node:`_code`:`_code_trade-country` { value:"IE" });
-MATCH (parent:`_code_list`:`_code_list_trade-country`),                (node:`_code`:`_code_trade-country` { value:"IE" })                 MERGE (node)-[:usedBy { label:"IE - Irish Republic"}]->(parent);
+MATCH (parent:`_code_list`:`_code_list_trade-country`),                (node:`_code`:`_code_trade-country` { value:"IE" })                 MERGE (node)-[:usedBy { label:"IE - Ireland"}]->(parent);
 MERGE (node:`_code`:`_code_trade-country` { value:"IT" });
 MATCH (parent:`_code_list`:`_code_list_trade-country`),                (node:`_code`:`_code_trade-country` { value:"IT" })                 MERGE (node)-[:usedBy { label:"IT - Italy"}]->(parent);
 MERGE (node:`_code`:`_code_trade-country` { value:"JE" });
@@ -399,8 +399,8 @@ MERGE (node:`_code`:`_code_trade-country` { value:"europe-exc-european-union" })
 MATCH (parent:`_code_list`:`_code_list_trade-country`),                (node:`_code`:`_code_trade-country` { value:"europe-exc-european-union" })                 MERGE (node)-[:usedBy { label:"Europe exc European Union"}]->(parent);
 MERGE (node:`_code`:`_code_trade-country` { value:"north-america" });
 MATCH (parent:`_code_list`:`_code_list_trade-country`),                (node:`_code`:`_code_trade-country` { value:"north-america" })                 MERGE (node)-[:usedBy { label:"North America"}]->(parent);
-MERGE (node:`_code`:`_code_trade-country` { value:"oceania" });
-MATCH (parent:`_code_list`:`_code_list_trade-country`),                (node:`_code`:`_code_trade-country` { value:"oceania" })                 MERGE (node)-[:usedBy { label:"Oceania"}]->(parent);
+MERGE (node:`_code`:`_code_trade-country` { value:"australia-oceania-and-polar-regions" });
+MATCH (parent:`_code_list`:`_code_list_trade-country`),                (node:`_code`:`_code_trade-country` { value:"australia-oceania-and-polar-regions" })                 MERGE (node)-[:usedBy { label:"Australia, Oceania and Polar Regions"}]->(parent);
 MERGE (node:`_code`:`_code_trade-country` { value:"africa" });
 MATCH (parent:`_code_list`:`_code_list_trade-country`),                (node:`_code`:`_code_trade-country` { value:"africa" })                 MERGE (node)-[:usedBy { label:"Africa"}]->(parent);
 MERGE (node:`_code`:`_code_trade-country` { value:"AL" });
