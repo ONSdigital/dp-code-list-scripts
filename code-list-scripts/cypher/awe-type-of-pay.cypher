@@ -1,0 +1,13 @@
+CREATE CONSTRAINT ON (n:`_code_awe-type-of-pay`) ASSERT n.code IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_awe-type-of-pay`) ASSERT n.code IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_awe-type-of-pay` { label:"typeofpay", edition:"one-off" });
+MERGE (node:`_code`:`_code_awe-type-of-pay` { value:"awe-total-pay" });
+MATCH (parent:`_code_list`:`_code_list_awe-type-of-pay`),                (node:`_code`:`_code_awe-type-of-pay` { value:"awe-total-pay" })                 MERGE (node)-[:usedBy { label:"AWE Total Pay"}]->(parent);
+MERGE (node:`_code`:`_code_awe-type-of-pay` { value:"awe-bonus-pay" });
+MATCH (parent:`_code_list`:`_code_list_awe-type-of-pay`),                (node:`_code`:`_code_awe-type-of-pay` { value:"awe-bonus-pay" })                 MERGE (node)-[:usedBy { label:"AWE Bonus Pay"}]->(parent);
+MERGE (node:`_code`:`_code_awe-type-of-pay` { value:"awe-regular-pay" });
+MATCH (parent:`_code_list`:`_code_list_awe-type-of-pay`),                (node:`_code`:`_code_awe-type-of-pay` { value:"awe-regular-pay" })                 MERGE (node)-[:usedBy { label:"AWE Regular Pay"}]->(parent);
+MERGE (node:`_code`:`_code_awe-type-of-pay` { value:"awe-total-pay-index" });
+MATCH (parent:`_code_list`:`_code_list_awe-type-of-pay`),                (node:`_code`:`_code_awe-type-of-pay` { value:"awe-total-pay-index" })                 MERGE (node)-[:usedBy { label:"AWE Total Pay Index"}]->(parent);
+MERGE (node:`_code`:`_code_awe-type-of-pay` { value:"awe-regular-pay-index" });
+MATCH (parent:`_code_list`:`_code_list_awe-type-of-pay`),                (node:`_code`:`_code_awe-type-of-pay` { value:"awe-regular-pay-index" })                 MERGE (node)-[:usedBy { label:"AWE Regular Pay Index"}]->(parent);
