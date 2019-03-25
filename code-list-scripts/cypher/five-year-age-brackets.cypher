@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_five-year-age-brackets`) ASSERT n.value IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_five-year-age-brackets`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_five-year-age-brackets` { label:'age', edition:'one-off' });
+CREATE (node:`_code_list`:`_code_list_five-year-age-brackets` { label:'agebrackets', edition:'one-off' });
 MERGE (node:`_code`:`_code_five-year-age-brackets` { value:"0-4" });
 MATCH (parent:`_code_list`:`_code_list_five-year-age-brackets`),(node:`_code`:`_code_five-year-age-brackets` { value:"0-4" }) MERGE (node)-[:usedBy { label:"0-4"}]->(parent);
 MERGE (node:`_code`:`_code_five-year-age-brackets` { value:"5-9" });
@@ -43,4 +43,15 @@ MERGE (node:`_code`:`_code_five-year-age-brackets` { value:"90-94" });
 MATCH (parent:`_code_list`:`_code_list_five-year-age-brackets`),(node:`_code`:`_code_five-year-age-brackets` { value:"90-94" }) MERGE (node)-[:usedBy { label:"90-94"}]->(parent);
 MERGE (node:`_code`:`_code_five-year-age-brackets` { value:"95+" });
 MATCH (parent:`_code_list`:`_code_list_five-year-age-brackets`),(node:`_code`:`_code_five-year-age-brackets` { value:"95+" }) MERGE (node)-[:usedBy { label:"95+"}]->(parent);
+MERGE (node:`_code`:`_code_five-year-age-brackets` { value:"all-ages" });
+MATCH (parent:`_code_list`:`_code_list_five-year-age-brackets`),(node:`_code`:`_code_five-year-age-brackets` { value:"all-ages" }) MERGE (node)-[:usedBy { label:"All Ages"}]->(parent);
+MERGE (node:`_code`:`_code_five-year-age-brackets` { value:"under-1" });
+MATCH (parent:`_code_list`:`_code_list_five-year-age-brackets`),(node:`_code`:`_code_five-year-age-brackets` { value:"under-1" }) MERGE (node)-[:usedBy { label:"Under 1"}]->(parent);
+MERGE (node:`_code`:`_code_five-year-age-brackets` { value:"1-4" });
+MATCH (parent:`_code_list`:`_code_list_five-year-age-brackets`),(node:`_code`:`_code_five-year-age-brackets` { value:"1-4" }) MERGE (node)-[:usedBy { label:"1-4"}]->(parent);
+MERGE (node:`_code`:`_code_five-year-age-brackets` { value:"directly-age-standardised-rate" });
+MATCH (parent:`_code_list`:`_code_list_five-year-age-brackets`),(node:`_code`:`_code_five-year-age-brackets` { value:"directly-age-standardised-rate" }) MERGE (node)-[:usedBy { label:"Directly age-standardised rate"}]->(parent);
+
+
+
 
