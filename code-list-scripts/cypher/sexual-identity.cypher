@@ -1,0 +1,13 @@
+CREATE CONSTRAINT ON (n:`_code_sexual-identity`) ASSERT n.code IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_sexual-identity`) ASSERT n.code IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_sexual-identity` { label:"sexualidentity", edition:"one-off" });
+MERGE (node:`_code`:`_code_sexual-identity` { value:"heterosexual-or-straight" });
+MATCH (parent:`_code_list`:`_code_list_sexual-identity`),                (node:`_code`:`_code_sexual-identity` { value:"heterosexual-or-straight" })                 MERGE (node)-[:usedBy { label:"Heterosexual or straight"}]->(parent);
+MERGE (node:`_code`:`_code_sexual-identity` { value:"gay-or-lesbian" });
+MATCH (parent:`_code_list`:`_code_list_sexual-identity`),                (node:`_code`:`_code_sexual-identity` { value:"gay-or-lesbian" })                 MERGE (node)-[:usedBy { label:"Gay or lesbian"}]->(parent);
+MERGE (node:`_code`:`_code_sexual-identity` { value:"bisexual" });
+MATCH (parent:`_code_list`:`_code_list_sexual-identity`),                (node:`_code`:`_code_sexual-identity` { value:"bisexual" })                 MERGE (node)-[:usedBy { label:"Bisexual"}]->(parent);
+MERGE (node:`_code`:`_code_sexual-identity` { value:"other" });
+MATCH (parent:`_code_list`:`_code_list_sexual-identity`),                (node:`_code`:`_code_sexual-identity` { value:"other" })                 MERGE (node)-[:usedBy { label:"Other"}]->(parent);
+MERGE (node:`_code`:`_code_sexual-identity` { value:"dont-know-or-refuse" });
+MATCH (parent:`_code_list`:`_code_list_sexual-identity`),                (node:`_code`:`_code_sexual-identity` { value:"dont-know-or-refuse" })                 MERGE (node)-[:usedBy { label:"Don't know or refuse"}]->(parent);
