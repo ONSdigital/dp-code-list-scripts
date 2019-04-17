@@ -1,0 +1,26 @@
+g.V().hasLabel('_code_list_seasonal-adjustment').has('edition', 'one-off').fold().coalesce(unfold(),
+	addV('_code_list_seasonal-adjustment::_code_list').
+		property(single, 'edition', 'one-off').
+		property(single, 'label', 'seasonaladjustment')
+	).next()
+
+g.V().hasLabel('_code_seasonal-adjustment').has('value', 'non-seasonal-adjustment').fold().coalesce(unfold(),
+	addV('_code::_code_seasonal-adjustment').property(single, 'value', 'non-seasonal-adjustment')).next()
+
+g.V().hasLabel('_code_seasonal-adjustment').has('value', 'non-seasonal-adjustment').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_seasonal-adjustment').has('value', 'non-seasonal-adjustment').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_seasonal-adjustment').has('edition', 'one-off')
+		).property(single, 'label', 'Non Seasonal Adjustment')).
+		next()
+
+g.V().hasLabel('_code_seasonal-adjustment').has('value', 'seasonal-adjustment').fold().coalesce(unfold(),
+	addV('_code::_code_seasonal-adjustment').property(single, 'value', 'seasonal-adjustment')).next()
+
+g.V().hasLabel('_code_seasonal-adjustment').has('value', 'seasonal-adjustment').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_seasonal-adjustment').has('value', 'seasonal-adjustment').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_seasonal-adjustment').has('edition', 'one-off')
+		).property(single, 'label', 'Seasonal Adjustment')).
+		next()
+

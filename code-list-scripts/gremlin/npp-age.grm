@@ -1,0 +1,1306 @@
+g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off').fold().coalesce(unfold(),
+	addV('_code_list_npp-age::_code_list').
+		property(single, 'edition', 'one-off').
+		property(single, 'label', 'age')
+	).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '31').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '31')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '31').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '31').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '31')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '75').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '75')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '75').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '75').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '75')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '59').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '59')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '59').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '59').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '59')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '12').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '12')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '12').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '12').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '12')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '101').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '101')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '101').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '101').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '101')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '70').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '70')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '70').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '70').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '70')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '78').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '78')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '78').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '78').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '78')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '100').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '100')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '100').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '100').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '100')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '88').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '88')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '88').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '88').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '88')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '33').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '33')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '33').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '33').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '33')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '11').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '11')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '11').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '11').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '11')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '61').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '61')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '61').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '61').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '61')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '42').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '42')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '42').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '42').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '42')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '47').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '47')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '47').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '47').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '47')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '110').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '110')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '110').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '110').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '110')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '13').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '13')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '13').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '13').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '13')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '30').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '30')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '30').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '30').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '30')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '14').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '14')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '14').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '14').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '14')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '35').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '35')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '35').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '35').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '35')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '56').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '56')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '56').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '56').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '56')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '105').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '105')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '105').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '105').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '105')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '79').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '79')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '79').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '79').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '79')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '94').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '94')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '94').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '94').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '94')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '120').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '120')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '120').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '120').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '120')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '29').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '29')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '29').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '29').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '29')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '115').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '115')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '115').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '115').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '115')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '62').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '62')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '62').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '62').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '62')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '5').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '5')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '5').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '5').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '5')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '116').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '116')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '116').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '116').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '116')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '71').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '71')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '71').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '71').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '71')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '89').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '89')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '89').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '89').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '89')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '10').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '10')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '10').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '10').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '10')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '90').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '90')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '90').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '90').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '90')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '123').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '123')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '123').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '123').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '123')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '24').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '24')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '24').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '24').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '24')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '4').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '4')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '4').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '4').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '4')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '124').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '124')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '124').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '124').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '124')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '68').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '68')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '68').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '68').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '68')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '51').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '51')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '51').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '51').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '51')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '41').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '41')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '41').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '41').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '41')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '67').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '67')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '67').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '67').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '67')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '103').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '103')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '103').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '103').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '103')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '91').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '91')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '91').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '91').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '91')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '1').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '1')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '1').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '1').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '1')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '32').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '32')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '32').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '32').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '32')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '19').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '19')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '19').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '19').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '19')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '34').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '34')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '34').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '34').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '34')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '27').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '27')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '27').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '27').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '27')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '53').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '53')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '53').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '53').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '53')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '114').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '114')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '114').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '114').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '114')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '92').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '92')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '92').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '92').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '92')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '9').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '9')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '9').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '9').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '9')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '125').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '125')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '125').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '125').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '125')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '99').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '99')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '99').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '99').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '99')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '0').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '0')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '0').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '0').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '0')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '118').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '118')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '118').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '118').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '118')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '55').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '55')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '55').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '55').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '55')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '28').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '28')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '28').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '28').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '28')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '3').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '3')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '3').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '3').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '3')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '17').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '17')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '17').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '17').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '17')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '49').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '49')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '49').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '49').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '49')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '7').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '7')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '7').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '7').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '7')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '93').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '93')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '93').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '93').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '93')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '38').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '38')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '38').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '38').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '38')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '20').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '20')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '20').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '20').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '20')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '82').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '82')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '82').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '82').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '82')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '84').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '84')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '84').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '84').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '84')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '72').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '72')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '72').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '72').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '72')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '43').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '43')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '43').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '43').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '43')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '110-and-over').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '110-and-over')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '110-and-over').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '110-and-over').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '110 and over')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '108').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '108')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '108').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '108').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '108')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '86').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '86')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '86').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '86').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '86')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '52').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '52')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '52').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '52').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '52')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '46').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '46')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '46').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '46').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '46')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '76').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '76')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '76').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '76').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '76')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '57').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '57')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '57').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '57').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '57')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '37').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '37')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '37').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '37').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '37')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '45').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '45')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '45').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '45').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '45')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '69').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '69')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '69').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '69').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '69')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '85').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '85')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '85').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '85').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '85')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '73').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '73')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '73').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '73').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '73')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '98').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '98')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '98').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '98').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '98')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '119').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '119')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '119').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '119').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '119')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '122').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '122')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '122').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '122').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '122')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '102').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '102')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '102').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '102').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '102')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '15').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '15')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '15').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '15').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '15')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '81').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '81')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '81').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '81').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '81')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '50').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '50')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '50').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '50').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '50')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '105-109').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '105-109')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '105-109').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '105-109').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '105 - 109')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '8').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '8')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '8').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '8').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '8')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '23').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '23')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '23').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '23').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '23')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '2').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '2')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '2').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '2').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '2')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '48').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '48')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '48').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '48').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '48')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '96').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '96')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '96').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '96').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '96')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '97').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '97')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '97').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '97').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '97')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', 'birth').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', 'birth')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', 'birth').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', 'birth').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', 'Birth')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '44').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '44')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '44').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '44').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '44')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '74').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '74')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '74').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '74').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '74')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '39').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '39')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '39').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '39').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '39')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '109').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '109')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '109').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '109').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '109')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '21').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '21')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '21').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '21').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '21')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '58').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '58')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '58').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '58').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '58')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '40').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '40')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '40').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '40').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '40')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '95').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '95')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '95').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '95').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '95')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '113').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '113')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '113').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '113').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '113')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '54').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '54')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '54').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '54').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '54')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '121').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '121')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '121').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '121').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '121')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '112').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '112')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '112').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '112').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '112')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '107').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '107')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '107').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '107').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '107')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '16').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '16')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '16').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '16').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '16')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '18').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '18')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '18').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '18').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '18')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '83').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '83')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '83').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '83').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '83')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '36').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '36')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '36').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '36').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '36')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '105+').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '105+')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '105+').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '105+').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '105+')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '60').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '60')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '60').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '60').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '60')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '65').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '65')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '65').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '65').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '65')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '26').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '26')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '26').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '26').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '26')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '111').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '111')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '111').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '111').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '111')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '117').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '117')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '117').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '117').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '117')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '22').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '22')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '22').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '22').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '22')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '80').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '80')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '80').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '80').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '80')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '87').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '87')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '87').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '87').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '87')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '63').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '63')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '63').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '63').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '63')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '64').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '64')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '64').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '64').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '64')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '66').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '66')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '66').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '66').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '66')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '6').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '6')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '6').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '6').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '6')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '77').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '77')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '77').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '77').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '77')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '106').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '106')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '106').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '106').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '106')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '104').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '104')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '104').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '104').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '104')).
+		next()
+
+g.V().hasLabel('_code_npp-age').has('value', '25').fold().coalesce(unfold(),
+	addV('_code::_code_npp-age').property(single, 'value', '25')).next()
+
+g.V().hasLabel('_code_npp-age').has('value', '25').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_npp-age').has('value', '25').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_npp-age').has('edition', 'one-off')
+		).property(single, 'label', '25')).
+		next()
+

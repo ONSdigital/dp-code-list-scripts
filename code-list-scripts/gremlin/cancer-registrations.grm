@@ -1,0 +1,66 @@
+g.V().hasLabel('_code_list_cancer-registrations').has('edition', 'one-off').fold().coalesce(unfold(),
+	addV('_code_list_cancer-registrations::_code_list').
+		property(single, 'edition', 'one-off').
+		property(single, 'label', 'cancerregistrations')
+	).next()
+
+g.V().hasLabel('_code_cancer-registrations').has('value', 'registrations-of-newly-diagnosed-cases').fold().coalesce(unfold(),
+	addV('_code::_code_cancer-registrations').property(single, 'value', 'registrations-of-newly-diagnosed-cases')).next()
+
+g.V().hasLabel('_code_cancer-registrations').has('value', 'registrations-of-newly-diagnosed-cases').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_cancer-registrations').has('value', 'registrations-of-newly-diagnosed-cases').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_cancer-registrations').has('edition', 'one-off')
+		).property(single, 'label', 'Registrations of newly diagnosed cases')).
+		next()
+
+g.V().hasLabel('_code_cancer-registrations').has('value', 'rates-of-newly-diagnosed-cases').fold().coalesce(unfold(),
+	addV('_code::_code_cancer-registrations').property(single, 'value', 'rates-of-newly-diagnosed-cases')).next()
+
+g.V().hasLabel('_code_cancer-registrations').has('value', 'rates-of-newly-diagnosed-cases').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_cancer-registrations').has('value', 'rates-of-newly-diagnosed-cases').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_cancer-registrations').has('edition', 'one-off')
+		).property(single, 'label', 'Rates of newly diagnosed cases')).
+		next()
+
+g.V().hasLabel('_code_cancer-registrations').has('value', 'registrations-of-death').fold().coalesce(unfold(),
+	addV('_code::_code_cancer-registrations').property(single, 'value', 'registrations-of-death')).next()
+
+g.V().hasLabel('_code_cancer-registrations').has('value', 'registrations-of-death').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_cancer-registrations').has('value', 'registrations-of-death').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_cancer-registrations').has('edition', 'one-off')
+		).property(single, 'label', 'Registrations of death')).
+		next()
+
+g.V().hasLabel('_code_cancer-registrations').has('value', 'rates-of-death').fold().coalesce(unfold(),
+	addV('_code::_code_cancer-registrations').property(single, 'value', 'rates-of-death')).next()
+
+g.V().hasLabel('_code_cancer-registrations').has('value', 'rates-of-death').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_cancer-registrations').has('value', 'rates-of-death').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_cancer-registrations').has('edition', 'one-off')
+		).property(single, 'label', 'Rates of death')).
+		next()
+
+g.V().hasLabel('_code_cancer-registrations').has('value', 'standardised-registration-ratios').fold().coalesce(unfold(),
+	addV('_code::_code_cancer-registrations').property(single, 'value', 'standardised-registration-ratios')).next()
+
+g.V().hasLabel('_code_cancer-registrations').has('value', 'standardised-registration-ratios').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_cancer-registrations').has('value', 'standardised-registration-ratios').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_cancer-registrations').has('edition', 'one-off')
+		).property(single, 'label', 'Standardised registration ratios')).
+		next()
+
+g.V().hasLabel('_code_cancer-registrations').has('value', 'mortality-to-incidence-ratios').fold().coalesce(unfold(),
+	addV('_code::_code_cancer-registrations').property(single, 'value', 'mortality-to-incidence-ratios')).next()
+
+g.V().hasLabel('_code_cancer-registrations').has('value', 'mortality-to-incidence-ratios').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_cancer-registrations').has('value', 'mortality-to-incidence-ratios').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_cancer-registrations').has('edition', 'one-off')
+		).property(single, 'label', 'Mortality to incidence ratios')).
+		next()
+

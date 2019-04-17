@@ -1,0 +1,336 @@
+g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off').fold().coalesce(unfold(),
+	addV('_code_list_two-year-intervals::_code_list').
+		property(single, 'edition', 'one-off').
+		property(single, 'label', 'time')
+	).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2001–03').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2001–03')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2001–03').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2001–03').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2001–03')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2002-04').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2002-04')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2002-04').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2002-04').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2002-04')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2003-05').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2003-05')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2003-05').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2003-05').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2003-05')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2004-06').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2004-06')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2004-06').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2004-06').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2004-06')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2005-07').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2005-07')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2005-07').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2005-07').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2005-07')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2006-08').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2006-08')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2006-08').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2006-08').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2006-08')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2007-09').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2007-09')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2007-09').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2007-09').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2007-09')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2008-10').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2008-10')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2008-10').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2008-10').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2008-10')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2009-11').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2009-11')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2009-11').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2009-11').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2009-11')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2010-12').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2010-12')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2010-12').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2010-12').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2010-12')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2011-13').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2011-13')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2011-13').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2011-13').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2011-13')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2012-14').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2012-14')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2012-14').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2012-14').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2012-14')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2013-15').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2013-15')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2013-15').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2013-15').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2013-15')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2014-16').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2014-16')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2014-16').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2014-16').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2014-16')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2015-17').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2015-17')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2015-17').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2015-17').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2015-17')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2016-18').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2016-18')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2016-18').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2016-18').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2016-18')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2017-19').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2017-19')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2017-19').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2017-19').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2017-19')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2018-20').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2018-20')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2018-20').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2018-20').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2018-20')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2019-21').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2019-21')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2019-21').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2019-21').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2019-21')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2020-22').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2020-22')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2020-22').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2020-22').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2020-22')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2021-23').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2021-23')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2021-23').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2021-23').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2021-23')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2022-24').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2022-24')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2022-24').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2022-24').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2022-24')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1990–92').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '1990–92')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1990–92').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '1990–92').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '1990–92')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1992–94').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '1992–94')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1992–94').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '1992–94').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '1992–94')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1994–96').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '1994–96')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1994–96').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '1994–96').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '1994–96')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1996–98').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '1996–98')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1996–98').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '1996–98').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '1996–98')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1991–93').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '1991–93')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1991–93').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '1991–93').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '1991–93')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1993–95').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '1993–95')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1993–95').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '1993–95').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '1993–95')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1995–97').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '1995–97')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1995–97').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '1995–97').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '1995–97')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1997–99').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '1997–99')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1997–99').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '1997–99').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '1997–99')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1998–00').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '1998–00')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1998–00').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '1998–00').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '1998–00')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1999–01').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '1999–01')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '1999–01').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '1999–01').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '1999–01')).
+		next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2000-02').fold().coalesce(unfold(),
+	addV('_code::_code_two-year-intervals').property(single, 'value', '2000-02')).next()
+
+g.V().hasLabel('_code_two-year-intervals').has('value', '2000-02').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_two-year-intervals').has('value', '2000-02').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_two-year-intervals').has('edition', 'one-off')
+		).property(single, 'label', '2000-02')).
+		next()
+

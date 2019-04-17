@@ -1,0 +1,26 @@
+g.V().hasLabel('_code_list_crime-measurement-type').has('edition', 'one-off').fold().coalesce(unfold(),
+	addV('_code_list_crime-measurement-type::_code_list').
+		property(single, 'edition', 'one-off').
+		property(single, 'label', 'measurementtype')
+	).next()
+
+g.V().hasLabel('_code_crime-measurement-type').has('value', 'prevalence-rate').fold().coalesce(unfold(),
+	addV('_code::_code_crime-measurement-type').property(single, 'value', 'prevalence-rate')).next()
+
+g.V().hasLabel('_code_crime-measurement-type').has('value', 'prevalence-rate').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_crime-measurement-type').has('value', 'prevalence-rate').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_crime-measurement-type').has('edition', 'one-off')
+		).property(single, 'label', 'Prevalence rate')).
+		next()
+
+g.V().hasLabel('_code_crime-measurement-type').has('value', 'incidence-rate').fold().coalesce(unfold(),
+	addV('_code::_code_crime-measurement-type').property(single, 'value', 'incidence-rate')).next()
+
+g.V().hasLabel('_code_crime-measurement-type').has('value', 'incidence-rate').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_crime-measurement-type').has('value', 'incidence-rate').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_crime-measurement-type').has('edition', 'one-off')
+		).property(single, 'label', 'Incidence rate')).
+		next()
+

@@ -1,0 +1,36 @@
+g.V().hasLabel('_code_list_opss-contributor').has('edition', 'one-off').fold().coalesce(unfold(),
+	addV('_code_list_opss-contributor::_code_list').
+		property(single, 'edition', 'one-off').
+		property(single, 'label', 'contributor')
+	).next()
+
+g.V().hasLabel('_code_opss-contributor').has('value', 'employer').fold().coalesce(unfold(),
+	addV('_code::_code_opss-contributor').property(single, 'value', 'employer')).next()
+
+g.V().hasLabel('_code_opss-contributor').has('value', 'employer').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_opss-contributor').has('value', 'employer').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_opss-contributor').has('edition', 'one-off')
+		).property(single, 'label', 'Employer')).
+		next()
+
+g.V().hasLabel('_code_opss-contributor').has('value', 'member').fold().coalesce(unfold(),
+	addV('_code::_code_opss-contributor').property(single, 'value', 'member')).next()
+
+g.V().hasLabel('_code_opss-contributor').has('value', 'member').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_opss-contributor').has('value', 'member').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_opss-contributor').has('edition', 'one-off')
+		).property(single, 'label', 'Member')).
+		next()
+
+g.V().hasLabel('_code_opss-contributor').has('value', 'all-contributors').fold().coalesce(unfold(),
+	addV('_code::_code_opss-contributor').property(single, 'value', 'all-contributors')).next()
+
+g.V().hasLabel('_code_opss-contributor').has('value', 'all-contributors').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_opss-contributor').has('value', 'all-contributors').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_opss-contributor').has('edition', 'one-off')
+		).property(single, 'label', 'All contributors')).
+		next()
+

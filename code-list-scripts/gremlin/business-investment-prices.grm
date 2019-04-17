@@ -1,0 +1,36 @@
+g.V().hasLabel('_code_list_business-investment-prices').has('edition', 'one-off').fold().coalesce(unfold(),
+	addV('_code_list_business-investment-prices::_code_list').
+		property(single, 'edition', 'one-off').
+		property(single, 'label', 'prices')
+	).next()
+
+g.V().hasLabel('_code_business-investment-prices').has('value', 'V').fold().coalesce(unfold(),
+	addV('_code::_code_business-investment-prices').property(single, 'value', 'V')).next()
+
+g.V().hasLabel('_code_business-investment-prices').has('value', 'V').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_business-investment-prices').has('value', 'V').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_business-investment-prices').has('edition', 'one-off')
+		).property(single, 'label', 'Current prices')).
+		next()
+
+g.V().hasLabel('_code_business-investment-prices').has('value', 'Y').fold().coalesce(unfold(),
+	addV('_code::_code_business-investment-prices').property(single, 'value', 'Y')).next()
+
+g.V().hasLabel('_code_business-investment-prices').has('value', 'Y').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_business-investment-prices').has('value', 'Y').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_business-investment-prices').has('edition', 'one-off')
+		).property(single, 'label', 'Previous year prices')).
+		next()
+
+g.V().hasLabel('_code_business-investment-prices').has('value', 'L').fold().coalesce(unfold(),
+	addV('_code::_code_business-investment-prices').property(single, 'value', 'L')).next()
+
+g.V().hasLabel('_code_business-investment-prices').has('value', 'L').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_business-investment-prices').has('value', 'L').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_business-investment-prices').has('edition', 'one-off')
+		).property(single, 'label', 'Chain linked volume')).
+		next()
+

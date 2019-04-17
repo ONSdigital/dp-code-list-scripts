@@ -1,0 +1,36 @@
+g.V().hasLabel('_code_list_ashe-hours').has('edition', 'one-off').fold().coalesce(unfold(),
+	addV('_code_list_ashe-hours::_code_list').
+		property(single, 'edition', 'one-off').
+		property(single, 'label', 'hours')
+	).next()
+
+g.V().hasLabel('_code_ashe-hours').has('value', 'paid-hours-worked-total').fold().coalesce(unfold(),
+	addV('_code::_code_ashe-hours').property(single, 'value', 'paid-hours-worked-total')).next()
+
+g.V().hasLabel('_code_ashe-hours').has('value', 'paid-hours-worked-total').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_ashe-hours').has('value', 'paid-hours-worked-total').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_ashe-hours').has('edition', 'one-off')
+		).property(single, 'label', 'Paid hours worked - Total')).
+		next()
+
+g.V().hasLabel('_code_ashe-hours').has('value', 'paid-hours-worked-basic').fold().coalesce(unfold(),
+	addV('_code::_code_ashe-hours').property(single, 'value', 'paid-hours-worked-basic')).next()
+
+g.V().hasLabel('_code_ashe-hours').has('value', 'paid-hours-worked-basic').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_ashe-hours').has('value', 'paid-hours-worked-basic').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_ashe-hours').has('edition', 'one-off')
+		).property(single, 'label', 'Paid hours worked - Basic')).
+		next()
+
+g.V().hasLabel('_code_ashe-hours').has('value', 'paid-hours-worked-overtime').fold().coalesce(unfold(),
+	addV('_code::_code_ashe-hours').property(single, 'value', 'paid-hours-worked-overtime')).next()
+
+g.V().hasLabel('_code_ashe-hours').has('value', 'paid-hours-worked-overtime').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_ashe-hours').has('value', 'paid-hours-worked-overtime').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_ashe-hours').has('edition', 'one-off')
+		).property(single, 'label', 'Paid hours worked - Overtime')).
+		next()
+

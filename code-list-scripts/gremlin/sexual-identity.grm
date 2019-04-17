@@ -1,0 +1,56 @@
+g.V().hasLabel('_code_list_sexual-identity').has('edition', 'one-off').fold().coalesce(unfold(),
+	addV('_code_list_sexual-identity::_code_list').
+		property(single, 'edition', 'one-off').
+		property(single, 'label', 'sexualidentity')
+	).next()
+
+g.V().hasLabel('_code_sexual-identity').has('value', 'heterosexual-or-straight').fold().coalesce(unfold(),
+	addV('_code::_code_sexual-identity').property(single, 'value', 'heterosexual-or-straight')).next()
+
+g.V().hasLabel('_code_sexual-identity').has('value', 'heterosexual-or-straight').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_sexual-identity').has('value', 'heterosexual-or-straight').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_sexual-identity').has('edition', 'one-off')
+		).property(single, 'label', 'Heterosexual or straight')).
+		next()
+
+g.V().hasLabel('_code_sexual-identity').has('value', 'gay-or-lesbian').fold().coalesce(unfold(),
+	addV('_code::_code_sexual-identity').property(single, 'value', 'gay-or-lesbian')).next()
+
+g.V().hasLabel('_code_sexual-identity').has('value', 'gay-or-lesbian').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_sexual-identity').has('value', 'gay-or-lesbian').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_sexual-identity').has('edition', 'one-off')
+		).property(single, 'label', 'Gay or lesbian')).
+		next()
+
+g.V().hasLabel('_code_sexual-identity').has('value', 'bisexual').fold().coalesce(unfold(),
+	addV('_code::_code_sexual-identity').property(single, 'value', 'bisexual')).next()
+
+g.V().hasLabel('_code_sexual-identity').has('value', 'bisexual').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_sexual-identity').has('value', 'bisexual').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_sexual-identity').has('edition', 'one-off')
+		).property(single, 'label', 'Bisexual')).
+		next()
+
+g.V().hasLabel('_code_sexual-identity').has('value', 'other').fold().coalesce(unfold(),
+	addV('_code::_code_sexual-identity').property(single, 'value', 'other')).next()
+
+g.V().hasLabel('_code_sexual-identity').has('value', 'other').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_sexual-identity').has('value', 'other').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_sexual-identity').has('edition', 'one-off')
+		).property(single, 'label', 'Other')).
+		next()
+
+g.V().hasLabel('_code_sexual-identity').has('value', 'dont-know-or-refuse').fold().coalesce(unfold(),
+	addV('_code::_code_sexual-identity').property(single, 'value', 'dont-know-or-refuse')).next()
+
+g.V().hasLabel('_code_sexual-identity').has('value', 'dont-know-or-refuse').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_sexual-identity').has('value', 'dont-know-or-refuse').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_sexual-identity').has('edition', 'one-off')
+		).property(single, 'label', 'Don't know or refuse')).
+		next()
+

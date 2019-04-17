@@ -1,0 +1,2736 @@
+g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off').fold().coalesce(unfold(),
+	addV('_code_list_trade-country::_code_list').
+		property(single, 'edition', 'one-off').
+		property(single, 'label', 'country')
+	).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'DZ').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'DZ')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'DZ').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'DZ').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'DZ - Algeria')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'EG').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'EG')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'EG').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'EG').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'EG - Egypt')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LY').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'LY')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LY').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'LY').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'LY - Libya')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MR').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'MR')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MR').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'MR').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'MR - Mauritania')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MA').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'MA')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MA').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'MA').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'MA - Morocco')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SD').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SD')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SD').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SD').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SD - Sudan')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'sudan-ex').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'sudan-ex')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'sudan-ex').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'sudan-ex').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Sudan (Ex)')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TN').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'TN')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TN').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'TN').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'TN - Tunisia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'western-sahara').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'western-sahara')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'western-sahara').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'western-sahara').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Western Sahara')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AO').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'AO')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AO').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'AO').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'AO - Angola')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BJ').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BJ')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BJ').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BJ').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BJ - Benin')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BW').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BW')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BW').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BW').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BW - Botswana')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BF').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BF')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BF').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BF').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BF - Burkina Faso')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BI').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BI')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BI').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BI').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BI - Burundi')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CM').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CM')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CM').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CM').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CM - Cameroon')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CV').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CV')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CV').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CV').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CV - Cape Verde')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CF').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CF')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CF').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CF').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CF - Central African Republic')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TD').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'TD')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TD').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'TD').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'TD - Chad')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KM').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'KM')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KM').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'KM').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'KM - Comoros')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CD').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CD')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CD').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CD').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CD - Congo (Democratic Republic)')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CG').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CG')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CG').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CG').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CG - Congo (Republic)')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'DJ').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'DJ')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'DJ').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'DJ').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'DJ - Djibouti')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GQ').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'GQ')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GQ').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'GQ').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'GQ - Equatorial Guinea')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ER').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'ER')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ER').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'ER').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'ER - Eritrea')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ET').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'ET')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ET').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'ET').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'ET - Ethiopia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GA').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'GA')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GA').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'GA').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'GA - Gabon')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GM').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'GM')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GM').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'GM').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'GM - Gambia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GH').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'GH')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GH').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'GH').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'GH - Ghana')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GN').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'GN')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GN').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'GN').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'GN - Guinea')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GW').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'GW')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GW').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'GW').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'GW - Guinea Bissau')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CI').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CI')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CI').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CI').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CI - Ivory Coast')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KE').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'KE')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KE').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'KE').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'KE - Kenya')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LS').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'LS')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LS').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'LS').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'LS - Lesotho')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LR').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'LR')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LR').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'LR').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'LR - Liberia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MG').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'MG')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MG').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'MG').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'MG - Madagascar')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MW').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'MW')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MW').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'MW').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'MW - Malawi')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ML').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'ML')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ML').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'ML').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'ML - Mali')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MU').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'MU')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MU').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'MU').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'MU - Mauritius')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'mayotte').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'mayotte')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'mayotte').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'mayotte').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Mayotte')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MZ').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'MZ')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MZ').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'MZ').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'MZ - Mozambique')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NA').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'NA')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NA').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'NA').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'NA - Namibia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NE').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'NE')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NE').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'NE').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'NE - Niger')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NG').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'NG')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NG').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'NG').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'NG - Nigeria')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'reunion').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'reunion')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'reunion').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'reunion').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Reunion')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'RW').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'RW')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'RW').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'RW').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'RW - Rwanda')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ST').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'ST')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ST').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'ST').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'ST - Sao Tome & Principe')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SN').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SN')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SN').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SN').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SN - Senegal')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SC').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SC')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SC').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SC').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SC - Seychelles')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SL').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SL')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SL').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SL').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SL - Sierra Leone')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SO').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SO')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SO').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SO').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SO - Somalia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ZA').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'ZA')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ZA').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'ZA').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'ZA - South Africa')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SS').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SS')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SS').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SS').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SS - South Sudan')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SH').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SH')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SH').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SH').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SH - St. Helena')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SZ').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SZ')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SZ').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SZ').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SZ - Swaziland')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TZ').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'TZ')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TZ').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'TZ').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'TZ - Tanzania')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TG').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'TG')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TG').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'TG').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'TG - Togo')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'UG').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'UG')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'UG').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'UG').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'UG - Uganda')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ZM').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'ZM')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ZM').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'ZM').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'ZM - Zambia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ZW').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'ZW')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ZW').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'ZW').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'ZW - Zimbabwe')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CN').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CN')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CN').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CN').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CN - China')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'HK').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'HK')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'HK').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'HK').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'HK - Hong Kong')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'JP').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'JP')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'JP').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'JP').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'JP - Japan')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MO').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'MO')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MO').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'MO').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'MO - Macao')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MN').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'MN')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MN').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'MN').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'MN - Mongolia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KP').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'KP')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KP').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'KP').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'KP - North Korea')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KR').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'KR')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KR').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'KR').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'KR - South Korea')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TW').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'TW')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TW').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'TW').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'TW - Taiwan')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AF').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'AF')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AF').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'AF').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'AF - Afghanistan')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BH').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BH')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BH').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BH').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BH - Bahrain')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'IR').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'IR')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'IR').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'IR').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'IR - Iran')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'IQ').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'IQ')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'IQ').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'IQ').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'IQ - Iraq')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'IL').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'IL')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'IL').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'IL').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'IL - Israel')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'JO').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'JO')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'JO').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'JO').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'JO - Jordan')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KZ').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'KZ')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KZ').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'KZ').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'KZ - Kazakhstan')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KW').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'KW')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KW').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'KW').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'KW - Kuwait')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KG').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'KG')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KG').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'KG').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'KG - Kyrgyz Republic')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LB').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'LB')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LB').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'LB').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'LB - Lebanon')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PS').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'PS')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PS').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'PS').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'PS - Occupied Palestinian Territory')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'OM').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'OM')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'OM').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'OM').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'OM - Oman')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'QA').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'QA')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'QA').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'QA').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'QA - Qatar')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SA').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SA')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SA').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SA').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SA - Saudi Arabia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SY').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SY')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SY').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SY').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SY - Syria')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TJ').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'TJ')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TJ').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'TJ').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'TJ - Tajikistan')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TM').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'TM')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TM').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'TM').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'TM - Turkmenistan')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AE').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'AE')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AE').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'AE').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'AE - United Arab Emirates')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'UZ').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'UZ')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'UZ').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'UZ').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'UZ - Uzbekistan')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'YE').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'YE')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'YE').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'YE').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'YE - Yemen')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BD').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BD')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BD').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BD').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BD - Bangladesh')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BT').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BT')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BT').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BT').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BT - Bhutan')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'IO').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'IO')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'IO').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'IO').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'IO - British Indian Ocean Territory')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'IN').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'IN')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'IN').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'IN').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'IN - India')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MV').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'MV')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MV').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'MV').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'MV - Maldives')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NP').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'NP')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NP').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'NP').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'NP - Nepal')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PK').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'PK')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PK').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'PK').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'PK - Pakistan')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LK').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'LK')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LK').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'LK').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'LK - Sri Lanka')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BN').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BN')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BN').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BN').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BN - Brunei')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KH').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'KH')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KH').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'KH').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'KH - Cambodia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TL').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'TL')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TL').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'TL').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'TL - East Timor')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ID').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'ID')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ID').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'ID').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'ID - Indonesia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LA').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'LA')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LA').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'LA').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'LA - Laos')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MY').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'MY')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MY').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'MY').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'MY - Malaysia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MM').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'MM')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MM').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'MM').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'MM - Myanmar')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PH').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'PH')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PH').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'PH').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'PH - Philippines')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SG').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SG')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SG').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SG').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SG - Singapore')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TH').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'TH')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TH').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'TH').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'TH - Thailand')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'VN').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'VN')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'VN').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'VN').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'VN - Vietnam')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'european-union-eu15').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'european-union-eu15')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'european-union-eu15').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'european-union-eu15').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'European Union EU15')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'european-union-eu2').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'european-union-eu2')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'european-union-eu2').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'european-union-eu2').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'European Union EU2')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'european-union-eu8').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'european-union-eu8')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'european-union-eu8').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'european-union-eu8').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'European Union EU8')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'other-european-union').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'other-european-union')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'other-european-union').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'other-european-union').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Other European Union')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'aland-islands').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'aland-islands')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'aland-islands').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'aland-islands').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Aland Islands')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AT').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'AT')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AT').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'AT').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'AT - Austria')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'azores-and-madeira').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'azores-and-madeira')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'azores-and-madeira').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'azores-and-madeira').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Azores and Madeira')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BE').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BE')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BE').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BE').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BE - Belgium')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'canary-islands').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'canary-islands')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'canary-islands').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'canary-islands').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Canary Islands')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'DK').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'DK')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'DK').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'DK').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'DK - Denmark')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'FI').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'FI')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'FI').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'FI').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'FI - Finland')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'FR').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'FR')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'FR').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'FR').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'FR - France')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'DE').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'DE')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'DE').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'DE').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'DE - Germany')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GI').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'GI')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GI').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'GI').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'GI - Gibraltar')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GR').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'GR')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GR').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'GR').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'GR - Greece')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'IE').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'IE')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'IE').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'IE').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'IE - Ireland')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'IT').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'IT')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'IT').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'IT').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'IT - Italy')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'JE').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'JE')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'JE').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'JE').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'JE - Jersey')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LU').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'LU')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LU').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'LU').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'LU - Luxembourg')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NL').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'NL')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NL').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'NL').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'NL - Netherlands')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PT').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'PT')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PT').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'PT').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'PT - Portugal')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ES').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'ES')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ES').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'ES').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'ES - Spain')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'spain-and-balearic-islands').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'spain-and-balearic-islands')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'spain-and-balearic-islands').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'spain-and-balearic-islands').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Spain and Balearic Islands')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SE').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SE')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SE').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SE').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SE - Sweden')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BG').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BG')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BG').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BG').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BG - Bulgaria')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'RO').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'RO')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'RO').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'RO').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'RO - Romania')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CZ').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CZ')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CZ').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CZ').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CZ - Czech Republic')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'EE').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'EE')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'EE').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'EE').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'EE - Estonia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'HU').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'HU')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'HU').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'HU').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'HU - Hungary')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LV').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'LV')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LV').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'LV').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'LV - Latvia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LT').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'LT')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LT').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'LT').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'LT - Lithuania')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PL').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'PL')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PL').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'PL').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'PL - Poland')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SK').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SK')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SK').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SK').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SK - Slovakia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SI').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SI')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SI').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SI').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SI - Slovenia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'HR').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'HR')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'HR').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'HR').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'HR - Croatia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CY').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CY')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CY').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CY').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CY - Cyprus')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'cyprus-ex').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'cyprus-ex')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'cyprus-ex').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'cyprus-ex').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Cyprus (Ex)')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MT').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'MT')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MT').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'MT').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'MT - Malta')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AI').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'AI')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AI').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'AI').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'AI - Anguilla')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AG').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'AG')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AG').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'AG').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'AG - Antigua & Barbuda')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AR').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'AR')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AR').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'AR').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'AR - Argentina')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AW').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'AW')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AW').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'AW').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'AW - Aruba')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BS').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BS')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BS').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BS').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BS - Bahamas')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BB').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BB')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BB').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BB').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BB - Barbados')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BZ').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BZ')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BZ').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BZ').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BZ - Belize')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BM').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BM')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BM').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BM').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BM - Bermuda')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BO').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BO')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BO').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BO').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BO - Bolivia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BQ').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BQ')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BQ').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BQ').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BQ - Bonaire, Sint Eustatius and Saba')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BR').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BR')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BR').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BR').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BR - Brazil')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'VG').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'VG')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'VG').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'VG').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'VG - British Virgin Islands')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KY').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'KY')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KY').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'KY').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'KY - Cayman Islands')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CL').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CL')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CL').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CL').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CL - Chile')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CO').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CO')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CO').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CO').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CO - Colombia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CR').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CR')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CR').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CR').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CR - Costa Rica')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CU').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CU')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CU').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CU').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CU - Cuba')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CW').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CW')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CW').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CW').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CW - Curacao')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'DM').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'DM')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'DM').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'DM').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'DM - Dominica')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'DO').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'DO')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'DO').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'DO').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'DO - Dominican Republic')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'EC').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'EC')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'EC').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'EC').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'EC - Ecuador')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SV').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SV')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SV').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SV').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SV - El Salvador')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'FK').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'FK')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'FK').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'FK').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'FK - Falkland Islands')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'french-guiana').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'french-guiana')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'french-guiana').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'french-guiana').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'French Guiana')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GD').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'GD')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GD').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'GD').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'GD - Grenada')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'guadeloupe').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'guadeloupe')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'guadeloupe').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'guadeloupe').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Guadeloupe')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GT').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'GT')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GT').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'GT').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'GT - Guatemala')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GY').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'GY')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GY').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'GY').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'GY - Guyana')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'HT').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'HT')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'HT').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'HT').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'HT - Haiti')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'HN').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'HN')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'HN').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'HN').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'HN - Honduras')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'JM').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'JM')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'JM').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'JM').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'JM - Jamaica')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'martinique').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'martinique')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'martinique').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'martinique').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Martinique')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MX').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'MX')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MX').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'MX').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'MX - Mexico')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MS').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'MS')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MS').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'MS').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'MS - Montserrat')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NI').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'NI')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NI').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'NI').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'NI - Nicaragua')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PA').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'PA')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PA').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'PA').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'PA - Panama')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PY').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'PY')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PY').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'PY').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'PY - Paraguay')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PE').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'PE')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PE').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'PE').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'PE - Peru')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SX').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SX')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SX').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SX').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SX - Sint Maarten')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GS').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'GS')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GS').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'GS').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'GS - South Georgia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'st-barthelemy').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'st-barthelemy')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'st-barthelemy').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'st-barthelemy').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'St Barthelemy')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KN').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'KN')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KN').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'KN').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'KN - St Kitts & Nevis')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LC').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'LC')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LC').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'LC').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'LC - St Lucia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'st-martin').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'st-martin')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'st-martin').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'st-martin').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'St Martin')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'st-pierre-and-miquelon').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'st-pierre-and-miquelon')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'st-pierre-and-miquelon').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'st-pierre-and-miquelon').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'St Pierre and Miquelon')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'VC').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'VC')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'VC').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'VC').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'VC - St Vincent')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SR').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SR')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SR').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SR').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SR - Suriname')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TT').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'TT')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TT').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'TT').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'TT - Trinidad & Tobago')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TC').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'TC')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TC').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'TC').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'TC - Turks & Caicos Islands')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'UY').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'UY')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'UY').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'UY').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'UY - Uruguay')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'VE').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'VE')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'VE').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'VE').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'VE - Venezuela')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'asia').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'asia')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'asia').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'asia').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Asia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'central-and-south-america').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'central-and-south-america')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'central-and-south-america').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'central-and-south-america').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Central and South America')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'europe-exc-european-union').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'europe-exc-european-union')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'europe-exc-european-union').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'europe-exc-european-union').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Europe exc European Union')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'north-america').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'north-america')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'north-america').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'north-america').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'North America')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'australia-oceania-and-polar-regions').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'australia-oceania-and-polar-regions')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'australia-oceania-and-polar-regions').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'australia-oceania-and-polar-regions').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Australia, Oceania and Polar Regions')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'africa').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'africa')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'africa').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'africa').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Africa')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AL').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'AL')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AL').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'AL').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'AL - Albania')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AD').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'AD')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AD').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'AD').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'AD - Andorra')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AM').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'AM')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AM').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'AM').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'AM - Armenia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AZ').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'AZ')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AZ').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'AZ').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'AZ - Azerbaijan')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BY').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BY')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BY').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BY').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BY - Belarus')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BA').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BA')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BA').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BA').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BA - Bosnia & Herzegovina')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BV').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'BV')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'BV').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'BV').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'BV - Bouvet Island')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'cyprus-northern').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'cyprus-northern')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'cyprus-northern').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'cyprus-northern').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Cyprus, Northern')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'czechoslovakia-ex').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'czechoslovakia-ex')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'czechoslovakia-ex').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'czechoslovakia-ex').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Czechoslovakia (Ex)')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'FO').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'FO')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'FO').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'FO').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'FO - Faroe Islands')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MK').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'MK')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MK').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'MK').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'MK - FYR Macedonia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GE').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'GE')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GE').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'GE').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'GE - Georgia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GL').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'GL')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GL').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'GL').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'GL - Greenland')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'IS').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'IS')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'IS').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'IS').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'IS - Iceland')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'XK').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'XK')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'XK').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'XK').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'XK - Kosovo')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LI').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'LI')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'LI').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'LI').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'LI - Liechtenstein')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MD').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'MD')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MD').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'MD').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'MD - Moldova')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'monaco').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'monaco')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'monaco').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'monaco').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Monaco')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ME').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'ME')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ME').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'ME').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'ME - Montenegro')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NO').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'NO')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NO').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'NO').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'NO - Norway')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'RU').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'RU')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'RU').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'RU').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'RU - Russia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SM').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SM')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SM').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SM').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SM - San Marino')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'RS').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'RS')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'RS').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'RS').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'RS - Serbia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'svalbard-and-jan-mayen').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'svalbard-and-jan-mayen')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'svalbard-and-jan-mayen').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'svalbard-and-jan-mayen').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Svalbard and Jan Mayen')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CH').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CH')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CH').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CH').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CH - Switzerland')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TR').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'TR')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TR').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'TR').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'TR - Turkey')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'UA').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'UA')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'UA').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'UA').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'UA - Ukraine')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ussr-ex').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'ussr-ex')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'ussr-ex').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'ussr-ex').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'USSR (Ex)')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'VA').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'VA')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'VA').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'VA').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'VA - Vatican City')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'yugoslavia-ex').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'yugoslavia-ex')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'yugoslavia-ex').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'yugoslavia-ex').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Yugoslavia (Ex)')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'yugoslavia-not-otherwise-specified').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'yugoslavia-not-otherwise-specified')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'yugoslavia-not-otherwise-specified').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'yugoslavia-not-otherwise-specified').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Yugoslavia (not otherwise specified)')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CA').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CA')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CA').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CA').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CA - Canada')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'puerto-rico').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'puerto-rico')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'puerto-rico').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'puerto-rico').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'puerto-rico - Puerto Rico')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'US').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'US')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'US').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'US').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'US - United States inc Puerto Rico')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'UM').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'UM')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'UM').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'UM').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'UM - US Minor Outlying Islands')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'VI').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'VI')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'VI').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'VI').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'VI - US Virgin Islands')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AS').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'AS')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AS').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'AS').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'AS - American Samoa')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AQ').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'AQ')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AQ').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'AQ').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'AQ - Antarctica')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AU').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'AU')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'AU').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'AU').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'AU - Australia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CX').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CX')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CX').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CX').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CX - Christmas Island')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CC').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CC')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CC').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CC').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CC - Cocos Islands')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CK').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'CK')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'CK').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'CK').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'CK - Cook Islands')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'FJ').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'FJ')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'FJ').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'FJ').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'FJ - Fiji')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PF').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'PF')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PF').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'PF').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'PF - French Polynesia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TF').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'TF')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TF').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'TF').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'TF - French Southern Territories')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GU').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'GU')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'GU').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'GU').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'GU - Guam')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'HM').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'HM')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'HM').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'HM').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'HM - Heard & McDonald Islands')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KI').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'KI')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'KI').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'KI').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'KI - Kiribati')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MH').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'MH')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MH').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'MH').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'MH - Marshall Islands')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'FM').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'FM')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'FM').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'FM').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'FM - Micronesia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NR').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'NR')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NR').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'NR').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'NR - Nauru')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NC').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'NC')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NC').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'NC').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'NC - New Caledonia')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NZ').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'NZ')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NZ').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'NZ').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'NZ - New Zealand')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NU').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'NU')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NU').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'NU').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'NU - Niue Island')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NF').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'NF')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'NF').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'NF').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'NF - Norfolk Island')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MP').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'MP')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'MP').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'MP').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'MP - Northern Mariana Islands')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'pacific-islands-inc-palau').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'pacific-islands-inc-palau')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'pacific-islands-inc-palau').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'pacific-islands-inc-palau').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Pacific Islands (inc Palau)')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PW').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'PW')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PW').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'PW').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'PW - Palau')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PG').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'PG')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PG').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'PG').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'PG - Papua New Guinea')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PN').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'PN')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'PN').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'PN').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'PN - Pitcairn')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'WS').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'WS')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'WS').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'WS').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'WS - Samoa')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SB').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'SB')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'SB').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'SB').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'SB - Solomon Islands')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TK').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'TK')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TK').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'TK').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'TK - Tokelau Islands')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TO').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'TO')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TO').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'TO').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'TO - Tonga')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TV').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'TV')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'TV').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'TV').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'TV - Tuvalu')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'VU').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'VU')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'VU').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'VU').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'VU - Vanuatu')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'WF').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'WF')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'WF').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'WF').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'WF - Wallis & Futuna')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'D5').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'D5')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'D5').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'D5').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'D5 - Non-EU (Rest of World)')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'non-european-union').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'non-european-union')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'non-european-union').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'non-european-union').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Non European Union')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'other-groupings').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'other-groupings')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'other-groupings').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'other-groupings').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'Other Groupings')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'B5').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'B5')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'B5').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'B5').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'B5 - EU(28)')).
+		next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'W1').fold().coalesce(unfold(),
+	addV('_code::_code_trade-country').property(single, 'value', 'W1')).next()
+
+g.V().hasLabel('_code_trade-country').has('value', 'W1').outE().fold().coalesce(unfold(),
+	g.V().hasLabel('_code_trade-country').has('value', 'W1').
+		addE('usedBy').to(
+			g.V().hasLabel('_code_list_trade-country').has('edition', 'one-off')
+		).property(single, 'label', 'W1 - Whole world')).
+		next()
+
