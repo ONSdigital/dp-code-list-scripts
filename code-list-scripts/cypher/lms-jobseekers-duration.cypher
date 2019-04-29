@@ -1,0 +1,15 @@
+CREATE CONSTRAINT ON (n:`_code_lms-jobseekers-duration`) ASSERT n.code IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_lms-jobseekers-duration`) ASSERT n.code IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_lms-jobseekers-duration` { label:"duration", edition:"one-off" });
+MERGE (node:`_code`:`_code_lms-jobseekers-duration` { value:"all-computerised-claims" });
+MATCH (parent:`_code_list`:`_code_list_lms-jobseekers-duration`),                (node:`_code`:`_code_lms-jobseekers-duration` { value:"all-computerised-claims" })                 MERGE (node)-[:usedBy { label:"All computerised claims"}]->(parent);
+MERGE (node:`_code`:`_code_lms-jobseekers-duration` { value:"up-to-6-months" });
+MATCH (parent:`_code_list`:`_code_list_lms-jobseekers-duration`),                (node:`_code`:`_code_lms-jobseekers-duration` { value:"up-to-6-months" })                 MERGE (node)-[:usedBy { label:"Up to 6 months"}]->(parent);
+MERGE (node:`_code`:`_code_lms-jobseekers-duration` { value:"over-6-and-up-to-12-months" });
+MATCH (parent:`_code_list`:`_code_list_lms-jobseekers-duration`),                (node:`_code`:`_code_lms-jobseekers-duration` { value:"over-6-and-up-to-12-months" })                 MERGE (node)-[:usedBy { label:"Over 6 and up to 12 months"}]->(parent);
+MERGE (node:`_code`:`_code_lms-jobseekers-duration` { value:"all-over-12-months" });
+MATCH (parent:`_code_list`:`_code_list_lms-jobseekers-duration`),                (node:`_code`:`_code_lms-jobseekers-duration` { value:"all-over-12-months" })                 MERGE (node)-[:usedBy { label:"All over 12 months"}]->(parent);
+MERGE (node:`_code`:`_code_lms-jobseekers-duration` { value:"percentage-claiming-for-over-12-months" });
+MATCH (parent:`_code_list`:`_code_list_lms-jobseekers-duration`),                (node:`_code`:`_code_lms-jobseekers-duration` { value:"percentage-claiming-for-over-12-months" })                 MERGE (node)-[:usedBy { label:"Percentage claiming for over 12 months"}]->(parent);
+MERGE (node:`_code`:`_code_lms-jobseekers-duration` { value:"all-over-24-months" });
+MATCH (parent:`_code_list`:`_code_list_lms-jobseekers-duration`),                (node:`_code`:`_code_lms-jobseekers-duration` { value:"all-over-24-months" })                 MERGE (node)-[:usedBy { label:"All over 24 months"}]->(parent);
