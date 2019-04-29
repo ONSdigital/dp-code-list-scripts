@@ -1,0 +1,17 @@
+definition:
+  - datasets: house prices
+imports:
+  - language: cypher
+    files:
+      - cypher/property-type.cypher
+      - migration-scripts/mmm-yy.cypher
+      - ../geo-specific-codelist/admin-geography.cypher
+      - cypher/house-price-variable.cypher
+      - cypher/house-price-age.cypher
+  - language: gremlin
+    files:
+      - gremlin/property-type.grm
+      - gremlin/mmm-yy.grm
+      - ../geo-specific-codelist/gremlin/admin-geography.grm
+      - gremlin/house-price-variable.grm
+      - gremlin/house-price-age.grm

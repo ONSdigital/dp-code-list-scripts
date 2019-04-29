@@ -1,0 +1,17 @@
+definition:
+  - datasets: wellbeing
+imports:
+  - language: cypher
+    files:
+      - migration-scripts/year-ending.cypher
+      - migration-scripts/wellbeing-geography.cypher
+      - cypher/wellbeing-estimate.cypher
+      - cypher/wellbeing-measureofwellbeing.cypher
+      - cypher/yyyy-yy.cypher
+  - language: gremlin
+    files:
+      - gremlin/year-ending.grm
+      - gremlin/wellbeing-geography.grm
+      - gremlin/wellbeing-estimate.grm
+      - gremlin/wellbeing-measureofwellbeing.grm
+      - gremlin/yyyy-yy.grm

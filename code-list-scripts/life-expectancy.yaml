@@ -1,0 +1,15 @@
+definition:
+  - datasets: life expectancy
+imports:
+  - language: cypher
+    files:
+      - ../geo-specific-codelist/admin-geography.cypher
+      - cypher/two-year-intervals.cypher
+      - cypher/birth-cohort.cypher
+      - cypher/life-expectancy-variable.cypher
+  - language: gremlin
+    files:
+      - ../geo-specific-codelist/gremlin/admin-geography.grm
+      - gremlin/two-year-intervals.grm
+      - gremlin/birth-cohort.grm
+      - gremlin/life-expectancy-variable.grm

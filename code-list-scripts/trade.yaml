@@ -1,0 +1,17 @@
+definition:
+  - datasets: trade
+imports:
+  - language: cypher
+    files:
+      - cypher/mmm-yy.cypher
+      - migration-scripts/uk-only.cypher
+      - cypher/trade-commodity.cypher
+      - cypher/trade-country.cypher
+      - cypher/trade-direction.cypher
+  - language: gremlin
+    files:
+      - gremlin/mmm-yy.grm
+      - gremlin/uk-only.grm
+      - gremlin/trade-commodity.grm
+      - gremlin/trade-country.grm
+      - gremlin/trade-direction.grm

@@ -1,0 +1,24 @@
+definition:
+  - datasets: opss
+  - comments: membership and rates
+imports:
+  - language: cypher
+    files:
+      - migration-scripts/calendar-years.cypher
+      - migration-scripts/uk-only.cypher
+      - cypher/opss-scheme-membership-sizeband.cypher
+      - cypher/opss-status.cypher
+      - cypher/opss-benefit-type.cypher
+      - cypher/opss-public-private-sector.cypher
+      - cypher/opss-membership-type.cypher
+      - cypher/opss-contributor.cypher
+  - language: gremlin
+    files:
+      - gremlin/calendar-years.grm
+      - gremlin/uk-only.grm
+      - gremlin/opss-scheme-membership-sizeband.grm
+      - gremlin/opss-status.grm
+      - gremlin/opss-benefit-type.grm
+      - gremlin/opss-public-private-sector.grm
+      - gremlin/opss-membership-type.grm
+      - gremlin/opss-contributor.grm
