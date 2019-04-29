@@ -20,7 +20,7 @@ MATCH (parent:`_code_list`:`_code_list_lms-sic`),                (node:`_code`:`
 MERGE (node:`_code`:`_code_lms-sic` { value:"H" });
 MATCH (parent:`_code_list`:`_code_list_lms-sic`),                (node:`_code`:`_code_lms-sic` { value:"H" })                 MERGE (node)-[:usedBy { label:"H : Transport & storage"}]->(parent);
 MERGE (node:`_code`:`_code_lms-sic` { value:"I" });
-MATCH (parent:`_code_list`:`_code_list_lms-sic`),                (node:`_code`:`_code_lms-sic` { value:"I" })                 MERGE (node)-[:usedBy { label:"I : Accommod-ation & food service activities"}]->(parent);
+MATCH (parent:`_code_list`:`_code_list_lms-sic`),                (node:`_code`:`_code_lms-sic` { value:"I" })                 MERGE (node)-[:usedBy { label:"I : Accommodation & food service activities"}]->(parent);
 MERGE (node:`_code`:`_code_lms-sic` { value:"J" });
 MATCH (parent:`_code_list`:`_code_list_lms-sic`),                (node:`_code`:`_code_lms-sic` { value:"J" })                 MERGE (node)-[:usedBy { label:"J : Information & communication"}]->(parent);
 MERGE (node:`_code`:`_code_lms-sic` { value:"K" });
