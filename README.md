@@ -47,16 +47,21 @@ To convert geography code lists:
 `cd geo-specific-codelist`
 `./convert-cypher-to-gremlin.sh <new-file-name>`
 
-Each of these scripts can also take multiple cypher files as input, and in all cases will output the `.grm` file into the local `gremlin` directory.
+Each of these scripts can also take multiple cypher files as input, and in all cases will output the `.grm` file into the relevant `gremlin` directory.
 
 
 # Importing code lists
 
 #### Locally
 
-To load code lists locally, execute the script that relates to the correct dataset, and all of the relevant code lists will be imported.
+To load code lists locally, code lists have been grouped by dataset into a selection of YAML files. When loading code lists, you're likely doing it to satisfy the requirements for importing a specific dataset. The [`load`](code-list-scripts/load.go) program has been written to allow multiple code lists to be loaded to the relevant database by specifying a query language and which dataset YAML file defines the required lists.
 
-E.g. `./code-list-scripts/cpih.sh` will import all the code lists required for CPIH.
+e.g. `./load -q=cypher -f=ashe.yaml` will import all code lists required for ASHE datasets using the cypher query console.
+`-q`: query language - options are `cypher` or `gremlin`
+`-f`: YAML file
+Optional arguments: -u and -p for providing user and passphrase specifically to `cypher-shell`
+
+`Load` relies on both `cypher-shell` and `gremlin` query consoles, so make sure you have both installed, and connections to whichever database you're targeting.
 
 Note: Some code list scripts do not properly set their constraints, and code lists may be shared across multiple datasets. This may lead to a situation where running 2 different dataset import scripts results in 2 copies of the same code list in the graph. The import process will not work in this case. Be sure to only load each code list once.
 
@@ -69,6 +74,8 @@ To load code lists to any environment you will need:
 Loading each code list is a 3 step process from that point:
 1. Disable your local database
 2. Open a tunnel to the database port on the relevant server
-3. Pass the relevant code list file into the query command - this is where cypher and gremlin diverge:
+3. Either:
+  a. Pass the relevant code list file into the query command - this is where cypher and gremlin diverge:
   -  for cypher, use the cypher shell e.g. `cypher-shell < code-list-scripts/cypher/ashe-earnings.cypher`
   - for gremlin, use the [`gremiln-import.sh`](gremlin-import.sh) script, which wraps the `gremiln` command e.g. `./gremlin-import.sh geo-specific-codelist/gremlin/ctry17.grm`
+  b. Use the [`load`](code-list-scripts/load.go) tool to select which query language and YAML file's contents you would like to load
