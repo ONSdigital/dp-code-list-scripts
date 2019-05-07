@@ -1,0 +1,13 @@
+CREATE CONSTRAINT ON (n:`_code_faster-indicators-time-period`) ASSERT n.code IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_faster-indicators-time-period`) ASSERT n.code IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_faster-indicators-time-period` { label:"timeperiod", edition:"one-off" });
+MERGE (node:`_code`:`_code_faster-indicators-time-period` { value:"quarter-on-a-year-ago" });
+MATCH (parent:`_code_list`:`_code_list_faster-indicators-time-period`),                (node:`_code`:`_code_faster-indicators-time-period` { value:"quarter-on-a-year-ago" })                 MERGE (node)-[:usedBy { label:"Quarter on a Year ago"}]->(parent);
+MERGE (node:`_code`:`_code_faster-indicators-time-period` { value:"quarter-on-quarter" });
+MATCH (parent:`_code_list`:`_code_list_faster-indicators-time-period`),                (node:`_code`:`_code_faster-indicators-time-period` { value:"quarter-on-quarter" })                 MERGE (node)-[:usedBy { label:"Quarter on Quarter"}]->(parent);
+MERGE (node:`_code`:`_code_faster-indicators-time-period` { value:"month-on-a-year-ago" });
+MATCH (parent:`_code_list`:`_code_list_faster-indicators-time-period`),                (node:`_code`:`_code_faster-indicators-time-period` { value:"month-on-a-year-ago" })                 MERGE (node)-[:usedBy { label:"Month on a Year ago"}]->(parent);
+MERGE (node:`_code`:`_code_faster-indicators-time-period` { value:"month-on-month" });
+MATCH (parent:`_code_list`:`_code_list_faster-indicators-time-period`),                (node:`_code`:`_code_faster-indicators-time-period` { value:"month-on-month" })                 MERGE (node)-[:usedBy { label:"Month on Month"}]->(parent);
+MERGE (node:`_code`:`_code_faster-indicators-time-period` { value:"none" });
+MATCH (parent:`_code_list`:`_code_list_faster-indicators-time-period`),                (node:`_code`:`_code_faster-indicators-time-period` { value:"none" })                 MERGE (node)-[:usedBy { label:"none"}]->(parent);

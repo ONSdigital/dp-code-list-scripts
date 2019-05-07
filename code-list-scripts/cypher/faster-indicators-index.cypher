@@ -1,0 +1,13 @@
+CREATE CONSTRAINT ON (n:`_code_faster-indicators-index`) ASSERT n.code IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_faster-indicators-index`) ASSERT n.code IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_faster-indicators-index` { label:"index", edition:"one-off" });
+MERGE (node:`_code`:`_code_faster-indicators-index` { value:"diffusion-index" });
+MATCH (parent:`_code_list`:`_code_list_faster-indicators-index`),                (node:`_code`:`_code_faster-indicators-index` { value:"diffusion-index" })                 MERGE (node)-[:usedBy { label:"Diffusion index"}]->(parent);
+MERGE (node:`_code`:`_code_faster-indicators-index` { value:"number-of-firms-in-diffusion-index" });
+MATCH (parent:`_code_list`:`_code_list_faster-indicators-index`),                (node:`_code`:`_code_faster-indicators-index` { value:"number-of-firms-in-diffusion-index" })                 MERGE (node)-[:usedBy { label:"Number of firms in diffusion index"}]->(parent);
+MERGE (node:`_code`:`_code_faster-indicators-index` { value:"percentage-of-new-reporters" });
+MATCH (parent:`_code_list`:`_code_list_faster-indicators-index`),                (node:`_code`:`_code_faster-indicators-index` { value:"percentage-of-new-reporters" })                 MERGE (node)-[:usedBy { label:"Percentage of new reporters"}]->(parent);
+MERGE (node:`_code`:`_code_faster-indicators-index` { value:"number-of-new-reporters" });
+MATCH (parent:`_code_list`:`_code_list_faster-indicators-index`),                (node:`_code`:`_code_faster-indicators-index` { value:"number-of-new-reporters" })                 MERGE (node)-[:usedBy { label:"Number of new reporters"}]->(parent);
+MERGE (node:`_code`:`_code_faster-indicators-index` { value:"number-of-reporters-of-this-record-type" });
+MATCH (parent:`_code_list`:`_code_list_faster-indicators-index`),                (node:`_code`:`_code_faster-indicators-index` { value:"number-of-reporters-of-this-record-type" })                 MERGE (node)-[:usedBy { label:"Number of reporters of this record type"}]->(parent);
