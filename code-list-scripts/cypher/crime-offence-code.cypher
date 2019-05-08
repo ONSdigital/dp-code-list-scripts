@@ -1,0 +1,17 @@
+CREATE CONSTRAINT ON (n:`_code_crime-offence-code`) ASSERT n.code IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_crime-offence-code`) ASSERT n.code IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_crime-offence-code` { label:"crime", edition:"one-off" });
+MERGE (node:`_code`:`_code_crime-offence-code` { value:"attempted-murder" });
+MATCH (parent:`_code_list`:`_code_list_crime-offence-code`),                (node:`_code`:`_code_crime-offence-code` { value:"attempted-murder" })                 MERGE (node)-[:usedBy { label:"Attempted murder"}]->(parent);
+MERGE (node:`_code`:`_code_crime-offence-code` { value:"homicide" });
+MATCH (parent:`_code_list`:`_code_list_crime-offence-code`),                (node:`_code`:`_code_crime-offence-code` { value:"homicide" })                 MERGE (node)-[:usedBy { label:"Homicide"}]->(parent);
+MERGE (node:`_code`:`_code_crime-offence-code` { value:"sexual-assault" });
+MATCH (parent:`_code_list`:`_code_list_crime-offence-code`),                (node:`_code`:`_code_crime-offence-code` { value:"sexual-assault" })                 MERGE (node)-[:usedBy { label:"Sexual Assault"}]->(parent);
+MERGE (node:`_code`:`_code_crime-offence-code` { value:"rape" });
+MATCH (parent:`_code_list`:`_code_list_crime-offence-code`),                (node:`_code`:`_code_crime-offence-code` { value:"rape" })                 MERGE (node)-[:usedBy { label:"Rape"}]->(parent);
+MERGE (node:`_code`:`_code_crime-offence-code` { value:"robbery" });
+MATCH (parent:`_code_list`:`_code_list_crime-offence-code`),                (node:`_code`:`_code_crime-offence-code` { value:"robbery" })                 MERGE (node)-[:usedBy { label:"Robbery"}]->(parent);
+MERGE (node:`_code`:`_code_crime-offence-code` { value:"threats-to-kill" });
+MATCH (parent:`_code_list`:`_code_list_crime-offence-code`),                (node:`_code`:`_code_crime-offence-code` { value:"threats-to-kill" })                 MERGE (node)-[:usedBy { label:"Threats to Kill"}]->(parent);
+MERGE (node:`_code`:`_code_crime-offence-code` { value:"actual-bodily-harm-and-grievous-bodily-harm" });
+MATCH (parent:`_code_list`:`_code_list_crime-offence-code`),                (node:`_code`:`_code_crime-offence-code` { value:"actual-bodily-harm-and-grievous-bodily-harm" })                 MERGE (node)-[:usedBy { label:"Actual bodily harm and grievous bodily harm"}]->(parent);
