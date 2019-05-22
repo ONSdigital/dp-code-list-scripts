@@ -1,7 +1,6 @@
 Code List Scripts
 ================
 
-
 # Creating code lists
 
 When cypher files have been created for a given code list they should be stored in either `code-list-scripts/cypher` or `geo-specific-codelist`. Files should be named according to their code list ID i.e. a script for `ashe-earnings` should be called `ashe-earnings.cypher`
@@ -69,13 +68,21 @@ Note: Some code list scripts do not properly set their constraints, and code lis
 
 To load code lists to any environment you will need:
 - SSH access to the database for that environment
-- the console or shell command for the query language you plan on using (either `cypher-shell` or `gremlin`) in your `$PATH`
+- the console or shell command for the query language you plan on using (either `cypher-shell` or `gremlin.sh`) in your `$PATH`
 
-Loading each code list is a 3 step process from that point:
+Loading each code list is a 3-step process from that point:
 1. Disable your local database
 2. Open a tunnel to the database port on the relevant server
 3. Either:
+
   a. Pass the relevant code list file into the query command - this is where cypher and gremlin diverge:
-  -  for cypher, use the cypher shell e.g. `cypher-shell < code-list-scripts/cypher/ashe-earnings.cypher`
-  - for gremlin, use the [`gremiln-import.sh`](gremlin-import.sh) script, which wraps the `gremiln` command e.g. `./gremlin-import.sh geo-specific-codelist/gremlin/ctry17.grm`
+
+  -  for cypher, use the cypher shell e.g.
+
+     `cypher-shell < code-list-scripts/cypher/ashe-earnings.cypher`
+
+  - for gremlin, use the [`gremlin-import.sh`](gremlin-import.sh) script, which wraps the `gremlin.sh` command (from gremlin-console) e.g.
+
+    `./gremlin-import.sh geo-specific-codelist/gremlin/ctry17.grm`
+
   b. Use the [`load`](code-list-scripts/load.go) tool to select which query language and YAML file's contents you would like to load
