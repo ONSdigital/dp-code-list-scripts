@@ -43,3 +43,5 @@ MERGE (node:`_code`:`_code_faster-indicators-sic` { value:"r" });
 MATCH (parent:`_code_list`:`_code_list_faster-indicators-sic`),                (node:`_code`:`_code_faster-indicators-sic` { value:"r" })                 MERGE (node)-[:usedBy { label:"R : Arts, entertainment and recreation"}]->(parent);
 MERGE (node:`_code`:`_code_faster-indicators-sic` { value:"s" });
 MATCH (parent:`_code_list`:`_code_list_faster-indicators-sic`),                (node:`_code`:`_code_faster-indicators-sic` { value:"s" })                 MERGE (node)-[:usedBy { label:"S : Other service activities"}]->(parent);
+MERGE (node:`_code`:`_code_faster-indicators-sic` { value:"o" });
+MATCH (parent:`_code_list`:`_code_list_faster-indicators-sic`),                (node:`_code`:`_code_faster-indicators-sic` { value:"o" })                 MERGE (node)-[:usedBy { label:"O : Public administration and defence; compulsory social security"}]->(parent);
