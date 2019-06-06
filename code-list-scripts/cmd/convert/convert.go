@@ -1,141 +1,130 @@
 package main
 
 import (
-	"bufio"
 	"flag"
 	"fmt"
 	"log"
 	"os"
-	"regexp"
 	"strings"
 
+	"github.com/ONSdigital/dp-code-list-scripts/code-list-scripts/file"
+	"github.com/ONSdigital/dp-code-list-scripts/code-list-scripts/query"
+	"github.com/ONSdigital/dp-code-list-scripts/code-list-scripts/regex"
 	"github.com/davecgh/go-spew/spew"
 )
-
-var isCreate *regexp.Regexp
-var kvPattern *regexp.Regexp
-var codeListID *regexp.Regexp
-
-const (
-	codeListCheckExists = "g.V().hasLabel('_code_list_%s').has('edition', '%s').fold().coalesce(unfold(),"
-	codeListAddV        = "	addV('_code_list_%s::_code_list')."
-	codeListPropertyDot = "		property(single, '%s', '%s')."
-	codeListPropertyEnd = "		property(single, '%s', '%s')"
-	next                = "	).next()"
-)
-
-func init() {
-	fmt.Println("init")
-	var err error
-	isCreate, err = regexp.Compile("^CREATE +\\([^{]+{ *")
-	if err != nil {
-		log.Fatal("first regex failed")
-	}
-
-	inTicks := "'[^']+'"
-	inQuotes := `"[^"]+"`
-	kvPattern, err = regexp.Compile("([a-zA-Z0-9_\\-\"`']+) *: *(" + inTicks + "|" + inQuotes + ")[, ]*")
-	if err != nil {
-		log.Fatal("second regex failed")
-	}
-
-	codeListID, err = regexp.Compile("^CREATE[ ]*\\(.+_code_list_([^`]+).*")
-	if err != nil {
-		log.Fatal("third regex failed")
-	}
-
-	fmt.Println("init complete")
-}
 
 func main() {
 
 	filePtr := flag.String("file", "cypher/codelist.cypher", "path to a cypher file to be converted")
 	flag.Parse()
-	fmt.Println("parsed flag")
 
-	lines := readFile(*filePtr)
-	fmt.Println("read file")
+	input := file.Read(*filePtr)
 
-	for _, l := range lines {
+	output := &file.File{
+		Content: []string{},
+	}
+	var codelist, edition string
+	for _, l := range input.Content {
+
+		if s := regex.IsCreate.FindString(l); len(s) > 0 {
+			var out []string
+			out, codelist, edition = createCodeList(l)
+			output.Content = append(output.Content, out...)
+		}
 
 		if strings.HasPrefix(l, "MATCH") {
-			continue
+			output.Content = append(output.Content, createCode(l, codelist, edition)...)
 		}
 
-    var addToOutput []string
-		//if idx := isCreate.FindStringIndex(l); len(idx) > 0 {
-    if s := isCreate.FindString(l); len(s) > 0 {
-      addToOutput = createCodeList(l)
-		}
-
-
-
+		output.Content = append(output.Content, query.NewLine)
 	}
 
-	//	output := "gremlin/" + *filePtr + ".grm"
+	output.Write(codelist)
+
+	os.Exit(0)
 
 }
 
-func createCodeList(line string) []string {
-  fmt.Println("IS CREATE")
-  matches := kvPattern.FindAllStringSubmatch(line, -1)
+func createCodeList(line string) ([]string, string, string) {
+	matches := regex.KVPattern.FindAllStringSubmatch(line, -1)
 
-  kvs := make(map[string]string)
-  for _, m := range matches {
-    if len(m) != 3 {
-      spew.Dump(m)
-      log.Fatal("this regex should have 2 capture groups!")
-    }
+	kvs := make(map[string]string)
+	for _, m := range matches {
+		if len(m) != 3 {
+			spew.Dump(m)
+			log.Fatal("this regex should have 2 capture groups!")
+		}
 
-    kvs[m[1]] = m[2]
-  }
+		k := strings.Trim(m[1], "\"")
+		v := strings.Trim(m[2], "\"")
+		kvs[k] = v
+	}
 
-  if _, ok := kvs["edition"]; !ok {
-    spew.Dump(kvs)
-    log.Println("line: " + line)
-    log.Fatal("no edition on create code list line")
-  }
+	edition := clean(kvs, "edition")
 
-  id := codeListID.FindString(line)
-  if len(id) == 0 {
-    fmt.Println("line: " + line)
-    log.Fatal("no ID found")
-  }
+	ids := regex.CodeListID.FindStringSubmatch(line)
+	if len(ids) != 2 {
+		spew.Dump(ids)
+		log.Fatal("this regex should have 1 capture group!")
+	}
 
-  var result []string
-  result = append(result, fmt.Sprintf(codeListCheckExists, id, kvs["edition"]))
-  result = append(result, fmt.Sprintf(codeListAddV, id))
+	id := ids[1]
+	id = strings.Trim(id, "\"")
 
-  lastProp := len(kvs)
-  count := 1
-  for k, v := range kvs {
-    if count < lastProp {
-      result = append(result, fmt.Sprintf(codeListPropertyDot, k, v))
-    } else {
-      result = append(result, fmt.Sprintf(codeListPropertyEnd, k, v))
-    }
-    count++
-  }
+	var result []string
+	result = append(result, fmt.Sprintf(query.CodeListCheckExists, id, edition))
+	result = append(result, fmt.Sprintf(query.CodeListCreateV, id))
 
-  return result
+	lastProp := len(kvs)
+	count := 1
+	for k, v := range kvs {
+		if count < lastProp {
+			result = append(result, fmt.Sprintf(query.CodeListPropertyDot, k, v))
+		} else {
+			result = append(result, fmt.Sprintf(query.CodeListPropertyEnd, k, v))
+		}
+		count++
+	}
+
+	result = append(result, query.Next)
+
+	return result, id, edition
 }
 
-func readFile(name string) []string {
-	file, err := os.Open(name)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer file.Close()
+func createCode(line, id, edition string) []string {
+	matches := regex.KVPattern.FindAllStringSubmatch(line, -1)
 
-	lines := []string{}
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		lines = append(lines, scanner.Text())
-	}
+	kvs := make(map[string]string)
+	for _, m := range matches {
+		if len(m) != 3 {
+			spew.Dump(m)
+			log.Fatal("this regex should have 2 capture groups!")
+		}
 
-	if err := scanner.Err(); err != nil {
-		log.Fatal(err)
+		kvs[m[1]] = m[2]
 	}
 
-	return lines
+	value := clean(kvs, "value")
+	label := clean(kvs, "label")
+
+	var result []string
+	result = append(result, fmt.Sprintf(query.CodeCheckExists, id, value))
+	result = append(result, fmt.Sprintf(query.CodeCreateV, id, value))
+
+	result = append(result, fmt.Sprintf(query.EdgeCheckExists, id, value))
+	result = append(result, fmt.Sprintf(query.EdgeCreate, id, value))
+	result = append(result, query.EdgeAddLabel)
+	result = append(result, fmt.Sprintf(query.EdgeFindList, id, edition))
+	result = append(result, fmt.Sprintf(query.EdgeAddProperty, label))
+
+	return result
+}
+
+func clean(kvs map[string]string, key string) string {
+	v, ok := kvs[key]
+	if !ok {
+		log.Fatal(key + " not found")
+	}
+
+	return strings.Trim(v, "\"")
 }
