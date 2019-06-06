@@ -1,26 +1,26 @@
-g.V().hasLabel('_code_list_housing-rental-prices-variable').has('edition', 'one-off').fold().coalesce(unfold(),
-	addV('_code_list_housing-rental-prices-variable::_code_list').
-		property(single, 'edition', 'one-off').
-		property(single, 'label', 'variable')
-	).next()
+
+
+g.V().hasLabel('_code_list_housing-rental-prices-variable').has('edition', ''one-off'').fold().coalesce(unfold(),
+  addV('_code_list_housing-rental-prices-variable::_code_list').
+    property(single, 'label', ''variable'').
+    property(single, 'edition', ''one-off'')
+  ).next()
+
 
 g.V().hasLabel('_code_housing-rental-prices-variable').has('value', 'year-change').fold().coalesce(unfold(),
-	addV('_code::_code_housing-rental-prices-variable').property(single, 'value', 'year-change')).next()
-
+  addV('_code::_code_housing-rental-prices-variable').property(single, 'value', 'year-change')).next()
 g.V().hasLabel('_code_housing-rental-prices-variable').has('value', 'year-change').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_housing-rental-prices-variable').has('value', 'year-change').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_housing-rental-prices-variable').has('edition', 'one-off')
-		).property(single, 'label', 'Year-on-year change')).
-		next()
+  g.V().hasLabel('_code_housing-rental-prices-variable').has('value', 'year-change').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_housing-rental-prices-variable').has('edition', ''one-off'')
+  ).property(single, 'label', 'Year-on-year change')).next()
+
 
 g.V().hasLabel('_code_housing-rental-prices-variable').has('value', 'index').fold().coalesce(unfold(),
-	addV('_code::_code_housing-rental-prices-variable').property(single, 'value', 'index')).next()
-
+  addV('_code::_code_housing-rental-prices-variable').property(single, 'value', 'index')).next()
 g.V().hasLabel('_code_housing-rental-prices-variable').has('value', 'index').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_housing-rental-prices-variable').has('value', 'index').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_housing-rental-prices-variable').has('edition', 'one-off')
-		).property(single, 'label', 'Index')).
-		next()
+  g.V().hasLabel('_code_housing-rental-prices-variable').has('value', 'index').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_housing-rental-prices-variable').has('edition', ''one-off'')
+  ).property(single, 'label', 'Index')).next()
 

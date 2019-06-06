@@ -1,36 +1,35 @@
-g.V().hasLabel('_code_list_house-price-age').has('edition', 'one-off').fold().coalesce(unfold(),
-	addV('_code_list_house-price-age::_code_list').
-		property(single, 'edition', 'one-off').
-		property(single, 'label', 'housepriceage')
-	).next()
+
+
+g.V().hasLabel('_code_list_house-price-age').has('edition', ''one-off'').fold().coalesce(unfold(),
+  addV('_code_list_house-price-age::_code_list').
+    property(single, 'label', ''housepriceage'').
+    property(single, 'edition', ''one-off'')
+  ).next()
+
 
 g.V().hasLabel('_code_house-price-age').has('value', 'all').fold().coalesce(unfold(),
-	addV('_code::_code_house-price-age').property(single, 'value', 'all')).next()
-
+  addV('_code::_code_house-price-age').property(single, 'value', 'all')).next()
 g.V().hasLabel('_code_house-price-age').has('value', 'all').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_house-price-age').has('value', 'all').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_house-price-age').has('edition', 'one-off')
-		).property(single, 'label', 'All')).
-		next()
+  g.V().hasLabel('_code_house-price-age').has('value', 'all').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_house-price-age').has('edition', ''one-off'')
+  ).property(single, 'label', 'All')).next()
+
 
 g.V().hasLabel('_code_house-price-age').has('value', 'existing').fold().coalesce(unfold(),
-	addV('_code::_code_house-price-age').property(single, 'value', 'existing')).next()
-
+  addV('_code::_code_house-price-age').property(single, 'value', 'existing')).next()
 g.V().hasLabel('_code_house-price-age').has('value', 'existing').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_house-price-age').has('value', 'existing').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_house-price-age').has('edition', 'one-off')
-		).property(single, 'label', 'Existing')).
-		next()
+  g.V().hasLabel('_code_house-price-age').has('value', 'existing').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_house-price-age').has('edition', ''one-off'')
+  ).property(single, 'label', 'Existing')).next()
+
 
 g.V().hasLabel('_code_house-price-age').has('value', 'newly-built').fold().coalesce(unfold(),
-	addV('_code::_code_house-price-age').property(single, 'value', 'newly-built')).next()
-
+  addV('_code::_code_house-price-age').property(single, 'value', 'newly-built')).next()
 g.V().hasLabel('_code_house-price-age').has('value', 'newly-built').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_house-price-age').has('value', 'newly-built').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_house-price-age').has('edition', 'one-off')
-		).property(single, 'label', 'Newly built')).
-		next()
+  g.V().hasLabel('_code_house-price-age').has('value', 'newly-built').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_house-price-age').has('edition', ''one-off'')
+  ).property(single, 'label', 'Newly built')).next()
 

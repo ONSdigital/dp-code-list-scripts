@@ -1,46 +1,45 @@
-g.V().hasLabel('_code_list_opss-membership-type').has('edition', 'one-off').fold().coalesce(unfold(),
-	addV('_code_list_opss-membership-type::_code_list').
-		property(single, 'edition', 'one-off').
-		property(single, 'label', 'membershiptype')
-	).next()
+g.V().hasLabel('_code_list_opss-membership-type').has('edition', ''one-off'').fold().coalesce(unfold(),
+  addV('_code_list_opss-membership-type::_code_list').
+    property(single, 'label', ''membershiptype'').
+    property(single, 'edition', ''one-off'')
+  ).next()
 
-g.V().hasLabel('_code_opss-membership-type').has('value', 'pensions-in-payment').fold().coalesce(unfold(),
-	addV('_code::_code_opss-membership-type').property(single, 'value', 'pensions-in-payment')).next()
 
-g.V().hasLabel('_code_opss-membership-type').has('value', 'pensions-in-payment').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_opss-membership-type').has('value', 'pensions-in-payment').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_opss-membership-type').has('edition', 'one-off')
-		).property(single, 'label', 'Pensions in payment')).
-		next()
 
-g.V().hasLabel('_code_opss-membership-type').has('value', 'all-members').fold().coalesce(unfold(),
-	addV('_code::_code_opss-membership-type').property(single, 'value', 'all-members')).next()
 
-g.V().hasLabel('_code_opss-membership-type').has('value', 'all-members').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_opss-membership-type').has('value', 'all-members').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_opss-membership-type').has('edition', 'one-off')
-		).property(single, 'label', 'All members')).
-		next()
 
-g.V().hasLabel('_code_opss-membership-type').has('value', 'preserved-pension-entitlements').fold().coalesce(unfold(),
-	addV('_code::_code_opss-membership-type').property(single, 'value', 'preserved-pension-entitlements')).next()
+g.V().hasLabel('_code_opss-membership-type').has('value', ''pensions-in-payment'').fold().coalesce(unfold(),
+  addV('_code::_code_opss-membership-type').property(single, 'value', ''pensions-in-payment'')).next()
+g.V().hasLabel('_code_opss-membership-type').has('value', ''pensions-in-payment'').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_opss-membership-type').has('value', ''pensions-in-payment'').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_opss-membership-type').has('edition', ''one-off'')
+  ).property(single, 'label', 'Pensions in payment')).next()
 
-g.V().hasLabel('_code_opss-membership-type').has('value', 'preserved-pension-entitlements').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_opss-membership-type').has('value', 'preserved-pension-entitlements').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_opss-membership-type').has('edition', 'one-off')
-		).property(single, 'label', 'Preserved pension entitlements')).
-		next()
 
-g.V().hasLabel('_code_opss-membership-type').has('value', 'actives').fold().coalesce(unfold(),
-	addV('_code::_code_opss-membership-type').property(single, 'value', 'actives')).next()
+g.V().hasLabel('_code_opss-membership-type').has('value', ''all-members'').fold().coalesce(unfold(),
+  addV('_code::_code_opss-membership-type').property(single, 'value', ''all-members'')).next()
+g.V().hasLabel('_code_opss-membership-type').has('value', ''all-members'').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_opss-membership-type').has('value', ''all-members'').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_opss-membership-type').has('edition', ''one-off'')
+  ).property(single, 'label', 'All members')).next()
 
-g.V().hasLabel('_code_opss-membership-type').has('value', 'actives').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_opss-membership-type').has('value', 'actives').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_opss-membership-type').has('edition', 'one-off')
-		).property(single, 'label', 'Actives')).
-		next()
+
+g.V().hasLabel('_code_opss-membership-type').has('value', ''preserved-pension-entitlements'').fold().coalesce(unfold(),
+  addV('_code::_code_opss-membership-type').property(single, 'value', ''preserved-pension-entitlements'')).next()
+g.V().hasLabel('_code_opss-membership-type').has('value', ''preserved-pension-entitlements'').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_opss-membership-type').has('value', ''preserved-pension-entitlements'').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_opss-membership-type').has('edition', ''one-off'')
+  ).property(single, 'label', 'Preserved pension entitlements')).next()
+
+
+g.V().hasLabel('_code_opss-membership-type').has('value', ''actives'').fold().coalesce(unfold(),
+  addV('_code::_code_opss-membership-type').property(single, 'value', ''actives'')).next()
+g.V().hasLabel('_code_opss-membership-type').has('value', ''actives'').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_opss-membership-type').has('value', ''actives'').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_opss-membership-type').has('edition', ''one-off'')
+  ).property(single, 'label', 'Actives')).next()
 

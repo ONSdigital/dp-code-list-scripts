@@ -1,26 +1,26 @@
-g.V().hasLabel('_code_list_ott-residence').has('edition', 'one-off').fold().coalesce(unfold(),
-	addV('_code_list_ott-residence::_code_list').
-		property(single, 'edition', 'one-off').
-		property(single, 'label', 'residence')
-	).next()
+
+
+g.V().hasLabel('_code_list_ott-residence').has('edition', ''one-off'').fold().coalesce(unfold(),
+  addV('_code_list_ott-residence::_code_list').
+    property(single, 'edition', ''one-off'').
+    property(single, 'label', ''residence'')
+  ).next()
+
 
 g.V().hasLabel('_code_ott-residence').has('value', 'overseas-residents').fold().coalesce(unfold(),
-	addV('_code::_code_ott-residence').property(single, 'value', 'overseas-residents')).next()
-
+  addV('_code::_code_ott-residence').property(single, 'value', 'overseas-residents')).next()
 g.V().hasLabel('_code_ott-residence').has('value', 'overseas-residents').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-residence').has('value', 'overseas-residents').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-residence').has('edition', 'one-off')
-		).property(single, 'label', 'Overseas Residents')).
-		next()
+  g.V().hasLabel('_code_ott-residence').has('value', 'overseas-residents').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-residence').has('edition', ''one-off'')
+  ).property(single, 'label', 'Overseas Residents')).next()
+
 
 g.V().hasLabel('_code_ott-residence').has('value', 'uk-residents').fold().coalesce(unfold(),
-	addV('_code::_code_ott-residence').property(single, 'value', 'uk-residents')).next()
-
+  addV('_code::_code_ott-residence').property(single, 'value', 'uk-residents')).next()
 g.V().hasLabel('_code_ott-residence').has('value', 'uk-residents').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-residence').has('value', 'uk-residents').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-residence').has('edition', 'one-off')
-		).property(single, 'label', 'UK Residents')).
-		next()
+  g.V().hasLabel('_code_ott-residence').has('value', 'uk-residents').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-residence').has('edition', ''one-off'')
+  ).property(single, 'label', 'UK Residents')).next()
 

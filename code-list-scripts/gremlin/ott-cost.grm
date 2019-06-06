@@ -1,36 +1,35 @@
-g.V().hasLabel('_code_list_ott-cost').has('edition', 'one-off').fold().coalesce(unfold(),
-	addV('_code_list_ott-cost::_code_list').
-		property(single, 'edition', 'one-off').
-		property(single, 'label', 'cost')
-	).next()
+
+
+g.V().hasLabel('_code_list_ott-cost').has('edition', ''one-off'').fold().coalesce(unfold(),
+  addV('_code_list_ott-cost::_code_list').
+    property(single, 'label', ''cost'').
+    property(single, 'edition', ''one-off'')
+  ).next()
+
 
 g.V().hasLabel('_code_ott-cost').has('value', 'night').fold().coalesce(unfold(),
-	addV('_code::_code_ott-cost').property(single, 'value', 'night')).next()
-
+  addV('_code::_code_ott-cost').property(single, 'value', 'night')).next()
 g.V().hasLabel('_code_ott-cost').has('value', 'night').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-cost').has('value', 'night').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-cost').has('edition', 'one-off')
-		).property(single, 'label', 'Night')).
-		next()
+  g.V().hasLabel('_code_ott-cost').has('value', 'night').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-cost').has('edition', ''one-off'')
+  ).property(single, 'label', 'Night')).next()
+
 
 g.V().hasLabel('_code_ott-cost').has('value', 'spend').fold().coalesce(unfold(),
-	addV('_code::_code_ott-cost').property(single, 'value', 'spend')).next()
-
+  addV('_code::_code_ott-cost').property(single, 'value', 'spend')).next()
 g.V().hasLabel('_code_ott-cost').has('value', 'spend').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-cost').has('value', 'spend').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-cost').has('edition', 'one-off')
-		).property(single, 'label', 'Spend')).
-		next()
+  g.V().hasLabel('_code_ott-cost').has('value', 'spend').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-cost').has('edition', ''one-off'')
+  ).property(single, 'label', 'Spend')).next()
+
 
 g.V().hasLabel('_code_ott-cost').has('value', 'vist').fold().coalesce(unfold(),
-	addV('_code::_code_ott-cost').property(single, 'value', 'vist')).next()
-
+  addV('_code::_code_ott-cost').property(single, 'value', 'vist')).next()
 g.V().hasLabel('_code_ott-cost').has('value', 'vist').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-cost').has('value', 'vist').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-cost').has('edition', 'one-off')
-		).property(single, 'label', 'Vist')).
-		next()
+  g.V().hasLabel('_code_ott-cost').has('value', 'vist').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-cost').has('edition', ''one-off'')
+  ).property(single, 'label', 'Vist')).next()
 

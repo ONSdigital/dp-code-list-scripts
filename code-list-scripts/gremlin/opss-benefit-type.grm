@@ -1,46 +1,45 @@
-g.V().hasLabel('_code_list_opss-benefit-type').has('edition', 'one-off').fold().coalesce(unfold(),
-	addV('_code_list_opss-benefit-type::_code_list').
-		property(single, 'edition', 'one-off').
-		property(single, 'label', 'benefittype')
-	).next()
+g.V().hasLabel('_code_list_opss-benefit-type').has('edition', ''one-off'').fold().coalesce(unfold(),
+  addV('_code_list_opss-benefit-type::_code_list').
+    property(single, 'edition', ''one-off'').
+    property(single, 'label', ''benefittype'')
+  ).next()
 
-g.V().hasLabel('_code_opss-benefit-type').has('value', 'defined-benefit').fold().coalesce(unfold(),
-	addV('_code::_code_opss-benefit-type').property(single, 'value', 'defined-benefit')).next()
 
-g.V().hasLabel('_code_opss-benefit-type').has('value', 'defined-benefit').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_opss-benefit-type').has('value', 'defined-benefit').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_opss-benefit-type').has('edition', 'one-off')
-		).property(single, 'label', 'Defined Benefit')).
-		next()
 
-g.V().hasLabel('_code_opss-benefit-type').has('value', 'career-average').fold().coalesce(unfold(),
-	addV('_code::_code_opss-benefit-type').property(single, 'value', 'career-average')).next()
 
-g.V().hasLabel('_code_opss-benefit-type').has('value', 'career-average').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_opss-benefit-type').has('value', 'career-average').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_opss-benefit-type').has('edition', 'one-off')
-		).property(single, 'label', 'Career Average')).
-		next()
 
-g.V().hasLabel('_code_opss-benefit-type').has('value', 'defined-contribution').fold().coalesce(unfold(),
-	addV('_code::_code_opss-benefit-type').property(single, 'value', 'defined-contribution')).next()
+g.V().hasLabel('_code_opss-benefit-type').has('value', ''defined-benefit'').fold().coalesce(unfold(),
+  addV('_code::_code_opss-benefit-type').property(single, 'value', ''defined-benefit'')).next()
+g.V().hasLabel('_code_opss-benefit-type').has('value', ''defined-benefit'').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_opss-benefit-type').has('value', ''defined-benefit'').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_opss-benefit-type').has('edition', ''one-off'')
+  ).property(single, 'label', 'Defined Benefit')).next()
 
-g.V().hasLabel('_code_opss-benefit-type').has('value', 'defined-contribution').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_opss-benefit-type').has('value', 'defined-contribution').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_opss-benefit-type').has('edition', 'one-off')
-		).property(single, 'label', 'Defined Contribution')).
-		next()
 
-g.V().hasLabel('_code_opss-benefit-type').has('value', 'all-benefit-types').fold().coalesce(unfold(),
-	addV('_code::_code_opss-benefit-type').property(single, 'value', 'all-benefit-types')).next()
+g.V().hasLabel('_code_opss-benefit-type').has('value', ''career-average'').fold().coalesce(unfold(),
+  addV('_code::_code_opss-benefit-type').property(single, 'value', ''career-average'')).next()
+g.V().hasLabel('_code_opss-benefit-type').has('value', ''career-average'').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_opss-benefit-type').has('value', ''career-average'').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_opss-benefit-type').has('edition', ''one-off'')
+  ).property(single, 'label', 'Career Average')).next()
 
-g.V().hasLabel('_code_opss-benefit-type').has('value', 'all-benefit-types').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_opss-benefit-type').has('value', 'all-benefit-types').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_opss-benefit-type').has('edition', 'one-off')
-		).property(single, 'label', 'All benefit types')).
-		next()
+
+g.V().hasLabel('_code_opss-benefit-type').has('value', ''defined-contribution'').fold().coalesce(unfold(),
+  addV('_code::_code_opss-benefit-type').property(single, 'value', ''defined-contribution'')).next()
+g.V().hasLabel('_code_opss-benefit-type').has('value', ''defined-contribution'').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_opss-benefit-type').has('value', ''defined-contribution'').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_opss-benefit-type').has('edition', ''one-off'')
+  ).property(single, 'label', 'Defined Contribution')).next()
+
+
+g.V().hasLabel('_code_opss-benefit-type').has('value', ''all-benefit-types'').fold().coalesce(unfold(),
+  addV('_code::_code_opss-benefit-type').property(single, 'value', ''all-benefit-types'')).next()
+g.V().hasLabel('_code_opss-benefit-type').has('value', ''all-benefit-types'').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_opss-benefit-type').has('value', ''all-benefit-types'').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_opss-benefit-type').has('edition', ''one-off'')
+  ).property(single, 'label', 'All benefit types')).next()
 

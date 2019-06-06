@@ -1,56 +1,53 @@
+
+
 g.V().hasLabel('_code_list_awe-type-of-pay').has('edition', 'one-off').fold().coalesce(unfold(),
-	addV('_code_list_awe-type-of-pay::_code_list').
-		property(single, 'edition', 'one-off').
-		property(single, 'label', 'typeofpay')
-	).next()
+  addV('_code_list_awe-type-of-pay::_code_list').
+    property(single, 'label', 'typeofpay').
+    property(single, 'edition', 'one-off')
+  ).next()
+
 
 g.V().hasLabel('_code_awe-type-of-pay').has('value', 'total-pay').fold().coalesce(unfold(),
-	addV('_code::_code_awe-type-of-pay').property(single, 'value', 'total-pay')).next()
-
+  addV('_code::_code_awe-type-of-pay').property(single, 'value', 'total-pay')).next()
 g.V().hasLabel('_code_awe-type-of-pay').has('value', 'total-pay').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_awe-type-of-pay').has('value', 'total-pay').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_awe-type-of-pay').has('edition', 'one-off')
-		).property(single, 'label', 'Total Pay')).
-		next()
+  g.V().hasLabel('_code_awe-type-of-pay').has('value', 'total-pay').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_awe-type-of-pay').has('edition', 'one-off')
+  ).property(single, 'label', 'Total Pay')).next()
+
 
 g.V().hasLabel('_code_awe-type-of-pay').has('value', 'bonus-pay').fold().coalesce(unfold(),
-	addV('_code::_code_awe-type-of-pay').property(single, 'value', 'bonus-pay')).next()
-
+  addV('_code::_code_awe-type-of-pay').property(single, 'value', 'bonus-pay')).next()
 g.V().hasLabel('_code_awe-type-of-pay').has('value', 'bonus-pay').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_awe-type-of-pay').has('value', 'bonus-pay').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_awe-type-of-pay').has('edition', 'one-off')
-		).property(single, 'label', 'Bonus Pay')).
-		next()
+  g.V().hasLabel('_code_awe-type-of-pay').has('value', 'bonus-pay').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_awe-type-of-pay').has('edition', 'one-off')
+  ).property(single, 'label', 'Bonus Pay')).next()
+
 
 g.V().hasLabel('_code_awe-type-of-pay').has('value', 'regular-pay').fold().coalesce(unfold(),
-	addV('_code::_code_awe-type-of-pay').property(single, 'value', 'regular-pay')).next()
-
+  addV('_code::_code_awe-type-of-pay').property(single, 'value', 'regular-pay')).next()
 g.V().hasLabel('_code_awe-type-of-pay').has('value', 'regular-pay').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_awe-type-of-pay').has('value', 'regular-pay').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_awe-type-of-pay').has('edition', 'one-off')
-		).property(single, 'label', 'Regular Pay')).
-		next()
+  g.V().hasLabel('_code_awe-type-of-pay').has('value', 'regular-pay').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_awe-type-of-pay').has('edition', 'one-off')
+  ).property(single, 'label', 'Regular Pay')).next()
+
 
 g.V().hasLabel('_code_awe-type-of-pay').has('value', 'total-pay-index').fold().coalesce(unfold(),
-	addV('_code::_code_awe-type-of-pay').property(single, 'value', 'total-pay-index')).next()
-
+  addV('_code::_code_awe-type-of-pay').property(single, 'value', 'total-pay-index')).next()
 g.V().hasLabel('_code_awe-type-of-pay').has('value', 'total-pay-index').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_awe-type-of-pay').has('value', 'total-pay-index').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_awe-type-of-pay').has('edition', 'one-off')
-		).property(single, 'label', 'Total Pay Index')).
-		next()
+  g.V().hasLabel('_code_awe-type-of-pay').has('value', 'total-pay-index').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_awe-type-of-pay').has('edition', 'one-off')
+  ).property(single, 'label', 'Total Pay Index')).next()
+
 
 g.V().hasLabel('_code_awe-type-of-pay').has('value', 'regular-pay-index').fold().coalesce(unfold(),
-	addV('_code::_code_awe-type-of-pay').property(single, 'value', 'regular-pay-index')).next()
-
+  addV('_code::_code_awe-type-of-pay').property(single, 'value', 'regular-pay-index')).next()
 g.V().hasLabel('_code_awe-type-of-pay').has('value', 'regular-pay-index').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_awe-type-of-pay').has('value', 'regular-pay-index').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_awe-type-of-pay').has('edition', 'one-off')
-		).property(single, 'label', 'Regular Pay Index')).
-		next()
+  g.V().hasLabel('_code_awe-type-of-pay').has('value', 'regular-pay-index').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_awe-type-of-pay').has('edition', 'one-off')
+  ).property(single, 'label', 'Regular Pay Index')).next()
 

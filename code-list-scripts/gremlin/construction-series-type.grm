@@ -1,76 +1,71 @@
-g.V().hasLabel('_code_list_construction-series-type').has('edition', 'one-off').fold().coalesce(unfold(),
-	addV('_code_list_construction-series-type::_code_list').
-		property(single, 'edition', 'one-off').
-		property(single, 'label', 'seriestype')
-	).next()
+
+
+g.V().hasLabel('_code_list_construction-series-type').has('edition', ''one-off'').fold().coalesce(unfold(),
+  addV('_code_list_construction-series-type::_code_list').
+    property(single, 'label', ''seriestype'').
+    property(single, 'edition', ''one-off'')
+  ).next()
+
 
 g.V().hasLabel('_code_construction-series-type').has('value', 'g11-4dp').fold().coalesce(unfold(),
-	addV('_code::_code_construction-series-type').property(single, 'value', 'g11-4dp')).next()
-
+  addV('_code::_code_construction-series-type').property(single, 'value', 'g11-4dp')).next()
 g.V().hasLabel('_code_construction-series-type').has('value', 'g11-4dp').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_construction-series-type').has('value', 'g11-4dp').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_construction-series-type').has('edition', 'one-off')
-		).property(single, 'label', 'Period on period')).
-		next()
+  g.V().hasLabel('_code_construction-series-type').has('value', 'g11-4dp').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_construction-series-type').has('edition', ''one-off'')
+  ).property(single, 'label', 'Period on period')).next()
+
 
 g.V().hasLabel('_code_construction-series-type').has('value', 'g121-4dp').fold().coalesce(unfold(),
-	addV('_code::_code_construction-series-type').property(single, 'value', 'g121-4dp')).next()
-
+  addV('_code::_code_construction-series-type').property(single, 'value', 'g121-4dp')).next()
 g.V().hasLabel('_code_construction-series-type').has('value', 'g121-4dp').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_construction-series-type').has('value', 'g121-4dp').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_construction-series-type').has('edition', 'one-off')
-		).property(single, 'label', 'Month on month a year ago')).
-		next()
+  g.V().hasLabel('_code_construction-series-type').has('value', 'g121-4dp').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_construction-series-type').has('edition', ''one-off'')
+  ).property(single, 'label', 'Month on month a year ago')).next()
+
 
 g.V().hasLabel('_code_construction-series-type').has('value', 'g33-4dp').fold().coalesce(unfold(),
-	addV('_code::_code_construction-series-type').property(single, 'value', 'g33-4dp')).next()
-
+  addV('_code::_code_construction-series-type').property(single, 'value', 'g33-4dp')).next()
 g.V().hasLabel('_code_construction-series-type').has('value', 'g33-4dp').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_construction-series-type').has('value', 'g33-4dp').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_construction-series-type').has('edition', 'one-off')
-		).property(single, 'label', 'Three months on previous three months')).
-		next()
+  g.V().hasLabel('_code_construction-series-type').has('value', 'g33-4dp').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_construction-series-type').has('edition', ''one-off'')
+  ).property(single, 'label', 'Three months on previous three months')).next()
+
 
 g.V().hasLabel('_code_construction-series-type').has('value', 'g123-4dp').fold().coalesce(unfold(),
-	addV('_code::_code_construction-series-type').property(single, 'value', 'g123-4dp')).next()
-
+  addV('_code::_code_construction-series-type').property(single, 'value', 'g123-4dp')).next()
 g.V().hasLabel('_code_construction-series-type').has('value', 'g123-4dp').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_construction-series-type').has('value', 'g123-4dp').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_construction-series-type').has('edition', 'one-off')
-		).property(single, 'label', 'Three months on three months a year ago')).
-		next()
+  g.V().hasLabel('_code_construction-series-type').has('value', 'g123-4dp').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_construction-series-type').has('edition', ''one-off'')
+  ).property(single, 'label', 'Three months on three months a year ago')).next()
+
 
 g.V().hasLabel('_code_construction-series-type').has('value', 'g41-4dp').fold().coalesce(unfold(),
-	addV('_code::_code_construction-series-type').property(single, 'value', 'g41-4dp')).next()
-
+  addV('_code::_code_construction-series-type').property(single, 'value', 'g41-4dp')).next()
 g.V().hasLabel('_code_construction-series-type').has('value', 'g41-4dp').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_construction-series-type').has('value', 'g41-4dp').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_construction-series-type').has('edition', 'one-off')
-		).property(single, 'label', 'Quarter on quarter a year ago')).
-		next()
+  g.V().hasLabel('_code_construction-series-type').has('value', 'g41-4dp').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_construction-series-type').has('edition', ''one-off'')
+  ).property(single, 'label', 'Quarter on quarter a year ago')).next()
+
 
 g.V().hasLabel('_code_construction-series-type').has('value', 'oc').fold().coalesce(unfold(),
-	addV('_code::_code_construction-series-type').property(single, 'value', 'oc')).next()
-
+  addV('_code::_code_construction-series-type').property(single, 'value', 'oc')).next()
 g.V().hasLabel('_code_construction-series-type').has('value', 'oc').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_construction-series-type').has('value', 'oc').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_construction-series-type').has('edition', 'one-off')
-		).property(single, 'label', 'Output Constrained')).
-		next()
+  g.V().hasLabel('_code_construction-series-type').has('value', 'oc').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_construction-series-type').has('edition', ''one-off'')
+  ).property(single, 'label', 'Output Constrained')).next()
+
 
 g.V().hasLabel('_code_construction-series-type').has('value', 'ic').fold().coalesce(unfold(),
-	addV('_code::_code_construction-series-type').property(single, 'value', 'ic')).next()
-
+  addV('_code::_code_construction-series-type').property(single, 'value', 'ic')).next()
 g.V().hasLabel('_code_construction-series-type').has('value', 'ic').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_construction-series-type').has('value', 'ic').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_construction-series-type').has('edition', 'one-off')
-		).property(single, 'label', 'Index Constrained')).
-		next()
+  g.V().hasLabel('_code_construction-series-type').has('value', 'ic').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_construction-series-type').has('edition', ''one-off'')
+  ).property(single, 'label', 'Index Constrained')).next()
 

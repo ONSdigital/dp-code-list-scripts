@@ -1,26 +1,30 @@
-g.V().hasLabel('_code_list_trade-direction').has('edition', 'one-off').fold().coalesce(unfold(),
-	addV('_code_list_trade-direction::_code_list').
-		property(single, 'edition', 'one-off').
-		property(single, 'label', 'direction')
-	).next()
 
-g.V().hasLabel('_code_trade-direction').has('value', 'IM').fold().coalesce(unfold(),
-	addV('_code::_code_trade-direction').property(single, 'value', 'IM')).next()
 
-g.V().hasLabel('_code_trade-direction').has('value', 'IM').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_trade-direction').has('value', 'IM').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_trade-direction').has('edition', 'one-off')
-		).property(single, 'label', 'Imports')).
-		next()
+g.V().hasLabel('_code_list_trade-direction').has('edition', ''one-off'').fold().coalesce(unfold(),
+  addV('_code_list_trade-direction::_code_list').
+    property(single, 'label', ''direction'').
+    property(single, 'edition', ''one-off'')
+  ).next()
 
-g.V().hasLabel('_code_trade-direction').has('value', 'EX').fold().coalesce(unfold(),
-	addV('_code::_code_trade-direction').property(single, 'value', 'EX')).next()
 
-g.V().hasLabel('_code_trade-direction').has('value', 'EX').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_trade-direction').has('value', 'EX').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_trade-direction').has('edition', 'one-off')
-		).property(single, 'label', 'Exports')).
-		next()
+
+
+g.V().hasLabel('_code_trade-direction').has('value', ''IM'').fold().coalesce(unfold(),
+  addV('_code::_code_trade-direction').property(single, 'value', ''IM'')).next()
+g.V().hasLabel('_code_trade-direction').has('value', ''IM'').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_trade-direction').has('value', ''IM'').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_trade-direction').has('edition', ''one-off'')
+  ).property(single, 'label', 'Imports')).next()
+
+
+
+
+g.V().hasLabel('_code_trade-direction').has('value', ''EX'').fold().coalesce(unfold(),
+  addV('_code::_code_trade-direction').property(single, 'value', ''EX'')).next()
+g.V().hasLabel('_code_trade-direction').has('value', ''EX'').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_trade-direction').has('value', ''EX'').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_trade-direction').has('edition', ''one-off'')
+  ).property(single, 'label', 'Exports')).next()
 

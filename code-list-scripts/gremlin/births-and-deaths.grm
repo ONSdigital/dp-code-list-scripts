@@ -1,66 +1,62 @@
-g.V().hasLabel('_code_list_births-and-deaths').has('edition', 'one-off').fold().coalesce(unfold(),
-	addV('_code_list_births-and-deaths::_code_list').
-		property(single, 'edition', 'one-off').
-		property(single, 'label', 'birthsanddeaths')
-	).next()
+
+
+g.V().hasLabel('_code_list_births-and-deaths').has('edition', ''one-off'').fold().coalesce(unfold(),
+  addV('_code_list_births-and-deaths::_code_list').
+    property(single, 'label', ''birthsanddeaths'').
+    property(single, 'edition', ''one-off'')
+  ).next()
+
 
 g.V().hasLabel('_code_births-and-deaths').has('value', 'total-live-births').fold().coalesce(unfold(),
-	addV('_code::_code_births-and-deaths').property(single, 'value', 'total-live-births')).next()
-
+  addV('_code::_code_births-and-deaths').property(single, 'value', 'total-live-births')).next()
 g.V().hasLabel('_code_births-and-deaths').has('value', 'total-live-births').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_births-and-deaths').has('value', 'total-live-births').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_births-and-deaths').has('edition', 'one-off')
-		).property(single, 'label', 'Total live births')).
-		next()
+  g.V().hasLabel('_code_births-and-deaths').has('value', 'total-live-births').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_births-and-deaths').has('edition', ''one-off'')
+  ).property(single, 'label', 'Total live births')).next()
+
 
 g.V().hasLabel('_code_births-and-deaths').has('value', 'stillbirths').fold().coalesce(unfold(),
-	addV('_code::_code_births-and-deaths').property(single, 'value', 'stillbirths')).next()
-
+  addV('_code::_code_births-and-deaths').property(single, 'value', 'stillbirths')).next()
 g.V().hasLabel('_code_births-and-deaths').has('value', 'stillbirths').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_births-and-deaths').has('value', 'stillbirths').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_births-and-deaths').has('edition', 'one-off')
-		).property(single, 'label', 'Stillbirths')).
-		next()
+  g.V().hasLabel('_code_births-and-deaths').has('value', 'stillbirths').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_births-and-deaths').has('edition', ''one-off'')
+  ).property(single, 'label', 'Stillbirths')).next()
+
 
 g.V().hasLabel('_code_births-and-deaths').has('value', 'perinatal-deaths').fold().coalesce(unfold(),
-	addV('_code::_code_births-and-deaths').property(single, 'value', 'perinatal-deaths')).next()
-
+  addV('_code::_code_births-and-deaths').property(single, 'value', 'perinatal-deaths')).next()
 g.V().hasLabel('_code_births-and-deaths').has('value', 'perinatal-deaths').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_births-and-deaths').has('value', 'perinatal-deaths').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_births-and-deaths').has('edition', 'one-off')
-		).property(single, 'label', 'Perinatal deaths')).
-		next()
+  g.V().hasLabel('_code_births-and-deaths').has('value', 'perinatal-deaths').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_births-and-deaths').has('edition', ''one-off'')
+  ).property(single, 'label', 'Perinatal deaths')).next()
+
 
 g.V().hasLabel('_code_births-and-deaths').has('value', 'neonatal-deaths').fold().coalesce(unfold(),
-	addV('_code::_code_births-and-deaths').property(single, 'value', 'neonatal-deaths')).next()
-
+  addV('_code::_code_births-and-deaths').property(single, 'value', 'neonatal-deaths')).next()
 g.V().hasLabel('_code_births-and-deaths').has('value', 'neonatal-deaths').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_births-and-deaths').has('value', 'neonatal-deaths').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_births-and-deaths').has('edition', 'one-off')
-		).property(single, 'label', 'Neonatal deaths')).
-		next()
+  g.V().hasLabel('_code_births-and-deaths').has('value', 'neonatal-deaths').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_births-and-deaths').has('edition', ''one-off'')
+  ).property(single, 'label', 'Neonatal deaths')).next()
+
 
 g.V().hasLabel('_code_births-and-deaths').has('value', 'post-neonatal-deaths').fold().coalesce(unfold(),
-	addV('_code::_code_births-and-deaths').property(single, 'value', 'post-neonatal-deaths')).next()
-
+  addV('_code::_code_births-and-deaths').property(single, 'value', 'post-neonatal-deaths')).next()
 g.V().hasLabel('_code_births-and-deaths').has('value', 'post-neonatal-deaths').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_births-and-deaths').has('value', 'post-neonatal-deaths').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_births-and-deaths').has('edition', 'one-off')
-		).property(single, 'label', 'Post-neonatal deaths')).
-		next()
+  g.V().hasLabel('_code_births-and-deaths').has('value', 'post-neonatal-deaths').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_births-and-deaths').has('edition', ''one-off'')
+  ).property(single, 'label', 'Post-neonatal deaths')).next()
+
 
 g.V().hasLabel('_code_births-and-deaths').has('value', 'infant-deaths').fold().coalesce(unfold(),
-	addV('_code::_code_births-and-deaths').property(single, 'value', 'infant-deaths')).next()
-
+  addV('_code::_code_births-and-deaths').property(single, 'value', 'infant-deaths')).next()
 g.V().hasLabel('_code_births-and-deaths').has('value', 'infant-deaths').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_births-and-deaths').has('value', 'infant-deaths').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_births-and-deaths').has('edition', 'one-off')
-		).property(single, 'label', 'Infant deaths')).
-		next()
+  g.V().hasLabel('_code_births-and-deaths').has('value', 'infant-deaths').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_births-and-deaths').has('edition', ''one-off'')
+  ).property(single, 'label', 'Infant deaths')).next()
 

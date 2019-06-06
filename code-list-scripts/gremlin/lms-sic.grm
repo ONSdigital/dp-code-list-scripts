@@ -1,0 +1,206 @@
+
+
+g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off').fold().coalesce(unfold(),
+  addV('_code_list_lms-sic::_code_list').
+    property(single, 'label', 'standardindustrialclassification').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'A-T').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'A-T')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'A-T').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'A-T').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'A-T : All jobs ')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'A').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'A')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'A').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'A').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'A : Agriculture, forestry & fishing')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'B').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'B')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'B').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'B').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'B : Mining & quarrying')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'C').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'C')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'C').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'C').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'C : Manufacturing')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'D').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'D')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'D').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'D').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'D : Electricity, gas, steam & air conditioning supply ')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'E').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'E')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'E').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'E').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'E : Water supply, sewerage, waste & remediation activities')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'F').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'F')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'F').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'F').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'F : Construction')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'G').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'G')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'G').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'G').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'G : Wholesale & retail trade; repair of motor vehicles and motor cycles')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'H').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'H')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'H').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'H').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'H : Transport & storage')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'I').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'I')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'I').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'I').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'I : Accommodation & food service activities')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'J').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'J')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'J').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'J').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'J : Information & communication')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'K').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'K')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'K').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'K').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'K : Financial & insurance activities')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'L').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'L')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'L').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'L').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'L : Real estate activities')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'M').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'M')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'M').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'M').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'M : Professional scientific & technical activities')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'N').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'N')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'N').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'N').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'N : Administrative & support service activities')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'O').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'O')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'O').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'O').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'O : Public admin & defence; compulsory social security')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'P').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'P')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'P').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'P').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'P : Education')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'Q').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'Q')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'Q').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'Q').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'Q : Human health & social work activities')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'R').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'R')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'R').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'R').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'R : Arts, entertainment & recreation')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'S').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'S')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'S').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'S').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'S : Other service activities')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'T').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'T')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'T').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'T').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'T : People employed by households, etc.')).next()
+
+
+g.V().hasLabel('_code_lms-sic').has('value', 'G-T').fold().coalesce(unfold(),
+  addV('_code::_code_lms-sic').property(single, 'value', 'G-T')).next()
+g.V().hasLabel('_code_lms-sic').has('value', 'G-T').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_lms-sic').has('value', 'G-T').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-sic').has('edition', 'one-off')
+  ).property(single, 'label', 'G-T : Total services ')).next()
+

@@ -1,46 +1,44 @@
-g.V().hasLabel('_code_list_lms-economic-status').has('edition', 'one-off').fold().coalesce(unfold(),
-	addV('_code_list_lms-economic-status::_code_list').
-		property(single, 'edition', 'one-off').
-		property(single, 'label', 'economicstatus')
-	).next()
+
+
+g.V().hasLabel('_code_list_lms-economic-status').has('edition', ''one-off'').fold().coalesce(unfold(),
+  addV('_code_list_lms-economic-status::_code_list').
+    property(single, 'label', ''economicstatus'').
+    property(single, 'edition', ''one-off'')
+  ).next()
+
 
 g.V().hasLabel('_code_lms-economic-status').has('value', 'in-employment').fold().coalesce(unfold(),
-	addV('_code::_code_lms-economic-status').property(single, 'value', 'in-employment')).next()
-
+  addV('_code::_code_lms-economic-status').property(single, 'value', 'in-employment')).next()
 g.V().hasLabel('_code_lms-economic-status').has('value', 'in-employment').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_lms-economic-status').has('value', 'in-employment').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_lms-economic-status').has('edition', 'one-off')
-		).property(single, 'label', 'In Employment')).
-		next()
+  g.V().hasLabel('_code_lms-economic-status').has('value', 'in-employment').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-economic-status').has('edition', ''one-off'')
+  ).property(single, 'label', 'In Employment')).next()
+
 
 g.V().hasLabel('_code_lms-economic-status').has('value', 'unemployed').fold().coalesce(unfold(),
-	addV('_code::_code_lms-economic-status').property(single, 'value', 'unemployed')).next()
-
+  addV('_code::_code_lms-economic-status').property(single, 'value', 'unemployed')).next()
 g.V().hasLabel('_code_lms-economic-status').has('value', 'unemployed').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_lms-economic-status').has('value', 'unemployed').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_lms-economic-status').has('edition', 'one-off')
-		).property(single, 'label', 'Unemployed')).
-		next()
+  g.V().hasLabel('_code_lms-economic-status').has('value', 'unemployed').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-economic-status').has('edition', ''one-off'')
+  ).property(single, 'label', 'Unemployed')).next()
+
 
 g.V().hasLabel('_code_lms-economic-status').has('value', 'economically-inactive').fold().coalesce(unfold(),
-	addV('_code::_code_lms-economic-status').property(single, 'value', 'economically-inactive')).next()
-
+  addV('_code::_code_lms-economic-status').property(single, 'value', 'economically-inactive')).next()
 g.V().hasLabel('_code_lms-economic-status').has('value', 'economically-inactive').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_lms-economic-status').has('value', 'economically-inactive').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_lms-economic-status').has('edition', 'one-off')
-		).property(single, 'label', 'Economically Inactive')).
-		next()
+  g.V().hasLabel('_code_lms-economic-status').has('value', 'economically-inactive').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-economic-status').has('edition', ''one-off'')
+  ).property(single, 'label', 'Economically Inactive')).next()
+
 
 g.V().hasLabel('_code_lms-economic-status').has('value', 'economically-active').fold().coalesce(unfold(),
-	addV('_code::_code_lms-economic-status').property(single, 'value', 'economically-active')).next()
-
+  addV('_code::_code_lms-economic-status').property(single, 'value', 'economically-active')).next()
 g.V().hasLabel('_code_lms-economic-status').has('value', 'economically-active').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_lms-economic-status').has('value', 'economically-active').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_lms-economic-status').has('edition', 'one-off')
-		).property(single, 'label', 'Economically Active')).
-		next()
+  g.V().hasLabel('_code_lms-economic-status').has('value', 'economically-active').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_lms-economic-status').has('edition', ''one-off'')
+  ).property(single, 'label', 'Economically Active')).next()
 

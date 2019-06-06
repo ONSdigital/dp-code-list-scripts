@@ -1,176 +1,161 @@
-g.V().hasLabel('_code_list_ott-purpose').has('edition', 'one-off').fold().coalesce(unfold(),
-	addV('_code_list_ott-purpose::_code_list').
-		property(single, 'edition', 'one-off').
-		property(single, 'label', 'purpose')
-	).next()
+
+
+g.V().hasLabel('_code_list_ott-purpose').has('edition', ''one-off'').fold().coalesce(unfold(),
+  addV('_code_list_ott-purpose::_code_list').
+    property(single, 'label', ''purpose'').
+    property(single, 'edition', ''one-off'')
+  ).next()
+
 
 g.V().hasLabel('_code_ott-purpose').has('value', 'holiday').fold().coalesce(unfold(),
-	addV('_code::_code_ott-purpose').property(single, 'value', 'holiday')).next()
-
+  addV('_code::_code_ott-purpose').property(single, 'value', 'holiday')).next()
 g.V().hasLabel('_code_ott-purpose').has('value', 'holiday').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-purpose').has('value', 'holiday').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-purpose').has('edition', 'one-off')
-		).property(single, 'label', 'Holiday')).
-		next()
+  g.V().hasLabel('_code_ott-purpose').has('value', 'holiday').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-purpose').has('edition', ''one-off'')
+  ).property(single, 'label', 'Holiday')).next()
+
 
 g.V().hasLabel('_code_ott-purpose').has('value', 'misc').fold().coalesce(unfold(),
-	addV('_code::_code_ott-purpose').property(single, 'value', 'misc')).next()
-
+  addV('_code::_code_ott-purpose').property(single, 'value', 'misc')).next()
 g.V().hasLabel('_code_ott-purpose').has('value', 'misc').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-purpose').has('value', 'misc').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-purpose').has('edition', 'one-off')
-		).property(single, 'label', 'Misc')).
-		next()
+  g.V().hasLabel('_code_ott-purpose').has('value', 'misc').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-purpose').has('edition', ''one-off'')
+  ).property(single, 'label', 'Misc')).next()
+
 
 g.V().hasLabel('_code_ott-purpose').has('value', 'visit-friends-or-relatives').fold().coalesce(unfold(),
-	addV('_code::_code_ott-purpose').property(single, 'value', 'visit-friends-or-relatives')).next()
-
+  addV('_code::_code_ott-purpose').property(single, 'value', 'visit-friends-or-relatives')).next()
 g.V().hasLabel('_code_ott-purpose').has('value', 'visit-friends-or-relatives').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-purpose').has('value', 'visit-friends-or-relatives').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-purpose').has('edition', 'one-off')
-		).property(single, 'label', 'Visit Friends or Relatives')).
-		next()
+  g.V().hasLabel('_code_ott-purpose').has('value', 'visit-friends-or-relatives').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-purpose').has('edition', ''one-off'')
+  ).property(single, 'label', 'Visit Friends or Relatives')).next()
+
 
 g.V().hasLabel('_code_ott-purpose').has('value', 'business').fold().coalesce(unfold(),
-	addV('_code::_code_ott-purpose').property(single, 'value', 'business')).next()
-
+  addV('_code::_code_ott-purpose').property(single, 'value', 'business')).next()
 g.V().hasLabel('_code_ott-purpose').has('value', 'business').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-purpose').has('value', 'business').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-purpose').has('edition', 'one-off')
-		).property(single, 'label', 'Business')).
-		next()
+  g.V().hasLabel('_code_ott-purpose').has('value', 'business').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-purpose').has('edition', ''one-off'')
+  ).property(single, 'label', 'Business')).next()
+
 
 g.V().hasLabel('_code_ott-purpose').has('value', 'business-other').fold().coalesce(unfold(),
-	addV('_code::_code_ott-purpose').property(single, 'value', 'business-other')).next()
-
+  addV('_code::_code_ott-purpose').property(single, 'value', 'business-other')).next()
 g.V().hasLabel('_code_ott-purpose').has('value', 'business-other').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-purpose').has('value', 'business-other').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-purpose').has('edition', 'one-off')
-		).property(single, 'label', 'Business - Other')).
-		next()
+  g.V().hasLabel('_code_ott-purpose').has('value', 'business-other').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-purpose').has('edition', ''one-off'')
+  ).property(single, 'label', 'Business - Other')).next()
+
 
 g.V().hasLabel('_code_ott-purpose').has('value', 'study').fold().coalesce(unfold(),
-	addV('_code::_code_ott-purpose').property(single, 'value', 'study')).next()
-
+  addV('_code::_code_ott-purpose').property(single, 'value', 'study')).next()
 g.V().hasLabel('_code_ott-purpose').has('value', 'study').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-purpose').has('value', 'study').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-purpose').has('edition', 'one-off')
-		).property(single, 'label', 'Study')).
-		next()
+  g.V().hasLabel('_code_ott-purpose').has('value', 'study').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-purpose').has('edition', ''one-off'')
+  ).property(single, 'label', 'Study')).next()
+
 
 g.V().hasLabel('_code_ott-purpose').has('value', 'misc-other-miscellaneous').fold().coalesce(unfold(),
-	addV('_code::_code_ott-purpose').property(single, 'value', 'misc-other-miscellaneous')).next()
-
+  addV('_code::_code_ott-purpose').property(single, 'value', 'misc-other-miscellaneous')).next()
 g.V().hasLabel('_code_ott-purpose').has('value', 'misc-other-miscellaneous').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-purpose').has('value', 'misc-other-miscellaneous').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-purpose').has('edition', 'one-off')
-		).property(single, 'label', 'Misc - Other Miscellaneous')).
-		next()
+  g.V().hasLabel('_code_ott-purpose').has('value', 'misc-other-miscellaneous').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-purpose').has('edition', ''one-off'')
+  ).property(single, 'label', 'Misc - Other Miscellaneous')).next()
+
 
 g.V().hasLabel('_code_ott-purpose').has('value', 'misc-au-pair').fold().coalesce(unfold(),
-	addV('_code::_code_ott-purpose').property(single, 'value', 'misc-au-pair')).next()
-
+  addV('_code::_code_ott-purpose').property(single, 'value', 'misc-au-pair')).next()
 g.V().hasLabel('_code_ott-purpose').has('value', 'misc-au-pair').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-purpose').has('value', 'misc-au-pair').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-purpose').has('edition', 'one-off')
-		).property(single, 'label', 'Misc - Au Pair')).
-		next()
+  g.V().hasLabel('_code_ott-purpose').has('value', 'misc-au-pair').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-purpose').has('edition', ''one-off'')
+  ).property(single, 'label', 'Misc - Au Pair')).next()
+
 
 g.V().hasLabel('_code_ott-purpose').has('value', 'misc-getting-married').fold().coalesce(unfold(),
-	addV('_code::_code_ott-purpose').property(single, 'value', 'misc-getting-married')).next()
-
+  addV('_code::_code_ott-purpose').property(single, 'value', 'misc-getting-married')).next()
 g.V().hasLabel('_code_ott-purpose').has('value', 'misc-getting-married').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-purpose').has('value', 'misc-getting-married').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-purpose').has('edition', 'one-off')
-		).property(single, 'label', 'Misc - Getting Married')).
-		next()
+  g.V().hasLabel('_code_ott-purpose').has('value', 'misc-getting-married').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-purpose').has('edition', ''one-off'')
+  ).property(single, 'label', 'Misc - Getting Married')).next()
+
 
 g.V().hasLabel('_code_ott-purpose').has('value', 'misc-overnight-transit').fold().coalesce(unfold(),
-	addV('_code::_code_ott-purpose').property(single, 'value', 'misc-overnight-transit')).next()
-
+  addV('_code::_code_ott-purpose').property(single, 'value', 'misc-overnight-transit')).next()
 g.V().hasLabel('_code_ott-purpose').has('value', 'misc-overnight-transit').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-purpose').has('value', 'misc-overnight-transit').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-purpose').has('edition', 'one-off')
-		).property(single, 'label', 'Misc - Overnight Transit')).
-		next()
+  g.V().hasLabel('_code_ott-purpose').has('value', 'misc-overnight-transit').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-purpose').has('edition', ''one-off'')
+  ).property(single, 'label', 'Misc - Overnight Transit')).next()
+
 
 g.V().hasLabel('_code_ott-purpose').has('value', 'misc-join-accompany').fold().coalesce(unfold(),
-	addV('_code::_code_ott-purpose').property(single, 'value', 'misc-join-accompany')).next()
-
+  addV('_code::_code_ott-purpose').property(single, 'value', 'misc-join-accompany')).next()
 g.V().hasLabel('_code_ott-purpose').has('value', 'misc-join-accompany').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-purpose').has('value', 'misc-join-accompany').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-purpose').has('edition', 'one-off')
-		).property(single, 'label', 'Misc - Join/Accompany')).
-		next()
+  g.V().hasLabel('_code_ott-purpose').has('value', 'misc-join-accompany').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-purpose').has('edition', ''one-off'')
+  ).property(single, 'label', 'Misc - Join/Accompany')).next()
+
 
 g.V().hasLabel('_code_ott-purpose').has('value', 'misc-looking-for-work').fold().coalesce(unfold(),
-	addV('_code::_code_ott-purpose').property(single, 'value', 'misc-looking-for-work')).next()
-
+  addV('_code::_code_ott-purpose').property(single, 'value', 'misc-looking-for-work')).next()
 g.V().hasLabel('_code_ott-purpose').has('value', 'misc-looking-for-work').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-purpose').has('value', 'misc-looking-for-work').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-purpose').has('edition', 'one-off')
-		).property(single, 'label', 'Misc - Looking For Work')).
-		next()
+  g.V().hasLabel('_code_ott-purpose').has('value', 'misc-looking-for-work').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-purpose').has('edition', ''one-off'')
+  ).property(single, 'label', 'Misc - Looking For Work')).next()
+
 
 g.V().hasLabel('_code_ott-purpose').has('value', 'misc-medical').fold().coalesce(unfold(),
-	addV('_code::_code_ott-purpose').property(single, 'value', 'misc-medical')).next()
-
+  addV('_code::_code_ott-purpose').property(single, 'value', 'misc-medical')).next()
 g.V().hasLabel('_code_ott-purpose').has('value', 'misc-medical').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-purpose').has('value', 'misc-medical').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-purpose').has('edition', 'one-off')
-		).property(single, 'label', 'Misc - Medical')).
-		next()
+  g.V().hasLabel('_code_ott-purpose').has('value', 'misc-medical').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-purpose').has('edition', ''one-off'')
+  ).property(single, 'label', 'Misc - Medical')).next()
+
 
 g.V().hasLabel('_code_ott-purpose').has('value', 'holiday-cruise').fold().coalesce(unfold(),
-	addV('_code::_code_ott-purpose').property(single, 'value', 'holiday-cruise')).next()
-
+  addV('_code::_code_ott-purpose').property(single, 'value', 'holiday-cruise')).next()
 g.V().hasLabel('_code_ott-purpose').has('value', 'holiday-cruise').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-purpose').has('value', 'holiday-cruise').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-purpose').has('edition', 'one-off')
-		).property(single, 'label', 'Holiday - Cruise')).
-		next()
+  g.V().hasLabel('_code_ott-purpose').has('value', 'holiday-cruise').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-purpose').has('edition', ''one-off'')
+  ).property(single, 'label', 'Holiday - Cruise')).next()
+
 
 g.V().hasLabel('_code_ott-purpose').has('value', 'business-trade-fair-exhibition').fold().coalesce(unfold(),
-	addV('_code::_code_ott-purpose').property(single, 'value', 'business-trade-fair-exhibition')).next()
-
+  addV('_code::_code_ott-purpose').property(single, 'value', 'business-trade-fair-exhibition')).next()
 g.V().hasLabel('_code_ott-purpose').has('value', 'business-trade-fair-exhibition').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-purpose').has('value', 'business-trade-fair-exhibition').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-purpose').has('edition', 'one-off')
-		).property(single, 'label', 'Business - Trade Fair / Exhibition')).
-		next()
+  g.V().hasLabel('_code_ott-purpose').has('value', 'business-trade-fair-exhibition').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-purpose').has('edition', ''one-off'')
+  ).property(single, 'label', 'Business - Trade Fair / Exhibition')).next()
+
 
 g.V().hasLabel('_code_ott-purpose').has('value', 'business-conference-large-meeting').fold().coalesce(unfold(),
-	addV('_code::_code_ott-purpose').property(single, 'value', 'business-conference-large-meeting')).next()
-
+  addV('_code::_code_ott-purpose').property(single, 'value', 'business-conference-large-meeting')).next()
 g.V().hasLabel('_code_ott-purpose').has('value', 'business-conference-large-meeting').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-purpose').has('value', 'business-conference-large-meeting').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-purpose').has('edition', 'one-off')
-		).property(single, 'label', 'Business - Conference / Large Meeting')).
-		next()
+  g.V().hasLabel('_code_ott-purpose').has('value', 'business-conference-large-meeting').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-purpose').has('edition', ''one-off'')
+  ).property(single, 'label', 'Business - Conference / Large Meeting')).next()
+
 
 g.V().hasLabel('_code_ott-purpose').has('value', 'transit-nil-nights').fold().coalesce(unfold(),
-	addV('_code::_code_ott-purpose').property(single, 'value', 'transit-nil-nights')).next()
-
+  addV('_code::_code_ott-purpose').property(single, 'value', 'transit-nil-nights')).next()
 g.V().hasLabel('_code_ott-purpose').has('value', 'transit-nil-nights').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_ott-purpose').has('value', 'transit-nil-nights').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_ott-purpose').has('edition', 'one-off')
-		).property(single, 'label', 'Transit - Nil Nights')).
-		next()
+  g.V().hasLabel('_code_ott-purpose').has('value', 'transit-nil-nights').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_ott-purpose').has('edition', ''one-off'')
+  ).property(single, 'label', 'Transit - Nil Nights')).next()
 

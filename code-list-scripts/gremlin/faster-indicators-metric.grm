@@ -1,0 +1,35 @@
+
+
+g.V().hasLabel('_code_list_faster-indicators-metric').has('edition', 'one-off').fold().coalesce(unfold(),
+  addV('_code_list_faster-indicators-metric::_code_list').
+    property(single, 'label', 'metric').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code_faster-indicators-metric').has('value', 'turnover-current-prices').fold().coalesce(unfold(),
+  addV('_code::_code_faster-indicators-metric').property(single, 'value', 'turnover-current-prices')).next()
+g.V().hasLabel('_code_faster-indicators-metric').has('value', 'turnover-current-prices').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_faster-indicators-metric').has('value', 'turnover-current-prices').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_faster-indicators-metric').has('edition', 'one-off')
+  ).property(single, 'label', 'Turnover current prices')).next()
+
+
+g.V().hasLabel('_code_faster-indicators-metric').has('value', 'expenditure-current-prices').fold().coalesce(unfold(),
+  addV('_code::_code_faster-indicators-metric').property(single, 'value', 'expenditure-current-prices')).next()
+g.V().hasLabel('_code_faster-indicators-metric').has('value', 'expenditure-current-prices').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_faster-indicators-metric').has('value', 'expenditure-current-prices').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_faster-indicators-metric').has('edition', 'one-off')
+  ).property(single, 'label', 'Expenditure current prices')).next()
+
+
+g.V().hasLabel('_code_faster-indicators-metric').has('value', 'new-reporters').fold().coalesce(unfold(),
+  addV('_code::_code_faster-indicators-metric').property(single, 'value', 'new-reporters')).next()
+g.V().hasLabel('_code_faster-indicators-metric').has('value', 'new-reporters').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code_faster-indicators-metric').has('value', 'new-reporters').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_faster-indicators-metric').has('edition', 'one-off')
+  ).property(single, 'label', 'New reporters')).next()
+

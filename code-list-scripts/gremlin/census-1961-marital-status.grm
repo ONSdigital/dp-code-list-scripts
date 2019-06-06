@@ -1,56 +1,53 @@
-g.V().hasLabel('_code_list_census-1961-marital-status').has('edition', 'one-off').fold().coalesce(unfold(),
-	addV('_code_list_census-1961-marital-status::_code_list').
-		property(single, 'edition', 'one-off').
-		property(single, 'label', 'maritalstatus')
-	).next()
+
+
+g.V().hasLabel('_code_list_census-1961-marital-status').has('edition', ''one-off'').fold().coalesce(unfold(),
+  addV('_code_list_census-1961-marital-status::_code_list').
+    property(single, 'label', ''maritalstatus'').
+    property(single, 'edition', ''one-off'')
+  ).next()
+
 
 g.V().hasLabel('_code_census-1961-marital-status').has('value', 'all').fold().coalesce(unfold(),
-	addV('_code::_code_census-1961-marital-status').property(single, 'value', 'all')).next()
-
+  addV('_code::_code_census-1961-marital-status').property(single, 'value', 'all')).next()
 g.V().hasLabel('_code_census-1961-marital-status').has('value', 'all').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_census-1961-marital-status').has('value', 'all').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_census-1961-marital-status').has('edition', 'one-off')
-		).property(single, 'label', 'All')).
-		next()
+  g.V().hasLabel('_code_census-1961-marital-status').has('value', 'all').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_census-1961-marital-status').has('edition', ''one-off'')
+  ).property(single, 'label', 'All')).next()
+
 
 g.V().hasLabel('_code_census-1961-marital-status').has('value', 'single').fold().coalesce(unfold(),
-	addV('_code::_code_census-1961-marital-status').property(single, 'value', 'single')).next()
-
+  addV('_code::_code_census-1961-marital-status').property(single, 'value', 'single')).next()
 g.V().hasLabel('_code_census-1961-marital-status').has('value', 'single').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_census-1961-marital-status').has('value', 'single').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_census-1961-marital-status').has('edition', 'one-off')
-		).property(single, 'label', 'Single')).
-		next()
+  g.V().hasLabel('_code_census-1961-marital-status').has('value', 'single').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_census-1961-marital-status').has('edition', ''one-off'')
+  ).property(single, 'label', 'Single')).next()
+
 
 g.V().hasLabel('_code_census-1961-marital-status').has('value', 'married').fold().coalesce(unfold(),
-	addV('_code::_code_census-1961-marital-status').property(single, 'value', 'married')).next()
-
+  addV('_code::_code_census-1961-marital-status').property(single, 'value', 'married')).next()
 g.V().hasLabel('_code_census-1961-marital-status').has('value', 'married').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_census-1961-marital-status').has('value', 'married').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_census-1961-marital-status').has('edition', 'one-off')
-		).property(single, 'label', 'Married')).
-		next()
+  g.V().hasLabel('_code_census-1961-marital-status').has('value', 'married').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_census-1961-marital-status').has('edition', ''one-off'')
+  ).property(single, 'label', 'Married')).next()
+
 
 g.V().hasLabel('_code_census-1961-marital-status').has('value', 'widowed').fold().coalesce(unfold(),
-	addV('_code::_code_census-1961-marital-status').property(single, 'value', 'widowed')).next()
-
+  addV('_code::_code_census-1961-marital-status').property(single, 'value', 'widowed')).next()
 g.V().hasLabel('_code_census-1961-marital-status').has('value', 'widowed').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_census-1961-marital-status').has('value', 'widowed').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_census-1961-marital-status').has('edition', 'one-off')
-		).property(single, 'label', 'Widowed')).
-		next()
+  g.V().hasLabel('_code_census-1961-marital-status').has('value', 'widowed').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_census-1961-marital-status').has('edition', ''one-off'')
+  ).property(single, 'label', 'Widowed')).next()
+
 
 g.V().hasLabel('_code_census-1961-marital-status').has('value', 'divorced').fold().coalesce(unfold(),
-	addV('_code::_code_census-1961-marital-status').property(single, 'value', 'divorced')).next()
-
+  addV('_code::_code_census-1961-marital-status').property(single, 'value', 'divorced')).next()
 g.V().hasLabel('_code_census-1961-marital-status').has('value', 'divorced').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_census-1961-marital-status').has('value', 'divorced').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_census-1961-marital-status').has('edition', 'one-off')
-		).property(single, 'label', 'Divorced')).
-		next()
+  g.V().hasLabel('_code_census-1961-marital-status').has('value', 'divorced').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_census-1961-marital-status').has('edition', ''one-off'')
+  ).property(single, 'label', 'Divorced')).next()
 

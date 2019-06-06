@@ -1,26 +1,26 @@
-g.V().hasLabel('_code_list_uk-business-unit').has('edition', 'one-off').fold().coalesce(unfold(),
-	addV('_code_list_uk-business-unit::_code_list').
-		property(single, 'edition', 'one-off').
-		property(single, 'label', 'unit')
-	).next()
+
+
+g.V().hasLabel('_code_list_uk-business-unit').has('edition', ''one-off'').fold().coalesce(unfold(),
+  addV('_code_list_uk-business-unit::_code_list').
+    property(single, 'label', ''unit'').
+    property(single, 'edition', ''one-off'')
+  ).next()
+
 
 g.V().hasLabel('_code_uk-business-unit').has('value', 'enterprises').fold().coalesce(unfold(),
-	addV('_code::_code_uk-business-unit').property(single, 'value', 'enterprises')).next()
-
+  addV('_code::_code_uk-business-unit').property(single, 'value', 'enterprises')).next()
 g.V().hasLabel('_code_uk-business-unit').has('value', 'enterprises').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_uk-business-unit').has('value', 'enterprises').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_uk-business-unit').has('edition', 'one-off')
-		).property(single, 'label', 'Enterprises')).
-		next()
+  g.V().hasLabel('_code_uk-business-unit').has('value', 'enterprises').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_uk-business-unit').has('edition', ''one-off'')
+  ).property(single, 'label', 'Enterprises')).next()
+
 
 g.V().hasLabel('_code_uk-business-unit').has('value', 'local-units').fold().coalesce(unfold(),
-	addV('_code::_code_uk-business-unit').property(single, 'value', 'local-units')).next()
-
+  addV('_code::_code_uk-business-unit').property(single, 'value', 'local-units')).next()
 g.V().hasLabel('_code_uk-business-unit').has('value', 'local-units').outE().fold().coalesce(unfold(),
-	g.V().hasLabel('_code_uk-business-unit').has('value', 'local-units').
-		addE('usedBy').to(
-			g.V().hasLabel('_code_list_uk-business-unit').has('edition', 'one-off')
-		).property(single, 'label', 'Local Units')).
-		next()
+  g.V().hasLabel('_code_uk-business-unit').has('value', 'local-units').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list_uk-business-unit').has('edition', ''one-off'')
+  ).property(single, 'label', 'Local Units')).next()
 
