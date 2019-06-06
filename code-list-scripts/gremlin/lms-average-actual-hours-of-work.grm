@@ -3,8 +3,8 @@
 g.V().hasLabel('_code_list').has('listID', 'lms-average-actual-hours-of-work').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', 'lms-average-actual-hours-of-work').
-    property(single, 'label', 'averageactualhoursofwork').
-    property(single, 'edition', 'one-off')
+    property(single, 'edition', 'one-off').
+    property(single, 'label', 'averageactualhoursofwork')
   ).next()
 
 

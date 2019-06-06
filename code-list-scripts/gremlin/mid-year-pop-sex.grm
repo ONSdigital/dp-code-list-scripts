@@ -1,8 +1,8 @@
 g.V().hasLabel('_code_list').has('listID', 'mid-year-pop-sex').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', 'mid-year-pop-sex').
-    property(single, 'edition', 'one-off').
-    property(single, 'label', 'sex')
+    property(single, 'label', 'sex').
+    property(single, 'edition', 'one-off')
   ).next()
 
 

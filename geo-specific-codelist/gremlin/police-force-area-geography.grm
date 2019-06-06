@@ -1,0 +1,494 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'police-force-area-geography').
+    property(single, 'geography', 'true').
+    property(single, 'label', 'geography').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000033').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000033')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000033').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000033').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Sussex')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000029').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000029')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000029').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000029').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Thames Valley')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000017').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000017')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000017').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000017').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Warwickshire')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000016').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000016')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000016').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000016').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'West Mercia')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000014').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000014')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000014').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000014').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'West Midlands')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000010').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000010')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000010').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000010').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'West Yorkshire')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000038').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000038')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000038').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000038').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Wiltshire')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000036').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000036')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000036').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000036').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Avon and Somerset')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000026').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000026')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000026').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000026').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Bedfordshire')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'btp').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'btp')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'btp').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'btp').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'British Transport Police')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000023').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000023')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000023').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000023').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Cambridgeshire')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000006').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000006')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000006').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000006').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Cheshire')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000034').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000034')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000034').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000034').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'City of London')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000013').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000013')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000013').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000013').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Cleveland')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000002').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000002')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000002').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000002').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Cumbria')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000018').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000018')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000018').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000018').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Derbyshire')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000035').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000035')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000035').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000035').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Devon and Cornwall')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000039').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000039')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000039').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000039').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Dorset')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000008').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000008')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000008').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000008').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Durham')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W15000004').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'W15000004')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W15000004').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W15000004').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Dyfed-Powys')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000028').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000028')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000028').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000028').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Essex')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000037').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000037')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000037').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000037').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Gloucestershire')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000005').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000005')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000005').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000005').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Greater Manchester')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W15000002').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'W15000002')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W15000002').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W15000002').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Gwent')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000030').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000030')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000030').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000030').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Hampshire')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000027').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000027')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000027').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000027').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Hertfordshire')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000012').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000012')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000012').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000012').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Humberside')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000032').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000032')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000032').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000032').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Kent')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000003').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000003')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000003').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000003').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Lancashire')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000021').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000021')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000021').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000021').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Leicestershire')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000020').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000020')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000020').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000020').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Lincolnshire')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000004').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000004')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000004').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000004').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Merseyside')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000001').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000001')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000001').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000001').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Metropolitan Police')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000024').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000024')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000024').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000024').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Norfolk')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W15000001').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'W15000001')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W15000001').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W15000001').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'North Wales')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000009').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000009')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000009').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000009').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'North Yorkshire')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000022').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000022')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000022').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000022').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Northamptonshire')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000007').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000007')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000007').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000007').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Northumbria')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000019').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000019')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000019').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000019').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Nottinghamshire')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W15000003').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'W15000003')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W15000003').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W15000003').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'South Wales')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000011').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000011')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000011').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000011').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'South Yorkshire')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000015').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000015')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000015').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000015').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Staffordshire')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000025').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000025')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000025').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000025').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Suffolk')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000031').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E23000031')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000031').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E23000031').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Surrey')).next()
+

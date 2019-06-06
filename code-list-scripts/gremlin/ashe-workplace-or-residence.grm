@@ -3,8 +3,8 @@
 g.V().hasLabel('_code_list').has('listID', 'ashe-workplace-or-residence').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', 'ashe-workplace-or-residence').
-    property(single, 'edition', 'one-off').
-    property(single, 'label', 'workplaceorresidence')
+    property(single, 'label', 'workplaceorresidence').
+    property(single, 'edition', 'one-off')
   ).next()
 
 

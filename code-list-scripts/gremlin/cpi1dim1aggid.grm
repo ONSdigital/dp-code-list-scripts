@@ -1,8 +1,8 @@
 g.V().hasLabel('_code_list').has('listID', 'cpi1dim1aggid').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', 'cpi1dim1aggid').
-    property(single, 'edition', 'one-off').
-    property(single, 'label', 'Aggregate')
+    property(single, 'label', 'Aggregate').
+    property(single, 'edition', 'one-off')
   ).next()
 
 

@@ -3,8 +3,8 @@
 g.V().hasLabel('_code_list').has('listID', 'faster-indicators-index').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', 'faster-indicators-index').
-    property(single, 'edition', 'one-off').
-    property(single, 'label', 'index')
+    property(single, 'label', 'index').
+    property(single, 'edition', 'one-off')
   ).next()
 
 
