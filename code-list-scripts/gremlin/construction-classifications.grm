@@ -1,161 +1,196 @@
 
 
-g.V().hasLabel('_code_list_construction-classifications').has('edition', ''one-off'').fold().coalesce(unfold(),
-  addV('_code_list_construction-classifications::_code_list').
-    property(single, 'label', ''typeofwork'').
-    property(single, 'edition', ''one-off'')
+g.V().hasLabel('_code_list').has('listID', 'construction-classifications').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'construction-classifications').
+    property(single, 'label', 'typeofwork').
+    property(single, 'edition', 'one-off')
   ).next()
 
 
-g.V().hasLabel('_code_construction-classifications').has('value', '1').fold().coalesce(unfold(),
-  addV('_code::_code_construction-classifications').property(single, 'value', '1')).next()
-g.V().hasLabel('_code_construction-classifications').has('value', '1').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_construction-classifications').has('value', '1').
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'construction-classifications').property(single, 'value', '1')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_construction-classifications').has('edition', ''one-off'')
-  ).property(single, 'label', 'Total All Work')).next()
+      g.V().hasLabel('_code_list').has('listID', 'construction-classifications').has('edition', 'one-off')
+    ).property(single, 'label', 'Total All Work')).next()
 
 
-g.V().hasLabel('_code_construction-classifications').has('value', '1.1').fold().coalesce(unfold(),
-  addV('_code::_code_construction-classifications').property(single, 'value', '1.1')).next()
-g.V().hasLabel('_code_construction-classifications').has('value', '1.1').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_construction-classifications').has('value', '1.1').
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'construction-classifications').property(single, 'value', '1.1')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_construction-classifications').has('edition', ''one-off'')
-  ).property(single, 'label', 'Repair & Maintenance')).next()
+      g.V().hasLabel('_code_list').has('listID', 'construction-classifications').has('edition', 'one-off')
+    ).property(single, 'label', 'Repair & Maintenance')).next()
 
 
-g.V().hasLabel('_code_construction-classifications').has('value', '1.1.1').fold().coalesce(unfold(),
-  addV('_code::_code_construction-classifications').property(single, 'value', '1.1.1')).next()
-g.V().hasLabel('_code_construction-classifications').has('value', '1.1.1').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_construction-classifications').has('value', '1.1.1').
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.1').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'construction-classifications').property(single, 'value', '1.1.1')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.1').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.1').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_construction-classifications').has('edition', ''one-off'')
-  ).property(single, 'label', 'Housing R & M')).next()
+      g.V().hasLabel('_code_list').has('listID', 'construction-classifications').has('edition', 'one-off')
+    ).property(single, 'label', 'Housing R & M')).next()
 
 
-g.V().hasLabel('_code_construction-classifications').has('value', '1.1.1.1').fold().coalesce(unfold(),
-  addV('_code::_code_construction-classifications').property(single, 'value', '1.1.1.1')).next()
-g.V().hasLabel('_code_construction-classifications').has('value', '1.1.1.1').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_construction-classifications').has('value', '1.1.1.1').
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.1.1').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'construction-classifications').property(single, 'value', '1.1.1.1')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.1.1').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.1.1').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_construction-classifications').has('edition', ''one-off'')
-  ).property(single, 'label', 'Public housing R & M')).next()
+      g.V().hasLabel('_code_list').has('listID', 'construction-classifications').has('edition', 'one-off')
+    ).property(single, 'label', 'Public housing R & M')).next()
 
 
-g.V().hasLabel('_code_construction-classifications').has('value', '1.1.1.2').fold().coalesce(unfold(),
-  addV('_code::_code_construction-classifications').property(single, 'value', '1.1.1.2')).next()
-g.V().hasLabel('_code_construction-classifications').has('value', '1.1.1.2').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_construction-classifications').has('value', '1.1.1.2').
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.1.2').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'construction-classifications').property(single, 'value', '1.1.1.2')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.1.2').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.1.2').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_construction-classifications').has('edition', ''one-off'')
-  ).property(single, 'label', 'Private housing R & M')).next()
+      g.V().hasLabel('_code_list').has('listID', 'construction-classifications').has('edition', 'one-off')
+    ).property(single, 'label', 'Private housing R & M')).next()
 
 
-g.V().hasLabel('_code_construction-classifications').has('value', '1.1.2.1.1').fold().coalesce(unfold(),
-  addV('_code::_code_construction-classifications').property(single, 'value', '1.1.2.1.1')).next()
-g.V().hasLabel('_code_construction-classifications').has('value', '1.1.2.1.1').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_construction-classifications').has('value', '1.1.2.1.1').
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.2.1.1').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'construction-classifications').property(single, 'value', '1.1.2.1.1')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.2.1.1').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.2.1.1').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_construction-classifications').has('edition', ''one-off'')
-  ).property(single, 'label', 'Public other work R & M')).next()
+      g.V().hasLabel('_code_list').has('listID', 'construction-classifications').has('edition', 'one-off')
+    ).property(single, 'label', 'Public other work R & M')).next()
 
 
-g.V().hasLabel('_code_construction-classifications').has('value', '1.1.2.1.2').fold().coalesce(unfold(),
-  addV('_code::_code_construction-classifications').property(single, 'value', '1.1.2.1.2')).next()
-g.V().hasLabel('_code_construction-classifications').has('value', '1.1.2.1.2').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_construction-classifications').has('value', '1.1.2.1.2').
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.2.1.2').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'construction-classifications').property(single, 'value', '1.1.2.1.2')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.2.1.2').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.2.1.2').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_construction-classifications').has('edition', ''one-off'')
-  ).property(single, 'label', 'Private other work R & M')).next()
+      g.V().hasLabel('_code_list').has('listID', 'construction-classifications').has('edition', 'one-off')
+    ).property(single, 'label', 'Private other work R & M')).next()
 
 
-g.V().hasLabel('_code_construction-classifications').has('value', '1.1.2.2').fold().coalesce(unfold(),
-  addV('_code::_code_construction-classifications').property(single, 'value', '1.1.2.2')).next()
-g.V().hasLabel('_code_construction-classifications').has('value', '1.1.2.2').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_construction-classifications').has('value', '1.1.2.2').
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.2.2').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'construction-classifications').property(single, 'value', '1.1.2.2')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.2.2').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.2.2').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_construction-classifications').has('edition', ''one-off'')
-  ).property(single, 'label', 'Infrastructure R & M')).next()
+      g.V().hasLabel('_code_list').has('listID', 'construction-classifications').has('edition', 'one-off')
+    ).property(single, 'label', 'Infrastructure R & M')).next()
 
 
-g.V().hasLabel('_code_construction-classifications').has('value', '1.2').fold().coalesce(unfold(),
-  addV('_code::_code_construction-classifications').property(single, 'value', '1.2')).next()
-g.V().hasLabel('_code_construction-classifications').has('value', '1.2').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_construction-classifications').has('value', '1.2').
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'construction-classifications').property(single, 'value', '1.2')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_construction-classifications').has('edition', ''one-off'')
-  ).property(single, 'label', 'All New Work')).next()
+      g.V().hasLabel('_code_list').has('listID', 'construction-classifications').has('edition', 'one-off')
+    ).property(single, 'label', 'All New Work')).next()
 
 
-g.V().hasLabel('_code_construction-classifications').has('value', '1.2.1').fold().coalesce(unfold(),
-  addV('_code::_code_construction-classifications').property(single, 'value', '1.2.1')).next()
-g.V().hasLabel('_code_construction-classifications').has('value', '1.2.1').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_construction-classifications').has('value', '1.2.1').
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.1').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'construction-classifications').property(single, 'value', '1.2.1')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.1').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.1').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_construction-classifications').has('edition', ''one-off'')
-  ).property(single, 'label', 'New Housing')).next()
+      g.V().hasLabel('_code_list').has('listID', 'construction-classifications').has('edition', 'one-off')
+    ).property(single, 'label', 'New Housing')).next()
 
 
-g.V().hasLabel('_code_construction-classifications').has('value', '1.2.1.1').fold().coalesce(unfold(),
-  addV('_code::_code_construction-classifications').property(single, 'value', '1.2.1.1')).next()
-g.V().hasLabel('_code_construction-classifications').has('value', '1.2.1.1').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_construction-classifications').has('value', '1.2.1.1').
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.1.1').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'construction-classifications').property(single, 'value', '1.2.1.1')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.1.1').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.1.1').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_construction-classifications').has('edition', ''one-off'')
-  ).property(single, 'label', 'Public new housing')).next()
+      g.V().hasLabel('_code_list').has('listID', 'construction-classifications').has('edition', 'one-off')
+    ).property(single, 'label', 'Public new housing')).next()
 
 
-g.V().hasLabel('_code_construction-classifications').has('value', '1.2.1.2').fold().coalesce(unfold(),
-  addV('_code::_code_construction-classifications').property(single, 'value', '1.2.1.2')).next()
-g.V().hasLabel('_code_construction-classifications').has('value', '1.2.1.2').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_construction-classifications').has('value', '1.2.1.2').
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.1.2').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'construction-classifications').property(single, 'value', '1.2.1.2')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.1.2').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.1.2').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_construction-classifications').has('edition', ''one-off'')
-  ).property(single, 'label', 'Private new housing')).next()
+      g.V().hasLabel('_code_list').has('listID', 'construction-classifications').has('edition', 'one-off')
+    ).property(single, 'label', 'Private new housing')).next()
 
 
-g.V().hasLabel('_code_construction-classifications').has('value', '1.2.2.1.1').fold().coalesce(unfold(),
-  addV('_code::_code_construction-classifications').property(single, 'value', '1.2.2.1.1')).next()
-g.V().hasLabel('_code_construction-classifications').has('value', '1.2.2.1.1').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_construction-classifications').has('value', '1.2.2.1.1').
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.2.1.1').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'construction-classifications').property(single, 'value', '1.2.2.1.1')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.2.1.1').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.2.1.1').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_construction-classifications').has('edition', ''one-off'')
-  ).property(single, 'label', 'Public ONW')).next()
+      g.V().hasLabel('_code_list').has('listID', 'construction-classifications').has('edition', 'one-off')
+    ).property(single, 'label', 'Public ONW')).next()
 
 
-g.V().hasLabel('_code_construction-classifications').has('value', '1.2.2.1.2.1').fold().coalesce(unfold(),
-  addV('_code::_code_construction-classifications').property(single, 'value', '1.2.2.1.2.1')).next()
-g.V().hasLabel('_code_construction-classifications').has('value', '1.2.2.1.2.1').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_construction-classifications').has('value', '1.2.2.1.2.1').
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.2.1.2.1').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'construction-classifications').property(single, 'value', '1.2.2.1.2.1')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.2.1.2.1').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.2.1.2.1').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_construction-classifications').has('edition', ''one-off'')
-  ).property(single, 'label', 'Private Industrial ONW')).next()
+      g.V().hasLabel('_code_list').has('listID', 'construction-classifications').has('edition', 'one-off')
+    ).property(single, 'label', 'Private Industrial ONW')).next()
 
 
-g.V().hasLabel('_code_construction-classifications').has('value', '1.2.2.1.2.2').fold().coalesce(unfold(),
-  addV('_code::_code_construction-classifications').property(single, 'value', '1.2.2.1.2.2')).next()
-g.V().hasLabel('_code_construction-classifications').has('value', '1.2.2.1.2.2').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_construction-classifications').has('value', '1.2.2.1.2.2').
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.2.1.2.2').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'construction-classifications').property(single, 'value', '1.2.2.1.2.2')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.2.1.2.2').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.2.1.2.2').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_construction-classifications').has('edition', ''one-off'')
-  ).property(single, 'label', 'Private Commercial ONW')).next()
+      g.V().hasLabel('_code_list').has('listID', 'construction-classifications').has('edition', 'one-off')
+    ).property(single, 'label', 'Private Commercial ONW')).next()
 
 
-g.V().hasLabel('_code_construction-classifications').has('value', '1.2.3').fold().coalesce(unfold(),
-  addV('_code::_code_construction-classifications').property(single, 'value', '1.2.3')).next()
-g.V().hasLabel('_code_construction-classifications').has('value', '1.2.3').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_construction-classifications').has('value', '1.2.3').
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.3').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'construction-classifications').property(single, 'value', '1.2.3')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.3').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.2.3').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_construction-classifications').has('edition', ''one-off'')
-  ).property(single, 'label', 'Infrastructure')).next()
+      g.V().hasLabel('_code_list').has('listID', 'construction-classifications').has('edition', 'one-off')
+    ).property(single, 'label', 'Infrastructure')).next()
 
 
-g.V().hasLabel('_code_construction-classifications').has('value', '1.1.2').fold().coalesce(unfold(),
-  addV('_code::_code_construction-classifications').property(single, 'value', '1.1.2')).next()
-g.V().hasLabel('_code_construction-classifications').has('value', '1.1.2').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_construction-classifications').has('value', '1.1.2').
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.2').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'construction-classifications').property(single, 'value', '1.1.2')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.2').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'construction-classifications').has('value', '1.1.2').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_construction-classifications').has('edition', ''one-off'')
-  ).property(single, 'label', 'Non-housing R & M')).next()
+      g.V().hasLabel('_code_list').has('listID', 'construction-classifications').has('edition', 'one-off')
+    ).property(single, 'label', 'Non-housing R & M')).next()
 

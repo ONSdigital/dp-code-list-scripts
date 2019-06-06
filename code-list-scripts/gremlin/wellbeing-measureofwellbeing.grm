@@ -1,45 +1,54 @@
-g.V().hasLabel('_code_list_wellbeing-measureofwellbeing').has('edition', ''one-off'').fold().coalesce(unfold(),
-  addV('_code_list_wellbeing-measureofwellbeing::_code_list').
-    property(single, 'label', ''allmeasuresofwellbeing'').
-    property(single, 'edition', ''one-off'')
+g.V().hasLabel('_code_list').has('listID', 'wellbeing-measureofwellbeing').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'wellbeing-measureofwellbeing').
+    property(single, 'label', 'allmeasuresofwellbeing').
+    property(single, 'edition', 'one-off')
   ).next()
 
 
 
 
 
-g.V().hasLabel('_code_wellbeing-measureofwellbeing').has('value', ''worthwhile'').fold().coalesce(unfold(),
-  addV('_code::_code_wellbeing-measureofwellbeing').property(single, 'value', ''worthwhile'')).next()
-g.V().hasLabel('_code_wellbeing-measureofwellbeing').has('value', ''worthwhile'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_wellbeing-measureofwellbeing').has('value', ''worthwhile'').
+g.V().hasLabel('_code').has('listID', 'wellbeing-measureofwellbeing').has('value', 'worthwhile').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'wellbeing-measureofwellbeing').property(single, 'value', 'worthwhile')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'wellbeing-measureofwellbeing').has('value', 'worthwhile').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'wellbeing-measureofwellbeing').has('value', 'worthwhile').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_wellbeing-measureofwellbeing').has('edition', ''one-off'')
-  ).property(single, 'label', 'Worthwhile')).next()
+      g.V().hasLabel('_code_list').has('listID', 'wellbeing-measureofwellbeing').has('edition', 'one-off')
+    ).property(single, 'label', 'Worthwhile')).next()
 
 
-g.V().hasLabel('_code_wellbeing-measureofwellbeing').has('value', ''life-satisfaction'').fold().coalesce(unfold(),
-  addV('_code::_code_wellbeing-measureofwellbeing').property(single, 'value', ''life-satisfaction'')).next()
-g.V().hasLabel('_code_wellbeing-measureofwellbeing').has('value', ''life-satisfaction'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_wellbeing-measureofwellbeing').has('value', ''life-satisfaction'').
+g.V().hasLabel('_code').has('listID', 'wellbeing-measureofwellbeing').has('value', 'life-satisfaction').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'wellbeing-measureofwellbeing').property(single, 'value', 'life-satisfaction')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'wellbeing-measureofwellbeing').has('value', 'life-satisfaction').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'wellbeing-measureofwellbeing').has('value', 'life-satisfaction').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_wellbeing-measureofwellbeing').has('edition', ''one-off'')
-  ).property(single, 'label', 'Life Satisfaction')).next()
+      g.V().hasLabel('_code_list').has('listID', 'wellbeing-measureofwellbeing').has('edition', 'one-off')
+    ).property(single, 'label', 'Life Satisfaction')).next()
 
 
-g.V().hasLabel('_code_wellbeing-measureofwellbeing').has('value', ''anxiety'').fold().coalesce(unfold(),
-  addV('_code::_code_wellbeing-measureofwellbeing').property(single, 'value', ''anxiety'')).next()
-g.V().hasLabel('_code_wellbeing-measureofwellbeing').has('value', ''anxiety'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_wellbeing-measureofwellbeing').has('value', ''anxiety'').
+g.V().hasLabel('_code').has('listID', 'wellbeing-measureofwellbeing').has('value', 'anxiety').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'wellbeing-measureofwellbeing').property(single, 'value', 'anxiety')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'wellbeing-measureofwellbeing').has('value', 'anxiety').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'wellbeing-measureofwellbeing').has('value', 'anxiety').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_wellbeing-measureofwellbeing').has('edition', ''one-off'')
-  ).property(single, 'label', 'Anxiety')).next()
+      g.V().hasLabel('_code_list').has('listID', 'wellbeing-measureofwellbeing').has('edition', 'one-off')
+    ).property(single, 'label', 'Anxiety')).next()
 
 
-g.V().hasLabel('_code_wellbeing-measureofwellbeing').has('value', ''happiness'').fold().coalesce(unfold(),
-  addV('_code::_code_wellbeing-measureofwellbeing').property(single, 'value', ''happiness'')).next()
-g.V().hasLabel('_code_wellbeing-measureofwellbeing').has('value', ''happiness'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_wellbeing-measureofwellbeing').has('value', ''happiness'').
+g.V().hasLabel('_code').has('listID', 'wellbeing-measureofwellbeing').has('value', 'happiness').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'wellbeing-measureofwellbeing').property(single, 'value', 'happiness')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'wellbeing-measureofwellbeing').has('value', 'happiness').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'wellbeing-measureofwellbeing').has('value', 'happiness').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_wellbeing-measureofwellbeing').has('edition', ''one-off'')
-  ).property(single, 'label', 'Happiness')).next()
+      g.V().hasLabel('_code_list').has('listID', 'wellbeing-measureofwellbeing').has('edition', 'one-off')
+    ).property(single, 'label', 'Happiness')).next()
 

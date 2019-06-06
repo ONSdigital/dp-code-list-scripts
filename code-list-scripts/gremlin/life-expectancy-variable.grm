@@ -1,35 +1,42 @@
 
 
-g.V().hasLabel('_code_list_life-expectancy-variable').has('edition', ''one-off'').fold().coalesce(unfold(),
-  addV('_code_list_life-expectancy-variable::_code_list').
-    property(single, 'label', ''lifeexpectancyvariable'').
-    property(single, 'edition', ''one-off'')
+g.V().hasLabel('_code_list').has('listID', 'life-expectancy-variable').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'life-expectancy-variable').
+    property(single, 'label', 'lifeexpectancyvariable').
+    property(single, 'edition', 'one-off')
   ).next()
 
 
-g.V().hasLabel('_code_life-expectancy-variable').has('value', 'life-expectancy').fold().coalesce(unfold(),
-  addV('_code::_code_life-expectancy-variable').property(single, 'value', 'life-expectancy')).next()
-g.V().hasLabel('_code_life-expectancy-variable').has('value', 'life-expectancy').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_life-expectancy-variable').has('value', 'life-expectancy').
+g.V().hasLabel('_code').has('listID', 'life-expectancy-variable').has('value', 'life-expectancy').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'life-expectancy-variable').property(single, 'value', 'life-expectancy')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'life-expectancy-variable').has('value', 'life-expectancy').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'life-expectancy-variable').has('value', 'life-expectancy').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_life-expectancy-variable').has('edition', ''one-off'')
-  ).property(single, 'label', 'Life expectancy')).next()
+      g.V().hasLabel('_code_list').has('listID', 'life-expectancy-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Life expectancy')).next()
 
 
-g.V().hasLabel('_code_life-expectancy-variable').has('value', 'healthy-life-expectancy').fold().coalesce(unfold(),
-  addV('_code::_code_life-expectancy-variable').property(single, 'value', 'healthy-life-expectancy')).next()
-g.V().hasLabel('_code_life-expectancy-variable').has('value', 'healthy-life-expectancy').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_life-expectancy-variable').has('value', 'healthy-life-expectancy').
+g.V().hasLabel('_code').has('listID', 'life-expectancy-variable').has('value', 'healthy-life-expectancy').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'life-expectancy-variable').property(single, 'value', 'healthy-life-expectancy')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'life-expectancy-variable').has('value', 'healthy-life-expectancy').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'life-expectancy-variable').has('value', 'healthy-life-expectancy').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_life-expectancy-variable').has('edition', ''one-off'')
-  ).property(single, 'label', 'Healthy life expectancy')).next()
+      g.V().hasLabel('_code_list').has('listID', 'life-expectancy-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Healthy life expectancy')).next()
 
 
-g.V().hasLabel('_code_life-expectancy-variable').has('value', 'disability-free-life-expectancy').fold().coalesce(unfold(),
-  addV('_code::_code_life-expectancy-variable').property(single, 'value', 'disability-free-life-expectancy')).next()
-g.V().hasLabel('_code_life-expectancy-variable').has('value', 'disability-free-life-expectancy').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_life-expectancy-variable').has('value', 'disability-free-life-expectancy').
+g.V().hasLabel('_code').has('listID', 'life-expectancy-variable').has('value', 'disability-free-life-expectancy').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'life-expectancy-variable').property(single, 'value', 'disability-free-life-expectancy')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'life-expectancy-variable').has('value', 'disability-free-life-expectancy').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'life-expectancy-variable').has('value', 'disability-free-life-expectancy').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_life-expectancy-variable').has('edition', ''one-off'')
-  ).property(single, 'label', 'Disability-free life expectancy')).next()
+      g.V().hasLabel('_code_list').has('listID', 'life-expectancy-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Disability-free life expectancy')).next()
 

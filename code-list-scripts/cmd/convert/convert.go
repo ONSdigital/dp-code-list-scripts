@@ -55,8 +55,8 @@ func createCodeList(line string) ([]string, string, string) {
 			log.Fatal("this regex should have 2 capture groups!")
 		}
 
-		k := strings.Trim(m[1], "\"")
-		v := strings.Trim(m[2], "\"")
+		k := strings.Trim(m[1], "\"'")
+		v := strings.Trim(m[2], "\"'")
 		kvs[k] = v
 	}
 
@@ -73,11 +73,14 @@ func createCodeList(line string) ([]string, string, string) {
 
 	var result []string
 	result = append(result, fmt.Sprintf(query.CodeListCheckExists, id, edition))
-	result = append(result, fmt.Sprintf(query.CodeListCreateV, id))
+	result = append(result, query.CodeListCreateV)
 
 	lastProp := len(kvs)
 	count := 1
+	result = append(result, fmt.Sprintf(query.CodeListPropertyDot, "listID", id))
 	for k, v := range kvs {
+		// k = clean(kvs, k)
+		// v = clean(kvs, v)
 		if count < lastProp {
 			result = append(result, fmt.Sprintf(query.CodeListPropertyDot, k, v))
 		} else {
@@ -109,10 +112,12 @@ func createCode(line, id, edition string) []string {
 
 	var result []string
 	result = append(result, fmt.Sprintf(query.CodeCheckExists, id, value))
-	result = append(result, fmt.Sprintf(query.CodeCreateV, id, value))
+	result = append(result, query.CodeCreateV)
+	result = append(result, fmt.Sprintf(query.CodeAddProperty, id, value))
+	result = append(result, query.Next)
 
 	result = append(result, fmt.Sprintf(query.EdgeCheckExists, id, value))
-	result = append(result, fmt.Sprintf(query.EdgeCreate, id, value))
+	result = append(result, fmt.Sprintf(query.EdgeFindCode, id, value))
 	result = append(result, query.EdgeAddLabel)
 	result = append(result, fmt.Sprintf(query.EdgeFindList, id, edition))
 	result = append(result, fmt.Sprintf(query.EdgeAddProperty, label))
@@ -126,5 +131,5 @@ func clean(kvs map[string]string, key string) string {
 		log.Fatal(key + " not found")
 	}
 
-	return strings.Trim(v, "\"")
+	return strings.Trim(v, "\"'")
 }

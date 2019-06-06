@@ -1,35 +1,42 @@
 
 
-g.V().hasLabel('_code_list_type-of-prices').has('edition', ''one-off'').fold().coalesce(unfold(),
-  addV('_code_list_type-of-prices::_code_list').
-    property(single, 'edition', ''one-off'').
-    property(single, 'label', ''prices'')
+g.V().hasLabel('_code_list').has('listID', 'type-of-prices').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'type-of-prices').
+    property(single, 'label', 'prices').
+    property(single, 'edition', 'one-off')
   ).next()
 
 
-g.V().hasLabel('_code_type-of-prices').has('value', 'cp').fold().coalesce(unfold(),
-  addV('_code::_code_type-of-prices').property(single, 'value', 'cp')).next()
-g.V().hasLabel('_code_type-of-prices').has('value', 'cp').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_type-of-prices').has('value', 'cp').
+g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', 'cp').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', 'cp')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', 'cp').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', 'cp').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_type-of-prices').has('edition', ''one-off'')
-  ).property(single, 'label', 'Current prices')).next()
+      g.V().hasLabel('_code_list').has('listID', 'type-of-prices').has('edition', 'one-off')
+    ).property(single, 'label', 'Current prices')).next()
 
 
-g.V().hasLabel('_code_type-of-prices').has('value', 'cvmpub').fold().coalesce(unfold(),
-  addV('_code::_code_type-of-prices').property(single, 'value', 'cvmpub')).next()
-g.V().hasLabel('_code_type-of-prices').has('value', 'cvmpub').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_type-of-prices').has('value', 'cvmpub').
+g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', 'cvmpub').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', 'cvmpub')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', 'cvmpub').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', 'cvmpub').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_type-of-prices').has('edition', ''one-off'')
-  ).property(single, 'label', 'Chained Volume Measure for Publish')).next()
+      g.V().hasLabel('_code_list').has('listID', 'type-of-prices').has('edition', 'one-off')
+    ).property(single, 'label', 'Chained Volume Measure for Publish')).next()
 
 
-g.V().hasLabel('_code_type-of-prices').has('value', 'idef').fold().coalesce(unfold(),
-  addV('_code::_code_type-of-prices').property(single, 'value', 'idef')).next()
-g.V().hasLabel('_code_type-of-prices').has('value', 'idef').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_type-of-prices').has('value', 'idef').
+g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', 'idef').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', 'idef')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', 'idef').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', 'idef').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_type-of-prices').has('edition', ''one-off'')
-  ).property(single, 'label', 'Implied deflator')).next()
+      g.V().hasLabel('_code_list').has('listID', 'type-of-prices').has('edition', 'one-off')
+    ).property(single, 'label', 'Implied deflator')).next()
 

@@ -1,235 +1,286 @@
 
 
-g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'').fold().coalesce(unfold(),
-  addV('_code_list_five-year-age-brackets::_code_list').
-    property(single, 'edition', ''one-off'').
-    property(single, 'label', ''agebrackets'')
+g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'five-year-age-brackets').
+    property(single, 'label', 'agebrackets').
+    property(single, 'edition', 'one-off')
   ).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '0-4').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '0-4')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '0-4').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '0-4').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '0-4').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '0-4')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '0-4').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '0-4').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '0-4')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '0-4')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '5-9').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '5-9')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '5-9').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '5-9').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '5-9').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '5-9')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '5-9').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '5-9').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '5-9')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '5-9')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '10-14').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '10-14')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '10-14').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '10-14').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '10-14').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '10-14')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '10-14').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '10-14').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '10-14')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '10-14')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '15-19').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '15-19')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '15-19').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '15-19').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '15-19').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '15-19')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '15-19').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '15-19').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '15-19')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '15-19')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '20-24').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '20-24')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '20-24').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '20-24').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '20-24').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '20-24')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '20-24').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '20-24').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '20-24')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '20-24')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '25-29').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '25-29')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '25-29').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '25-29').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '25-29').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '25-29')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '25-29').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '25-29').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '25-29')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '25-29')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '30-34').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '30-34')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '30-34').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '30-34').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '30-34').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '30-34')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '30-34').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '30-34').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '30-34')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '30-34')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '35-39').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '35-39')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '35-39').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '35-39').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '35-39').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '35-39')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '35-39').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '35-39').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '35-39')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '35-39')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '40-44').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '40-44')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '40-44').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '40-44').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '40-44').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '40-44')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '40-44').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '40-44').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '40-44')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '40-44')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '45-49').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '45-49')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '45-49').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '45-49').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '45-49').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '45-49')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '45-49').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '45-49').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '45-49')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '45-49')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '50-54').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '50-54')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '50-54').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '50-54').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '50-54').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '50-54')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '50-54').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '50-54').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '50-54')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '50-54')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '55-59').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '55-59')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '55-59').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '55-59').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '55-59').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '55-59')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '55-59').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '55-59').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '55-59')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '55-59')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '60-64').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '60-64')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '60-64').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '60-64').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '60-64').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '60-64')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '60-64').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '60-64').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '60-64')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '60-64')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '65-69').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '65-69')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '65-69').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '65-69').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '65-69').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '65-69')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '65-69').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '65-69').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '65-69')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '65-69')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '70-74').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '70-74')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '70-74').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '70-74').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '70-74').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '70-74')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '70-74').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '70-74').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '70-74')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '70-74')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '75-79').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '75-79')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '75-79').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '75-79').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '75-79').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '75-79')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '75-79').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '75-79').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '75-79')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '75-79')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '80-84').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '80-84')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '80-84').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '80-84').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '80-84').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '80-84')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '80-84').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '80-84').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '80-84')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '80-84')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '85-89').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '85-89')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '85-89').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '85-89').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '85-89').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '85-89')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '85-89').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '85-89').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '85-89')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '85-89')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '90+').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '90+')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '90+').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '90+').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '90+').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '90+')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '90+').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '90+').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '90+')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '90+')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '90-94').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '90-94')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '90-94').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '90-94').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '90-94').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '90-94')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '90-94').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '90-94').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '90-94')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '90-94')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '95+').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '95+')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '95+').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '95+').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '95+').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '95+')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '95+').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '95+').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '95+')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '95+')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', 'all-ages').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', 'all-ages')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', 'all-ages').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', 'all-ages').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', 'all-ages').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', 'all-ages')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', 'all-ages').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', 'all-ages').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', 'All Ages')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', 'All Ages')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', 'under-1').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', 'under-1')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', 'under-1').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', 'under-1').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', 'under-1').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', 'under-1')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', 'under-1').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', 'under-1').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', 'Under 1')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', 'Under 1')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '1-4').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', '1-4')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', '1-4').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', '1-4').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '1-4').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '1-4')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '1-4').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '1-4').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', '1-4')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '1-4')).next()
 
 
-g.V().hasLabel('_code_five-year-age-brackets').has('value', 'directly-age-standardised-rate').fold().coalesce(unfold(),
-  addV('_code::_code_five-year-age-brackets').property(single, 'value', 'directly-age-standardised-rate')).next()
-g.V().hasLabel('_code_five-year-age-brackets').has('value', 'directly-age-standardised-rate').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_five-year-age-brackets').has('value', 'directly-age-standardised-rate').
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', 'directly-age-standardised-rate').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', 'directly-age-standardised-rate')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', 'directly-age-standardised-rate').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', 'directly-age-standardised-rate').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_five-year-age-brackets').has('edition', ''one-off'')
-  ).property(single, 'label', 'Directly age-standardised rate')).next()
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', 'Directly age-standardised rate')).next()
 
 
 

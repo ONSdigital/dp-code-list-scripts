@@ -1,98 +1,119 @@
 
 
-g.V().hasLabel('_code_list_ott-age').has('edition', ''one-off'').fold().coalesce(unfold(),
-  addV('_code_list_ott-age::_code_list').
-    property(single, 'label', ''age'').
-    property(single, 'edition', ''one-off'')
+g.V().hasLabel('_code_list').has('listID', 'ott-age').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'ott-age').
+    property(single, 'edition', 'one-off').
+    property(single, 'label', 'age')
   ).next()
 
 
-g.V().hasLabel('_code_ott-age').has('value', '35-44').fold().coalesce(unfold(),
-  addV('_code::_code_ott-age').property(single, 'value', '35-44')).next()
-g.V().hasLabel('_code_ott-age').has('value', '35-44').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_ott-age').has('value', '35-44').
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '35-44').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ott-age').property(single, 'value', '35-44')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '35-44').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '35-44').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_ott-age').has('edition', ''one-off'')
-  ).property(single, 'label', '35-44')).next()
+      g.V().hasLabel('_code_list').has('listID', 'ott-age').has('edition', 'one-off')
+    ).property(single, 'label', '35-44')).next()
 
 
-g.V().hasLabel('_code_ott-age').has('value', '45-54').fold().coalesce(unfold(),
-  addV('_code::_code_ott-age').property(single, 'value', '45-54')).next()
-g.V().hasLabel('_code_ott-age').has('value', '45-54').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_ott-age').has('value', '45-54').
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '45-54').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ott-age').property(single, 'value', '45-54')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '45-54').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '45-54').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_ott-age').has('edition', ''one-off'')
-  ).property(single, 'label', '45-54')).next()
+      g.V().hasLabel('_code_list').has('listID', 'ott-age').has('edition', 'one-off')
+    ).property(single, 'label', '45-54')).next()
 
 
-g.V().hasLabel('_code_ott-age').has('value', '25-34').fold().coalesce(unfold(),
-  addV('_code::_code_ott-age').property(single, 'value', '25-34')).next()
-g.V().hasLabel('_code_ott-age').has('value', '25-34').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_ott-age').has('value', '25-34').
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '25-34').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ott-age').property(single, 'value', '25-34')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '25-34').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '25-34').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_ott-age').has('edition', ''one-off'')
-  ).property(single, 'label', '25-34')).next()
+      g.V().hasLabel('_code_list').has('listID', 'ott-age').has('edition', 'one-off')
+    ).property(single, 'label', '25-34')).next()
 
 
-g.V().hasLabel('_code_ott-age').has('value', '55-64').fold().coalesce(unfold(),
-  addV('_code::_code_ott-age').property(single, 'value', '55-64')).next()
-g.V().hasLabel('_code_ott-age').has('value', '55-64').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_ott-age').has('value', '55-64').
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '55-64').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ott-age').property(single, 'value', '55-64')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '55-64').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '55-64').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_ott-age').has('edition', ''one-off'')
-  ).property(single, 'label', '55-64')).next()
+      g.V().hasLabel('_code_list').has('listID', 'ott-age').has('edition', 'one-off')
+    ).property(single, 'label', '55-64')).next()
 
 
-g.V().hasLabel('_code_ott-age').has('value', '65-or-over').fold().coalesce(unfold(),
-  addV('_code::_code_ott-age').property(single, 'value', '65-or-over')).next()
-g.V().hasLabel('_code_ott-age').has('value', '65-or-over').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_ott-age').has('value', '65-or-over').
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '65-or-over').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ott-age').property(single, 'value', '65-or-over')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '65-or-over').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '65-or-over').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_ott-age').has('edition', ''one-off'')
-  ).property(single, 'label', '65 or over')).next()
+      g.V().hasLabel('_code_list').has('listID', 'ott-age').has('edition', 'one-off')
+    ).property(single, 'label', '65 or over')).next()
 
 
-g.V().hasLabel('_code_ott-age').has('value', '16-24').fold().coalesce(unfold(),
-  addV('_code::_code_ott-age').property(single, 'value', '16-24')).next()
-g.V().hasLabel('_code_ott-age').has('value', '16-24').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_ott-age').has('value', '16-24').
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '16-24').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ott-age').property(single, 'value', '16-24')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '16-24').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '16-24').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_ott-age').has('edition', ''one-off'')
-  ).property(single, 'label', '16-24')).next()
+      g.V().hasLabel('_code_list').has('listID', 'ott-age').has('edition', 'one-off')
+    ).property(single, 'label', '16-24')).next()
 
 
-g.V().hasLabel('_code_ott-age').has('value', '0-15-youth-party').fold().coalesce(unfold(),
-  addV('_code::_code_ott-age').property(single, 'value', '0-15-youth-party')).next()
-g.V().hasLabel('_code_ott-age').has('value', '0-15-youth-party').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_ott-age').has('value', '0-15-youth-party').
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '0-15-youth-party').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ott-age').property(single, 'value', '0-15-youth-party')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '0-15-youth-party').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '0-15-youth-party').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_ott-age').has('edition', ''one-off'')
-  ).property(single, 'label', '0-15 youth party')).next()
+      g.V().hasLabel('_code_list').has('listID', 'ott-age').has('edition', 'one-off')
+    ).property(single, 'label', '0-15 youth party')).next()
 
 
-g.V().hasLabel('_code_ott-age').has('value', '0-15').fold().coalesce(unfold(),
-  addV('_code::_code_ott-age').property(single, 'value', '0-15')).next()
-g.V().hasLabel('_code_ott-age').has('value', '0-15').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_ott-age').has('value', '0-15').
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '0-15').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ott-age').property(single, 'value', '0-15')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '0-15').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '0-15').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_ott-age').has('edition', ''one-off'')
-  ).property(single, 'label', '0-15')).next()
+      g.V().hasLabel('_code_list').has('listID', 'ott-age').has('edition', 'one-off')
+    ).property(single, 'label', '0-15')).next()
 
 
-g.V().hasLabel('_code_ott-age').has('value', '16-24-youth-party').fold().coalesce(unfold(),
-  addV('_code::_code_ott-age').property(single, 'value', '16-24-youth-party')).next()
-g.V().hasLabel('_code_ott-age').has('value', '16-24-youth-party').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_ott-age').has('value', '16-24-youth-party').
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '16-24-youth-party').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ott-age').property(single, 'value', '16-24-youth-party')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '16-24-youth-party').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-age').has('value', '16-24-youth-party').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_ott-age').has('edition', ''one-off'')
-  ).property(single, 'label', '16-24 youth party')).next()
+      g.V().hasLabel('_code_list').has('listID', 'ott-age').has('edition', 'one-off')
+    ).property(single, 'label', '16-24 youth party')).next()
 
 
-g.V().hasLabel('_code_ott-age').has('value', ''unknown'').fold().coalesce(unfold(),
-  addV('_code::_code_ott-age').property(single, 'value', ''unknown'')).next()
-g.V().hasLabel('_code_ott-age').has('value', ''unknown'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_ott-age').has('value', ''unknown'').
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', 'unknown').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ott-age').property(single, 'value', 'unknown')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ott-age').has('value', 'unknown').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-age').has('value', 'unknown').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_ott-age').has('edition', ''one-off'')
-  ).property(single, 'label', ''Don'')).next()
+      g.V().hasLabel('_code_list').has('listID', 'ott-age').has('edition', 'one-off')
+    ).property(single, 'label', 'Don')).next()
 

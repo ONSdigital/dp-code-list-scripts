@@ -1,98 +1,119 @@
 
 
-g.V().hasLabel('_code_list_npp-all-projectiontype').has('edition', 'one-off').fold().coalesce(unfold(),
-  addV('_code_list_npp-all-projectiontype::_code_list').
+g.V().hasLabel('_code_list').has('listID', 'npp-all-projectiontype').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'npp-all-projectiontype').
     property(single, 'edition', 'one-off').
     property(single, 'label', 'projectiontype')
   ).next()
 
 
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'pph').fold().coalesce(unfold(),
-  addV('_code::_code_npp-all-projectiontype').property(single, 'value', 'pph')).next()
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'pph').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'pph').
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'pph').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'npp-all-projectiontype').property(single, 'value', 'pph')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'pph').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'pph').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_npp-all-projectiontype').has('edition', 'one-off')
-  ).property(single, 'label', 'High migration')).next()
+      g.V().hasLabel('_code_list').has('listID', 'npp-all-projectiontype').has('edition', 'one-off')
+    ).property(single, 'label', 'High migration')).next()
 
 
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'hpp').fold().coalesce(unfold(),
-  addV('_code::_code_npp-all-projectiontype').property(single, 'value', 'hpp')).next()
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'hpp').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'hpp').
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'hpp').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'npp-all-projectiontype').property(single, 'value', 'hpp')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'hpp').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'hpp').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_npp-all-projectiontype').has('edition', 'one-off')
-  ).property(single, 'label', 'High fertility')).next()
+      g.V().hasLabel('_code_list').has('listID', 'npp-all-projectiontype').has('edition', 'one-off')
+    ).property(single, 'label', 'High fertility')).next()
 
 
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'ppz').fold().coalesce(unfold(),
-  addV('_code::_code_npp-all-projectiontype').property(single, 'value', 'ppz')).next()
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'ppz').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'ppz').
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'ppz').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'npp-all-projectiontype').property(single, 'value', 'ppz')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'ppz').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'ppz').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_npp-all-projectiontype').has('edition', 'one-off')
-  ).property(single, 'label', 'Zero net migration (natural change only)')).next()
+      g.V().hasLabel('_code_list').has('listID', 'npp-all-projectiontype').has('edition', 'one-off')
+    ).property(single, 'label', 'Zero net migration (natural change only)')).next()
 
 
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'lpp').fold().coalesce(unfold(),
-  addV('_code::_code_npp-all-projectiontype').property(single, 'value', 'lpp')).next()
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'lpp').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'lpp').
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'lpp').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'npp-all-projectiontype').property(single, 'value', 'lpp')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'lpp').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'lpp').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_npp-all-projectiontype').has('edition', 'one-off')
-  ).property(single, 'label', 'Low fertility')).next()
+      g.V().hasLabel('_code_list').has('listID', 'npp-all-projectiontype').has('edition', 'one-off')
+    ).property(single, 'label', 'Low fertility')).next()
 
 
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'ppl').fold().coalesce(unfold(),
-  addV('_code::_code_npp-all-projectiontype').property(single, 'value', 'ppl')).next()
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'ppl').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'ppl').
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'ppl').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'npp-all-projectiontype').property(single, 'value', 'ppl')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'ppl').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'ppl').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_npp-all-projectiontype').has('edition', 'one-off')
-  ).property(single, 'label', 'Low migration')).next()
+      g.V().hasLabel('_code_list').has('listID', 'npp-all-projectiontype').has('edition', 'one-off')
+    ).property(single, 'label', 'Low migration')).next()
 
 
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'plp').fold().coalesce(unfold(),
-  addV('_code::_code_npp-all-projectiontype').property(single, 'value', 'plp')).next()
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'plp').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'plp').
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'plp').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'npp-all-projectiontype').property(single, 'value', 'plp')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'plp').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'plp').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_npp-all-projectiontype').has('edition', 'one-off')
-  ).property(single, 'label', 'Low life expectancy')).next()
+      g.V().hasLabel('_code_list').has('listID', 'npp-all-projectiontype').has('edition', 'one-off')
+    ).property(single, 'label', 'Low life expectancy')).next()
 
 
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'lll').fold().coalesce(unfold(),
-  addV('_code::_code_npp-all-projectiontype').property(single, 'value', 'lll')).next()
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'lll').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'lll').
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'lll').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'npp-all-projectiontype').property(single, 'value', 'lll')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'lll').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'lll').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_npp-all-projectiontype').has('edition', 'one-off')
-  ).property(single, 'label', 'Low population')).next()
+      g.V().hasLabel('_code_list').has('listID', 'npp-all-projectiontype').has('edition', 'one-off')
+    ).property(single, 'label', 'Low population')).next()
 
 
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'hhh').fold().coalesce(unfold(),
-  addV('_code::_code_npp-all-projectiontype').property(single, 'value', 'hhh')).next()
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'hhh').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'hhh').
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'hhh').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'npp-all-projectiontype').property(single, 'value', 'hhh')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'hhh').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'hhh').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_npp-all-projectiontype').has('edition', 'one-off')
-  ).property(single, 'label', 'High population')).next()
+      g.V().hasLabel('_code_list').has('listID', 'npp-all-projectiontype').has('edition', 'one-off')
+    ).property(single, 'label', 'High population')).next()
 
 
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'php').fold().coalesce(unfold(),
-  addV('_code::_code_npp-all-projectiontype').property(single, 'value', 'php')).next()
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'php').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'php').
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'php').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'npp-all-projectiontype').property(single, 'value', 'php')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'php').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'php').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_npp-all-projectiontype').has('edition', 'one-off')
-  ).property(single, 'label', 'High life expectancy')).next()
+      g.V().hasLabel('_code_list').has('listID', 'npp-all-projectiontype').has('edition', 'one-off')
+    ).property(single, 'label', 'High life expectancy')).next()
 
 
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'ppp').fold().coalesce(unfold(),
-  addV('_code::_code_npp-all-projectiontype').property(single, 'value', 'ppp')).next()
-g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'ppp').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_npp-all-projectiontype').has('value', 'ppp').
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'ppp').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'npp-all-projectiontype').property(single, 'value', 'ppp')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'ppp').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'npp-all-projectiontype').has('value', 'ppp').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_npp-all-projectiontype').has('edition', 'one-off')
-  ).property(single, 'label', 'Principal')).next()
+      g.V().hasLabel('_code_list').has('listID', 'npp-all-projectiontype').has('edition', 'one-off')
+    ).property(single, 'label', 'Principal')).next()
 

@@ -1,44 +1,53 @@
 
 
-g.V().hasLabel('_code_list_birth-cohort').has('edition', ''one-off'').fold().coalesce(unfold(),
-  addV('_code_list_birth-cohort::_code_list').
-    property(single, 'label', ''birthcohort'').
-    property(single, 'edition', ''one-off'')
+g.V().hasLabel('_code_list').has('listID', 'birth-cohort').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'birth-cohort').
+    property(single, 'label', 'birthcohort').
+    property(single, 'edition', 'one-off')
   ).next()
 
 
-g.V().hasLabel('_code_birth-cohort').has('value', 'birth-males').fold().coalesce(unfold(),
-  addV('_code::_code_birth-cohort').property(single, 'value', 'birth-males')).next()
-g.V().hasLabel('_code_birth-cohort').has('value', 'birth-males').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_birth-cohort').has('value', 'birth-males').
+g.V().hasLabel('_code').has('listID', 'birth-cohort').has('value', 'birth-males').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'birth-cohort').property(single, 'value', 'birth-males')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'birth-cohort').has('value', 'birth-males').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'birth-cohort').has('value', 'birth-males').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_birth-cohort').has('edition', ''one-off'')
-  ).property(single, 'label', 'Males at birth')).next()
+      g.V().hasLabel('_code_list').has('listID', 'birth-cohort').has('edition', 'one-off')
+    ).property(single, 'label', 'Males at birth')).next()
 
 
-g.V().hasLabel('_code_birth-cohort').has('value', 'birth-females').fold().coalesce(unfold(),
-  addV('_code::_code_birth-cohort').property(single, 'value', 'birth-females')).next()
-g.V().hasLabel('_code_birth-cohort').has('value', 'birth-females').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_birth-cohort').has('value', 'birth-females').
+g.V().hasLabel('_code').has('listID', 'birth-cohort').has('value', 'birth-females').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'birth-cohort').property(single, 'value', 'birth-females')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'birth-cohort').has('value', 'birth-females').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'birth-cohort').has('value', 'birth-females').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_birth-cohort').has('edition', ''one-off'')
-  ).property(single, 'label', 'Females at birth')).next()
+      g.V().hasLabel('_code_list').has('listID', 'birth-cohort').has('edition', 'one-off')
+    ).property(single, 'label', 'Females at birth')).next()
 
 
-g.V().hasLabel('_code_birth-cohort').has('value', 'age-65-males').fold().coalesce(unfold(),
-  addV('_code::_code_birth-cohort').property(single, 'value', 'age-65-males')).next()
-g.V().hasLabel('_code_birth-cohort').has('value', 'age-65-males').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_birth-cohort').has('value', 'age-65-males').
+g.V().hasLabel('_code').has('listID', 'birth-cohort').has('value', 'age-65-males').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'birth-cohort').property(single, 'value', 'age-65-males')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'birth-cohort').has('value', 'age-65-males').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'birth-cohort').has('value', 'age-65-males').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_birth-cohort').has('edition', ''one-off'')
-  ).property(single, 'label', 'Males at age 65')).next()
+      g.V().hasLabel('_code_list').has('listID', 'birth-cohort').has('edition', 'one-off')
+    ).property(single, 'label', 'Males at age 65')).next()
 
 
-g.V().hasLabel('_code_birth-cohort').has('value', 'age-65-females').fold().coalesce(unfold(),
-  addV('_code::_code_birth-cohort').property(single, 'value', 'age-65-females')).next()
-g.V().hasLabel('_code_birth-cohort').has('value', 'age-65-females').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_birth-cohort').has('value', 'age-65-females').
+g.V().hasLabel('_code').has('listID', 'birth-cohort').has('value', 'age-65-females').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'birth-cohort').property(single, 'value', 'age-65-females')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'birth-cohort').has('value', 'age-65-females').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'birth-cohort').has('value', 'age-65-females').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_birth-cohort').has('edition', ''one-off'')
-  ).property(single, 'label', 'Females at age 65')).next()
+      g.V().hasLabel('_code_list').has('listID', 'birth-cohort').has('edition', 'one-off')
+    ).property(single, 'label', 'Females at age 65')).next()
 

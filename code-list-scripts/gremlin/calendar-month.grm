@@ -1,116 +1,141 @@
 
 
-g.V().hasLabel('_code_list_calendar-month').has('edition', ''one-off'').fold().coalesce(unfold(),
-  addV('_code_list_calendar-month::_code_list').
-    property(single, 'label', ''month'').
-    property(single, 'edition', ''one-off'')
+g.V().hasLabel('_code_list').has('listID', 'calendar-month').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'calendar-month').
+    property(single, 'edition', 'one-off').
+    property(single, 'label', 'month')
   ).next()
 
 
-g.V().hasLabel('_code_calendar-month').has('value', 'april').fold().coalesce(unfold(),
-  addV('_code::_code_calendar-month').property(single, 'value', 'april')).next()
-g.V().hasLabel('_code_calendar-month').has('value', 'april').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_calendar-month').has('value', 'april').
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'april').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-month').property(single, 'value', 'april')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'april').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'april').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_calendar-month').has('edition', ''one-off'')
-  ).property(single, 'label', 'April')).next()
+      g.V().hasLabel('_code_list').has('listID', 'calendar-month').has('edition', 'one-off')
+    ).property(single, 'label', 'April')).next()
 
 
-g.V().hasLabel('_code_calendar-month').has('value', 'august').fold().coalesce(unfold(),
-  addV('_code::_code_calendar-month').property(single, 'value', 'august')).next()
-g.V().hasLabel('_code_calendar-month').has('value', 'august').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_calendar-month').has('value', 'august').
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'august').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-month').property(single, 'value', 'august')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'august').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'august').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_calendar-month').has('edition', ''one-off'')
-  ).property(single, 'label', 'August')).next()
+      g.V().hasLabel('_code_list').has('listID', 'calendar-month').has('edition', 'one-off')
+    ).property(single, 'label', 'August')).next()
 
 
-g.V().hasLabel('_code_calendar-month').has('value', 'december').fold().coalesce(unfold(),
-  addV('_code::_code_calendar-month').property(single, 'value', 'december')).next()
-g.V().hasLabel('_code_calendar-month').has('value', 'december').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_calendar-month').has('value', 'december').
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'december').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-month').property(single, 'value', 'december')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'december').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'december').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_calendar-month').has('edition', ''one-off'')
-  ).property(single, 'label', 'December')).next()
+      g.V().hasLabel('_code_list').has('listID', 'calendar-month').has('edition', 'one-off')
+    ).property(single, 'label', 'December')).next()
 
 
-g.V().hasLabel('_code_calendar-month').has('value', 'february').fold().coalesce(unfold(),
-  addV('_code::_code_calendar-month').property(single, 'value', 'february')).next()
-g.V().hasLabel('_code_calendar-month').has('value', 'february').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_calendar-month').has('value', 'february').
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'february').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-month').property(single, 'value', 'february')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'february').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'february').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_calendar-month').has('edition', ''one-off'')
-  ).property(single, 'label', 'February')).next()
+      g.V().hasLabel('_code_list').has('listID', 'calendar-month').has('edition', 'one-off')
+    ).property(single, 'label', 'February')).next()
 
 
-g.V().hasLabel('_code_calendar-month').has('value', 'january').fold().coalesce(unfold(),
-  addV('_code::_code_calendar-month').property(single, 'value', 'january')).next()
-g.V().hasLabel('_code_calendar-month').has('value', 'january').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_calendar-month').has('value', 'january').
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'january').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-month').property(single, 'value', 'january')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'january').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'january').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_calendar-month').has('edition', ''one-off'')
-  ).property(single, 'label', 'January')).next()
+      g.V().hasLabel('_code_list').has('listID', 'calendar-month').has('edition', 'one-off')
+    ).property(single, 'label', 'January')).next()
 
 
-g.V().hasLabel('_code_calendar-month').has('value', 'july').fold().coalesce(unfold(),
-  addV('_code::_code_calendar-month').property(single, 'value', 'july')).next()
-g.V().hasLabel('_code_calendar-month').has('value', 'july').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_calendar-month').has('value', 'july').
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'july').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-month').property(single, 'value', 'july')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'july').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'july').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_calendar-month').has('edition', ''one-off'')
-  ).property(single, 'label', 'July')).next()
+      g.V().hasLabel('_code_list').has('listID', 'calendar-month').has('edition', 'one-off')
+    ).property(single, 'label', 'July')).next()
 
 
-g.V().hasLabel('_code_calendar-month').has('value', 'june').fold().coalesce(unfold(),
-  addV('_code::_code_calendar-month').property(single, 'value', 'june')).next()
-g.V().hasLabel('_code_calendar-month').has('value', 'june').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_calendar-month').has('value', 'june').
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'june').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-month').property(single, 'value', 'june')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'june').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'june').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_calendar-month').has('edition', ''one-off'')
-  ).property(single, 'label', 'June')).next()
+      g.V().hasLabel('_code_list').has('listID', 'calendar-month').has('edition', 'one-off')
+    ).property(single, 'label', 'June')).next()
 
 
-g.V().hasLabel('_code_calendar-month').has('value', 'march').fold().coalesce(unfold(),
-  addV('_code::_code_calendar-month').property(single, 'value', 'march')).next()
-g.V().hasLabel('_code_calendar-month').has('value', 'march').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_calendar-month').has('value', 'march').
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'march').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-month').property(single, 'value', 'march')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'march').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'march').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_calendar-month').has('edition', ''one-off'')
-  ).property(single, 'label', 'March')).next()
+      g.V().hasLabel('_code_list').has('listID', 'calendar-month').has('edition', 'one-off')
+    ).property(single, 'label', 'March')).next()
 
 
-g.V().hasLabel('_code_calendar-month').has('value', 'may').fold().coalesce(unfold(),
-  addV('_code::_code_calendar-month').property(single, 'value', 'may')).next()
-g.V().hasLabel('_code_calendar-month').has('value', 'may').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_calendar-month').has('value', 'may').
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'may').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-month').property(single, 'value', 'may')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'may').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'may').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_calendar-month').has('edition', ''one-off'')
-  ).property(single, 'label', 'May')).next()
+      g.V().hasLabel('_code_list').has('listID', 'calendar-month').has('edition', 'one-off')
+    ).property(single, 'label', 'May')).next()
 
 
-g.V().hasLabel('_code_calendar-month').has('value', 'november').fold().coalesce(unfold(),
-  addV('_code::_code_calendar-month').property(single, 'value', 'november')).next()
-g.V().hasLabel('_code_calendar-month').has('value', 'november').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_calendar-month').has('value', 'november').
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'november').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-month').property(single, 'value', 'november')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'november').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'november').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_calendar-month').has('edition', ''one-off'')
-  ).property(single, 'label', 'November')).next()
+      g.V().hasLabel('_code_list').has('listID', 'calendar-month').has('edition', 'one-off')
+    ).property(single, 'label', 'November')).next()
 
 
-g.V().hasLabel('_code_calendar-month').has('value', 'october').fold().coalesce(unfold(),
-  addV('_code::_code_calendar-month').property(single, 'value', 'october')).next()
-g.V().hasLabel('_code_calendar-month').has('value', 'october').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_calendar-month').has('value', 'october').
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'october').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-month').property(single, 'value', 'october')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'october').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'october').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_calendar-month').has('edition', ''one-off'')
-  ).property(single, 'label', 'October')).next()
+      g.V().hasLabel('_code_list').has('listID', 'calendar-month').has('edition', 'one-off')
+    ).property(single, 'label', 'October')).next()
 
 
-g.V().hasLabel('_code_calendar-month').has('value', 'september').fold().coalesce(unfold(),
-  addV('_code::_code_calendar-month').property(single, 'value', 'september')).next()
-g.V().hasLabel('_code_calendar-month').has('value', 'september').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_calendar-month').has('value', 'september').
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'september').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-month').property(single, 'value', 'september')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'september').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-month').has('value', 'september').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_calendar-month').has('edition', ''one-off'')
-  ).property(single, 'label', 'September')).next()
+      g.V().hasLabel('_code_list').has('listID', 'calendar-month').has('edition', 'one-off')
+    ).property(single, 'label', 'September')).next()
 

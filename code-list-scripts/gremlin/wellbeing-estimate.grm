@@ -1,54 +1,65 @@
-g.V().hasLabel('_code_list_wellbeing-estimate').has('edition', ''one-off'').fold().coalesce(unfold(),
-  addV('_code_list_wellbeing-estimate::_code_list').
-    property(single, 'edition', ''one-off'').
-    property(single, 'label', ''estimate'')
+g.V().hasLabel('_code_list').has('listID', 'wellbeing-estimate').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'wellbeing-estimate').
+    property(single, 'label', 'estimate').
+    property(single, 'edition', 'one-off')
   ).next()
 
 
 
 
 
-g.V().hasLabel('_code_wellbeing-estimate').has('value', ''average-mean'').fold().coalesce(unfold(),
-  addV('_code::_code_wellbeing-estimate').property(single, 'value', ''average-mean'')).next()
-g.V().hasLabel('_code_wellbeing-estimate').has('value', ''average-mean'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_wellbeing-estimate').has('value', ''average-mean'').
+g.V().hasLabel('_code').has('listID', 'wellbeing-estimate').has('value', 'average-mean').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'wellbeing-estimate').property(single, 'value', 'average-mean')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'wellbeing-estimate').has('value', 'average-mean').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'wellbeing-estimate').has('value', 'average-mean').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_wellbeing-estimate').has('edition', ''one-off'')
-  ).property(single, 'label', 'Average (mean)')).next()
+      g.V().hasLabel('_code_list').has('listID', 'wellbeing-estimate').has('edition', 'one-off')
+    ).property(single, 'label', 'Average (mean)')).next()
 
 
-g.V().hasLabel('_code_wellbeing-estimate').has('value', ''poor'').fold().coalesce(unfold(),
-  addV('_code::_code_wellbeing-estimate').property(single, 'value', ''poor'')).next()
-g.V().hasLabel('_code_wellbeing-estimate').has('value', ''poor'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_wellbeing-estimate').has('value', ''poor'').
+g.V().hasLabel('_code').has('listID', 'wellbeing-estimate').has('value', 'poor').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'wellbeing-estimate').property(single, 'value', 'poor')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'wellbeing-estimate').has('value', 'poor').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'wellbeing-estimate').has('value', 'poor').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_wellbeing-estimate').has('edition', ''one-off'')
-  ).property(single, 'label', 'Poor')).next()
+      g.V().hasLabel('_code_list').has('listID', 'wellbeing-estimate').has('edition', 'one-off')
+    ).property(single, 'label', 'Poor')).next()
 
 
-g.V().hasLabel('_code_wellbeing-estimate').has('value', ''good'').fold().coalesce(unfold(),
-  addV('_code::_code_wellbeing-estimate').property(single, 'value', ''good'')).next()
-g.V().hasLabel('_code_wellbeing-estimate').has('value', ''good'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_wellbeing-estimate').has('value', ''good'').
+g.V().hasLabel('_code').has('listID', 'wellbeing-estimate').has('value', 'good').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'wellbeing-estimate').property(single, 'value', 'good')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'wellbeing-estimate').has('value', 'good').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'wellbeing-estimate').has('value', 'good').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_wellbeing-estimate').has('edition', ''one-off'')
-  ).property(single, 'label', 'Good')).next()
+      g.V().hasLabel('_code_list').has('listID', 'wellbeing-estimate').has('edition', 'one-off')
+    ).property(single, 'label', 'Good')).next()
 
 
-g.V().hasLabel('_code_wellbeing-estimate').has('value', ''fair'').fold().coalesce(unfold(),
-  addV('_code::_code_wellbeing-estimate').property(single, 'value', ''fair'')).next()
-g.V().hasLabel('_code_wellbeing-estimate').has('value', ''fair'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_wellbeing-estimate').has('value', ''fair'').
+g.V().hasLabel('_code').has('listID', 'wellbeing-estimate').has('value', 'fair').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'wellbeing-estimate').property(single, 'value', 'fair')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'wellbeing-estimate').has('value', 'fair').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'wellbeing-estimate').has('value', 'fair').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_wellbeing-estimate').has('edition', ''one-off'')
-  ).property(single, 'label', 'Fair')).next()
+      g.V().hasLabel('_code_list').has('listID', 'wellbeing-estimate').has('edition', 'one-off')
+    ).property(single, 'label', 'Fair')).next()
 
 
-g.V().hasLabel('_code_wellbeing-estimate').has('value', ''very-good'').fold().coalesce(unfold(),
-  addV('_code::_code_wellbeing-estimate').property(single, 'value', ''very-good'')).next()
-g.V().hasLabel('_code_wellbeing-estimate').has('value', ''very-good'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_wellbeing-estimate').has('value', ''very-good'').
+g.V().hasLabel('_code').has('listID', 'wellbeing-estimate').has('value', 'very-good').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'wellbeing-estimate').property(single, 'value', 'very-good')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'wellbeing-estimate').has('value', 'very-good').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'wellbeing-estimate').has('value', 'very-good').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_wellbeing-estimate').has('edition', ''one-off'')
-  ).property(single, 'label', 'Very good')).next()
+      g.V().hasLabel('_code_list').has('listID', 'wellbeing-estimate').has('edition', 'one-off')
+    ).property(single, 'label', 'Very good')).next()
 

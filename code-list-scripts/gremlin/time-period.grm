@@ -1,44 +1,53 @@
 
 
-g.V().hasLabel('_code_list_time-period').has('edition', 'one-off').fold().coalesce(unfold(),
-  addV('_code_list_time-period::_code_list').
+g.V().hasLabel('_code_list').has('listID', 'time-period').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'time-period').
     property(single, 'label', 'timeperiod').
     property(single, 'edition', 'one-off')
   ).next()
 
 
-g.V().hasLabel('_code_time-period').has('value', 'quarter-on-a-year-ago').fold().coalesce(unfold(),
-  addV('_code::_code_time-period').property(single, 'value', 'quarter-on-a-year-ago')).next()
-g.V().hasLabel('_code_time-period').has('value', 'quarter-on-a-year-ago').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_time-period').has('value', 'quarter-on-a-year-ago').
+g.V().hasLabel('_code').has('listID', 'time-period').has('value', 'quarter-on-a-year-ago').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'time-period').property(single, 'value', 'quarter-on-a-year-ago')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'time-period').has('value', 'quarter-on-a-year-ago').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'time-period').has('value', 'quarter-on-a-year-ago').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_time-period').has('edition', 'one-off')
-  ).property(single, 'label', 'Quarter on a Year ago')).next()
+      g.V().hasLabel('_code_list').has('listID', 'time-period').has('edition', 'one-off')
+    ).property(single, 'label', 'Quarter on a Year ago')).next()
 
 
-g.V().hasLabel('_code_time-period').has('value', 'quarter-on-quarter').fold().coalesce(unfold(),
-  addV('_code::_code_time-period').property(single, 'value', 'quarter-on-quarter')).next()
-g.V().hasLabel('_code_time-period').has('value', 'quarter-on-quarter').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_time-period').has('value', 'quarter-on-quarter').
+g.V().hasLabel('_code').has('listID', 'time-period').has('value', 'quarter-on-quarter').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'time-period').property(single, 'value', 'quarter-on-quarter')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'time-period').has('value', 'quarter-on-quarter').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'time-period').has('value', 'quarter-on-quarter').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_time-period').has('edition', 'one-off')
-  ).property(single, 'label', 'Quarter on Quarter')).next()
+      g.V().hasLabel('_code_list').has('listID', 'time-period').has('edition', 'one-off')
+    ).property(single, 'label', 'Quarter on Quarter')).next()
 
 
-g.V().hasLabel('_code_time-period').has('value', 'month-on-a-year-ago').fold().coalesce(unfold(),
-  addV('_code::_code_time-period').property(single, 'value', 'month-on-a-year-ago')).next()
-g.V().hasLabel('_code_time-period').has('value', 'month-on-a-year-ago').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_time-period').has('value', 'month-on-a-year-ago').
+g.V().hasLabel('_code').has('listID', 'time-period').has('value', 'month-on-a-year-ago').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'time-period').property(single, 'value', 'month-on-a-year-ago')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'time-period').has('value', 'month-on-a-year-ago').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'time-period').has('value', 'month-on-a-year-ago').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_time-period').has('edition', 'one-off')
-  ).property(single, 'label', 'Month on a Year ago')).next()
+      g.V().hasLabel('_code_list').has('listID', 'time-period').has('edition', 'one-off')
+    ).property(single, 'label', 'Month on a Year ago')).next()
 
 
-g.V().hasLabel('_code_time-period').has('value', 'month-on-month').fold().coalesce(unfold(),
-  addV('_code::_code_time-period').property(single, 'value', 'month-on-month')).next()
-g.V().hasLabel('_code_time-period').has('value', 'month-on-month').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_time-period').has('value', 'month-on-month').
+g.V().hasLabel('_code').has('listID', 'time-period').has('value', 'month-on-month').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'time-period').property(single, 'value', 'month-on-month')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'time-period').has('value', 'month-on-month').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'time-period').has('value', 'month-on-month').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_time-period').has('edition', 'one-off')
-  ).property(single, 'label', 'Month on Month')).next()
+      g.V().hasLabel('_code_list').has('listID', 'time-period').has('edition', 'one-off')
+    ).property(single, 'label', 'Month on Month')).next()
 

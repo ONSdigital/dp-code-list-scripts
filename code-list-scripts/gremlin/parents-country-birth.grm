@@ -1,116 +1,141 @@
 
 
-g.V().hasLabel('_code_list_parents-country-birth').has('edition', ''one-off'').fold().coalesce(unfold(),
-  addV('_code_list_parents-country-birth::_code_list').
-    property(single, 'label', ''parentscountryofbirth'').
-    property(single, 'edition', ''one-off'')
+g.V().hasLabel('_code_list').has('listID', 'parents-country-birth').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'parents-country-birth').
+    property(single, 'label', 'parentscountryofbirth').
+    property(single, 'edition', 'one-off')
   ).next()
 
 
-g.V().hasLabel('_code_parents-country-birth').has('value', 'total-number-of-live-births').fold().coalesce(unfold(),
-  addV('_code::_code_parents-country-birth').property(single, 'value', 'total-number-of-live-births')).next()
-g.V().hasLabel('_code_parents-country-birth').has('value', 'total-number-of-live-births').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_parents-country-birth').has('value', 'total-number-of-live-births').
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'total-number-of-live-births').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'parents-country-birth').property(single, 'value', 'total-number-of-live-births')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'total-number-of-live-births').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'total-number-of-live-births').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_parents-country-birth').has('edition', ''one-off'')
-  ).property(single, 'label', 'Total number of live births')).next()
+      g.V().hasLabel('_code_list').has('listID', 'parents-country-birth').has('edition', 'one-off')
+    ).property(single, 'label', 'Total number of live births')).next()
 
 
-g.V().hasLabel('_code_parents-country-birth').has('value', 'live-births-to-uk-born-mothers').fold().coalesce(unfold(),
-  addV('_code::_code_parents-country-birth').property(single, 'value', 'live-births-to-uk-born-mothers')).next()
-g.V().hasLabel('_code_parents-country-birth').has('value', 'live-births-to-uk-born-mothers').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_parents-country-birth').has('value', 'live-births-to-uk-born-mothers').
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'live-births-to-uk-born-mothers').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'parents-country-birth').property(single, 'value', 'live-births-to-uk-born-mothers')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'live-births-to-uk-born-mothers').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'live-births-to-uk-born-mothers').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_parents-country-birth').has('edition', ''one-off'')
-  ).property(single, 'label', 'Live births to UK-born mothers')).next()
+      g.V().hasLabel('_code_list').has('listID', 'parents-country-birth').has('edition', 'one-off')
+    ).property(single, 'label', 'Live births to UK-born mothers')).next()
 
 
-g.V().hasLabel('_code_parents-country-birth').has('value', 'live-births-to-non-uk-born-mothers').fold().coalesce(unfold(),
-  addV('_code::_code_parents-country-birth').property(single, 'value', 'live-births-to-non-uk-born-mothers')).next()
-g.V().hasLabel('_code_parents-country-birth').has('value', 'live-births-to-non-uk-born-mothers').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_parents-country-birth').has('value', 'live-births-to-non-uk-born-mothers').
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'live-births-to-non-uk-born-mothers').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'parents-country-birth').property(single, 'value', 'live-births-to-non-uk-born-mothers')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'live-births-to-non-uk-born-mothers').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'live-births-to-non-uk-born-mothers').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_parents-country-birth').has('edition', ''one-off'')
-  ).property(single, 'label', 'Live births to non-UK-born mothers')).next()
+      g.V().hasLabel('_code_list').has('listID', 'parents-country-birth').has('edition', 'one-off')
+    ).property(single, 'label', 'Live births to non-UK-born mothers')).next()
 
 
-g.V().hasLabel('_code_parents-country-birth').has('value', ''mothers-country-of-birth-eu'').fold().coalesce(unfold(),
-  addV('_code::_code_parents-country-birth').property(single, 'value', ''mothers-country-of-birth-eu'')).next()
-g.V().hasLabel('_code_parents-country-birth').has('value', ''mothers-country-of-birth-eu'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_parents-country-birth').has('value', ''mothers-country-of-birth-eu'').
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'mothers-country-of-birth-eu').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'parents-country-birth').property(single, 'value', 'mothers-country-of-birth-eu')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'mothers-country-of-birth-eu').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'mothers-country-of-birth-eu').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_parents-country-birth').has('edition', ''one-off'')
-  ).property(single, 'label', ''Mothers country of birth - EU'')).next()
+      g.V().hasLabel('_code_list').has('listID', 'parents-country-birth').has('edition', 'one-off')
+    ).property(single, 'label', 'Mothers country of birth - EU')).next()
 
 
-g.V().hasLabel('_code_parents-country-birth').has('value', ''mothers-country-of-birth-new-eu'').fold().coalesce(unfold(),
-  addV('_code::_code_parents-country-birth').property(single, 'value', ''mothers-country-of-birth-new-eu'')).next()
-g.V().hasLabel('_code_parents-country-birth').has('value', ''mothers-country-of-birth-new-eu'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_parents-country-birth').has('value', ''mothers-country-of-birth-new-eu'').
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'mothers-country-of-birth-new-eu').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'parents-country-birth').property(single, 'value', 'mothers-country-of-birth-new-eu')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'mothers-country-of-birth-new-eu').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'mothers-country-of-birth-new-eu').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_parents-country-birth').has('edition', ''one-off'')
-  ).property(single, 'label', ''Mothers country of birth - New EU'')).next()
+      g.V().hasLabel('_code_list').has('listID', 'parents-country-birth').has('edition', 'one-off')
+    ).property(single, 'label', 'Mothers country of birth - New EU')).next()
 
 
-g.V().hasLabel('_code_parents-country-birth').has('value', ''mothers-country-of-birth-rest-of-europe'').fold().coalesce(unfold(),
-  addV('_code::_code_parents-country-birth').property(single, 'value', ''mothers-country-of-birth-rest-of-europe'')).next()
-g.V().hasLabel('_code_parents-country-birth').has('value', ''mothers-country-of-birth-rest-of-europe'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_parents-country-birth').has('value', ''mothers-country-of-birth-rest-of-europe'').
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'mothers-country-of-birth-rest-of-europe').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'parents-country-birth').property(single, 'value', 'mothers-country-of-birth-rest-of-europe')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'mothers-country-of-birth-rest-of-europe').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'mothers-country-of-birth-rest-of-europe').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_parents-country-birth').has('edition', ''one-off'')
-  ).property(single, 'label', ''Mothers country of birth - Rest of Europe (non EU)'')).next()
+      g.V().hasLabel('_code_list').has('listID', 'parents-country-birth').has('edition', 'one-off')
+    ).property(single, 'label', 'Mothers country of birth - Rest of Europe (non EU)')).next()
 
 
-g.V().hasLabel('_code_parents-country-birth').has('value', ''mothers-country-of-birth-middle-east-and-asia'').fold().coalesce(unfold(),
-  addV('_code::_code_parents-country-birth').property(single, 'value', ''mothers-country-of-birth-middle-east-and-asia'')).next()
-g.V().hasLabel('_code_parents-country-birth').has('value', ''mothers-country-of-birth-middle-east-and-asia'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_parents-country-birth').has('value', ''mothers-country-of-birth-middle-east-and-asia'').
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'mothers-country-of-birth-middle-east-and-asia').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'parents-country-birth').property(single, 'value', 'mothers-country-of-birth-middle-east-and-asia')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'mothers-country-of-birth-middle-east-and-asia').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'mothers-country-of-birth-middle-east-and-asia').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_parents-country-birth').has('edition', ''one-off'')
-  ).property(single, 'label', ''Mothers country of birth - Middle East and Asia'')).next()
+      g.V().hasLabel('_code_list').has('listID', 'parents-country-birth').has('edition', 'one-off')
+    ).property(single, 'label', 'Mothers country of birth - Middle East and Asia')).next()
 
 
-g.V().hasLabel('_code_parents-country-birth').has('value', ''mothers-country-of-birth-africa'').fold().coalesce(unfold(),
-  addV('_code::_code_parents-country-birth').property(single, 'value', ''mothers-country-of-birth-africa'')).next()
-g.V().hasLabel('_code_parents-country-birth').has('value', ''mothers-country-of-birth-africa'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_parents-country-birth').has('value', ''mothers-country-of-birth-africa'').
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'mothers-country-of-birth-africa').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'parents-country-birth').property(single, 'value', 'mothers-country-of-birth-africa')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'mothers-country-of-birth-africa').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'mothers-country-of-birth-africa').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_parents-country-birth').has('edition', ''one-off'')
-  ).property(single, 'label', ''Mothers country of birth - Africa'')).next()
+      g.V().hasLabel('_code_list').has('listID', 'parents-country-birth').has('edition', 'one-off')
+    ).property(single, 'label', 'Mothers country of birth - Africa')).next()
 
 
-g.V().hasLabel('_code_parents-country-birth').has('value', ''mothers-country-of-birth-rest-of-world'').fold().coalesce(unfold(),
-  addV('_code::_code_parents-country-birth').property(single, 'value', ''mothers-country-of-birth-rest-of-world'')).next()
-g.V().hasLabel('_code_parents-country-birth').has('value', ''mothers-country-of-birth-rest-of-world'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_parents-country-birth').has('value', ''mothers-country-of-birth-rest-of-world'').
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'mothers-country-of-birth-rest-of-world').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'parents-country-birth').property(single, 'value', 'mothers-country-of-birth-rest-of-world')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'mothers-country-of-birth-rest-of-world').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'mothers-country-of-birth-rest-of-world').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_parents-country-birth').has('edition', ''one-off'')
-  ).property(single, 'label', ''Mothers country of birth - Rest of World'')).next()
+      g.V().hasLabel('_code_list').has('listID', 'parents-country-birth').has('edition', 'one-off')
+    ).property(single, 'label', 'Mothers country of birth - Rest of World')).next()
 
 
-g.V().hasLabel('_code_parents-country-birth').has('value', 'one-parent-born-outside-uk').fold().coalesce(unfold(),
-  addV('_code::_code_parents-country-birth').property(single, 'value', 'one-parent-born-outside-uk')).next()
-g.V().hasLabel('_code_parents-country-birth').has('value', 'one-parent-born-outside-uk').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_parents-country-birth').has('value', 'one-parent-born-outside-uk').
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'one-parent-born-outside-uk').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'parents-country-birth').property(single, 'value', 'one-parent-born-outside-uk')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'one-parent-born-outside-uk').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'one-parent-born-outside-uk').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_parents-country-birth').has('edition', ''one-off'')
-  ).property(single, 'label', 'Live births where one parent is born outside of the UK')).next()
+      g.V().hasLabel('_code_list').has('listID', 'parents-country-birth').has('edition', 'one-off')
+    ).property(single, 'label', 'Live births where one parent is born outside of the UK')).next()
 
 
-g.V().hasLabel('_code_parents-country-birth').has('value', 'both-parents-born-outside-uk').fold().coalesce(unfold(),
-  addV('_code::_code_parents-country-birth').property(single, 'value', 'both-parents-born-outside-uk')).next()
-g.V().hasLabel('_code_parents-country-birth').has('value', 'both-parents-born-outside-uk').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_parents-country-birth').has('value', 'both-parents-born-outside-uk').
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'both-parents-born-outside-uk').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'parents-country-birth').property(single, 'value', 'both-parents-born-outside-uk')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'both-parents-born-outside-uk').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'both-parents-born-outside-uk').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_parents-country-birth').has('edition', ''one-off'')
-  ).property(single, 'label', 'Live births where both parents are born outside of the UK')).next()
+      g.V().hasLabel('_code_list').has('listID', 'parents-country-birth').has('edition', 'one-off')
+    ).property(single, 'label', 'Live births where both parents are born outside of the UK')).next()
 
 
-g.V().hasLabel('_code_parents-country-birth').has('value', 'one-or-both-parents-born-outside-uk').fold().coalesce(unfold(),
-  addV('_code::_code_parents-country-birth').property(single, 'value', 'one-or-both-parents-born-outside-uk')).next()
-g.V().hasLabel('_code_parents-country-birth').has('value', 'one-or-both-parents-born-outside-uk').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_parents-country-birth').has('value', 'one-or-both-parents-born-outside-uk').
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'one-or-both-parents-born-outside-uk').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'parents-country-birth').property(single, 'value', 'one-or-both-parents-born-outside-uk')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'one-or-both-parents-born-outside-uk').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'parents-country-birth').has('value', 'one-or-both-parents-born-outside-uk').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_parents-country-birth').has('edition', ''one-off'')
-  ).property(single, 'label', 'Live births where either one or both parents are born outside of the UK')).next()
+      g.V().hasLabel('_code_list').has('listID', 'parents-country-birth').has('edition', 'one-off')
+    ).property(single, 'label', 'Live births where either one or both parents are born outside of the UK')).next()
 

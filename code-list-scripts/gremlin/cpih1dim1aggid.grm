@@ -1,1278 +1,1561 @@
-g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'').fold().coalesce(unfold(),
-  addV('_code_list_cpih1dim1aggid::_code_list').
-    property(single, 'label', ''aggregate'').
-    property(single, 'edition', ''one-off'')
+g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'cpih1dim1aggid').
+    property(single, 'label', 'aggregate').
+    property(single, 'edition', 'one-off')
   ).next()
 
 
 
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G50500'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G50500'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G50500'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G50500'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G50500').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G50500')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G50500').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G50500').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '05.5 Tools and equipment for house and garden')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '05.5 Tools and equipment for house and garden')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G50600'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G50600'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G50600'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G50600'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G50600').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G50600')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G50600').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G50600').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '05.6 Goods and services for routine maintenance')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '05.6 Goods and services for routine maintenance')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1A0'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1A0'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1A0'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1A0'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1A0').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1A0')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1A0').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1A0').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', 'Overall Index')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', 'Overall Index')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G20200'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G20200'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G20200'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G20200'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G20200').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G20200')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G20200').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G20200').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '02.2 Tobacco')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '02.2 Tobacco')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G30100'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G30100'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G30100'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G30100'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G30100').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G30100')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G30100').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G30100').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '03.1 Clothing')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '03.1 Clothing')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G10200'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G10200'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G10200'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G10200'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G10200').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G10200')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G10200').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G10200').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '01.2 Non-alcoholic beverages')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '01.2 Non-alcoholic beverages')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G30200'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G30200'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G30200'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G30200'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G30200').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G30200')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G30200').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G30200').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '03.2 Footwear including repairs')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '03.2 Footwear including repairs')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G120500'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G120500'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G120500'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G120500'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G120500').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G120500')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G120500').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G120500').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '12.5 Insurance')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '12.5 Insurance')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G120700'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G120700'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G120700'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G120700'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G120700').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G120700')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G120700').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G120700').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '12.7 Other services (nec)')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '12.7 Other services (nec)')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G40200'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G40200'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G40200'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G40200'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G40200').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G40200')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G40200').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G40200').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '04.2.0 Owner Occupied Housing Costs')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '04.2.0 Owner Occupied Housing Costs')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G100000'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G100000'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G100000'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G100000'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G100000').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G100000')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G100000').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G100000').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '10.0 Education')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '10.0 Education')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G50400'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G50400'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G50400'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G50400'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G50400').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G50400')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G50400').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G50400').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '05.4 Glassware, tableware and household utensils')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '05.4 Glassware, tableware and household utensils')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G50200'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G50200'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G50200'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G50200'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G50200').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G50200')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G50200').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G50200').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '05.2 Household textiles')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '05.2 Household textiles')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G10100'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G10100'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G10100'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G10100'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G10100').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G10100')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G10100').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G10100').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '01.1 Food')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '01.1 Food')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G110100'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G110100'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G110100'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G110100'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G110100').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G110100')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G110100').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G110100').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '11.1 Catering services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '11.1 Catering services')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G50100'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G50100'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G50100'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G50100'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G50100').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G50100')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G50100').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G50100').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '05.1 Furniture, furnishings and carpets')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '05.1 Furniture, furnishings and carpets')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G60200'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G60200'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G60200'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G60200'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G60200').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G60200')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G60200').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G60200').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '06.2 Out-patient services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '06.2 Out-patient services')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G110200'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G110200'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G110200'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G110200'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G110200').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G110200')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G110200').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G110200').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '11.2 Accommodation services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '11.2 Accommodation services')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G40300'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G40300'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G40300'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G40300'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G40300').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G40300')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G40300').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G40300').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '04.3 Regular maintenance and repair of the dwelling')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '04.3 Regular maintenance and repair of the dwelling')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G120400'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G120400'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G120400'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G120400'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G120400').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G120400')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G120400').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G120400').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '12.4 Social protection')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '12.4 Social protection')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G40100'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G40100'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G40100'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G40100'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G40100').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G40100')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G40100').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G40100').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '04.1 Actual rentals for housing')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '04.1 Actual rentals for housing')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G20100'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G20100'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G20100'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G20100'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G20100').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G20100')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G20100').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G20100').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '02.1 Alcoholic beverages')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '02.1 Alcoholic beverages')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G60100'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G60100'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G60100'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G60100'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G60100').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G60100')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G60100').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G60100').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '06.1 Medical products, appliances and equipment')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '06.1 Medical products, appliances and equipment')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G50300'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G50300'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G50300'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G50300'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G50300').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G50300')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G50300').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G50300').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '05.3 Household appliances, fitting and repairs')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '05.3 Household appliances, fitting and repairs')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G40500'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G40500'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G40500'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G40500'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G40500').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G40500')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G40500').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G40500').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '04.5 Electricity , gas and other fuels')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '04.5 Electricity , gas and other fuels')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G120600'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G120600'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G120600'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G120600'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G120600').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G120600')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G120600').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G120600').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '12.6 Financial services (nec)')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '12.6 Financial services (nec)')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G120300'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G120300'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G120300'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G120300'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G120300').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G120300')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G120300').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G120300').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '12.3 Personal effects (nec)')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '12.3 Personal effects (nec)')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G70200'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G70200'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G70200'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G70200'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G70200').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G70200')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G70200').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G70200').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '07.2 Operation of personal transport equipment')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '07.2 Operation of personal transport equipment')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G120100'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G120100'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G120100'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G120100'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G120100').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G120100')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G120100').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G120100').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '12.1 Personal care')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '12.1 Personal care')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G40900'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G40900'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G40900'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G40900'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G40900').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G40900')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G40900').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G40900').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '04.9.0 Council Tax and rates')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '04.9.0 Council Tax and rates')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G60300'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G60300'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G60300'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G60300'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G60300').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G60300')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G60300').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G60300').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '06.3 Hospital services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '06.3 Hospital services')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G70100'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G70100'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G70100'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G70100'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G70100').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G70100')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G70100').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G70100').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '07.1 Purchase of vehicles')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '07.1 Purchase of vehicles')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G90500'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G90500'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G90500'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G90500'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G90500').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G90500')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G90500').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G90500').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.5 Books, newspapers and stationery')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.5 Books, newspapers and stationery')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G40400'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G40400'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G40400'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G40400'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G40400').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G40400')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G40400').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G40400').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '04.4 Water supply and misc. services for the dwelling')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '04.4 Water supply and misc. services for the dwelling')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G70300'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G70300'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G70300'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G70300'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G70300').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G70300')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G70300').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G70300').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '07.3 Transport services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '07.3 Transport services')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G80100'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G80100'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G80100'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G80100'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G80100').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G80100')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G80100').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G80100').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '08.1 Postal services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '08.1 Postal services')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G90400'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G90400'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G90400'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G90400'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G90400').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G90400')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G90400').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G90400').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.4 Recreational and cultural services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.4 Recreational and cultural services')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G90200'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G90200'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G90200'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G90200'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G90200').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G90200')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G90200').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G90200').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '9.2 Other major durables for recreation and culture')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '9.2 Other major durables for recreation and culture')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G90300'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G90300'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G90300'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G90300'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G90300').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G90300')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G90300').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G90300').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.3 Other recreational items, gardens and pets')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.3 Other recreational items, gardens and pets')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10101'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S10101'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10101'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10101'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10101').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S10101')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10101').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10101').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '01.1.1 Bread and cereals')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '01.1.1 Bread and cereals')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10102'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S10102'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10102'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10102'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10102').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S10102')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10102').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10102').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '01.1.2 Meat')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '01.1.2 Meat')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10103'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S10103'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10103'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10103'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10103').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S10103')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10103').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10103').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '01.1.3 Fish')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '01.1.3 Fish')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10104'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S10104'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10104'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10104'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10104').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S10104')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10104').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10104').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '01.1.4 Milk, cheese and eggs')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '01.1.4 Milk, cheese and eggs')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10105'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S10105'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10105'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10105'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10105').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S10105')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10105').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10105').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '01.1.5 Oils and fats')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '01.1.5 Oils and fats')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10106'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S10106'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10106'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10106'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10106').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S10106')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10106').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10106').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '01.1.6 Fruit')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '01.1.6 Fruit')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10107'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S10107'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10107'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10107'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10107').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S10107')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10107').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10107').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '01.1.7 Vegetables including potatoes and tubers')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '01.1.7 Vegetables including potatoes and tubers')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10108'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S10108'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10108'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10108'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10108').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S10108')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10108').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10108').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '01.1.8 Sugar, jam, syrups, chocolate and confectionery')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '01.1.8 Sugar, jam, syrups, chocolate and confectionery')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10109'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S10109'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10109'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10109'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10109').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S10109')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10109').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10109').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '01.1.9 Food products (nec)')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '01.1.9 Food products (nec)')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10201'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S10201'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10201'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10201'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10201').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S10201')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10201').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10201').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '01.2.1 Coffee, tea and cocoa')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '01.2.1 Coffee, tea and cocoa')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S110101'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S110101'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S110101'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S110101'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S110101').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S110101')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S110101').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S110101').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '11.1.1 Restaurants, cafes')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '11.1.1 Restaurants, cafes')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10202'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S10202'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10202'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S10202'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10202').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S10202')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10202').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S10202').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '01.2.2 Mineral waters, soft drinks and juices')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '01.2.2 Mineral waters, soft drinks and juices')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S110102'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S110102'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S110102'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S110102'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S110102').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S110102')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S110102').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S110102').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '11.1.2 Canteens')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '11.1.2 Canteens')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S110200'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S110200'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S110200'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S110200'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S110200').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S110200')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S110200').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S110200').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '11.2.0 Accommodation Services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '11.2.0 Accommodation Services')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120102'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S120102'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120102'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120102'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120102').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S120102')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120102').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120102').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '12.1.2/3 Appliances and products for personal care')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '12.1.2/3 Appliances and products for personal care')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120101'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S120101'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120101'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120101'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120101').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S120101')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120101').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120101').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '12.1.1 Hairdressing and personal grooming establishments')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '12.1.1 Hairdressing and personal grooming establishments')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120301'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S120301'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120301'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120301'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120301').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S120301')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120301').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120301').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '12.3.1 Jewellery, clocks and watches')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '12.3.1 Jewellery, clocks and watches')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120502'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S120502'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120502'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120502'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120502').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S120502')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120502').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120502').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '12.5.2 House contents insurance')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '12.5.2 House contents insurance')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120400'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S120400'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120400'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120400'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120400').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S120400')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120400').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120400').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '12.4.0 Social Protection')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '12.4.0 Social Protection')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120302'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S120302'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120302'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120302'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120302').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S120302')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120302').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120302').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '12.3.2 Other personal effects')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '12.3.2 Other personal effects')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120503'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S120503'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120503'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120503'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120503').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S120503')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120503').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120503').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '12.5.3 Health insurance')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '12.5.3 Health insurance')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S100000'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S100000'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S100000'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S100000'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S100000').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S100000')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S100000').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S100000').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '10.0.0 Education')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '10.0.0 Education')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120504'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S120504'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120504'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120504'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120504').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S120504')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120504').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120504').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '12.5.4 Transport insurance')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '12.5.4 Transport insurance')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120602'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S120602'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120602'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120602'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120602').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S120602')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120602').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120602').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '12.6.2 Other financial services (nec)')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '12.6.2 Other financial services (nec)')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120700'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S120700'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120700'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S120700'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120700').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S120700')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120700').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S120700').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '12.7.0 Other Services Not Elsewhere covered')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '12.7.0 Other Services Not Elsewhere covered')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S20101'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S20101'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S20101'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S20101'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S20101').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S20101')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S20101').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S20101').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '02.1.1 Spirits')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '02.1.1 Spirits')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S20102'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S20102'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S20102'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S20102'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S20102').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S20102')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S20102').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S20102').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '02.1.2 Wine')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '02.1.2 Wine')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S20103'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S20103'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S20103'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S20103'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S20103').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S20103')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S20103').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S20103').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '02.1.3 Beer')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '02.1.3 Beer')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S20200'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S20200'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S20200'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S20200'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S20200').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S20200')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S20200').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S20200').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '02.2.0 Tobacco')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '02.2.0 Tobacco')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G80200'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G80200'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G80200'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G80200'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G80200').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G80200')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G80200').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G80200').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '08.2/3 Telephone and telefax equip')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '08.2/3 Telephone and telefax equip')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S30103'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S30103'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S30103'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S30103'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S30103').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S30103')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S30103').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S30103').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '03.1.3 Other clothing and clothing accessories')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '03.1.3 Other clothing and clothing accessories')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G90600'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G90600'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G90600'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G90600'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G90600').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G90600')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G90600').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G90600').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.6 Package holidays')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.6 Package holidays')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G90100'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1G90100'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G90100'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1G90100'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G90100').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1G90100')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G90100').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1G90100').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.1 Audio-visual equipment and related products')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.1 Audio-visual equipment and related products')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S30102'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S30102'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S30102'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S30102'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S30102').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S30102')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S30102').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S30102').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '03.1.2 Garments')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '03.1.2 Garments')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S30104'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S30104'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S30104'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S30104'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S30104').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S30104')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S30104').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S30104').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '03.1.4 Cleaning, repair and hire of clothing')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '03.1.4 Cleaning, repair and hire of clothing')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S30200'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S30200'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S30200'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S30200'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S30200').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S30200')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S30200').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S30200').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '03.2.0 Footwear including repairs')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '03.2.0 Footwear including repairs')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40200'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S40200'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40200'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40200'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40200').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S40200')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40200').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40200').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '04.2.0 Owner Occupied Housing Costs')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '04.2.0 Owner Occupied Housing Costs')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40100'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S40100'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40100'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40100'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40100').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S40100')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40100').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40100').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '04.1.0 Actual rentals for housing')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '04.1.0 Actual rentals for housing')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40301'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S40301'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40301'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40301'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40301').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S40301')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40301').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40301').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '04.3.1 Materials for maintenance and repair')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '04.3.1 Materials for maintenance and repair')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40302'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S40302'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40302'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40302'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40302').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S40302')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40302').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40302').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '04.3.2 Services for maintenance and repair')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '04.3.2 Services for maintenance and repair')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40403'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S40403'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40403'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40403'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40403').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S40403')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40403').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40403').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '04.4.3 Sewerage collection')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '04.4.3 Sewerage collection')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40502'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S40502'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40502'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40502'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40502').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S40502')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40502').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40502').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '04.5.2 Gas')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '04.5.2 Gas')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40504'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S40504'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40504'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40504'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40504').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S40504')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40504').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40504').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '04.5.4 Solid fuels')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '04.5.4 Solid fuels')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40900'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S40900'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40900'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40900'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40900').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S40900')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40900').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40900').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '04.9.0 Council Tax and rates')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '04.9.0 Council Tax and rates')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50101'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S50101'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50101'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50101'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50101').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S50101')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50101').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50101').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '05.1.1 Furniture and furnishings')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '05.1.1 Furniture and furnishings')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50102'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S50102'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50102'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50102'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50102').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S50102')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50102').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50102').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '05.1.2 Carpets and other floor coverings')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '05.1.2 Carpets and other floor coverings')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50200'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S50200'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50200'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50200'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50200').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S50200')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50200').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50200').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '05.2.0 Household Textiles')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '05.2.0 Household Textiles')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50301'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S50301'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50301'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50301'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50301').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S50301')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50301').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50301').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '05.3.1/2 Major appliances and small electric goods')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '05.3.1/2 Major appliances and small electric goods')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50303'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S50303'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50303'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50303'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50303').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S50303')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50303').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50303').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '05.3.3 Repair of household appliances')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '05.3.3 Repair of household appliances')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40501'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S40501'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40501'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40501'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40501').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S40501')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40501').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40501').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '04.5.1 Electricity')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '04.5.1 Electricity')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40503'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S40503'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40503'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40503'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40503').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S40503')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40503').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40503').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '04.5.3 Liquid fuels')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '04.5.3 Liquid fuels')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40401'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S40401'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40401'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S40401'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40401').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S40401')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40401').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S40401').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '04.4.1 Water supply')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '04.4.1 Water supply')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50400'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S50400'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50400'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50400'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50400').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S50400')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50400').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50400').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '05.4.0 Glassware, Tableware and Household Utensils')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '05.4.0 Glassware, Tableware and Household Utensils')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50500'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S50500'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50500'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50500'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50500').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S50500')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50500').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50500').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '05.5.0 Tools and equipment for House and Garden')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '05.5.0 Tools and equipment for House and Garden')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50602'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S50602'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50602'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50602'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50602').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S50602')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50602').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50602').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '05.6.2 Domestic services and household services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '05.6.2 Domestic services and household services')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S60101'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S60101'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S60101'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S60101'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S60101').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S60101')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S60101').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S60101').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '06.1.1 Pharmaceutical products')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '06.1.1 Pharmaceutical products')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S60201'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S60201'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S60201'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S60201'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S60201').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S60201')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S60201').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S60201').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '06.2.1/3 Medical services, paramedical services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '06.2.1/3 Medical services, paramedical services')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S60102'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S60102'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S60102'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S60102'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S60102').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S60102')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S60102').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S60102').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '06.1.2/3 Other medical and therapeutic equipment')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '06.1.2/3 Other medical and therapeutic equipment')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50601'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S50601'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50601'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S50601'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50601').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S50601')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50601').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S50601').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '05.6.1 Non-durable household goods')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '05.6.1 Non-durable household goods')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S60202'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S60202'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S60202'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S60202'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S60202').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S60202')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S60202').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S60202').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '06.2.2 Dental services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '06.2.2 Dental services')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S60300'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S60300'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S60300'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S60300'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S60300').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S60300')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S60300').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S60300').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '06.3.0 Hospital Services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '06.3.0 Hospital Services')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70102'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S70102'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70102'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70102'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70102').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S70102')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70102').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70102').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '07.1.2/3 Motorcycles and bicycles')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '07.1.2/3 Motorcycles and bicycles')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70181'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S70181'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70181'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70181'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70181').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S70181')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70181').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70181').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '07.1.1 New Cars')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '07.1.1 New Cars')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70191'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S70191'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70191'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70191'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70191').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S70191')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70191').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70191').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '07.1.1b Second Hand Cars')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '07.1.1b Second Hand Cars')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70201'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S70201'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70201'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70201'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70201').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S70201')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70201').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70201').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '07.2.1 Spare parts and accessories')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '07.2.1 Spare parts and accessories')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70203'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S70203'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70203'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70203'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70203').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S70203')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70203').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70203').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '07.2.3 Maintenance and repairs')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '07.2.3 Maintenance and repairs')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70303'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S70303'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70303'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70303'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70303').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S70303')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70303').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70303').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '07.3.3 Passenger transport by air')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '07.3.3 Passenger transport by air')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70202'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S70202'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70202'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70202'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70202').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S70202')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70202').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70202').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '07.2.2 Fuels and lubricants')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '07.2.2 Fuels and lubricants')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70304'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S70304'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70304'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70304'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70304').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S70304')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70304').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70304').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '07.3.4 Passenger transport by sea and inland waterway')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '07.3.4 Passenger transport by sea and inland waterway')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S80100'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S80100'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S80100'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S80100'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S80100').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S80100')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S80100').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S80100').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '08.1.0 Postal Services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '08.1.0 Postal Services')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90101'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S90101'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90101'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90101'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90101').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S90101')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90101').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90101').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.1.1 Reception and reproduction of sound and pictures')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.1.1 Reception and reproduction of sound and pictures')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70302'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S70302'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70302'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70302'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70302').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S70302')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70302').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70302').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '07.3.2 Passenger transport by road')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '07.3.2 Passenger transport by road')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90102'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S90102'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90102'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90102'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90102').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S90102')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90102').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90102').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.1.2 Photographic, cinematographic and optical equipment')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.1.2 Photographic, cinematographic and optical equipment')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S80200'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S80200'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S80200'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S80200'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S80200').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S80200')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S80200').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S80200').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '08.2.0 Telephone and Telefax Equipment & Services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '08.2.0 Telephone and Telefax Equipment & Services')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90103'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S90103'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90103'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90103'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90103').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S90103')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90103').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90103').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.1.3 Data processing equipment')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.1.3 Data processing equipment')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90104'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S90104'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90104'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90104'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90104').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S90104')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90104').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90104').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.1.4 Recording media')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.1.4 Recording media')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90105'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S90105'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90105'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90105'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90105').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S90105')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90105').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90105').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.1.5 Repair of audio-visual equipment , related products')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.1.5 Repair of audio-visual equipment , related products')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70301'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S70301'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70301'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70301'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70301').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S70301')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70301').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70301').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '07.3.1 Passenger transport by railway')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '07.3.1 Passenger transport by railway')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70204'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S70204'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70204'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S70204'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70204').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S70204')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70204').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S70204').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '07.2.4 Other services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '07.2.4 Other services')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90201'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S90201'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90201'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90201'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90201').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S90201')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90201').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90201').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.2.1/2 Major durables for in/outdoor recreation')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.2.1/2 Major durables for in/outdoor recreation')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T100000'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1T100000'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T100000'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T100000'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T100000').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1T100000')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T100000').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T100000').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '10 Education')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '10 Education')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T110000'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1T110000'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T110000'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T110000'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T110000').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1T110000')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T110000').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T110000').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '11 Restaurants and hotels')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '11 Restaurants and hotels')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T120000'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1T120000'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T120000'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T120000'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T120000').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1T120000')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T120000').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T120000').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '12 Miscellaneous goods and services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '12 Miscellaneous goods and services')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90303'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S90303'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90303'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90303'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90303').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S90303')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90303').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90303').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.3.3 Gardens, plants and flowers')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.3.3 Gardens, plants and flowers')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90301'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S90301'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90301'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90301'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90301').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S90301')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90301').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90301').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.3.1 Games, toys and hobbies')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.3.1 Games, toys and hobbies')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90302'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S90302'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90302'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90302'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90302').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S90302')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90302').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90302').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.3.2 Equipment for sport and open-air recreation')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.3.2 Equipment for sport and open-air recreation')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90304'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S90304'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90304'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90304'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90304').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S90304')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90304').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90304').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.3.4/5 Pets, related products and services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.3.4/5 Pets, related products and services')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T70000'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1T70000'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T70000'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T70000'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T70000').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1T70000')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T70000').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T70000').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '07 Transport')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '07 Transport')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T20000'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1T20000'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T20000'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T20000'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T20000').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1T20000')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T20000').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T20000').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '02 Alcoholic beverages and tobacco')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '02 Alcoholic beverages and tobacco')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T40000'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1T40000'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T40000'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T40000'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T40000').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1T40000')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T40000').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T40000').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '04 Housing, water, electricity, gas and other fuels')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '04 Housing, water, electricity, gas and other fuels')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T30000'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1T30000'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T30000'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T30000'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T30000').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1T30000')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T30000').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T30000').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '03 Clothing and footwear')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '03 Clothing and footwear')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T50000'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1T50000'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T50000'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T50000'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T50000').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1T50000')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T50000').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T50000').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '05 Furniture, household equipment and maintenance')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '05 Furniture, household equipment and maintenance')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T60000'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1T60000'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T60000'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T60000'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T60000').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1T60000')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T60000').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T60000').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '06 Health')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '06 Health')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90502'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S90502'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90502'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90502'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90502').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S90502')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90502').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90502').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.5.2 Newspapers and periodicals')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.5.2 Newspapers and periodicals')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90503'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S90503'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90503'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90503'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90503').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S90503')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90503').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90503').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.5.3/4 Misc. printed matter, stationery, drawing materials')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.5.3/4 Misc. printed matter, stationery, drawing materials')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90600'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S90600'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90600'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90600'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90600').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S90600')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90600').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90600').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.6.0 Package Holidays')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.6.0 Package Holidays')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T10000'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1T10000'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T10000'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T10000'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T10000').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1T10000')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T10000').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T10000').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '01 Food and non-alcoholic beverages')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '01 Food and non-alcoholic beverages')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T90000'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1T90000'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T90000'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T90000'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T90000').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1T90000')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T90000').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T90000').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09 Recreation and culture')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09 Recreation and culture')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T80000'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1T80000'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T80000'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1T80000'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T80000').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1T80000')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T80000').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1T80000').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '08 Communication')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '08 Communication')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90402'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S90402'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90402'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90402'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90402').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S90402')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90402').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90402').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.4.2 Cultural services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.4.2 Cultural services')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90501'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S90501'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90501'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90501'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90501').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S90501')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90501').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90501').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.5.1 Books')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.5.1 Books')).next()
 
 
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90401'').fold().coalesce(unfold(),
-  addV('_code::_code_cpih1dim1aggid').property(single, 'value', ''cpih1dim1S90401'')).next()
-g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90401'').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code_cpih1dim1aggid').has('value', ''cpih1dim1S90401'').
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90401').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cpih1dim1aggid').property(single, 'value', 'cpih1dim1S90401')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90401').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cpih1dim1aggid').has('value', 'cpih1dim1S90401').
     addE('usedBy').to(
-      g.V().hasLabel('_code_list_cpih1dim1aggid').has('edition', ''one-off'')
-  ).property(single, 'label', '09.4.1 Recreational and sporting services')).next()
+      g.V().hasLabel('_code_list').has('listID', 'cpih1dim1aggid').has('edition', 'one-off')
+    ).property(single, 'label', '09.4.1 Recreational and sporting services')).next()
 
