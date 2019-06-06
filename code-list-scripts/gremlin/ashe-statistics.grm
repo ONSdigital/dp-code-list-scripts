@@ -1,8 +1,8 @@
 g.V().hasLabel('_code_list').has('listID', 'ashe-statistics').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', 'ashe-statistics').
-    property(single, 'edition', 'one-off').
-    property(single, 'label', 'statistics')
+    property(single, 'label', 'statistics').
+    property(single, 'edition', 'one-off')
   ).next()
 
 

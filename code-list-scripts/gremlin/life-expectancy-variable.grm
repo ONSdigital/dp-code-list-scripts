@@ -3,8 +3,8 @@
 g.V().hasLabel('_code_list').has('listID', 'life-expectancy-variable').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', 'life-expectancy-variable').
-    property(single, 'label', 'lifeexpectancyvariable').
-    property(single, 'edition', 'one-off')
+    property(single, 'edition', 'one-off').
+    property(single, 'label', 'lifeexpectancyvariable')
   ).next()
 
 

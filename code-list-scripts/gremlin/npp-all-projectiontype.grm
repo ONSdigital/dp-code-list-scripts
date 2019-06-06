@@ -3,8 +3,8 @@
 g.V().hasLabel('_code_list').has('listID', 'npp-all-projectiontype').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', 'npp-all-projectiontype').
-    property(single, 'edition', 'one-off').
-    property(single, 'label', 'projectiontype')
+    property(single, 'label', 'projectiontype').
+    property(single, 'edition', 'one-off')
   ).next()
 
 

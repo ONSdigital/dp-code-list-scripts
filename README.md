@@ -40,7 +40,7 @@ There are separate conversion scripts for general code list scripts and geograph
 
 To convert general code lists:
 `cd code-list-scripts`
-`./convert-cypher-to-gremlin.sh cypher/<new-file-name>`
+`./convert.sh cypher/<new-file-name>`
 
 To convert geography code lists:
 `cd geo-specific-codelist`

@@ -3,8 +3,8 @@
 g.V().hasLabel('_code_list').has('listID', 'house-price-age').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', 'house-price-age').
-    property(single, 'edition', 'one-off').
-    property(single, 'label', 'housepriceage')
+    property(single, 'label', 'housepriceage').
+    property(single, 'edition', 'one-off')
   ).next()
 
 

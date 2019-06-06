@@ -3,8 +3,8 @@
 g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', 'five-year-age-brackets').
-    property(single, 'label', 'agebrackets').
-    property(single, 'edition', 'one-off')
+    property(single, 'edition', 'one-off').
+    property(single, 'label', 'agebrackets')
   ).next()
 
 
