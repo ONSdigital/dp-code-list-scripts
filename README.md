@@ -39,12 +39,10 @@ To keep options open, its preferable to keep a full list of code lists up to dat
 There are separate conversion scripts for general code list scripts and geography code lists.
 
 To convert general code lists:
-`cd code-list-scripts`
-`./convert.sh cypher/<new-file-name>`
+`./convert.sh code-list-scripts/cypher/<new-file-name>`
 
 To convert geography code lists:
-`cd geo-specific-codelist`
-`./convert-cypher-to-gremlin.sh <new-file-name>`
+`./convert-geography.sh geo-specific-codelist/*.cypher`
 
 Each of these scripts can also take multiple cypher files as input, and in all cases will output the `.grm` file into the relevant `gremlin` directory.
 
