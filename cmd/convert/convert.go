@@ -81,7 +81,7 @@ func createCodeList(line string, geo bool) ([]string, string, string) {
 	count := 1
 	result = append(result, fmt.Sprintf(query.CodeListPropertyDot, "listID", id))
 	if geo {
-		result = append(result, fmt.Sprintf(query.CodeListPropertyDot, "geography", "true"))
+		result = append(result, fmt.Sprintf(query.CodeListPropertyBool, "geography", true))
 	}
 	for k, v := range kvs {
 		if count < lastProp {

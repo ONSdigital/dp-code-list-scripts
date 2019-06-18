@@ -4,7 +4,7 @@
 g.V().hasLabel('_code_list').has('listID', 'ashe-geography').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', 'ashe-geography').
-    property(single, 'geography', 'true').
+    property(single, 'geography', true).
     property(single, 'edition', 'one-off').
     property(single, 'label', 'geography')
   ).next()

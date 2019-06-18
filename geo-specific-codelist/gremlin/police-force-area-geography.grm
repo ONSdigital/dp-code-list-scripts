@@ -3,7 +3,7 @@
 g.V().hasLabel('_code_list').has('listID', 'police-force-area-geography').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', 'police-force-area-geography').
-    property(single, 'geography', 'true').
+    property(single, 'geography', true).
     property(single, 'label', 'geography').
     property(single, 'edition', 'one-off')
   ).next()

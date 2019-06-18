@@ -3,9 +3,9 @@
 g.V().hasLabel('_code_list').has('listID', 'travel-to-work-geography').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', 'travel-to-work-geography').
-    property(single, 'geography', 'true').
-    property(single, 'label', 'geography').
-    property(single, 'edition', 'one-off')
+    property(single, 'geography', true).
+    property(single, 'edition', 'one-off').
+    property(single, 'label', 'geography')
   ).next()
 
 

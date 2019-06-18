@@ -4,7 +4,7 @@
 g.V().hasLabel('_code_list').has('listID', 'england-and-wales-only').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', 'england-and-wales-only').
-    property(single, 'geography', 'true').
+    property(single, 'geography', true).
     property(single, 'label', 'geography').
     property(single, 'edition', 'one-off')
   ).next()

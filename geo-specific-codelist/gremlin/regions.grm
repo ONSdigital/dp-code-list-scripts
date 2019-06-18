@@ -3,10 +3,10 @@
 g.V().hasLabel('_code_list').has('listID', 'regions').has('edition', '2017').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', 'regions').
-    property(single, 'geography', 'true').
+    property(single, 'geography', true).
+    property(single, 'label', 'Regions').
     property(single, 'edition', '2017').
-    property(single, 'geography_list_ID', 'rgn17').
-    property(single, 'label', 'Regions')
+    property(single, 'geography_list_ID', 'rgn17')
   ).next()
 
 

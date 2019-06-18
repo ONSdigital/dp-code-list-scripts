@@ -3,10 +3,10 @@
 g.V().hasLabel('_code_list').has('listID', 'local-authority').has('edition', '2016').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', 'local-authority').
-    property(single, 'geography', 'true').
+    property(single, 'geography', true).
+    property(single, 'geography_list_ID', 'lad16').
     property(single, 'label', 'Local Authority Districts').
-    property(single, 'edition', '2016').
-    property(single, 'geography_list_ID', 'lad16')
+    property(single, 'edition', '2016')
   ).next()
 
 
