@@ -2,41 +2,41 @@
 
 g.V().hasLabel('_code_list').has('listID', 'migration-direction').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
-    property(single, 'listID', 'migration-direction').
-    property(single, 'label', 'migrationdirection').
-    property(single, 'edition', 'one-off')
+    property(single, 'listID', "migration-direction").
+    property(single, 'label', "migrationdirection").
+    property(single, 'edition', "one-off")
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'migration-direction').has('value', 'inflow').
+g.V().hasLabel('_code').has('listID', 'migration-direction').has('value', "inflow").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'migration-direction').property(single, 'value', 'inflow')
+    property(single, 'listID', 'migration-direction').property(single, 'value', "inflow")
   ).next()
-g.V().hasLabel('_code').has('listID', 'migration-direction').has('value', 'inflow').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'migration-direction').has('value', 'inflow').
+g.V().hasLabel('_code').has('listID', 'migration-direction').has('value', "inflow").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'migration-direction').has('value', "inflow").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'migration-direction').has('edition', 'one-off')
-    ).property(single, 'label', 'Inflow')).next()
+    ).property(single, 'label', "Inflow")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'migration-direction').has('value', 'outflow').
+g.V().hasLabel('_code').has('listID', 'migration-direction').has('value', "outflow").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'migration-direction').property(single, 'value', 'outflow')
+    property(single, 'listID', 'migration-direction').property(single, 'value', "outflow")
   ).next()
-g.V().hasLabel('_code').has('listID', 'migration-direction').has('value', 'outflow').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'migration-direction').has('value', 'outflow').
+g.V().hasLabel('_code').has('listID', 'migration-direction').has('value', "outflow").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'migration-direction').has('value', "outflow").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'migration-direction').has('edition', 'one-off')
-    ).property(single, 'label', 'Outflow')).next()
+    ).property(single, 'label', "Outflow")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'migration-direction').has('value', 'net').
+g.V().hasLabel('_code').has('listID', 'migration-direction').has('value', "net").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'migration-direction').property(single, 'value', 'net')
+    property(single, 'listID', 'migration-direction').property(single, 'value', "net")
   ).next()
-g.V().hasLabel('_code').has('listID', 'migration-direction').has('value', 'net').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'migration-direction').has('value', 'net').
+g.V().hasLabel('_code').has('listID', 'migration-direction').has('value', "net").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'migration-direction').has('value', "net").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'migration-direction').has('edition', 'one-off')
-    ).property(single, 'label', 'Net')).next()
+    ).property(single, 'label', "Net")).next()
 

@@ -1,43 +1,43 @@
 g.V().hasLabel('_code_list').has('listID', 'ashe-working-pattern').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
-    property(single, 'listID', 'ashe-working-pattern').
-    property(single, 'label', 'workingpattern').
-    property(single, 'edition', 'one-off')
+    property(single, 'listID', "ashe-working-pattern").
+    property(single, 'label', "workingpattern").
+    property(single, 'edition', "one-off")
   ).next()
 
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'ashe-working-pattern').has('value', 'all').
+g.V().hasLabel('_code').has('listID', 'ashe-working-pattern').has('value', "all").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ashe-working-pattern').property(single, 'value', 'all')
+    property(single, 'listID', 'ashe-working-pattern').property(single, 'value', "all")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ashe-working-pattern').has('value', 'all').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ashe-working-pattern').has('value', 'all').
+g.V().hasLabel('_code').has('listID', 'ashe-working-pattern').has('value', "all").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-working-pattern').has('value', "all").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ashe-working-pattern').has('edition', 'one-off')
-    ).property(single, 'label', 'All')).next()
+    ).property(single, 'label', "All")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ashe-working-pattern').has('value', 'full-time').
+g.V().hasLabel('_code').has('listID', 'ashe-working-pattern').has('value', "full-time").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ashe-working-pattern').property(single, 'value', 'full-time')
+    property(single, 'listID', 'ashe-working-pattern').property(single, 'value', "full-time")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ashe-working-pattern').has('value', 'full-time').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ashe-working-pattern').has('value', 'full-time').
+g.V().hasLabel('_code').has('listID', 'ashe-working-pattern').has('value', "full-time").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-working-pattern').has('value', "full-time").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ashe-working-pattern').has('edition', 'one-off')
-    ).property(single, 'label', 'Full-Time')).next()
+    ).property(single, 'label', "Full-Time")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ashe-working-pattern').has('value', 'part-time').
+g.V().hasLabel('_code').has('listID', 'ashe-working-pattern').has('value', "part-time").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ashe-working-pattern').property(single, 'value', 'part-time')
+    property(single, 'listID', 'ashe-working-pattern').property(single, 'value', "part-time")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ashe-working-pattern').has('value', 'part-time').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ashe-working-pattern').has('value', 'part-time').
+g.V().hasLabel('_code').has('listID', 'ashe-working-pattern').has('value', "part-time").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-working-pattern').has('value', "part-time").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ashe-working-pattern').has('edition', 'one-off')
-    ).property(single, 'label', 'Part-Time')).next()
+    ).property(single, 'label', "Part-Time")).next()
 

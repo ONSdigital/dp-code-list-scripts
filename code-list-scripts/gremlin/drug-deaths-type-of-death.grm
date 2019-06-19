@@ -2,30 +2,30 @@
 
 g.V().hasLabel('_code_list').has('listID', 'drug-deaths-type-of-death').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
-    property(single, 'listID', 'drug-deaths-type-of-death').
-    property(single, 'label', 'typeofdeath').
-    property(single, 'edition', 'one-off')
+    property(single, 'listID', "drug-deaths-type-of-death").
+    property(single, 'edition', "one-off").
+    property(single, 'label', "typeofdeath")
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'drug-deaths-type-of-death').has('value', 'poisoning').
+g.V().hasLabel('_code').has('listID', 'drug-deaths-type-of-death').has('value', "poisoning").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'drug-deaths-type-of-death').property(single, 'value', 'poisoning')
+    property(single, 'listID', 'drug-deaths-type-of-death').property(single, 'value', "poisoning")
   ).next()
-g.V().hasLabel('_code').has('listID', 'drug-deaths-type-of-death').has('value', 'poisoning').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'drug-deaths-type-of-death').has('value', 'poisoning').
+g.V().hasLabel('_code').has('listID', 'drug-deaths-type-of-death').has('value', "poisoning").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'drug-deaths-type-of-death').has('value', "poisoning").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'drug-deaths-type-of-death').has('edition', 'one-off')
-    ).property(single, 'label', 'Poisoning')).next()
+    ).property(single, 'label', "Poisoning")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'drug-deaths-type-of-death').has('value', 'misuse').
+g.V().hasLabel('_code').has('listID', 'drug-deaths-type-of-death').has('value', "misuse").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'drug-deaths-type-of-death').property(single, 'value', 'misuse')
+    property(single, 'listID', 'drug-deaths-type-of-death').property(single, 'value', "misuse")
   ).next()
-g.V().hasLabel('_code').has('listID', 'drug-deaths-type-of-death').has('value', 'misuse').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'drug-deaths-type-of-death').has('value', 'misuse').
+g.V().hasLabel('_code').has('listID', 'drug-deaths-type-of-death').has('value', "misuse").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'drug-deaths-type-of-death').has('value', "misuse").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'drug-deaths-type-of-death').has('edition', 'one-off')
-    ).property(single, 'label', 'Misuse')).next()
+    ).property(single, 'label', "Misuse")).next()
 

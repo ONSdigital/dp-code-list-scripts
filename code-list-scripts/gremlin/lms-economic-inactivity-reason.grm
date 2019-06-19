@@ -2,118 +2,118 @@
 
 g.V().hasLabel('_code_list').has('listID', 'lms-economic-inactivity-reason').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
-    property(single, 'listID', 'lms-economic-inactivity-reason').
-    property(single, 'label', 'economicinactivityreason').
-    property(single, 'edition', 'one-off')
+    property(single, 'listID', "lms-economic-inactivity-reason").
+    property(single, 'label', "economicinactivityreason").
+    property(single, 'edition', "one-off")
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'total').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "total").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', 'total')
+    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', "total")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'total').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'total').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "total").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "total").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'lms-economic-inactivity-reason').has('edition', 'one-off')
-    ).property(single, 'label', 'Total')).next()
+    ).property(single, 'label', "Total")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'student').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "student").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', 'student')
+    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', "student")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'student').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'student').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "student").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "student").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'lms-economic-inactivity-reason').has('edition', 'one-off')
-    ).property(single, 'label', 'Student')).next()
+    ).property(single, 'label', "Student")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'looking-after-family-home').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "looking-after-family-home").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', 'looking-after-family-home')
+    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', "looking-after-family-home")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'looking-after-family-home').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'looking-after-family-home').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "looking-after-family-home").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "looking-after-family-home").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'lms-economic-inactivity-reason').has('edition', 'one-off')
-    ).property(single, 'label', 'Looking after family / home')).next()
+    ).property(single, 'label', "Looking after family / home")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'temp-sick').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "temp-sick").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', 'temp-sick')
+    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', "temp-sick")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'temp-sick').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'temp-sick').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "temp-sick").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "temp-sick").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'lms-economic-inactivity-reason').has('edition', 'one-off')
-    ).property(single, 'label', 'Temp sick')).next()
+    ).property(single, 'label', "Temp sick")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'long-term-sick').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "long-term-sick").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', 'long-term-sick')
+    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', "long-term-sick")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'long-term-sick').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'long-term-sick').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "long-term-sick").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "long-term-sick").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'lms-economic-inactivity-reason').has('edition', 'one-off')
-    ).property(single, 'label', 'Long-term sick')).next()
+    ).property(single, 'label', "Long-term sick")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'discouraged').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "discouraged").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', 'discouraged')
+    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', "discouraged")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'discouraged').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'discouraged').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "discouraged").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "discouraged").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'lms-economic-inactivity-reason').has('edition', 'one-off')
-    ).property(single, 'label', 'Discouraged')).next()
+    ).property(single, 'label', "Discouraged")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'retired').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "retired").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', 'retired')
+    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', "retired")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'retired').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'retired').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "retired").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "retired").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'lms-economic-inactivity-reason').has('edition', 'one-off')
-    ).property(single, 'label', 'Retired')).next()
+    ).property(single, 'label', "Retired")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'other').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "other").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', 'other')
+    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', "other")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'other').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'other').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "other").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "other").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'lms-economic-inactivity-reason').has('edition', 'one-off')
-    ).property(single, 'label', 'Other')).next()
+    ).property(single, 'label', "Other")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'does-not-want-job').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "does-not-want-job").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', 'does-not-want-job')
+    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', "does-not-want-job")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'does-not-want-job').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'does-not-want-job').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "does-not-want-job").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "does-not-want-job").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'lms-economic-inactivity-reason').has('edition', 'one-off')
-    ).property(single, 'label', 'Does not want job')).next()
+    ).property(single, 'label', "Does not want job")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'wants-a-job').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "wants-a-job").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', 'wants-a-job')
+    property(single, 'listID', 'lms-economic-inactivity-reason').property(single, 'value', "wants-a-job")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'wants-a-job').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', 'wants-a-job').
+g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "wants-a-job").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-economic-inactivity-reason').has('value', "wants-a-job").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'lms-economic-inactivity-reason').has('edition', 'one-off')
-    ).property(single, 'label', 'Wants a job')).next()
+    ).property(single, 'label', "Wants a job")).next()
 

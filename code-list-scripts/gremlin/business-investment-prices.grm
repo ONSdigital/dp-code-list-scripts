@@ -2,47 +2,47 @@
 
 g.V().hasLabel('_code_list').has('listID', 'business-investment-prices').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
-    property(single, 'listID', 'business-investment-prices').
-    property(single, 'label', 'prices').
-    property(single, 'edition', 'one-off')
+    property(single, 'listID', "business-investment-prices").
+    property(single, 'label', "prices").
+    property(single, 'edition', "one-off")
   ).next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-prices').has('value', 'V').
+g.V().hasLabel('_code').has('listID', 'business-investment-prices').has('value', "V").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'business-investment-prices').property(single, 'value', 'V')
+    property(single, 'listID', 'business-investment-prices').property(single, 'value', "V")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-prices').has('value', 'V').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-prices').has('value', 'V').
+g.V().hasLabel('_code').has('listID', 'business-investment-prices').has('value', "V").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'business-investment-prices').has('value', "V").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'business-investment-prices').has('edition', 'one-off')
-    ).property(single, 'label', 'Current prices')).next()
+    ).property(single, 'label', "Current prices")).next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-prices').has('value', 'Y').
+g.V().hasLabel('_code').has('listID', 'business-investment-prices').has('value', "Y").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'business-investment-prices').property(single, 'value', 'Y')
+    property(single, 'listID', 'business-investment-prices').property(single, 'value', "Y")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-prices').has('value', 'Y').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-prices').has('value', 'Y').
+g.V().hasLabel('_code').has('listID', 'business-investment-prices').has('value', "Y").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'business-investment-prices').has('value', "Y").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'business-investment-prices').has('edition', 'one-off')
-    ).property(single, 'label', 'Previous year prices')).next()
+    ).property(single, 'label', "Previous year prices")).next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-prices').has('value', 'L').
+g.V().hasLabel('_code').has('listID', 'business-investment-prices').has('value', "L").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'business-investment-prices').property(single, 'value', 'L')
+    property(single, 'listID', 'business-investment-prices').property(single, 'value', "L")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-prices').has('value', 'L').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-prices').has('value', 'L').
+g.V().hasLabel('_code').has('listID', 'business-investment-prices').has('value', "L").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'business-investment-prices').has('value', "L").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'business-investment-prices').has('edition', 'one-off')
-    ).property(single, 'label', 'Chain linked volume')).next()
+    ).property(single, 'label', "Chain linked volume")).next()
 

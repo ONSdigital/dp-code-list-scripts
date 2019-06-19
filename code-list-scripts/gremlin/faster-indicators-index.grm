@@ -2,63 +2,63 @@
 
 g.V().hasLabel('_code_list').has('listID', 'faster-indicators-index').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
-    property(single, 'listID', 'faster-indicators-index').
-    property(single, 'label', 'index').
-    property(single, 'edition', 'one-off')
+    property(single, 'listID', "faster-indicators-index").
+    property(single, 'edition', "one-off").
+    property(single, 'label', "index")
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', 'diffusion-index').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', "diffusion-index").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-index').property(single, 'value', 'diffusion-index')
+    property(single, 'listID', 'faster-indicators-index').property(single, 'value', "diffusion-index")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', 'diffusion-index').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', 'diffusion-index').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', "diffusion-index").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', "diffusion-index").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-index').has('edition', 'one-off')
-    ).property(single, 'label', 'Diffusion index')).next()
+    ).property(single, 'label', "Diffusion index")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', 'number-of-firms-in-diffusion-index').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', "number-of-firms-in-diffusion-index").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-index').property(single, 'value', 'number-of-firms-in-diffusion-index')
+    property(single, 'listID', 'faster-indicators-index').property(single, 'value', "number-of-firms-in-diffusion-index")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', 'number-of-firms-in-diffusion-index').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', 'number-of-firms-in-diffusion-index').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', "number-of-firms-in-diffusion-index").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', "number-of-firms-in-diffusion-index").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-index').has('edition', 'one-off')
-    ).property(single, 'label', 'Number of firms in diffusion index')).next()
+    ).property(single, 'label', "Number of firms in diffusion index")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', 'percentage-of-new-reporters').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', "percentage-of-new-reporters").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-index').property(single, 'value', 'percentage-of-new-reporters')
+    property(single, 'listID', 'faster-indicators-index').property(single, 'value', "percentage-of-new-reporters")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', 'percentage-of-new-reporters').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', 'percentage-of-new-reporters').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', "percentage-of-new-reporters").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', "percentage-of-new-reporters").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-index').has('edition', 'one-off')
-    ).property(single, 'label', 'Percentage of new reporters')).next()
+    ).property(single, 'label', "Percentage of new reporters")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', 'number-of-new-reporters').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', "number-of-new-reporters").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-index').property(single, 'value', 'number-of-new-reporters')
+    property(single, 'listID', 'faster-indicators-index').property(single, 'value', "number-of-new-reporters")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', 'number-of-new-reporters').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', 'number-of-new-reporters').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', "number-of-new-reporters").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', "number-of-new-reporters").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-index').has('edition', 'one-off')
-    ).property(single, 'label', 'Number of new reporters')).next()
+    ).property(single, 'label', "Number of new reporters")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', 'number-of-reporters-of-this-record-type').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', "number-of-reporters-of-this-record-type").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-index').property(single, 'value', 'number-of-reporters-of-this-record-type')
+    property(single, 'listID', 'faster-indicators-index').property(single, 'value', "number-of-reporters-of-this-record-type")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', 'number-of-reporters-of-this-record-type').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', 'number-of-reporters-of-this-record-type').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', "number-of-reporters-of-this-record-type").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-index').has('value', "number-of-reporters-of-this-record-type").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-index').has('edition', 'one-off')
-    ).property(single, 'label', 'Number of reporters of this record type')).next()
+    ).property(single, 'label', "Number of reporters of this record type")).next()
 

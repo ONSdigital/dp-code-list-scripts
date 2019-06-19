@@ -2,74 +2,74 @@
 
 g.V().hasLabel('_code_list').has('listID', 'lms-jobseekers-duration').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
-    property(single, 'listID', 'lms-jobseekers-duration').
-    property(single, 'label', 'duration').
-    property(single, 'edition', 'one-off')
+    property(single, 'listID', "lms-jobseekers-duration").
+    property(single, 'edition', "one-off").
+    property(single, 'label', "duration")
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', 'all-computerised-claims').
+g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', "all-computerised-claims").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'lms-jobseekers-duration').property(single, 'value', 'all-computerised-claims')
+    property(single, 'listID', 'lms-jobseekers-duration').property(single, 'value', "all-computerised-claims")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', 'all-computerised-claims').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', 'all-computerised-claims').
+g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', "all-computerised-claims").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', "all-computerised-claims").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'lms-jobseekers-duration').has('edition', 'one-off')
-    ).property(single, 'label', 'All computerised claims')).next()
+    ).property(single, 'label', "All computerised claims")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', 'up-to-6-months').
+g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', "up-to-6-months").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'lms-jobseekers-duration').property(single, 'value', 'up-to-6-months')
+    property(single, 'listID', 'lms-jobseekers-duration').property(single, 'value', "up-to-6-months")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', 'up-to-6-months').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', 'up-to-6-months').
+g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', "up-to-6-months").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', "up-to-6-months").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'lms-jobseekers-duration').has('edition', 'one-off')
-    ).property(single, 'label', 'Up to 6 months')).next()
+    ).property(single, 'label', "Up to 6 months")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', 'over-6-and-up-to-12-months').
+g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', "over-6-and-up-to-12-months").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'lms-jobseekers-duration').property(single, 'value', 'over-6-and-up-to-12-months')
+    property(single, 'listID', 'lms-jobseekers-duration').property(single, 'value', "over-6-and-up-to-12-months")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', 'over-6-and-up-to-12-months').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', 'over-6-and-up-to-12-months').
+g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', "over-6-and-up-to-12-months").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', "over-6-and-up-to-12-months").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'lms-jobseekers-duration').has('edition', 'one-off')
-    ).property(single, 'label', 'Over 6 and up to 12 months')).next()
+    ).property(single, 'label', "Over 6 and up to 12 months")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', 'all-over-12-months').
+g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', "all-over-12-months").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'lms-jobseekers-duration').property(single, 'value', 'all-over-12-months')
+    property(single, 'listID', 'lms-jobseekers-duration').property(single, 'value', "all-over-12-months")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', 'all-over-12-months').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', 'all-over-12-months').
+g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', "all-over-12-months").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', "all-over-12-months").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'lms-jobseekers-duration').has('edition', 'one-off')
-    ).property(single, 'label', 'All over 12 months')).next()
+    ).property(single, 'label', "All over 12 months")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', 'percentage-claiming-for-over-12-months').
+g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', "percentage-claiming-for-over-12-months").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'lms-jobseekers-duration').property(single, 'value', 'percentage-claiming-for-over-12-months')
+    property(single, 'listID', 'lms-jobseekers-duration').property(single, 'value', "percentage-claiming-for-over-12-months")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', 'percentage-claiming-for-over-12-months').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', 'percentage-claiming-for-over-12-months').
+g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', "percentage-claiming-for-over-12-months").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', "percentage-claiming-for-over-12-months").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'lms-jobseekers-duration').has('edition', 'one-off')
-    ).property(single, 'label', 'Percentage claiming for over 12 months')).next()
+    ).property(single, 'label', "Percentage claiming for over 12 months")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', 'all-over-24-months').
+g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', "all-over-24-months").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'lms-jobseekers-duration').property(single, 'value', 'all-over-24-months')
+    property(single, 'listID', 'lms-jobseekers-duration').property(single, 'value', "all-over-24-months")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', 'all-over-24-months').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', 'all-over-24-months').
+g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', "all-over-24-months").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-jobseekers-duration').has('value', "all-over-24-months").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'lms-jobseekers-duration').has('edition', 'one-off')
-    ).property(single, 'label', 'All over 24 months')).next()
+    ).property(single, 'label', "All over 24 months")).next()
 

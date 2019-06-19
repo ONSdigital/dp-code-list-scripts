@@ -1,43 +1,43 @@
 g.V().hasLabel('_code_list').has('listID', 'opss-contributor').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
-    property(single, 'listID', 'opss-contributor').
-    property(single, 'label', 'contributor').
-    property(single, 'edition', 'one-off')
+    property(single, 'listID', "opss-contributor").
+    property(single, 'label', "contributor").
+    property(single, 'edition', "one-off")
   ).next()
 
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'opss-contributor').has('value', 'employer').
+g.V().hasLabel('_code').has('listID', 'opss-contributor').has('value', "employer").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'opss-contributor').property(single, 'value', 'employer')
+    property(single, 'listID', 'opss-contributor').property(single, 'value', "employer")
   ).next()
-g.V().hasLabel('_code').has('listID', 'opss-contributor').has('value', 'employer').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'opss-contributor').has('value', 'employer').
+g.V().hasLabel('_code').has('listID', 'opss-contributor').has('value', "employer").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'opss-contributor').has('value', "employer").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'opss-contributor').has('edition', 'one-off')
-    ).property(single, 'label', 'Employer')).next()
+    ).property(single, 'label', "Employer")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'opss-contributor').has('value', 'member').
+g.V().hasLabel('_code').has('listID', 'opss-contributor').has('value', "member").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'opss-contributor').property(single, 'value', 'member')
+    property(single, 'listID', 'opss-contributor').property(single, 'value', "member")
   ).next()
-g.V().hasLabel('_code').has('listID', 'opss-contributor').has('value', 'member').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'opss-contributor').has('value', 'member').
+g.V().hasLabel('_code').has('listID', 'opss-contributor').has('value', "member").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'opss-contributor').has('value', "member").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'opss-contributor').has('edition', 'one-off')
-    ).property(single, 'label', 'Member')).next()
+    ).property(single, 'label', "Member")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'opss-contributor').has('value', 'all-contributors').
+g.V().hasLabel('_code').has('listID', 'opss-contributor').has('value', "all-contributors").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'opss-contributor').property(single, 'value', 'all-contributors')
+    property(single, 'listID', 'opss-contributor').property(single, 'value', "all-contributors")
   ).next()
-g.V().hasLabel('_code').has('listID', 'opss-contributor').has('value', 'all-contributors').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'opss-contributor').has('value', 'all-contributors').
+g.V().hasLabel('_code').has('listID', 'opss-contributor').has('value', "all-contributors").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'opss-contributor').has('value', "all-contributors").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'opss-contributor').has('edition', 'one-off')
-    ).property(single, 'label', 'All contributors')).next()
+    ).property(single, 'label', "All contributors")).next()
 

@@ -2,30 +2,30 @@
 
 g.V().hasLabel('_code_list').has('listID', 'ott-sex').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
-    property(single, 'listID', 'ott-sex').
-    property(single, 'label', 'sex').
-    property(single, 'edition', 'one-off')
+    property(single, 'listID', "ott-sex").
+    property(single, 'label', "sex").
+    property(single, 'edition', "one-off")
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-sex').has('value', '2').
+g.V().hasLabel('_code').has('listID', 'ott-sex').has('value', "2").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-sex').property(single, 'value', '2')
+    property(single, 'listID', 'ott-sex').property(single, 'value', "2")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-sex').has('value', '2').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-sex').has('value', '2').
+g.V().hasLabel('_code').has('listID', 'ott-sex').has('value', "2").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-sex').has('value', "2").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-sex').has('edition', 'one-off')
-    ).property(single, 'label', 'Female')).next()
+    ).property(single, 'label', "Female")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-sex').has('value', '1').
+g.V().hasLabel('_code').has('listID', 'ott-sex').has('value', "1").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-sex').property(single, 'value', '1')
+    property(single, 'listID', 'ott-sex').property(single, 'value', "1")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-sex').has('value', '1').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-sex').has('value', '1').
+g.V().hasLabel('_code').has('listID', 'ott-sex').has('value', "1").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-sex').has('value', "1").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-sex').has('edition', 'one-off')
-    ).property(single, 'label', 'Male')).next()
+    ).property(single, 'label', "Male")).next()
 

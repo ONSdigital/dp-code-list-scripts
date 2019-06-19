@@ -2,250 +2,250 @@
 
 g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
-    property(single, 'listID', 'faster-indicators-sic').
-    property(single, 'label', 'sic').
-    property(single, 'edition', 'one-off')
+    property(single, 'listID', "faster-indicators-sic").
+    property(single, 'label', "sic").
+    property(single, 'edition', "one-off")
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'total').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "total").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'total')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "total")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'total').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'total').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "total").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "total").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'Total')).next()
+    ).property(single, 'label', "Total")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'a').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "a").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'a')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "a")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'a').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'a').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "a").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "a").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'A : Agriculture, forestry and fishing')).next()
+    ).property(single, 'label', "A : Agriculture, forestry and fishing")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'production').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "production").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'production')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "production")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'production').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'production').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "production").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "production").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'Production')).next()
+    ).property(single, 'label', "Production")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'f').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "f").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'f')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "f")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'f').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'f').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "f").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "f").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'F : Construction')).next()
+    ).property(single, 'label', "F : Construction")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'services').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "services").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'services')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "services")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'services').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'services').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "services").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "services").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'Services')).next()
+    ).property(single, 'label', "Services")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'b').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "b").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'b')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "b")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'b').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'b').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "b").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "b").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'B : Mining and quarrying')).next()
+    ).property(single, 'label', "B : Mining and quarrying")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'c').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "c").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'c')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "c")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'c').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'c').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "c").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "c").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'C : Manufacturing')).next()
+    ).property(single, 'label', "C : Manufacturing")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'd').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "d").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'd')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "d")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'd').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'd').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "d").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "d").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'D : Electricity, gas, steam and air conditioning supply')).next()
+    ).property(single, 'label', "D : Electricity, gas, steam and air conditioning supply")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'e').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "e").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'e')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "e")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'e').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'e').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "e").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "e").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'E : Water supply; sewerage, waste management and remediation activities')).next()
+    ).property(single, 'label', "E : Water supply; sewerage, waste management and remediation activities")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'g').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "g").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'g')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "g")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'g').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'g').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "g").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "g").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'G : Wholesale and retail trade; repair of motor vehicles and motorcycles')).next()
+    ).property(single, 'label', "G : Wholesale and retail trade; repair of motor vehicles and motorcycles")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'h').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "h").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'h')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "h")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'h').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'h').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "h").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "h").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'H : Transportation and storage')).next()
+    ).property(single, 'label', "H : Transportation and storage")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'i').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "i").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'i')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "i")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'i').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'i').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "i").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "i").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'I : Accommodation and food service activities')).next()
+    ).property(single, 'label', "I : Accommodation and food service activities")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'j').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "j").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'j')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "j")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'j').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'j').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "j").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "j").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'J : Information and communication')).next()
+    ).property(single, 'label', "J : Information and communication")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'k').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "k").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'k')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "k")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'k').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'k').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "k").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "k").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'K : Financial and insurance activities')).next()
+    ).property(single, 'label', "K : Financial and insurance activities")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'l').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "l").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'l')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "l")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'l').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'l').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "l").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "l").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'L : Real estate activities')).next()
+    ).property(single, 'label', "L : Real estate activities")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'm').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "m").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'm')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "m")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'm').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'm').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "m").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "m").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'M : Professional, scientific and technical activities')).next()
+    ).property(single, 'label', "M : Professional, scientific and technical activities")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'n').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "n").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'n')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "n")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'n').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'n').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "n").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "n").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'N : Administrative and support service activities')).next()
+    ).property(single, 'label', "N : Administrative and support service activities")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'p').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "p").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'p')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "p")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'p').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'p').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "p").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "p").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'P : Education')).next()
+    ).property(single, 'label', "P : Education")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'q').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "q").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'q')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "q")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'q').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'q').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "q").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "q").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'Q : Human health and social work activities')).next()
+    ).property(single, 'label', "Q : Human health and social work activities")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'r').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "r").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'r')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "r")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'r').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'r').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "r").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "r").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'R : Arts, entertainment and recreation')).next()
+    ).property(single, 'label', "R : Arts, entertainment and recreation")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 's').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "s").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 's')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 's').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 's').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "s").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "s").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'S : Other service activities')).next()
+    ).property(single, 'label', "S : Other service activities")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'o').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "o").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', 'o')
+    property(single, 'listID', 'faster-indicators-sic').property(single, 'value', "o")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'o').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', 'o').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "o").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-sic').has('value', "o").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-sic').has('edition', 'one-off')
-    ).property(single, 'label', 'O : Public administration and defence; compulsory social security')).next()
+    ).property(single, 'label', "O : Public administration and defence; compulsory social security")).next()
 

@@ -2,34 +2,34 @@
 
 g.V().hasLabel('_code_list').has('listID', 'trade-direction').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
-    property(single, 'listID', 'trade-direction').
-    property(single, 'label', 'direction').
-    property(single, 'edition', 'one-off')
+    property(single, 'listID', "trade-direction").
+    property(single, 'label', "direction").
+    property(single, 'edition', "one-off")
   ).next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'trade-direction').has('value', 'IM').
+g.V().hasLabel('_code').has('listID', 'trade-direction').has('value', "IM").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'trade-direction').property(single, 'value', 'IM')
+    property(single, 'listID', 'trade-direction').property(single, 'value', "IM")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-direction').has('value', 'IM').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-direction').has('value', 'IM').
+g.V().hasLabel('_code').has('listID', 'trade-direction').has('value', "IM").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'trade-direction').has('value', "IM").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'trade-direction').has('edition', 'one-off')
-    ).property(single, 'label', 'Imports')).next()
+    ).property(single, 'label', "Imports")).next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'trade-direction').has('value', 'EX').
+g.V().hasLabel('_code').has('listID', 'trade-direction').has('value', "EX").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'trade-direction').property(single, 'value', 'EX')
+    property(single, 'listID', 'trade-direction').property(single, 'value', "EX")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-direction').has('value', 'EX').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-direction').has('value', 'EX').
+g.V().hasLabel('_code').has('listID', 'trade-direction').has('value', "EX").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'trade-direction').has('value', "EX").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'trade-direction').has('edition', 'one-off')
-    ).property(single, 'label', 'Exports')).next()
+    ).property(single, 'label', "Exports")).next()
 

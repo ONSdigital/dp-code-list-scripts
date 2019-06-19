@@ -2,63 +2,63 @@
 
 g.V().hasLabel('_code_list').has('listID', 'faster-indicators-record-type').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
-    property(single, 'listID', 'faster-indicators-record-type').
-    property(single, 'label', 'recordtype').
-    property(single, 'edition', 'one-off')
+    property(single, 'listID', "faster-indicators-record-type").
+    property(single, 'label', "recordtype").
+    property(single, 'edition', "one-off")
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', 'tax-due').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', "tax-due").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-record-type').property(single, 'value', 'tax-due')
+    property(single, 'listID', 'faster-indicators-record-type').property(single, 'value', "tax-due")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', 'tax-due').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', 'tax-due').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', "tax-due").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', "tax-due").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-record-type').has('edition', 'one-off')
-    ).property(single, 'label', 'Tax due')).next()
+    ).property(single, 'label', "Tax due")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', 'repayment-claim').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', "repayment-claim").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-record-type').property(single, 'value', 'repayment-claim')
+    property(single, 'listID', 'faster-indicators-record-type').property(single, 'value', "repayment-claim")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', 'repayment-claim').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', 'repayment-claim').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', "repayment-claim").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', "repayment-claim").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-record-type').has('edition', 'one-off')
-    ).property(single, 'label', 'Repayment claim')).next()
+    ).property(single, 'label', "Repayment claim")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', 're-input-tax-due').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', "re-input-tax-due").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-record-type').property(single, 'value', 're-input-tax-due')
+    property(single, 'listID', 'faster-indicators-record-type').property(single, 'value', "re-input-tax-due")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', 're-input-tax-due').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', 're-input-tax-due').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', "re-input-tax-due").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', "re-input-tax-due").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-record-type').has('edition', 'one-off')
-    ).property(single, 'label', 'Re-input tax due')).next()
+    ).property(single, 'label', "Re-input tax due")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', 're-input-repayment-claim').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', "re-input-repayment-claim").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-record-type').property(single, 'value', 're-input-repayment-claim')
+    property(single, 'listID', 'faster-indicators-record-type').property(single, 'value', "re-input-repayment-claim")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', 're-input-repayment-claim').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', 're-input-repayment-claim').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', "re-input-repayment-claim").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', "re-input-repayment-claim").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-record-type').has('edition', 'one-off')
-    ).property(single, 'label', 'Re-input repayment claim')).next()
+    ).property(single, 'label', "Re-input repayment claim")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', 'replacements-tax-due-and-repayments').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', "replacements-tax-due-and-repayments").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'faster-indicators-record-type').property(single, 'value', 'replacements-tax-due-and-repayments')
+    property(single, 'listID', 'faster-indicators-record-type').property(single, 'value', "replacements-tax-due-and-repayments")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', 'replacements-tax-due-and-repayments').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', 'replacements-tax-due-and-repayments').
+g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', "replacements-tax-due-and-repayments").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'faster-indicators-record-type').has('value', "replacements-tax-due-and-repayments").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'faster-indicators-record-type').has('edition', 'one-off')
-    ).property(single, 'label', 'Replacements (Tax due and repayments)')).next()
+    ).property(single, 'label', "Replacements (Tax due and repayments)")).next()
 

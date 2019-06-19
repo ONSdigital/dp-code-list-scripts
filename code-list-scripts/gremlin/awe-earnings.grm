@@ -2,41 +2,41 @@
 
 g.V().hasLabel('_code_list').has('listID', 'awe-earnings').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
-    property(single, 'listID', 'awe-earnings').
-    property(single, 'label', 'earnings').
-    property(single, 'edition', 'one-off')
+    property(single, 'listID', "awe-earnings").
+    property(single, 'label', "earnings").
+    property(single, 'edition', "one-off")
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'awe-earnings').has('value', 'weekly-earnings').
+g.V().hasLabel('_code').has('listID', 'awe-earnings').has('value', "weekly-earnings").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'awe-earnings').property(single, 'value', 'weekly-earnings')
+    property(single, 'listID', 'awe-earnings').property(single, 'value', "weekly-earnings")
   ).next()
-g.V().hasLabel('_code').has('listID', 'awe-earnings').has('value', 'weekly-earnings').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'awe-earnings').has('value', 'weekly-earnings').
+g.V().hasLabel('_code').has('listID', 'awe-earnings').has('value', "weekly-earnings").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'awe-earnings').has('value', "weekly-earnings").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'awe-earnings').has('edition', 'one-off')
-    ).property(single, 'label', 'Weekly Earnings (£)')).next()
+    ).property(single, 'label', "Weekly Earnings (£)")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'awe-earnings').has('value', 'single-month').
+g.V().hasLabel('_code').has('listID', 'awe-earnings').has('value', "single-month").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'awe-earnings').property(single, 'value', 'single-month')
+    property(single, 'listID', 'awe-earnings').property(single, 'value', "single-month")
   ).next()
-g.V().hasLabel('_code').has('listID', 'awe-earnings').has('value', 'single-month').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'awe-earnings').has('value', 'single-month').
+g.V().hasLabel('_code').has('listID', 'awe-earnings').has('value', "single-month").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'awe-earnings').has('value', "single-month").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'awe-earnings').has('edition', 'one-off')
-    ).property(single, 'label', 'Single month - % change year on year')).next()
+    ).property(single, 'label', "Single month - % change year on year")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'awe-earnings').has('value', '3-month-average').
+g.V().hasLabel('_code').has('listID', 'awe-earnings').has('value', "3-month-average").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'awe-earnings').property(single, 'value', '3-month-average')
+    property(single, 'listID', 'awe-earnings').property(single, 'value', "3-month-average")
   ).next()
-g.V().hasLabel('_code').has('listID', 'awe-earnings').has('value', '3-month-average').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'awe-earnings').has('value', '3-month-average').
+g.V().hasLabel('_code').has('listID', 'awe-earnings').has('value', "3-month-average").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'awe-earnings').has('value', "3-month-average").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'awe-earnings').has('edition', 'one-off')
-    ).property(single, 'label', '3 month average - % change year on year')).next()
+    ).property(single, 'label', "3 month average - % change year on year")).next()
 
