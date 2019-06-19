@@ -1,0 +1,64 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'lms-average-actual-hours-of-work').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'lms-average-actual-hours-of-work').
+    property(single, 'edition', 'one-off').
+    property(single, 'label', 'averageactualhoursofwork')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'lms-average-actual-hours-of-work').has('value', 'total-weekly-hours').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'lms-average-actual-hours-of-work').property(single, 'value', 'total-weekly-hours')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'lms-average-actual-hours-of-work').has('value', 'total-weekly-hours').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-average-actual-hours-of-work').has('value', 'total-weekly-hours').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'lms-average-actual-hours-of-work').has('edition', 'one-off')
+    ).property(single, 'label', 'Total weekly hours (millions)')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'lms-average-actual-hours-of-work').has('value', 'all-workers').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'lms-average-actual-hours-of-work').property(single, 'value', 'all-workers')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'lms-average-actual-hours-of-work').has('value', 'all-workers').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-average-actual-hours-of-work').has('value', 'all-workers').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'lms-average-actual-hours-of-work').has('edition', 'one-off')
+    ).property(single, 'label', 'Average (mean) actual weekly hours of work - All workers')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'lms-average-actual-hours-of-work').has('value', 'full-time').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'lms-average-actual-hours-of-work').property(single, 'value', 'full-time')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'lms-average-actual-hours-of-work').has('value', 'full-time').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-average-actual-hours-of-work').has('value', 'full-time').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'lms-average-actual-hours-of-work').has('edition', 'one-off')
+    ).property(single, 'label', 'Average (mean) actual weekly hours of work - Full-time')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'lms-average-actual-hours-of-work').has('value', 'part-time').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'lms-average-actual-hours-of-work').property(single, 'value', 'part-time')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'lms-average-actual-hours-of-work').has('value', 'part-time').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-average-actual-hours-of-work').has('value', 'part-time').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'lms-average-actual-hours-of-work').has('edition', 'one-off')
+    ).property(single, 'label', 'Average (mean) actual weekly hours of work - Part-time')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'lms-average-actual-hours-of-work').has('value', 'workers-with-second-jobs').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'lms-average-actual-hours-of-work').property(single, 'value', 'workers-with-second-jobs')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'lms-average-actual-hours-of-work').has('value', 'workers-with-second-jobs').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-average-actual-hours-of-work').has('value', 'workers-with-second-jobs').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'lms-average-actual-hours-of-work').has('edition', 'one-off')
+    ).property(single, 'label', 'Average (mean) actual weekly hours of work - Workers with second jobs')).next()
+

@@ -1,0 +1,128 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'regions').has('edition', '2017').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'regions').
+    property(single, 'geography', true).
+    property(single, 'label', 'Regions').
+    property(single, 'edition', '2017').
+    property(single, 'geography_list_ID', 'rgn17')
+  ).next()
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000001').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E12000001')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000001').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000001').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'regions').has('edition', '2017')
+    ).property(single, 'label', 'North East')).next()
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000002').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E12000002')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000002').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000002').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'regions').has('edition', '2017')
+    ).property(single, 'label', 'North West')).next()
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000003').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E12000003')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000003').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000003').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'regions').has('edition', '2017')
+    ).property(single, 'label', 'Yorkshire and The Humber')).next()
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000004').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E12000004')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000004').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000004').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'regions').has('edition', '2017')
+    ).property(single, 'label', 'East Midlands')).next()
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000005').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E12000005')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000005').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000005').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'regions').has('edition', '2017')
+    ).property(single, 'label', 'West Midlands')).next()
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000006').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E12000006')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000006').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000006').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'regions').has('edition', '2017')
+    ).property(single, 'label', 'East of England')).next()
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000007').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E12000007')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000007').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000007').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'regions').has('edition', '2017')
+    ).property(single, 'label', 'London')).next()
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000008').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E12000008')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000008').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000008').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'regions').has('edition', '2017')
+    ).property(single, 'label', 'South East')).next()
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000009').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E12000009')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000009').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E12000009').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'regions').has('edition', '2017')
+    ).property(single, 'label', 'South West')).next()
+

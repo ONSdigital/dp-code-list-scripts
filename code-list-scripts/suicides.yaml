@@ -1,0 +1,11 @@
+definition:
+  - datasets: suicide by local authority
+imports:
+  - language: cypher
+    files:
+      - migration-scripts/calendar-years.cypher
+      - ../geo-specific-codelist/admin-geography.cypher
+  - language: gremlin
+    files:
+      - gremlin/calendar-years.grm
+      - ../geo-specific-codelist/gremlin/admin-geography.grm

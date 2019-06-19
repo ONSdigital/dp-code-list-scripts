@@ -1,0 +1,17 @@
+definition:
+  - datasets: business investment
+imports:
+  - language: cypher
+    files:
+      - cypher/yyyy.cypher
+      - migration-scripts/uk-only.cypher
+      - cypher/business-investment-activity.cypher
+      - cypher/business-investment-instrument-asset.cypher
+      - cypher/business-investment-prices.cypher
+  - language: gremlin
+    files:
+      - gremlin/yyyy.grm
+      - gremlin/uk-only.grm
+      - gremlin/business-investment-activity.grm
+      - gremlin/business-investment-instrument-asset.grm
+      - gremlin/business-investment-prices.grm

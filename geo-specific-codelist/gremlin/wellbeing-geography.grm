@@ -1,0 +1,68 @@
+
+
+
+g.V().hasLabel('_code_list').has('listID', 'wellbeing-geography').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'wellbeing-geography').
+    property(single, 'geography', true).
+    property(single, 'label', 'geography').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'england').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'england')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'england').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'england').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'wellbeing-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'England')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'scotland').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'scotland')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'scotland').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'scotland').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'wellbeing-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Scotland')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'wales').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'wales')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'wales').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'wales').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'wellbeing-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Wales')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'northern-ireland').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'northern-ireland')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'northern-ireland').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'northern-ireland').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'wellbeing-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Northern Ireland')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'united-kingdom').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'united-kingdom')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'united-kingdom').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'united-kingdom').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'wellbeing-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'United Kingdom')).next()
+

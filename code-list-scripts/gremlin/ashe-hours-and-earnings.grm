@@ -1,0 +1,130 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'ashe-hours-and-earnings').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'ashe-hours-and-earnings').
+    property(single, 'label', 'hoursandearnings').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'paid-hours-worked-basic').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ashe-hours-and-earnings').property(single, 'value', 'paid-hours-worked-basic')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'paid-hours-worked-basic').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'paid-hours-worked-basic').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ashe-hours-and-earnings').has('edition', 'one-off')
+    ).property(single, 'label', 'Paid hours worked - Basic')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'paid-hours-worked-overtime').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ashe-hours-and-earnings').property(single, 'value', 'paid-hours-worked-overtime')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'paid-hours-worked-overtime').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'paid-hours-worked-overtime').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ashe-hours-and-earnings').has('edition', 'one-off')
+    ).property(single, 'label', 'Paid hours worked - Overtime')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'weekly-pay-gross').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ashe-hours-and-earnings').property(single, 'value', 'weekly-pay-gross')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'weekly-pay-gross').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'weekly-pay-gross').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ashe-hours-and-earnings').has('edition', 'one-off')
+    ).property(single, 'label', 'Weekly pay - Gross')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'weekly-pay-excluding-overtime').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ashe-hours-and-earnings').property(single, 'value', 'weekly-pay-excluding-overtime')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'weekly-pay-excluding-overtime').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'weekly-pay-excluding-overtime').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ashe-hours-and-earnings').has('edition', 'one-off')
+    ).property(single, 'label', 'Weekly pay - Excluding overtime')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'basic-pay-including-other-pay').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ashe-hours-and-earnings').property(single, 'value', 'basic-pay-including-other-pay')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'basic-pay-including-other-pay').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'basic-pay-including-other-pay').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ashe-hours-and-earnings').has('edition', 'one-off')
+    ).property(single, 'label', 'Basic pay - Including other pay')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'overtime-pay').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ashe-hours-and-earnings').property(single, 'value', 'overtime-pay')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'overtime-pay').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'overtime-pay').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ashe-hours-and-earnings').has('edition', 'one-off')
+    ).property(single, 'label', 'Overtime pay')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'hourly-pay-gross').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ashe-hours-and-earnings').property(single, 'value', 'hourly-pay-gross')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'hourly-pay-gross').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'hourly-pay-gross').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ashe-hours-and-earnings').has('edition', 'one-off')
+    ).property(single, 'label', 'Hourly pay - Gross')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'hourly-pay-excluding-overtime').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ashe-hours-and-earnings').property(single, 'value', 'hourly-pay-excluding-overtime')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'hourly-pay-excluding-overtime').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'hourly-pay-excluding-overtime').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ashe-hours-and-earnings').has('edition', 'one-off')
+    ).property(single, 'label', 'Hourly pay - Excluding overtime')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'annual-pay-gross').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ashe-hours-and-earnings').property(single, 'value', 'annual-pay-gross')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'annual-pay-gross').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'annual-pay-gross').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ashe-hours-and-earnings').has('edition', 'one-off')
+    ).property(single, 'label', 'Annual pay - Gross')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'annual-pay-incentive').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ashe-hours-and-earnings').property(single, 'value', 'annual-pay-incentive')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'annual-pay-incentive').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'annual-pay-incentive').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ashe-hours-and-earnings').has('edition', 'one-off')
+    ).property(single, 'label', 'Annual pay - Incentive')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'paid-hours-worked-total').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ashe-hours-and-earnings').property(single, 'value', 'paid-hours-worked-total')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'paid-hours-worked-total').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-hours-and-earnings').has('value', 'paid-hours-worked-total').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ashe-hours-and-earnings').has('edition', 'one-off')
+    ).property(single, 'label', 'Paid hours worked - Total')).next()
+

@@ -1,0 +1,31 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'ashe-workplace-or-residence').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'ashe-workplace-or-residence').
+    property(single, 'label', 'workplaceorresidence').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'ashe-workplace-or-residence').has('value', 'residence').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ashe-workplace-or-residence').property(single, 'value', 'residence')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ashe-workplace-or-residence').has('value', 'residence').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-workplace-or-residence').has('value', 'residence').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ashe-workplace-or-residence').has('edition', 'one-off')
+    ).property(single, 'label', 'Residence')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'ashe-workplace-or-residence').has('value', 'workplace').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ashe-workplace-or-residence').property(single, 'value', 'workplace')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ashe-workplace-or-residence').has('value', 'workplace').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-workplace-or-residence').has('value', 'workplace').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ashe-workplace-or-residence').has('edition', 'one-off')
+    ).property(single, 'label', 'Workplace')).next()
+

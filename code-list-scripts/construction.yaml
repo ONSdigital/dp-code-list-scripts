@@ -1,0 +1,17 @@
+definition:
+  - datasets: construction
+imports:
+  - language: cypher
+    files:
+      - cypher/mmm-yy.cypher
+      - cypher/type-of-prices.cypher
+      - cypher/seasonal-adjustment.cypher
+      - cypher/construction-series-type.cypher
+      - cypher/construction-classifications.cypher
+  - language: gremlin
+    files:
+      - gremlin/mmm-yy.grm
+      - gremlin/type-of-prices.grm
+      - gremlin/seasonal-adjustment.grm
+      - gremlin/construction-series-type.grm
+      - gremlin/construction-classifications.grm

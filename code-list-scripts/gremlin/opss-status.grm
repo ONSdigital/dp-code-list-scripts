@@ -1,0 +1,43 @@
+g.V().hasLabel('_code_list').has('listID', 'opss-status').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'opss-status').
+    property(single, 'label', 'status').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'opss-status').has('value', 'all-statuses').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'opss-status').property(single, 'value', 'all-statuses')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'opss-status').has('value', 'all-statuses').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'opss-status').has('value', 'all-statuses').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'opss-status').has('edition', 'one-off')
+    ).property(single, 'label', 'All statuses')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'opss-status').has('value', 'closed').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'opss-status').property(single, 'value', 'closed')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'opss-status').has('value', 'closed').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'opss-status').has('value', 'closed').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'opss-status').has('edition', 'one-off')
+    ).property(single, 'label', 'Closed')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'opss-status').has('value', 'open').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'opss-status').property(single, 'value', 'open')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'opss-status').has('value', 'open').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'opss-status').has('value', 'open').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'opss-status').has('edition', 'one-off')
+    ).property(single, 'label', 'Open')).next()
+

@@ -1,0 +1,13 @@
+definition:
+  - datasets: CPIH
+imports:
+  - language: cypher
+    files:
+      - cypher/cpih1dim1aggid.cypher
+      - migration-scripts/uk-only.cypher
+      - cypher/mmm-yy.cypher
+  - language: gremlin
+    files:
+      - gremlin/cpih1dim1aggid.grm
+      - gremlin/uk-only.grm
+      - gremlin/mmm-yy.grm
