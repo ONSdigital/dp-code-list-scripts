@@ -1,0 +1,17 @@
+CREATE CONSTRAINT ON (n:`_code_age-groups`) ASSERT n.code IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_age-groups`) ASSERT n.code IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_age-groups` { label:"agegroups", edition:"one-off" });
+MERGE (node:`_code`:`_code_age-groups` { value:"65+" });
+MATCH (parent:`_code_list`:`_code_list_age-groups`),                (node:`_code`:`_code_age-groups` { value:"65+" })                 MERGE (node)-[:usedBy { label:"65+"}]->(parent);
+MERGE (node:`_code`:`_code_age-groups` { value:"85+" });
+MATCH (parent:`_code_list`:`_code_list_age-groups`),                (node:`_code`:`_code_age-groups` { value:"85+" })                 MERGE (node)-[:usedBy { label:"85+"}]->(parent);
+MERGE (node:`_code`:`_code_age-groups` { value:"0-15" });
+MATCH (parent:`_code_list`:`_code_list_age-groups`),                (node:`_code`:`_code_age-groups` { value:"0-15" })                 MERGE (node)-[:usedBy { label:"0-15"}]->(parent);
+MERGE (node:`_code`:`_code_age-groups` { value:"16-64" });
+MATCH (parent:`_code_list`:`_code_list_age-groups`),                (node:`_code`:`_code_age-groups` { value:"16-64" })                 MERGE (node)-[:usedBy { label:"16-64"}]->(parent);
+MERGE (node:`_code`:`_code_age-groups` { value:"spa+" });
+MATCH (parent:`_code_list`:`_code_list_age-groups`),                (node:`_code`:`_code_age-groups` { value:"spa+" })                 MERGE (node)-[:usedBy { label:"State pension age+"}]->(parent);
+MERGE (node:`_code`:`_code_age-groups` { value:"16-spa" });
+MATCH (parent:`_code_list`:`_code_list_age-groups`),                (node:`_code`:`_code_age-groups` { value:"16-spa" })                 MERGE (node)-[:usedBy { label:"16-State pension age"}]->(parent);
+MERGE (node:`_code`:`_code_age-groups` { value:"old-age-dependancy-ratio" });
+MATCH (parent:`_code_list`:`_code_list_age-groups`),                (node:`_code`:`_code_age-groups` { value:"old-age-dependancy-ratio" })                 MERGE (node)-[:usedBy { label:"Old age dependancy ratio"}]->(parent);
