@@ -1,0 +1,18 @@
+definition:
+  - datasets: children wellbeing
+imports:
+  - language: cypher
+    files:
+      - cypher/calendar-years.cypher
+      - cypher/children-sex.cypher
+      - cypher/wellbeing-estimate.cypher
+      - cypher/wellbeing-measureofwellbeing.cypher
+      - ../geo-specific-codelist/countries.cypher
+  - language: gremlin
+    files:
+      - gremlin/calendar-years.grm
+      - gremlin/children-sex.grm
+      - gremlin/wellbeing-estimate.grm
+      - gremlin/wellbeing-measureofwellbeing.grm
+      - ../geo-specific-codelist/gremlin/countries.grm
+

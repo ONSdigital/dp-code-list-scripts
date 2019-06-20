@@ -1,0 +1,15 @@
+definition:
+  - datasets: all ageing datasets - AgeingPopProj, AgeingSingleHouseholds, AgeingSexRatios, AgeingNetFlows
+imports:
+  - language: cypher
+    files:
+      - cypher/calendar-years.cypher
+      - cypher/age-groups.cypher
+      - cypher/ashe-sex.cypher
+      - ../geo-specific-codelist/admin-geography.cypher
+  - language: gremlin
+    files:
+      - gremlin/calendar-years.grm
+      - gremlin/age-groups.grm
+      - gremlin/ashe-sex.grm
+      - ../geo-specific-codelist/gremlin/admin-geography.grm
