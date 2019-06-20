@@ -1,0 +1,53 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'lms-economic-status').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'lms-economic-status').
+    property(single, 'label', 'economicstatus').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', 'in-employment').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'lms-economic-status').property(single, 'value', 'in-employment')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', 'in-employment').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', 'in-employment').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'lms-economic-status').has('edition', 'one-off')
+    ).property(single, 'label', 'In Employment')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', 'unemployed').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'lms-economic-status').property(single, 'value', 'unemployed')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', 'unemployed').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', 'unemployed').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'lms-economic-status').has('edition', 'one-off')
+    ).property(single, 'label', 'Unemployed')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', 'economically-inactive').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'lms-economic-status').property(single, 'value', 'economically-inactive')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', 'economically-inactive').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', 'economically-inactive').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'lms-economic-status').has('edition', 'one-off')
+    ).property(single, 'label', 'Economically Inactive')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', 'economically-active').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'lms-economic-status').property(single, 'value', 'economically-active')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', 'economically-active').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', 'economically-active').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'lms-economic-status').has('edition', 'one-off')
+    ).property(single, 'label', 'Economically Active')).next()
+

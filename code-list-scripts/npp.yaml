@@ -1,0 +1,22 @@
+definition:
+  - datasets: national population projections
+  - comments: population numbers, mortality assumptions, migration, fertility, deaths, births, cross border rates
+imports:
+  - language: cypher
+    files:
+      - migration-scripts/calendar-years.cypher
+      - cypher/yyyy-yy.cypher
+      - migration-scripts/uk-only.cypher
+      - cypher/npp-all-projectiontype.cypher
+      - cypher/npp-age.cypher
+      - cypher/npp-sex.cypher
+      - cypher/npp-population-measure.cypher
+  - language: gremlin
+    files:
+      - gremlin/calendar-years.grm
+      - gremlin/yyyy-yy.grm
+      - gremlin/uk-only.grm
+      - gremlin/npp-all-projectiontype.grm
+      - gremlin/npp-age.grm
+      - gremlin/npp-sex.grm
+      - gremlin/npp-population-measure.grm

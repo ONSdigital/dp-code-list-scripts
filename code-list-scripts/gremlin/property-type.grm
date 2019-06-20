@@ -1,0 +1,64 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'property-type').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'property-type').
+    property(single, 'label', 'propertytype').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'property-type').has('value', 'all').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'property-type').property(single, 'value', 'all')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'property-type').has('value', 'all').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'property-type').has('value', 'all').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'property-type').has('edition', 'one-off')
+    ).property(single, 'label', 'All')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'property-type').has('value', 'detached').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'property-type').property(single, 'value', 'detached')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'property-type').has('value', 'detached').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'property-type').has('value', 'detached').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'property-type').has('edition', 'one-off')
+    ).property(single, 'label', 'Detached')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'property-type').has('value', 'flat-maisonette').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'property-type').property(single, 'value', 'flat-maisonette')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'property-type').has('value', 'flat-maisonette').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'property-type').has('value', 'flat-maisonette').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'property-type').has('edition', 'one-off')
+    ).property(single, 'label', 'Flat/maisonette')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'property-type').has('value', 'semi-detached').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'property-type').property(single, 'value', 'semi-detached')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'property-type').has('value', 'semi-detached').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'property-type').has('value', 'semi-detached').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'property-type').has('edition', 'one-off')
+    ).property(single, 'label', 'Semi-detached')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'property-type').has('value', 'terraced').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'property-type').property(single, 'value', 'terraced')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'property-type').has('value', 'terraced').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'property-type').has('value', 'terraced').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'property-type').has('edition', 'one-off')
+    ).property(single, 'label', 'Terraced')).next()
+

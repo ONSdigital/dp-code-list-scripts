@@ -1,0 +1,207 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'uk-business-broad-industry-group').
+    property(single, 'label', 'broadindustrygroup').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '01-03').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'uk-business-broad-industry-group').property(single, 'value', '01-03')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '01-03').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '01-03').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off')
+    ).property(single, 'label', '01-03 : Agriculture, forestry & fishing')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '05-39').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'uk-business-broad-industry-group').property(single, 'value', '05-39')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '05-39').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '05-39').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off')
+    ).property(single, 'label', '05-39 : Production')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '41-43').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'uk-business-broad-industry-group').property(single, 'value', '41-43')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '41-43').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '41-43').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off')
+    ).property(single, 'label', '41-43 : Construction')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '45').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'uk-business-broad-industry-group').property(single, 'value', '45')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '45').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '45').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off')
+    ).property(single, 'label', '45 : Motor trades')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '46').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'uk-business-broad-industry-group').property(single, 'value', '46')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '46').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '46').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off')
+    ).property(single, 'label', '46 : Wholesale')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '47').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'uk-business-broad-industry-group').property(single, 'value', '47')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '47').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '47').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off')
+    ).property(single, 'label', '47 : Retail')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '49-53').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'uk-business-broad-industry-group').property(single, 'value', '49-53')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '49-53').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '49-53').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off')
+    ).property(single, 'label', '49-53 : Transport & Storage (inc. postal)')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '55-56').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'uk-business-broad-industry-group').property(single, 'value', '55-56')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '55-56').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '55-56').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off')
+    ).property(single, 'label', '55-56 : Accommodation & food services')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '58-63').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'uk-business-broad-industry-group').property(single, 'value', '58-63')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '58-63').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '58-63').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off')
+    ).property(single, 'label', '58-63 : Information & communication')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '64-66').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'uk-business-broad-industry-group').property(single, 'value', '64-66')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '64-66').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '64-66').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off')
+    ).property(single, 'label', '64-66 : Finance & insurance')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '68').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'uk-business-broad-industry-group').property(single, 'value', '68')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '68').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '68').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off')
+    ).property(single, 'label', '68 : Property')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '69-75').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'uk-business-broad-industry-group').property(single, 'value', '69-75')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '69-75').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '69-75').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off')
+    ).property(single, 'label', '69-75 : Professional, scientific & technical')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '77-82').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'uk-business-broad-industry-group').property(single, 'value', '77-82')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '77-82').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '77-82').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off')
+    ).property(single, 'label', '77-82 : Business administration & support services')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '84').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'uk-business-broad-industry-group').property(single, 'value', '84')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '84').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '84').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off')
+    ).property(single, 'label', '84 : Public administration & defence')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '85').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'uk-business-broad-industry-group').property(single, 'value', '85')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '85').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '85').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off')
+    ).property(single, 'label', '85 : Education')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '86-88').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'uk-business-broad-industry-group').property(single, 'value', '86-88')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '86-88').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '86-88').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off')
+    ).property(single, 'label', '86-88 : Health')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '90-99').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'uk-business-broad-industry-group').property(single, 'value', '90-99')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '90-99').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', '90-99').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off')
+    ).property(single, 'label', '90-99 : Arts, entertainment, recreation & other')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', 'total').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'uk-business-broad-industry-group').property(single, 'value', 'total')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', 'total').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'uk-business-broad-industry-group').has('value', 'total').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'uk-business-broad-industry-group').has('edition', 'one-off')
+    ).property(single, 'label', 'Total')).next()
+

@@ -1,0 +1,15 @@
+definition:
+  - datasets: mid year population
+imports:
+  - language: cypher
+    files:
+      - migration-scripts/calendar-years.cypher
+      - migration-scripts/mid-year-pop-geography.cypher
+      - migration-scripts/mid-year-pop-sex.cypher
+      - migration-scripts/mid-year-pop-age.cypher
+  - language: gremlin
+    files:
+      - gremlin/calendar-years.grm
+      - gremlin/mid-year-pop-geography.grm
+      - gremlin/mid-year-pop-sex.grm
+      - gremlin/mid-year-pop-age.grm

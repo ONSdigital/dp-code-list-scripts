@@ -1,0 +1,25 @@
+definition:
+  - datasets: overseas travel and tourism
+imports:
+  - language: cypher
+    files:
+      - cypher/ott-age.cypher
+      - cypher/ott-cost.cypher
+      - cypher/ott-countries-in-groups.cypher
+      - cypher/ott-country.cypher
+      - cypher/ott-purpose.cypher
+      - cypher/ott-residence.cypher
+      - cypher/ott-sex.cypher
+      - cypher/calendar-month.cypher
+      - migration-scripts/calendar-years.cypher
+  - language: gremlin
+    files:
+      - gremlin/ott-age.grm
+      - gremlin/ott-cost.grm
+      - gremlin/ott-countries-in-groups.grm
+      - gremlin/ott-country.grm
+      - gremlin/ott-purpose.grm
+      - gremlin/ott-residence.grm
+      - gremlin/ott-sex.grm
+      - gremlin/calendar-month.grm
+      - gremlin/calendar-years.grm

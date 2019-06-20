@@ -1,0 +1,31 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'ott-residence').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'ott-residence').
+    property(single, 'label', 'residence').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'ott-residence').has('value', 'overseas-residents').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ott-residence').property(single, 'value', 'overseas-residents')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ott-residence').has('value', 'overseas-residents').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-residence').has('value', 'overseas-residents').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ott-residence').has('edition', 'one-off')
+    ).property(single, 'label', 'Overseas Residents')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'ott-residence').has('value', 'uk-residents').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'ott-residence').property(single, 'value', 'uk-residents')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'ott-residence').has('value', 'uk-residents').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-residence').has('value', 'uk-residents').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ott-residence').has('edition', 'one-off')
+    ).property(single, 'label', 'UK Residents')).next()
+

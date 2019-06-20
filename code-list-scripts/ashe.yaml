@@ -1,0 +1,34 @@
+definition:
+  - datasets: annual survey of hours and earnings
+  - comments: includes tables 5, 7 (hours), 7 (earnings), 8 (hours), 8 (earnings)
+imports:
+  - language: cypher
+    files:
+      - migration-scripts/calendar-years.cypher
+      - migration-scripts/ashe-sex.cypher
+      - cypher/ashe-working-pattern.cypher
+      - cypher/ashe-hours.cypher
+      - cypher/ashe-earnings.cypher
+      - cypher/ashe-statistics.cypher
+      - migration-scripts/ashe-geography.cypher
+      - cypher/ashe-hours-and-earnings.cypher
+      - cypher/ashe-workplace-or-residence.cypher
+      - ../geo-specific-codelist/admin-geography.cypher
+      - ../geo-specific-codelist/parliamentary-geography.cypher
+      - ../geo-specific-codelist/travel-to-work-geography.cypher
+      - cypher/sic.cypher
+  - language: gremlin
+    files:
+      - gremlin/calendar-years.grm
+      - gremlin/ashe-sex.grm
+      - gremlin/ashe-working-pattern.grm
+      - gremlin/ashe-hours.grm
+      - gremlin/ashe-earnings.grm
+      - gremlin/ashe-statistics.grm
+      - gremlin/ashe-geography.grm
+      - gremlin/ashe-hours-and-earnings.grm
+      - gremlin/ashe-workplace-or-residence.grm
+      - ../geo-specific-codelist/gremlin/admin-geography.grm
+      - ../geo-specific-codelist/gremlin/parliamentary-geography.grm
+      - ../geo-specific-codelist/gremlin/travel-to-work-geography.grm
+      - gremlin/sic.grm

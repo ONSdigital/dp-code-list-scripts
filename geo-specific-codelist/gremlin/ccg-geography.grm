@@ -1,0 +1,2375 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'ccg-geography').
+    property(single, 'geography', true).
+    property(single, 'label', 'geography').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000001').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000001')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000001').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000001').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Airedale, Wharfedale and Craven CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000002').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000002')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000002').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000002').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Ashford CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000004').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000004')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000004').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000004').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Barking and Dagenham CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000005').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000005')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000005').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000005').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Barnet CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000006').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000006')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000006').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000006').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Barnsley CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000007').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000007')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000007').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000007').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Basildon and Brentwood CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000008').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000008')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000008').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000008').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Bassetlaw CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000009').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000009')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000009').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000009').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Bath and North East Somerset CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000010').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000010')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000010').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000010').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Bedfordshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000011').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000011')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000011').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000011').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Bexley CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000014').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000014')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000014').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000014').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Blackburn with Darwen CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000015').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000015')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000015').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000015').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Blackpool CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000016').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000016')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000016').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000016').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Bolton CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000018').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000018')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000018').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000018').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Bradford City CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000019').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000019')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000019').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000019').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Bradford Districts CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000020').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000020')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000020').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000020').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Brent CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000021').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000021')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000021').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000021').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Brighton and Hove CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000023').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000023')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000023').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000023').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Bromley CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000024').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000024')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000024').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000024').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Bury CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000025').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000025')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000025').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000025').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Calderdale CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000026').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000026')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000026').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000026').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Cambridgeshire and Peterborough CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000027').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000027')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000027').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000027').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Camden CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000028').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000028')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000028').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000028').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Cannock Chase CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000029').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000029')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000029').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000029').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Canterbury and Coastal CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000030').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000030')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000030').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000030').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Castle Point and Rochford CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000031').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000031')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000031').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000031').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Central London (Westminster) CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000034').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000034')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000034').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000034').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Chorley and South Ribble CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000035').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000035')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000035').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000035').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS City and Hackney CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000037').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000037')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000037').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000037').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Corby CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000038').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000038')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000038').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000038').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Coventry and Rugby CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000039').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000039')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000039').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000039').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Crawley CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000040').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000040')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000040').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000040').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Croydon CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000042').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000042')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000042').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000042').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Darlington CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000043').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000043')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000043').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000043').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Dartford, Gravesham and Swanley CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000044').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000044')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000044').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000044').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Doncaster CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000045').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000045')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000045').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000045').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Dorset CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000046').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000046')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000046').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000046').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Dudley CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000047').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000047')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000047').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000047').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Durham Dales, Easington and Sedgefield CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000048').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000048')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000048').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000048').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Ealing CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000049').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000049')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000049').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000049').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS East and North Hertfordshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000050').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000050')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000050').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000050').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS East Lancashire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000051').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000051')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000051').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000051').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS East Leicestershire and Rutland CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000052').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000052')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000052').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000052').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS East Riding of Yorkshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000053').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000053')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000053').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000053').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS East Staffordshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000054').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000054')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000054').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000054').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS East Surrey CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000055').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000055')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000055').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000055').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Eastbourne, Hailsham and Seaford CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000056').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000056')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000056').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000056').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Eastern Cheshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000057').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000057')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000057').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000057').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Enfield CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000058').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000058')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000058').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000058').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Erewash CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000059').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000059')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000059').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000059').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Fareham and Gosport CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000062').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000062')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000062').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000062').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Gloucestershire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000063').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000063')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000063').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000063').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Great Yarmouth and Waveney CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000064').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000064')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000064').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000064').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Greater Huddersfield CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000066').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000066')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000066').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000066').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Greenwich CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000068').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000068')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000068').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000068').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Halton CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000069').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000069')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000069').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000069').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Hambleton, Richmondshire and Whitby CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000070').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000070')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000070').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000070').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Hammersmith and Fulham CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000071').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000071')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000071').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000071').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Hardwick CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000072').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000072')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000072').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000072').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Haringey CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000073').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000073')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000073').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000073').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Harrogate and Rural District CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000074').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000074')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000074').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000074').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Harrow CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000075').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000075')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000075').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000075').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Hartlepool and Stockton-on-Tees CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000076').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000076')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000076').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000076').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Hastings and Rother CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000077').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000077')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000077').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000077').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Havering CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000078').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000078')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000078').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000078').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Herefordshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000079').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000079')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000079').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000079').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Herts Valleys CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000080').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000080')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000080').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000080').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Heywood, Middleton and Rochdale CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000081').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000081')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000081').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000081').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS High Weald Lewes Havens CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000082').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000082')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000082').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000082').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Hillingdon CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000083').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000083')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000083').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000083').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Horsham and Mid Sussex CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000084').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000084')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000084').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000084').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Hounslow CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000085').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000085')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000085').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000085').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Hull CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000086').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000086')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000086').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000086').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Ipswich and East Suffolk CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000087').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000087')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000087').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000087').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Isle of Wight CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000088').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000088')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000088').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000088').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Islington CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000089').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000089')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000089').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000089').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Kernow CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000090').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000090')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000090').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000090').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Kingston CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000091').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000091')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000091').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000091').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Knowsley CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000092').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000092')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000092').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000092').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Lambeth CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000097').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000097')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000097').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000097').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Leicester City CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000098').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000098')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000098').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000098').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Lewisham CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000099').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000099')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000099').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000099').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Lincolnshire East CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000100').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000100')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000100').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000100').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Lincolnshire West CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000101').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000101')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000101').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000101').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Liverpool CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000102').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000102')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000102').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000102').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Luton CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000103').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000103')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000103').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000103').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Mansfield and Ashfield CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000104').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000104')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000104').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000104').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Medway CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000105').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000105')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000105').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000105').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Merton CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000106').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000106')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000106').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000106').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Mid Essex CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000107').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000107')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000107').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000107').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Milton Keynes CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000108').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000108')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000108').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000108').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Nene CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000109').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000109')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000109').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000109').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Newark and Sherwood CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000113').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000113')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000113').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000113').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Newham CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000115').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000115')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000115').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000115').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS North Derbyshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000116').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000116')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000116').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000116').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS North Durham CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000117').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000117')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000117').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000117').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS North East Essex CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000118').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000118')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000118').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000118').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS North East Hampshire and Farnham CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000119').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000119')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000119').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000119').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS North East Lincolnshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000120').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000120')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000120').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000120').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS North Hampshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000121').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000121')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000121').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000121').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS North Kirklees CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000122').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000122')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000122').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000122').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS North Lincolnshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000124').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000124')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000124').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000124').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS North Norfolk CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000126').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000126')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000126').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000126').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS North Staffordshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000127').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000127')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000127').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000127').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS North Tyneside CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000128').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000128')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000128').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000128').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS North West Surrey CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000129').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000129')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000129').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000129').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Northern, Eastern and Western Devon CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000130').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000130')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000130').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000130').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Northumberland CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000132').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000132')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000132').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000132').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Nottingham City CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000133').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000133')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000133').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000133').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Nottingham North and East CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000134').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000134')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000134').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000134').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Nottingham West CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000135').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000135')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000135').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000135').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Oldham CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000136').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000136')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000136').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000136').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Oxfordshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000137').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000137')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000137').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000137').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Portsmouth CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000138').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000138')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000138').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000138').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Redbridge CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000139').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000139')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000139').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000139').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Redditch and Bromsgrove CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000140').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000140')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000140').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000140').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Richmond CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000141').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000141')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000141').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000141').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Rotherham CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000142').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000142')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000142').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000142').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Rushcliffe CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000143').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000143')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000143').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000143').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Salford CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000144').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000144')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000144').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000144').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Sandwell and West Birmingham CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000145').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000145')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000145').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000145').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Scarborough and Ryedale CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000146').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000146')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000146').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000146').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Sheffield CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000147').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000147')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000147').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000147').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Shropshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000150').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000150')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000150').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000150').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Somerset CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000151').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000151')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000151').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000151').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS South Cheshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000152').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000152')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000152').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000152').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS South Devon and Torbay CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000153').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000153')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000153').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000153').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS South East Staffordshire and Seisdon Peninsula CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000154').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000154')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000154').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000154').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS South Eastern Hampshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000156').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000156')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000156').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000156').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS South Kent Coast CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000157').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000157')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000157').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000157').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS South Lincolnshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000161').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000161')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000161').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000161').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS South Sefton CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000162').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000162')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000162').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000162').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS South Tees CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000163').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000163')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000163').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000163').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS South Tyneside CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000164').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000164')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000164').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000164').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS South Warwickshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000165').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000165')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000165').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000165').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS South West Lincolnshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000166').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000166')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000166').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000166').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS South Worcestershire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000167').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000167')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000167').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000167').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Southampton CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000168').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000168')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000168').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000168').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Southend CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000169').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000169')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000169').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000169').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Southern Derbyshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000170').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000170')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000170').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000170').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Southport and Formby CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000171').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000171')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000171').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000171').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Southwark CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000172').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000172')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000172').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000172').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS St Helens CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000173').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000173')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000173').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000173').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Stafford and Surrounds CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000174').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000174')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000174').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000174').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Stockport CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000175').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000175')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000175').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000175').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Stoke on Trent CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000176').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000176')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000176').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000176').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Sunderland CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000177').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000177')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000177').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000177').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Surrey Downs CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000178').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000178')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000178').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000178').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Surrey Heath CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000179').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000179')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000179').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000179').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Sutton CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000180').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000180')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000180').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000180').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Swale CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000181').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000181')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000181').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000181').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Swindon CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000182').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000182')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000182').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000182').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Tameside and Glossop CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000183').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000183')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000183').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000183').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Telford and Wrekin CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000184').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000184')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000184').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000184').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Thanet CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000185').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000185')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000185').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000185').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Thurrock CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000186').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000186')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000186').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000186').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Tower Hamlets CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000187').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000187')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000187').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000187').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Trafford CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000188').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000188')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000188').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000188').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Vale of York CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000189').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000189')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000189').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000189').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Vale Royal CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000190').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000190')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000190').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000190').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Wakefield CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000191').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000191')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000191').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000191').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Walsall CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000192').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000192')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000192').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000192').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Waltham Forest CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000193').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000193')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000193').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000193').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Wandsworth CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000194').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000194')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000194').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000194').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Warrington CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000195').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000195')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000195').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000195').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Warwickshire North CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000196').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000196')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000196').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000196').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS West Cheshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000197').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000197')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000197').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000197').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS West Essex CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000198').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000198')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000198').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000198').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS West Hampshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000199').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000199')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000199').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000199').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS West Kent CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000200').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000200')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000200').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000200').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS West Lancashire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000201').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000201')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000201').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000201').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS West Leicestershire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000202').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000202')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000202').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000202').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS West London CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000203').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000203')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000203').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000203').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS West Norfolk CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000204').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000204')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000204').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000204').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS West Suffolk CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000205').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000205')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000205').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000205').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Wigan Borough CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000206').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000206')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000206').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000206').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Wiltshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000208').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000208')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000208').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000208').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Wirral CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000210').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000210')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000210').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000210').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Wolverhampton CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000211').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000211')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000211').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000211').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Wyre Forest CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000212').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000212')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000212').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000212').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Newcastle Gateshead CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000213').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000213')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000213').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000213').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Coastal West Sussex CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000214').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000214')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000214').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000214').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Guildford and Waverley CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000215').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000215')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000215').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000215').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS North Cumbria CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000217').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000217')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000217').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000217').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Manchester CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000218').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000218')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000218').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000218').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Norwich CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000219').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000219')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000219').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000219').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS South Norfolk CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000220').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000220')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000220').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000220').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Birmingham and Solihull CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000221').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000221')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000221').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000221').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Berkshire West CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000222').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000222')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000222').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000222').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Bristol, North Somerset and South Gloucestershire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000223').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000223')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000223').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000223').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Buckinghamshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000224').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000224')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000224').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000224').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS East Berkshire CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000225').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000225')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000225').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000225').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Leeds CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000226').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000226')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000226').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000226').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Fylde and Wyre CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000227').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000227')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000227').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000227').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Greater Preston CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000228').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E38000228')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000228').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E38000228').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS Morecambe Bay CCG')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000029').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E39000029')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000029').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000029').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS England North (Yorkshire and Humber)')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000042').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E39000042')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000042').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000042').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS England South East (Kent, Surrey and Sussex)')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000018').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E39000018')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000018').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000018').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS England London')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000031').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E39000031')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000031').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000031').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS England Midlands and East (East)')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000043').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E39000043')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000043').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000043').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS England South West (South West North)')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000030').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E39000030')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000030').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000030').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS England Midlands and East (Central Midlands)')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000040').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E39000040')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000040').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000040').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS England North (Lancashire and South Cumbria)')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000037').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E39000037')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000037').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000037').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS England North (Greater Manchester)')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000032').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E39000032')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000032').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000032').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS England Midlands and East (North Midlands)')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000033').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E39000033')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000033').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000033').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS England Midlands and East (West Midlands)')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000039').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E39000039')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000039').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000039').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS England North (Cumbria and North East)')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000044').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E39000044')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000044').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000044').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS England South West (South West South)')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000026').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E39000026')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000026').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000026').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS England North (Cheshire and Merseyside)')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000041').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E39000041')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000041').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E39000041').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'NHS England South East (Hampshire, Isle of Wight and Thames Valley)')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E40000001').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E40000001')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E40000001').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E40000001').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'North of England')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E40000005').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E40000005')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E40000005').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E40000005').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'South East')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E40000003').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E40000003')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E40000003').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E40000003').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'London')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E40000002').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E40000002')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E40000002').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E40000002').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'Midlands and East of England')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E40000006').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E40000006')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E40000006').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E40000006').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'South West')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E92000001').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'E92000001')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E92000001').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'E92000001').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'ccg-geography').has('edition', 'one-off')
+    ).property(single, 'label', 'England')).next()
+

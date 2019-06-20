@@ -1,0 +1,101 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'countries').has('edition', '2017').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'countries').
+    property(single, 'label', 'Countries').
+    property(single, 'edition', '2017').
+    property(single, 'geography_list_ID', 'ctry17')
+  ).next()
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'countries').has('value', 'E92000001').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries').property(single, 'value', 'E92000001')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'countries').has('value', 'E92000001').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'countries').has('value', 'E92000001').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'countries').has('edition', '2017')
+    ).property(single, 'label', 'England')).next()
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'countries').has('value', 'K02000001').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries').property(single, 'value', 'K02000001')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'countries').has('value', 'K02000001').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'countries').has('value', 'K02000001').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'countries').has('edition', '2017')
+    ).property(single, 'label', 'United Kingdom')).next()
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'countries').has('value', 'K03000001').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries').property(single, 'value', 'K03000001')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'countries').has('value', 'K03000001').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'countries').has('value', 'K03000001').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'countries').has('edition', '2017')
+    ).property(single, 'label', 'Great Britain')).next()
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'countries').has('value', 'K04000001').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries').property(single, 'value', 'K04000001')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'countries').has('value', 'K04000001').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'countries').has('value', 'K04000001').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'countries').has('edition', '2017')
+    ).property(single, 'label', 'England and Wales')).next()
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'countries').has('value', 'N92000002').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries').property(single, 'value', 'N92000002')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'countries').has('value', 'N92000002').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'countries').has('value', 'N92000002').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'countries').has('edition', '2017')
+    ).property(single, 'label', 'Northern Ireland')).next()
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'countries').has('value', 'S92000003').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries').property(single, 'value', 'S92000003')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'countries').has('value', 'S92000003').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'countries').has('value', 'S92000003').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'countries').has('edition', '2017')
+    ).property(single, 'label', 'Scotland')).next()
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'countries').has('value', 'W92000004').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries').property(single, 'value', 'W92000004')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'countries').has('value', 'W92000004').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'countries').has('value', 'W92000004').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'countries').has('edition', '2017')
+    ).property(single, 'label', 'Wales')).next()
+

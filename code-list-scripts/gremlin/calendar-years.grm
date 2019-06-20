@@ -1,0 +1,2221 @@
+g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'calendar-years').
+    property(single, 'label', 'time').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1962').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1962')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1962').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1962').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1962')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1952').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1952')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1952').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1952').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1952')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1960').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1960')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1960').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1960').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1960')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1963').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1963')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1963').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1963').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1963')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1954').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1954')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1954').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1954').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1954')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1971').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1971')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1971').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1971').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1971')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1961').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1961')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1961').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1961').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1961')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1955').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1955')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1955').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1955').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1955')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1969').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1969')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1969').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1969').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1969')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1957').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1957')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1957').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1957').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1957')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1965').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1965')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1965').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1965').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1965')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1958').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1958')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1958').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1958').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1958')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1974').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1974')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1974').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1974').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1974')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1973').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1973')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1973').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1973').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1973')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1959').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1959')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1959').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1959').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1959')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1953').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1953')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1953').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1953').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1953')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1966').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1966')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1966').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1966').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1966')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1972').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1972')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1972').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1972').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1972')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1951').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1951')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1951').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1951').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1951')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1983').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1983')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1983').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1983').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1983')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1964').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1964')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1964').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1964').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1964')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1967').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1967')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1967').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1967').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1967')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1988').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1988')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1988').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1988').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1988')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1985').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1985')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1985').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1985').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1985')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1950').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1950')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1950').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1950').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1950')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1987').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1987')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1987').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1987').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1987')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1968').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1968')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1968').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1968').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1968')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1993').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1993')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1993').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1993').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1993')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1970').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1970')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1970').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1970').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1970')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1986').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1986')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1986').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1986').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1986')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1998').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1998')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1998').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1998').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1998')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1994').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1994')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1994').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1994').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1994')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1989').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1989')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1989').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1989').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1989')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1984').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1984')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1984').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1984').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1984')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1996').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1996')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1996').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1996').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1996')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1997').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1997')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1997').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1997').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1997')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1990').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1990')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1990').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1990').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1990')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1995').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1995')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1995').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1995').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1995')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1976').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1976')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1976').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1976').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1976')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1975').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1975')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1975').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1975').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1975')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1979').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1979')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1979').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1979').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1979')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1980').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1980')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1980').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1980').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1980')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1992').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1992')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1992').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1992').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1992')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1977').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1977')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1977').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1977').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1977')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2011').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2011')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2011').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2011').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2011')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1981').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1981')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1981').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1981').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1981')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1999').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1999')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1999').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1999').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1999')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2000').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2000')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2000').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2000').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2000')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2001').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2001')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2001').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2001').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2001')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2002').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2002')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2002').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2002').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2002')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1978').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1978')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1978').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1978').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1978')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1956').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1956')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1956').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1956').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1956')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2024').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2024')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2024').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2024').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2024')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2003').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2003')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2003').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2003').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2003')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2004').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2004')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2004').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2004').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2004')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2012').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2012')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2012').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2012').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2012')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2013').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2013')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2013').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2013').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2013')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2007').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2007')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2007').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2007').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2007')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2008').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2008')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2008').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2008').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2008')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1982').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1982')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1982').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1982').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1982')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2018').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2018')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2018').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2018').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2018')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2009').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2009')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2009').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2009').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2009')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2015').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2015')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2015').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2015').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2015')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2006').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2006')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2006').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2006').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2006')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2005').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2005')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2005').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2005').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2005')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2016').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2016')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2016').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2016').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2016')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2010').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2010')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2010').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2010').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2010')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2014').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2014')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2014').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2014').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2014')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2021').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2021')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2021').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2021').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2021')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1991').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '1991')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1991').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '1991').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '1991')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2041').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2041')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2041').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2041').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2041')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2034').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2034')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2034').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2034').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2034')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2017').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2017')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2017').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2017').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2017')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2036').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2036')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2036').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2036').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2036')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2032').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2032')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2032').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2032').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2032')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2035').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2035')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2035').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2035').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2035')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2025').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2025')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2025').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2025').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2025')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2037').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2037')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2037').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2037').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2037')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2020').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2020')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2020').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2020').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2020')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2033').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2033')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2033').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2033').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2033')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2029').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2029')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2029').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2029').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2029')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2038').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2038')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2038').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2038').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2038')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2027').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2027')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2027').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2027').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2027')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2028').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2028')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2028').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2028').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2028')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2030').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2030')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2030').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2030').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2030')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2053').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2053')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2053').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2053').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2053')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2042').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2042')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2042').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2042').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2042')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2048').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2048')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2048').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2048').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2048')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2049').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2049')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2049').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2049').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2049')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2050').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2050')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2050').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2050').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2050')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2047').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2047')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2047').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2047').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2047')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2043').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2043')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2043').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2043').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2043')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2026').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2026')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2026').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2026').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2026')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2044').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2044')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2044').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2044').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2044')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2019').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2019')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2019').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2019').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2019')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2045').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2045')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2045').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2045').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2045')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2051').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2051')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2051').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2051').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2051')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2052').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2052')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2052').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2052').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2052')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2046').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2046')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2046').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2046').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2046')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2022').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2022')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2022').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2022').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2022')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2031').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2031')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2031').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2031').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2031')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2067').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2067')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2067').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2067').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2067')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2023').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2023')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2023').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2023').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2023')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2060').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2060')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2060').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2060').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2060')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2040').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2040')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2040').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2040').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2040')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2054').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2054')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2054').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2054').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2054')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2055').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2055')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2055').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2055').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2055')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2056').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2056')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2056').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2056').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2056')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2057').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2057')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2057').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2057').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2057')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2061').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2061')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2061').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2061').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2061')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2039').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2039')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2039').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2039').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2039')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2064').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2064')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2064').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2064').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2064')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2058').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2058')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2058').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2058').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2058')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2059').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2059')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2059').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2059').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2059')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2062').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2062')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2062').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2062').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2062')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2065').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2065')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2065').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2065').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2065')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2066').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2066')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2066').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2066').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2066')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2084').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2084')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2084').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2084').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2084')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2063').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2063')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2063').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2063').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2063')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2093').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2093')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2093').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2093').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2093')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2076').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2076')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2076').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2076').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2076')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2089').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2089')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2089').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2089').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2089')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2080').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2080')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2080').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2080').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2080')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2081').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2081')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2081').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2081').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2081')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2085').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2085')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2085').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2085').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2085')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2075').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2075')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2075').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2075').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2075')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2077').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2077')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2077').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2077').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2077')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2068').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2068')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2068').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2068').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2068')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2082').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2082')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2082').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2082').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2082')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2069').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2069')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2069').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2069').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2069')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2086').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2086')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2086').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2086').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2086')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2078').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2078')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2078').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2078').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2078')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2090').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2090')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2090').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2090').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2090')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2083').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2083')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2083').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2083').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2083')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2070').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2070')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2070').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2070').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2070')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2087').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2087')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2087').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2087').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2087')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2091').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2091')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2091').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2091').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2091')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2079').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2079')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2079').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2079').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2079')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2071').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2071')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2071').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2071').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2071')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2088').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2088')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2088').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2088').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2088')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2092').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2092')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2092').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2092').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2092')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2072').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2072')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2072').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2072').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2072')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2073').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2073')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2073').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2073').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2073')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2120').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2120')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2120').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2120').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2120')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2074').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2074')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2074').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2074').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2074')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2116').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2116')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2116').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2116').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2116')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2111').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2111')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2111').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2111').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2111')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2102').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2102')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2102').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2102').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2102')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2109').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2109')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2109').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2109').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2109')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2115').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2115')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2115').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2115').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2115')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2112').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2112')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2112').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2112').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2112')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2094').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2094')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2094').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2094').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2094')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2118').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2118')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2118').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2118').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2118')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2106').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2106')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2106').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2106').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2106')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2095').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2095')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2095').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2095').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2095')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2119').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2119')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2119').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2119').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2119')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2110').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2110')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2110').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2110').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2110')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2113').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2113')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2113').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2113').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2113')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2114').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2114')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2114').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2114').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2114')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2096').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2096')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2096').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2096').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2096')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2103').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2103')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2103').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2103').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2103')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2100').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2100')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2100').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2100').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2100')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2099').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2099')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2099').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2099').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2099')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2101').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2101')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2101').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2101').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2101')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2134').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2134')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2134').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2134').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2134')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2104').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2104')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2104').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2104').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2104')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2150').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2150')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2150').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2150').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2150')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2098').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2098')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2098').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2098').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2098')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2105').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2105')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2105').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2105').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2105')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2127').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2127')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2127').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2127').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2127')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2097').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2097')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2097').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2097').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2097')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2135').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2135')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2135').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2135').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2135')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2121').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2121')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2121').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2121').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2121')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2142').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2142')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2142').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2142').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2142')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2128').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2128')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2128').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2128').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2128')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2138').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2138')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2138').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2138').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2138')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2143').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2143')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2143').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2143').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2143')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2108').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2108')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2108').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2108').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2108')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2129').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2129')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2129').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2129').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2129')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2137').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2137')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2137').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2137').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2137')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2136').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2136')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2136').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2136').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2136')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2130').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2130')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2130').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2130').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2130')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2107').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2107')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2107').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2107').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2107')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2124').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2124')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2124').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2124').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2124')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2117').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2117')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2117').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2117').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2117')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2140').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2140')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2140').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2140').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2140')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2125').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2125')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2125').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2125').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2125')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2133').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2133')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2133').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2133').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2133')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2139').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2139')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2139').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2139').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2139')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2132').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2132')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2132').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2132').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2132')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2123').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2123')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2123').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2123').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2123')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2131').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2131')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2131').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2131').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2131')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2144').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2144')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2144').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2144').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2144')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2126').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2126')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2126').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2126').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2126')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2141').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2141')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2141').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2141').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2141')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2145').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2145')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2145').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2145').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2145')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2147').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2147')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2147').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2147').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2147')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2146').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2146')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2146').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2146').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2146')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2148').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2148')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2148').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2148').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2148')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2149').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2149')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2149').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2149').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2149')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2122').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'calendar-years').property(single, 'value', '2122')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2122').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'calendar-years').has('value', '2122').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'calendar-years').has('edition', 'one-off')
+    ).property(single, 'label', '2122')).next()
+

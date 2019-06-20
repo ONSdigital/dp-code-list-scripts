@@ -1,0 +1,13 @@
+definition:
+  - datasets: private rental house prices
+imports:
+  - language: cypher
+    files:
+      - cypher/mmm-yy.cypher
+      - ../geo-specific-codelist/admin-geography.cypher
+      - cypher/housing-rental-prices-variable.cypher
+  - language: gremlin
+    files:
+      - gremlin/mmm-yy.grm
+      - ../geo-specific-codelist/gremlin/admin-geography.grm
+      - gremlin/housing-rental-prices-variable.grm

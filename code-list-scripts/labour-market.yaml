@@ -1,0 +1,21 @@
+definition:
+  - datasets: labour market
+imports:
+  - language: cypher
+    files:
+      - cypher/lms-age-bracket.cypher
+      - cypher/lms-economic-status.cypher
+      - cypher/unit-of-measure.cypher
+      - cypher/mmm-mmm-yyyy.cypher
+      - migration-scripts/ashe-sex.cypher
+      - cypher/seasonal-adjustment.cypher
+      - migration-scripts/uk-only.cypher
+  - language: gremlin
+    files:
+      - gremlin/lms-age-bracket.grm
+      - gremlin/lms-economic-status.grm
+      - gremlin/unit-of-measure.grm
+      - gremlin/mmm-mmm-yyyy.grm
+      - gremlin/ashe-sex.grm
+      - gremlin/seasonal-adjustment.grm
+      - gremlin/uk-only.grm

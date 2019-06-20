@@ -1,0 +1,15 @@
+definition:
+  - datasets: parents country of birth by local authority
+imports:
+  - language: cypher
+    files:
+      - migration-scripts/calendar-years.cypher
+      - ../geo-specific-codelist/admin-geography.cypher
+      - cypher/parents-country-birth.cypher
+      - cypher/unit-of-measure.cypher
+  - language: gremlin
+    files:
+      - gremlin/calendar-years.grm
+      - ../geo-specific-codelist/gremlin/admin-geography.grm
+      - gremlin/parents-country-birth.grm
+      - gremlin/unit-of-measure.grm
