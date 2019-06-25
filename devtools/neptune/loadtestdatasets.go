@@ -223,10 +223,10 @@ const makeCodeNodeQry = `g.addV('_code').as('C').
     property(single, '%s', true).
     property(single, 'listID', 'code-list-id-for-dataset-test').
     property(single, 'value', 'code-value-for-dataset-test').
-    property(single, 'edition', 'code-list-edition-for-dataset-test').
     addV('_code_list').
         property(single, '%s', true).
         property(single, 'listID', 'code-list-id-for-dataset-test').
+        property(single, 'edition', 'code-list-edition-for-dataset-test').
     addE('usedBy').from(select('C')).
         property(single, 'label', 'test-dimension-name')
 	`
