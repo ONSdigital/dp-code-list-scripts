@@ -34,6 +34,7 @@ with dataset suffix 0.
 The Code node is like this:
 - label: _code
 - listID: "code-list-id-for-dataset-test"
+- value: "code-value-for-dataset-test"
 
 The CodeList node is like this:
 - label: _code_list
@@ -220,6 +221,7 @@ const makeInstanceNodeQry = `g.addV('%s').
 const makeCodeNodeQry = `g.addV('_code').as('C').
     property(single, '%s', true).
     property(single, 'listID', 'code-list-id-for-dataset-test').
+    property(single, 'value', 'code-value-for-dataset-test').
     addV('_code_list').
         property(single, '%s', true).
         property(single, 'listID', 'code-list-id-for-dataset-test').
