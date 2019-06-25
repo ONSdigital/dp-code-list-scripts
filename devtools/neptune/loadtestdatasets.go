@@ -1,6 +1,7 @@
 /*
-This module provides a command that will loads a large volume of Instance nodes
-into the database.
+This module provides a command for loading a large volume of Instance nodes
+into the database, and a single Code node that has a "inDataset" link to all
+of them.
 
 It is intended to validate the development and performance of the
 codelists.GetCodeDatasets() method in dp-graph.
@@ -17,19 +18,14 @@ ones we use in the Neo4j database).
 - is_published: true
 
 It creates 30,000 instances, corresponding to all permutations of:
-- dataset suffices 0 - 299.
+- dataset suffices 0 - 149.
 - edition suffices 0 - 9.
 - version suffices 0 - 9.
 
-It also then adds a single Code node that has an *inDataset* relationships to 
-each of the Instances.
-
-The dimensions set used is fixed.
-
-The label suffix used for each instance is 0,1,2...2999; in the order they are created.
+The label suffix used for each instance is 0,1,2...; in the order they are created.
 
 The *is_published* field is set true on most of the instances. It is set
-false only on Instances with *dataset* set to test_dataset_200 (i.e. 1 in 300).
+false only on Instances with *dataset* set to test_dataset_100 (i.e. 1 in 300).
 
 The nodes created are also given a magic marker (boolean) property to make it
 easy to find them and delete them.
@@ -39,21 +35,32 @@ The script assumes that this URI will reach a Gremlin Server.
 managed server).
 
 `dialer := gremgo.NewDialer("ws://127.0.0.1:8182/gremlin")`
+
+Usage:
+
+	go run loadtestdatasets.go -i // Create the Instances
+	go run loadtestdatasets.go -c // Create the linked Code
 */
 
 package main
 
 import (
+	"flag"
 	"fmt"
+	"os"
 
 	gremgo "github.com/gedge/gremgo-neptune"
 )
 
-const nDatasets = 299
+const nDatasets = 150
 const nEditions = 10
 const nVersions = 10
 
 func main() {
+	createInstances := flag.Bool("i", false, "Create some Instance nodes")
+	createCode := flag.Bool("c", false, "Create a Code node linked to the Instances")
+	flag.Parse()
+
 	// Canonical boilerplate to bring up and use Gremgo...
 	errs := make(chan error)
 	go func(errs chan error) {
@@ -68,8 +75,14 @@ func main() {
 		return
 	}
 	// Neptune behaviour injected here.
-	err = executeTheScript(&client)
-
+	if *createInstances == true {
+		err = executeInstanceScript(&client)
+	} else if *createCode == true {
+		err = executeCodeScript(&client)
+	} else {
+		fmt.Printf("You must specify -i or -c\n")
+		os.Exit(1)
+	}
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -80,8 +93,11 @@ func main() {
 const magicMarkerForThisScriptsInstances = "xxxx_pch_is_instance"
 const magicMarkerForThisScriptsCodes = "xxxx_pch_is_code"
 
-func executeTheScript(client *gremgo.Client) error {
-	if err := removeOldContent(client); err != nil {
+func executeInstanceScript(client *gremgo.Client) error {
+	if err := removeInstances(client); err != nil {
+		return err
+	}
+	if err := removeCode(client); err != nil {
 		return err
 	}
 	for dataset := 0; dataset < nDatasets; dataset++ {
@@ -89,20 +105,31 @@ func executeTheScript(client *gremgo.Client) error {
 			return err
 		}
 	}
+	return nil
+}
+
+func executeCodeScript(client *gremgo.Client) error {
+	if err := removeCode(client); err != nil {
+		return err
+	}
 	if err := makeAndLinkTheCodeNode(client); err != nil {
 		return err
 	}
 	return nil
 }
 
-func removeOldContent(client *gremgo.Client) error {
+func removeInstances(client *gremgo.Client) error {
 	qry := fmt.Sprintf(removeIncumbentNodesQry, magicMarkerForThisScriptsInstances)
 	_, err := client.Execute(qry, nil, nil)
 	if err != nil {
 		return err
 	}
-	qry = fmt.Sprintf(removeIncumbentNodesQry, magicMarkerForThisScriptsCodes)
-	_, err = client.Execute(qry, nil, nil)
+	return nil
+}
+
+func removeCode(client *gremgo.Client) error {
+	qry := fmt.Sprintf(removeIncumbentNodesQry, magicMarkerForThisScriptsCodes)
+	_, err := client.Execute(qry, nil, nil)
 	if err != nil {
 		return err
 	}
@@ -136,7 +163,7 @@ func makeForOneVersion(client *gremgo.Client, datasetSuffix int, editionSuffix i
 
 	dataset := fmt.Sprintf("test_dataset_%d", datasetSuffix)
 	edition := fmt.Sprintf("test_edition_%d", editionSuffix)
-	isPub := datasetSuffix != 200
+	isPub := datasetSuffix != 100
 
 	// The dataset argument is repeated below deliberately.
 	// The version argument alone is (int).
@@ -150,9 +177,13 @@ func makeForOneVersion(client *gremgo.Client, datasetSuffix int, editionSuffix i
 }
 
 func makeAndLinkTheCodeNode(client *gremgo.Client) error {
-	qry := fmt.Sprintf(makeCodeNodeQry, magicMarkerForThisScriptsCodes, magicMarkerForThisScriptsInstances)
-	fmt.Printf("XXXXXXXX: %s\n", qry)
-	_, err := client.Execute(qry, nil, nil)
+	makeCodeQry := fmt.Sprintf(makeCodeNodeQry, magicMarkerForThisScriptsCodes)
+	_, err := client.Execute(makeCodeQry, nil, nil)
+	if err != nil {
+		return err
+	}
+	linkCodeQry := fmt.Sprintf(linkCodeNodeQry, magicMarkerForThisScriptsCodes, magicMarkerForThisScriptsInstances)
+	_, err = client.Execute(linkCodeQry, nil, nil)
 	if err != nil {
 		return err
 	}
@@ -171,7 +202,17 @@ const makeInstanceNodeQry = `g.addV('%s').
 	property(single, 'is_published', %v)
 	`
 
+const makeCodeNodeQryDeprecated = `g.addV('_code').
+	property(single, '%s', true).as('C').
+	V().has('%s', true).
+	addE('inDataset').from(select('C'))
+`
+
 const makeCodeNodeQry = `g.addV('_code').
-	property(single, '%s', true).
-	addE('inDataset').to(g.V().has('%s', true))
+		property(single, '%s', true)
 	`
+
+const linkCodeNodeQry = `g.V().hasLabel('_code').has('%s', true).as('C').
+	V().has('%s', true).
+	addE('inDataset').from(select('C'))
+`
