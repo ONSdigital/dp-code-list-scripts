@@ -1,7 +1,9 @@
 /*
 This module provides a command for loading a large volume of Instance nodes
-into the database, and a single Code node that has a "inDataset" link to all
-of them.
+into the database.
+
+It also makes a single Code node that has a "inDataset" link to all
+of them. And a CodeList node that the Code is "usedBy".
 
 It is intended to validate the development and performance of the
 codelists.GetCodeDatasets() method in dp-graph.
@@ -17,15 +19,28 @@ ones we use in the Neo4j database).
 - version: 6
 - is_published: true
 
-It creates 30,000 instances, corresponding to all permutations of:
+It creates 15,000 instances, corresponding to all permutations of:
 - dataset suffices 0 - 149.
 - edition suffices 0 - 9.
 - version suffices 0 - 9.
 
+(these are constantns below)
+
 The label suffix used for each instance is 0,1,2...; in the order they are created.
 
-The *is_published* field is set true on most of the instances. It is set
-false only on Instances with *dataset* set to test_dataset_100 (i.e. 1 in 300).
+The *is_published* field is set to true on all instances, except for those
+with dataset suffix 0.
+
+The Code node is like this:
+- label: _code
+- listID: "code-list-id-for-dataset-test"
+
+The CodeList node is like this:
+- label: _code_list
+- listID: "code-list-id-for-dataset-test"
+
+The Code node is linked to the CodeList with an edge of type: usedBy, and
+a *label* property set to "test-dimension-name".
 
 The nodes created are also given a magic marker (boolean) property to make it
 easy to find them and delete them.
@@ -52,9 +67,9 @@ import (
 	gremgo "github.com/gedge/gremgo-neptune"
 )
 
-const nDatasets = 150
-const nEditions = 10
-const nVersions = 10
+const nDatasets = 3
+const nEditions = 2
+const nVersions = 2
 
 func main() {
 	createInstances := flag.Bool("i", false, "Create some Instance nodes")
@@ -163,7 +178,7 @@ func makeForOneVersion(client *gremgo.Client, datasetSuffix int, editionSuffix i
 
 	dataset := fmt.Sprintf("test_dataset_%d", datasetSuffix)
 	edition := fmt.Sprintf("test_edition_%d", editionSuffix)
-	isPub := datasetSuffix != 100
+	isPub := datasetSuffix != 0
 
 	// The dataset argument is repeated below deliberately.
 	// The version argument alone is (int).
@@ -177,7 +192,7 @@ func makeForOneVersion(client *gremgo.Client, datasetSuffix int, editionSuffix i
 }
 
 func makeAndLinkTheCodeNode(client *gremgo.Client) error {
-	makeCodeQry := fmt.Sprintf(makeCodeNodeQry, magicMarkerForThisScriptsCodes)
+	makeCodeQry := fmt.Sprintf(makeCodeNodeQry, magicMarkerForThisScriptsCodes, magicMarkerForThisScriptsCodes)
 	_, err := client.Execute(makeCodeQry, nil, nil)
 	if err != nil {
 		return err
@@ -202,14 +217,14 @@ const makeInstanceNodeQry = `g.addV('%s').
 	property(single, 'is_published', %v)
 	`
 
-const makeCodeNodeQryDeprecated = `g.addV('_code').
-	property(single, '%s', true).as('C').
-	V().has('%s', true).
-	addE('inDataset').from(select('C'))
-`
-
-const makeCodeNodeQry = `g.addV('_code').
-		property(single, '%s', true)
+const makeCodeNodeQry = `g.addV('_code').as('C').
+    property(single, '%s', true).
+    property(single, 'listID', 'code-list-id-for-dataset-test').
+    addV('_code_list').
+        property(single, '%s', true).
+        property(single, 'listID', 'code-list-id-for-dataset-test').
+    addE('usedBy').from(select('C')).
+        property(single, 'label', 'test-dimension-name')
 	`
 
 const linkCodeNodeQry = `g.V().hasLabel('_code').has('%s', true).as('C').
