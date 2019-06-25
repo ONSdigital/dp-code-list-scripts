@@ -20,7 +20,7 @@ g.V().hasLabel('_code').has('listID', 'ashe-earnings').has('value', 'weekly-pay-
     ).property(single, 'label', 'Weekly pay - Excluding overtime')).next()
 
 
-  g.V().hasLabel('_code').has('listID', 'ashe-earnings').has('value', 'overtime-pay').
+g.V().hasLabel('_code').has('listID', 'ashe-earnings').has('value', 'overtime-pay').
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ashe-earnings').property(single, 'value', 'overtime-pay')
   ).next()
