@@ -24,7 +24,7 @@ It creates 15,000 instances, corresponding to all permutations of:
 - edition suffices 0 - 9.
 - version suffices 0 - 9.
 
-(these are constantns below)
+(these are adjustable using the constantns below)
 
 The label suffix used for each instance is 0,1,2...; in the order they are created.
 
@@ -39,6 +39,7 @@ The Code node is like this:
 The CodeList node is like this:
 - label: _code_list
 - listID: "code-list-id-for-dataset-test"
+- edition: "code-list-edition-for-dataset-test"
 
 The Code node is linked to the CodeList with an edge of type: usedBy, and
 a *label* property set to "test-dimension-name".
@@ -222,6 +223,7 @@ const makeCodeNodeQry = `g.addV('_code').as('C').
     property(single, '%s', true).
     property(single, 'listID', 'code-list-id-for-dataset-test').
     property(single, 'value', 'code-value-for-dataset-test').
+    property(single, 'edition', 'code-list-edition-for-dataset-test').
     addV('_code_list').
         property(single, '%s', true).
         property(single, 'listID', 'code-list-id-for-dataset-test').
