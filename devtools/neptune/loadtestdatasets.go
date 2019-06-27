@@ -24,7 +24,7 @@ It creates 15,000 instances, corresponding to all permutations of:
 - edition suffices 0 - 9.
 - version suffices 0 - 9.
 
-(these are adjustable using the constantns below)
+(these are adjustable using the constants below)
 
 The label suffix used for each instance is 0,1,2...; in the order they are created.
 
@@ -45,7 +45,8 @@ The Code node is linked to the CodeList with an edge of type: usedBy, and
 a *label* property set to "test-dimension-name".
 
 The nodes created are also given a magic marker (boolean) property to make it
-easy to find them and delete them.
+easy to find them and delete them - and thus run this script repeatedly without
+bloating the database or leaving out of date schema items behind.
 
 The script assumes that this URI will reach a Gremlin Server.
 (Typically facilitated with an SSH tunnel from the local host to the AWS
@@ -215,7 +216,7 @@ const makeInstanceNodeQry = `g.addV('%s').
 	property(single, 'dataset', '%s').
 	property(single, 'dataset_id', '%s').
 	property(single, 'edition', '%s').
-	property(single, 'version', '%d').
+	property(single, 'version', %d).
 	property(single, 'is_published', %v)
 	`
 
