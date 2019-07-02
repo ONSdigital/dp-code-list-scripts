@@ -19,7 +19,7 @@ ones we use in the Neo4j database).
 - version: 6
 - is_published: true
 
-It creates 15,000 instances, corresponding to all permutations of:
+It creates (for example) 15,000 instances, corresponding to all permutations of:
 - dataset suffices 0 - 149.
 - edition suffices 0 - 9.
 - version suffices 0 - 9.
@@ -45,8 +45,8 @@ The Code node is linked to the CodeList with an edge of type: usedBy, and
 a *label* property set to "test-dimension-name".
 
 The nodes created are also given a magic marker (boolean) property to make it
-easy to find them and delete them - and thus run this script repeatedly without
-bloating the database or leaving out of date schema items behind.
+easy to find them and delete them - and thus to run this script repeatedly without
+bloating the database or leaving out-of-date schema items behind.
 
 The script assumes that this URI will reach a Gremlin Server.
 (Typically facilitated with an SSH tunnel from the local host to the AWS
@@ -184,7 +184,10 @@ func makeForOneVersion(client *gremgo.Client, datasetSuffix int, editionSuffix i
 	isPub := datasetSuffix != 0
 
 	// The dataset argument is repeated below deliberately.
-	// The version argument alone is (int).
+	// The version argument is of type string. It should by rights be
+    // of type int to make the version an int in the database, but that is
+    // too problematic for the response parsing in 
+    // codelists.GetCodeDatasets() method in dp-graph.
 	qry := fmt.Sprintf(makeInstanceNodeQry, instanceLabel, magicMarkerForThisScriptsInstances, dataset,
 		dataset, edition, version, isPub)
 	_, err := client.Execute(qry, nil, nil)
@@ -211,12 +214,15 @@ func makeAndLinkTheCodeNode(client *gremgo.Client) error {
 // Removes nodes with a given marker property == true
 const removeIncumbentNodesQry = `g.V().has('%s', true).drop()`
 
+// Note this query creates the instance's version property as a string
+// deliberately. The schema should, logically, have an int. But that makes
+// query (and its response parsing) in codelists.GetCodeDatasets() too difficult.
 const makeInstanceNodeQry = `g.addV('%s').
 	property(single, '%s', true).
 	property(single, 'dataset', '%s').
 	property(single, 'dataset_id', '%s').
 	property(single, 'edition', '%s').
-	property(single, 'version', %d).
+	property(single, 'version', '%d').
 	property(single, 'is_published', %v)
 	`
 
