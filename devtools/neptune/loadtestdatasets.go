@@ -11,7 +11,7 @@ codelists.GetCodeDatasets() method in dp-graph.
 It creates Instance nodes of this structure: (to match the incumbent
 ones we use in the Neo4j database).
 
-- label: _instance_2021
+- label: _2021_Instance
 - dataset: test_dataset_134
 - dataset_id: test_dataset_134 // same as dataset
 - dimensions: ("sex", "age", "geography")
@@ -66,16 +66,19 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"strconv"
+	"strings"
 
-	gremgo "github.com/gedge/gremgo-neptune"
+	gremgo "github.com/ONSdigital/gremgo-neptune"
 )
 
-const nDatasets = 3
-const nEditions = 2
-const nVersions = 2
+var nDatasets = 3
+var nEditions = 2
+var nVersions = 2
 
 func main() {
 	createInstances := flag.Bool("i", false, "Create some Instance nodes")
+	createImport := flag.Bool("d", false, "Create some import nodes - instance, dimension and observations")
 	createCode := flag.Bool("c", false, "Create a Code node linked to the Instances")
 	flag.Parse()
 
@@ -93,7 +96,9 @@ func main() {
 		return
 	}
 	// Neptune behaviour injected here.
-	if *createInstances == true {
+	if *createImport == true {
+		err = executeImportScript(&client)
+	} else if *createInstances == true {
 		err = executeInstanceScript(&client)
 	} else if *createCode == true {
 		err = executeCodeScript(&client)
@@ -123,6 +128,31 @@ func executeInstanceScript(client *gremgo.Client) error {
 			return err
 		}
 	}
+	return nil
+}
+
+func executeImportScript(client *gremgo.Client) error {
+	if err := removeInstances(client); err != nil {
+		return err
+	}
+
+	nDatasets = 1
+	nEditions = 1
+	nVersions = 1
+	instanceID = 54321
+
+	if err := makeForOneDataset(client, 11111); err != nil {
+		return err
+	}
+
+	if err := makeAndLinkTheDimensions(client); err != nil {
+		return err
+	}
+
+	if err := makeAndLinkObservations(client); err != nil {
+		return err
+	}
+
 	return nil
 }
 
@@ -176,7 +206,7 @@ func makeForOneEdition(client *gremgo.Client, datasetSuffix int, editionSuffix i
 var instanceID int
 
 func makeForOneVersion(client *gremgo.Client, datasetSuffix int, editionSuffix int, version int) error {
-	instanceLabel := fmt.Sprintf("_instance_%d", instanceID)
+	instanceLabel := fmt.Sprintf("_%d_Instance", instanceID)
 	instanceID++
 
 	dataset := fmt.Sprintf("test_dataset_%d", datasetSuffix)
@@ -186,11 +216,74 @@ func makeForOneVersion(client *gremgo.Client, datasetSuffix int, editionSuffix i
 	// The dataset argument is repeated below deliberately.
 	// The version argument alone is (int).
 	qry := fmt.Sprintf(makeInstanceNodeQry, instanceLabel, magicMarkerForThisScriptsInstances, dataset,
-		dataset, edition, version, isPub)
+		dataset, edition, version, header, isPub)
 	_, err := client.Execute(qry, nil, nil)
 	if err != nil {
 		return err
 	}
+	return nil
+}
+
+var header = "v4_0,geo,geo,age,age,sic,sic"
+var ageLabel = "age"
+var geoLabel = "geo"
+var sicLabel = "sic"
+var dimensions = map[string][]string{
+	sicLabel: []string{"A", "02", "02.40", "02.20", "02.10", "02.3", "02.30", "01", "01.7"}, //"02.4", "02.2", "02.1" excluded to trigger has_data=false on hierarchy
+	geoLabel: []string{"uk"},
+	ageLabel: []string{"5", "15", "25", "35", "45", "55"},
+}
+
+func makeAndLinkTheDimensions(client *gremgo.Client) error {
+	for dimensionID, options := range dimensions {
+		dimensionLabel := fmt.Sprintf("_%d_%s", instanceID, dimensionID)
+
+		for _, opt := range options {
+			q := fmt.Sprintf(makeDimensionNodeQry, dimensionLabel, magicMarkerForThisScriptsInstances, opt, fmt.Sprintf("_%d_Instance", instanceID))
+			if _, err := client.Execute(q, nil, nil); err != nil {
+				return err
+			}
+		}
+	}
+
+	return nil
+}
+
+func makeAndLinkObservations(client *gremgo.Client) error {
+	count := 1
+	geo := dimensions[geoLabel][0]
+	dimGeo := fmt.Sprintf("_%d_%s", instanceID, geoLabel)
+	observationLabel := fmt.Sprintf("_%d_observation", instanceID)
+	for _, age := range dimensions[ageLabel] {
+		dimAge := fmt.Sprintf("_%d_%s", instanceID, ageLabel)
+		for _, sic := range dimensions[sicLabel] {
+			dimSic := fmt.Sprintf("_%d_%s", instanceID, sicLabel)
+
+			observation := count * 100
+			row := strconv.Itoa(observation) + "," + geoLabel + "," + geo + "," + sicLabel + "," + sic + "," + ageLabel + "," + age
+
+			obsNodeQry := fmt.Sprintf(makeObservationNodeQryPart,
+				observationLabel,
+				magicMarkerForThisScriptsInstances,
+				observation,
+				count,
+				row,
+			)
+			obsNodeQry += fmt.Sprintf(makeIsValueOfEdgePart, dimAge, age)
+			obsNodeQry += fmt.Sprintf(makeIsValueOfEdgePart, dimSic, sic)
+			obsNodeQry += fmt.Sprintf(makeIsValueOfEdgePart, dimGeo, geo)
+
+			obsNodeQry = strings.Trim(obsNodeQry, ".")
+
+			fmt.Println("observation query: " + obsNodeQry)
+			_, err := client.Execute(obsNodeQry, nil, nil)
+			if err != nil {
+				return err
+			}
+			count++
+		}
+	}
+
 	return nil
 }
 
@@ -217,8 +310,24 @@ const makeInstanceNodeQry = `g.addV('%s').
 	property(single, 'dataset_id', '%s').
 	property(single, 'edition', '%s').
 	property(single, 'version', %d).
-	property(single, 'is_published', %v)
-	`
+	property(single, 'header', '%s').
+	property(single, 'is_published', %v)`
+
+const makeDimensionNodeQry = `g.addV('%s').
+	property(single, '%s', true).
+	property(single, 'value', '%s').
+	addE('has_dimension').
+		from(g.V().hasLabel('%s'))`
+
+const makeObservationNodeQryPart = `g.addV('%s').
+	property(single, '%s', true).
+	property(single, 'value', '%s').
+	property(single, 'rowIndex', '%s').
+	property(single, 'row', '%s').`
+
+const makeIsValueOfEdgePart = `
+	addE('isValueOf').
+	to(g.V().hasLabel('%s').has('value', '%s')).outV().`
 
 const makeCodeNodeQry = `g.addV('_code').as('C').
     property(single, '%s', true).
