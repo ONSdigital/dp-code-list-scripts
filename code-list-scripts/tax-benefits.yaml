@@ -1,0 +1,17 @@
+definition:
+  - datasets: tax benefit dataset - TaxBenefitStats
+imports:
+  - language: cypher
+    files:
+      - cypher/calendar-years.cypher
+      - cypher/income-quintile.cypher
+      - cypher/income-type.cypher
+      - cypher/ashe-statistics.cypher
+      - ../geo-specific-codelist/uk-only.cypher
+  - language: gremlin
+    files:
+      - gremlin/calendar-years.grm
+      - gremlin/income-quintile.grm
+      - gremlin/income-type.grm
+      - gremlin/ashe-statistics.grm
+      - ../geo-specific-codelist/gremlin/uk-only.grm
