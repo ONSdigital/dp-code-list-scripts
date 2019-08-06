@@ -7,3 +7,5 @@ MERGE (node:`_code`:`_code_type-of-prices` { value:"cvmpub" });
 MATCH (parent:`_code_list`:`_code_list_type-of-prices`),(node:`_code`:`_code_type-of-prices` { value:"cvmpub" }) MERGE (node)-[:usedBy { label:"Chained Volume Measure for Publish"}]->(parent);
 MERGE (node:`_code`:`_code_type-of-prices` { value:"idef" });
 MATCH (parent:`_code_list`:`_code_list_type-of-prices`),(node:`_code`:`_code_type-of-prices` { value:"idef" }) MERGE (node)-[:usedBy { label:"Implied deflator"}]->(parent);
+MERGE (node:`_code`:`_code_type-of-prices` { value:"cvm" });
+MATCH (parent:`_code_list`:`_code_list_type-of-prices`),(node:`_code`:`_code_type-of-prices` { value:"cvm" }) MERGE (node)-[:usedBy { label:"Chained Volume Measure"}]->(parent);
