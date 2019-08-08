@@ -16,7 +16,7 @@ g.V().hasLabel('_code').has('listID', 'remaining-life-expectancy').has('value', 
   g.V().hasLabel('_code').has('listID', 'remaining-life-expectancy').has('value', '15-years-remaining-life-expectancy').
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'remaining-life-expectancy').has('edition', 'one-off')
-    ).property(single, 'label', '% with 15 years remaining LE')).next()
+    ).property(single, 'label', '% with 15 years remaining life expectancy')).next()
 
 
 g.V().hasLabel('_code').has('listID', 'remaining-life-expectancy').has('value', '5-years-remaining-life-expectancy').
@@ -27,7 +27,7 @@ g.V().hasLabel('_code').has('listID', 'remaining-life-expectancy').has('value', 
   g.V().hasLabel('_code').has('listID', 'remaining-life-expectancy').has('value', '5-years-remaining-life-expectancy').
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'remaining-life-expectancy').has('edition', 'one-off')
-    ).property(single, 'label', ' % with 5 years remaining LE')).next()
+    ).property(single, 'label', '% with 5 years remaining life expectancy')).next()
 
 
 g.V().hasLabel('_code').has('listID', 'remaining-life-expectancy').has('value', 'prospective-old-age-dependancy-ratio').

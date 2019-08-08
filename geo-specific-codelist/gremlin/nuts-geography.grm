@@ -2582,25 +2582,3 @@ g.V().hasLabel('_code').has('listID', 'geography').has('value', 'UKZ').outE().fo
       g.V().hasLabel('_code_list').has('listID', 'nuts-geography').has('edition', 'one-off')
     ).property(single, 'label', 'Extra-regio')).next()
 
-
-g.V().hasLabel('_code').has('listID', 'geography').has('value', 'UKZZ').
-  fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'geography').property(single, 'value', 'UKZZ')
-  ).next()
-g.V().hasLabel('_code').has('listID', 'geography').has('value', 'UKZZ').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'UKZZ').
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'nuts-geography').has('edition', 'one-off')
-    ).property(single, 'label', 'Extra-regio')).next()
-
-
-g.V().hasLabel('_code').has('listID', 'geography').has('value', 'UKZZZ').
-  fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'geography').property(single, 'value', 'UKZZZ')
-  ).next()
-g.V().hasLabel('_code').has('listID', 'geography').has('value', 'UKZZZ').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'UKZZZ').
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'nuts-geography').has('edition', 'one-off')
-    ).property(single, 'label', 'Extra-regio')).next()
-

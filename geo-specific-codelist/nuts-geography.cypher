@@ -469,7 +469,3 @@ MERGE (node:`_code`:`_code_geography` { value:"T" });
 MATCH (parent:`_code_list`:`_code_list_nuts-geography`),(node:`_code`:`_code_geography` { value:"T" }) MERGE (node)-[:usedBy { label:"Total"}]->(parent);
 MERGE (node:`_code`:`_code_geography` { value:"UKZ" });
 MATCH (parent:`_code_list`:`_code_list_nuts-geography`),(node:`_code`:`_code_geography` { value:"UKZ" }) MERGE (node)-[:usedBy { label:"Extra-regio"}]->(parent);
-MERGE (node:`_code`:`_code_geography` { value:"UKZZ" });
-MATCH (parent:`_code_list`:`_code_list_nuts-geography`),(node:`_code`:`_code_geography` { value:"UKZZ" }) MERGE (node)-[:usedBy { label:"Extra-regio"}]->(parent);
-MERGE (node:`_code`:`_code_geography` { value:"UKZZZ" });
-MATCH (parent:`_code_list`:`_code_list_nuts-geography`),(node:`_code`:`_code_geography` { value:"UKZZZ" }) MERGE (node)-[:usedBy { label:"Extra-regio"}]->(parent);
