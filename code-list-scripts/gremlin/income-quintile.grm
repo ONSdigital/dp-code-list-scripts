@@ -1,0 +1,75 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'income-quintile').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'income-quintile').
+    property(single, 'edition', 'one-off').
+    property(single, 'label', 'quintile')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'income-quintile').has('value', '1st').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'income-quintile').property(single, 'value', '1st')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'income-quintile').has('value', '1st').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'income-quintile').has('value', '1st').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'income-quintile').has('edition', 'one-off')
+    ).property(single, 'label', '1st')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'income-quintile').has('value', '2nd').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'income-quintile').property(single, 'value', '2nd')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'income-quintile').has('value', '2nd').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'income-quintile').has('value', '2nd').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'income-quintile').has('edition', 'one-off')
+    ).property(single, 'label', '2nd')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'income-quintile').has('value', '3rd').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'income-quintile').property(single, 'value', '3rd')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'income-quintile').has('value', '3rd').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'income-quintile').has('value', '3rd').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'income-quintile').has('edition', 'one-off')
+    ).property(single, 'label', '3rd')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'income-quintile').has('value', '4th').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'income-quintile').property(single, 'value', '4th')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'income-quintile').has('value', '4th').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'income-quintile').has('value', '4th').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'income-quintile').has('edition', 'one-off')
+    ).property(single, 'label', '4th')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'income-quintile').has('value', '5th').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'income-quintile').property(single, 'value', '5th')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'income-quintile').has('value', '5th').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'income-quintile').has('value', '5th').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'income-quintile').has('edition', 'one-off')
+    ).property(single, 'label', '5th')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'income-quintile').has('value', 'all').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'income-quintile').property(single, 'value', 'all')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'income-quintile').has('value', 'all').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'income-quintile').has('value', 'all').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'income-quintile').has('edition', 'one-off')
+    ).property(single, 'label', 'All')).next()
+

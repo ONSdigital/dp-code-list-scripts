@@ -40,3 +40,14 @@ g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', 'idef').out
       g.V().hasLabel('_code_list').has('listID', 'type-of-prices').has('edition', 'one-off')
     ).property(single, 'label', 'Implied deflator')).next()
 
+
+g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', 'cvm').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', 'cvm')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', 'cvm').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', 'cvm').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'type-of-prices').has('edition', 'one-off')
+    ).property(single, 'label', 'Chained Volume Measure')).next()
+

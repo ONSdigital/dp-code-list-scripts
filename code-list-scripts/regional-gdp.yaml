@@ -1,0 +1,19 @@
+definition:
+  - datasets: all regional GDP datasets - RegionalGDPYear, RegionalGDPQuarter
+imports:
+  - language: cypher
+    files:
+      - cypher/calendar-years.cypher
+      - cypher/yyyy-qq.cypher
+      - cypher/gdp-sic.cypher
+      - cypher/gdp-measure.cypher
+      - cypher/type-of-prices.cypher
+      - ../geo-specific-codelist/nuts-geography.cypher
+  - language: gremlin
+    files:
+      - gremlin/calendar-years.grm
+      - gremlin/yyyy-qq.grm
+      - gremlin/gdp-sic.grm
+      - gremlin/gdp-measure.grm
+      - gremlin/type-of-prices.grm
+      - ../geo-specific-codelist/gremlin/nuts-geography.grm

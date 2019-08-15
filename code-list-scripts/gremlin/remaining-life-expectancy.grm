@@ -1,0 +1,42 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'remaining-life-expectancy').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'remaining-life-expectancy').
+    property(single, 'label', 'remaininglifeexpectancy').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'remaining-life-expectancy').has('value', '15-years-remaining-life-expectancy').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'remaining-life-expectancy').property(single, 'value', '15-years-remaining-life-expectancy')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'remaining-life-expectancy').has('value', '15-years-remaining-life-expectancy').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'remaining-life-expectancy').has('value', '15-years-remaining-life-expectancy').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'remaining-life-expectancy').has('edition', 'one-off')
+    ).property(single, 'label', '% with 15 years remaining life expectancy')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'remaining-life-expectancy').has('value', '5-years-remaining-life-expectancy').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'remaining-life-expectancy').property(single, 'value', '5-years-remaining-life-expectancy')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'remaining-life-expectancy').has('value', '5-years-remaining-life-expectancy').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'remaining-life-expectancy').has('value', '5-years-remaining-life-expectancy').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'remaining-life-expectancy').has('edition', 'one-off')
+    ).property(single, 'label', '% with 5 years remaining life expectancy')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'remaining-life-expectancy').has('value', 'prospective-old-age-dependancy-ratio').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'remaining-life-expectancy').property(single, 'value', 'prospective-old-age-dependancy-ratio')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'remaining-life-expectancy').has('value', 'prospective-old-age-dependancy-ratio').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'remaining-life-expectancy').has('value', 'prospective-old-age-dependancy-ratio').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'remaining-life-expectancy').has('edition', 'one-off')
+    ).property(single, 'label', 'Prospective old age dependancy ratio')).next()
+

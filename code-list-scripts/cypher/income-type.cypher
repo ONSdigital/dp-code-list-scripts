@@ -1,0 +1,13 @@
+CREATE CONSTRAINT ON (n:`_code_income-type`) ASSERT n.code IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_income-type`) ASSERT n.code IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_income-type` { label:"income", edition:"one-off" });
+MERGE (node:`_code`:`_code_income-type` { value:"original" });
+MATCH (parent:`_code_list`:`_code_list_income-type`),(node:`_code`:`_code_income-type` { value:"original" }) MERGE (node)-[:usedBy { label:"Original"}]->(parent);
+MERGE (node:`_code`:`_code_income-type` { value:"gross" });
+MATCH (parent:`_code_list`:`_code_list_income-type`),(node:`_code`:`_code_income-type` { value:"gross" }) MERGE (node)-[:usedBy { label:"Gross"}]->(parent);
+MERGE (node:`_code`:`_code_income-type` { value:"disposable" });
+MATCH (parent:`_code_list`:`_code_list_income-type`),(node:`_code`:`_code_income-type` { value:"disposable" }) MERGE (node)-[:usedBy { label:"Disposable"}]->(parent);
+MERGE (node:`_code`:`_code_income-type` { value:"post-tax" });
+MATCH (parent:`_code_list`:`_code_list_income-type`),(node:`_code`:`_code_income-type` { value:"post-tax" }) MERGE (node)-[:usedBy { label:"Post-tax"}]->(parent);
+MERGE (node:`_code`:`_code_income-type` { value:"final" });
+MATCH (parent:`_code_list`:`_code_list_income-type`),(node:`_code`:`_code_income-type` { value:"final" }) MERGE (node)-[:usedBy { label:"Final"}]->(parent);
