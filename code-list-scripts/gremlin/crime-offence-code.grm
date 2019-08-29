@@ -19,45 +19,45 @@ g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '2').ou
     ).property(single, 'label', 'Attempted murder')).next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '1-4_1-4_10-4_2').
+g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '1--4-1--4-10--4-2').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'crime-offence-code').property(single, 'value', '1-4_1-4_10-4_2')
+    property(single, 'listID', 'crime-offence-code').property(single, 'value', '1--4-1--4-10--4-2')
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '1-4_1-4_10-4_2').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '1-4_1-4_10-4_2').
+g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '1--4-1--4-10--4-2').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '1--4-1--4-10--4-2').
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'crime-offence-code').has('edition', 'one-off')
     ).property(single, 'label', 'Homicide')).next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '17-20').
+g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '17--20').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'crime-offence-code').property(single, 'value', '17-20')
+    property(single, 'listID', 'crime-offence-code').property(single, 'value', '17--20')
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '17-20').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '17-20').
+g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '17--20').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '17--20').
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'crime-offence-code').has('edition', 'one-off')
     ).property(single, 'label', 'Sexual assault')).next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '19C-H').
+g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '19C--H').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'crime-offence-code').property(single, 'value', '19C-H')
+    property(single, 'listID', 'crime-offence-code').property(single, 'value', '19C--H')
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '19C-H').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '19C-H').
+g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '19C--H').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '19C--H').
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'crime-offence-code').has('edition', 'one-off')
     ).property(single, 'label', 'Rape')).next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '34A-34B').
+g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '34A--34B').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'crime-offence-code').property(single, 'value', '34A-34B')
+    property(single, 'listID', 'crime-offence-code').property(single, 'value', '34A--34B')
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '34A-34B').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '34A-34B').
+g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '34A--34B').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '34A--34B').
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'crime-offence-code').has('edition', 'one-off')
     ).property(single, 'label', 'Robbery')).next()
@@ -74,23 +74,23 @@ g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '3B').o
     ).property(single, 'label', 'Threats to kill')).next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '5D-8N-8P').
+g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '5D--8N--8P').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'crime-offence-code').property(single, 'value', '5D-8N-8P')
+    property(single, 'listID', 'crime-offence-code').property(single, 'value', '5D--8N--8P')
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '5D-8N-8P').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '5D-8N-8P').
+g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '5D--8N--8P').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '5D--8N--8P').
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'crime-offence-code').has('edition', 'one-off')
     ).property(single, 'label', 'Assault with injury and assault with intent to cause serious harm')).next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '5D-8N-8P-8S').
+g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '5D--8N--8P--8S').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'crime-offence-code').property(single, 'value', '5D-8N-8P-8S')
+    property(single, 'listID', 'crime-offence-code').property(single, 'value', '5D--8N--8P--8S')
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '5D-8N-8P-8S').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '5D-8N-8P-8S').
+g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '5D--8N--8P--8S').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'crime-offence-code').has('value', '5D--8N--8P--8S').
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'crime-offence-code').has('edition', 'one-off')
     ).property(single, 'label', 'Assault with injury and assault with intent to cause serious harm (including on a constable)')).next()
