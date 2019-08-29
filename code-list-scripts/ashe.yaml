@@ -16,6 +16,7 @@ imports:
       - ../geo-specific-codelist/admin-geography.cypher
       - ../geo-specific-codelist/parliamentary-geography.cypher
       - ../geo-specific-codelist/travel-to-work-geography.cypher
+      - ../geo-specific-codelist/local-enterprise-partnership-geography.cypher
       - cypher/sic.cypher
   - language: gremlin
     files:
@@ -31,4 +32,5 @@ imports:
       - ../geo-specific-codelist/gremlin/admin-geography.grm
       - ../geo-specific-codelist/gremlin/parliamentary-geography.grm
       - ../geo-specific-codelist/gremlin/travel-to-work-geography.grm
+      - ../geo-specific-codelist/local-enterprise-partnership-geography.grm
       - gremlin/sic.grm
