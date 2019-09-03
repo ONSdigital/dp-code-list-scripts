@@ -1,0 +1,86 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'age-groups').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', "age-groups").
+    property(single, 'label', "agegroups").
+    property(single, 'edition', "one-off")
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "65+").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'age-groups').property(single, 'value', "65+")
+  ).next()
+g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "65+").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "65+").
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'age-groups').has('edition', 'one-off')
+    ).property(single, 'label', "65+")).next()
+
+
+g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "85+").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'age-groups').property(single, 'value', "85+")
+  ).next()
+g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "85+").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "85+").
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'age-groups').has('edition', 'one-off')
+    ).property(single, 'label', "85+")).next()
+
+
+g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "0-15").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'age-groups').property(single, 'value', "0-15")
+  ).next()
+g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "0-15").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "0-15").
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'age-groups').has('edition', 'one-off')
+    ).property(single, 'label', "0-15")).next()
+
+
+g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "16-64").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'age-groups').property(single, 'value', "16-64")
+  ).next()
+g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "16-64").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "16-64").
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'age-groups').has('edition', 'one-off')
+    ).property(single, 'label', "16-64")).next()
+
+
+g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "spa+").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'age-groups').property(single, 'value', "spa+")
+  ).next()
+g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "spa+").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "spa+").
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'age-groups').has('edition', 'one-off')
+    ).property(single, 'label', "State pension age+")).next()
+
+
+g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "16-spa").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'age-groups').property(single, 'value', "16-spa")
+  ).next()
+g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "16-spa").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "16-spa").
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'age-groups').has('edition', 'one-off')
+    ).property(single, 'label', "16-State pension age")).next()
+
+
+g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "old-age-dependancy-ratio").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'age-groups').property(single, 'value', "old-age-dependancy-ratio")
+  ).next()
+g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "old-age-dependancy-ratio").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'age-groups').has('value', "old-age-dependancy-ratio").
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'age-groups').has('edition', 'one-off')
+    ).property(single, 'label', "Old age dependancy ratio")).next()
+

@@ -1,0 +1,42 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'adult-sex').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', "adult-sex").
+    property(single, 'edition', "one-off").
+    property(single, 'label', "sex")
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'adult-sex').has('value', "people").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'adult-sex').property(single, 'value', "people")
+  ).next()
+g.V().hasLabel('_code').has('listID', 'adult-sex').has('value', "people").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'adult-sex').has('value', "people").
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'adult-sex').has('edition', 'one-off')
+    ).property(single, 'label', "People")).next()
+
+
+g.V().hasLabel('_code').has('listID', 'adult-sex').has('value', "men").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'adult-sex').property(single, 'value', "men")
+  ).next()
+g.V().hasLabel('_code').has('listID', 'adult-sex').has('value', "men").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'adult-sex').has('value', "men").
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'adult-sex').has('edition', 'one-off')
+    ).property(single, 'label', "Men")).next()
+
+
+g.V().hasLabel('_code').has('listID', 'adult-sex').has('value', "women").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'adult-sex').property(single, 'value', "women")
+  ).next()
+g.V().hasLabel('_code').has('listID', 'adult-sex').has('value', "women").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'adult-sex').has('value', "women").
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'adult-sex').has('edition', 'one-off')
+    ).property(single, 'label', "Women")).next()
+

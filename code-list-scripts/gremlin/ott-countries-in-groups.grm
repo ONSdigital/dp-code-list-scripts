@@ -1,768 +1,768 @@
 
 g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
-    property(single, 'listID', 'ott-countries-in-groups').
-    property(single, 'label', 'regions').
-    property(single, 'edition', 'one-off')
+    property(single, 'listID', "ott-countries-in-groups").
+    property(single, 'label', "regions").
+    property(single, 'edition', "one-off")
   ).next()
 
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-asia').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-asia").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'other-asia')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "other-asia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-asia').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-asia').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-asia").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-asia").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Other Asia')).next()
+    ).property(single, 'label', "Other Asia")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-eastern-europe').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-eastern-europe").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'other-eastern-europe')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "other-eastern-europe")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-eastern-europe').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-eastern-europe').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-eastern-europe").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-eastern-europe").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Other Eastern Europe')).next()
+    ).property(single, 'label', "Other Eastern Europe")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-africa').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-africa").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'other-africa')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "other-africa")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-africa').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-africa').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-africa").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-africa").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Other Africa')).next()
+    ).property(single, 'label', "Other Africa")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-western-europe').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-western-europe").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'other-western-europe')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "other-western-europe")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-western-europe').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-western-europe').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-western-europe").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-western-europe").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Other Western Europe')).next()
+    ).property(single, 'label', "Other Western Europe")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-southern-africa').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-southern-africa").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'other-southern-africa')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "other-southern-africa")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-southern-africa').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-southern-africa').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-southern-africa").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-southern-africa").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Other Southern Africa')).next()
+    ).property(single, 'label', "Other Southern Africa")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-central-and-south-america').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-central-and-south-america").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'other-central-and-south-america')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "other-central-and-south-america")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-central-and-south-america').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-central-and-south-america').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-central-and-south-america").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-central-and-south-america").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Other Central and South America')).next()
+    ).property(single, 'label', "Other Central and South America")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'argentina').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "argentina").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'argentina')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "argentina")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'argentina').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'argentina').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "argentina").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "argentina").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Argentina')).next()
+    ).property(single, 'label', "Argentina")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'australia').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "australia").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'australia')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "australia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'australia').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'australia').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "australia").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "australia").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Australia')).next()
+    ).property(single, 'label', "Australia")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'austria').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "austria").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'austria')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "austria")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'austria').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'austria').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "austria").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "austria").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Austria')).next()
+    ).property(single, 'label', "Austria")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'bahrain').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "bahrain").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'bahrain')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "bahrain")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'bahrain').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'bahrain').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "bahrain").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "bahrain").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Bahrain')).next()
+    ).property(single, 'label', "Bahrain")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'belgium').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "belgium").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'belgium')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "belgium")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'belgium').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'belgium').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "belgium").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "belgium").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Belgium')).next()
+    ).property(single, 'label', "Belgium")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'brazil').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "brazil").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'brazil')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "brazil")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'brazil').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'brazil').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "brazil").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "brazil").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Brazil')).next()
+    ).property(single, 'label', "Brazil")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'bulgaria').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "bulgaria").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'bulgaria')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "bulgaria")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'bulgaria').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'bulgaria').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "bulgaria").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "bulgaria").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Bulgaria')).next()
+    ).property(single, 'label', "Bulgaria")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'canada').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "canada").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'canada')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "canada")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'canada').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'canada').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "canada").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "canada").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Canada')).next()
+    ).property(single, 'label', "Canada")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'chile').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "chile").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'chile')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "chile")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'chile').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'chile').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "chile").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "chile").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Chile')).next()
+    ).property(single, 'label', "Chile")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'china').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "china").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'china')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "china")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'china').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'china').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "china").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "china").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'China')).next()
+    ).property(single, 'label', "China")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'other')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "other")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Other')).next()
+    ).property(single, 'label', "Other")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'denmark').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "denmark").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'denmark')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "denmark")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'denmark').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'denmark').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "denmark").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "denmark").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Denmark')).next()
+    ).property(single, 'label', "Denmark")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'egypt').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "egypt").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'egypt')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "egypt")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'egypt').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'egypt').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "egypt").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "egypt").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Egypt')).next()
+    ).property(single, 'label', "Egypt")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'finland').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "finland").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'finland')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "finland")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'finland').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'finland').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "finland").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "finland").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Finland')).next()
+    ).property(single, 'label', "Finland")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'france').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "france").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'france')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "france")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'france').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'france').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "france").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "france").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'France')).next()
+    ).property(single, 'label', "France")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'germany').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "germany").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'germany')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "germany")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'germany').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'germany').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "germany").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "germany").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Germany')).next()
+    ).property(single, 'label', "Germany")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'greece').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "greece").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'greece')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "greece")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'greece').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'greece').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "greece").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "greece").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Greece')).next()
+    ).property(single, 'label', "Greece")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'hong-kong').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "hong-kong").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'hong-kong')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "hong-kong")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'hong-kong').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'hong-kong').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "hong-kong").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "hong-kong").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Hong Kong')).next()
+    ).property(single, 'label', "Hong Kong")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'hungary').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "hungary").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'hungary')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "hungary")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'hungary').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'hungary').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "hungary").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "hungary").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Hungary')).next()
+    ).property(single, 'label', "Hungary")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'iceland').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "iceland").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'iceland')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "iceland")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'iceland').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'iceland').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "iceland").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "iceland").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Iceland')).next()
+    ).property(single, 'label', "Iceland")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'india').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "india").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'india')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "india")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'india').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'india').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "india").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "india").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'India')).next()
+    ).property(single, 'label', "India")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'indonesia').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "indonesia").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'indonesia')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "indonesia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'indonesia').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'indonesia').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "indonesia").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "indonesia").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Indonesia')).next()
+    ).property(single, 'label', "Indonesia")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-middle-east').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-middle-east").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'other-middle-east')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "other-middle-east")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-middle-east').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-middle-east').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-middle-east").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-middle-east").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Other Middle East')).next()
+    ).property(single, 'label', "Other Middle East")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'irish-republic').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "irish-republic").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'irish-republic')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "irish-republic")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'irish-republic').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'irish-republic').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "irish-republic").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "irish-republic").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Irish Republic')).next()
+    ).property(single, 'label', "Irish Republic")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'israel-including-palestine').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "israel-including-palestine").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'israel-including-palestine')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "israel-including-palestine")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'israel-including-palestine').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'israel-including-palestine').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "israel-including-palestine").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "israel-including-palestine").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Israel (including Palestine)')).next()
+    ).property(single, 'label', "Israel (including Palestine)")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'italy').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "italy").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'italy')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "italy")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'italy').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'italy').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "italy").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "italy").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Italy')).next()
+    ).property(single, 'label', "Italy")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'japan').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "japan").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'japan')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "japan")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'japan').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'japan').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "japan").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "japan").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Japan')).next()
+    ).property(single, 'label', "Japan")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'kenya').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "kenya").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'kenya')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "kenya")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'kenya').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'kenya').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "kenya").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "kenya").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Kenya')).next()
+    ).property(single, 'label', "Kenya")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'kuwait').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "kuwait").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'kuwait')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "kuwait")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'kuwait').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'kuwait').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "kuwait").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "kuwait").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Kuwait')).next()
+    ).property(single, 'label', "Kuwait")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'luxembourg').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "luxembourg").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'luxembourg')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "luxembourg")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'luxembourg').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'luxembourg').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "luxembourg").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "luxembourg").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Luxembourg')).next()
+    ).property(single, 'label', "Luxembourg")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'malaysia').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "malaysia").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'malaysia')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "malaysia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'malaysia').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'malaysia').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "malaysia").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "malaysia").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Malaysia')).next()
+    ).property(single, 'label', "Malaysia")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'mexico').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "mexico").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'mexico')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "mexico")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'mexico').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'mexico').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "mexico").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "mexico").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Mexico')).next()
+    ).property(single, 'label', "Mexico")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'netherlands').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "netherlands").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'netherlands')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "netherlands")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'netherlands').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'netherlands').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "netherlands").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "netherlands").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Netherlands')).next()
+    ).property(single, 'label', "Netherlands")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'new-zealand').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "new-zealand").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'new-zealand')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "new-zealand")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'new-zealand').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'new-zealand').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "new-zealand").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "new-zealand").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'New Zealand')).next()
+    ).property(single, 'label', "New Zealand")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'nigeria').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "nigeria").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'nigeria')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "nigeria")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'nigeria').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'nigeria').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "nigeria").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "nigeria").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Nigeria')).next()
+    ).property(single, 'label', "Nigeria")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'norway').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "norway").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'norway')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "norway")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'norway').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'norway').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "norway").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "norway").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Norway')).next()
+    ).property(single, 'label', "Norway")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'oman').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "oman").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'oman')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "oman")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'oman').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'oman').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "oman").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "oman").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Oman')).next()
+    ).property(single, 'label', "Oman")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'pakistan').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "pakistan").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'pakistan')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "pakistan")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'pakistan').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'pakistan').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "pakistan").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "pakistan").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Pakistan')).next()
+    ).property(single, 'label', "Pakistan")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'poland').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "poland").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'poland')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "poland")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'poland').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'poland').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "poland").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "poland").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Poland')).next()
+    ).property(single, 'label', "Poland")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'portugal').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "portugal").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'portugal')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "portugal")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'portugal').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'portugal').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "portugal").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "portugal").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Portugal')).next()
+    ).property(single, 'label', "Portugal")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'qatar').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "qatar").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'qatar')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "qatar")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'qatar').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'qatar').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "qatar").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "qatar").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Qatar')).next()
+    ).property(single, 'label', "Qatar")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'romania').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "romania").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'romania')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "romania")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'romania').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'romania').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "romania").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "romania").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Romania')).next()
+    ).property(single, 'label', "Romania")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'russia').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "russia").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'russia')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "russia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'russia').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'russia').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "russia").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "russia").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Russia')).next()
+    ).property(single, 'label', "Russia")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'saudi-arabia').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "saudi-arabia").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'saudi-arabia')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "saudi-arabia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'saudi-arabia').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'saudi-arabia').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "saudi-arabia").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "saudi-arabia").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Saudi Arabia')).next()
+    ).property(single, 'label', "Saudi Arabia")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'serbia').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "serbia").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'serbia')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "serbia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'serbia').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'serbia').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "serbia").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "serbia").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Serbia')).next()
+    ).property(single, 'label', "Serbia")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'singapore').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "singapore").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'singapore')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "singapore")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'singapore').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'singapore').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "singapore").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "singapore").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Singapore')).next()
+    ).property(single, 'label', "Singapore")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'south-africa').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "south-africa").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'south-africa')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "south-africa")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'south-africa').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'south-africa').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "south-africa").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "south-africa").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'South Africa')).next()
+    ).property(single, 'label', "South Africa")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'south-korea').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "south-korea").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'south-korea')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "south-korea")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'south-korea').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'south-korea').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "south-korea").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "south-korea").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'South Korea')).next()
+    ).property(single, 'label', "South Korea")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'spain-balearic-islands').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "spain-balearic-islands").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'spain-balearic-islands')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "spain-balearic-islands")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'spain-balearic-islands').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'spain-balearic-islands').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "spain-balearic-islands").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "spain-balearic-islands").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Spain, Balearic Islands')).next()
+    ).property(single, 'label', "Spain, Balearic Islands")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'sweden').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "sweden").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'sweden')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "sweden")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'sweden').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'sweden').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "sweden").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "sweden").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Sweden')).next()
+    ).property(single, 'label', "Sweden")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'switzerland').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "switzerland").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'switzerland')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "switzerland")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'switzerland').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'switzerland').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "switzerland").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "switzerland").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Switzerland')).next()
+    ).property(single, 'label', "Switzerland")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'taiwan').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "taiwan").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'taiwan')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "taiwan")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'taiwan').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'taiwan').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "taiwan").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "taiwan").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Taiwan')).next()
+    ).property(single, 'label', "Taiwan")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'thailand').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "thailand").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'thailand')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "thailand")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'thailand').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'thailand').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "thailand").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "thailand").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Thailand')).next()
+    ).property(single, 'label', "Thailand")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'czech-republic').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "czech-republic").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'czech-republic')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "czech-republic")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'czech-republic').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'czech-republic').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "czech-republic").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "czech-republic").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Czech Republic')).next()
+    ).property(single, 'label', "Czech Republic")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'turkey').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "turkey").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'turkey')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "turkey")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'turkey').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'turkey').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "turkey").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "turkey").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Turkey')).next()
+    ).property(single, 'label', "Turkey")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'united-arab-emirates').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "united-arab-emirates").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'united-arab-emirates')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "united-arab-emirates")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'united-arab-emirates').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'united-arab-emirates').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "united-arab-emirates").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "united-arab-emirates").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'United Arab Emirates')).next()
+    ).property(single, 'label', "United Arab Emirates")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'united-states-of-america').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "united-states-of-america").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'united-states-of-america')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "united-states-of-america")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'united-states-of-america').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'united-states-of-america').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "united-states-of-america").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "united-states-of-america").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'United States Of America')).next()
+    ).property(single, 'label', "United States Of America")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'asia').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "asia").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'asia')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "asia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'asia').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'asia').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "asia").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "asia").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Asia')).next()
+    ).property(single, 'label', "Asia")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'africa').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "africa").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'africa')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "africa")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'africa').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'africa').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "africa").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "africa").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Africa')).next()
+    ).property(single, 'label', "Africa")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'europe').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "europe").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'europe')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "europe")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'europe').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'europe').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "europe").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "europe").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Europe')).next()
+    ).property(single, 'label', "Europe")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'north-south-and-central-america').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "north-south-and-central-america").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'north-south-and-central-america')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "north-south-and-central-america")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'north-south-and-central-america').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'north-south-and-central-america').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "north-south-and-central-america").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "north-south-and-central-america").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'North, South and Central America')).next()
+    ).property(single, 'label', "North, South and Central America")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-region').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-region").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'other-region')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "other-region")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-region').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'other-region').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-region").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "other-region").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Other')).next()
+    ).property(single, 'label', "Other")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'rest-of-world').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "rest-of-world").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', 'rest-of-world')
+    property(single, 'listID', 'ott-countries-in-groups').property(single, 'value', "rest-of-world")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'rest-of-world').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', 'rest-of-world').
+g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "rest-of-world").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ott-countries-in-groups').has('value', "rest-of-world").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ott-countries-in-groups').has('edition', 'one-off')
-    ).property(single, 'label', 'Rest of World')).next()
+    ).property(single, 'label', "Rest of World")).next()
 

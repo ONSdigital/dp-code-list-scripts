@@ -2,63 +2,63 @@
 
 g.V().hasLabel('_code_list').has('listID', 'house-price-variable').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
-    property(single, 'listID', 'house-price-variable').
-    property(single, 'label', 'housepricevariable').
-    property(single, 'edition', 'one-off')
+    property(single, 'listID', "house-price-variable").
+    property(single, 'label', "housepricevariable").
+    property(single, 'edition', "one-off")
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', 'mean').
+g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', "mean").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'house-price-variable').property(single, 'value', 'mean')
+    property(single, 'listID', 'house-price-variable').property(single, 'value', "mean")
   ).next()
-g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', 'mean').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', 'mean').
+g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', "mean").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', "mean").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'house-price-variable').has('edition', 'one-off')
-    ).property(single, 'label', 'Mean price')).next()
+    ).property(single, 'label', "Mean price")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', 'median').
+g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', "median").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'house-price-variable').property(single, 'value', 'median')
+    property(single, 'listID', 'house-price-variable').property(single, 'value', "median")
   ).next()
-g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', 'median').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', 'median').
+g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', "median").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', "median").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'house-price-variable').has('edition', 'one-off')
-    ).property(single, 'label', 'Median price')).next()
+    ).property(single, 'label', "Median price")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', 'lower-quartile').
+g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', "lower-quartile").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'house-price-variable').property(single, 'value', 'lower-quartile')
+    property(single, 'listID', 'house-price-variable').property(single, 'value', "lower-quartile")
   ).next()
-g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', 'lower-quartile').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', 'lower-quartile').
+g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', "lower-quartile").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', "lower-quartile").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'house-price-variable').has('edition', 'one-off')
-    ).property(single, 'label', 'Lower quartile price')).next()
+    ).property(single, 'label', "Lower quartile price")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', 'tenth-percentile').
+g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', "tenth-percentile").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'house-price-variable').property(single, 'value', 'tenth-percentile')
+    property(single, 'listID', 'house-price-variable').property(single, 'value', "tenth-percentile")
   ).next()
-g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', 'tenth-percentile').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', 'tenth-percentile').
+g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', "tenth-percentile").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', "tenth-percentile").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'house-price-variable').has('edition', 'one-off')
-    ).property(single, 'label', 'Tenth percentile price')).next()
+    ).property(single, 'label', "Tenth percentile price")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', 'sales').
+g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', "sales").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'house-price-variable').property(single, 'value', 'sales')
+    property(single, 'listID', 'house-price-variable').property(single, 'value', "sales")
   ).next()
-g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', 'sales').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', 'sales').
+g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', "sales").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'house-price-variable').has('value', "sales").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'house-price-variable').has('edition', 'one-off')
-    ).property(single, 'label', 'Count of sales')).next()
+    ).property(single, 'label', "Count of sales")).next()
 

@@ -1,43 +1,43 @@
 g.V().hasLabel('_code_list').has('listID', 'ashe-sex').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
-    property(single, 'listID', 'ashe-sex').
-    property(single, 'label', 'sex').
-    property(single, 'edition', 'one-off')
+    property(single, 'listID', "ashe-sex").
+    property(single, 'label', "sex").
+    property(single, 'edition', "one-off")
   ).next()
 
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'ashe-sex').has('value', 'male').
+g.V().hasLabel('_code').has('listID', 'ashe-sex').has('value', "male").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ashe-sex').property(single, 'value', 'male')
+    property(single, 'listID', 'ashe-sex').property(single, 'value', "male")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ashe-sex').has('value', 'male').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ashe-sex').has('value', 'male').
+g.V().hasLabel('_code').has('listID', 'ashe-sex').has('value', "male").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-sex').has('value', "male").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ashe-sex').has('edition', 'one-off')
-    ).property(single, 'label', 'Male')).next()
+    ).property(single, 'label', "Male")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ashe-sex').has('value', 'female').
+g.V().hasLabel('_code').has('listID', 'ashe-sex').has('value', "female").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ashe-sex').property(single, 'value', 'female')
+    property(single, 'listID', 'ashe-sex').property(single, 'value', "female")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ashe-sex').has('value', 'female').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ashe-sex').has('value', 'female').
+g.V().hasLabel('_code').has('listID', 'ashe-sex').has('value', "female").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-sex').has('value', "female").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ashe-sex').has('edition', 'one-off')
-    ).property(single, 'label', 'Female')).next()
+    ).property(single, 'label', "Female")).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ashe-sex').has('value', 'all').
+g.V().hasLabel('_code').has('listID', 'ashe-sex').has('value', "all").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'ashe-sex').property(single, 'value', 'all')
+    property(single, 'listID', 'ashe-sex').property(single, 'value', "all")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ashe-sex').has('value', 'all').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ashe-sex').has('value', 'all').
+g.V().hasLabel('_code').has('listID', 'ashe-sex').has('value', "all").outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'ashe-sex').has('value', "all").
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'ashe-sex').has('edition', 'one-off')
-    ).property(single, 'label', 'All')).next()
+    ).property(single, 'label', "All")).next()
 
