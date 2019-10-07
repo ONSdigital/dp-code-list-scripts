@@ -283,6 +283,17 @@ g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', 'di
     ).property(single, 'label', 'Directly age-standardised rate')).next()
 
 
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '65+').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'five-year-age-brackets').property(single, 'value', '65+')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '65+').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'five-year-age-brackets').has('value', '65+').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'five-year-age-brackets').has('edition', 'one-off')
+    ).property(single, 'label', '65+')).next()
+
+
 
 
 
