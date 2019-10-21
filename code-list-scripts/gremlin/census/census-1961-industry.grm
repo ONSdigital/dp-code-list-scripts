@@ -1,0 +1,66 @@
+g.V().hasLabel('_code_list').has('listID', 'census-1961-industry').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'census-1961-industry').
+    property(single, 'label', 'industry').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-industry').has('value', 'agriculture').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-industry').property(single, 'value', 'agriculture')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-industry').has('value', 'agriculture').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-industry').has('value', 'agriculture').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-industry').has('edition', 'one-off')
+    ).property(single, 'label', 'Agriculture')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-industry').has('value', 'defence').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-industry').property(single, 'value', 'defence')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-industry').has('value', 'defence').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-industry').has('value', 'defence').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-industry').has('edition', 'one-off')
+    ).property(single, 'label', 'Defence')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-industry').has('value', 'mining').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-industry').property(single, 'value', 'mining')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-industry').has('value', 'mining').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-industry').has('value', 'mining').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-industry').has('edition', 'one-off')
+    ).property(single, 'label', 'Mining')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-industry').has('value', 'production').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-industry').property(single, 'value', 'production')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-industry').has('value', 'production').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-industry').has('value', 'production').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-industry').has('edition', 'one-off')
+    ).property(single, 'label', 'Production')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-industry').has('value', 'service-industries').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-industry').property(single, 'value', 'service-industries')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-industry').has('value', 'service-industries').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-industry').has('value', 'service-industries').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-industry').has('edition', 'one-off')
+    ).property(single, 'label', 'Service industries')).next()
+
+

@@ -1,0 +1,66 @@
+g.V().hasLabel('_code_list').has('listID', 'census-1961-older-households').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'census-1961-older-households').
+    property(single, 'label', 'olderhouseholds').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-older-households').has('value', 'both-female').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-older-households').property(single, 'value', 'both-female')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-older-households').has('value', 'both-female').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-older-households').has('value', 'both-female').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-older-households').has('edition', 'one-off')
+    ).property(single, 'label', 'Both female')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-older-households').has('value', 'both-male').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-older-households').property(single, 'value', 'both-male')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-older-households').has('value', 'both-male').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-older-households').has('value', 'both-male').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-older-households').has('edition', 'one-off')
+    ).property(single, 'label', 'Both male')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-older-households').has('value', 'married-couple').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-older-households').property(single, 'value', 'married-couple')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-older-households').has('value', 'married-couple').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-older-households').has('value', 'married-couple').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-older-households').has('edition', 'one-off')
+    ).property(single, 'label', 'Married couple')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-older-households').has('value', 'unmarried-couple-female-older').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-older-households').property(single, 'value', 'unmarried-couple-female-older')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-older-households').has('value', 'unmarried-couple-female-older').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-older-households').has('value', 'unmarried-couple-female-older').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-older-households').has('edition', 'one-off')
+    ).property(single, 'label', 'Unmarried couple: female older')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-older-households').has('value', 'unmarried-couple-male-older').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-older-households').property(single, 'value', 'unmarried-couple-male-older')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-older-households').has('value', 'unmarried-couple-male-older').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-older-households').has('value', 'unmarried-couple-male-older').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-older-households').has('edition', 'one-off')
+    ).property(single, 'label', 'Unmarried couple: male older')).next()
+
+

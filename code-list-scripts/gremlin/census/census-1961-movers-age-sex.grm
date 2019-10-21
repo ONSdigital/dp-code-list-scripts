@@ -1,0 +1,77 @@
+g.V().hasLabel('_code_list').has('listID', 'census-1961-movers-age-sex').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'census-1961-movers-age-sex').
+    property(single, 'label', 'moversagesex').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-movers-age-sex').has('value', '0-14').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-movers-age-sex').property(single, 'value', '0-14')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-movers-age-sex').has('value', '0-14').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-movers-age-sex').has('value', '0-14').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-movers-age-sex').has('edition', 'one-off')
+    ).property(single, 'label', '0-14')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-movers-age-sex').has('value', 'all').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-movers-age-sex').property(single, 'value', 'all')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-movers-age-sex').has('value', 'all').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-movers-age-sex').has('value', 'all').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-movers-age-sex').has('edition', 'one-off')
+    ).property(single, 'label', 'All')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-movers-age-sex').has('value', 'other-female').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-movers-age-sex').property(single, 'value', 'other-female')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-movers-age-sex').has('value', 'other-female').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-movers-age-sex').has('value', 'other-female').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-movers-age-sex').has('edition', 'one-off')
+    ).property(single, 'label', 'Other Female')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-movers-age-sex').has('value', 'other-male').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-movers-age-sex').property(single, 'value', 'other-male')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-movers-age-sex').has('value', 'other-male').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-movers-age-sex').has('value', 'other-male').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-movers-age-sex').has('edition', 'one-off')
+    ).property(single, 'label', 'Other Male')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-movers-age-sex').has('value', 'single-female').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-movers-age-sex').property(single, 'value', 'single-female')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-movers-age-sex').has('value', 'single-female').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-movers-age-sex').has('value', 'single-female').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-movers-age-sex').has('edition', 'one-off')
+    ).property(single, 'label', 'Single Female')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-movers-age-sex').has('value', 'single-male').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-movers-age-sex').property(single, 'value', 'single-male')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-movers-age-sex').has('value', 'single-male').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-movers-age-sex').has('value', 'single-male').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-movers-age-sex').has('edition', 'one-off')
+    ).property(single, 'label', 'Single Male')).next()
+
+
