@@ -1,0 +1,88 @@
+g.V().hasLabel('_code_list').has('listID', 'census-1961-non-private-population-variable').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'census-1961-non-private-population-variable').
+    property(single, 'label', 'nonprivatepopulationvariable').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'all-inmates').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-non-private-population-variable').property(single, 'value', 'all-inmates')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'all-inmates').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'all-inmates').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-non-private-population-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'All inmates')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'all-persons').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-non-private-population-variable').property(single, 'value', 'all-persons')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'all-persons').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'all-persons').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-non-private-population-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'All persons')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'establishments').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-non-private-population-variable').property(single, 'value', 'establishments')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'establishments').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'establishments').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-non-private-population-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Establishments')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'female').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-non-private-population-variable').property(single, 'value', 'female')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'female').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'female').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-non-private-population-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Female')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'female-inmates').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-non-private-population-variable').property(single, 'value', 'female-inmates')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'female-inmates').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'female-inmates').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-non-private-population-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Female inmates')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'male').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-non-private-population-variable').property(single, 'value', 'male')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'male').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'male').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-non-private-population-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Male')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'male-inmates').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-non-private-population-variable').property(single, 'value', 'male-inmates')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'male-inmates').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-non-private-population-variable').has('value', 'male-inmates').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-non-private-population-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Male inmates')).next()
+
+

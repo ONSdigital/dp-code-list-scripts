@@ -1,0 +1,176 @@
+g.V().hasLabel('_code_list').has('listID', 'census-1961-hotel-variable').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'census-1961-hotel-variable').
+    property(single, 'label', 'hotelvariable').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'all-enumerated-in-hotels-with-fewer-than-10-rooms').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-hotel-variable').property(single, 'value', 'all-enumerated-in-hotels-with-fewer-than-10-rooms')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'all-enumerated-in-hotels-with-fewer-than-10-rooms').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'all-enumerated-in-hotels-with-fewer-than-10-rooms').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-hotel-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'All enumerated in hotels with fewer than 10 rooms')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'hotels-with-10-14-rooms').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-hotel-variable').property(single, 'value', 'hotels-with-10-14-rooms')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'hotels-with-10-14-rooms').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'hotels-with-10-14-rooms').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-hotel-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Hotels with 10-14 rooms')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'hotels-with-100-199-rooms').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-hotel-variable').property(single, 'value', 'hotels-with-100-199-rooms')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'hotels-with-100-199-rooms').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'hotels-with-100-199-rooms').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-hotel-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Hotels with 100-199 rooms')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'hotels-with-15-24-rooms').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-hotel-variable').property(single, 'value', 'hotels-with-15-24-rooms')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'hotels-with-15-24-rooms').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'hotels-with-15-24-rooms').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-hotel-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Hotels with 15-24 rooms')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'hotels-with-200+-rooms').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-hotel-variable').property(single, 'value', 'hotels-with-200+-rooms')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'hotels-with-200+-rooms').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'hotels-with-200+-rooms').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-hotel-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Hotels with 200+ rooms')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'hotels-with-25-49-rooms').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-hotel-variable').property(single, 'value', 'hotels-with-25-49-rooms')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'hotels-with-25-49-rooms').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'hotels-with-25-49-rooms').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-hotel-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Hotels with 25-49 rooms')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'hotels-with-50-99-rooms').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-hotel-variable').property(single, 'value', 'hotels-with-50-99-rooms')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'hotels-with-50-99-rooms').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'hotels-with-50-99-rooms').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-hotel-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Hotels with 50-99 rooms')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'manager-and-staff').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-hotel-variable').property(single, 'value', 'manager-and-staff')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'manager-and-staff').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'manager-and-staff').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-hotel-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Manager and staff')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'number-of-hotels-with-fewer-than-10-rooms').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-hotel-variable').property(single, 'value', 'number-of-hotels-with-fewer-than-10-rooms')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'number-of-hotels-with-fewer-than-10-rooms').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'number-of-hotels-with-fewer-than-10-rooms').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-hotel-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Number of hotels with fewer than 10 rooms')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'persons-enumerated-in-hotels-with-fewer-than-10-rooms').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-hotel-variable').property(single, 'value', 'persons-enumerated-in-hotels-with-fewer-than-10-rooms')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'persons-enumerated-in-hotels-with-fewer-than-10-rooms').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'persons-enumerated-in-hotels-with-fewer-than-10-rooms').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-hotel-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Persons enumerated in hotels with fewer than 10 rooms')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'relatives-of-staff').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-hotel-variable').property(single, 'value', 'relatives-of-staff')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'relatives-of-staff').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'relatives-of-staff').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-hotel-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Relatives of staff')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'resident-guests').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-hotel-variable').property(single, 'value', 'resident-guests')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'resident-guests').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'resident-guests').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-hotel-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Resident guests')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'resident-visitors').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-hotel-variable').property(single, 'value', 'resident-visitors')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'resident-visitors').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'resident-visitors').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-hotel-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Resident visitors')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'total-rooms-in-hotels-with-10-or-more-rooms').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-hotel-variable').property(single, 'value', 'total-rooms-in-hotels-with-10-or-more-rooms')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'total-rooms-in-hotels-with-10-or-more-rooms').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'total-rooms-in-hotels-with-10-or-more-rooms').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-hotel-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Total rooms in hotels with 10 or more rooms')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'total-rooms-in-hotels-with-fewer-than-10-rooms').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-hotel-variable').property(single, 'value', 'total-rooms-in-hotels-with-fewer-than-10-rooms')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'total-rooms-in-hotels-with-fewer-than-10-rooms').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-hotel-variable').has('value', 'total-rooms-in-hotels-with-fewer-than-10-rooms').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-hotel-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Total rooms in hotels with fewer than 10 rooms')).next()
+
+

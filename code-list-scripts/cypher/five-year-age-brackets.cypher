@@ -51,6 +51,8 @@ MERGE (node:`_code`:`_code_five-year-age-brackets` { value:"1-4" });
 MATCH (parent:`_code_list`:`_code_list_five-year-age-brackets`),(node:`_code`:`_code_five-year-age-brackets` { value:"1-4" }) MERGE (node)-[:usedBy { label:"1-4"}]->(parent);
 MERGE (node:`_code`:`_code_five-year-age-brackets` { value:"directly-age-standardised-rate" });
 MATCH (parent:`_code_list`:`_code_list_five-year-age-brackets`),(node:`_code`:`_code_five-year-age-brackets` { value:"directly-age-standardised-rate" }) MERGE (node)-[:usedBy { label:"Directly age-standardised rate"}]->(parent);
+MERGE (node:`_code`:`_code_five-year-age-brackets` { value:"65+" });
+MATCH (parent:`_code_list`:`_code_list_five-year-age-brackets`),(node:`_code`:`_code_five-year-age-brackets` { value:"65+" }) MERGE (node)-[:usedBy { label:"65+"}]->(parent);
 
 
 

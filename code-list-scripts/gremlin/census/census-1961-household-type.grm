@@ -1,0 +1,66 @@
+g.V().hasLabel('_code_list').has('listID', 'census-1961-household-type').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'census-1961-household-type').
+    property(single, 'label', 'householdtype').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-household-type').has('value', 'all-households').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-household-type').property(single, 'value', 'all-households')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-household-type').has('value', 'all-households').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-household-type').has('value', 'all-households').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-household-type').has('edition', 'one-off')
+    ).property(single, 'label', 'All households')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-household-type').has('value', 'all-persons-in-households').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-household-type').property(single, 'value', 'all-persons-in-households')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-household-type').has('value', 'all-persons-in-households').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-household-type').has('value', 'all-persons-in-households').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-household-type').has('edition', 'one-off')
+    ).property(single, 'label', 'All persons in households')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-household-type').has('value', 'households-sharing-a-dwelling-with-exclusive-use-of-a-stove-and-sink').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-household-type').property(single, 'value', 'households-sharing-a-dwelling-with-exclusive-use-of-a-stove-and-sink')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-household-type').has('value', 'households-sharing-a-dwelling-with-exclusive-use-of-a-stove-and-sink').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-household-type').has('value', 'households-sharing-a-dwelling-with-exclusive-use-of-a-stove-and-sink').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-household-type').has('edition', 'one-off')
+    ).property(single, 'label', 'Households sharing a dwelling with exclusive use of a stove and sink')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-household-type').has('value', 'households-sharing-a-dwelling-without-exclusive-use-of-a-stove-and-sink').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-household-type').property(single, 'value', 'households-sharing-a-dwelling-without-exclusive-use-of-a-stove-and-sink')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-household-type').has('value', 'households-sharing-a-dwelling-without-exclusive-use-of-a-stove-and-sink').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-household-type').has('value', 'households-sharing-a-dwelling-without-exclusive-use-of-a-stove-and-sink').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-household-type').has('edition', 'one-off')
+    ).property(single, 'label', 'Households sharing a dwelling without exclusive use of a stove and sink')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-household-type').has('value', 'households-sharing-a-dwelling').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-household-type').property(single, 'value', 'households-sharing-a-dwelling')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-household-type').has('value', 'households-sharing-a-dwelling').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-household-type').has('value', 'households-sharing-a-dwelling').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-household-type').has('edition', 'one-off')
+    ).property(single, 'label', 'Households sharing a dwelling')).next()
+
+

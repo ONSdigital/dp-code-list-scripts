@@ -1,0 +1,53 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'quarters').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'quarters').
+    property(single, 'label', 'quarter').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'quarters').has('value', 'q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'quarters').property(single, 'value', 'q1')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'quarters').has('value', 'q1').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'quarters').has('value', 'q1').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'quarters').has('edition', 'one-off')
+    ).property(single, 'label', 'Q1')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'quarters').has('value', 'q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'quarters').property(single, 'value', 'q4')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'quarters').has('value', 'q4').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'quarters').has('value', 'q4').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'quarters').has('edition', 'one-off')
+    ).property(single, 'label', 'Q4')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'quarters').has('value', 'q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'quarters').property(single, 'value', 'q3')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'quarters').has('value', 'q3').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'quarters').has('value', 'q3').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'quarters').has('edition', 'one-off')
+    ).property(single, 'label', 'Q3')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'quarters').has('value', 'q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'quarters').property(single, 'value', 'q2')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'quarters').has('value', 'q2').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'quarters').has('value', 'q2').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'quarters').has('edition', 'one-off')
+    ).property(single, 'label', 'Q2')).next()
+

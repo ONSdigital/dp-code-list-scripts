@@ -1,0 +1,77 @@
+g.V().hasLabel('_code_list').has('listID', 'census-1961-tenure').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'census-1961-tenure').
+    property(single, 'label', 'tenure').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-tenure').has('value', 'holding-by-employment').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-tenure').property(single, 'value', 'holding-by-employment')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-tenure').has('value', 'holding-by-employment').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-tenure').has('value', 'holding-by-employment').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-tenure').has('edition', 'one-off')
+    ).property(single, 'label', 'Holding by employment')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-tenure').has('value', 'owner-occupier').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-tenure').property(single, 'value', 'owner-occupier')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-tenure').has('value', 'owner-occupier').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-tenure').has('value', 'owner-occupier').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-tenure').has('edition', 'one-off')
+    ).property(single, 'label', 'Owner-occupier')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-tenure').has('value', 'renting-from-council').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-tenure').property(single, 'value', 'renting-from-council')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-tenure').has('value', 'renting-from-council').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-tenure').has('value', 'renting-from-council').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-tenure').has('edition', 'one-off')
+    ).property(single, 'label', 'Renting from council')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-tenure').has('value', 'renting-furnished').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-tenure').property(single, 'value', 'renting-furnished')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-tenure').has('value', 'renting-furnished').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-tenure').has('value', 'renting-furnished').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-tenure').has('edition', 'one-off')
+    ).property(single, 'label', 'Renting furnished')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-tenure').has('value', 'renting-unfurnished').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-tenure').property(single, 'value', 'renting-unfurnished')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-tenure').has('value', 'renting-unfurnished').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-tenure').has('value', 'renting-unfurnished').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-tenure').has('edition', 'one-off')
+    ).property(single, 'label', 'Renting unfurnished')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-tenure').has('value', 'renting-with-business').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-tenure').property(single, 'value', 'renting-with-business')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-tenure').has('value', 'renting-with-business').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-tenure').has('value', 'renting-with-business').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-tenure').has('edition', 'one-off')
+    ).property(single, 'label', 'Renting with business')).next()
+
+
