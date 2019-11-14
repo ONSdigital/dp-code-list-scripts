@@ -1,0 +1,53 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'sector').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'sector').
+    property(single, 'label', 'sectortype').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'sector').has('value', 'all').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'sector').property(single, 'value', 'all')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'sector').has('value', 'all').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'sector').has('value', 'all').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'sector').has('edition', 'one-off')
+    ).property(single, 'label', 'All')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'sector').has('value', 'public-sector').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'sector').property(single, 'value', 'public-sector')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'sector').has('value', 'public-sector').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'sector').has('value', 'public-sector').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'sector').has('edition', 'one-off')
+    ).property(single, 'label', 'Public sector')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'sector').has('value', 'private-sector').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'sector').property(single, 'value', 'private-sector')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'sector').has('value', 'private-sector').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'sector').has('value', 'private-sector').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'sector').has('edition', 'one-off')
+    ).property(single, 'label', 'Private sector')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'sector').has('value', 'non-profit-body-or-mutual-association').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'sector').property(single, 'value', 'non-profit-body-or-mutual-association')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'sector').has('value', 'non-profit-body-or-mutual-association').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'sector').has('value', 'non-profit-body-or-mutual-association').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'sector').has('edition', 'one-off')
+    ).property(single, 'label', 'Non-profit body or mutual association')).next()
+
