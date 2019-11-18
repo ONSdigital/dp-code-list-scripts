@@ -1,6 +1,6 @@
 definition:
   - datasets: annual survey of hours and earnings
-  - comments: includes tables 5, 7 (hours), 7 (earnings), 8 (hours), 8 (earnings)
+  - comments: includes many ashe tables
 imports:
   - language: cypher
     files:
@@ -18,6 +18,9 @@ imports:
       - ../geo-specific-codelist/travel-to-work-geography.cypher
       - ../geo-specific-codelist/local-enterprise-partnership-geography.cypher
       - cypher/sic.cypher
+      - cypher/soc.cypher
+      - cypher/sector.cypher
+      - cypher/age-groups.cypher
   - language: gremlin
     files:
       - gremlin/calendar-years.grm
@@ -34,3 +37,6 @@ imports:
       - ../geo-specific-codelist/gremlin/travel-to-work-geography.grm
       - ../geo-specific-codelist/local-enterprise-partnership-geography.grm
       - gremlin/sic.grm
+      - gremlin/soc.grm
+      - gremlin/sector.grm
+      - gremlin/age-groups.grm
