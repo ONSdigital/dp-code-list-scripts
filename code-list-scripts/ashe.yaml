@@ -37,6 +37,6 @@ imports:
       - ../geo-specific-codelist/gremlin/travel-to-work-geography.grm
       - ../geo-specific-codelist/local-enterprise-partnership-geography.grm
       - gremlin/sic.grm
-      - cypher/soc.grm
-      - cypher/sector.grm
-      - cypher/age-groups.grm
+      - gremlin/soc.grm
+      - gremlin/sector.grm
+      - gremlin/age-groups.grm
