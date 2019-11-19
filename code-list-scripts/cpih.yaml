@@ -4,7 +4,7 @@ imports:
   - language: cypher
     files:
       - cypher/cpih1dim1aggid.cypher
-      - migration-scripts/uk-only.cypher
+      - ../geo-specific-codelist/uk-only.cypher
       - cypher/mmm-yy.cypher
   - language: gremlin
     files:
