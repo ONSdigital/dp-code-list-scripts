@@ -1,0 +1,97 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'family-household-type').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'family-household-type').
+    property(single, 'label', 'familyhousehold').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'married-couple-family').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'family-household-type').property(single, 'value', 'married-couple-family')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'married-couple-family').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'married-couple-family').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'family-household-type').has('edition', 'one-off')
+    ).property(single, 'label', 'Married couple family')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'civil-partner-couple-family').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'family-household-type').property(single, 'value', 'civil-partner-couple-family')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'civil-partner-couple-family').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'civil-partner-couple-family').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'family-household-type').has('edition', 'one-off')
+    ).property(single, 'label', 'Civil partner couple family')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'opposite-sex-cohabiting-couple-family').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'family-household-type').property(single, 'value', 'opposite-sex-cohabiting-couple-family')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'opposite-sex-cohabiting-couple-family').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'opposite-sex-cohabiting-couple-family').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'family-household-type').has('edition', 'one-off')
+    ).property(single, 'label', 'Opposite sex cohabiting couple family')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'same-sex-cohabiting-couple-family').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'family-household-type').property(single, 'value', 'same-sex-cohabiting-couple-family')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'same-sex-cohabiting-couple-family').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'same-sex-cohabiting-couple-family').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'family-household-type').has('edition', 'one-off')
+    ).property(single, 'label', 'Same sex cohabiting couple family')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'lone-parent-family').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'family-household-type').property(single, 'value', 'lone-parent-family')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'lone-parent-family').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'lone-parent-family').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'family-household-type').has('edition', 'one-off')
+    ).property(single, 'label', 'Lone parent family')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'lone-mother-family').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'family-household-type').property(single, 'value', 'lone-mother-family')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'lone-mother-family').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'lone-mother-family').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'family-household-type').has('edition', 'one-off')
+    ).property(single, 'label', 'Lone mother family')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'lone-father-family').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'family-household-type').property(single, 'value', 'lone-father-family')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'lone-father-family').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'lone-father-family').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'family-household-type').has('edition', 'one-off')
+    ).property(single, 'label', 'Lone father family')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'all-families').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'family-household-type').property(single, 'value', 'all-families')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'all-families').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'family-household-type').has('value', 'all-families').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'family-household-type').has('edition', 'one-off')
+    ).property(single, 'label', 'All families')).next()
+

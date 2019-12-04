@@ -1,0 +1,64 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'children-in-family').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'children-in-family').
+    property(single, 'label', 'childreninfamiy').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'children-in-family').has('value', 'total').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'children-in-family').property(single, 'value', 'total')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'children-in-family').has('value', 'total').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'children-in-family').has('value', 'total').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'children-in-family').has('edition', 'one-off')
+    ).property(single, 'label', 'Total')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'children-in-family').has('value', 'no-children').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'children-in-family').property(single, 'value', 'no-children')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'children-in-family').has('value', 'no-children').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'children-in-family').has('value', 'no-children').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'children-in-family').has('edition', 'one-off')
+    ).property(single, 'label', 'No children')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'children-in-family').has('value', 'dependent-children').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'children-in-family').property(single, 'value', 'dependent-children')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'children-in-family').has('value', 'dependent-children').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'children-in-family').has('value', 'dependent-children').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'children-in-family').has('edition', 'one-off')
+    ).property(single, 'label', 'Dependent children')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'children-in-family').has('value', 'non-dependent-children-only').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'children-in-family').property(single, 'value', 'non-dependent-children-only')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'children-in-family').has('value', 'non-dependent-children-only').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'children-in-family').has('value', 'non-dependent-children-only').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'children-in-family').has('edition', 'one-off')
+    ).property(single, 'label', 'Non-dependent children only')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'children-in-family').has('value', 'no-children-or-non-dependent-children-only').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'children-in-family').property(single, 'value', 'no-children-or-non-dependent-children-only')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'children-in-family').has('value', 'no-children-or-non-dependent-children-only').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'children-in-family').has('value', 'no-children-or-non-dependent-children-only').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'children-in-family').has('edition', 'one-off')
+    ).property(single, 'label', 'No children or non-dependent children only')).next()
+
