@@ -1,0 +1,5 @@
+// Get the well being estimate codes ordered by weight.
+g.V().hasLabel("_code_list").has("listID", "wellbeing-estimate").inE("usedBy").order().by("weight").outV().has("listID", "wellbeing-estimate").values("value")
+
+// Get the well being estimate codes ordered by weight descending.
+g.V().hasLabel("_code_list").has("listID", "wellbeing-estimate").inE("usedBy").order().by("weight", desc).outV().has("listID", "wellbeing-estimate").values("value")
