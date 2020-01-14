@@ -29,3 +29,5 @@ MERGE (node:`_code`:`_code_age-groups` { value:"50-59" });
 MATCH (parent:`_code_list`:`_code_list_age-groups`),(node:`_code`:`_code_age-groups` { value:"50-59" }) MERGE (node)-[:usedBy { label:"50-59"}]->(parent);
 MERGE (node:`_code`:`_code_age-groups` { value:"60+" });
 MATCH (parent:`_code_list`:`_code_list_age-groups`),(node:`_code`:`_code_age-groups` { value:"60+" }) MERGE (node)-[:usedBy { label:"60+"}]->(parent);
+MERGE (node:`_code`:`_code_age-groups` { value:"median" });
+MATCH (parent:`_code_list`:`_code_list_age-groups`),(node:`_code`:`_code_age-groups` { value:"median" }) MERGE (node)-[:usedBy { label:"Median"}]->(parent);
