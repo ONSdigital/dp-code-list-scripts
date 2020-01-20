@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_children-in-family`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_children-in-family`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_children-in-family` { label:"childreninfamiy", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_children-in-family` { label:"childreninfamily", edition:"one-off" });
 MERGE (node:`_code`:`_code_children-in-family` { value:"total" });
 MATCH (parent:`_code_list`:`_code_list_children-in-family`),(node:`_code`:`_code_children-in-family` { value:"total" }) MERGE (node)-[:usedBy { label:"Total"}]->(parent);
 MERGE (node:`_code`:`_code_children-in-family` { value:"no-children" });
