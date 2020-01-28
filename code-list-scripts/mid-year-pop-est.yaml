@@ -3,13 +3,13 @@ definition:
 imports:
   - language: cypher
     files:
-      - migration-scripts/calendar-years.cypher
-      - migration-scripts/mid-year-pop-geography.cypher
-      - migration-scripts/mid-year-pop-sex.cypher
-      - migration-scripts/mid-year-pop-age.cypher
+      - cypher/calendar-years.cypher
+      - ../geo-specific-codelist/mid-year-pop-geography.cypher
+      - cypher/mid-year-pop-sex.cypher
+      - cypher/mid-year-pop-age.cypher
   - language: gremlin
     files:
       - gremlin/calendar-years.grm
-      - gremlin/mid-year-pop-geography.grm
+      - ../geo-specific-codelist/gremlin/mid-year-pop-geography.grm
       - gremlin/mid-year-pop-sex.grm
       - gremlin/mid-year-pop-age.grm
