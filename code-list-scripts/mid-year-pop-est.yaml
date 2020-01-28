@@ -9,7 +9,7 @@ imports:
       - cypher/mid-year-pop-age.cypher
   - language: gremlin
     files:
-      - gremlin/gremlin/calendar-years.grm
-      - gremlin/gremlin/mid-year-pop-geography.grm
-      - gremlin/gremlin/mid-year-pop-sex.grm
-      - gremlin/gremlin/mid-year-pop-age.grm
+      - gremlin/calendar-years.grm
+      - ../geo-specific-codelist/gremlin/mid-year-pop-geography.grm
+      - gremlin/mid-year-pop-sex.grm
+      - gremlin/mid-year-pop-age.grm
