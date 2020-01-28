@@ -6,10 +6,12 @@ imports:
       - cypher/calendar-years.cypher
       - cypher/age-groups.cypher
       - cypher/ashe-sex.cypher
+      - cypher/economic-activity.cypher
       - ../geo-specific-codelist/admin-geography.cypher
   - language: gremlin
     files:
       - gremlin/calendar-years.grm
       - gremlin/age-groups.grm
       - gremlin/ashe-sex.grm
+      - gremlin/economic-activity.grm
       - ../geo-specific-codelist/gremlin/admin-geography.grm
