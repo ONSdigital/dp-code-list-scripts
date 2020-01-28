@@ -10,8 +10,12 @@ $(SCR)/load: cmd/load/main.go
 cpih mid-year-pop-est:
 	cd $(SCR) && ./load -q=$(QLANG) -f=$@.yaml
 
+popest: mid-year-pop-est
+
 .PHONY: clean
 clean:
 	test ! -f $(SCR)/load || rm $(SCR)/load
 
-popest: mid-year-pop-est
+.PHONY: check
+check:
+	./sanity.sh
