@@ -19,12 +19,12 @@ g.V().hasLabel('_code').has('listID', 'gdp-measure').has('value', 'gra').outE().
     ).property(single, 'label', 'Annual growth rate')).next()
 
 
-g.V().hasLabel('_code').has('listID', 'gdp-measure').has('value', 'ix').
+g.V().hasLabel('_code').has('listID', 'gdp-measure').has('value', 'qix').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'gdp-measure').property(single, 'value', 'ix')
+    property(single, 'listID', 'gdp-measure').property(single, 'value', 'qix')
   ).next()
-g.V().hasLabel('_code').has('listID', 'gdp-measure').has('value', 'ix').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'gdp-measure').has('value', 'ix').
+g.V().hasLabel('_code').has('listID', 'gdp-measure').has('value', 'qix').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'gdp-measure').has('value', 'qix').
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'gdp-measure').has('edition', 'one-off')
     ).property(single, 'label', 'Quarterly index')).next()
@@ -50,4 +50,15 @@ g.V().hasLabel('_code').has('listID', 'gdp-measure').has('value', 'grqa').outE()
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'gdp-measure').has('edition', 'one-off')
     ).property(single, 'label', 'Quarterly growth rate on same quarter of previous year')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'gdp-measure').has('value', 'aix').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'gdp-measure').property(single, 'value', 'aix')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'gdp-measure').has('value', 'aix').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'gdp-measure').has('value', 'aix').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'gdp-measure').has('edition', 'one-off')
+    ).property(single, 'label', 'Annual index')).next()
 
