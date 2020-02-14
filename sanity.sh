@@ -2,8 +2,8 @@
 
 set -eu
 
-if ! yq --version > /dev/null || ! jq --version > /dev/null; then
-	echo Please: brew install yq jq >&2
+if ! yq --version > /dev/null || yq --version | grep -q 'version [^3]'; then
+	echo Please: brew install yq v3.x >&2
 	exit 2
 fi
 
@@ -13,7 +13,7 @@ max_f_len=20
 for yaml_file in *.yml *.yaml; do
 	test -f $yaml_file || continue
 
-	for f in $(yq r -j $yaml_file 'imports[*].files' | jq -r '.[][]'); do
+	for f in $(yq r -j $yaml_file 'imports[*].files.*'); do
 		while [[ $f != ${f#- } ]]; do f=${f#- }; done
 
 		test -f $f && continue
