@@ -1,0 +1,20 @@
+definition:
+  - datasets: Healthcare accounts
+imports:
+  - language: cypher
+    files:
+      - cypher/calendar-years.cypher
+      - cypher/type-of-prices.cypher
+      - cypher/healthcare-financing-scheme.cypher
+      - cypher/healthcare-provider.cypher
+      - cypher/healthcare-function.cypher
+      - ../geo-specific-codelist/uk-only.cypher
+  - language: gremlin
+    files:
+      - gremlin/calendar-years.grm
+      - gremlin/type-of-prices.grm
+      - gremlin/healthcare-financing-scheme.grm
+      - gremlin/healthcare-provider.grm
+      - gremlin/healthcare-function.grm
+      - ../geo-specific-codelist/gremlin/uk-only.grm
+

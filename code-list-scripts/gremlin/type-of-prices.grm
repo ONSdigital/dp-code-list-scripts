@@ -403,3 +403,14 @@ g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', 'gross-dome
       g.V().hasLabel('_code_list').has('listID', 'type-of-prices').has('edition', 'one-off')
     ).property(single, 'label', 'Gross domestic product chained volume measures per head annual growth rates')).next()
 
+
+g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', '2017-prices').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', '2017-prices')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', '2017-prices').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', '2017-prices').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'type-of-prices').has('edition', 'one-off')
+    ).property(single, 'label', '2017 prices')).next()
+
