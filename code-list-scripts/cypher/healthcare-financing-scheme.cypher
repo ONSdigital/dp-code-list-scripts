@@ -1,0 +1,15 @@
+CREATE CONSTRAINT ON (n:`_code_healthcare-financing-scheme`) ASSERT n.code IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_healthcare-financing-scheme`) ASSERT n.code IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_healthcare-financing-scheme` { label:"financingscheme", edition:"one-off" });
+MERGE (node:`_code`:`_code_healthcare-financing-scheme` { value:"total-current-healthcare-expenditure" });
+MATCH (parent:`_code_list`:`_code_list_healthcare-financing-scheme`),(node:`_code`:`_code_healthcare-financing-scheme` { value:"total-current-healthcare-expenditure" }) MERGE (node)-[:usedBy { label:"Total current healthcare expenditure"}]->(parent);
+MERGE (node:`_code`:`_code_healthcare-financing-scheme` { value:"government-financed-healthcare-expenditure" });
+MATCH (parent:`_code_list`:`_code_list_healthcare-financing-scheme`),(node:`_code`:`_code_healthcare-financing-scheme` { value:"government-financed-healthcare-expenditure" }) MERGE (node)-[:usedBy { label:"Government-financed healthcare expenditure"}]->(parent);
+MERGE (node:`_code`:`_code_healthcare-financing-scheme` { value:"expenditure-from-voluntary-health-insurance" });
+MATCH (parent:`_code_list`:`_code_list_healthcare-financing-scheme`),(node:`_code`:`_code_healthcare-financing-scheme` { value:"expenditure-from-voluntary-health-insurance" }) MERGE (node)-[:usedBy { label:"Expenditure from voluntary health insurance"}]->(parent);
+MERGE (node:`_code`:`_code_healthcare-financing-scheme` { value:"health-expenditure-from-non-profit-institutions-serving-households" });
+MATCH (parent:`_code_list`:`_code_list_healthcare-financing-scheme`),(node:`_code`:`_code_healthcare-financing-scheme` { value:"health-expenditure-from-non-profit-institutions-serving-households" }) MERGE (node)-[:usedBy { label:"Health expenditure from non-profit institutions serving households"}]->(parent);
+MERGE (node:`_code`:`_code_healthcare-financing-scheme` { value:"health-expenditure-from-enterprise-financing" });
+MATCH (parent:`_code_list`:`_code_list_healthcare-financing-scheme`),(node:`_code`:`_code_healthcare-financing-scheme` { value:"health-expenditure-from-enterprise-financing" }) MERGE (node)-[:usedBy { label:"Health expenditure from enterprise financing"}]->(parent);
+MERGE (node:`_code`:`_code_healthcare-financing-scheme` { value:"out-of-pocket-expenditure" });
+MATCH (parent:`_code_list`:`_code_list_healthcare-financing-scheme`),(node:`_code`:`_code_healthcare-financing-scheme` { value:"out-of-pocket-expenditure" }) MERGE (node)-[:usedBy { label:"Out-of-pocket expenditure"}]->(parent);

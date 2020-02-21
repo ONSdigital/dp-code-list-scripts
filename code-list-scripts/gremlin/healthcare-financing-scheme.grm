@@ -1,0 +1,75 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'healthcare-financing-scheme').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'healthcare-financing-scheme').
+    property(single, 'edition', 'one-off').
+    property(single, 'label', 'financingscheme')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'healthcare-financing-scheme').has('value', 'total-current-healthcare-expenditure').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'healthcare-financing-scheme').property(single, 'value', 'total-current-healthcare-expenditure')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'healthcare-financing-scheme').has('value', 'total-current-healthcare-expenditure').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'healthcare-financing-scheme').has('value', 'total-current-healthcare-expenditure').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'healthcare-financing-scheme').has('edition', 'one-off')
+    ).property(single, 'label', 'Total current healthcare expenditure')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'healthcare-financing-scheme').has('value', 'government-financed-healthcare-expenditure').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'healthcare-financing-scheme').property(single, 'value', 'government-financed-healthcare-expenditure')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'healthcare-financing-scheme').has('value', 'government-financed-healthcare-expenditure').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'healthcare-financing-scheme').has('value', 'government-financed-healthcare-expenditure').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'healthcare-financing-scheme').has('edition', 'one-off')
+    ).property(single, 'label', 'Government-financed healthcare expenditure')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'healthcare-financing-scheme').has('value', 'expenditure-from-voluntary-health-insurance').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'healthcare-financing-scheme').property(single, 'value', 'expenditure-from-voluntary-health-insurance')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'healthcare-financing-scheme').has('value', 'expenditure-from-voluntary-health-insurance').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'healthcare-financing-scheme').has('value', 'expenditure-from-voluntary-health-insurance').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'healthcare-financing-scheme').has('edition', 'one-off')
+    ).property(single, 'label', 'Expenditure from voluntary health insurance')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'healthcare-financing-scheme').has('value', 'health-expenditure-from-non-profit-institutions-serving-households').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'healthcare-financing-scheme').property(single, 'value', 'health-expenditure-from-non-profit-institutions-serving-households')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'healthcare-financing-scheme').has('value', 'health-expenditure-from-non-profit-institutions-serving-households').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'healthcare-financing-scheme').has('value', 'health-expenditure-from-non-profit-institutions-serving-households').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'healthcare-financing-scheme').has('edition', 'one-off')
+    ).property(single, 'label', 'Health expenditure from non-profit institutions serving households')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'healthcare-financing-scheme').has('value', 'health-expenditure-from-enterprise-financing').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'healthcare-financing-scheme').property(single, 'value', 'health-expenditure-from-enterprise-financing')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'healthcare-financing-scheme').has('value', 'health-expenditure-from-enterprise-financing').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'healthcare-financing-scheme').has('value', 'health-expenditure-from-enterprise-financing').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'healthcare-financing-scheme').has('edition', 'one-off')
+    ).property(single, 'label', 'Health expenditure from enterprise financing')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'healthcare-financing-scheme').has('value', 'out-of-pocket-expenditure').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'healthcare-financing-scheme').property(single, 'value', 'out-of-pocket-expenditure')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'healthcare-financing-scheme').has('value', 'out-of-pocket-expenditure').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'healthcare-financing-scheme').has('value', 'out-of-pocket-expenditure').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'healthcare-financing-scheme').has('edition', 'one-off')
+    ).property(single, 'label', 'Out-of-pocket expenditure')).next()
+
