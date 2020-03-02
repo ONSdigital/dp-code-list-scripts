@@ -1,0 +1,31 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'smoothing').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'smoothing').
+    property(single, 'label', 'smoothingfunction').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'smoothing').has('value', 'smoothed').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'smoothing').property(single, 'value', 'smoothed')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'smoothing').has('value', 'smoothed').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'smoothing').has('value', 'smoothed').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'smoothing').has('edition', 'one-off')
+    ).property(single, 'label', 'Smoothed')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'smoothing').has('value', 'unsmoothed').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'smoothing').property(single, 'value', 'unsmoothed')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'smoothing').has('value', 'unsmoothed').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'smoothing').has('value', 'unsmoothed').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'smoothing').has('edition', 'one-off')
+    ).property(single, 'label', 'Unsmoothed')).next()
+

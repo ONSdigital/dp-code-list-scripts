@@ -1,0 +1,75 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'productivity').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'productivity').
+    property(single, 'label', 'productivitytype').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'productivity').has('value', 'gva-per-hour-worked-indices').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'productivity').property(single, 'value', 'gva-per-hour-worked-indices')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'productivity').has('value', 'gva-per-hour-worked-indices').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'productivity').has('value', 'gva-per-hour-worked-indices').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'productivity').has('edition', 'one-off')
+    ).property(single, 'label', 'GVA per hour worked indices')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'productivity').has('value', 'gva-per-hour-worked-pounds').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'productivity').property(single, 'value', 'gva-per-hour-worked-pounds')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'productivity').has('value', 'gva-per-hour-worked-pounds').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'productivity').has('value', 'gva-per-hour-worked-pounds').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'productivity').has('edition', 'one-off')
+    ).property(single, 'label', 'GVA per hour worked (£)')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'productivity').has('value', 'gva-per-filled-job-indices').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'productivity').property(single, 'value', 'gva-per-filled-job-indices')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'productivity').has('value', 'gva-per-filled-job-indices').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'productivity').has('value', 'gva-per-filled-job-indices').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'productivity').has('edition', 'one-off')
+    ).property(single, 'label', 'GVA per filled job indices')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'productivity').has('value', 'gva-per-filled-job-pounds').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'productivity').property(single, 'value', 'gva-per-filled-job-pounds')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'productivity').has('value', 'gva-per-filled-job-pounds').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'productivity').has('value', 'gva-per-filled-job-pounds').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'productivity').has('edition', 'one-off')
+    ).property(single, 'label', 'GVA per filled job (£)')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'productivity').has('value', 'gva-excluding-rental-income-per-hour-worked-indices').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'productivity').property(single, 'value', 'gva-excluding-rental-income-per-hour-worked-indices')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'productivity').has('value', 'gva-excluding-rental-income-per-hour-worked-indices').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'productivity').has('value', 'gva-excluding-rental-income-per-hour-worked-indices').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'productivity').has('edition', 'one-off')
+    ).property(single, 'label', 'GVA (excluding rental income) per hour worked: indices')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'productivity').has('value', 'gva-excluding-rental-income-per-hour-worked-levels-pounds').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'productivity').property(single, 'value', 'gva-excluding-rental-income-per-hour-worked-levels-pounds')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'productivity').has('value', 'gva-excluding-rental-income-per-hour-worked-levels-pounds').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'productivity').has('value', 'gva-excluding-rental-income-per-hour-worked-levels-pounds').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'productivity').has('edition', 'one-off')
+    ).property(single, 'label', 'GVA (excluding rental income) per hour worked: levels (£)')).next()
+
