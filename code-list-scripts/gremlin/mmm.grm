@@ -1,0 +1,141 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'mmm').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'mmm').
+    property(single, 'label', 'month').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'jan').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'mmm').property(single, 'value', 'jan')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'jan').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'jan').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'mmm').has('edition', 'one-off')
+    ).property(single, 'label', 'January')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'feb').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'mmm').property(single, 'value', 'feb')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'feb').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'feb').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'mmm').has('edition', 'one-off')
+    ).property(single, 'label', 'February')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'mar').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'mmm').property(single, 'value', 'mar')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'mar').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'mar').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'mmm').has('edition', 'one-off')
+    ).property(single, 'label', 'March')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'apr').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'mmm').property(single, 'value', 'apr')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'apr').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'apr').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'mmm').has('edition', 'one-off')
+    ).property(single, 'label', 'April')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'may').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'mmm').property(single, 'value', 'may')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'may').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'may').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'mmm').has('edition', 'one-off')
+    ).property(single, 'label', 'May')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'jun').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'mmm').property(single, 'value', 'jun')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'jun').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'jun').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'mmm').has('edition', 'one-off')
+    ).property(single, 'label', 'June')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'jul').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'mmm').property(single, 'value', 'jul')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'jul').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'jul').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'mmm').has('edition', 'one-off')
+    ).property(single, 'label', 'July')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'aug').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'mmm').property(single, 'value', 'aug')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'aug').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'aug').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'mmm').has('edition', 'one-off')
+    ).property(single, 'label', 'August')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'sep').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'mmm').property(single, 'value', 'sep')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'sep').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'sep').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'mmm').has('edition', 'one-off')
+    ).property(single, 'label', 'September')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'oct').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'mmm').property(single, 'value', 'oct')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'oct').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'oct').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'mmm').has('edition', 'one-off')
+    ).property(single, 'label', 'October')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'nov').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'mmm').property(single, 'value', 'nov')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'nov').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'nov').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'mmm').has('edition', 'one-off')
+    ).property(single, 'label', 'November')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'dec').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'mmm').property(single, 'value', 'dec')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'dec').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'mmm').has('value', 'dec').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'mmm').has('edition', 'one-off')
+    ).property(single, 'label', 'December')).next()
+
