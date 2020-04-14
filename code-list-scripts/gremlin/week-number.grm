@@ -1,0 +1,592 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'week-number').
+    property(single, 'edition', 'one-off').
+    property(single, 'label', 'week')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-01').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-01')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-01').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-01').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 01')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-02').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-02')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-02').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-02').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 02')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-03').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-03')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-03').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-03').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 03')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-04').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-04')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-04').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-04').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 04')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-05').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-05')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-05').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-05').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 05')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-06').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-06')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-06').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-06').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 06')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-07').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-07')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-07').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-07').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 07')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-08').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-08')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-08').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-08').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 08')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-09').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-09')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-09').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-09').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 09')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-10').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-10')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-10').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-10').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 10')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-11').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-11')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-11').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-11').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 11')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-12').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-12')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-12').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-12').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 12')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-13').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-13')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-13').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-13').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 13')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-14').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-14')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-14').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-14').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 14')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-15').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-15')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-15').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-15').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 15')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-16').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-16')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-16').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-16').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 16')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-17').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-17')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-17').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-17').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 17')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-18').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-18')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-18').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-18').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 18')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-19').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-19')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-19').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-19').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 19')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-20').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-20')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-20').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-20').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 20')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-21').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-21')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-21').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-21').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 21')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-22').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-22')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-22').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-22').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 22')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-23').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-23')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-23').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-23').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 23')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-24').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-24')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-24').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-24').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 24')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-25').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-25')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-25').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-25').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 25')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-26').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-26')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-26').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-26').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 26')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-27').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-27')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-27').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-27').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 27')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-28').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-28')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-28').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-28').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 28')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-29').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-29')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-29').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-29').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 29')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-30').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-30')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-30').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-30').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 30')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-31').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-31')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-31').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-31').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 31')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-32').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-32')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-32').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-32').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 32')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-33').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-33')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-33').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-33').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 33')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-34').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-34')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-34').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-34').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 34')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-35').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-35')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-35').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-35').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 35')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-36').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-36')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-36').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-36').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 36')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-37').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-37')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-37').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-37').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 37')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-38').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-38')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-38').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-38').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 38')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-39').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-39')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-39').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-39').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 39')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-40').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-40')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-40').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-40').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 40')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-41').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-41')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-41').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-41').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 41')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-42').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-42')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-42').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-42').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 42')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-43').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-43')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-43').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-43').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 43')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-44').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-44')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-44').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-44').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 44')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-45').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-45')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-45').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-45').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 45')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-46').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-46')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-46').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-46').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 46')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-47').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-47')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-47').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-47').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 47')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-48').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-48')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-48').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-48').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 48')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-49').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-49')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-49').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-49').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 49')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-50').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-50')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-50').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-50').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 50')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-51').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-51')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-51').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-51').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 51')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-52').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-52')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-52').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-52').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 52')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-53').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'week-number').property(single, 'value', 'week-53')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-53').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'week-number').has('value', 'week-53').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'week-number').has('edition', 'one-off')
+    ).property(single, 'label', 'Week 53')).next()
+
