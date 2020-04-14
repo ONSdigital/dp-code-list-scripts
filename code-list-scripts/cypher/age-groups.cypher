@@ -31,3 +31,16 @@ MERGE (node:`_code`:`_code_age-groups` { value:"60+" });
 MATCH (parent:`_code_list`:`_code_list_age-groups`),(node:`_code`:`_code_age-groups` { value:"60+" }) MERGE (node)-[:usedBy { label:"60+"}]->(parent);
 MERGE (node:`_code`:`_code_age-groups` { value:"median" });
 MATCH (parent:`_code_list`:`_code_list_age-groups`),(node:`_code`:`_code_age-groups` { value:"median" }) MERGE (node)-[:usedBy { label:"Median"}]->(parent);
+MERGE (node:`_code`:`_code_age-groups` { value:"0-1" });
+MATCH (parent:`_code_list`:`_code_list_age-groups`),(node:`_code`:`_code_age-groups` { value:"0-1" }) MERGE (node)-[:usedBy { label:"0-1"}]->(parent);
+MERGE (node:`_code`:`_code_age-groups` { value:"1-14" });
+MATCH (parent:`_code_list`:`_code_list_age-groups`),(node:`_code`:`_code_age-groups` { value:"1-14" }) MERGE (node)-[:usedBy { label:"1-14"}]->(parent);
+MERGE (node:`_code`:`_code_age-groups` { value:"15-44" });
+MATCH (parent:`_code_list`:`_code_list_age-groups`),(node:`_code`:`_code_age-groups` { value:"15-44" }) MERGE (node)-[:usedBy { label:"15-44"}]->(parent);
+MERGE (node:`_code`:`_code_age-groups` { value:"45-64" });
+MATCH (parent:`_code_list`:`_code_list_age-groups`),(node:`_code`:`_code_age-groups` { value:"45-64" }) MERGE (node)-[:usedBy { label:"45-64"}]->(parent);
+MERGE (node:`_code`:`_code_age-groups` { value:"65-74" });
+MATCH (parent:`_code_list`:`_code_list_age-groups`),(node:`_code`:`_code_age-groups` { value:"65-74" }) MERGE (node)-[:usedBy { label:"65-74"}]->(parent);
+MERGE (node:`_code`:`_code_age-groups` { value:"75-84" });
+MATCH (parent:`_code_list`:`_code_list_age-groups`),(node:`_code`:`_code_age-groups` { value:"75-84" }) MERGE (node)-[:usedBy { label:"75-84"}]->(parent);
+
