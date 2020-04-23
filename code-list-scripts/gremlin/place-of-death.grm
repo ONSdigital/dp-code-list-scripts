@@ -1,0 +1,75 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'place-of-death').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'place-of-death').
+    property(single, 'label', 'placeofdeath').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'place-of-death').has('value', 'care-home').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'place-of-death').property(single, 'value', 'care-home')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'place-of-death').has('value', 'care-home').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'place-of-death').has('value', 'care-home').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'place-of-death').has('edition', 'one-off')
+    ).property(single, 'label', 'Care home')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'place-of-death').has('value', 'elsewhere').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'place-of-death').property(single, 'value', 'elsewhere')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'place-of-death').has('value', 'elsewhere').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'place-of-death').has('value', 'elsewhere').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'place-of-death').has('edition', 'one-off')
+    ).property(single, 'label', 'Elsewhere')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'place-of-death').has('value', 'home').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'place-of-death').property(single, 'value', 'home')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'place-of-death').has('value', 'home').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'place-of-death').has('value', 'home').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'place-of-death').has('edition', 'one-off')
+    ).property(single, 'label', 'Home')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'place-of-death').has('value', 'hospice').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'place-of-death').property(single, 'value', 'hospice')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'place-of-death').has('value', 'hospice').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'place-of-death').has('value', 'hospice').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'place-of-death').has('edition', 'one-off')
+    ).property(single, 'label', 'Hospice')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'place-of-death').has('value', 'hospital').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'place-of-death').property(single, 'value', 'hospital')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'place-of-death').has('value', 'hospital').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'place-of-death').has('value', 'hospital').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'place-of-death').has('edition', 'one-off')
+    ).property(single, 'label', 'Hospital')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'place-of-death').has('value', 'other-communal-establishment').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'place-of-death').property(single, 'value', 'other-communal-establishment')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'place-of-death').has('value', 'other-communal-establishment').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'place-of-death').has('value', 'other-communal-establishment').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'place-of-death').has('edition', 'one-off')
+    ).property(single, 'label', 'Other communal establishment')).next()
+

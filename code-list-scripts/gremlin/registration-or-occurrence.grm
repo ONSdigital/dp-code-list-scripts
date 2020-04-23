@@ -1,0 +1,31 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'registration-or-occurrence').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'registration-or-occurrence').
+    property(single, 'label', 'registrationoroccurrence').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'registration-or-occurrence').has('value', 'registrations').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'registration-or-occurrence').property(single, 'value', 'registrations')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'registration-or-occurrence').has('value', 'registrations').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'registration-or-occurrence').has('value', 'registrations').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'registration-or-occurrence').has('edition', 'one-off')
+    ).property(single, 'label', 'Registrations')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'registration-or-occurrence').has('value', 'occurrences').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'registration-or-occurrence').property(single, 'value', 'occurrences')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'registration-or-occurrence').has('value', 'occurrences').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'registration-or-occurrence').has('value', 'occurrences').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'registration-or-occurrence').has('edition', 'one-off')
+    ).property(single, 'label', 'Occurrences')).next()
+

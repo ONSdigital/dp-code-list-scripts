@@ -1,0 +1,87 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'health-board').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'health-board').
+    property(single, 'geography', true).
+    property(single, 'label', 'geography').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000023').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'W11000023')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000023').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000023').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'health-board').has('edition', 'one-off')
+    ).property(single, 'label', 'Betsi Cadwaladr University Health Board')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000024').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'W11000024')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000024').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000024').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'health-board').has('edition', 'one-off')
+    ).property(single, 'label', 'Powys Teaching Health Board')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000025').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'W11000025')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000025').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000025').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'health-board').has('edition', 'one-off')
+    ).property(single, 'label', 'Hywel Dda University Health Board')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000028').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'W11000028')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000028').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000028').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'health-board').has('edition', 'one-off')
+    ).property(single, 'label', 'Aneurin Bevan University Health Board')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000029').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'W11000029')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000029').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000029').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'health-board').has('edition', 'one-off')
+    ).property(single, 'label', 'Cardiff and Vale University Health Board')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000030').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'W11000030')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000030').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000030').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'health-board').has('edition', 'one-off')
+    ).property(single, 'label', 'Cwm Taf Morgannwg University Health Board')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000031').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', 'W11000031')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000031').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'geography').has('value', 'W11000031').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'health-board').has('edition', 'one-off')
+    ).property(single, 'label', 'Swansea Bay University Health Board')).next()
+

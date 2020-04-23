@@ -1,0 +1,15 @@
+CREATE CONSTRAINT ON (n:`_code_place-of-death`) ASSERT n.code IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_place-of-death`) ASSERT n.code IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_place-of-death` { label:"placeofdeath", edition:"one-off" });
+MERGE (node:`_code`:`_code_place-of-death` { value:"care-home" });
+MATCH (parent:`_code_list`:`_code_list_place-of-death`),(node:`_code`:`_code_place-of-death` { value:"care-home" }) MERGE (node)-[:usedBy { label:"Care home"}]->(parent);
+MERGE (node:`_code`:`_code_place-of-death` { value:"elsewhere" });
+MATCH (parent:`_code_list`:`_code_list_place-of-death`),(node:`_code`:`_code_place-of-death` { value:"elsewhere" }) MERGE (node)-[:usedBy { label:"Elsewhere"}]->(parent);
+MERGE (node:`_code`:`_code_place-of-death` { value:"home" });
+MATCH (parent:`_code_list`:`_code_list_place-of-death`),(node:`_code`:`_code_place-of-death` { value:"home" }) MERGE (node)-[:usedBy { label:"Home"}]->(parent);
+MERGE (node:`_code`:`_code_place-of-death` { value:"hospice" });
+MATCH (parent:`_code_list`:`_code_list_place-of-death`),(node:`_code`:`_code_place-of-death` { value:"hospice" }) MERGE (node)-[:usedBy { label:"Hospice"}]->(parent);
+MERGE (node:`_code`:`_code_place-of-death` { value:"hospital" });
+MATCH (parent:`_code_list`:`_code_list_place-of-death`),(node:`_code`:`_code_place-of-death` { value:"hospital" }) MERGE (node)-[:usedBy { label:"Hospital"}]->(parent);
+MERGE (node:`_code`:`_code_place-of-death` { value:"other-communal-establishment" });
+MATCH (parent:`_code_list`:`_code_list_place-of-death`),(node:`_code`:`_code_place-of-death` { value:"other-communal-establishment" }) MERGE (node)-[:usedBy { label:"Other communal establishment"}]->(parent);
