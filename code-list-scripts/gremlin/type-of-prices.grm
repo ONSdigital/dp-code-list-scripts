@@ -414,3 +414,14 @@ g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', '2017-price
       g.V().hasLabel('_code_list').has('listID', 'type-of-prices').has('edition', 'one-off')
     ).property(single, 'label', '2017 prices')).next()
 
+
+g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', 'KP').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', 'KP')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', 'KP').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'type-of-prices').has('value', 'KP').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'type-of-prices').has('edition', 'one-off')
+    ).property(single, 'label', 'Real terms')).next()
+
