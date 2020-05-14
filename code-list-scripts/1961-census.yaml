@@ -1,0 +1,74 @@
+definition:
+  - datasets: 1961 census datasets
+  - comments: SH, ST & SC datasets
+imports:
+  - language: cypher
+    files:
+      - cypher/calendar-years.cypher
+      - ../geo-specific-codelist/1961-geography.cypher
+      - cypher/ashe-sex.cypher
+      - cypher/five-year-age-brackets.cypher
+      - cypher/mid-year-pop-age.cypher
+      - cypher/unit-of-measure.cypher
+      - cypher/census/census-1961-amenities.cypher
+      - cypher/census/census-1961-birthplace-outside-uk.cypher
+      - cypher/census/census-1961-building-type-variable.cypher
+      - cypher/census/census-1961-dwellings.cypher
+      - cypher/census/census-1961-economic-activity-age-group.cypher
+      - cypher/census/census-1961-family-count.cypher
+      - cypher/census/census-1961-hotel-variable.cypher
+      - cypher/census/census-1961-household-type.cypher
+      - cypher/census/census-1961-households-sharing-dwelling.cypher
+      - cypher/census/census-1961-industry.cypher
+      - cypher/census/census-1961-marital-status.cypher
+      - cypher/census/census-1961-movers.cypher
+      - cypher/census/census-1961-movers-age-sex.cypher
+      - cypher/census/census-1961-nationality.cypher
+      - cypher/census/census-1961-non-private-population-establishment-type.cypher
+      - cypher/census/census-1961-non-private-population-variable.cypher
+      - cypher/census/census-1961-occupation-classification.cypher
+      - cypher/census/census-1961-number-of-rooms.cypher
+      - cypher/census/census-1961-of-pensionable-age.cypher
+      - cypher/census/census-1961-older-households.cypher
+      - cypher/census/census-1961-persons-per-room.cypher
+      - cypher/census/census-1961-sex-activity.cypher
+      - cypher/census/census-1961-tenure.cypher
+      - cypher/census/census-1961-tenure-variable.cypher
+      - cypher/census/census-1961-terminal-education-age.cypher
+      - cypher/census/census-1961-usual-residence-outside-local-authority.cypher
+      - cypher/census/census-1961-work-location.cypher
+  - language: gremlin
+    files:
+      - gremlin/calendar-years.grm
+      - ../geo-specific-codelist/gremlin/1961-geography.grm
+      - gremlin/ashe-sex.grm
+      - gremlin/five-year-age-brackets.grm
+      - gremlin/mid-year-pop-age.grm
+      - gremlin/unit-of-measure.grm
+      - gremlin/census/census-1961-amenities.grm
+      - gremlin/census/census-1961-birthplace-outside-uk.grm
+      - gremlin/census/census-1961-building-type-variable.grm
+      - gremlin/census/census-1961-dwellings.grm
+      - gremlin/census/census-1961-economic-activity-age-group.grm
+      - gremlin/census/census-1961-family-count.grm
+      - gremlin/census/census-1961-hotel-variable.grm
+      - gremlin/census/census-1961-household-type.grm
+      - gremlin/census/census-1961-households-sharing-dwelling.grm
+      - gremlin/census/census-1961-industry.grm
+      - gremlin/census/census-1961-marital-status.grm
+      - gremlin/census/census-1961-movers.grm
+      - gremlin/census/census-1961-movers-age-sex.grm
+      - gremlin/census/census-1961-nationality.grm
+      - gremlin/census/census-1961-non-private-population-establishment-type.grm
+      - gremlin/census/census-1961-non-private-population-variable.grm
+      - gremlin/census/census-1961-occupation-classification.grm
+      - gremlin/census/census-1961-number-of-rooms.grm
+      - gremlin/census/census-1961-of-pensionable-age.grm
+      - gremlin/census/census-1961-older-households.grm
+      - gremlin/census/census-1961-persons-per-room.grm
+      - gremlin/census/census-1961-sex-activity.grm
+      - gremlin/census/census-1961-tenure.grm
+      - gremlin/census/census-1961-tenure-variable.grm
+      - gremlin/census/census-1961-terminal-education-age.grm
+      - gremlin/census/census-1961-usual-residence-outside-local-authority.grm
+      - gremlin/census/census-1961-work-location.grm

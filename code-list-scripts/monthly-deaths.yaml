@@ -1,0 +1,11 @@
+definition:
+  - datasets: monthly deaths
+imports:
+  - language: cypher
+    files:
+      - cypher/mmm-yy.cypher
+      - ../geo-specific-codelist/admin-geography.cypher
+  - language: gremlin
+    files:
+      - gremlin/mmm-yy.grm
+      - ../geo-specific-codelist/gremlin/admin-geography.grm

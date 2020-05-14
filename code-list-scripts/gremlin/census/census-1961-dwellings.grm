@@ -1,0 +1,449 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'census-1961-dwellings').
+    property(single, 'label', 'dwellings').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'non-permanent-dwellings').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'non-permanent-dwellings')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'non-permanent-dwellings').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'non-permanent-dwellings').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Non permanent dwellings')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'not-wholly-residential-permanent-building').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'not-wholly-residential-permanent-building')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'not-wholly-residential-permanent-building').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'not-wholly-residential-permanent-building').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Not wholly residential permanent building')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'permanent-building-containing-more-than-one-dwelling').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'permanent-building-containing-more-than-one-dwelling')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'permanent-building-containing-more-than-one-dwelling').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'permanent-building-containing-more-than-one-dwelling').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Permanent building containing more than one dwelling')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-dwellings').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'total-dwellings')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-dwellings').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-dwellings').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Total dwellings')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'unshared-permanent-dwellings').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'unshared-permanent-dwellings')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'unshared-permanent-dwellings').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'unshared-permanent-dwellings').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Unshared permanent dwellings')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'wholly-residential-permanent-building-containing-one-dwelling').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'wholly-residential-permanent-building-containing-one-dwelling')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'wholly-residential-permanent-building-containing-one-dwelling').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'wholly-residential-permanent-building-containing-one-dwelling').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Wholly residential permanent building containing one dwelling')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '1-person-household').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', '1-person-household')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '1-person-household').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '1-person-household').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', '1 person household')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '2-person-households').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', '2-person-households')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '2-person-households').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '2-person-households').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', '2 person households')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '3-person-households').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', '3-person-households')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '3-person-households').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '3-person-households').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', '3 person households')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '4-person-households').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', '4-person-households')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '4-person-households').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '4-person-households').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', '4 person households')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '5-person-households').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', '5-person-households')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '5-person-households').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '5-person-households').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', '5 person households')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '6-person-households').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', '6-person-households')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '6-person-households').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '6-person-households').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', '6 person households')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '7-or-more-person-households').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', '7-or-more-person-households')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '7-or-more-person-households').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', '7-or-more-person-households').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', '7 or more person households')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'all-absent-persons').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'all-absent-persons')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'all-absent-persons').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'all-absent-persons').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'All absent persons')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'households-present').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'households-present')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'households-present').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'households-present').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Households present')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'households-present-in-shared-dwellings').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'households-present-in-shared-dwellings')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'households-present-in-shared-dwellings').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'households-present-in-shared-dwellings').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Households present in shared dwellings')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-households').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'total-households')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-households').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-households').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Total households')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-households-in-shared-dwellings').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'total-households-in-shared-dwellings')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-households-in-shared-dwellings').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-households-in-shared-dwellings').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Total households in shared dwellings')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-households-in-shared-dwellings-without-exclusive-use-of-both-stove-and-sink').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'total-households-in-shared-dwellings-without-exclusive-use-of-both-stove-and-sink')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-households-in-shared-dwellings-without-exclusive-use-of-both-stove-and-sink').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-households-in-shared-dwellings-without-exclusive-use-of-both-stove-and-sink').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Total households in shared dwellings without exclusive use of both stove and sink')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-persons').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'total-persons')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-persons').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-persons').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Total persons')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-persons-in-shared-dwellings').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'total-persons-in-shared-dwellings')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-persons-in-shared-dwellings').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-persons-in-shared-dwellings').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Total persons in shared dwellings')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-persons-in-shared-dwellings-without-exclusive-use-of-both-stove-and-sink').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'total-persons-in-shared-dwellings-without-exclusive-use-of-both-stove-and-sink')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-persons-in-shared-dwellings-without-exclusive-use-of-both-stove-and-sink').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-persons-in-shared-dwellings-without-exclusive-use-of-both-stove-and-sink').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Total persons in shared dwellings without exclusive use of both stove and sink')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-rooms-occupied').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'total-rooms-occupied')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-rooms-occupied').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-rooms-occupied').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Total rooms occupied')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-rooms-occupied-in-shared-dwellings').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'total-rooms-occupied-in-shared-dwellings')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-rooms-occupied-in-shared-dwellings').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-rooms-occupied-in-shared-dwellings').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Total rooms occupied in shared dwellings')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-rooms-occupied-in-shared-dwellings-without-exclusive-use-of-both-stove-and-sink').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'total-rooms-occupied-in-shared-dwellings-without-exclusive-use-of-both-stove-and-sink')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-rooms-occupied-in-shared-dwellings-without-exclusive-use-of-both-stove-and-sink').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-rooms-occupied-in-shared-dwellings-without-exclusive-use-of-both-stove-and-sink').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Total rooms occupied in shared dwellings without exclusive use of both stove and sink')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'not-wholly-residential-permanent-building-containing-one-dwelling').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'not-wholly-residential-permanent-building-containing-one-dwelling')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'not-wholly-residential-permanent-building-containing-one-dwelling').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'not-wholly-residential-permanent-building-containing-one-dwelling').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Not wholly residential permanent building containing one dwelling')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'dwellings-containing-1-household-space').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'dwellings-containing-1-household-space')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'dwellings-containing-1-household-space').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'dwellings-containing-1-household-space').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Dwellings containing 1 household space')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'dwellings-containing-2-household-spaces').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'dwellings-containing-2-household-spaces')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'dwellings-containing-2-household-spaces').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'dwellings-containing-2-household-spaces').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Dwellings containing 2 household spaces')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'dwellings-containing-3-or-more-household-spaces').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'dwellings-containing-3-or-more-household-spaces')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'dwellings-containing-3-or-more-household-spaces').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'dwellings-containing-3-or-more-household-spaces').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Dwellings containing 3 or more household spaces')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'occupied-or-vacant-dwellings').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'occupied-or-vacant-dwellings')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'occupied-or-vacant-dwellings').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'occupied-or-vacant-dwellings').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Occupied or vacant dwellings')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'partly-vacant-dwellings').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'partly-vacant-dwellings')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'partly-vacant-dwellings').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'partly-vacant-dwellings').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Partly vacant dwellings')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-household-spaces').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'total-household-spaces')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-household-spaces').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-household-spaces').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Total household spaces')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-non-permanent-dwellings').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'total-non-permanent-dwellings')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-non-permanent-dwellings').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'total-non-permanent-dwellings').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Total non permanent dwellings')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'vacant-household-spaces').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'vacant-household-spaces')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'vacant-household-spaces').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'vacant-household-spaces').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Vacant household spaces')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'wholly-or-partly-occupied-dwellings').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'wholly-or-partly-occupied-dwellings')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'wholly-or-partly-occupied-dwellings').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'wholly-or-partly-occupied-dwellings').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Wholly or partly occupied dwellings')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'wholly-vacant-dwellings').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'wholly-vacant-dwellings')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'wholly-vacant-dwellings').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'wholly-vacant-dwellings').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Wholly vacant dwellings')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'shared-permanent-dwelling-wholly-residential-permanent-building-containing-one-dwelling').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'shared-permanent-dwelling-wholly-residential-permanent-building-containing-one-dwelling')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'shared-permanent-dwelling-wholly-residential-permanent-building-containing-one-dwelling').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'shared-permanent-dwelling-wholly-residential-permanent-building-containing-one-dwelling').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Shared permanent dwelling: wholly residential permanent building containing one dwelling')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'shared-permanent-dwelling-not-wholly-residential-building-containing-one-dwelling').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'shared-permanent-dwelling-not-wholly-residential-building-containing-one-dwelling')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'shared-permanent-dwelling-not-wholly-residential-building-containing-one-dwelling').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'shared-permanent-dwelling-not-wholly-residential-building-containing-one-dwelling').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Shared permanent dwelling: not wholly residential building containing one dwelling')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'shared-permanent-dwelling-permanent-building-containing-more-than-one-dwelling').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'shared-permanent-dwelling-permanent-building-containing-more-than-one-dwelling')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'shared-permanent-dwelling-permanent-building-containing-more-than-one-dwelling').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'shared-permanent-dwelling-permanent-building-containing-more-than-one-dwelling').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Shared permanent dwelling: permanent building containing more than one dwelling')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'unshared-permanent-dwellings-not-wholly-residential-and-permanent-buildings-containing-more-than-one-dwelling').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-dwellings').property(single, 'value', 'unshared-permanent-dwellings-not-wholly-residential-and-permanent-buildings-containing-more-than-one-dwelling')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'unshared-permanent-dwellings-not-wholly-residential-and-permanent-buildings-containing-more-than-one-dwelling').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-dwellings').has('value', 'unshared-permanent-dwellings-not-wholly-residential-and-permanent-buildings-containing-more-than-one-dwelling').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-dwellings').has('edition', 'one-off')
+    ).property(single, 'label', 'Unshared permanent dwellings: not wholly residential and permanent buildings containing more than one dwelling')).next()
+

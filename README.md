@@ -84,3 +84,7 @@ Loading each code list is a 3-step process from that point:
     `./gremlin-import.sh geo-specific-codelist/gremlin/ctry17.grm`
 
   b. Use the [`load`](code-list-scripts/load.go) tool to select which query language and YAML file's contents you would like to load
+
+#### Sanity checking
+
+When you create a YAML file for a dataset (or group some code lists), please run `./sanity.sh` to ensure there are no missing/misplaced files.

@@ -3,7 +3,7 @@ definition:
 imports:
   - language: cypher
     files:
-      - migration-scripts/calendar-years.cypher
+      - cypher/calendar-years.cypher
       - ../geo-specific-codelist/admin-geography.cypher
   - language: gremlin
     files:

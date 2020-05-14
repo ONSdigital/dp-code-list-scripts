@@ -77,3 +77,7 @@ MERGE (node:`_code`:`_code_geography` { value:"E37000040" });
 MATCH (parent:`_code_list`:`_code_list_local-enterprise-partnership-geography`),(node:`_code`:`_code_geography` { value:"E37000040" }) MERGE (node)-[:usedBy { label:"Sheffield City Region"}]->(parent);
 MERGE (node:`_code`:`_code_geography` { value:"E37000041" });
 MATCH (parent:`_code_list`:`_code_list_local-enterprise-partnership-geography`),(node:`_code`:`_code_geography` { value:"E37000041" }) MERGE (node)-[:usedBy { label:"South East Midlands"}]->(parent);
+MERGE (node:`_code`:`_code_geography` { value:"E37000026" });
+MATCH (parent:`_code_list`:`_code_list_local-enterprise-partnership-geography`),(node:`_code`:`_code_geography` { value:"E37000026" }) MERGE (node)-[:usedBy { label:"Northamptonshire"}]->(parent);
+MERGE (node:`_code`:`_code_geography` { value:"E37000031" });
+MATCH (parent:`_code_list`:`_code_list_local-enterprise-partnership-geography`),(node:`_code`:`_code_geography` { value:"E37000031" }) MERGE (node)-[:usedBy { label:"South East Midlands"}]->(parent);

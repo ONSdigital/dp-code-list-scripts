@@ -1,0 +1,218 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'census-1961-amenities').
+    property(single, 'edition', 'one-off').
+    property(single, 'label', 'amenities')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'total-number-of-dwellings-with-an-occupier-present').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'total-number-of-dwellings-with-an-occupier-present')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'total-number-of-dwellings-with-an-occupier-present').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'total-number-of-dwellings-with-an-occupier-present').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'Total number of dwellings with an occupier present')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'lacking-piped-cold-water').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'lacking-piped-cold-water')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'lacking-piped-cold-water').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'lacking-piped-cold-water').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'Lacking piped cold water')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'lacking-piped-hot-water').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'lacking-piped-hot-water')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'lacking-piped-hot-water').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'lacking-piped-hot-water').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'Lacking piped hot water')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'lacking-fixed-bath').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'lacking-fixed-bath')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'lacking-fixed-bath').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'lacking-fixed-bath').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'Lacking fixed bath')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'lacking-water-closet').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'lacking-water-closet')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'lacking-water-closet').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'lacking-water-closet').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'Lacking water closet')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'dwellings-occupied-by-households-at-least-one-of-which-has-exclusive-use-of-all-four-arrangements').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'dwellings-occupied-by-households-at-least-one-of-which-has-exclusive-use-of-all-four-arrangements')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'dwellings-occupied-by-households-at-least-one-of-which-has-exclusive-use-of-all-four-arrangements').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'dwellings-occupied-by-households-at-least-one-of-which-has-exclusive-use-of-all-four-arrangements').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'Dwellings occupied by households at least one of which has exclusive use of all four arrangements')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'sharing-piped-cold-water').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'sharing-piped-cold-water')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'sharing-piped-cold-water').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'sharing-piped-cold-water').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'Sharing piped cold water')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'sharing-piped-hot-water').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'sharing-piped-hot-water')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'sharing-piped-hot-water').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'sharing-piped-hot-water').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'Sharing piped hot water')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'sharing-fixed-bath').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'sharing-fixed-bath')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'sharing-fixed-bath').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'sharing-fixed-bath').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'Sharing fixed bath')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'sharing-water-closet').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'sharing-water-closet')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'sharing-water-closet').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'sharing-water-closet').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'Sharing water closet')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'shared-cold-water').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'shared-cold-water')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'shared-cold-water').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'shared-cold-water').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'Shared cold water')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'no-cold-water').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'no-cold-water')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'no-cold-water').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'no-cold-water').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'No cold water')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'shared-hot-water').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'shared-hot-water')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'shared-hot-water').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'shared-hot-water').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'Shared hot water')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'no-hot-water').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'no-hot-water')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'no-hot-water').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'no-hot-water').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'No hot water')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'shared-fixed-bath').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'shared-fixed-bath')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'shared-fixed-bath').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'shared-fixed-bath').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'Shared fixed bath')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'no-fixed-bath').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'no-fixed-bath')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'no-fixed-bath').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'no-fixed-bath').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'No fixed bath')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'shared-water-closet').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'shared-water-closet')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'shared-water-closet').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'shared-water-closet').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'Shared water closet')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'no-water-closet').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'no-water-closet')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'no-water-closet').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'no-water-closet').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'No water closet')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'exclusive-use-of-all-amenities').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-amenities').property(single, 'value', 'exclusive-use-of-all-amenities')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'exclusive-use-of-all-amenities').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-amenities').has('value', 'exclusive-use-of-all-amenities').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-amenities').has('edition', 'one-off')
+    ).property(single, 'label', 'Exclusive use of all amenities')).next()
+

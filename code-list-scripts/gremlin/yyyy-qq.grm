@@ -1327,3 +1327,158 @@ g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', "2029-q4").outE().
       g.V().hasLabel('_code_list').has('listID', 'yyyy-qq').has('edition', 'one-off')
     ).property(single, 'label', "2029 Q4")).next()
 
+
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2007-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'yyyy-qq').property(single, 'value', '2007-q0')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2007-q0').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2007-q0').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'yyyy-qq').has('edition', 'one-off')
+    ).property(single, 'label', '2007')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2008-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'yyyy-qq').property(single, 'value', '2008-q0')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2008-q0').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2008-q0').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'yyyy-qq').has('edition', 'one-off')
+    ).property(single, 'label', '2008')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2009-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'yyyy-qq').property(single, 'value', '2009-q0')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2009-q0').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2009-q0').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'yyyy-qq').has('edition', 'one-off')
+    ).property(single, 'label', '2009')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2010-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'yyyy-qq').property(single, 'value', '2010-q0')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2010-q0').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2010-q0').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'yyyy-qq').has('edition', 'one-off')
+    ).property(single, 'label', '2010')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2011-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'yyyy-qq').property(single, 'value', '2011-q0')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2011-q0').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2011-q0').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'yyyy-qq').has('edition', 'one-off')
+    ).property(single, 'label', '2011')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2012-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'yyyy-qq').property(single, 'value', '2012-q0')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2012-q0').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2012-q0').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'yyyy-qq').has('edition', 'one-off')
+    ).property(single, 'label', '2012')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2013-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'yyyy-qq').property(single, 'value', '2013-q0')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2013-q0').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2013-q0').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'yyyy-qq').has('edition', 'one-off')
+    ).property(single, 'label', '2013')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2014-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'yyyy-qq').property(single, 'value', '2014-q0')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2014-q0').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2014-q0').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'yyyy-qq').has('edition', 'one-off')
+    ).property(single, 'label', '2014')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2015-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'yyyy-qq').property(single, 'value', '2015-q0')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2015-q0').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2015-q0').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'yyyy-qq').has('edition', 'one-off')
+    ).property(single, 'label', '2015')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2016-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'yyyy-qq').property(single, 'value', '2016-q0')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2016-q0').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2016-q0').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'yyyy-qq').has('edition', 'one-off')
+    ).property(single, 'label', '2016')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2017-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'yyyy-qq').property(single, 'value', '2017-q0')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2017-q0').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2017-q0').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'yyyy-qq').has('edition', 'one-off')
+    ).property(single, 'label', '2017')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2018-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'yyyy-qq').property(single, 'value', '2018-q0')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2018-q0').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2018-q0').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'yyyy-qq').has('edition', 'one-off')
+    ).property(single, 'label', '2018')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2019-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'yyyy-qq').property(single, 'value', '2019-q0')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2019-q0').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2019-q0').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'yyyy-qq').has('edition', 'one-off')
+    ).property(single, 'label', '2019')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2020-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'yyyy-qq').property(single, 'value', '2020-q0')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2020-q0').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'yyyy-qq').has('value', '2020-q0').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'yyyy-qq').has('edition', 'one-off')
+    ).property(single, 'label', '2020')).next()
+
+

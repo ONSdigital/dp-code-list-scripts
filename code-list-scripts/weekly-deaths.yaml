@@ -1,0 +1,27 @@
+definition:
+  - datasets: weekly deaths
+imports:
+  - language: cypher
+    files:
+      - cypher/calendar-years.cypher
+      - cypher/week-number.cypher
+      - cypher/cause-of-death.cypher
+      - cypher/place-of-death.cypher
+      - cypher/registration-or-occurrence.cypher
+      - cypher/recorded-deaths.cypher
+      - cypher/age-groups.cypher
+      - cypher/ashe-sex.cypher
+      - ../geo-specific-codelist/admin-geography.cypher
+      - ../geo-specific-codelist/health-board.cypher
+  - language: gremlin
+    files:
+      - gremlin/calendar-years.grm
+      - gremlin/week-number.grm
+      - gremlin/cause-of-death.grm
+      - gremlin/place-of-death.grm
+      - gremlin/registration-or-occurrence.grm
+      - gremlin/recorded-deaths.grm
+      - gremlin/age-groups.grm
+      - gremlin/ashe-sex.grm
+      - ../geo-specific-codelist/gremlin/admin-geography.grm
+      - ../geo-specific-codelist/gremlin/health-board.grm

@@ -1,0 +1,66 @@
+g.V().hasLabel('_code_list').has('listID', 'census-1961-terminal-education-age').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'census-1961-terminal-education-age').
+    property(single, 'label', 'terminaleducationage').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-terminal-education-age').has('value', '16-19').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-terminal-education-age').property(single, 'value', '16-19')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-terminal-education-age').has('value', '16-19').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-terminal-education-age').has('value', '16-19').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-terminal-education-age').has('edition', 'one-off')
+    ).property(single, 'label', '16-19')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-terminal-education-age').has('value', '20+').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-terminal-education-age').property(single, 'value', '20+')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-terminal-education-age').has('value', '20+').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-terminal-education-age').has('value', '20+').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-terminal-education-age').has('edition', 'one-off')
+    ).property(single, 'label', '20+')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-terminal-education-age').has('value', 'not-stated').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-terminal-education-age').property(single, 'value', 'not-stated')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-terminal-education-age').has('value', 'not-stated').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-terminal-education-age').has('value', 'not-stated').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-terminal-education-age').has('edition', 'one-off')
+    ).property(single, 'label', 'Not stated')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-terminal-education-age').has('value', 'students').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-terminal-education-age').property(single, 'value', 'students')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-terminal-education-age').has('value', 'students').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-terminal-education-age').has('value', 'students').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-terminal-education-age').has('edition', 'one-off')
+    ).property(single, 'label', 'Students')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-terminal-education-age').has('value', 'under-16').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-terminal-education-age').property(single, 'value', 'under-16')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-terminal-education-age').has('value', 'under-16').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-terminal-education-age').has('value', 'under-16').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-terminal-education-age').has('edition', 'one-off')
+    ).property(single, 'label', 'Under 16')).next()
+
+

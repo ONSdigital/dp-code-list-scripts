@@ -1,0 +1,44 @@
+g.V().hasLabel('_code_list').has('listID', 'census-1961-tenure-variable').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'census-1961-tenure-variable').
+    property(single, 'edition', 'one-off').
+    property(single, 'label', 'tenurevariable')
+  ).next()
+
+
+
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-tenure-variable').has('value', 'households').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-tenure-variable').property(single, 'value', 'households')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-tenure-variable').has('value', 'households').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-tenure-variable').has('value', 'households').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-tenure-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Households')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-tenure-variable').has('value', 'persons').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-tenure-variable').property(single, 'value', 'persons')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-tenure-variable').has('value', 'persons').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-tenure-variable').has('value', 'persons').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-tenure-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Persons')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'census-1961-tenure-variable').has('value', 'rooms').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'census-1961-tenure-variable').property(single, 'value', 'rooms')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'census-1961-tenure-variable').has('value', 'rooms').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'census-1961-tenure-variable').has('value', 'rooms').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'census-1961-tenure-variable').has('edition', 'one-off')
+    ).property(single, 'label', 'Rooms')).next()
+
+

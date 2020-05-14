@@ -1,0 +1,15 @@
+CREATE CONSTRAINT ON (n:`_code_sector`) ASSERT n.code IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_sector`) ASSERT n.code IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_sector` { label:"sectortype", edition:"one-off" });
+MERGE (node:`_code`:`_code_sector` { value:"all" });
+MATCH (parent:`_code_list`:`_code_list_sector`),(node:`_code`:`_code_sector` { value:"all" }) MERGE (node)-[:usedBy { label:"All"}]->(parent);
+MERGE (node:`_code`:`_code_sector` { value:"public-sector" });
+MATCH (parent:`_code_list`:`_code_list_sector`),(node:`_code`:`_code_sector` { value:"public-sector" }) MERGE (node)-[:usedBy { label:"Public sector"}]->(parent);
+MERGE (node:`_code`:`_code_sector` { value:"private-sector" });
+MATCH (parent:`_code_list`:`_code_list_sector`),(node:`_code`:`_code_sector` { value:"private-sector" }) MERGE (node)-[:usedBy { label:"Private sector"}]->(parent);
+MERGE (node:`_code`:`_code_sector` { value:"non-profit-body-or-mutual-association" });
+MATCH (parent:`_code_list`:`_code_list_sector`),(node:`_code`:`_code_sector` { value:"non-profit-body-or-mutual-association" }) MERGE (node)-[:usedBy { label:"Non-profit body or mutual association"}]->(parent);
+MERGE (node:`_code`:`_code_sector` { value:"public-sector-employment-excluding-effects-of-major-reclassifications" });
+MATCH (parent:`_code_list`:`_code_list_sector`),(node:`_code`:`_code_sector` { value:"public-sector-employment-excluding-effects-of-major-reclassifications" }) MERGE (node)-[:usedBy { label:"Public sector employment excluding effects of major reclassifications"}]->(parent);
+MERGE (node:`_code`:`_code_sector` { value:"private-sector-employment-excluding-effects-of-major-reclassifications" });
+MATCH (parent:`_code_list`:`_code_list_sector`),(node:`_code`:`_code_sector` { value:"private-sector-employment-excluding-effects-of-major-reclassifications" }) MERGE (node)-[:usedBy { label:"Private sector employment excluding effects of major reclassifications"}]->(parent);

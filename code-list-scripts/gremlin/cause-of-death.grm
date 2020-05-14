@@ -1,0 +1,31 @@
+
+
+g.V().hasLabel('_code_list').has('listID', 'cause-of-death').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', 'cause-of-death').
+    property(single, 'label', 'causeofdeath').
+    property(single, 'edition', 'one-off')
+  ).next()
+
+
+g.V().hasLabel('_code').has('listID', 'cause-of-death').has('value', 'all-causes').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cause-of-death').property(single, 'value', 'all-causes')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cause-of-death').has('value', 'all-causes').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cause-of-death').has('value', 'all-causes').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'cause-of-death').has('edition', 'one-off')
+    ).property(single, 'label', 'All causes')).next()
+
+
+g.V().hasLabel('_code').has('listID', 'cause-of-death').has('value', 'covid-19').
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'cause-of-death').property(single, 'value', 'covid-19')
+  ).next()
+g.V().hasLabel('_code').has('listID', 'cause-of-death').has('value', 'covid-19').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'cause-of-death').has('value', 'covid-19').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'cause-of-death').has('edition', 'one-off')
+    ).property(single, 'label', 'COVID 19')).next()
+
