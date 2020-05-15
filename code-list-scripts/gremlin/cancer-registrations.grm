@@ -1,77 +1,71 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'cancer-registrations').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'cancer-registrations').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "cancer-registrations").
-    property(single, 'label', "cancerregistrations").
-    property(single, 'edition', "one-off")
+    property(single, 'edition', "one-off").
+    property(single, 'label', "cancerregistrations")
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'cancer-registrations').has('value', "registrations-of-newly-diagnosed-cases").
+g.V().has('_code','listID', 'cancer-registrations').has('value', "registrations-of-newly-diagnosed-cases").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'cancer-registrations').property(single, 'value', "registrations-of-newly-diagnosed-cases")
   ).next()
-g.V().hasLabel('_code').has('listID', 'cancer-registrations').has('value', "registrations-of-newly-diagnosed-cases").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'cancer-registrations').has('value', "registrations-of-newly-diagnosed-cases").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'cancer-registrations').has('edition', 'one-off')
-    ).property(single, 'label', "Registrations of newly diagnosed cases")).next()
+g.V().has('_code', 'listID', 'cancer-registrations').has('value', "registrations-of-newly-diagnosed-cases").as('code').
+  V().has('_code_list', 'listID', 'cancer-registrations').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Registrations of newly diagnosed cases").next()
 
 
-g.V().hasLabel('_code').has('listID', 'cancer-registrations').has('value', "rates-of-newly-diagnosed-cases").
+g.V().has('_code','listID', 'cancer-registrations').has('value', "rates-of-newly-diagnosed-cases").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'cancer-registrations').property(single, 'value', "rates-of-newly-diagnosed-cases")
   ).next()
-g.V().hasLabel('_code').has('listID', 'cancer-registrations').has('value', "rates-of-newly-diagnosed-cases").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'cancer-registrations').has('value', "rates-of-newly-diagnosed-cases").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'cancer-registrations').has('edition', 'one-off')
-    ).property(single, 'label', "Rates of newly diagnosed cases")).next()
+g.V().has('_code', 'listID', 'cancer-registrations').has('value', "rates-of-newly-diagnosed-cases").as('code').
+  V().has('_code_list', 'listID', 'cancer-registrations').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Rates of newly diagnosed cases").next()
 
 
-g.V().hasLabel('_code').has('listID', 'cancer-registrations').has('value', "registrations-of-death").
+g.V().has('_code','listID', 'cancer-registrations').has('value', "registrations-of-death").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'cancer-registrations').property(single, 'value', "registrations-of-death")
   ).next()
-g.V().hasLabel('_code').has('listID', 'cancer-registrations').has('value', "registrations-of-death").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'cancer-registrations').has('value', "registrations-of-death").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'cancer-registrations').has('edition', 'one-off')
-    ).property(single, 'label', "Registrations of death")).next()
+g.V().has('_code', 'listID', 'cancer-registrations').has('value', "registrations-of-death").as('code').
+  V().has('_code_list', 'listID', 'cancer-registrations').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Registrations of death").next()
 
 
-g.V().hasLabel('_code').has('listID', 'cancer-registrations').has('value', "rates-of-death").
+g.V().has('_code','listID', 'cancer-registrations').has('value', "rates-of-death").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'cancer-registrations').property(single, 'value', "rates-of-death")
   ).next()
-g.V().hasLabel('_code').has('listID', 'cancer-registrations').has('value', "rates-of-death").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'cancer-registrations').has('value', "rates-of-death").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'cancer-registrations').has('edition', 'one-off')
-    ).property(single, 'label', "Rates of death")).next()
+g.V().has('_code', 'listID', 'cancer-registrations').has('value', "rates-of-death").as('code').
+  V().has('_code_list', 'listID', 'cancer-registrations').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Rates of death").next()
 
 
-g.V().hasLabel('_code').has('listID', 'cancer-registrations').has('value', "standardised-registration-ratios").
+g.V().has('_code','listID', 'cancer-registrations').has('value', "standardised-registration-ratios").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'cancer-registrations').property(single, 'value', "standardised-registration-ratios")
   ).next()
-g.V().hasLabel('_code').has('listID', 'cancer-registrations').has('value', "standardised-registration-ratios").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'cancer-registrations').has('value', "standardised-registration-ratios").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'cancer-registrations').has('edition', 'one-off')
-    ).property(single, 'label', "Standardised registration ratios")).next()
+g.V().has('_code', 'listID', 'cancer-registrations').has('value', "standardised-registration-ratios").as('code').
+  V().has('_code_list', 'listID', 'cancer-registrations').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Standardised registration ratios").next()
 
 
-g.V().hasLabel('_code').has('listID', 'cancer-registrations').has('value', "mortality-to-incidence-ratios").
+g.V().has('_code','listID', 'cancer-registrations').has('value', "mortality-to-incidence-ratios").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'cancer-registrations').property(single, 'value', "mortality-to-incidence-ratios")
   ).next()
-g.V().hasLabel('_code').has('listID', 'cancer-registrations').has('value', "mortality-to-incidence-ratios").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'cancer-registrations').has('value', "mortality-to-incidence-ratios").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'cancer-registrations').has('edition', 'one-off')
-    ).property(single, 'label', "Mortality to incidence ratios")).next()
+g.V().has('_code', 'listID', 'cancer-registrations').has('value', "mortality-to-incidence-ratios").as('code').
+  V().has('_code_list', 'listID', 'cancer-registrations').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Mortality to incidence ratios").next()
 
 
 

@@ -1,6 +1,6 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'business-investment-instrument-asset').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'business-investment-instrument-asset').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "business-investment-instrument-asset").
     property(single, 'label', "instrument-asset").
@@ -10,169 +10,156 @@ g.V().hasLabel('_code_list').has('listID', 'business-investment-instrument-asset
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N111G").
+g.V().has('_code','listID', 'business-investment-instrument-asset').has('value', "N111G").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-instrument-asset').property(single, 'value', "N111G")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N111G").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N111G").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-instrument-asset').has('edition', 'one-off')
-    ).property(single, 'label', "Dwellings (gross)")).next()
+g.V().has('_code', 'listID', 'business-investment-instrument-asset').has('value', "N111G").as('code').
+  V().has('_code_list', 'listID', 'business-investment-instrument-asset').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Dwellings (gross)").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N112G").
+g.V().has('_code','listID', 'business-investment-instrument-asset').has('value', "N112G").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-instrument-asset').property(single, 'value', "N112G")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N112G").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N112G").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-instrument-asset').has('edition', 'one-off')
-    ).property(single, 'label', "Other buildings and structures (gross)")).next()
+g.V().has('_code', 'listID', 'business-investment-instrument-asset').has('value', "N112G").as('code').
+  V().has('_code_list', 'listID', 'business-investment-instrument-asset').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Other buildings and structures (gross)").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N1131G").
+g.V().has('_code','listID', 'business-investment-instrument-asset').has('value', "N1131G").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-instrument-asset').property(single, 'value', "N1131G")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N1131G").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N1131G").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-instrument-asset').has('edition', 'one-off')
-    ).property(single, 'label', "Transport equipment (gross)")).next()
+g.V().has('_code', 'listID', 'business-investment-instrument-asset').has('value', "N1131G").as('code').
+  V().has('_code_list', 'listID', 'business-investment-instrument-asset').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Transport equipment (gross)").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N11321G").
+g.V().has('_code','listID', 'business-investment-instrument-asset').has('value', "N11321G").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-instrument-asset').property(single, 'value', "N11321G")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N11321G").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N11321G").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-instrument-asset').has('edition', 'one-off')
-    ).property(single, 'label', "Computer hardware (gross)")).next()
+g.V().has('_code', 'listID', 'business-investment-instrument-asset').has('value', "N11321G").as('code').
+  V().has('_code_list', 'listID', 'business-investment-instrument-asset').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Computer hardware (gross)").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N11322G").
+g.V().has('_code','listID', 'business-investment-instrument-asset').has('value', "N11322G").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-instrument-asset').property(single, 'value', "N11322G")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N11322G").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N11322G").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-instrument-asset').has('edition', 'one-off')
-    ).property(single, 'label', "Telecommunications equipment (gross)")).next()
+g.V().has('_code', 'listID', 'business-investment-instrument-asset').has('value', "N11322G").as('code').
+  V().has('_code_list', 'listID', 'business-investment-instrument-asset').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Telecommunications equipment (gross)").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N1132G").
+g.V().has('_code','listID', 'business-investment-instrument-asset').has('value', "N1132G").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-instrument-asset').property(single, 'value', "N1132G")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N1132G").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N1132G").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-instrument-asset').has('edition', 'one-off')
-    ).property(single, 'label', "ICT equipment (gross)")).next()
+g.V().has('_code', 'listID', 'business-investment-instrument-asset').has('value', "N1132G").as('code').
+  V().has('_code_list', 'listID', 'business-investment-instrument-asset').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "ICT equipment (gross)").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N115G").
+g.V().has('_code','listID', 'business-investment-instrument-asset').has('value', "N115G").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-instrument-asset').property(single, 'value', "N115G")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N115G").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N115G").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-instrument-asset').has('edition', 'one-off')
-    ).property(single, 'label', "Cultivated biological resources (gross)")).next()
+g.V().has('_code', 'listID', 'business-investment-instrument-asset').has('value', "N115G").as('code').
+  V().has('_code_list', 'listID', 'business-investment-instrument-asset').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Cultivated biological resources (gross)").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N1171G").
+g.V().has('_code','listID', 'business-investment-instrument-asset').has('value', "N1171G").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-instrument-asset').property(single, 'value', "N1171G")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N1171G").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N1171G").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-instrument-asset').has('edition', 'one-off')
-    ).property(single, 'label', "Research and development (gross)")).next()
+g.V().has('_code', 'listID', 'business-investment-instrument-asset').has('value', "N1171G").as('code').
+  V().has('_code_list', 'listID', 'business-investment-instrument-asset').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Research and development (gross)").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N1173G").
+g.V().has('_code','listID', 'business-investment-instrument-asset').has('value', "N1173G").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-instrument-asset').property(single, 'value', "N1173G")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N1173G").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N1173G").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-instrument-asset').has('edition', 'one-off')
-    ).property(single, 'label', "Computer software and databases (gross)")).next()
+g.V().has('_code', 'listID', 'business-investment-instrument-asset').has('value', "N1173G").as('code').
+  V().has('_code_list', 'listID', 'business-investment-instrument-asset').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Computer software and databases (gross)").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N117G").
+g.V().has('_code','listID', 'business-investment-instrument-asset').has('value', "N117G").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-instrument-asset').property(single, 'value', "N117G")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N117G").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N117G").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-instrument-asset').has('edition', 'one-off')
-    ).property(single, 'label', "Intellectual property products (gross)")).next()
+g.V().has('_code', 'listID', 'business-investment-instrument-asset').has('value', "N117G").as('code').
+  V().has('_code_list', 'listID', 'business-investment-instrument-asset').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Intellectual property products (gross)").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N11G").
+g.V().has('_code','listID', 'business-investment-instrument-asset').has('value', "N11G").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-instrument-asset').property(single, 'value', "N11G")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N11G").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N11G").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-instrument-asset').has('edition', 'one-off')
-    ).property(single, 'label', "Fixed assets by type of asset (gross)")).next()
+g.V().has('_code', 'listID', 'business-investment-instrument-asset').has('value', "N11G").as('code').
+  V().has('_code_list', 'listID', 'business-investment-instrument-asset').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Fixed assets by type of asset (gross)").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N11MG").
+g.V().has('_code','listID', 'business-investment-instrument-asset').has('value', "N11MG").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-instrument-asset').property(single, 'value', "N11MG")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N11MG").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N11MG").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-instrument-asset').has('edition', 'one-off')
-    ).property(single, 'label', "Machinery and equipment and weapons systems (gross)")).next()
+g.V().has('_code', 'listID', 'business-investment-instrument-asset').has('value', "N11MG").as('code').
+  V().has('_code_list', 'listID', 'business-investment-instrument-asset').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Machinery and equipment and weapons systems (gross)").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N11OG").
+g.V().has('_code','listID', 'business-investment-instrument-asset').has('value', "N11OG").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-instrument-asset').property(single, 'value', "N11OG")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N11OG").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-instrument-asset').has('value', "N11OG").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-instrument-asset').has('edition', 'one-off')
-    ).property(single, 'label', "Other machinery and equipment and weapons systems (gross)")).next()
+g.V().has('_code', 'listID', 'business-investment-instrument-asset').has('value', "N11OG").as('code').
+  V().has('_code_list', 'listID', 'business-investment-instrument-asset').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Other machinery and equipment and weapons systems (gross)").next()
 

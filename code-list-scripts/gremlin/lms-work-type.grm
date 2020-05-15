@@ -1,6 +1,6 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'lms-work-type').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'lms-work-type').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "lms-work-type").
     property(single, 'label', "worktype").
@@ -8,101 +8,92 @@ g.V().hasLabel('_code_list').has('listID', 'lms-work-type').has('edition', 'one-
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "employees").
+g.V().has('_code','listID', 'lms-work-type').has('value', "employees").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'lms-work-type').property(single, 'value', "employees")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "employees").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "employees").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'lms-work-type').has('edition', 'one-off')
-    ).property(single, 'label', "Employees")).next()
+g.V().has('_code', 'listID', 'lms-work-type').has('value', "employees").as('code').
+  V().has('_code_list', 'listID', 'lms-work-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Employees").next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "self-employed").
+g.V().has('_code','listID', 'lms-work-type').has('value', "self-employed").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'lms-work-type').property(single, 'value', "self-employed")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "self-employed").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "self-employed").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'lms-work-type').has('edition', 'one-off')
-    ).property(single, 'label', "Self employed")).next()
+g.V().has('_code', 'listID', 'lms-work-type').has('value', "self-employed").as('code').
+  V().has('_code_list', 'listID', 'lms-work-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Self employed").next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "unpaid-family-workers").
+g.V().has('_code','listID', 'lms-work-type').has('value', "unpaid-family-workers").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'lms-work-type').property(single, 'value', "unpaid-family-workers")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "unpaid-family-workers").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "unpaid-family-workers").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'lms-work-type').has('edition', 'one-off')
-    ).property(single, 'label', "Unpaid family workers")).next()
+g.V().has('_code', 'listID', 'lms-work-type').has('value', "unpaid-family-workers").as('code').
+  V().has('_code_list', 'listID', 'lms-work-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Unpaid family workers").next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "government-supported-training-and-employment-programmes").
+g.V().has('_code','listID', 'lms-work-type').has('value', "government-supported-training-and-employment-programmes").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'lms-work-type').property(single, 'value', "government-supported-training-and-employment-programmes")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "government-supported-training-and-employment-programmes").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "government-supported-training-and-employment-programmes").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'lms-work-type').has('edition', 'one-off')
-    ).property(single, 'label', "Government-supported training and employment programmes")).next()
+g.V().has('_code', 'listID', 'lms-work-type').has('value', "government-supported-training-and-employment-programmes").as('code').
+  V().has('_code_list', 'listID', 'lms-work-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Government-supported training and employment programmes").next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "full-time-workers").
+g.V().has('_code','listID', 'lms-work-type').has('value', "full-time-workers").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'lms-work-type').property(single, 'value', "full-time-workers")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "full-time-workers").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "full-time-workers").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'lms-work-type').has('edition', 'one-off')
-    ).property(single, 'label', "Full-time workers")).next()
+g.V().has('_code', 'listID', 'lms-work-type').has('value', "full-time-workers").as('code').
+  V().has('_code_list', 'listID', 'lms-work-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Full-time workers").next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "part-time-workers").
+g.V().has('_code','listID', 'lms-work-type').has('value', "part-time-workers").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'lms-work-type').property(single, 'value', "part-time-workers")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "part-time-workers").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "part-time-workers").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'lms-work-type').has('edition', 'one-off')
-    ).property(single, 'label', "Part-time workers")).next()
+g.V().has('_code', 'listID', 'lms-work-type').has('value', "part-time-workers").as('code').
+  V().has('_code_list', 'listID', 'lms-work-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Part-time workers").next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "workers-with-second-jobs").
+g.V().has('_code','listID', 'lms-work-type').has('value', "workers-with-second-jobs").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'lms-work-type').property(single, 'value', "workers-with-second-jobs")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "workers-with-second-jobs").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "workers-with-second-jobs").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'lms-work-type').has('edition', 'one-off')
-    ).property(single, 'label', "Workers with second jobs")).next()
+g.V().has('_code', 'listID', 'lms-work-type').has('value', "workers-with-second-jobs").as('code').
+  V().has('_code_list', 'listID', 'lms-work-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Workers with second jobs").next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "temporary-employees").
+g.V().has('_code','listID', 'lms-work-type').has('value', "temporary-employees").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'lms-work-type').property(single, 'value', "temporary-employees")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "temporary-employees").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "temporary-employees").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'lms-work-type').has('edition', 'one-off')
-    ).property(single, 'label', "Temporary employees")).next()
+g.V().has('_code', 'listID', 'lms-work-type').has('value', "temporary-employees").as('code').
+  V().has('_code_list', 'listID', 'lms-work-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Temporary employees").next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "total").
+g.V().has('_code','listID', 'lms-work-type').has('value', "total").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'lms-work-type').property(single, 'value', "total")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "total").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-work-type').has('value', "total").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'lms-work-type').has('edition', 'one-off')
-    ).property(single, 'label', "Total")).next()
+g.V().has('_code', 'listID', 'lms-work-type').has('value', "total").as('code').
+  V().has('_code_list', 'listID', 'lms-work-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Total").next()
 

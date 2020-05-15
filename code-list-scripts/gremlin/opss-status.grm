@@ -1,4 +1,4 @@
-g.V().hasLabel('_code_list').has('listID', 'opss-status').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'opss-status').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "opss-status").
     property(single, 'label', "status").
@@ -9,35 +9,32 @@ g.V().hasLabel('_code_list').has('listID', 'opss-status').has('edition', 'one-of
 
 
 
-g.V().hasLabel('_code').has('listID', 'opss-status').has('value', "all-statuses").
+g.V().has('_code','listID', 'opss-status').has('value', "all-statuses").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'opss-status').property(single, 'value', "all-statuses")
   ).next()
-g.V().hasLabel('_code').has('listID', 'opss-status').has('value', "all-statuses").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'opss-status').has('value', "all-statuses").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'opss-status').has('edition', 'one-off')
-    ).property(single, 'label', "All statuses")).next()
+g.V().has('_code', 'listID', 'opss-status').has('value', "all-statuses").as('code').
+  V().has('_code_list', 'listID', 'opss-status').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "All statuses").next()
 
 
-g.V().hasLabel('_code').has('listID', 'opss-status').has('value', "closed").
+g.V().has('_code','listID', 'opss-status').has('value', "closed").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'opss-status').property(single, 'value', "closed")
   ).next()
-g.V().hasLabel('_code').has('listID', 'opss-status').has('value', "closed").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'opss-status').has('value', "closed").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'opss-status').has('edition', 'one-off')
-    ).property(single, 'label', "Closed")).next()
+g.V().has('_code', 'listID', 'opss-status').has('value', "closed").as('code').
+  V().has('_code_list', 'listID', 'opss-status').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Closed").next()
 
 
-g.V().hasLabel('_code').has('listID', 'opss-status').has('value', "open").
+g.V().has('_code','listID', 'opss-status').has('value', "open").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'opss-status').property(single, 'value', "open")
   ).next()
-g.V().hasLabel('_code').has('listID', 'opss-status').has('value', "open").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'opss-status').has('value', "open").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'opss-status').has('edition', 'one-off')
-    ).property(single, 'label', "Open")).next()
+g.V().has('_code', 'listID', 'opss-status').has('value', "open").as('code').
+  V().has('_code_list', 'listID', 'opss-status').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Open").next()
 

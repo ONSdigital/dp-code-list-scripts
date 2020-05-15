@@ -1,6 +1,6 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'ott-country').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "ott-country").
     property(single, 'label', "country").
@@ -8,2136 +8,1942 @@ g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-of
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "chile").
+g.V().has('_code','listID', 'ott-country').has('value', "chile").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "chile")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "chile").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "chile").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Chile")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "chile").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Chile").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "japan").
+g.V().has('_code','listID', 'ott-country').has('value', "japan").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "japan")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "japan").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "japan").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Japan")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "japan").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Japan").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "nigeria").
+g.V().has('_code','listID', 'ott-country').has('value', "nigeria").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "nigeria")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "nigeria").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "nigeria").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Nigeria")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "nigeria").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Nigeria").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "papua-new-guinea").
+g.V().has('_code','listID', 'ott-country').has('value', "papua-new-guinea").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "papua-new-guinea")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "papua-new-guinea").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "papua-new-guinea").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Papua New Guinea")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "papua-new-guinea").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Papua New Guinea").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "serbia").
+g.V().has('_code','listID', 'ott-country').has('value', "serbia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "serbia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "serbia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "serbia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Serbia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "serbia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Serbia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "argentina").
+g.V().has('_code','listID', 'ott-country').has('value', "argentina").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "argentina")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "argentina").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "argentina").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Argentina")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "argentina").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Argentina").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "egypt").
+g.V().has('_code','listID', 'ott-country').has('value', "egypt").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "egypt")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "egypt").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "egypt").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Egypt")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "egypt").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Egypt").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "afghanistan").
+g.V().has('_code','listID', 'ott-country').has('value', "afghanistan").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "afghanistan")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "afghanistan").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "afghanistan").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Afghanistan")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "afghanistan").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Afghanistan").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "iceland").
+g.V().has('_code','listID', 'ott-country').has('value', "iceland").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "iceland")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "iceland").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "iceland").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Iceland")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "iceland").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Iceland").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "indonesia").
+g.V().has('_code','listID', 'ott-country').has('value', "indonesia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "indonesia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "indonesia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "indonesia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Indonesia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "indonesia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Indonesia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "kuwait").
+g.V().has('_code','listID', 'ott-country').has('value', "kuwait").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "kuwait")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "kuwait").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "kuwait").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Kuwait")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "kuwait").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Kuwait").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "germany").
+g.V().has('_code','listID', 'ott-country').has('value', "germany").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "germany")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "germany").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "germany").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Germany")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "germany").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Germany").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "netherlands").
+g.V().has('_code','listID', 'ott-country').has('value', "netherlands").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "netherlands")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "netherlands").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "netherlands").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Netherlands")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "netherlands").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Netherlands").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "luxembourg").
+g.V().has('_code','listID', 'ott-country').has('value', "luxembourg").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "luxembourg")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "luxembourg").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "luxembourg").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Luxembourg")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "luxembourg").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Luxembourg").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "france").
+g.V().has('_code','listID', 'ott-country').has('value', "france").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "france")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "france").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "france").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "France")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "france").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "France").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "belgium").
+g.V().has('_code','listID', 'ott-country').has('value', "belgium").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "belgium")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "belgium").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "belgium").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Belgium")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "belgium").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Belgium").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "oman").
+g.V().has('_code','listID', 'ott-country').has('value', "oman").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "oman")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "oman").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "oman").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Oman")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "oman").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Oman").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "qatar").
+g.V().has('_code','listID', 'ott-country').has('value', "qatar").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "qatar")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "qatar").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "qatar").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Qatar")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "qatar").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Qatar").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "denmark").
+g.V().has('_code','listID', 'ott-country').has('value', "denmark").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "denmark")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "denmark").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "denmark").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Denmark")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "denmark").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Denmark").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "poland").
+g.V().has('_code','listID', 'ott-country').has('value', "poland").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "poland")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "poland").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "poland").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Poland")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "poland").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Poland").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "lithuania").
+g.V().has('_code','listID', 'ott-country').has('value', "lithuania").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "lithuania")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "lithuania").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "lithuania").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Lithuania")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "lithuania").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Lithuania").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "taiwan").
+g.V().has('_code','listID', 'ott-country').has('value', "taiwan").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "taiwan")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "taiwan").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "taiwan").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Taiwan")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "taiwan").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Taiwan").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bahrain").
+g.V().has('_code','listID', 'ott-country').has('value', "bahrain").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "bahrain")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bahrain").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bahrain").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Bahrain")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "bahrain").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Bahrain").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "italy").
+g.V().has('_code','listID', 'ott-country').has('value', "italy").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "italy")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "italy").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "italy").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Italy")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "italy").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Italy").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "saudi-arabia").
+g.V().has('_code','listID', 'ott-country').has('value', "saudi-arabia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "saudi-arabia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "saudi-arabia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "saudi-arabia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Saudi Arabia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "saudi-arabia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Saudi Arabia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "irish-republic").
+g.V().has('_code','listID', 'ott-country').has('value', "irish-republic").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "irish-republic")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "irish-republic").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "irish-republic").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Irish Republic")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "irish-republic").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Irish Republic").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "austria").
+g.V().has('_code','listID', 'ott-country').has('value', "austria").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "austria")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "austria").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "austria").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Austria")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "austria").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Austria").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "united-states-of-america").
+g.V().has('_code','listID', 'ott-country').has('value', "united-states-of-america").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "united-states-of-america")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "united-states-of-america").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "united-states-of-america").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "United States Of America")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "united-states-of-america").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "United States Of America").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "pakistan").
+g.V().has('_code','listID', 'ott-country').has('value', "pakistan").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "pakistan")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "pakistan").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "pakistan").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Pakistan")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "pakistan").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Pakistan").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "portugal").
+g.V().has('_code','listID', 'ott-country').has('value', "portugal").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "portugal")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "portugal").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "portugal").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Portugal")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "portugal").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Portugal").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "china").
+g.V().has('_code','listID', 'ott-country').has('value', "china").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "china")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "china").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "china").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "China")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "china").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "China").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "south-korea").
+g.V().has('_code','listID', 'ott-country').has('value', "south-korea").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "south-korea")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "south-korea").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "south-korea").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "South Korea")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "south-korea").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "South Korea").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bangladesh").
+g.V().has('_code','listID', 'ott-country').has('value', "bangladesh").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "bangladesh")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bangladesh").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bangladesh").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Bangladesh")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "bangladesh").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Bangladesh").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "south-africa").
+g.V().has('_code','listID', 'ott-country').has('value', "south-africa").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "south-africa")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "south-africa").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "south-africa").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "South Africa")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "south-africa").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "South Africa").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "zimbabwe").
+g.V().has('_code','listID', 'ott-country').has('value', "zimbabwe").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "zimbabwe")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "zimbabwe").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "zimbabwe").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Zimbabwe")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "zimbabwe").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Zimbabwe").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "turkey").
+g.V().has('_code','listID', 'ott-country').has('value', "turkey").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "turkey")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "turkey").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "turkey").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Turkey")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "turkey").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Turkey").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "singapore").
+g.V().has('_code','listID', 'ott-country').has('value', "singapore").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "singapore")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "singapore").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "singapore").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Singapore")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "singapore").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Singapore").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "brazil").
+g.V().has('_code','listID', 'ott-country').has('value', "brazil").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "brazil")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "brazil").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "brazil").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Brazil")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "brazil").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Brazil").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "sri-lanka").
+g.V().has('_code','listID', 'ott-country').has('value', "sri-lanka").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "sri-lanka")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "sri-lanka").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "sri-lanka").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Sri Lanka")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "sri-lanka").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Sri Lanka").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "united-arab-emirates").
+g.V().has('_code','listID', 'ott-country').has('value', "united-arab-emirates").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "united-arab-emirates")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "united-arab-emirates").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "united-arab-emirates").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "United Arab Emirates")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "united-arab-emirates").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "United Arab Emirates").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "hong-kong").
+g.V().has('_code','listID', 'ott-country').has('value', "hong-kong").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "hong-kong")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "hong-kong").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "hong-kong").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Hong Kong")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "hong-kong").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Hong Kong").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "australia").
+g.V().has('_code','listID', 'ott-country').has('value', "australia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "australia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "australia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "australia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Australia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "australia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Australia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "hungary").
+g.V().has('_code','listID', 'ott-country').has('value', "hungary").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "hungary")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "hungary").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "hungary").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Hungary")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "hungary").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Hungary").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "india").
+g.V().has('_code','listID', 'ott-country').has('value', "india").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "india")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "india").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "india").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "India")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "india").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "India").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "ukraine").
+g.V().has('_code','listID', 'ott-country').has('value', "ukraine").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "ukraine")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "ukraine").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "ukraine").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Ukraine")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "ukraine").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Ukraine").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "russia").
+g.V().has('_code','listID', 'ott-country').has('value', "russia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "russia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "russia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "russia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Russia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "russia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Russia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bulgaria").
+g.V().has('_code','listID', 'ott-country').has('value', "bulgaria").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "bulgaria")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bulgaria").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bulgaria").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Bulgaria")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "bulgaria").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Bulgaria").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "mexico").
+g.V().has('_code','listID', 'ott-country').has('value', "mexico").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "mexico")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "mexico").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "mexico").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Mexico")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "mexico").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Mexico").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "spain-balearic-islands").
+g.V().has('_code','listID', 'ott-country').has('value', "spain-balearic-islands").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "spain-balearic-islands")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "spain-balearic-islands").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "spain-balearic-islands").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Spain, Balearic Islands")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "spain-balearic-islands").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Spain, Balearic Islands").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "croatia").
+g.V().has('_code','listID', 'ott-country').has('value', "croatia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "croatia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "croatia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "croatia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Croatia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "croatia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Croatia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "north-cyprus").
+g.V().has('_code','listID', 'ott-country').has('value', "north-cyprus").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "north-cyprus")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "north-cyprus").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "north-cyprus").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "North Cyprus")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "north-cyprus").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "North Cyprus").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "romania").
+g.V().has('_code','listID', 'ott-country').has('value', "romania").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "romania")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "romania").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "romania").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Romania")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "romania").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Romania").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "sweden").
+g.V().has('_code','listID', 'ott-country').has('value', "sweden").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "sweden")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "sweden").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "sweden").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Sweden")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "sweden").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Sweden").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "switzerland").
+g.V().has('_code','listID', 'ott-country').has('value', "switzerland").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "switzerland")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "switzerland").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "switzerland").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Switzerland")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "switzerland").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Switzerland").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "trinidad-tobago").
+g.V().has('_code','listID', 'ott-country').has('value', "trinidad-tobago").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "trinidad-tobago")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "trinidad-tobago").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "trinidad-tobago").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Trinidad & Tobago")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "trinidad-tobago").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Trinidad & Tobago").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "thailand").
+g.V().has('_code','listID', 'ott-country').has('value', "thailand").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "thailand")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "thailand").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "thailand").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Thailand")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "thailand").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Thailand").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "canada").
+g.V().has('_code','listID', 'ott-country').has('value', "canada").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "canada")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "canada").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "canada").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Canada")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "canada").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Canada").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "greece").
+g.V().has('_code','listID', 'ott-country').has('value', "greece").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "greece")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "greece").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "greece").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Greece")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "greece").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Greece").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "latvia").
+g.V().has('_code','listID', 'ott-country').has('value', "latvia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "latvia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "latvia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "latvia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Latvia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "latvia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Latvia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "ghana").
+g.V().has('_code','listID', 'ott-country').has('value', "ghana").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "ghana")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "ghana").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "ghana").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Ghana")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "ghana").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Ghana").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "slovenia").
+g.V().has('_code','listID', 'ott-country').has('value', "slovenia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "slovenia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "slovenia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "slovenia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Slovenia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "slovenia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Slovenia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "cayman-islands").
+g.V().has('_code','listID', 'ott-country').has('value', "cayman-islands").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "cayman-islands")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "cayman-islands").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "cayman-islands").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Cayman Islands")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "cayman-islands").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Cayman Islands").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "lebanon").
+g.V().has('_code','listID', 'ott-country').has('value', "lebanon").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "lebanon")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "lebanon").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "lebanon").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Lebanon")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "lebanon").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Lebanon").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "vietnam").
+g.V().has('_code','listID', 'ott-country').has('value', "vietnam").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "vietnam")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "vietnam").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "vietnam").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Vietnam")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "vietnam").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Vietnam").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "new-zealand").
+g.V().has('_code','listID', 'ott-country').has('value', "new-zealand").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "new-zealand")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "new-zealand").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "new-zealand").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "New Zealand")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "new-zealand").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "New Zealand").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "myanmar").
+g.V().has('_code','listID', 'ott-country').has('value', "myanmar").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "myanmar")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "myanmar").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "myanmar").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Myanmar")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "myanmar").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Myanmar").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "norway").
+g.V().has('_code','listID', 'ott-country').has('value', "norway").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "norway")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "norway").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "norway").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Norway")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "norway").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Norway").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "belarus").
+g.V().has('_code','listID', 'ott-country').has('value', "belarus").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "belarus")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "belarus").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "belarus").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Belarus")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "belarus").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Belarus").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "canaries").
+g.V().has('_code','listID', 'ott-country').has('value', "canaries").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "canaries")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "canaries").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "canaries").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Canaries")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "canaries").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Canaries").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "israel-including-palestine").
+g.V().has('_code','listID', 'ott-country').has('value', "israel-including-palestine").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "israel-including-palestine")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "israel-including-palestine").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "israel-including-palestine").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Israel (including Palestine)")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "israel-including-palestine").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Israel (including Palestine)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "seychelles").
+g.V().has('_code','listID', 'ott-country').has('value', "seychelles").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "seychelles")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "seychelles").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "seychelles").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Seychelles")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "seychelles").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Seychelles").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "malta").
+g.V().has('_code','listID', 'ott-country').has('value', "malta").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "malta")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "malta").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "malta").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Malta")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "malta").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Malta").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "slovakia").
+g.V().has('_code','listID', 'ott-country').has('value', "slovakia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "slovakia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "slovakia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "slovakia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Slovakia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "slovakia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Slovakia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "macedonia").
+g.V().has('_code','listID', 'ott-country').has('value', "macedonia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "macedonia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "macedonia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "macedonia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Macedonia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "macedonia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Macedonia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "the-czech-republic").
+g.V().has('_code','listID', 'ott-country').has('value', "the-czech-republic").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "the-czech-republic")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "the-czech-republic").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "the-czech-republic").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "The Czech Republic")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "the-czech-republic").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "The Czech Republic").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "other-commonwealth-pacific-islands").
+g.V().has('_code','listID', 'ott-country').has('value', "other-commonwealth-pacific-islands").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "other-commonwealth-pacific-islands")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "other-commonwealth-pacific-islands").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "other-commonwealth-pacific-islands").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Other Commonwealth Pacific Islands")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "other-commonwealth-pacific-islands").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Other Commonwealth Pacific Islands").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "uganda").
+g.V().has('_code','listID', 'ott-country').has('value', "uganda").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "uganda")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "uganda").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "uganda").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Uganda")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "uganda").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Uganda").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "iraq").
+g.V().has('_code','listID', 'ott-country').has('value', "iraq").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "iraq")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "iraq").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "iraq").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Iraq")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "iraq").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Iraq").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "kyrgyzstan").
+g.V().has('_code','listID', 'ott-country').has('value', "kyrgyzstan").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "kyrgyzstan")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "kyrgyzstan").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "kyrgyzstan").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Kyrgyzstan")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "kyrgyzstan").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Kyrgyzstan").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "tanzania").
+g.V().has('_code','listID', 'ott-country').has('value', "tanzania").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "tanzania")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "tanzania").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "tanzania").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Tanzania")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "tanzania").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Tanzania").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "philippines").
+g.V().has('_code','listID', 'ott-country').has('value', "philippines").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "philippines")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "philippines").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "philippines").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Philippines")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "philippines").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Philippines").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "maldives").
+g.V().has('_code','listID', 'ott-country').has('value', "maldives").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "maldives")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "maldives").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "maldives").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Maldives")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "maldives").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Maldives").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "peru").
+g.V().has('_code','listID', 'ott-country').has('value', "peru").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "peru")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "peru").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "peru").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Peru")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "peru").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Peru").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "morocco").
+g.V().has('_code','listID', 'ott-country').has('value', "morocco").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "morocco")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "morocco").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "morocco").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Morocco")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "morocco").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Morocco").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bahamas").
+g.V().has('_code','listID', 'ott-country').has('value', "bahamas").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "bahamas")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bahamas").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bahamas").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Bahamas")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "bahamas").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Bahamas").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "kenya").
+g.V().has('_code','listID', 'ott-country').has('value', "kenya").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "kenya")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "kenya").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "kenya").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Kenya")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "kenya").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Kenya").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "mauritius").
+g.V().has('_code','listID', 'ott-country').has('value', "mauritius").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "mauritius")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "mauritius").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "mauritius").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Mauritius")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "mauritius").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Mauritius").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "nepal").
+g.V().has('_code','listID', 'ott-country').has('value', "nepal").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "nepal")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "nepal").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "nepal").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Nepal")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "nepal").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Nepal").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "sierra-leone").
+g.V().has('_code','listID', 'ott-country').has('value', "sierra-leone").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "sierra-leone")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "sierra-leone").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "sierra-leone").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Sierra Leone")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "sierra-leone").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Sierra Leone").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "algeria").
+g.V().has('_code','listID', 'ott-country').has('value', "algeria").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "algeria")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "algeria").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "algeria").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Algeria")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "algeria").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Algeria").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "zambia").
+g.V().has('_code','listID', 'ott-country').has('value', "zambia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "zambia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "zambia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "zambia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Zambia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "zambia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Zambia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "french-polynesia").
+g.V().has('_code','listID', 'ott-country').has('value', "french-polynesia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "french-polynesia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "french-polynesia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "french-polynesia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "French Polynesia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "french-polynesia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "French Polynesia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "malaysia").
+g.V().has('_code','listID', 'ott-country').has('value', "malaysia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "malaysia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "malaysia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "malaysia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Malaysia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "malaysia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Malaysia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "iran").
+g.V().has('_code','listID', 'ott-country').has('value', "iran").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "iran")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "iran").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "iran").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Iran")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "iran").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Iran").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "tunisia").
+g.V().has('_code','listID', 'ott-country').has('value', "tunisia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "tunisia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "tunisia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "tunisia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Tunisia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "tunisia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Tunisia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "cape-verde-comoros-equitorial-guinea-sao-tome-principe").
+g.V().has('_code','listID', 'ott-country').has('value', "cape-verde-comoros-equitorial-guinea-sao-tome-principe").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "cape-verde-comoros-equitorial-guinea-sao-tome-principe")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "cape-verde-comoros-equitorial-guinea-sao-tome-principe").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "cape-verde-comoros-equitorial-guinea-sao-tome-principe").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Cape Verde / Comoros / Equitorial Guinea / Sao Tome - Principe")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "cape-verde-comoros-equitorial-guinea-sao-tome-principe").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Cape Verde / Comoros / Equitorial Guinea / Sao Tome - Principe").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "anguilla-st-kitts").
+g.V().has('_code','listID', 'ott-country').has('value', "anguilla-st-kitts").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "anguilla-st-kitts")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "anguilla-st-kitts").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "anguilla-st-kitts").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Anguilla, St Kitts")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "anguilla-st-kitts").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Anguilla, St Kitts").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "jordan").
+g.V().has('_code','listID', 'ott-country').has('value', "jordan").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "jordan")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "jordan").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "jordan").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Jordan")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "jordan").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Jordan").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "botswana").
+g.V().has('_code','listID', 'ott-country').has('value', "botswana").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "botswana")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "botswana").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "botswana").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Botswana")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "botswana").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Botswana").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "finland").
+g.V().has('_code','listID', 'ott-country').has('value', "finland").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "finland")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "finland").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "finland").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Finland")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "finland").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Finland").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "cameroon").
+g.V().has('_code','listID', 'ott-country').has('value', "cameroon").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "cameroon")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "cameroon").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "cameroon").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Cameroon")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "cameroon").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Cameroon").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "jamaica").
+g.V().has('_code','listID', 'ott-country').has('value', "jamaica").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "jamaica")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "jamaica").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "jamaica").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Jamaica")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "jamaica").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Jamaica").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "malawi").
+g.V().has('_code','listID', 'ott-country').has('value', "malawi").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "malawi")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "malawi").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "malawi").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Malawi")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "malawi").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Malawi").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "ecuador").
+g.V().has('_code','listID', 'ott-country').has('value', "ecuador").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "ecuador")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "ecuador").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "ecuador").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Ecuador")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "ecuador").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Ecuador").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "gibraltar").
+g.V().has('_code','listID', 'ott-country').has('value', "gibraltar").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "gibraltar")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "gibraltar").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "gibraltar").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Gibraltar")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "gibraltar").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gibraltar").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "kazakhstan").
+g.V().has('_code','listID', 'ott-country').has('value', "kazakhstan").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "kazakhstan")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "kazakhstan").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "kazakhstan").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Kazakhstan")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "kazakhstan").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Kazakhstan").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "armenia").
+g.V().has('_code','listID', 'ott-country').has('value', "armenia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "armenia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "armenia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "armenia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Armenia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "armenia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Armenia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "brunei").
+g.V().has('_code','listID', 'ott-country').has('value', "brunei").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "brunei")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "brunei").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "brunei").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Brunei")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "brunei").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Brunei").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "south-cyprus").
+g.V().has('_code','listID', 'ott-country').has('value', "south-cyprus").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "south-cyprus")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "south-cyprus").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "south-cyprus").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "South Cyprus")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "south-cyprus").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "South Cyprus").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "estonia").
+g.V().has('_code','listID', 'ott-country').has('value', "estonia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "estonia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "estonia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "estonia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Estonia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "estonia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Estonia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "costa-rica").
+g.V().has('_code','listID', 'ott-country').has('value', "costa-rica").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "costa-rica")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "costa-rica").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "costa-rica").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Costa Rica")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "costa-rica").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Costa Rica").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "dominican-republic").
+g.V().has('_code','listID', 'ott-country').has('value', "dominican-republic").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "dominican-republic")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "dominican-republic").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "dominican-republic").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Dominican Republic")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "dominican-republic").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Dominican Republic").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "fiji").
+g.V().has('_code','listID', 'ott-country').has('value', "fiji").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "fiji")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "fiji").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "fiji").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Fiji")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "fiji").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Fiji").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "congo-brazzaville").
+g.V().has('_code','listID', 'ott-country').has('value', "congo-brazzaville").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "congo-brazzaville")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "congo-brazzaville").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "congo-brazzaville").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Congo Brazzaville")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "congo-brazzaville").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Congo Brazzaville").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "angola").
+g.V().has('_code','listID', 'ott-country').has('value', "angola").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "angola")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "angola").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "angola").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Angola")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "angola").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Angola").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "mozambique").
+g.V().has('_code','listID', 'ott-country').has('value', "mozambique").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "mozambique")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "mozambique").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "mozambique").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Mozambique")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "mozambique").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Mozambique").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "venezuela").
+g.V().has('_code','listID', 'ott-country').has('value', "venezuela").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "venezuela")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "venezuela").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "venezuela").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Venezuela")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "venezuela").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Venezuela").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "kanton-enderbury-islands").
+g.V().has('_code','listID', 'ott-country').has('value', "kanton-enderbury-islands").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "kanton-enderbury-islands")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "kanton-enderbury-islands").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "kanton-enderbury-islands").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Kanton & Enderbury Islands")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "kanton-enderbury-islands").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Kanton & Enderbury Islands").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "uruguay").
+g.V().has('_code','listID', 'ott-country').has('value', "uruguay").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "uruguay")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "uruguay").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "uruguay").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Uruguay")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "uruguay").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Uruguay").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "nicaragua").
+g.V().has('_code','listID', 'ott-country').has('value', "nicaragua").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "nicaragua")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "nicaragua").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "nicaragua").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Nicaragua")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "nicaragua").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Nicaragua").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "surinam").
+g.V().has('_code','listID', 'ott-country').has('value', "surinam").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "surinam")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "surinam").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "surinam").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Surinam")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "surinam").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Surinam").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "antigua").
+g.V().has('_code','listID', 'ott-country').has('value', "antigua").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "antigua")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "antigua").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "antigua").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Antigua")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "antigua").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Antigua").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "cambodia").
+g.V().has('_code','listID', 'ott-country').has('value', "cambodia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "cambodia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "cambodia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "cambodia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Cambodia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "cambodia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Cambodia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "cuba").
+g.V().has('_code','listID', 'ott-country').has('value', "cuba").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "cuba")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "cuba").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "cuba").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Cuba")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "cuba").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Cuba").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "zaire").
+g.V().has('_code','listID', 'ott-country').has('value', "zaire").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "zaire")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "zaire").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "zaire").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Zaire")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "zaire").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Zaire").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bosnia-herzegovina").
+g.V().has('_code','listID', 'ott-country').has('value', "bosnia-herzegovina").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "bosnia-herzegovina")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bosnia-herzegovina").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bosnia-herzegovina").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Bosnia Herzegovina")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "bosnia-herzegovina").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Bosnia Herzegovina").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "moldavia").
+g.V().has('_code','listID', 'ott-country').has('value', "moldavia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "moldavia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "moldavia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "moldavia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Moldavia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "moldavia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Moldavia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bermuda").
+g.V().has('_code','listID', 'ott-country').has('value', "bermuda").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "bermuda")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bermuda").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bermuda").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Bermuda")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "bermuda").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Bermuda").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "barbados").
+g.V().has('_code','listID', 'ott-country').has('value', "barbados").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "barbados")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "barbados").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "barbados").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Barbados")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "barbados").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Barbados").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "st-lucia").
+g.V().has('_code','listID', 'ott-country').has('value', "st-lucia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "st-lucia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "st-lucia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "st-lucia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "St Lucia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "st-lucia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "St Lucia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "colombia").
+g.V().has('_code','listID', 'ott-country').has('value', "colombia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "colombia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "colombia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "colombia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Colombia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "colombia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Colombia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "ethiopia").
+g.V().has('_code','listID', 'ott-country').has('value', "ethiopia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "ethiopia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "ethiopia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "ethiopia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Ethiopia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "ethiopia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Ethiopia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "azores-madeira").
+g.V().has('_code','listID', 'ott-country').has('value', "azores-madeira").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "azores-madeira")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "azores-madeira").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "azores-madeira").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Azores, Madeira")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "azores-madeira").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Azores, Madeira").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "namibia").
+g.V().has('_code','listID', 'ott-country').has('value', "namibia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "namibia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "namibia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "namibia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Namibia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "namibia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Namibia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "georgia").
+g.V().has('_code','listID', 'ott-country').has('value', "georgia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "georgia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "georgia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "georgia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Georgia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "georgia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Georgia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "paraguay").
+g.V().has('_code','listID', 'ott-country').has('value', "paraguay").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "paraguay")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "paraguay").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "paraguay").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Paraguay")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "paraguay").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Paraguay").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "greenland").
+g.V().has('_code','listID', 'ott-country').has('value', "greenland").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "greenland")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "greenland").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "greenland").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Greenland")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "greenland").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Greenland").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "guatemala").
+g.V().has('_code','listID', 'ott-country').has('value', "guatemala").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "guatemala")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "guatemala").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "guatemala").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Guatemala")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "guatemala").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Guatemala").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "albania").
+g.V().has('_code','listID', 'ott-country').has('value', "albania").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "albania")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "albania").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "albania").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Albania")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "albania").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Albania").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "togo").
+g.V().has('_code','listID', 'ott-country').has('value', "togo").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "togo")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "togo").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "togo").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Togo")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "togo").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Togo").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "monaco").
+g.V().has('_code','listID', 'ott-country').has('value', "monaco").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "monaco")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "monaco").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "monaco").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Monaco")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "monaco").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Monaco").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "turks-caicos-islands").
+g.V().has('_code','listID', 'ott-country').has('value', "turks-caicos-islands").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "turks-caicos-islands")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "turks-caicos-islands").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "turks-caicos-islands").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Turks & Caicos Islands")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "turks-caicos-islands").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Turks & Caicos Islands").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "puerto-rico").
+g.V().has('_code','listID', 'ott-country').has('value', "puerto-rico").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "puerto-rico")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "puerto-rico").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "puerto-rico").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Puerto Rico")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "puerto-rico").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Puerto Rico").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "honduras").
+g.V().has('_code','listID', 'ott-country').has('value', "honduras").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "honduras")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "honduras").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "honduras").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Honduras")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "honduras").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Honduras").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "british-virgin-islands").
+g.V().has('_code','listID', 'ott-country').has('value', "british-virgin-islands").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "british-virgin-islands")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "british-virgin-islands").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "british-virgin-islands").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "British Virgin Islands")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "british-virgin-islands").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "British Virgin Islands").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "sudan").
+g.V().has('_code','listID', 'ott-country').has('value', "sudan").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "sudan")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "sudan").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "sudan").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Sudan")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "sudan").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Sudan").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "faroe-islands").
+g.V().has('_code','listID', 'ott-country').has('value', "faroe-islands").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "faroe-islands")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "faroe-islands").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "faroe-islands").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Faroe Islands")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "faroe-islands").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Faroe Islands").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "liechtenstein").
+g.V().has('_code','listID', 'ott-country').has('value', "liechtenstein").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "liechtenstein")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "liechtenstein").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "liechtenstein").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Liechtenstein")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "liechtenstein").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Liechtenstein").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "el-salvador").
+g.V().has('_code','listID', 'ott-country').has('value', "el-salvador").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "el-salvador")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "el-salvador").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "el-salvador").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "El Salvador")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "el-salvador").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "El Salvador").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "macau").
+g.V().has('_code','listID', 'ott-country').has('value', "macau").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "macau")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "macau").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "macau").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Macau")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "macau").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Macau").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "azerbaijan").
+g.V().has('_code','listID', 'ott-country').has('value', "azerbaijan").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "azerbaijan")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "azerbaijan").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "azerbaijan").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Azerbaijan")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "azerbaijan").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Azerbaijan").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "netherlands-antilles").
+g.V().has('_code','listID', 'ott-country').has('value', "netherlands-antilles").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "netherlands-antilles")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "netherlands-antilles").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "netherlands-antilles").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Netherlands Antilles")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "netherlands-antilles").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Netherlands Antilles").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "san-marino").
+g.V().has('_code','listID', 'ott-country').has('value', "san-marino").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "san-marino")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "san-marino").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "san-marino").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "San Marino")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "san-marino").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "San Marino").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "uzbekistan").
+g.V().has('_code','listID', 'ott-country').has('value', "uzbekistan").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "uzbekistan")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "uzbekistan").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "uzbekistan").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Uzbekistan")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "uzbekistan").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Uzbekistan").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "rwanda").
+g.V().has('_code','listID', 'ott-country').has('value', "rwanda").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "rwanda")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "rwanda").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "rwanda").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Rwanda")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "rwanda").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Rwanda").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "benin").
+g.V().has('_code','listID', 'ott-country').has('value', "benin").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "benin")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "benin").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "benin").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Benin")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "benin").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Benin").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "turkmenistan").
+g.V().has('_code','listID', 'ott-country').has('value', "turkmenistan").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "turkmenistan")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "turkmenistan").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "turkmenistan").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Turkmenistan")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "turkmenistan").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Turkmenistan").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "andorra").
+g.V().has('_code','listID', 'ott-country').has('value', "andorra").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "andorra")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "andorra").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "andorra").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Andorra")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "andorra").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Andorra").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "ivory-coast").
+g.V().has('_code','listID', 'ott-country').has('value', "ivory-coast").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "ivory-coast")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "ivory-coast").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "ivory-coast").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Ivory Coast")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "ivory-coast").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Ivory Coast").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "panama").
+g.V().has('_code','listID', 'ott-country').has('value', "panama").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "panama")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "panama").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "panama").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Panama")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "panama").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Panama").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "gambia").
+g.V().has('_code','listID', 'ott-country').has('value', "gambia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "gambia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "gambia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "gambia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Gambia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "gambia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gambia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "french-guiana").
+g.V().has('_code','listID', 'ott-country').has('value', "french-guiana").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "french-guiana")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "french-guiana").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "french-guiana").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "French Guiana")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "french-guiana").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "French Guiana").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "montenegro").
+g.V().has('_code','listID', 'ott-country').has('value', "montenegro").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "montenegro")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "montenegro").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "montenegro").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Montenegro")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "montenegro").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Montenegro").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "cruising").
+g.V().has('_code','listID', 'ott-country').has('value', "cruising").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "cruising")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "cruising").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "cruising").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Cruising")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "cruising").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Cruising").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "swaziland").
+g.V().has('_code','listID', 'ott-country').has('value', "swaziland").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "swaziland")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "swaziland").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "swaziland").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Swaziland")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "swaziland").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Swaziland").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "djibouti").
+g.V().has('_code','listID', 'ott-country').has('value', "djibouti").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "djibouti")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "djibouti").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "djibouti").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Djibouti")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "djibouti").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Djibouti").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "eritrea").
+g.V().has('_code','listID', 'ott-country').has('value', "eritrea").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "eritrea")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "eritrea").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "eritrea").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Eritrea")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "eritrea").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Eritrea").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "senegal").
+g.V().has('_code','listID', 'ott-country').has('value', "senegal").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "senegal")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "senegal").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "senegal").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Senegal")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "senegal").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Senegal").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "somalia").
+g.V().has('_code','listID', 'ott-country').has('value', "somalia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "somalia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "somalia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "somalia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Somalia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "somalia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Somalia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "mongolia").
+g.V().has('_code','listID', 'ott-country').has('value', "mongolia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "mongolia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "mongolia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "mongolia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Mongolia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "mongolia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Mongolia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "madagascar").
+g.V().has('_code','listID', 'ott-country').has('value', "madagascar").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "madagascar")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "madagascar").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "madagascar").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Madagascar")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "madagascar").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Madagascar").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "belize").
+g.V().has('_code','listID', 'ott-country').has('value', "belize").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "belize")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "belize").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "belize").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Belize")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "belize").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Belize").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "st-vincent").
+g.V().has('_code','listID', 'ott-country').has('value', "st-vincent").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "st-vincent")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "st-vincent").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "st-vincent").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "St Vincent")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "st-vincent").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "St Vincent").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "grenada").
+g.V().has('_code','listID', 'ott-country').has('value', "grenada").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "grenada")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "grenada").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "grenada").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Grenada")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "grenada").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Grenada").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "liberia").
+g.V().has('_code','listID', 'ott-country').has('value', "liberia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "liberia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "liberia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "liberia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Liberia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "liberia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Liberia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bolivia").
+g.V().has('_code','listID', 'ott-country').has('value', "bolivia").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "bolivia")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bolivia").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "bolivia").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Bolivia")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "bolivia").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Bolivia").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "guadeloupe").
+g.V().has('_code','listID', 'ott-country').has('value', "guadeloupe").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "guadeloupe")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "guadeloupe").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "guadeloupe").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Guadeloupe")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "guadeloupe").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Guadeloupe").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "laos").
+g.V().has('_code','listID', 'ott-country').has('value', "laos").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "laos")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "laos").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "laos").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Laos")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "laos").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Laos").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "other-foreign").
+g.V().has('_code','listID', 'ott-country').has('value', "other-foreign").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "other-foreign")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "other-foreign").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "other-foreign").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Other Foreign")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "other-foreign").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Other Foreign").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "martinique").
+g.V().has('_code','listID', 'ott-country').has('value', "martinique").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "martinique")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "martinique").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "martinique").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Martinique")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "martinique").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Martinique").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "guinea-bissau").
+g.V().has('_code','listID', 'ott-country').has('value', "guinea-bissau").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "guinea-bissau")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "guinea-bissau").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "guinea-bissau").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Guinea Bissau")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "guinea-bissau").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Guinea Bissau").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "dominica").
+g.V().has('_code','listID', 'ott-country').has('value', "dominica").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "dominica")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "dominica").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "dominica").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Dominica")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "dominica").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Dominica").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "gabon").
+g.V().has('_code','listID', 'ott-country').has('value', "gabon").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "gabon")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "gabon").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "gabon").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Gabon")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "gabon").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gabon").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "burkina-faso").
+g.V().has('_code','listID', 'ott-country').has('value', "burkina-faso").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "burkina-faso")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "burkina-faso").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "burkina-faso").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Burkina Faso")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "burkina-faso").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Burkina Faso").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "chad").
+g.V().has('_code','listID', 'ott-country').has('value', "chad").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "chad")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "chad").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "chad").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Chad")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "chad").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Chad").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "yemen").
+g.V().has('_code','listID', 'ott-country').has('value', "yemen").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "yemen")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "yemen").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "yemen").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Yemen")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "yemen").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Yemen").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "guyana").
+g.V().has('_code','listID', 'ott-country').has('value', "guyana").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "guyana")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "guyana").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "guyana").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Guyana")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "guyana").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Guyana").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "burundi").
+g.V().has('_code','listID', 'ott-country').has('value', "burundi").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "burundi")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "burundi").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "burundi").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Burundi")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "burundi").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Burundi").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "libya").
+g.V().has('_code','listID', 'ott-country').has('value', "libya").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "libya")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "libya").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "libya").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Libya")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "libya").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Libya").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "lesotho").
+g.V().has('_code','listID', 'ott-country').has('value', "lesotho").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "lesotho")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "lesotho").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "lesotho").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Lesotho")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "lesotho").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Lesotho").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "syria").
+g.V().has('_code','listID', 'ott-country').has('value', "syria").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "syria")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "syria").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "syria").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Syria")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "syria").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Syria").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "ascension-isles-st-helena-tristan-da-chuna").
+g.V().has('_code','listID', 'ott-country').has('value', "ascension-isles-st-helena-tristan-da-chuna").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "ascension-isles-st-helena-tristan-da-chuna")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "ascension-isles-st-helena-tristan-da-chuna").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "ascension-isles-st-helena-tristan-da-chuna").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Ascension Isles / St Helena / Tristan Da Chuna")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "ascension-isles-st-helena-tristan-da-chuna").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Ascension Isles / St Helena / Tristan Da Chuna").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "british-antartic-falklands").
+g.V().has('_code','listID', 'ott-country').has('value', "british-antartic-falklands").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "british-antartic-falklands")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "british-antartic-falklands").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "british-antartic-falklands").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "British Antartic Falklands")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "british-antartic-falklands").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "British Antartic Falklands").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "haiti").
+g.V().has('_code','listID', 'ott-country').has('value', "haiti").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ott-country').property(single, 'value', "haiti")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "haiti").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ott-country').has('value', "haiti").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ott-country').has('edition', 'one-off')
-    ).property(single, 'label', "Haiti")).next()
+g.V().has('_code', 'listID', 'ott-country').has('value', "haiti").as('code').
+  V().has('_code_list', 'listID', 'ott-country').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Haiti").next()
 

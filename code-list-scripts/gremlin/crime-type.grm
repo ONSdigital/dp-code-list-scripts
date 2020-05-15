@@ -1,241 +1,220 @@
-g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'crime-type').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "crime-type").
-    property(single, 'label', "crimetype").
-    property(single, 'edition', "one-off")
+    property(single, 'edition', "one-off").
+    property(single, 'label', "crimetype")
   ).next()
 
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "common-assault-with-injury").
+g.V().has('_code','listID', 'crime-type').has('value', "common-assault-with-injury").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "common-assault-with-injury")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "common-assault-with-injury").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "common-assault-with-injury").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "Common assault with injury")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "common-assault-with-injury").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Common assault with injury").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "common-assault").
+g.V().has('_code','listID', 'crime-type').has('value', "common-assault").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "common-assault")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "common-assault").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "common-assault").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "Common assault")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "common-assault").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Common assault").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "acquaintance-violence").
+g.V().has('_code','listID', 'crime-type').has('value', "acquaintance-violence").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "acquaintance-violence")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "acquaintance-violence").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "acquaintance-violence").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "Acquaintance violence")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "acquaintance-violence").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Acquaintance violence").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "other-personal-theft").
+g.V().has('_code','listID', 'crime-type').has('value', "other-personal-theft").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "other-personal-theft")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "other-personal-theft").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "other-personal-theft").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "Other personal theft")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "other-personal-theft").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Other personal theft").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "all-personal-crime").
+g.V().has('_code','listID', 'crime-type').has('value', "all-personal-crime").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "all-personal-crime")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "all-personal-crime").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "all-personal-crime").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "All personal crime")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "all-personal-crime").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "All personal crime").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "total-csew-crime").
+g.V().has('_code','listID', 'crime-type').has('value', "total-csew-crime").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "total-csew-crime")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "total-csew-crime").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "total-csew-crime").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "Total CSEW crime")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "total-csew-crime").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Total CSEW crime").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "robbery").
+g.V().has('_code','listID', 'crime-type').has('value', "robbery").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "robbery")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "robbery").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "robbery").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "Robbery")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "robbery").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Robbery").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "mugging").
+g.V().has('_code','listID', 'crime-type').has('value', "mugging").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "mugging")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "mugging").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "mugging").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "Mugging")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "mugging").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Mugging").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "domestic-violence").
+g.V().has('_code','listID', 'crime-type').has('value', "domestic-violence").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "domestic-violence")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "domestic-violence").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "domestic-violence").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "Domestic violence")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "domestic-violence").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Domestic violence").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "wounding").
+g.V().has('_code','listID', 'crime-type').has('value', "wounding").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "wounding")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "wounding").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "wounding").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "Wounding")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "wounding").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Wounding").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "snatch-theft").
+g.V().has('_code','listID', 'crime-type').has('value', "snatch-theft").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "snatch-theft")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "snatch-theft").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "snatch-theft").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "Snatch theft")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "snatch-theft").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Snatch theft").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "stranger-violence").
+g.V().has('_code','listID', 'crime-type').has('value', "stranger-violence").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "stranger-violence")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "stranger-violence").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "stranger-violence").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "Stranger violence")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "stranger-violence").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Stranger violence").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "all-personal-theft").
+g.V().has('_code','listID', 'crime-type').has('value', "all-personal-theft").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "all-personal-theft")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "all-personal-theft").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "all-personal-theft").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "All personal theft")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "all-personal-theft").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "All personal theft").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "stealth-theft").
+g.V().has('_code','listID', 'crime-type').has('value', "stealth-theft").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "stealth-theft")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "stealth-theft").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "stealth-theft").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "Stealth theft")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "stealth-theft").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Stealth theft").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "violence-with-injury").
+g.V().has('_code','listID', 'crime-type').has('value', "violence-with-injury").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "violence-with-injury")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "violence-with-injury").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "violence-with-injury").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "Violence with injury")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "violence-with-injury").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Violence with injury").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "violence-without-injury").
+g.V().has('_code','listID', 'crime-type').has('value', "violence-without-injury").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "violence-without-injury")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "violence-without-injury").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "violence-without-injury").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "Violence without injury")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "violence-without-injury").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Violence without injury").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "common-assault-with-no-injury").
+g.V().has('_code','listID', 'crime-type').has('value', "common-assault-with-no-injury").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "common-assault-with-no-injury")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "common-assault-with-no-injury").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "common-assault-with-no-injury").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "Common assault with no injury")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "common-assault-with-no-injury").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Common assault with no injury").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "all-violence").
+g.V().has('_code','listID', 'crime-type').has('value', "all-violence").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "all-violence")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "all-violence").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "all-violence").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "All violence")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "all-violence").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "All violence").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "all-theft").
+g.V().has('_code','listID', 'crime-type').has('value', "all-theft").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "all-theft")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "all-theft").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "all-theft").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "All theft")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "all-theft").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "All theft").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "attempted-snatch-and-stealth-theft").
+g.V().has('_code','listID', 'crime-type').has('value', "attempted-snatch-and-stealth-theft").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "attempted-snatch-and-stealth-theft")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "attempted-snatch-and-stealth-theft").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "attempted-snatch-and-stealth-theft").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "Attempted snatch and stealth theft")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "attempted-snatch-and-stealth-theft").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Attempted snatch and stealth theft").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "theft-from-the-person").
+g.V().has('_code','listID', 'crime-type').has('value', "theft-from-the-person").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-type').property(single, 'value', "theft-from-the-person")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "theft-from-the-person").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-type').has('value', "theft-from-the-person").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-type').has('edition', 'one-off')
-    ).property(single, 'label', "Theft from the person")).next()
+g.V().has('_code', 'listID', 'crime-type').has('value', "theft-from-the-person").as('code').
+  V().has('_code_list', 'listID', 'crime-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Theft from the person").next()
 

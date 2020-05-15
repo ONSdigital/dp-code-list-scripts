@@ -120,8 +120,8 @@ func createCode(line, id, edition string, geo bool) []string {
 		result = prepareEdge(result, id, value)
 	}
 
-	result = append(result, query.EdgeAddLabel)
-	result = append(result, fmt.Sprintf(query.EdgeFindList, id, edition))
+	result = append(result, fmt.Sprintf(query.EdgeFindCodeList, id, edition))
+	result = append(result, query.EdgeCheckIfExists)
 	result = append(result, fmt.Sprintf(query.EdgeAddProperty, label))
 
 	return result
@@ -133,7 +133,6 @@ func prepareEdge(r []string, id, value string) []string {
 	r = append(r, fmt.Sprintf(query.CodeAddProperty, id, value))
 	r = append(r, query.Next)
 
-	r = append(r, fmt.Sprintf(query.EdgeCheckExists, id, value))
 	r = append(r, fmt.Sprintf(query.EdgeFindCode, id, value))
 	return r
 }

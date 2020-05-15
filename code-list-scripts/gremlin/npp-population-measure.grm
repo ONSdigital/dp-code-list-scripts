@@ -1,6 +1,6 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'npp-population-measure').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "npp-population-measure").
     property(single, 'label', "populationmeasure").
@@ -8,200 +8,182 @@ g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('editio
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "northern-ireland-to-england").
+g.V().has('_code','listID', 'npp-population-measure').has('value', "northern-ireland-to-england").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'npp-population-measure').property(single, 'value', "northern-ireland-to-england")
   ).next()
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "northern-ireland-to-england").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "northern-ireland-to-england").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off')
-    ).property(single, 'label', "Northern Ireland to England")).next()
+g.V().has('_code', 'listID', 'npp-population-measure').has('value', "northern-ireland-to-england").as('code').
+  V().has('_code_list', 'listID', 'npp-population-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Northern Ireland to England").next()
 
 
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "scotland-to-england").
+g.V().has('_code','listID', 'npp-population-measure').has('value', "scotland-to-england").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'npp-population-measure').property(single, 'value', "scotland-to-england")
   ).next()
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "scotland-to-england").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "scotland-to-england").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off')
-    ).property(single, 'label', "Scotland to England")).next()
+g.V().has('_code', 'listID', 'npp-population-measure').has('value', "scotland-to-england").as('code').
+  V().has('_code_list', 'listID', 'npp-population-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Scotland to England").next()
 
 
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "wales-to-northern-ireland").
+g.V().has('_code','listID', 'npp-population-measure').has('value', "wales-to-northern-ireland").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'npp-population-measure').property(single, 'value', "wales-to-northern-ireland")
   ).next()
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "wales-to-northern-ireland").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "wales-to-northern-ireland").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off')
-    ).property(single, 'label', "Wales to Northern Ireland")).next()
+g.V().has('_code', 'listID', 'npp-population-measure').has('value', "wales-to-northern-ireland").as('code').
+  V().has('_code_list', 'listID', 'npp-population-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Wales to Northern Ireland").next()
 
 
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "total-migration-in").
+g.V().has('_code','listID', 'npp-population-measure').has('value', "total-migration-in").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'npp-population-measure').property(single, 'value', "total-migration-in")
   ).next()
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "total-migration-in").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "total-migration-in").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off')
-    ).property(single, 'label', "Total migration (In)")).next()
+g.V().has('_code', 'listID', 'npp-population-measure').has('value', "total-migration-in").as('code').
+  V().has('_code_list', 'listID', 'npp-population-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Total migration (In)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "england-to-scotland").
+g.V().has('_code','listID', 'npp-population-measure').has('value', "england-to-scotland").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'npp-population-measure').property(single, 'value', "england-to-scotland")
   ).next()
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "england-to-scotland").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "england-to-scotland").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off')
-    ).property(single, 'label', "England to Scotland")).next()
+g.V().has('_code', 'listID', 'npp-population-measure').has('value', "england-to-scotland").as('code').
+  V().has('_code_list', 'listID', 'npp-population-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "England to Scotland").next()
 
 
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "england-to-wales").
+g.V().has('_code','listID', 'npp-population-measure').has('value', "england-to-wales").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'npp-population-measure').property(single, 'value', "england-to-wales")
   ).next()
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "england-to-wales").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "england-to-wales").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off')
-    ).property(single, 'label', "England to Wales")).next()
+g.V().has('_code', 'listID', 'npp-population-measure').has('value', "england-to-wales").as('code').
+  V().has('_code_list', 'listID', 'npp-population-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "England to Wales").next()
 
 
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "wales-to-scotland").
+g.V().has('_code','listID', 'npp-population-measure').has('value', "wales-to-scotland").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'npp-population-measure').property(single, 'value', "wales-to-scotland")
   ).next()
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "wales-to-scotland").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "wales-to-scotland").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off')
-    ).property(single, 'label', "Wales to Scotland")).next()
+g.V().has('_code', 'listID', 'npp-population-measure').has('value', "wales-to-scotland").as('code').
+  V().has('_code_list', 'listID', 'npp-population-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Wales to Scotland").next()
 
 
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "northern-ireland-to-wales").
+g.V().has('_code','listID', 'npp-population-measure').has('value', "northern-ireland-to-wales").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'npp-population-measure').property(single, 'value', "northern-ireland-to-wales")
   ).next()
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "northern-ireland-to-wales").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "northern-ireland-to-wales").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off')
-    ).property(single, 'label', "Northern Ireland to Wales")).next()
+g.V().has('_code', 'listID', 'npp-population-measure').has('value', "northern-ireland-to-wales").as('code').
+  V().has('_code_list', 'listID', 'npp-population-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Northern Ireland to Wales").next()
 
 
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "international-migration-out").
+g.V().has('_code','listID', 'npp-population-measure').has('value', "international-migration-out").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'npp-population-measure').property(single, 'value', "international-migration-out")
   ).next()
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "international-migration-out").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "international-migration-out").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off')
-    ).property(single, 'label', "International migration (Out)")).next()
+g.V().has('_code', 'listID', 'npp-population-measure').has('value', "international-migration-out").as('code').
+  V().has('_code_list', 'listID', 'npp-population-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "International migration (Out)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "total-migration-out").
+g.V().has('_code','listID', 'npp-population-measure').has('value', "total-migration-out").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'npp-population-measure').property(single, 'value', "total-migration-out")
   ).next()
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "total-migration-out").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "total-migration-out").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off')
-    ).property(single, 'label', "Total migration (Out)")).next()
+g.V().has('_code', 'listID', 'npp-population-measure').has('value', "total-migration-out").as('code').
+  V().has('_code_list', 'listID', 'npp-population-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Total migration (Out)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "scotland-to-wales").
+g.V().has('_code','listID', 'npp-population-measure').has('value', "scotland-to-wales").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'npp-population-measure').property(single, 'value', "scotland-to-wales")
   ).next()
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "scotland-to-wales").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "scotland-to-wales").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off')
-    ).property(single, 'label', "Scotland to Wales")).next()
+g.V().has('_code', 'listID', 'npp-population-measure').has('value', "scotland-to-wales").as('code').
+  V().has('_code_list', 'listID', 'npp-population-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Scotland to Wales").next()
 
 
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "scotland-to-northern-ireland").
+g.V().has('_code','listID', 'npp-population-measure').has('value', "scotland-to-northern-ireland").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'npp-population-measure').property(single, 'value', "scotland-to-northern-ireland")
   ).next()
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "scotland-to-northern-ireland").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "scotland-to-northern-ireland").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off')
-    ).property(single, 'label', "Scotland to Northern Ireland")).next()
+g.V().has('_code', 'listID', 'npp-population-measure').has('value', "scotland-to-northern-ireland").as('code').
+  V().has('_code_list', 'listID', 'npp-population-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Scotland to Northern Ireland").next()
 
 
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "northern-ireland-to-scotland").
+g.V().has('_code','listID', 'npp-population-measure').has('value', "northern-ireland-to-scotland").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'npp-population-measure').property(single, 'value', "northern-ireland-to-scotland")
   ).next()
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "northern-ireland-to-scotland").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "northern-ireland-to-scotland").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off')
-    ).property(single, 'label', "Northern Ireland to Scotland")).next()
+g.V().has('_code', 'listID', 'npp-population-measure').has('value', "northern-ireland-to-scotland").as('code').
+  V().has('_code_list', 'listID', 'npp-population-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Northern Ireland to Scotland").next()
 
 
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "total-migration-net").
+g.V().has('_code','listID', 'npp-population-measure').has('value', "total-migration-net").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'npp-population-measure').property(single, 'value', "total-migration-net")
   ).next()
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "total-migration-net").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "total-migration-net").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off')
-    ).property(single, 'label', "Total migration (Net)")).next()
+g.V().has('_code', 'listID', 'npp-population-measure').has('value', "total-migration-net").as('code').
+  V().has('_code_list', 'listID', 'npp-population-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Total migration (Net)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "wales-to-england").
+g.V().has('_code','listID', 'npp-population-measure').has('value', "wales-to-england").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'npp-population-measure').property(single, 'value', "wales-to-england")
   ).next()
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "wales-to-england").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "wales-to-england").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off')
-    ).property(single, 'label', "Wales to England")).next()
+g.V().has('_code', 'listID', 'npp-population-measure').has('value', "wales-to-england").as('code').
+  V().has('_code_list', 'listID', 'npp-population-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Wales to England").next()
 
 
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "england-to-northern-ireland").
+g.V().has('_code','listID', 'npp-population-measure').has('value', "england-to-northern-ireland").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'npp-population-measure').property(single, 'value', "england-to-northern-ireland")
   ).next()
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "england-to-northern-ireland").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "england-to-northern-ireland").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off')
-    ).property(single, 'label', "England to Northern Ireland")).next()
+g.V().has('_code', 'listID', 'npp-population-measure').has('value', "england-to-northern-ireland").as('code').
+  V().has('_code_list', 'listID', 'npp-population-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "England to Northern Ireland").next()
 
 
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "international-migration-net").
+g.V().has('_code','listID', 'npp-population-measure').has('value', "international-migration-net").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'npp-population-measure').property(single, 'value', "international-migration-net")
   ).next()
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "international-migration-net").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "international-migration-net").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off')
-    ).property(single, 'label', "International migration (Net)")).next()
+g.V().has('_code', 'listID', 'npp-population-measure').has('value', "international-migration-net").as('code').
+  V().has('_code_list', 'listID', 'npp-population-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "International migration (Net)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "international-migration-in").
+g.V().has('_code','listID', 'npp-population-measure').has('value', "international-migration-in").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'npp-population-measure').property(single, 'value', "international-migration-in")
   ).next()
-g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "international-migration-in").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'npp-population-measure').has('value', "international-migration-in").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'npp-population-measure').has('edition', 'one-off')
-    ).property(single, 'label', "International migration (In)")).next()
+g.V().has('_code', 'listID', 'npp-population-measure').has('value', "international-migration-in").as('code').
+  V().has('_code_list', 'listID', 'npp-population-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "International migration (In)").next()
 

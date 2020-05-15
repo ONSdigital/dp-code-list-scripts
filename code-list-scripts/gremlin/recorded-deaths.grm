@@ -1,42 +1,39 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'recorded-deaths').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'recorded-deaths').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
-    property(single, 'listID', 'recorded-deaths').
-    property(single, 'label', 'deaths').
-    property(single, 'edition', 'one-off')
+    property(single, 'listID', "recorded-deaths").
+    property(single, 'label', "deaths").
+    property(single, 'edition', "one-off")
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'recorded-deaths').has('value', 'total-registered-deaths').
+g.V().has('_code','listID', 'recorded-deaths').has('value', "total-registered-deaths").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'recorded-deaths').property(single, 'value', 'total-registered-deaths')
+    property(single, 'listID', 'recorded-deaths').property(single, 'value', "total-registered-deaths")
   ).next()
-g.V().hasLabel('_code').has('listID', 'recorded-deaths').has('value', 'total-registered-deaths').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'recorded-deaths').has('value', 'total-registered-deaths').
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'recorded-deaths').has('edition', 'one-off')
-    ).property(single, 'label', 'Total registered deaths')).next()
+g.V().has('_code', 'listID', 'recorded-deaths').has('value', "total-registered-deaths").as('code').
+  V().has('_code_list', 'listID', 'recorded-deaths').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Total registered deaths").next()
 
 
-g.V().hasLabel('_code').has('listID', 'recorded-deaths').has('value', 'deaths-involving-covid-19-registrations').
+g.V().has('_code','listID', 'recorded-deaths').has('value', "deaths-involving-covid-19-registrations").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'recorded-deaths').property(single, 'value', 'deaths-involving-covid-19-registrations')
+    property(single, 'listID', 'recorded-deaths').property(single, 'value', "deaths-involving-covid-19-registrations")
   ).next()
-g.V().hasLabel('_code').has('listID', 'recorded-deaths').has('value', 'deaths-involving-covid-19-registrations').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'recorded-deaths').has('value', 'deaths-involving-covid-19-registrations').
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'recorded-deaths').has('edition', 'one-off')
-    ).property(single, 'label', 'Deaths involving COVID-19: registrations')).next()
+g.V().has('_code', 'listID', 'recorded-deaths').has('value', "deaths-involving-covid-19-registrations").as('code').
+  V().has('_code_list', 'listID', 'recorded-deaths').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Deaths involving COVID-19: registrations").next()
 
 
-g.V().hasLabel('_code').has('listID', 'recorded-deaths').has('value', 'deaths-involving-covid-19-occurrences').
+g.V().has('_code','listID', 'recorded-deaths').has('value', "deaths-involving-covid-19-occurrences").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'recorded-deaths').property(single, 'value', 'deaths-involving-covid-19-occurrences')
+    property(single, 'listID', 'recorded-deaths').property(single, 'value', "deaths-involving-covid-19-occurrences")
   ).next()
-g.V().hasLabel('_code').has('listID', 'recorded-deaths').has('value', 'deaths-involving-covid-19-occurrences').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'recorded-deaths').has('value', 'deaths-involving-covid-19-occurrences').
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'recorded-deaths').has('edition', 'one-off')
-    ).property(single, 'label', 'Deaths involving COVID-19: occurrences')).next()
+g.V().has('_code', 'listID', 'recorded-deaths').has('value', "deaths-involving-covid-19-occurrences").as('code').
+  V().has('_code_list', 'listID', 'recorded-deaths').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Deaths involving COVID-19: occurrences").next()
 

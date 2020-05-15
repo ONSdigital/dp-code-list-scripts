@@ -1,6 +1,6 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'lms-economic-status').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'lms-economic-status').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "lms-economic-status").
     property(single, 'label', "economicstatus").
@@ -8,46 +8,42 @@ g.V().hasLabel('_code_list').has('listID', 'lms-economic-status').has('edition',
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', "in-employment").
+g.V().has('_code','listID', 'lms-economic-status').has('value', "in-employment").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'lms-economic-status').property(single, 'value', "in-employment")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', "in-employment").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', "in-employment").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'lms-economic-status').has('edition', 'one-off')
-    ).property(single, 'label', "In Employment")).next()
+g.V().has('_code', 'listID', 'lms-economic-status').has('value', "in-employment").as('code').
+  V().has('_code_list', 'listID', 'lms-economic-status').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "In Employment").next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', "unemployed").
+g.V().has('_code','listID', 'lms-economic-status').has('value', "unemployed").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'lms-economic-status').property(single, 'value', "unemployed")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', "unemployed").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', "unemployed").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'lms-economic-status').has('edition', 'one-off')
-    ).property(single, 'label', "Unemployed")).next()
+g.V().has('_code', 'listID', 'lms-economic-status').has('value', "unemployed").as('code').
+  V().has('_code_list', 'listID', 'lms-economic-status').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Unemployed").next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', "economically-inactive").
+g.V().has('_code','listID', 'lms-economic-status').has('value', "economically-inactive").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'lms-economic-status').property(single, 'value', "economically-inactive")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', "economically-inactive").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', "economically-inactive").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'lms-economic-status').has('edition', 'one-off')
-    ).property(single, 'label', "Economically Inactive")).next()
+g.V().has('_code', 'listID', 'lms-economic-status').has('value', "economically-inactive").as('code').
+  V().has('_code_list', 'listID', 'lms-economic-status').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Economically Inactive").next()
 
 
-g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', "economically-active").
+g.V().has('_code','listID', 'lms-economic-status').has('value', "economically-active").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'lms-economic-status').property(single, 'value', "economically-active")
   ).next()
-g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', "economically-active").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'lms-economic-status').has('value', "economically-active").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'lms-economic-status').has('edition', 'one-off')
-    ).property(single, 'label', "Economically Active")).next()
+g.V().has('_code', 'listID', 'lms-economic-status').has('value', "economically-active").as('code').
+  V().has('_code_list', 'listID', 'lms-economic-status').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Economically Active").next()
 

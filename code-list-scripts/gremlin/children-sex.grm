@@ -1,42 +1,39 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'children-sex').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'children-sex').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "children-sex").
-    property(single, 'label', "sex").
-    property(single, 'edition', "one-off")
+    property(single, 'edition', "one-off").
+    property(single, 'label', "sex")
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'children-sex').has('value', "total").
+g.V().has('_code','listID', 'children-sex').has('value', "total").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'children-sex').property(single, 'value', "total")
   ).next()
-g.V().hasLabel('_code').has('listID', 'children-sex').has('value', "total").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'children-sex').has('value', "total").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'children-sex').has('edition', 'one-off')
-    ).property(single, 'label', "Total")).next()
+g.V().has('_code', 'listID', 'children-sex').has('value', "total").as('code').
+  V().has('_code_list', 'listID', 'children-sex').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Total").next()
 
 
-g.V().hasLabel('_code').has('listID', 'children-sex').has('value', "boys").
+g.V().has('_code','listID', 'children-sex').has('value', "boys").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'children-sex').property(single, 'value', "boys")
   ).next()
-g.V().hasLabel('_code').has('listID', 'children-sex').has('value', "boys").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'children-sex').has('value', "boys").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'children-sex').has('edition', 'one-off')
-    ).property(single, 'label', "Boys")).next()
+g.V().has('_code', 'listID', 'children-sex').has('value', "boys").as('code').
+  V().has('_code_list', 'listID', 'children-sex').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Boys").next()
 
 
-g.V().hasLabel('_code').has('listID', 'children-sex').has('value', "girls").
+g.V().has('_code','listID', 'children-sex').has('value', "girls").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'children-sex').property(single, 'value', "girls")
   ).next()
-g.V().hasLabel('_code').has('listID', 'children-sex').has('value', "girls").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'children-sex').has('value', "girls").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'children-sex').has('edition', 'one-off')
-    ).property(single, 'label', "Girls")).next()
+g.V().has('_code', 'listID', 'children-sex').has('value', "girls").as('code').
+  V().has('_code_list', 'listID', 'children-sex').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Girls").next()
 

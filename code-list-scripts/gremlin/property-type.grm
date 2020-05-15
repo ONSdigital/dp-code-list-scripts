@@ -1,6 +1,6 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'property-type').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'property-type').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "property-type").
     property(single, 'label', "propertytype").
@@ -8,57 +8,52 @@ g.V().hasLabel('_code_list').has('listID', 'property-type').has('edition', 'one-
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'property-type').has('value', "all").
+g.V().has('_code','listID', 'property-type').has('value', "all").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'property-type').property(single, 'value', "all")
   ).next()
-g.V().hasLabel('_code').has('listID', 'property-type').has('value', "all").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'property-type').has('value', "all").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'property-type').has('edition', 'one-off')
-    ).property(single, 'label', "All")).next()
+g.V().has('_code', 'listID', 'property-type').has('value', "all").as('code').
+  V().has('_code_list', 'listID', 'property-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "All").next()
 
 
-g.V().hasLabel('_code').has('listID', 'property-type').has('value', "detached").
+g.V().has('_code','listID', 'property-type').has('value', "detached").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'property-type').property(single, 'value', "detached")
   ).next()
-g.V().hasLabel('_code').has('listID', 'property-type').has('value', "detached").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'property-type').has('value', "detached").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'property-type').has('edition', 'one-off')
-    ).property(single, 'label', "Detached")).next()
+g.V().has('_code', 'listID', 'property-type').has('value', "detached").as('code').
+  V().has('_code_list', 'listID', 'property-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Detached").next()
 
 
-g.V().hasLabel('_code').has('listID', 'property-type').has('value', "flat-maisonette").
+g.V().has('_code','listID', 'property-type').has('value', "flat-maisonette").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'property-type').property(single, 'value', "flat-maisonette")
   ).next()
-g.V().hasLabel('_code').has('listID', 'property-type').has('value', "flat-maisonette").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'property-type').has('value', "flat-maisonette").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'property-type').has('edition', 'one-off')
-    ).property(single, 'label', "Flat/maisonette")).next()
+g.V().has('_code', 'listID', 'property-type').has('value', "flat-maisonette").as('code').
+  V().has('_code_list', 'listID', 'property-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Flat/maisonette").next()
 
 
-g.V().hasLabel('_code').has('listID', 'property-type').has('value', "semi-detached").
+g.V().has('_code','listID', 'property-type').has('value', "semi-detached").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'property-type').property(single, 'value', "semi-detached")
   ).next()
-g.V().hasLabel('_code').has('listID', 'property-type').has('value', "semi-detached").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'property-type').has('value', "semi-detached").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'property-type').has('edition', 'one-off')
-    ).property(single, 'label', "Semi-detached")).next()
+g.V().has('_code', 'listID', 'property-type').has('value', "semi-detached").as('code').
+  V().has('_code_list', 'listID', 'property-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Semi-detached").next()
 
 
-g.V().hasLabel('_code').has('listID', 'property-type').has('value', "terraced").
+g.V().has('_code','listID', 'property-type').has('value', "terraced").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'property-type').property(single, 'value', "terraced")
   ).next()
-g.V().hasLabel('_code').has('listID', 'property-type').has('value', "terraced").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'property-type').has('value', "terraced").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'property-type').has('edition', 'one-off')
-    ).property(single, 'label', "Terraced")).next()
+g.V().has('_code', 'listID', 'property-type').has('value', "terraced").as('code').
+  V().has('_code_list', 'listID', 'property-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Terraced").next()
 

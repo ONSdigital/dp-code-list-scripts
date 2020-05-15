@@ -1,6 +1,6 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'trade-direction').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'trade-direction').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "trade-direction").
     property(single, 'label', "direction").
@@ -10,26 +10,24 @@ g.V().hasLabel('_code_list').has('listID', 'trade-direction').has('edition', 'on
 
 
 
-g.V().hasLabel('_code').has('listID', 'trade-direction').has('value', "IM").
+g.V().has('_code','listID', 'trade-direction').has('value', "IM").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-direction').property(single, 'value', "IM")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-direction').has('value', "IM").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-direction').has('value', "IM").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-direction').has('edition', 'one-off')
-    ).property(single, 'label', "Imports")).next()
+g.V().has('_code', 'listID', 'trade-direction').has('value', "IM").as('code').
+  V().has('_code_list', 'listID', 'trade-direction').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Imports").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'trade-direction').has('value', "EX").
+g.V().has('_code','listID', 'trade-direction').has('value', "EX").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-direction').property(single, 'value', "EX")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-direction').has('value', "EX").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-direction').has('value', "EX").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-direction').has('edition', 'one-off')
-    ).property(single, 'label', "Exports")).next()
+g.V().has('_code', 'listID', 'trade-direction').has('value', "EX").as('code').
+  V().has('_code_list', 'listID', 'trade-direction').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Exports").next()
 

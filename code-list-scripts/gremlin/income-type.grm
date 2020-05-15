@@ -1,6 +1,6 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'income-type').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'income-type').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "income-type").
     property(single, 'label', "income").
@@ -8,57 +8,52 @@ g.V().hasLabel('_code_list').has('listID', 'income-type').has('edition', 'one-of
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'income-type').has('value', "original").
+g.V().has('_code','listID', 'income-type').has('value', "original").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'income-type').property(single, 'value', "original")
   ).next()
-g.V().hasLabel('_code').has('listID', 'income-type').has('value', "original").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'income-type').has('value', "original").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'income-type').has('edition', 'one-off')
-    ).property(single, 'label', "Original")).next()
+g.V().has('_code', 'listID', 'income-type').has('value', "original").as('code').
+  V().has('_code_list', 'listID', 'income-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Original").next()
 
 
-g.V().hasLabel('_code').has('listID', 'income-type').has('value', "gross").
+g.V().has('_code','listID', 'income-type').has('value', "gross").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'income-type').property(single, 'value', "gross")
   ).next()
-g.V().hasLabel('_code').has('listID', 'income-type').has('value', "gross").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'income-type').has('value', "gross").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'income-type').has('edition', 'one-off')
-    ).property(single, 'label', "Gross")).next()
+g.V().has('_code', 'listID', 'income-type').has('value', "gross").as('code').
+  V().has('_code_list', 'listID', 'income-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gross").next()
 
 
-g.V().hasLabel('_code').has('listID', 'income-type').has('value', "disposable").
+g.V().has('_code','listID', 'income-type').has('value', "disposable").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'income-type').property(single, 'value', "disposable")
   ).next()
-g.V().hasLabel('_code').has('listID', 'income-type').has('value', "disposable").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'income-type').has('value', "disposable").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'income-type').has('edition', 'one-off')
-    ).property(single, 'label', "Disposable")).next()
+g.V().has('_code', 'listID', 'income-type').has('value', "disposable").as('code').
+  V().has('_code_list', 'listID', 'income-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Disposable").next()
 
 
-g.V().hasLabel('_code').has('listID', 'income-type').has('value', "post-tax").
+g.V().has('_code','listID', 'income-type').has('value', "post-tax").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'income-type').property(single, 'value', "post-tax")
   ).next()
-g.V().hasLabel('_code').has('listID', 'income-type').has('value', "post-tax").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'income-type').has('value', "post-tax").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'income-type').has('edition', 'one-off')
-    ).property(single, 'label', "Post-tax")).next()
+g.V().has('_code', 'listID', 'income-type').has('value', "post-tax").as('code').
+  V().has('_code_list', 'listID', 'income-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Post-tax").next()
 
 
-g.V().hasLabel('_code').has('listID', 'income-type').has('value', "final").
+g.V().has('_code','listID', 'income-type').has('value', "final").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'income-type').property(single, 'value', "final")
   ).next()
-g.V().hasLabel('_code').has('listID', 'income-type').has('value', "final").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'income-type').has('value', "final").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'income-type').has('edition', 'one-off')
-    ).property(single, 'label', "Final")).next()
+g.V().has('_code', 'listID', 'income-type').has('value', "final").as('code').
+  V().has('_code_list', 'listID', 'income-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Final").next()
 

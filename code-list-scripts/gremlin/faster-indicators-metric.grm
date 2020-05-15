@@ -1,6 +1,6 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'faster-indicators-metric').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'faster-indicators-metric').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "faster-indicators-metric").
     property(single, 'label', "metric").
@@ -8,35 +8,32 @@ g.V().hasLabel('_code_list').has('listID', 'faster-indicators-metric').has('edit
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-metric').has('value', "turnover-current-prices").
+g.V().has('_code','listID', 'faster-indicators-metric').has('value', "turnover-current-prices").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'faster-indicators-metric').property(single, 'value', "turnover-current-prices")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-metric').has('value', "turnover-current-prices").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-metric').has('value', "turnover-current-prices").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'faster-indicators-metric').has('edition', 'one-off')
-    ).property(single, 'label', "Turnover current prices")).next()
+g.V().has('_code', 'listID', 'faster-indicators-metric').has('value', "turnover-current-prices").as('code').
+  V().has('_code_list', 'listID', 'faster-indicators-metric').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Turnover current prices").next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-metric').has('value', "expenditure-current-prices").
+g.V().has('_code','listID', 'faster-indicators-metric').has('value', "expenditure-current-prices").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'faster-indicators-metric').property(single, 'value', "expenditure-current-prices")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-metric').has('value', "expenditure-current-prices").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-metric').has('value', "expenditure-current-prices").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'faster-indicators-metric').has('edition', 'one-off')
-    ).property(single, 'label', "Expenditure current prices")).next()
+g.V().has('_code', 'listID', 'faster-indicators-metric').has('value', "expenditure-current-prices").as('code').
+  V().has('_code_list', 'listID', 'faster-indicators-metric').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Expenditure current prices").next()
 
 
-g.V().hasLabel('_code').has('listID', 'faster-indicators-metric').has('value', "new-reporters").
+g.V().has('_code','listID', 'faster-indicators-metric').has('value', "new-reporters").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'faster-indicators-metric').property(single, 'value', "new-reporters")
   ).next()
-g.V().hasLabel('_code').has('listID', 'faster-indicators-metric').has('value', "new-reporters").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'faster-indicators-metric').has('value', "new-reporters").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'faster-indicators-metric').has('edition', 'one-off')
-    ).property(single, 'label', "New reporters")).next()
+g.V().has('_code', 'listID', 'faster-indicators-metric').has('value', "new-reporters").as('code').
+  V().has('_code_list', 'listID', 'faster-indicators-metric').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "New reporters").next()
 

@@ -1,4 +1,4 @@
-g.V().hasLabel('_code_list').has('listID', 'crime-measurement-type').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'crime-measurement-type').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "crime-measurement-type").
     property(single, 'label', "measurementtype").
@@ -9,24 +9,22 @@ g.V().hasLabel('_code_list').has('listID', 'crime-measurement-type').has('editio
 
 
 
-g.V().hasLabel('_code').has('listID', 'crime-measurement-type').has('value', "prevalence-rate").
+g.V().has('_code','listID', 'crime-measurement-type').has('value', "prevalence-rate").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-measurement-type').property(single, 'value', "prevalence-rate")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-measurement-type').has('value', "prevalence-rate").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-measurement-type').has('value', "prevalence-rate").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-measurement-type').has('edition', 'one-off')
-    ).property(single, 'label', "Prevalence rate")).next()
+g.V().has('_code', 'listID', 'crime-measurement-type').has('value', "prevalence-rate").as('code').
+  V().has('_code_list', 'listID', 'crime-measurement-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Prevalence rate").next()
 
 
-g.V().hasLabel('_code').has('listID', 'crime-measurement-type').has('value', "incidence-rate").
+g.V().has('_code','listID', 'crime-measurement-type').has('value', "incidence-rate").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'crime-measurement-type').property(single, 'value', "incidence-rate")
   ).next()
-g.V().hasLabel('_code').has('listID', 'crime-measurement-type').has('value', "incidence-rate").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'crime-measurement-type').has('value', "incidence-rate").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'crime-measurement-type').has('edition', 'one-off')
-    ).property(single, 'label', "Incidence rate")).next()
+g.V().has('_code', 'listID', 'crime-measurement-type').has('value', "incidence-rate").as('code').
+  V().has('_code_list', 'listID', 'crime-measurement-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Incidence rate").next()
 

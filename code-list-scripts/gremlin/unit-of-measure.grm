@@ -1,6 +1,6 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'unit-of-measure').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'unit-of-measure').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "unit-of-measure").
     property(single, 'label', "unitofmeasure").
@@ -8,47 +8,43 @@ g.V().hasLabel('_code_list').has('listID', 'unit-of-measure').has('edition', 'on
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'unit-of-measure').has('value', "levels").
+g.V().has('_code','listID', 'unit-of-measure').has('value', "levels").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'unit-of-measure').property(single, 'value', "levels")
   ).next()
-g.V().hasLabel('_code').has('listID', 'unit-of-measure').has('value', "levels").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'unit-of-measure').has('value', "levels").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'unit-of-measure').has('edition', 'one-off')
-    ).property(single, 'label', "Levels")).next()
+g.V().has('_code', 'listID', 'unit-of-measure').has('value', "levels").as('code').
+  V().has('_code_list', 'listID', 'unit-of-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Levels").next()
 
 
-g.V().hasLabel('_code').has('listID', 'unit-of-measure').has('value', "rates").
+g.V().has('_code','listID', 'unit-of-measure').has('value', "rates").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'unit-of-measure').property(single, 'value', "rates")
   ).next()
-g.V().hasLabel('_code').has('listID', 'unit-of-measure').has('value', "rates").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'unit-of-measure').has('value', "rates").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'unit-of-measure').has('edition', 'one-off')
-    ).property(single, 'label', "Rates")).next()
+g.V().has('_code', 'listID', 'unit-of-measure').has('value', "rates").as('code').
+  V().has('_code_list', 'listID', 'unit-of-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Rates").next()
 
 
-g.V().hasLabel('_code').has('listID', 'unit-of-measure').has('value', "number").
+g.V().has('_code','listID', 'unit-of-measure').has('value', "number").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'unit-of-measure').property(single, 'value', "number")
   ).next()
-g.V().hasLabel('_code').has('listID', 'unit-of-measure').has('value', "number").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'unit-of-measure').has('value', "number").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'unit-of-measure').has('edition', 'one-off')
-    ).property(single, 'label', "Number")).next()
+g.V().has('_code', 'listID', 'unit-of-measure').has('value', "number").as('code').
+  V().has('_code_list', 'listID', 'unit-of-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Number").next()
 
 
-g.V().hasLabel('_code').has('listID', 'unit-of-measure').has('value', "percentage").
+g.V().has('_code','listID', 'unit-of-measure').has('value', "percentage").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'unit-of-measure').property(single, 'value', "percentage")
   ).next()
-g.V().hasLabel('_code').has('listID', 'unit-of-measure').has('value', "percentage").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'unit-of-measure').has('value', "percentage").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'unit-of-measure').has('edition', 'one-off')
-    ).property(single, 'label', "Percentage")).next()
+g.V().has('_code', 'listID', 'unit-of-measure').has('value', "percentage").as('code').
+  V().has('_code_list', 'listID', 'unit-of-measure').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Percentage").next()
 
 

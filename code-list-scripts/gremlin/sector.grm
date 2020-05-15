@@ -1,53 +1,69 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'sector').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'sector').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
-    property(single, 'listID', 'sector').
-    property(single, 'label', 'sectortype').
-    property(single, 'edition', 'one-off')
+    property(single, 'listID', "sector").
+    property(single, 'label', "sectortype").
+    property(single, 'edition', "one-off")
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'sector').has('value', 'all').
+g.V().has('_code','listID', 'sector').has('value', "all").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sector').property(single, 'value', 'all')
+    property(single, 'listID', 'sector').property(single, 'value', "all")
   ).next()
-g.V().hasLabel('_code').has('listID', 'sector').has('value', 'all').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'sector').has('value', 'all').
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'sector').has('edition', 'one-off')
-    ).property(single, 'label', 'All')).next()
+g.V().has('_code', 'listID', 'sector').has('value', "all").as('code').
+  V().has('_code_list', 'listID', 'sector').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "All").next()
 
 
-g.V().hasLabel('_code').has('listID', 'sector').has('value', 'public-sector').
+g.V().has('_code','listID', 'sector').has('value', "public-sector").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sector').property(single, 'value', 'public-sector')
+    property(single, 'listID', 'sector').property(single, 'value', "public-sector")
   ).next()
-g.V().hasLabel('_code').has('listID', 'sector').has('value', 'public-sector').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'sector').has('value', 'public-sector').
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'sector').has('edition', 'one-off')
-    ).property(single, 'label', 'Public sector')).next()
+g.V().has('_code', 'listID', 'sector').has('value', "public-sector").as('code').
+  V().has('_code_list', 'listID', 'sector').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Public sector").next()
 
 
-g.V().hasLabel('_code').has('listID', 'sector').has('value', 'private-sector').
+g.V().has('_code','listID', 'sector').has('value', "private-sector").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sector').property(single, 'value', 'private-sector')
+    property(single, 'listID', 'sector').property(single, 'value', "private-sector")
   ).next()
-g.V().hasLabel('_code').has('listID', 'sector').has('value', 'private-sector').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'sector').has('value', 'private-sector').
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'sector').has('edition', 'one-off')
-    ).property(single, 'label', 'Private sector')).next()
+g.V().has('_code', 'listID', 'sector').has('value', "private-sector").as('code').
+  V().has('_code_list', 'listID', 'sector').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Private sector").next()
 
 
-g.V().hasLabel('_code').has('listID', 'sector').has('value', 'non-profit-body-or-mutual-association').
+g.V().has('_code','listID', 'sector').has('value', "non-profit-body-or-mutual-association").
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sector').property(single, 'value', 'non-profit-body-or-mutual-association')
+    property(single, 'listID', 'sector').property(single, 'value', "non-profit-body-or-mutual-association")
   ).next()
-g.V().hasLabel('_code').has('listID', 'sector').has('value', 'non-profit-body-or-mutual-association').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'sector').has('value', 'non-profit-body-or-mutual-association').
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'sector').has('edition', 'one-off')
-    ).property(single, 'label', 'Non-profit body or mutual association')).next()
+g.V().has('_code', 'listID', 'sector').has('value', "non-profit-body-or-mutual-association").as('code').
+  V().has('_code_list', 'listID', 'sector').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Non-profit body or mutual association").next()
+
+
+g.V().has('_code','listID', 'sector').has('value', "public-sector-employment-excluding-effects-of-major-reclassifications").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'sector').property(single, 'value', "public-sector-employment-excluding-effects-of-major-reclassifications")
+  ).next()
+g.V().has('_code', 'listID', 'sector').has('value', "public-sector-employment-excluding-effects-of-major-reclassifications").as('code').
+  V().has('_code_list', 'listID', 'sector').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Public sector employment excluding effects of major reclassifications").next()
+
+
+g.V().has('_code','listID', 'sector').has('value', "private-sector-employment-excluding-effects-of-major-reclassifications").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'sector').property(single, 'value', "private-sector-employment-excluding-effects-of-major-reclassifications")
+  ).next()
+g.V().has('_code', 'listID', 'sector').has('value', "private-sector-employment-excluding-effects-of-major-reclassifications").as('code').
+  V().has('_code_list', 'listID', 'sector').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Private sector employment excluding effects of major reclassifications").next()
 

@@ -1,6 +1,6 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'trade-commodity').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "trade-commodity").
     property(single, 'label', "commodity").
@@ -8,1377 +8,1252 @@ g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'on
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "0").
+g.V().has('_code','listID', 'trade-commodity').has('value', "0").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "0")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "0").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "0").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "0 - Food & live animals")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "0").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "0 - Food & live animals").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "00").
+g.V().has('_code','listID', 'trade-commodity').has('value', "00").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "00")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "00").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "00").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "00 - Live animals")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "00").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "00 - Live animals").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "01").
+g.V().has('_code','listID', 'trade-commodity').has('value', "01").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "01")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "01").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "01").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "01 - Meat & meat preparations")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "01").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "01 - Meat & meat preparations").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "02").
+g.V().has('_code','listID', 'trade-commodity').has('value', "02").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "02")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "02").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "02").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "02 - Dairy products & eggs")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "02").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "02 - Dairy products & eggs").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "03").
+g.V().has('_code','listID', 'trade-commodity').has('value', "03").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "03")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "03").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "03").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "03 - Fish & shellfish")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "03").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "03 - Fish & shellfish").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "04").
+g.V().has('_code','listID', 'trade-commodity').has('value', "04").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "04")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "04").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "04").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "04 - Cereals")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "04").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "04 - Cereals").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "05").
+g.V().has('_code','listID', 'trade-commodity').has('value', "05").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "05")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "05").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "05").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "05 - Vegetables & fruit")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "05").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "05 - Vegetables & fruit").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "06").
+g.V().has('_code','listID', 'trade-commodity').has('value', "06").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "06")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "06").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "06").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "06 - Sugar")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "06").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "06 - Sugar").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "07").
+g.V().has('_code','listID', 'trade-commodity').has('value', "07").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "07")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "07").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "07").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "07 - Coffee, tea, cocoa etc")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "07").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "07 - Coffee, tea, cocoa etc").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "08").
+g.V().has('_code','listID', 'trade-commodity').has('value', "08").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "08")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "08").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "08").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "08 - Animal feeding stuffs")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "08").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "08 - Animal feeding stuffs").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "09").
+g.V().has('_code','listID', 'trade-commodity').has('value', "09").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "09")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "09").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "09").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "09 - Miscellaneous foods")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "09").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "09 - Miscellaneous foods").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "1").
+g.V().has('_code','listID', 'trade-commodity').has('value', "1").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "1")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "1").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "1").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "1 - Beverages & tobacco")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "1").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1 - Beverages & tobacco").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "11").
+g.V().has('_code','listID', 'trade-commodity').has('value', "11").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "11")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "11").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "11").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "11 - Beverages")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "11").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "11 - Beverages").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "12").
+g.V().has('_code','listID', 'trade-commodity').has('value', "12").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "12")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "12").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "12").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "12 - Tobacco")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "12").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "12 - Tobacco").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "2").
+g.V().has('_code','listID', 'trade-commodity').has('value', "2").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "2")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "2").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "2").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "2 - Crude materials")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "2").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2 - Crude materials").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "21").
+g.V().has('_code','listID', 'trade-commodity').has('value', "21").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "21")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "21").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "21").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "21 - Hides, skins & furskins")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "21").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "21 - Hides, skins & furskins").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "22").
+g.V().has('_code','listID', 'trade-commodity').has('value', "22").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "22")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "22").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "22").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "22 - Oil-seeds & oleaginous fruits")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "22").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "22 - Oil-seeds & oleaginous fruits").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "23").
+g.V().has('_code','listID', 'trade-commodity').has('value', "23").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "23")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "23").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "23").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "23 - Crude rubber")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "23").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "23 - Crude rubber").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "24").
+g.V().has('_code','listID', 'trade-commodity').has('value', "24").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "24")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "24").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "24").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "24 - Wood & cork")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "24").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "24 - Wood & cork").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "25").
+g.V().has('_code','listID', 'trade-commodity').has('value', "25").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "25")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "25").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "25").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "25 - Pulp & waste paper")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "25").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "25 - Pulp & waste paper").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "26").
+g.V().has('_code','listID', 'trade-commodity').has('value', "26").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "26")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "26").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "26").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "26 - Textile fibres")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "26").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "26 - Textile fibres").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "27").
+g.V().has('_code','listID', 'trade-commodity').has('value', "27").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "27")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "27").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "27").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "27 - Crude minerals & fertilisers")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "27").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "27 - Crude minerals & fertilisers").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "28").
+g.V().has('_code','listID', 'trade-commodity').has('value', "28").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "28")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "28").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "28").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "28 - Metal ores & scrap")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "28").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "28 - Metal ores & scrap").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "29").
+g.V().has('_code','listID', 'trade-commodity').has('value', "29").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "29")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "29").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "29").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "29 - Other crude animal & vegetable materials")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "29").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "29 - Other crude animal & vegetable materials").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "3").
+g.V().has('_code','listID', 'trade-commodity').has('value', "3").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "3")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "3").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "3").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "3 - Fuels")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "3").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "3 - Fuels").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "32").
+g.V().has('_code','listID', 'trade-commodity').has('value', "32").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "32")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "32").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "32").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "32 - Coal, coke & briquettes")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "32").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "32 - Coal, coke & briquettes").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "33").
+g.V().has('_code','listID', 'trade-commodity').has('value', "33").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "33")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "33").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "33").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "33 - Oil")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "33").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "33 - Oil").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "33O").
+g.V().has('_code','listID', 'trade-commodity').has('value', "33O").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "33O")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "33O").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "33O").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "33O - Crude oil")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "33O").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "33O - Crude oil").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "33R").
+g.V().has('_code','listID', 'trade-commodity').has('value', "33R").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "33R")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "33R").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "33R").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "33R - Refined oil")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "33R").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "33R - Refined oil").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "34").
+g.V().has('_code','listID', 'trade-commodity').has('value', "34").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "34")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "34").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "34").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "34 - Gas")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "34").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "34 - Gas").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "35").
+g.V().has('_code','listID', 'trade-commodity').has('value', "35").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "35")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "35").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "35").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "35 - Electricity")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "35").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "35 - Electricity").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "3OF").
+g.V().has('_code','listID', 'trade-commodity').has('value', "3OF").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "3OF")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "3OF").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "3OF").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "3OF - Fuels other than oil")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "3OF").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "3OF - Fuels other than oil").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "4").
+g.V().has('_code','listID', 'trade-commodity').has('value', "4").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "4")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "4").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "4").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "4 - Animal & vegetable oils & fats")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "4").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "4 - Animal & vegetable oils & fats").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "41").
+g.V().has('_code','listID', 'trade-commodity').has('value', "41").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "41")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "41").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "41").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "41 - Animal oils & fats")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "41").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "41 - Animal oils & fats").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "42").
+g.V().has('_code','listID', 'trade-commodity').has('value', "42").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "42")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "42").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "42").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "42 - Vegetable oils & fats")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "42").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "42 - Vegetable oils & fats").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "43").
+g.V().has('_code','listID', 'trade-commodity').has('value', "43").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "43")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "43").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "43").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "43 - Processed oils & fats")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "43").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "43 - Processed oils & fats").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "5").
+g.V().has('_code','listID', 'trade-commodity').has('value', "5").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "5")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "5").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "5").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "5 - Chemicals")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "5").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "5 - Chemicals").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "51").
+g.V().has('_code','listID', 'trade-commodity').has('value', "51").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "51")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "51").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "51").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "51 - Organic chemicals")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "51").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "51 - Organic chemicals").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "52").
+g.V().has('_code','listID', 'trade-commodity').has('value', "52").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "52")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "52").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "52").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "52 - Inorganic chemicals")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "52").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "52 - Inorganic chemicals").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "53").
+g.V().has('_code','listID', 'trade-commodity').has('value', "53").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "53")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "53").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "53").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "53 - Dyeing, tanning & colouring materials")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "53").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "53 - Dyeing, tanning & colouring materials").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "54").
+g.V().has('_code','listID', 'trade-commodity').has('value', "54").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "54")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "54").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "54").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "54 - Medicinal & pharmaceutical products")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "54").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "54 - Medicinal & pharmaceutical products").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "55").
+g.V().has('_code','listID', 'trade-commodity').has('value', "55").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "55")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "55").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "55").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "55 - Toilet & cleansing preparations")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "55").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "55 - Toilet & cleansing preparations").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "56").
+g.V().has('_code','listID', 'trade-commodity').has('value', "56").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "56")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "56").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "56").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "56 - Processed fertilisers")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "56").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "56 - Processed fertilisers").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "57").
+g.V().has('_code','listID', 'trade-commodity').has('value', "57").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "57")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "57").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "57").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "57 - Plastics in primary forms")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "57").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "57 - Plastics in primary forms").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "58").
+g.V().has('_code','listID', 'trade-commodity').has('value', "58").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "58")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "58").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "58").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "58 - Plastics in non-primary forms")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "58").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "58 - Plastics in non-primary forms").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "59").
+g.V().has('_code','listID', 'trade-commodity').has('value', "59").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "59")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "59").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "59").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "59 - Other chemicals")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "59").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "59 - Other chemicals").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "6").
+g.V().has('_code','listID', 'trade-commodity').has('value', "6").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "6")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "6").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "6").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "6 - Material manufactures")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "6").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "6 - Material manufactures").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "61").
+g.V().has('_code','listID', 'trade-commodity').has('value', "61").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "61")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "61").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "61").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "61 - Leather manufactures")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "61").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "61 - Leather manufactures").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "62").
+g.V().has('_code','listID', 'trade-commodity').has('value', "62").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "62")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "62").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "62").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "62 - Rubber manufactures")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "62").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "62 - Rubber manufactures").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "63").
+g.V().has('_code','listID', 'trade-commodity').has('value', "63").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "63")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "63").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "63").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "63 - Wood & cork manufactures")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "63").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "63 - Wood & cork manufactures").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "64").
+g.V().has('_code','listID', 'trade-commodity').has('value', "64").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "64")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "64").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "64").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "64 - Paper & paperboard")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "64").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "64 - Paper & paperboard").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "65").
+g.V().has('_code','listID', 'trade-commodity').has('value', "65").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "65")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "65").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "65").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "65 - Textile fabrics")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "65").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "65 - Textile fabrics").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "66").
+g.V().has('_code','listID', 'trade-commodity').has('value', "66").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "66")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "66").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "66").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "66 - Mineral manufactures")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "66").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "66 - Mineral manufactures").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "67").
+g.V().has('_code','listID', 'trade-commodity').has('value', "67").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "67")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "67").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "67").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "67 - Iron & steel")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "67").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "67 - Iron & steel").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "68").
+g.V().has('_code','listID', 'trade-commodity').has('value', "68").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "68")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "68").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "68").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "68 - Non-ferrous metals")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "68").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "68 - Non-ferrous metals").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "69").
+g.V().has('_code','listID', 'trade-commodity').has('value', "69").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "69")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "69").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "69").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "69 - Miscellaneous metal manufactures")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "69").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "69 - Miscellaneous metal manufactures").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7").
+g.V().has('_code','listID', 'trade-commodity').has('value', "7").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "7")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "7 - Machinery & transport equipment")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "7").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "7 - Machinery & transport equipment").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "71EI").
+g.V().has('_code','listID', 'trade-commodity').has('value', "71EI").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "71EI")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "71EI").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "71EI").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "71EI - Electric motors (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "71EI").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "71EI - Electric motors (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "71EK").
+g.V().has('_code','listID', 'trade-commodity').has('value', "71EK").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "71EK")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "71EK").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "71EK").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "71EK - Electric motors (capital)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "71EK").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "71EK - Electric motors (capital)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "71MC").
+g.V().has('_code','listID', 'trade-commodity').has('value', "71MC").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "71MC")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "71MC").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "71MC").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "71MC - Mechanical power generators (consumer)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "71MC").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "71MC - Mechanical power generators (consumer)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "71MI").
+g.V().has('_code','listID', 'trade-commodity').has('value', "71MI").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "71MI")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "71MI").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "71MI").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "71MI - Mechanical power generators (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "71MI").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "71MI - Mechanical power generators (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "71MK").
+g.V().has('_code','listID', 'trade-commodity').has('value', "71MK").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "71MK")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "71MK").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "71MK").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "71MK - Mechanical power generators (capital)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "71MK").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "71MK - Mechanical power generators (capital)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "72C").
+g.V().has('_code','listID', 'trade-commodity').has('value', "72C").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "72C")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "72C").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "72C").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "72C - Specialised machinery (consumer)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "72C").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "72C - Specialised machinery (consumer)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "72I").
+g.V().has('_code','listID', 'trade-commodity').has('value', "72I").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "72I")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "72I").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "72I").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "72I - Specialised machinery (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "72I").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "72I - Specialised machinery (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "72K").
+g.V().has('_code','listID', 'trade-commodity').has('value', "72K").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "72K")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "72K").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "72K").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "72K - Specialised machinery (capital)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "72K").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "72K - Specialised machinery (capital)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "73I").
+g.V().has('_code','listID', 'trade-commodity').has('value', "73I").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "73I")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "73I").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "73I").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "73I - Metal working machinery (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "73I").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "73I - Metal working machinery (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "73K").
+g.V().has('_code','listID', 'trade-commodity').has('value', "73K").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "73K")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "73K").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "73K").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "73K - Metal working machinery (capital)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "73K").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "73K - Metal working machinery (capital)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "74C").
+g.V().has('_code','listID', 'trade-commodity').has('value', "74C").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "74C")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "74C").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "74C").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "74C - General industrial machinery (consumer)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "74C").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "74C - General industrial machinery (consumer)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "74I").
+g.V().has('_code','listID', 'trade-commodity').has('value', "74I").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "74I")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "74I").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "74I").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "74I - General industrial machinery (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "74I").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "74I - General industrial machinery (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "74K").
+g.V().has('_code','listID', 'trade-commodity').has('value', "74K").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "74K")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "74K").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "74K").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "74K - General industrial machinery (capital)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "74K").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "74K - General industrial machinery (capital)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "75C").
+g.V().has('_code','listID', 'trade-commodity').has('value', "75C").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "75C")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "75C").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "75C").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "75C - Office machinery (consumer)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "75C").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "75C - Office machinery (consumer)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "75I").
+g.V().has('_code','listID', 'trade-commodity').has('value', "75I").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "75I")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "75I").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "75I").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "75I - Office machinery (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "75I").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "75I - Office machinery (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "75K").
+g.V().has('_code','listID', 'trade-commodity').has('value', "75K").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "75K")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "75K").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "75K").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "75K - Office machinery (capital)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "75K").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "75K - Office machinery (capital)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "76C").
+g.V().has('_code','listID', 'trade-commodity').has('value', "76C").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "76C")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "76C").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "76C").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "76C - Telecoms & sound equipment (consumer)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "76C").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "76C - Telecoms & sound equipment (consumer)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "76I").
+g.V().has('_code','listID', 'trade-commodity').has('value', "76I").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "76I")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "76I").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "76I").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "76I - Telecoms & sound equipment (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "76I").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "76I - Telecoms & sound equipment (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "76K").
+g.V().has('_code','listID', 'trade-commodity').has('value', "76K").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "76K")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "76K").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "76K").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "76K - Telecoms & sound equipment (capital)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "76K").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "76K - Telecoms & sound equipment (capital)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "77C").
+g.V().has('_code','listID', 'trade-commodity').has('value', "77C").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "77C")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "77C").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "77C").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "77C - Miscellaneous electrical goods (consumer)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "77C").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "77C - Miscellaneous electrical goods (consumer)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "77I").
+g.V().has('_code','listID', 'trade-commodity').has('value', "77I").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "77I")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "77I").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "77I").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "77I - Miscellaneous electrical goods (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "77I").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "77I - Miscellaneous electrical goods (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "77K").
+g.V().has('_code','listID', 'trade-commodity').has('value', "77K").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "77K")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "77K").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "77K").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "77K - Miscellaneous electrical goods (capital)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "77K").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "77K - Miscellaneous electrical goods (capital)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "78").
+g.V().has('_code','listID', 'trade-commodity').has('value', "78").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "78")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "78").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "78").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "78 - Road vehicles")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "78").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "78 - Road vehicles").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "78C").
+g.V().has('_code','listID', 'trade-commodity').has('value', "78C").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "78C")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "78C").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "78C").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "78C - Road vehicles other than cars (consumer)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "78C").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "78C - Road vehicles other than cars (consumer)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "78I").
+g.V().has('_code','listID', 'trade-commodity').has('value', "78I").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "78I")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "78I").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "78I").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "78I - Road vehicles other than cars (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "78I").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "78I - Road vehicles other than cars (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "78K").
+g.V().has('_code','listID', 'trade-commodity').has('value', "78K").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "78K")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "78K").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "78K").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "78K - Road vehicles other than cars (capital)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "78K").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "78K - Road vehicles other than cars (capital)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "78M").
+g.V().has('_code','listID', 'trade-commodity').has('value', "78M").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "78M")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "78M").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "78M").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "78M - Cars")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "78M").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "78M - Cars").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "79").
+g.V().has('_code','listID', 'trade-commodity').has('value', "79").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "79")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "79").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "79").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "79 - Other transport equipment")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "79").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "79 - Other transport equipment").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "791I").
+g.V().has('_code','listID', 'trade-commodity').has('value', "791I").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "791I")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "791I").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "791I").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "791I - Road vehicles other than cars (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "791I").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "791I - Road vehicles other than cars (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "791K").
+g.V().has('_code','listID', 'trade-commodity').has('value', "791K").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "791K")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "791K").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "791K").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "791K - Railway equipment (capital)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "791K").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "791K - Railway equipment (capital)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "792").
+g.V().has('_code','listID', 'trade-commodity').has('value', "792").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "792")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "792").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "792").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "792 - Aircraft")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "792").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "792 - Aircraft").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "792-3").
+g.V().has('_code','listID', 'trade-commodity').has('value', "792-3").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "792-3")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "792-3").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "792-3").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "792-3 - Ships & aircraft")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "792-3").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "792-3 - Ships & aircraft").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "793").
+g.V().has('_code','listID', 'trade-commodity').has('value', "793").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "793")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "793").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "793").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "793 - Ships")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "793").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "793 - Ships").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7E").
+g.V().has('_code','listID', 'trade-commodity').has('value', "7E").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "7E")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7E").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7E").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "7E - Electrical machinery")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "7E").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "7E - Electrical machinery").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7EC").
+g.V().has('_code','listID', 'trade-commodity').has('value', "7EC").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "7EC")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7EC").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7EC").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "7EC - Electrical machinery (consumer)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "7EC").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "7EC - Electrical machinery (consumer)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7EI").
+g.V().has('_code','listID', 'trade-commodity').has('value', "7EI").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "7EI")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7EI").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7EI").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "7EI - Electrical machinery (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "7EI").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "7EI - Electrical machinery (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7EK").
+g.V().has('_code','listID', 'trade-commodity').has('value', "7EK").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "7EK")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7EK").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7EK").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "7EK - Electrical machinery (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "7EK").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "7EK - Electrical machinery (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7M").
+g.V().has('_code','listID', 'trade-commodity').has('value', "7M").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "7M")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7M").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7M").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "7M - Mechanical machinery")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "7M").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "7M - Mechanical machinery").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7MC").
+g.V().has('_code','listID', 'trade-commodity').has('value', "7MC").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "7MC")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7MC").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7MC").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "7MC - Mechanical machinery (consumer)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "7MC").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "7MC - Mechanical machinery (consumer)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7MI").
+g.V().has('_code','listID', 'trade-commodity').has('value', "7MI").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "7MI")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7MI").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7MI").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "7MI - Mechanical machinery (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "7MI").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "7MI - Mechanical machinery (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7MK").
+g.V().has('_code','listID', 'trade-commodity').has('value', "7MK").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "7MK")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7MK").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "7MK").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "7MK - Mechanical machinery (capital)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "7MK").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "7MK - Mechanical machinery (capital)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "8").
+g.V().has('_code','listID', 'trade-commodity').has('value', "8").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "8")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "8").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "8").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "8 - Miscellaneous manufactures")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "8").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "8 - Miscellaneous manufactures").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "81C").
+g.V().has('_code','listID', 'trade-commodity').has('value', "81C").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "81C")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "81C").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "81C").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "81C - Plumbing, heating & lighting fixtures (consumer)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "81C").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "81C - Plumbing, heating & lighting fixtures (consumer)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "81I").
+g.V().has('_code','listID', 'trade-commodity').has('value', "81I").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "81I")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "81I").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "81I").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "81I - Plumbing, heating & lighting fixtures (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "81I").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "81I - Plumbing, heating & lighting fixtures (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "81K").
+g.V().has('_code','listID', 'trade-commodity').has('value', "81K").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "81K")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "81K").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "81K").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "81K - Plumbing, heating & lighting fixtures (capital)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "81K").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "81K - Plumbing, heating & lighting fixtures (capital)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "82C").
+g.V().has('_code','listID', 'trade-commodity').has('value', "82C").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "82C")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "82C").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "82C").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "82C - Furniture (consumer)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "82C").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "82C - Furniture (consumer)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "82I").
+g.V().has('_code','listID', 'trade-commodity').has('value', "82I").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "82I")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "82I").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "82I").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "82I - Furniture (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "82I").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "82I - Furniture (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "82K").
+g.V().has('_code','listID', 'trade-commodity').has('value', "82K").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "82K")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "82K").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "82K").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "82K - Furniture (capital)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "82K").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "82K - Furniture (capital)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "83").
+g.V().has('_code','listID', 'trade-commodity').has('value', "83").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "83")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "83").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "83").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "83 - Travel goods, handbags etc")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "83").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "83 - Travel goods, handbags etc").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "84").
+g.V().has('_code','listID', 'trade-commodity').has('value', "84").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "84")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "84").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "84").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "84 - Clothing")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "84").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "84 - Clothing").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "85").
+g.V().has('_code','listID', 'trade-commodity').has('value', "85").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "85")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "85").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "85").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "85 - Footwear")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "85").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "85 - Footwear").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "87C").
+g.V().has('_code','listID', 'trade-commodity').has('value', "87C").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "87C")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "87C").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "87C").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "87C - Scientific instruments (consumer)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "87C").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "87C - Scientific instruments (consumer)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "87I").
+g.V().has('_code','listID', 'trade-commodity').has('value', "87I").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "87I")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "87I").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "87I").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "87I - Scientific instruments (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "87I").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "87I - Scientific instruments (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "87K").
+g.V().has('_code','listID', 'trade-commodity').has('value', "87K").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "87K")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "87K").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "87K").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "87K - Scientific instruments (capital)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "87K").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "87K - Scientific instruments (capital)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "88C").
+g.V().has('_code','listID', 'trade-commodity').has('value', "88C").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "88C")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "88C").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "88C").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "88C - Photographic & optical goods & clocks (consumer)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "88C").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "88C - Photographic & optical goods & clocks (consumer)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "88I").
+g.V().has('_code','listID', 'trade-commodity').has('value', "88I").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "88I")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "88I").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "88I").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "88I - Photographic & optical goods & clocks (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "88I").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "88I - Photographic & optical goods & clocks (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "88K").
+g.V().has('_code','listID', 'trade-commodity').has('value', "88K").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "88K")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "88K").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "88K").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "88K - Photographic & optical goods & clocks (capital)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "88K").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "88K - Photographic & optical goods & clocks (capital)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "896").
+g.V().has('_code','listID', 'trade-commodity').has('value', "896").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "896")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "896").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "896").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "896 - Works of art")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "896").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "896 - Works of art").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "897C").
+g.V().has('_code','listID', 'trade-commodity').has('value', "897C").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "897C")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "897C").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "897C").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "897C - Jewellery")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "897C").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "897C - Jewellery").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "89I").
+g.V().has('_code','listID', 'trade-commodity').has('value', "89I").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "89I")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "89I").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "89I").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "89I - Other manufactures (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "89I").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "89I - Other manufactures (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "89K").
+g.V().has('_code','listID', 'trade-commodity').has('value', "89K").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "89K")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "89K").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "89K").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "89K - Other manufactures (capital)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "89K").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "89K - Other manufactures (capital)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "89OC").
+g.V().has('_code','listID', 'trade-commodity').has('value', "89OC").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "89OC")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "89OC").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "89OC").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "89OC - Other manufactures (consumer)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "89OC").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "89OC - Other manufactures (consumer)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "8O").
+g.V().has('_code','listID', 'trade-commodity').has('value', "8O").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "8O")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "8O").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "8O").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "8O - Other manufactures")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "8O").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "8O - Other manufactures").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "8OC").
+g.V().has('_code','listID', 'trade-commodity').has('value', "8OC").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "8OC")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "8OC").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "8OC").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "8OC - Other miscellaneous manufactures (consumer)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "8OC").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "8OC - Other miscellaneous manufactures (consumer)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "8OI").
+g.V().has('_code','listID', 'trade-commodity').has('value', "8OI").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "8OI")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "8OI").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "8OI").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "8OI - Other miscellaneous manufactures (intermediate)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "8OI").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "8OI - Other miscellaneous manufactures (intermediate)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "8OK").
+g.V().has('_code','listID', 'trade-commodity').has('value', "8OK").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "8OK")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "8OK").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "8OK").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "8OK - Other miscellaneous manufactures (capital)")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "8OK").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "8OK - Other miscellaneous manufactures (capital)").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "9").
+g.V().has('_code','listID', 'trade-commodity').has('value', "9").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "9")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "9").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "9").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "9 - Unspecified goods")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "9").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "9 - Unspecified goods").next()
 
 
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "T").
+g.V().has('_code','listID', 'trade-commodity').has('value', "T").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'trade-commodity').property(single, 'value', "T")
   ).next()
-g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "T").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'trade-commodity').has('value', "T").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'trade-commodity').has('edition', 'one-off')
-    ).property(single, 'label', "T - Total")).next()
+g.V().has('_code', 'listID', 'trade-commodity').has('value', "T").as('code').
+  V().has('_code_list', 'listID', 'trade-commodity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "T - Total").next()
 

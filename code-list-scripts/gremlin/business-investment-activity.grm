@@ -1,6 +1,6 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'business-investment-activity').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "business-investment-activity").
     property(single, 'label', "activity").
@@ -10,1131 +10,1044 @@ g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "L").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "L").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "L")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "L").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "L").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Real estate activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "L").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Real estate activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "_T").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "_T").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "_T")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "_T").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "_T").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Total - All activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "_T").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Total - All activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "A").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "A").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "A")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "A").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "A").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Agriculture, forestry and fishing")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "A").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Agriculture, forestry and fishing").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "A01").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "A01").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "A01")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "A01").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "A01").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Crop and animal production, hunting and related service activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "A01").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Crop and animal production, hunting and related service activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "A02").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "A02").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "A02")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "A02").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "A02").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Forestry and logging")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "A02").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Forestry and logging").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "A03").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "A03").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "A03")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "A03").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "A03").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Fishing and aquaculture")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "A03").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Fishing and aquaculture").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "B").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "B").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "B")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "B").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "B").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Mining and quarrying")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "B").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Mining and quarrying").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "BTE").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "BTE").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "BTE")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "BTE").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "BTE").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Industry (except construction)")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "BTE").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Industry (except construction)").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacturing")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacturing").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C10T12").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C10T12").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C10T12")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C10T12").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C10T12").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of food products; beverages and tobacco products")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C10T12").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of food products; beverages and tobacco products").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C13T15").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C13T15").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C13T15")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C13T15").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C13T15").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of textiles, wearing apparel, leather and related products")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C13T15").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of textiles, wearing apparel, leather and related products").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C16").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C16").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C16")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C16").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C16").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C16").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C16T18").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C16T18").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C16T18")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C16T18").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C16T18").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of wood, paper, and their products; printing and reproduction of recorded media")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C16T18").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of wood, paper, and their products; printing and reproduction of recorded media").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C17").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C17").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C17")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C17").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C17").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of paper and paper products")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C17").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of paper and paper products").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C18").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C18").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C18")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C18").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C18").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Printing and reproduction of recorded media")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C18").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Printing and reproduction of recorded media").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C19").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C19").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C19")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C19").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C19").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of coke and refined petroleum products")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C19").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of coke and refined petroleum products").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C20").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C20").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C20")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C20").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C20").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of chemicals and chemical products")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C20").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of chemicals and chemical products").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C21").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C21").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C21")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C21").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C21").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of basic pharmaceutical products and pharmaceutical preparations")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C21").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of basic pharmaceutical products and pharmaceutical preparations").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C22").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C22").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C22")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C22").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C22").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of rubber and plastic products")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C22").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of rubber and plastic products").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C22_23").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C22_23").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C22_23")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C22_23").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C22_23").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of rubber and plastic products and other non-metallic mineral products")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C22_23").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of rubber and plastic products and other non-metallic mineral products").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C23").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C23").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C23")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C23").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C23").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of other non-metallic mineral products")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C23").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of other non-metallic mineral products").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C24").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C24").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C24")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C24").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C24").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of basic metals")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C24").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of basic metals").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C24_25").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C24_25").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C24_25")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C24_25").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C24_25").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of basic metals and fabricated metal products, except machinery and equipment")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C24_25").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of basic metals and fabricated metal products, except machinery and equipment").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C25").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C25").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C25")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C25").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C25").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of fabricated metal products, except machinery and equipment")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C25").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of fabricated metal products, except machinery and equipment").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C26").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C26").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C26")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C26").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C26").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of computer, electronic and optical products")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C26").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of computer, electronic and optical products").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C27").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C27").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C27")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C27").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C27").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of electrical equipment")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C27").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of electrical equipment").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C28").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C28").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C28")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C28").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C28").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of machinery and equipment n.e.c.")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C28").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of machinery and equipment n.e.c.").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C29").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C29").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C29")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C29").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C29").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of motor vehicles, trailers and semi-trailers")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C29").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of motor vehicles, trailers and semi-trailers").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C29_30").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C29_30").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C29_30")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C29_30").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C29_30").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of motor vehicles, trailers, semi-trailers and of other transport equipment")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C29_30").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of motor vehicles, trailers, semi-trailers and of other transport equipment").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C30").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C30").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C30")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C30").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C30").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of other transport equipment")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C30").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of other transport equipment").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C31T33").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C31T33").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C31T33")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C31T33").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C31T33").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of furniture; jewellery, musical instruments, toys, etc.; repair and installation of machinery and equipment")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C31T33").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of furniture; jewellery, musical instruments, toys, etc.; repair and installation of machinery and equipment").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C31_32").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C31_32").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C31_32")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C31_32").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C31_32").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Manufacture of furniture; other manufacturing")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C31_32").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manufacture of furniture; other manufacturing").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C33").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "C33").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "C33")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C33").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "C33").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Repair and installation of machinery and equipment")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "C33").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Repair and installation of machinery and equipment").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "D").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "D").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "D")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "D").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "D").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Electricity, gas, steam and air conditioning supply")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "D").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Electricity, gas, steam and air conditioning supply").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "E").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "E").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "E")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "E").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "E").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Water supply; sewerage, waste management and remediation activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "E").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Water supply; sewerage, waste management and remediation activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "E36").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "E36").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "E36")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "E36").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "E36").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Water collection, treatment and supply")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "E36").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Water collection, treatment and supply").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "E37T39").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "E37T39").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "E37T39")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "E37T39").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "E37T39").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Sewerage, waste management, remediation activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "E37T39").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Sewerage, waste management, remediation activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "F").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "F").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "F")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "F").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "F").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Construction")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "F").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Construction").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "G").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "G").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "G")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "G").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "G").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Wholesale and retail trade; repair of motor vehicles and motorcycles")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "G").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Wholesale and retail trade; repair of motor vehicles and motorcycles").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "G45").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "G45").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "G45")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "G45").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "G45").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Wholesale and retail trade and repair of motor vehicles and motorcycles")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "G45").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Wholesale and retail trade and repair of motor vehicles and motorcycles").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "G46").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "G46").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "G46")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "G46").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "G46").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Wholesale trade, except of motor vehicles and motorcycles")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "G46").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Wholesale trade, except of motor vehicles and motorcycles").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "G47").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "G47").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "G47")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "G47").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "G47").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Retail trade, except of motor vehicles and motorcycles")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "G47").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Retail trade, except of motor vehicles and motorcycles").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "H").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "H").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "H")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "H").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "H").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Transportation and storage")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "H").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Transportation and storage").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "H49").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "H49").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "H49")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "H49").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "H49").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Land transport and transport via pipelines")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "H49").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Land transport and transport via pipelines").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "H50").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "H50").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "H50")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "H50").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "H50").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Water transport")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "H50").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Water transport").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "H51").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "H51").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "H51")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "H51").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "H51").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Air transport")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "H51").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Air transport").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "H52").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "H52").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "H52")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "H52").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "H52").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Warehousing and support activities for transportation")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "H52").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Warehousing and support activities for transportation").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "H53").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "H53").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "H53")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "H53").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "H53").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Postal and courier activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "H53").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Postal and courier activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "I").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "I").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "I")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "I").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "I").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Accommodation and food service activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "I").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Accommodation and food service activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "J").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "J").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "J")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "J").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "J").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Information and communication")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "J").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Information and communication").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "J58").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "J58").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "J58")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "J58").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "J58").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Publishing activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "J58").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Publishing activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "J58T60").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "J58T60").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "J58T60")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "J58T60").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "J58T60").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Publishing, motion picture, video, television programme production; sound recording, programming and broadcasting activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "J58T60").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Publishing, motion picture, video, television programme production; sound recording, programming and broadcasting activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "J59_60").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "J59_60").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "J59_60")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "J59_60").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "J59_60").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Motion picture, video, television programme production; programming and broadcasting activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "J59_60").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Motion picture, video, television programme production; programming and broadcasting activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "J61").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "J61").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "J61")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "J61").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "J61").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Telecommunications")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "J61").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Telecommunications").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "J62_63").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "J62_63").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "J62_63")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "J62_63").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "J62_63").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Computer programming, consultancy, and information service activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "J62_63").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Computer programming, consultancy, and information service activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "K").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "K").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "K")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "K").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "K").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Financial and insurance activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "K").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Financial and insurance activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "K64").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "K64").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "K64")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "K64").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "K64").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Financial service activities, except insurance and pension funding")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "K64").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Financial service activities, except insurance and pension funding").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "K65").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "K65").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "K65")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "K65").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "K65").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Insurance, reinsurance and pension funding, except compulsory social security")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "K65").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Insurance, reinsurance and pension funding, except compulsory social security").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "K66").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "K66").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "K66")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "K66").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "K66").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Activities auxiliary to financial services and insurance activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "K66").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Activities auxiliary to financial services and insurance activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "M").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "M")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Professional, scientific and technical activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "M").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Professional, scientific and technical activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M69T71").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "M69T71").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "M69T71")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M69T71").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M69T71").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Legal and accounting activities; activities of head offices; management consultancy activities; architectural and engineering activities; technical testing and analysis")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "M69T71").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Legal and accounting activities; activities of head offices; management consultancy activities; architectural and engineering activities; technical testing and analysis").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M69_70").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "M69_70").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "M69_70")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M69_70").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M69_70").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Legal and accounting activities; activities of head offices; management consultancy activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "M69_70").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Legal and accounting activities; activities of head offices; management consultancy activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M71").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "M71").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "M71")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M71").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M71").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Architectural and engineering activities; technical testing and analysis")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "M71").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Architectural and engineering activities; technical testing and analysis").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M72").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "M72").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "M72")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M72").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M72").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Scientific research and development")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "M72").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Scientific research and development").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M73").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "M73").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "M73")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M73").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M73").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Advertising and market research")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "M73").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Advertising and market research").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M73T75").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "M73T75").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "M73T75")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M73T75").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M73T75").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Advertising and market research; other professional, scientific and technical activities; veterinary activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "M73T75").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Advertising and market research; other professional, scientific and technical activities; veterinary activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M74_75").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "M74_75").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "M74_75")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M74_75").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M74_75").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Other professional, scientific and technical activities; veterinary activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "M74_75").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Other professional, scientific and technical activities; veterinary activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M_N").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "M_N").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "M_N")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M_N").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "M_N").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Professional, scientific and technical activities; administrative and support service activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "M_N").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Professional, scientific and technical activities; administrative and support service activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "N").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "N").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "N")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "N").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "N").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Administrative and support service activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "N").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Administrative and support service activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "N77").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "N77").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "N77")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "N77").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "N77").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Rental and leasing activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "N77").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Rental and leasing activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "N78").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "N78").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "N78")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "N78").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "N78").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Employment activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "N78").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Employment activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "N79").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "N79").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "N79")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "N79").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "N79").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Travel agency, tour operator reservation service and related activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "N79").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Travel agency, tour operator reservation service and related activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "N80T82").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "N80T82").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "N80T82")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "N80T82").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "N80T82").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Security and investigation, service and landscape, office administrative and support activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "N80T82").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Security and investigation, service and landscape, office administrative and support activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "O").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "O").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "O")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "O").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "O").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Public administration and defence; compulsory social security")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "O").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Public administration and defence; compulsory social security").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "OTQ").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "OTQ").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "OTQ")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "OTQ").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "OTQ").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Public administration, defence, education, human health and social work activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "OTQ").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Public administration, defence, education, human health and social work activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "P").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "P").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "P")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "P").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "P").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Education")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "P").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Education").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "Q").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "Q").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "Q")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "Q").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "Q").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Human health and social work activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "Q").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Human health and social work activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "Q86").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "Q86").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "Q86")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "Q86").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "Q86").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Human health activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "Q86").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Human health activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "Q87_88").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "Q87_88").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "Q87_88")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "Q87_88").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "Q87_88").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Residential care activities and social work activities without accommodation")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "Q87_88").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Residential care activities and social work activities without accommodation").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "R").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "R").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "R")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "R").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "R").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Arts, entertainment and recreation")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "R").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Arts, entertainment and recreation").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "R90T92").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "R90T92").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "R90T92")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "R90T92").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "R90T92").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Creative, arts and entertainment activities; libraries, archives, museums and other cultural activities; gambling and betting activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "R90T92").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Creative, arts and entertainment activities; libraries, archives, museums and other cultural activities; gambling and betting activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "R93").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "R93").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "R93")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "R93").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "R93").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Sports activities and amusement and recreation activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "R93").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Sports activities and amusement and recreation activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "RTU").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "RTU").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "RTU")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "RTU").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "RTU").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Arts, entertainment and recreation; other service activities; activities of household and extra-territorial organizations and bodies")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "RTU").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Arts, entertainment and recreation; other service activities; activities of household and extra-territorial organizations and bodies").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "S").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "S").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "S")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "S").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "S").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Other service activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "S").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Other service activities").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "S94").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "S94").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "S94")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "S94").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "S94").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Activities of membership organisations")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "S94").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Activities of membership organisations").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "S95").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "S95").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "S95")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "S95").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "S95").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Repair of computers and personal and household goods")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "S95").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Repair of computers and personal and household goods").next()
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "S96").
+g.V().has('_code','listID', 'business-investment-activity').has('value', "S96").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'business-investment-activity').property(single, 'value', "S96")
   ).next()
-g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "S96").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'business-investment-activity').has('value', "S96").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'business-investment-activity').has('edition', 'one-off')
-    ).property(single, 'label', "Other personal service activities")).next()
+g.V().has('_code', 'listID', 'business-investment-activity').has('value', "S96").as('code').
+  V().has('_code_list', 'listID', 'business-investment-activity').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Other personal service activities").next()
 

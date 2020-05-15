@@ -1,6 +1,6 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'decades').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "decades").
     property(single, 'label', "decade").
@@ -8,334 +8,304 @@ g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off').
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1960s").
+g.V().has('_code','listID', 'decades').has('value', "1960s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1960s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1960s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1960s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1960s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1960s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1960s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1970s").
+g.V().has('_code','listID', 'decades').has('value', "1970s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1970s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1970s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1970s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1970s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1970s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1970s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1980s").
+g.V().has('_code','listID', 'decades').has('value', "1980s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1980s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1980s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1980s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1980s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1980s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1980s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1990s").
+g.V().has('_code','listID', 'decades').has('value', "1990s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1990s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1990s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1990s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1990s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1990s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1990s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1950s").
+g.V().has('_code','listID', 'decades').has('value', "1950s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1950s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1950s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1950s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1950s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1950s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1950s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1940s").
+g.V().has('_code','listID', 'decades').has('value', "1940s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1940s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1940s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1940s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1940s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1940s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1940s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1930s").
+g.V().has('_code','listID', 'decades').has('value', "1930s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1930s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1930s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1930s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1930s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1930s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1930s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1920s").
+g.V().has('_code','listID', 'decades').has('value', "1920s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1920s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1920s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1920s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1920s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1920s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1920s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1910s").
+g.V().has('_code','listID', 'decades').has('value', "1910s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1910s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1910s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1910s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1910s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1910s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1910s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1900s").
+g.V().has('_code','listID', 'decades').has('value', "1900s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1900s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1900s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1900s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1900s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1900s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1900s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2060s").
+g.V().has('_code','listID', 'decades').has('value', "2060s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "2060s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2060s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "2060s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "2060s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "2060s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2060s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2070s").
+g.V().has('_code','listID', 'decades').has('value', "2070s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "2070s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2070s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "2070s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "2070s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "2070s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2070s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2080s").
+g.V().has('_code','listID', 'decades').has('value', "2080s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "2080s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2080s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "2080s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "2080s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "2080s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2080s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2090s").
+g.V().has('_code','listID', 'decades').has('value', "2090s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "2090s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2090s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "2090s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "2090s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "2090s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2090s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2050s").
+g.V().has('_code','listID', 'decades').has('value', "2050s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "2050s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2050s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "2050s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "2050s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "2050s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2050s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2040s").
+g.V().has('_code','listID', 'decades').has('value', "2040s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "2040s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2040s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "2040s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "2040s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "2040s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2040s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2030s").
+g.V().has('_code','listID', 'decades').has('value', "2030s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "2030s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2030s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "2030s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "2030s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "2030s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2030s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2020s").
+g.V().has('_code','listID', 'decades').has('value', "2020s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "2020s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2020s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "2020s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "2020s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "2020s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2020s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2010s").
+g.V().has('_code','listID', 'decades').has('value', "2010s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "2010s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2010s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "2010s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "2010s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "2010s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2010s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2000s").
+g.V().has('_code','listID', 'decades').has('value', "2000s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "2000s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "2000s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "2000s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "2000s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "2000s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2000s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1860s").
+g.V().has('_code','listID', 'decades').has('value', "1860s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1860s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1860s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1860s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1860s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1860s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1860s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1870s").
+g.V().has('_code','listID', 'decades').has('value', "1870s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1870s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1870s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1870s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1870s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1870s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1870s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1880s").
+g.V().has('_code','listID', 'decades').has('value', "1880s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1880s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1880s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1880s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1880s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1880s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1880s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1890s").
+g.V().has('_code','listID', 'decades').has('value', "1890s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1890s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1890s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1890s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1890s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1890s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1890s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1850s").
+g.V().has('_code','listID', 'decades').has('value', "1850s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1850s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1850s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1850s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1850s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1850s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1850s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1840s").
+g.V().has('_code','listID', 'decades').has('value', "1840s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1840s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1840s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1840s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1840s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1840s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1840s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1830s").
+g.V().has('_code','listID', 'decades').has('value', "1830s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1830s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1830s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1830s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1830s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1830s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1830s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1820s").
+g.V().has('_code','listID', 'decades').has('value', "1820s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1820s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1820s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1820s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1820s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1820s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1820s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1810s").
+g.V().has('_code','listID', 'decades').has('value', "1810s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1810s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1810s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1810s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1810s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1810s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1810s").next()
 
 
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1800s").
+g.V().has('_code','listID', 'decades').has('value', "1800s").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'decades').property(single, 'value', "1800s")
   ).next()
-g.V().hasLabel('_code').has('listID', 'decades').has('value', "1800s").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'decades').has('value', "1800s").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'decades').has('edition', 'one-off')
-    ).property(single, 'label', "1800s")).next()
+g.V().has('_code', 'listID', 'decades').has('value', "1800s").as('code').
+  V().has('_code_list', 'listID', 'decades').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1800s").next()
 
 
 

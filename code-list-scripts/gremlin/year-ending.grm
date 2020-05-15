@@ -1,4 +1,4 @@
-g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'year-ending').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "year-ending").
     property(single, 'label', "time").
@@ -9,398 +9,362 @@ g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-of
 
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2015-june-2016").
+g.V().has('_code','listID', 'year-ending').has('value', "july-2015-june-2016").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "july-2015-june-2016")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2015-june-2016").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2015-june-2016").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "July 2015 - June 2016")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "july-2015-june-2016").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "July 2015 - June 2016").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2014-march-2015").
+g.V().has('_code','listID', 'year-ending').has('value', "april-2014-march-2015").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "april-2014-march-2015")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2014-march-2015").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2014-march-2015").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "April 2014 - March 2015")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "april-2014-march-2015").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "April 2014 - March 2015").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2011-june-2012").
+g.V().has('_code','listID', 'year-ending').has('value', "july-2011-june-2012").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "july-2011-june-2012")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2011-june-2012").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2011-june-2012").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "July 2011 - June 2012")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "july-2011-june-2012").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "July 2011 - June 2012").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2012-march-2013").
+g.V().has('_code','listID', 'year-ending').has('value', "april-2012-march-2013").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "april-2012-march-2013")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2012-march-2013").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2012-march-2013").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "April 2012 - March 2013")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "april-2012-march-2013").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "April 2012 - March 2013").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2011-march-2012").
+g.V().has('_code','listID', 'year-ending').has('value', "april-2011-march-2012").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "april-2011-march-2012")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2011-march-2012").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2011-march-2012").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "April 2011 - March 2012")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "april-2011-march-2012").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "April 2011 - March 2012").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2015-september-2016").
+g.V().has('_code','listID', 'year-ending').has('value', "october-2015-september-2016").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "october-2015-september-2016")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2015-september-2016").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2015-september-2016").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "October 2015 - September 2016")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "october-2015-september-2016").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "October 2015 - September 2016").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2016-september-2017").
+g.V().has('_code','listID', 'year-ending').has('value', "october-2016-september-2017").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "october-2016-september-2017")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2016-september-2017").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2016-september-2017").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "October 2016 - September 2017")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "october-2016-september-2017").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "October 2016 - September 2017").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2012-december-2012").
+g.V().has('_code','listID', 'year-ending').has('value', "january-2012-december-2012").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "january-2012-december-2012")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2012-december-2012").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2012-december-2012").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "January 2012 - December 2012")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "january-2012-december-2012").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "January 2012 - December 2012").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2014-june-2015").
+g.V().has('_code','listID', 'year-ending').has('value', "july-2014-june-2015").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "july-2014-june-2015")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2014-june-2015").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2014-june-2015").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "July 2014 - June 2015")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "july-2014-june-2015").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "July 2014 - June 2015").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2013-june-2014").
+g.V().has('_code','listID', 'year-ending').has('value', "july-2013-june-2014").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "july-2013-june-2014")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2013-june-2014").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2013-june-2014").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "July 2013 - June 2014")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "july-2013-june-2014").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "July 2013 - June 2014").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2013-september-2014").
+g.V().has('_code','listID', 'year-ending').has('value', "october-2013-september-2014").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "october-2013-september-2014")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2013-september-2014").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2013-september-2014").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "October 2013 - September 2014")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "october-2013-september-2014").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "October 2013 - September 2014").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2017-december-2017").
+g.V().has('_code','listID', 'year-ending').has('value', "january-2017-december-2017").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "january-2017-december-2017")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2017-december-2017").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2017-december-2017").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "January 2017 - December 2017")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "january-2017-december-2017").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "January 2017 - December 2017").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2016-march-2017").
+g.V().has('_code','listID', 'year-ending').has('value', "april-2016-march-2017").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "april-2016-march-2017")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2016-march-2017").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2016-march-2017").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "April 2016 - March 2017")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "april-2016-march-2017").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "April 2016 - March 2017").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2012-june-2013").
+g.V().has('_code','listID', 'year-ending').has('value', "july-2012-june-2013").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "july-2012-june-2013")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2012-june-2013").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2012-june-2013").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "July 2012 - June 2013")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "july-2012-june-2013").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "July 2012 - June 2013").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2015-march-2016").
+g.V().has('_code','listID', 'year-ending').has('value', "april-2015-march-2016").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "april-2015-march-2016")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2015-march-2016").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2015-march-2016").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "April 2015 - March 2016")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "april-2015-march-2016").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "April 2015 - March 2016").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2016-december-2016").
+g.V().has('_code','listID', 'year-ending').has('value', "january-2016-december-2016").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "january-2016-december-2016")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2016-december-2016").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2016-december-2016").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "January 2016 - December 2016")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "january-2016-december-2016").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "January 2016 - December 2016").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2014-december-2014").
+g.V().has('_code','listID', 'year-ending').has('value', "january-2014-december-2014").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "january-2014-december-2014")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2014-december-2014").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2014-december-2014").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "January 2014 - December 2014")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "january-2014-december-2014").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "January 2014 - December 2014").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2012-september-2013").
+g.V().has('_code','listID', 'year-ending').has('value', "october-2012-september-2013").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "october-2012-september-2013")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2012-september-2013").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2012-september-2013").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "October 2012 - September 2013")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "october-2012-september-2013").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "October 2012 - September 2013").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2011-september-2012").
+g.V().has('_code','listID', 'year-ending').has('value', "october-2011-september-2012").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "october-2011-september-2012")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2011-september-2012").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2011-september-2012").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "October 2011 - September 2012")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "october-2011-september-2012").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "October 2011 - September 2012").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2013-december-2013").
+g.V().has('_code','listID', 'year-ending').has('value', "january-2013-december-2013").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "january-2013-december-2013")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2013-december-2013").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2013-december-2013").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "January 2013 - December 2013")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "january-2013-december-2013").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "January 2013 - December 2013").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2013-march-2014").
+g.V().has('_code','listID', 'year-ending').has('value', "april-2013-march-2014").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "april-2013-march-2014")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2013-march-2014").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2013-march-2014").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "April 2013 - March 2014")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "april-2013-march-2014").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "April 2013 - March 2014").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2016-june-2017").
+g.V().has('_code','listID', 'year-ending').has('value', "july-2016-june-2017").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "july-2016-june-2017")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2016-june-2017").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2016-june-2017").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "July 2016 - June 2017")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "july-2016-june-2017").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "July 2016 - June 2017").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2015-december-2015").
+g.V().has('_code','listID', 'year-ending').has('value', "january-2015-december-2015").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "january-2015-december-2015")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2015-december-2015").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2015-december-2015").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "January 2015 - December 2015")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "january-2015-december-2015").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "January 2015 - December 2015").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2014-september-2015").
+g.V().has('_code','listID', 'year-ending').has('value', "october-2014-september-2015").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "october-2014-september-2015")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2014-september-2015").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2014-september-2015").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "October 2014 - September 2015")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "october-2014-september-2015").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "October 2014 - September 2015").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2017-march-2018").
+g.V().has('_code','listID', 'year-ending').has('value', "april-2017-march-2018").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "april-2017-march-2018")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2017-march-2018").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2017-march-2018").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "April 2017 - March 2018")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "april-2017-march-2018").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "April 2017 - March 2018").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2017-june-2018").
+g.V().has('_code','listID', 'year-ending').has('value', "july-2017-june-2018").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "july-2017-june-2018")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2017-june-2018").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2017-june-2018").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "July 2017 - June 2018")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "july-2017-june-2018").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "July 2017 - June 2018").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2018-december-2018").
+g.V().has('_code','listID', 'year-ending').has('value', "january-2018-december-2018").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "january-2018-december-2018")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2018-december-2018").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2018-december-2018").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "January 2018 - December 2018")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "january-2018-december-2018").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "January 2018 - December 2018").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2017-september-2018").
+g.V().has('_code','listID', 'year-ending').has('value', "october-2017-september-2018").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "october-2017-september-2018")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2017-september-2018").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2017-september-2018").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "October 2017 - September 2018")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "october-2017-september-2018").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "October 2017 - September 2018").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2018-march-2019").
+g.V().has('_code','listID', 'year-ending').has('value', "april-2018-march-2019").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "april-2018-march-2019")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2018-march-2019").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2018-march-2019").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "April 2018 - March 2019")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "april-2018-march-2019").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "April 2018 - March 2019").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2018-june-2019").
+g.V().has('_code','listID', 'year-ending').has('value', "july-2018-june-2019").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "july-2018-june-2019")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2018-june-2019").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2018-june-2019").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "July 2018 - June 2019")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "july-2018-june-2019").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "July 2018 - June 2019").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2019-december-2019").
+g.V().has('_code','listID', 'year-ending').has('value', "january-2019-december-2019").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "january-2019-december-2019")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2019-december-2019").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2019-december-2019").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "January 2019 - December 2019")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "january-2019-december-2019").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "January 2019 - December 2019").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2018-september-2019").
+g.V().has('_code','listID', 'year-ending').has('value', "october-2018-september-2019").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "october-2018-september-2019")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2018-september-2019").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2018-september-2019").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "October 2018 - September 2019")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "october-2018-september-2019").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "October 2018 - September 2019").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2019-march-2020").
+g.V().has('_code','listID', 'year-ending').has('value', "april-2019-march-2020").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "april-2019-march-2020")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2019-march-2020").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "april-2019-march-2020").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "April 2019 - March 2020")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "april-2019-march-2020").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "April 2019 - March 2020").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2019-june-2020").
+g.V().has('_code','listID', 'year-ending').has('value', "july-2019-june-2020").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "july-2019-june-2020")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2019-june-2020").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "july-2019-june-2020").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "July 2019 - June 2020")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "july-2019-june-2020").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "July 2019 - June 2020").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2020-december-2020").
+g.V().has('_code','listID', 'year-ending').has('value', "january-2020-december-2020").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "january-2020-december-2020")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2020-december-2020").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "january-2020-december-2020").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "January 2020 - December 2020")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "january-2020-december-2020").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "January 2020 - December 2020").next()
 
 
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2019-september-2020").
+g.V().has('_code','listID', 'year-ending').has('value', "october-2019-september-2020").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'year-ending').property(single, 'value', "october-2019-september-2020")
   ).next()
-g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2019-september-2020").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'year-ending').has('value', "october-2019-september-2020").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'year-ending').has('edition', 'one-off')
-    ).property(single, 'label', "October 2019 - September 2020")).next()
+g.V().has('_code', 'listID', 'year-ending').has('value', "october-2019-september-2020").as('code').
+  V().has('_code_list', 'listID', 'year-ending').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "October 2019 - September 2020").next()
 

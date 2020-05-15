@@ -1,43 +1,40 @@
-g.V().hasLabel('_code_list').has('listID', 'opss-public-private-sector').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'opss-public-private-sector').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "opss-public-private-sector").
-    property(single, 'label', "publicprivatesector").
-    property(single, 'edition', "one-off")
+    property(single, 'edition', "one-off").
+    property(single, 'label', "publicprivatesector")
   ).next()
 
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'opss-public-private-sector').has('value', "private").
+g.V().has('_code','listID', 'opss-public-private-sector').has('value', "private").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'opss-public-private-sector').property(single, 'value', "private")
   ).next()
-g.V().hasLabel('_code').has('listID', 'opss-public-private-sector').has('value', "private").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'opss-public-private-sector').has('value', "private").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'opss-public-private-sector').has('edition', 'one-off')
-    ).property(single, 'label', "Private")).next()
+g.V().has('_code', 'listID', 'opss-public-private-sector').has('value', "private").as('code').
+  V().has('_code_list', 'listID', 'opss-public-private-sector').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Private").next()
 
 
-g.V().hasLabel('_code').has('listID', 'opss-public-private-sector').has('value', "public").
+g.V().has('_code','listID', 'opss-public-private-sector').has('value', "public").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'opss-public-private-sector').property(single, 'value', "public")
   ).next()
-g.V().hasLabel('_code').has('listID', 'opss-public-private-sector').has('value', "public").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'opss-public-private-sector').has('value', "public").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'opss-public-private-sector').has('edition', 'one-off')
-    ).property(single, 'label', "Public")).next()
+g.V().has('_code', 'listID', 'opss-public-private-sector').has('value', "public").as('code').
+  V().has('_code_list', 'listID', 'opss-public-private-sector').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Public").next()
 
 
-g.V().hasLabel('_code').has('listID', 'opss-public-private-sector').has('value', "all-sectors").
+g.V().has('_code','listID', 'opss-public-private-sector').has('value', "all-sectors").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'opss-public-private-sector').property(single, 'value', "all-sectors")
   ).next()
-g.V().hasLabel('_code').has('listID', 'opss-public-private-sector').has('value', "all-sectors").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'opss-public-private-sector').has('value', "all-sectors").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'opss-public-private-sector').has('edition', 'one-off')
-    ).property(single, 'label', "All sectors")).next()
+g.V().has('_code', 'listID', 'opss-public-private-sector').has('value', "all-sectors").as('code').
+  V().has('_code_list', 'listID', 'opss-public-private-sector').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "All sectors").next()
 

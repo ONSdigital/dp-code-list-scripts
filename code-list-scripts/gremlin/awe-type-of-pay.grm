@@ -1,64 +1,59 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'awe-type-of-pay').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'awe-type-of-pay').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "awe-type-of-pay").
-    property(single, 'label', "typeofpay").
-    property(single, 'edition', "one-off")
+    property(single, 'edition', "one-off").
+    property(single, 'label', "typeofpay")
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'awe-type-of-pay').has('value', "total-pay").
+g.V().has('_code','listID', 'awe-type-of-pay').has('value', "total-pay").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'awe-type-of-pay').property(single, 'value', "total-pay")
   ).next()
-g.V().hasLabel('_code').has('listID', 'awe-type-of-pay').has('value', "total-pay").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'awe-type-of-pay').has('value', "total-pay").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'awe-type-of-pay').has('edition', 'one-off')
-    ).property(single, 'label', "Total Pay")).next()
+g.V().has('_code', 'listID', 'awe-type-of-pay').has('value', "total-pay").as('code').
+  V().has('_code_list', 'listID', 'awe-type-of-pay').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Total Pay").next()
 
 
-g.V().hasLabel('_code').has('listID', 'awe-type-of-pay').has('value', "bonus-pay").
+g.V().has('_code','listID', 'awe-type-of-pay').has('value', "bonus-pay").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'awe-type-of-pay').property(single, 'value', "bonus-pay")
   ).next()
-g.V().hasLabel('_code').has('listID', 'awe-type-of-pay').has('value', "bonus-pay").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'awe-type-of-pay').has('value', "bonus-pay").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'awe-type-of-pay').has('edition', 'one-off')
-    ).property(single, 'label', "Bonus Pay")).next()
+g.V().has('_code', 'listID', 'awe-type-of-pay').has('value', "bonus-pay").as('code').
+  V().has('_code_list', 'listID', 'awe-type-of-pay').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Bonus Pay").next()
 
 
-g.V().hasLabel('_code').has('listID', 'awe-type-of-pay').has('value', "regular-pay").
+g.V().has('_code','listID', 'awe-type-of-pay').has('value', "regular-pay").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'awe-type-of-pay').property(single, 'value', "regular-pay")
   ).next()
-g.V().hasLabel('_code').has('listID', 'awe-type-of-pay').has('value', "regular-pay").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'awe-type-of-pay').has('value', "regular-pay").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'awe-type-of-pay').has('edition', 'one-off')
-    ).property(single, 'label', "Regular Pay")).next()
+g.V().has('_code', 'listID', 'awe-type-of-pay').has('value', "regular-pay").as('code').
+  V().has('_code_list', 'listID', 'awe-type-of-pay').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Regular Pay").next()
 
 
-g.V().hasLabel('_code').has('listID', 'awe-type-of-pay').has('value', "total-pay-index").
+g.V().has('_code','listID', 'awe-type-of-pay').has('value', "total-pay-index").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'awe-type-of-pay').property(single, 'value', "total-pay-index")
   ).next()
-g.V().hasLabel('_code').has('listID', 'awe-type-of-pay').has('value', "total-pay-index").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'awe-type-of-pay').has('value', "total-pay-index").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'awe-type-of-pay').has('edition', 'one-off')
-    ).property(single, 'label', "Total Pay Index")).next()
+g.V().has('_code', 'listID', 'awe-type-of-pay').has('value', "total-pay-index").as('code').
+  V().has('_code_list', 'listID', 'awe-type-of-pay').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Total Pay Index").next()
 
 
-g.V().hasLabel('_code').has('listID', 'awe-type-of-pay').has('value', "regular-pay-index").
+g.V().has('_code','listID', 'awe-type-of-pay').has('value', "regular-pay-index").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'awe-type-of-pay').property(single, 'value', "regular-pay-index")
   ).next()
-g.V().hasLabel('_code').has('listID', 'awe-type-of-pay').has('value', "regular-pay-index").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'awe-type-of-pay').has('value', "regular-pay-index").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'awe-type-of-pay').has('edition', 'one-off')
-    ).property(single, 'label', "Regular Pay Index")).next()
+g.V().has('_code', 'listID', 'awe-type-of-pay').has('value', "regular-pay-index").as('code').
+  V().has('_code_list', 'listID', 'awe-type-of-pay').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Regular Pay Index").next()
 

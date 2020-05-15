@@ -1,130 +1,119 @@
 
 
-g.V().hasLabel('_code_list').has('listID', 'yyyy-yy').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'yyyy-yy').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "yyyy-yy").
-    property(single, 'label', "time").
-    property(single, 'edition', "one-off")
+    property(single, 'edition', "one-off").
+    property(single, 'label', "time")
   ).next()
 
 
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2008-09").
+g.V().has('_code','listID', 'yyyy-yy').has('value', "2008-09").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'yyyy-yy').property(single, 'value', "2008-09")
   ).next()
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2008-09").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2008-09").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'yyyy-yy').has('edition', 'one-off')
-    ).property(single, 'label', "2008-09")).next()
+g.V().has('_code', 'listID', 'yyyy-yy').has('value', "2008-09").as('code').
+  V().has('_code_list', 'listID', 'yyyy-yy').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2008-09").next()
 
 
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2009-10").
+g.V().has('_code','listID', 'yyyy-yy').has('value', "2009-10").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'yyyy-yy').property(single, 'value', "2009-10")
   ).next()
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2009-10").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2009-10").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'yyyy-yy').has('edition', 'one-off')
-    ).property(single, 'label', "2009-10")).next()
+g.V().has('_code', 'listID', 'yyyy-yy').has('value', "2009-10").as('code').
+  V().has('_code_list', 'listID', 'yyyy-yy').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2009-10").next()
 
 
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2010-11").
+g.V().has('_code','listID', 'yyyy-yy').has('value', "2010-11").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'yyyy-yy').property(single, 'value', "2010-11")
   ).next()
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2010-11").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2010-11").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'yyyy-yy').has('edition', 'one-off')
-    ).property(single, 'label', "2010-11")).next()
+g.V().has('_code', 'listID', 'yyyy-yy').has('value', "2010-11").as('code').
+  V().has('_code_list', 'listID', 'yyyy-yy').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2010-11").next()
 
 
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2011-12").
+g.V().has('_code','listID', 'yyyy-yy').has('value', "2011-12").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'yyyy-yy').property(single, 'value', "2011-12")
   ).next()
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2011-12").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2011-12").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'yyyy-yy').has('edition', 'one-off')
-    ).property(single, 'label', "2011-12")).next()
+g.V().has('_code', 'listID', 'yyyy-yy').has('value', "2011-12").as('code').
+  V().has('_code_list', 'listID', 'yyyy-yy').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2011-12").next()
 
 
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2012-13").
+g.V().has('_code','listID', 'yyyy-yy').has('value', "2012-13").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'yyyy-yy').property(single, 'value', "2012-13")
   ).next()
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2012-13").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2012-13").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'yyyy-yy').has('edition', 'one-off')
-    ).property(single, 'label', "2012-13")).next()
+g.V().has('_code', 'listID', 'yyyy-yy').has('value', "2012-13").as('code').
+  V().has('_code_list', 'listID', 'yyyy-yy').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2012-13").next()
 
 
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2013-14").
+g.V().has('_code','listID', 'yyyy-yy').has('value', "2013-14").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'yyyy-yy').property(single, 'value', "2013-14")
   ).next()
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2013-14").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2013-14").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'yyyy-yy').has('edition', 'one-off')
-    ).property(single, 'label', "2013-14")).next()
+g.V().has('_code', 'listID', 'yyyy-yy').has('value', "2013-14").as('code').
+  V().has('_code_list', 'listID', 'yyyy-yy').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2013-14").next()
 
 
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2014-15").
+g.V().has('_code','listID', 'yyyy-yy').has('value', "2014-15").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'yyyy-yy').property(single, 'value', "2014-15")
   ).next()
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2014-15").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2014-15").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'yyyy-yy').has('edition', 'one-off')
-    ).property(single, 'label', "2014-15")).next()
+g.V().has('_code', 'listID', 'yyyy-yy').has('value', "2014-15").as('code').
+  V().has('_code_list', 'listID', 'yyyy-yy').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2014-15").next()
 
 
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2015-16").
+g.V().has('_code','listID', 'yyyy-yy').has('value', "2015-16").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'yyyy-yy').property(single, 'value', "2015-16")
   ).next()
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2015-16").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2015-16").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'yyyy-yy').has('edition', 'one-off')
-    ).property(single, 'label', "2015-16")).next()
+g.V().has('_code', 'listID', 'yyyy-yy').has('value', "2015-16").as('code').
+  V().has('_code_list', 'listID', 'yyyy-yy').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2015-16").next()
 
 
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2016-17").
+g.V().has('_code','listID', 'yyyy-yy').has('value', "2016-17").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'yyyy-yy').property(single, 'value', "2016-17")
   ).next()
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2016-17").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2016-17").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'yyyy-yy').has('edition', 'one-off')
-    ).property(single, 'label', "2016-17")).next()
+g.V().has('_code', 'listID', 'yyyy-yy').has('value', "2016-17").as('code').
+  V().has('_code_list', 'listID', 'yyyy-yy').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2016-17").next()
 
 
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2017-18").
+g.V().has('_code','listID', 'yyyy-yy').has('value', "2017-18").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'yyyy-yy').property(single, 'value', "2017-18")
   ).next()
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2017-18").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2017-18").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'yyyy-yy').has('edition', 'one-off')
-    ).property(single, 'label', "2017-18")).next()
+g.V().has('_code', 'listID', 'yyyy-yy').has('value', "2017-18").as('code').
+  V().has('_code_list', 'listID', 'yyyy-yy').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2017-18").next()
 
 
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2018-19").
+g.V().has('_code','listID', 'yyyy-yy').has('value', "2018-19").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'yyyy-yy').property(single, 'value', "2018-19")
   ).next()
-g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2018-19").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'yyyy-yy').has('value', "2018-19").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'yyyy-yy').has('edition', 'one-off')
-    ).property(single, 'label', "2018-19")).next()
+g.V().has('_code', 'listID', 'yyyy-yy').has('value', "2018-19").as('code').
+  V().has('_code_list', 'listID', 'yyyy-yy').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2018-19").next()
 

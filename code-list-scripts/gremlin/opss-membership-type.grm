@@ -1,54 +1,50 @@
-g.V().hasLabel('_code_list').has('listID', 'opss-membership-type').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'opss-membership-type').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "opss-membership-type").
-    property(single, 'edition', "one-off").
-    property(single, 'label', "membershiptype")
+    property(single, 'label', "membershiptype").
+    property(single, 'edition', "one-off")
   ).next()
 
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'opss-membership-type').has('value', "pensions-in-payment").
+g.V().has('_code','listID', 'opss-membership-type').has('value', "pensions-in-payment").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'opss-membership-type').property(single, 'value', "pensions-in-payment")
   ).next()
-g.V().hasLabel('_code').has('listID', 'opss-membership-type').has('value', "pensions-in-payment").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'opss-membership-type').has('value', "pensions-in-payment").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'opss-membership-type').has('edition', 'one-off')
-    ).property(single, 'label', "Pensions in payment")).next()
+g.V().has('_code', 'listID', 'opss-membership-type').has('value', "pensions-in-payment").as('code').
+  V().has('_code_list', 'listID', 'opss-membership-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Pensions in payment").next()
 
 
-g.V().hasLabel('_code').has('listID', 'opss-membership-type').has('value', "all-members").
+g.V().has('_code','listID', 'opss-membership-type').has('value', "all-members").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'opss-membership-type').property(single, 'value', "all-members")
   ).next()
-g.V().hasLabel('_code').has('listID', 'opss-membership-type').has('value', "all-members").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'opss-membership-type').has('value', "all-members").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'opss-membership-type').has('edition', 'one-off')
-    ).property(single, 'label', "All members")).next()
+g.V().has('_code', 'listID', 'opss-membership-type').has('value', "all-members").as('code').
+  V().has('_code_list', 'listID', 'opss-membership-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "All members").next()
 
 
-g.V().hasLabel('_code').has('listID', 'opss-membership-type').has('value', "preserved-pension-entitlements").
+g.V().has('_code','listID', 'opss-membership-type').has('value', "preserved-pension-entitlements").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'opss-membership-type').property(single, 'value', "preserved-pension-entitlements")
   ).next()
-g.V().hasLabel('_code').has('listID', 'opss-membership-type').has('value', "preserved-pension-entitlements").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'opss-membership-type').has('value', "preserved-pension-entitlements").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'opss-membership-type').has('edition', 'one-off')
-    ).property(single, 'label', "Preserved pension entitlements")).next()
+g.V().has('_code', 'listID', 'opss-membership-type').has('value', "preserved-pension-entitlements").as('code').
+  V().has('_code_list', 'listID', 'opss-membership-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Preserved pension entitlements").next()
 
 
-g.V().hasLabel('_code').has('listID', 'opss-membership-type').has('value', "actives").
+g.V().has('_code','listID', 'opss-membership-type').has('value', "actives").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'opss-membership-type').property(single, 'value', "actives")
   ).next()
-g.V().hasLabel('_code').has('listID', 'opss-membership-type').has('value', "actives").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'opss-membership-type').has('value', "actives").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'opss-membership-type').has('edition', 'one-off')
-    ).property(single, 'label', "Actives")).next()
+g.V().has('_code', 'listID', 'opss-membership-type').has('value', "actives").as('code').
+  V().has('_code_list', 'listID', 'opss-membership-type').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Actives").next()
 

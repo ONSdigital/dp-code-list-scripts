@@ -1,43 +1,40 @@
-g.V().hasLabel('_code_list').has('listID', 'mid-year-pop-sex').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'mid-year-pop-sex').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "mid-year-pop-sex").
-    property(single, 'label', "sex").
-    property(single, 'edition', "one-off")
+    property(single, 'edition', "one-off").
+    property(single, 'label', "sex")
   ).next()
 
 
 
 
 
-g.V().hasLabel('_code').has('listID', 'mid-year-pop-sex').has('value', "2").
+g.V().has('_code','listID', 'mid-year-pop-sex').has('value', "2").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'mid-year-pop-sex').property(single, 'value', "2")
   ).next()
-g.V().hasLabel('_code').has('listID', 'mid-year-pop-sex').has('value', "2").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'mid-year-pop-sex').has('value', "2").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'mid-year-pop-sex').has('edition', 'one-off')
-    ).property(single, 'label', "Female")).next()
+g.V().has('_code', 'listID', 'mid-year-pop-sex').has('value', "2").as('code').
+  V().has('_code_list', 'listID', 'mid-year-pop-sex').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Female").next()
 
 
-g.V().hasLabel('_code').has('listID', 'mid-year-pop-sex').has('value', "1").
+g.V().has('_code','listID', 'mid-year-pop-sex').has('value', "1").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'mid-year-pop-sex').property(single, 'value', "1")
   ).next()
-g.V().hasLabel('_code').has('listID', 'mid-year-pop-sex').has('value', "1").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'mid-year-pop-sex').has('value', "1").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'mid-year-pop-sex').has('edition', 'one-off')
-    ).property(single, 'label', "Male")).next()
+g.V().has('_code', 'listID', 'mid-year-pop-sex').has('value', "1").as('code').
+  V().has('_code_list', 'listID', 'mid-year-pop-sex').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Male").next()
 
 
-g.V().hasLabel('_code').has('listID', 'mid-year-pop-sex').has('value', "0").
+g.V().has('_code','listID', 'mid-year-pop-sex').has('value', "0").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'mid-year-pop-sex').property(single, 'value', "0")
   ).next()
-g.V().hasLabel('_code').has('listID', 'mid-year-pop-sex').has('value', "0").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'mid-year-pop-sex').has('value', "0").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'mid-year-pop-sex').has('edition', 'one-off')
-    ).property(single, 'label', "All")).next()
+g.V().has('_code', 'listID', 'mid-year-pop-sex').has('value', "0").as('code').
+  V().has('_code_list', 'listID', 'mid-year-pop-sex').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "All").next()
 

@@ -1,4 +1,4 @@
-g.V().hasLabel('_code_list').has('listID', 'ashe-statistics').has('edition', 'one-off').
+g.V().has('_code_list', 'listID', 'ashe-statistics').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "ashe-statistics").
     property(single, 'edition', "one-off").
@@ -9,134 +9,122 @@ g.V().hasLabel('_code_list').has('listID', 'ashe-statistics').has('edition', 'on
 
 
 
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "80").
+g.V().has('_code','listID', 'ashe-statistics').has('value', "80").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ashe-statistics').property(single, 'value', "80")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "80").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "80").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ashe-statistics').has('edition', 'one-off')
-    ).property(single, 'label', "80")).next()
+g.V().has('_code', 'listID', 'ashe-statistics').has('value', "80").as('code').
+  V().has('_code_list', 'listID', 'ashe-statistics').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "80").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "60").
+g.V().has('_code','listID', 'ashe-statistics').has('value', "60").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ashe-statistics').property(single, 'value', "60")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "60").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "60").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ashe-statistics').has('edition', 'one-off')
-    ).property(single, 'label', "60")).next()
+g.V().has('_code', 'listID', 'ashe-statistics').has('value', "60").as('code').
+  V().has('_code_list', 'listID', 'ashe-statistics').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "60").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "median").
+g.V().has('_code','listID', 'ashe-statistics').has('value', "median").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ashe-statistics').property(single, 'value', "median")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "median").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "median").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ashe-statistics').has('edition', 'one-off')
-    ).property(single, 'label', "Median")).next()
+g.V().has('_code', 'listID', 'ashe-statistics').has('value', "median").as('code').
+  V().has('_code_list', 'listID', 'ashe-statistics').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Median").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "25").
+g.V().has('_code','listID', 'ashe-statistics').has('value', "25").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ashe-statistics').property(single, 'value', "25")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "25").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "25").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ashe-statistics').has('edition', 'one-off')
-    ).property(single, 'label', "25")).next()
+g.V().has('_code', 'listID', 'ashe-statistics').has('value', "25").as('code').
+  V().has('_code_list', 'listID', 'ashe-statistics').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "25").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "70").
+g.V().has('_code','listID', 'ashe-statistics').has('value', "70").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ashe-statistics').property(single, 'value', "70")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "70").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "70").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ashe-statistics').has('edition', 'one-off')
-    ).property(single, 'label', "70")).next()
+g.V().has('_code', 'listID', 'ashe-statistics').has('value', "70").as('code').
+  V().has('_code_list', 'listID', 'ashe-statistics').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "70").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "75").
+g.V().has('_code','listID', 'ashe-statistics').has('value', "75").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ashe-statistics').property(single, 'value', "75")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "75").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "75").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ashe-statistics').has('edition', 'one-off')
-    ).property(single, 'label', "75")).next()
+g.V().has('_code', 'listID', 'ashe-statistics').has('value', "75").as('code').
+  V().has('_code_list', 'listID', 'ashe-statistics').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "75").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "90").
+g.V().has('_code','listID', 'ashe-statistics').has('value', "90").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ashe-statistics').property(single, 'value', "90")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "90").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "90").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ashe-statistics').has('edition', 'one-off')
-    ).property(single, 'label', "90")).next()
+g.V().has('_code', 'listID', 'ashe-statistics').has('value', "90").as('code').
+  V().has('_code_list', 'listID', 'ashe-statistics').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "90").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "30").
+g.V().has('_code','listID', 'ashe-statistics').has('value', "30").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ashe-statistics').property(single, 'value', "30")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "30").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "30").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ashe-statistics').has('edition', 'one-off')
-    ).property(single, 'label', "30")).next()
+g.V().has('_code', 'listID', 'ashe-statistics').has('value', "30").as('code').
+  V().has('_code_list', 'listID', 'ashe-statistics').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "30").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "10").
+g.V().has('_code','listID', 'ashe-statistics').has('value', "10").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ashe-statistics').property(single, 'value', "10")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "10").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "10").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ashe-statistics').has('edition', 'one-off')
-    ).property(single, 'label', "10")).next()
+g.V().has('_code', 'listID', 'ashe-statistics').has('value', "10").as('code').
+  V().has('_code_list', 'listID', 'ashe-statistics').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "10").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "40").
+g.V().has('_code','listID', 'ashe-statistics').has('value', "40").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ashe-statistics').property(single, 'value', "40")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "40").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "40").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ashe-statistics').has('edition', 'one-off')
-    ).property(single, 'label', "40")).next()
+g.V().has('_code', 'listID', 'ashe-statistics').has('value', "40").as('code').
+  V().has('_code_list', 'listID', 'ashe-statistics').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "40").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "mean").
+g.V().has('_code','listID', 'ashe-statistics').has('value', "mean").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ashe-statistics').property(single, 'value', "mean")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "mean").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "mean").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ashe-statistics').has('edition', 'one-off')
-    ).property(single, 'label', "Mean")).next()
+g.V().has('_code', 'listID', 'ashe-statistics').has('value', "mean").as('code').
+  V().has('_code_list', 'listID', 'ashe-statistics').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Mean").next()
 
 
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "20").
+g.V().has('_code','listID', 'ashe-statistics').has('value', "20").
   fold().coalesce(unfold(), addV('_code').
     property(single, 'listID', 'ashe-statistics').property(single, 'value', "20")
   ).next()
-g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "20").outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'ashe-statistics').has('value', "20").
-    addE('usedBy').to(
-      g.V().hasLabel('_code_list').has('listID', 'ashe-statistics').has('edition', 'one-off')
-    ).property(single, 'label', "20")).next()
+g.V().has('_code', 'listID', 'ashe-statistics').has('value', "20").as('code').
+  V().has('_code_list', 'listID', 'ashe-statistics').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "20").next()
 
