@@ -13791,12 +13791,12 @@ g.V().hasLabel('_code').has('listID', 'sic-test').has('value', 'G--T').outE().fo
     ).property(single, 'label', 'G-T : Services sector')).next()
 
 
-g.V().hasLabel('_code').has('listID', 'sic-test').has('value', '01--09; 35--39').
+g.V().hasLabel('_code').has('listID', 'sic-test').has('value', '01--09--35--39').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sic-test').property(single, 'value', '01--09; 35--39')
+    property(single, 'listID', 'sic-test').property(single, 'value', '01--09--35--39')
   ).next()
-g.V().hasLabel('_code').has('listID', 'sic-test').has('value', '01--09; 35--39').outE().fold().coalesce(unfold(),
-  g.V().hasLabel('_code').has('listID', 'sic-test').has('value', '01--09; 35--39').
+g.V().hasLabel('_code').has('listID', 'sic-test').has('value', '01--09--35--39').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'sic-test').has('value', '01--09--35--39').
     addE('usedBy').to(
       g.V().hasLabel('_code_list').has('listID', 'sic-test').has('edition', 'one-off')
     ).property(single, 'label', '01-09; 35-39 : Agriculture, mining, electricity, gas, water and waste')).next()
