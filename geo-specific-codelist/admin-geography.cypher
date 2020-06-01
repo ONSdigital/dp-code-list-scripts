@@ -19095,6 +19095,8 @@ MERGE (node:`_code`:`_code_geography` { value:"E10000032" });
 MATCH (parent:`_code_list`:`_code_list_admin-geography`),(node:`_code`:`_code_geography` { value:"E10000032" }) MERGE (node)-[:usedBy { label:"West Sussex"}]->(parent);
 MERGE (node:`_code`:`_code_geography` { value:"E10000002" });
 MATCH (parent:`_code_list`:`_code_list_admin-geography`),(node:`_code`:`_code_geography` { value:"E10000002" }) MERGE (node)-[:usedBy { label:"Buckinghamshire"}]->(parent);
+MERGE (node:`_code`:`_code_geography` { value:"E06000060" });
+MATCH (parent:`_code_list`:`_code_list_admin-geography`),(node:`_code`:`_code_geography` { value:"E06000060" }) MERGE (node)-[:usedBy { label:"Buckinghamshire"}]->(parent);
 MERGE (node:`_code`:`_code_geography` { value:"E10000028" });
 MATCH (parent:`_code_list`:`_code_list_admin-geography`),(node:`_code`:`_code_geography` { value:"E10000028" }) MERGE (node)-[:usedBy { label:"Staffordshire"}]->(parent);
 MERGE (node:`_code`:`_code_geography` { value:"E10000029" });
