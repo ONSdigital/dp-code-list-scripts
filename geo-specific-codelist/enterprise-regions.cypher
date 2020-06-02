@@ -103,4 +103,6 @@ MERGE (node:`_code`:`_code_geography` { value:"W92000004" });
 MATCH (parent:`_code_list`:`_code_list_enterprise-regions`),(node:`_code`:`_code_geography` { value:"W92000004" }) MERGE (node)-[:usedBy { label:"Wales"}]->(parent);
 MERGE (node:`_code`:`_code_geography` { value:"S92000003" });
 MATCH (parent:`_code_list`:`_code_list_enterprise-regions`),(node:`_code`:`_code_geography` { value:"S92000003" }) MERGE (node)-[:usedBy { label:"Scotland"}]->(parent);
+MERGE (node:`_code`:`_code_geography` { value:"K03000001" });
+MATCH (parent:`_code_list`:`_code_list_enterprise-regions`),(node:`_code`:`_code_geography` { value:"K03000001" }) MERGE (node)-[:usedBy { label:"Great Britain"}]->(parent);
 
