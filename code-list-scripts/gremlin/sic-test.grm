@@ -12538,14 +12538,15 @@ g.V().has('_code', 'listID', 'sic-test').has('value', "G--T").as('code').
        addE('usedBy').from('code')).property('label', "G-T : Services sector").next()
 
 
-g.V().has('_code','listID', 'sic-test').has('value', "01--09; 35--39").
+g.V().hasLabel('_code').has('listID', 'sic-test').has('value', '01--09--35--39').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sic-test').property(single, 'value', "01--09; 35--39")
+    property(single, 'listID', 'sic-test').property(single, 'value', '01--09--35--39')
   ).next()
-g.V().has('_code', 'listID', 'sic-test').has('value', "01--09; 35--39").as('code').
-  V().has('_code_list', 'listID', 'sic-test').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "01-09; 35-39 : Agriculture, mining, electricity, gas, water and waste").next()
+g.V().hasLabel('_code').has('listID', 'sic-test').has('value', '01--09--35--39').outE().fold().coalesce(unfold(),
+  g.V().hasLabel('_code').has('listID', 'sic-test').has('value', '01--09--35--39').
+    addE('usedBy').to(
+      g.V().hasLabel('_code_list').has('listID', 'sic-test').has('edition', 'one-off')
+    ).property(single, 'label', '01-09; 35-39 : Agriculture, mining, electricity, gas, water and waste')).next()
 
 
 g.V().has('_code','listID', 'sic-test').has('value', "ABDE").

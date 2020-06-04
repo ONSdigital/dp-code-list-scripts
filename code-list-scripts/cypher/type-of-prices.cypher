@@ -75,5 +75,5 @@ MERGE (node:`_code`:`_code_type-of-prices` { value:"gross-domestic-product-chain
 MATCH (parent:`_code_list`:`_code_list_type-of-prices`),(node:`_code`:`_code_type-of-prices` { value:"gross-domestic-product-chained-volume-measures-per-head-annual-growth-rates" }) MERGE (node)-[:usedBy { label:"Gross domestic product chained volume measures per head annual growth rates"}]->(parent);
 MERGE (node:`_code`:`_code_type-of-prices` { value:"2017-prices" });
 MATCH (parent:`_code_list`:`_code_list_type-of-prices`),(node:`_code`:`_code_type-of-prices` { value:"2017-prices" }) MERGE (node)-[:usedBy { label:"2017 prices"}]->(parent);
-MERGE (node:`_code`:`_code_type-of-prices` { value:"KP" });
-MATCH (parent:`_code_list`:`_code_list_type-of-prices`),(node:`_code`:`_code_type-of-prices` { value:"KP" }) MERGE (node)-[:usedBy { label:"Real terms"}]->(parent);
+MERGE (node:`_code`:`_code_type-of-prices` { value:"kp" });
+MATCH (parent:`_code_list`:`_code_list_type-of-prices`),(node:`_code`:`_code_type-of-prices` { value:"kp" }) MERGE (node)-[:usedBy { label:"Real terms"}]->(parent);
