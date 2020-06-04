@@ -1,0 +1,11 @@
+CREATE CONSTRAINT ON (n:`_code_shipping-visit-type`) ASSERT n.code IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_shipping-visit-type`) ASSERT n.code IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_shipping-visit-type` { label:"visittype", edition:"one-off" });
+MERGE (node:`_code`:`_code_shipping-visit-type` { value:"all-visits" });
+MATCH (parent:`_code_list`:`_code_list_shipping-visit-type`),(node:`_code`:`_code_shipping-visit-type` { value:"all-visits" }) MERGE (node)-[:usedBy { label:"All visits"}]->(parent);
+MERGE (node:`_code`:`_code_shipping-visit-type` { value:"all-unique-ships" });
+MATCH (parent:`_code_list`:`_code_list_shipping-visit-type`),(node:`_code`:`_code_shipping-visit-type` { value:"all-unique-ships" }) MERGE (node)-[:usedBy { label:"All unique ships"}]->(parent);
+MERGE (node:`_code`:`_code_shipping-visit-type` { value:"ct-visits" });
+MATCH (parent:`_code_list`:`_code_list_shipping-visit-type`),(node:`_code`:`_code_shipping-visit-type` { value:"ct-visits" }) MERGE (node)-[:usedBy { label:"C&T visits"}]->(parent);
+MERGE (node:`_code`:`_code_shipping-visit-type` { value:"ct-unique-ships" });
+MATCH (parent:`_code_list`:`_code_list_shipping-visit-type`),(node:`_code`:`_code_shipping-visit-type` { value:"ct-unique-ships" }) MERGE (node)-[:usedBy { label:"C&T unique ships"}]->(parent);
