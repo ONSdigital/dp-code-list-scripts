@@ -33,3 +33,6 @@ MERGE (node:`_code`:`_code_shipping-port` { value:"portsmouth" });
 MATCH (parent:`_code_list`:`_code_list_shipping-port`),(node:`_code`:`_code_shipping-port` { value:"portsmouth" }) MERGE (node)-[:usedBy { label:"Portsmouth"}]->(parent);
 MERGE (node:`_code`:`_code_shipping-port` { value:"tyne" });
 MATCH (parent:`_code_list`:`_code_list_shipping-port`),(node:`_code`:`_code_shipping-port` { value:"tyne" }) MERGE (node)-[:usedBy { label:"Tyne"}]->(parent);
+MERGE (node:`_code`:`_code_shipping-port` { value:"hull" });
+MATCH (parent:`_code_list`:`_code_list_shipping-port`),(node:`_code`:`_code_shipping-port` { value:"hull" }) MERGE (node)-[:usedBy { label:"Hull"}]->(parent);
+
