@@ -1,0 +1,169 @@
+
+
+g.V().has('_code_list', 'listID', 'household-reference-person').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', "household-reference-person").
+    property(single, 'label', "householdreferenceperson").
+    property(single, 'edition', "one-off")
+  ).next()
+
+
+g.V().has('_code','listID', 'household-reference-person').has('value', "all-categories-ns-sec-of-household-reference-person").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'household-reference-person').property(single, 'value', "all-categories-ns-sec-of-household-reference-person")
+  ).next()
+g.V().has('_code', 'listID', 'household-reference-person').has('value', "all-categories-ns-sec-of-household-reference-person").as('code').
+  V().has('_code_list', 'listID', 'household-reference-person').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "All categories: NS-SeC of Household Reference Person").next()
+
+
+g.V().has('_code','listID', 'household-reference-person').has('value', "higher-managerial,-administrative-and-professional-occupations").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'household-reference-person').property(single, 'value', "higher-managerial,-administrative-and-professional-occupations")
+  ).next()
+g.V().has('_code', 'listID', 'household-reference-person').has('value', "higher-managerial,-administrative-and-professional-occupations").as('code').
+  V().has('_code_list', 'listID', 'household-reference-person').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1. Higher managerial, administrative and professional occupations").next()
+
+
+g.V().has('_code','listID', 'household-reference-person').has('value', "large-employers-and-higher-managerial-and-administrative-occupations").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'household-reference-person').property(single, 'value', "large-employers-and-higher-managerial-and-administrative-occupations")
+  ).next()
+g.V().has('_code', 'listID', 'household-reference-person').has('value', "large-employers-and-higher-managerial-and-administrative-occupations").as('code').
+  V().has('_code_list', 'listID', 'household-reference-person').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1.1 Large employers and higher managerial and administrative occupations").next()
+
+
+g.V().has('_code','listID', 'household-reference-person').has('value', "higher-professional-occupations").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'household-reference-person').property(single, 'value', "higher-professional-occupations")
+  ).next()
+g.V().has('_code', 'listID', 'household-reference-person').has('value', "higher-professional-occupations").as('code').
+  V().has('_code_list', 'listID', 'household-reference-person').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1.2 Higher professional occupations").next()
+
+
+g.V().has('_code','listID', 'household-reference-person').has('value', "lower-managerial,-administrative-and-professional-occupations").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'household-reference-person').property(single, 'value', "lower-managerial,-administrative-and-professional-occupations")
+  ).next()
+g.V().has('_code', 'listID', 'household-reference-person').has('value', "lower-managerial,-administrative-and-professional-occupations").as('code').
+  V().has('_code_list', 'listID', 'household-reference-person').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2. Lower managerial, administrative and professional occupations").next()
+
+
+g.V().has('_code','listID', 'household-reference-person').has('value', "intermediate-occupations").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'household-reference-person').property(single, 'value', "intermediate-occupations")
+  ).next()
+g.V().has('_code', 'listID', 'household-reference-person').has('value', "intermediate-occupations").as('code').
+  V().has('_code_list', 'listID', 'household-reference-person').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "3. Intermediate occupations").next()
+
+
+g.V().has('_code','listID', 'household-reference-person').has('value', "small-employers-and-own-account-workers").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'household-reference-person').property(single, 'value', "small-employers-and-own-account-workers")
+  ).next()
+g.V().has('_code', 'listID', 'household-reference-person').has('value', "small-employers-and-own-account-workers").as('code').
+  V().has('_code_list', 'listID', 'household-reference-person').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "4. Small employers and own account workers").next()
+
+
+g.V().has('_code','listID', 'household-reference-person').has('value', "lower-supervisory-and-technical-occupations").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'household-reference-person').property(single, 'value', "lower-supervisory-and-technical-occupations")
+  ).next()
+g.V().has('_code', 'listID', 'household-reference-person').has('value', "lower-supervisory-and-technical-occupations").as('code').
+  V().has('_code_list', 'listID', 'household-reference-person').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "5. Lower supervisory and technical occupations").next()
+
+
+g.V().has('_code','listID', 'household-reference-person').has('value', "semi-routine-occupations").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'household-reference-person').property(single, 'value', "semi-routine-occupations")
+  ).next()
+g.V().has('_code', 'listID', 'household-reference-person').has('value', "semi-routine-occupations").as('code').
+  V().has('_code_list', 'listID', 'household-reference-person').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "6. Semi-routine occupations").next()
+
+
+g.V().has('_code','listID', 'household-reference-person').has('value', "routine-occupations").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'household-reference-person').property(single, 'value', "routine-occupations")
+  ).next()
+g.V().has('_code', 'listID', 'household-reference-person').has('value', "routine-occupations").as('code').
+  V().has('_code_list', 'listID', 'household-reference-person').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "7. Routine occupations").next()
+
+
+g.V().has('_code','listID', 'household-reference-person').has('value', "never-worked-and-long-term-unemployed").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'household-reference-person').property(single, 'value', "never-worked-and-long-term-unemployed")
+  ).next()
+g.V().has('_code', 'listID', 'household-reference-person').has('value', "never-worked-and-long-term-unemployed").as('code').
+  V().has('_code_list', 'listID', 'household-reference-person').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "8. Never worked and long-term unemployed").next()
+
+
+g.V().has('_code','listID', 'household-reference-person').has('value', "never-worked").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'household-reference-person').property(single, 'value', "never-worked")
+  ).next()
+g.V().has('_code', 'listID', 'household-reference-person').has('value', "never-worked").as('code').
+  V().has('_code_list', 'listID', 'household-reference-person').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "L14.1 Never worked").next()
+
+
+g.V().has('_code','listID', 'household-reference-person').has('value', "long-term-unemployed").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'household-reference-person').property(single, 'value', "long-term-unemployed")
+  ).next()
+g.V().has('_code', 'listID', 'household-reference-person').has('value', "long-term-unemployed").as('code').
+  V().has('_code_list', 'listID', 'household-reference-person').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "L14.2 Long-term unemployed").next()
+
+
+g.V().has('_code','listID', 'household-reference-person').has('value', "not-classified").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'household-reference-person').property(single, 'value', "not-classified")
+  ).next()
+g.V().has('_code', 'listID', 'household-reference-person').has('value', "not-classified").as('code').
+  V().has('_code_list', 'listID', 'household-reference-person').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Not classified").next()
+
+
+g.V().has('_code','listID', 'household-reference-person').has('value', "full-time-students").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'household-reference-person').property(single, 'value', "full-time-students")
+  ).next()
+g.V().has('_code', 'listID', 'household-reference-person').has('value', "full-time-students").as('code').
+  V().has('_code_list', 'listID', 'household-reference-person').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "L15 Full-time students").next()
+
+
+g.V().has('_code','listID', 'household-reference-person').has('value', "not-classifiable-for-other-reasons").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'household-reference-person').property(single, 'value', "not-classifiable-for-other-reasons")
+  ).next()
+g.V().has('_code', 'listID', 'household-reference-person').has('value', "not-classifiable-for-other-reasons").as('code').
+  V().has('_code_list', 'listID', 'household-reference-person').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "L17 Not classifiable for other reasons").next()
+
