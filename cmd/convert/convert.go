@@ -25,23 +25,23 @@ func main() {
 		Content: []string{},
 	}
 
-	var codelist, edition string
+	var codeList, codeListNodeID string
 	for _, l := range input.Content {
 
 		if s := regex.IsCreate.FindString(l); len(s) > 0 {
 			var out []string
-			out, codelist, edition = createCodeList(l, *geoPtr)
+			out, codeList, codeListNodeID = createCodeList(l, *geoPtr)
 			output.Content = append(output.Content, out...)
 		}
 
 		if strings.HasPrefix(l, "MATCH") {
-			output.Content = append(output.Content, createCode(l, codelist, edition, *geoPtr)...)
+			output.Content = append(output.Content, createCode(l, codeList, codeListNodeID, *geoPtr)...)
 		}
 
 		output.Content = append(output.Content, query.NewLine)
 	}
 
-	output.Write(codelist, *geoPtr)
+	output.Write(codeList, *geoPtr)
 
 	os.Exit(0)
 
@@ -73,12 +73,15 @@ func createCodeList(line string, geo bool) ([]string, string, string) {
 	id := ids[1]
 	id = trim(id)
 
+	codeListNodeID := fmt.Sprintf("_code_list_%s_%s", id, edition)
+
 	var result []string
-	result = append(result, fmt.Sprintf(query.CodeListCheckExists, id, edition))
+	result = append(result, fmt.Sprintf(query.CodeListCheckExists, codeListNodeID))
 	result = append(result, query.CodeListCreateV)
 
 	lastProp := len(kvs)
 	count := 1
+	result = append(result, fmt.Sprintf(query.CodeListPropertyID, "id", codeListNodeID))
 	result = append(result, fmt.Sprintf(query.CodeListPropertyDot, "listID", id))
 	if geo {
 		result = append(result, fmt.Sprintf(query.CodeListPropertyBool, "geography", true))
@@ -94,10 +97,10 @@ func createCodeList(line string, geo bool) ([]string, string, string) {
 
 	result = append(result, query.Next)
 
-	return result, id, edition
+	return result, id, codeListNodeID
 }
 
-func createCode(line, id, edition string, geo bool) []string {
+func createCode(line, id, codeListNodeID string, geo bool) []string {
 	matches := regex.KVPattern.FindAllStringSubmatch(line, -1)
 
 	kvs := make(map[string]string)
@@ -114,26 +117,29 @@ func createCode(line, id, edition string, geo bool) []string {
 	label := clean(kvs, "label")
 
 	var result []string
-	if geo {
-		result = prepareEdge(result, "geography", value)
-	} else {
-		result = prepareEdge(result, id, value)
-	}
 
-	result = append(result, fmt.Sprintf(query.EdgeFindCodeList, id, edition))
+	codeId := id
+	if geo {
+		codeId = "geography"
+	}
+	codeNodeID := fmt.Sprintf("_code_%s_%s", codeId, value)
+
+	result = prepareEdge(result, codeId, value, codeNodeID)
+
+	result = append(result, fmt.Sprintf(query.EdgeFindCodeList, codeListNodeID, codeNodeID))
 	result = append(result, query.EdgeCheckIfExists)
 	result = append(result, fmt.Sprintf(query.EdgeAddProperty, label))
 
 	return result
 }
 
-func prepareEdge(r []string, id, value string) []string {
-	r = append(r, fmt.Sprintf(query.CodeCheckExists, id, value))
+func prepareEdge(r []string, id, value, nodeID string) []string {
+
+	r = append(r, fmt.Sprintf(query.CodeCheckExists, nodeID))
 	r = append(r, query.CodeCreateV)
-	r = append(r, fmt.Sprintf(query.CodeAddProperty, id, value))
+	r = append(r, fmt.Sprintf(query.CodeAddProperty, nodeID, id, value))
 	r = append(r, query.Next)
 
-	r = append(r, fmt.Sprintf(query.EdgeFindCode, id, value))
 	return r
 }
 
