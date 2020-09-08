@@ -1,0 +1,13 @@
+CREATE CONSTRAINT ON (n:`_code_house-sales-and-prices`) ASSERT n.value IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_house-sales-and-prices`) ASSERT n.value IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_house-sales-and-prices` { label:'House Sales And Prices', edition:'one-off' });
+MERGE (node:`_code`:`_code_house-sales-and-prices` { value:"mean" });
+MATCH (parent:`_code_list`:`_code_list_house-sales-and-prices`),(node:`_code`:`_code_house-sales-and-prices` { value:"mean" }) MERGE (node)-[:usedBy { label:"Mean price"}]->(parent);
+MERGE (node:`_code`:`_code_house-sales-and-prices` { value:"median" });
+MATCH (parent:`_code_list`:`_code_list_house-sales-and-prices`),(node:`_code`:`_code_house-sales-and-prices` { value:"median" }) MERGE (node)-[:usedBy { label:"Median price"}]->(parent);
+MERGE (node:`_code`:`_code_house-sales-and-prices` { value:"lower-quartile" });
+MATCH (parent:`_code_list`:`_code_list_house-sales-and-prices`),(node:`_code`:`_code_house-sales-and-prices` { value:"lower-quartile" }) MERGE (node)-[:usedBy { label:"Lower quartile price"}]->(parent);
+MERGE (node:`_code`:`_code_house-sales-and-prices` { value:"tenth-percentile" });
+MATCH (parent:`_code_list`:`_code_list_house-sales-and-prices`),(node:`_code`:`_code_house-sales-and-prices` { value:"tenth-percentile" }) MERGE (node)-[:usedBy { label:"Tenth percentile price"}]->(parent);
+MERGE (node:`_code`:`_code_house-sales-and-prices` { value:"sales" });
+MATCH (parent:`_code_list`:`_code_list_house-sales-and-prices`),(node:`_code`:`_code_house-sales-and-prices` { value:"sales" }) MERGE (node)-[:usedBy { label:"Count of sales"}]->(parent);
