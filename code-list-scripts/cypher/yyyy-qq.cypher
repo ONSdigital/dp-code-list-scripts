@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_yyyy-qq`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_yyyy-qq`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_yyyy-qq` { label:"time", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_yyyy-qq` { label:"Time", edition:"one-off" });
 MERGE (node:`_code`:`_code_yyyy-qq` { value:"2000-q1" });
 MATCH (parent:`_code_list`:`_code_list_yyyy-qq`),                (node:`_code`:`_code_yyyy-qq` { value:"2000-q1" })                 MERGE (node)-[:usedBy { label:"2000 Q1"}]->(parent);
 MERGE (node:`_code`:`_code_yyyy-qq` { value:"2000-q2" });

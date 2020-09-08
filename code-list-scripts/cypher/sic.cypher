@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_sic`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_sic`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_sic` { label:"standardindustrialclassification", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_sic` { label:"Standard Industrial Classification", edition:"one-off" });
 MERGE (node:`_code`:`_code_sic` { value:"A" });
 MATCH (parent:`_code_list`:`_code_list_sic`),                (node:`_code`:`_code_sic` { value:"A" })                 MERGE (node)-[:usedBy { label:"A : Agriculture, forestry and fishing"}]->(parent);
 MERGE (node:`_code`:`_code_sic` { value:"01" });

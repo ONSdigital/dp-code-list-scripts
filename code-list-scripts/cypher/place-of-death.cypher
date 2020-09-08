@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_place-of-death`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_place-of-death`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_place-of-death` { label:"placeofdeath", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_place-of-death` { label:"Place Of Death", edition:"one-off" });
 MERGE (node:`_code`:`_code_place-of-death` { value:"care-home" });
 MATCH (parent:`_code_list`:`_code_list_place-of-death`),(node:`_code`:`_code_place-of-death` { value:"care-home" }) MERGE (node)-[:usedBy { label:"Care home"}]->(parent);
 MERGE (node:`_code`:`_code_place-of-death` { value:"elsewhere" });

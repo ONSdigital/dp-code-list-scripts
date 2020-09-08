@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_income-type`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_income-type`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_income-type` { label:"income", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_income-type` { label:"Income", edition:"one-off" });
 MERGE (node:`_code`:`_code_income-type` { value:"original" });
 MATCH (parent:`_code_list`:`_code_list_income-type`),(node:`_code`:`_code_income-type` { value:"original" }) MERGE (node)-[:usedBy { label:"Original"}]->(parent);
 MERGE (node:`_code`:`_code_income-type` { value:"gross" });

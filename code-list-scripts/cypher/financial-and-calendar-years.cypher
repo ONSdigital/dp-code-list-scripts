@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_financial-and-calendar-years`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_financial-and-calendar-years`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_financial-and-calendar-years` { label:"time", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_financial-and-calendar-years` { label:"Time", edition:"one-off" });
 MERGE (node:`_code`:`_code_financial-and-calendar-years` { value:"1950" });
 MATCH (parent:`_code_list`:`_code_list_financial-and-calendar-years`),(node:`_code`:`_code_financial-and-calendar-years` { value:"1950" }) MERGE (node)-[:usedBy { label:"1950"}]->(parent);
 MERGE (node:`_code`:`_code_financial-and-calendar-years` { value:"1950-51" });

@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_mmm-yy`) ASSERT n.value IS UNIQUE;
 
-CREATE (node:`_code_list`:`_code_list_mmm-yy` { label:'time', edition:'one-off' });
+CREATE (node:`_code_list`:`_code_list_mmm-yy` { label:'Time', edition:'one-off' });
 
 MERGE (node:`_code`:`_code_mmm-yy` { value:'Jan-30' });
 

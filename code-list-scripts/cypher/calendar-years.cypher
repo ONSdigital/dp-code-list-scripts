@@ -1,4 +1,4 @@
-CREATE (node:`_code_list`:`_code_list_calendar-years` { label:'time', edition:'one-off' });
+CREATE (node:`_code_list`:`_code_list_calendar-years` { label:'Time', edition:'one-off' });
 CREATE CONSTRAINT ON (n:`_code_list_calendar-years`) ASSERT n.edition IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_calendar-years`) ASSERT n.value IS UNIQUE;
 

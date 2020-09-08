@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_trade-direction`) ASSERT n.value IS UNIQUE;
 
-CREATE (node:`_code_list`:`_code_list_trade-direction` { label:'direction', edition:'one-off' });
+CREATE (node:`_code_list`:`_code_list_trade-direction` { label:'Direction', edition:'one-off' });
 
 MERGE (node:`_code`:`_code_trade-direction` { value:'IM' });
 

@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_recorded-deaths`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_recorded-deaths`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_recorded-deaths` { label:"deaths", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_recorded-deaths` { label:"Deaths", edition:"one-off" });
 MERGE (node:`_code`:`_code_recorded-deaths` { value:"total-registered-deaths" });
 MATCH (parent:`_code_list`:`_code_list_recorded-deaths`),(node:`_code`:`_code_recorded-deaths` { value:"total-registered-deaths" }) MERGE (node)-[:usedBy { label:"Total registered deaths"}]->(parent);
 MERGE (node:`_code`:`_code_recorded-deaths` { value:"deaths-involving-covid-19-registrations" });

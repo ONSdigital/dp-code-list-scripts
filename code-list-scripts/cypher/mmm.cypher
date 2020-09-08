@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_mmm`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_mmm`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_mmm` { label:"month", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_mmm` { label:"Month", edition:"one-off" });
 MERGE (node:`_code`:`_code_mmm` { value:"jan" });
 MATCH (parent:`_code_list`:`_code_list_mmm`),(node:`_code`:`_code_mmm` { value:"jan" }) MERGE (node)-[:usedBy { label:"January"}]->(parent);
 MERGE (node:`_code`:`_code_mmm` { value:"feb" });

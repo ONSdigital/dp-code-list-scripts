@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_sector`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_sector`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_sector` { label:"sectortype", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_sector` { label:"Sector", edition:"one-off" });
 MERGE (node:`_code`:`_code_sector` { value:"all" });
 MATCH (parent:`_code_list`:`_code_list_sector`),(node:`_code`:`_code_sector` { value:"all" }) MERGE (node)-[:usedBy { label:"All"}]->(parent);
 MERGE (node:`_code`:`_code_sector` { value:"public-sector" });

@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_week-number`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_week-number`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_week-number` { label:"week", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_week-number` { label:"Week", edition:"one-off" });
 MERGE (node:`_code`:`_code_week-number` { value:"week-1" });
 MATCH (parent:`_code_list`:`_code_list_week-number`),(node:`_code`:`_code_week-number` { value:"week-1" }) MERGE (node)-[:usedBy { label:"Week 1"}]->(parent);
 MERGE (node:`_code`:`_code_week-number` { value:"week-2" });

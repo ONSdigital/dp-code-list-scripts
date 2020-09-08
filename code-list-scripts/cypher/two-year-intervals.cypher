@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_two-year-intervals`) ASSERT n.value IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_two-year-intervals`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_two-year-intervals` { label:'time', edition:'one-off' });
+CREATE (node:`_code_list`:`_code_list_two-year-intervals` { label:'Time', edition:'one-off' });
 MERGE (node:`_code`:`_code_two-year-intervals` { value:"2001–03" });
 MATCH (parent:`_code_list`:`_code_list_two-year-intervals`),(node:`_code`:`_code_two-year-intervals` { value:"2001–03" }) MERGE (node)-[:usedBy { label:"2001–03"}]->(parent);
 MERGE (node:`_code`:`_code_two-year-intervals` { value:"2002-04" });

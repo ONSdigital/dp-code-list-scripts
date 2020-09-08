@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_adzuna-jobs-category`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_adzuna-jobs-category`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_adzuna-jobs-category` { label:"adzunajobscategory", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_adzuna-jobs-category` { label:"Adzuna Jobs Category", edition:"one-off" });
 MERGE (node:`_code`:`_code_adzuna-jobs-category` { value:"manufacturing" });
 MATCH (parent:`_code_list`:`_code_list_adzuna-jobs-category`),(node:`_code`:`_code_adzuna-jobs-category` { value:"manufacturing" }) MERGE (node)-[:usedBy { label:"Manufacturing"}]->(parent);
 MERGE (node:`_code`:`_code_adzuna-jobs-category` { value:"energy-oil-and-gas" });

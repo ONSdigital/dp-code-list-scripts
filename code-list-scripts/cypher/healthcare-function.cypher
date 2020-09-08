@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_healthcare-function`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_healthcare-function`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_healthcare-function` { label:"healthcarefunction", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_healthcare-function` { label:"Healthcare Function", edition:"one-off" });
 MERGE (node:`_code`:`_code_healthcare-function` { value:"HCTOT" });
 MATCH (parent:`_code_list`:`_code_list_healthcare-function`),(node:`_code`:`_code_healthcare-function` { value:"HCTOT" }) MERGE (node)-[:usedBy { label:"Total functions"}]->(parent);
 MERGE (node:`_code`:`_code_healthcare-function` { value:"HC1HC2" });

@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_shipping-port`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_shipping-port`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_shipping-port` { label:"port", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_shipping-port` { label:"Port", edition:"one-off" });
 MERGE (node:`_code`:`_code_shipping-port` { value:"all-of-uk" });
 MATCH (parent:`_code_list`:`_code_list_shipping-port`),(node:`_code`:`_code_shipping-port` { value:"all-of-uk" }) MERGE (node)-[:usedBy { label:"All of UK"}]->(parent);
 MERGE (node:`_code`:`_code_shipping-port` { value:"grimsby-immingham" });

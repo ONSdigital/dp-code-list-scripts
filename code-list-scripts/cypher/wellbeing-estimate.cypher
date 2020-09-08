@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_wellbeing-estimate`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_wellbeing-estimate`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_wellbeing-estimate` { label:"estimate", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_wellbeing-estimate` { label:"Estimate", edition:"one-off" });
 MERGE (node:`_code`:`_code_wellbeing-estimate` { value:'average-mean' });
 MATCH (parent:`_code_list`:`_code_list_wellbeing-estimate`),(node:`_code`:`_code_wellbeing-estimate` { value:'average-mean' }) MERGE (node)-[:usedBy { label:"Average (mean)"}]->(parent);
 MERGE (node:`_code`:`_code_wellbeing-estimate` { value:'poor' });

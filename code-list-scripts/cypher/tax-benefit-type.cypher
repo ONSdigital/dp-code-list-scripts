@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_tax-benefit-type`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_tax-benefit-type`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_tax-benefit-type` { label:"typeoftaxorbenefit", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_tax-benefit-type` { label:"Type Of Tax Or Benefit", edition:"one-off" });
 MERGE (node:`_code`:`_code_tax-benefit-type` { value:"original-income" });
 MATCH (parent:`_code_list`:`_code_list_tax-benefit-type`),(node:`_code`:`_code_tax-benefit-type` { value:"original-income" }) MERGE (node)-[:usedBy { label:"Original income"}]->(parent);
 MERGE (node:`_code`:`_code_tax-benefit-type` { value:"cash-benefits" });

@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_soc`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_soc`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_soc` { label:"standardoccupationalclassification", edition:"2010" });
+CREATE (node:`_code_list`:`_code_list_soc` { label:"Standard Occupational Classification", edition:"2010" });
 MERGE (node:`_code`:`_code_soc` { value:"1" });
 MATCH (parent:`_code_list`:`_code_list_soc`),(node:`_code`:`_code_soc` { value:"1" }) MERGE (node)-[:usedBy { label:"Managers, directors and senior officials"}]->(parent);
 MERGE (node:`_code`:`_code_soc` { value:"11" });

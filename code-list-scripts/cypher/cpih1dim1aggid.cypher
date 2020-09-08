@@ -1,4 +1,4 @@
-CREATE (node:`_code_list`:`_code_list_cpih1dim1aggid` { label:'aggregate', edition:'one-off' });
+CREATE (node:`_code_list`:`_code_list_cpih1dim1aggid` { label:'Aggregate', edition:'one-off' });
 CREATE CONSTRAINT ON (n:`_code_list_cpih1dim1aggid`) ASSERT n.value IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_cpih1dim1aggid`) ASSERT n.value IS UNIQUE;
 

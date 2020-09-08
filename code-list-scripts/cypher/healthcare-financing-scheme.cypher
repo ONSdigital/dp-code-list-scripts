@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_healthcare-financing-scheme`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_healthcare-financing-scheme`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_healthcare-financing-scheme` { label:"financingscheme", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_healthcare-financing-scheme` { label:"Financing Scheme", edition:"one-off" });
 MERGE (node:`_code`:`_code_healthcare-financing-scheme` { value:"HFTOT" });
 MATCH (parent:`_code_list`:`_code_list_healthcare-financing-scheme`),(node:`_code`:`_code_healthcare-financing-scheme` { value:"HFTOT" }) MERGE (node)-[:usedBy { label:"All financing schemes"}]->(parent);
 MERGE (node:`_code`:`_code_healthcare-financing-scheme` { value:"HF11" });

@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_healthcare-provider`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_healthcare-provider`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_healthcare-provider` { label:"healthcareprovider", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_healthcare-provider` { label:"Healthcare Provider", edition:"one-off" });
 MERGE (node:`_code`:`_code_healthcare-provider` { value:"HPTOT" });
 MATCH (parent:`_code_list`:`_code_list_healthcare-provider`),(node:`_code`:`_code_healthcare-provider` { value:"HPTOT" }) MERGE (node)-[:usedBy { label:"Total providers"}]->(parent);
 MERGE (node:`_code`:`_code_healthcare-provider` { value:"HP1" });
