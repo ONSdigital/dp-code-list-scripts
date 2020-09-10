@@ -1,0 +1,13 @@
+CREATE CONSTRAINT ON (n:`_code_quarterly-index-and-growth-rate`) ASSERT n.code IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_quarterly-index-and-growth-rate`) ASSERT n.code IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_quarterly-index-and-growth-rate` { label:"Growth Rate", edition:"one-off" });
+MERGE (node:`_code`:`_code_quarterly-index-and-growth-rate` { value:"gra" });
+MATCH (parent:`_code_list`:`_code_list_quarterly-index-and-growth-rate`),(node:`_code`:`_code_quarterly-index-and-growth-rate` { value:"gra" }) MERGE (node)-[:usedBy { label:"Annual growth rate"}]->(parent);
+MERGE (node:`_code`:`_code_quarterly-index-and-growth-rate` { value:"qix" });
+MATCH (parent:`_code_list`:`_code_list_quarterly-index-and-growth-rate`),(node:`_code`:`_code_quarterly-index-and-growth-rate` { value:"qix" }) MERGE (node)-[:usedBy { label:"Quarterly index"}]->(parent);
+MERGE (node:`_code`:`_code_quarterly-index-and-growth-rate` { value:"grq" });
+MATCH (parent:`_code_list`:`_code_list_quarterly-index-and-growth-rate`),(node:`_code`:`_code_quarterly-index-and-growth-rate` { value:"grq" }) MERGE (node)-[:usedBy { label:"Quarterly growth rate on previous quarter"}]->(parent);
+MERGE (node:`_code`:`_code_quarterly-index-and-growth-rate` { value:"grqa" });
+MATCH (parent:`_code_list`:`_code_list_quarterly-index-and-growth-rate`),(node:`_code`:`_code_quarterly-index-and-growth-rate` { value:"grqa" }) MERGE (node)-[:usedBy { label:"Quarterly growth rate on same quarter of previous year"}]->(parent);
+MERGE (node:`_code`:`_code_quarterly-index-and-growth-rate` { value:"aix" });
+MATCH (parent:`_code_list`:`_code_list_quarterly-index-and-growth-rate`),(node:`_code`:`_code_quarterly-index-and-growth-rate` { value:"aix" }) MERGE (node)-[:usedBy { label:"Annual index"}]->(parent);
