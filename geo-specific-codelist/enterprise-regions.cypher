@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_geography`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_enterprise-regions`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_enterprise-regions` { label:"geography", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_enterprise-regions` { label:"Geography", edition:"one-off" });
 MERGE (node:`_code`:`_code_geography` { value:"E37000001" });
 MATCH (parent:`_code_list`:`_code_list_enterprise-regions`),(node:`_code`:`_code_geography` { value:"E37000001" }) MERGE (node)-[:usedBy { label:"Black Country"}]->(parent);
 MERGE (node:`_code`:`_code_geography` { value:"E37000002" });

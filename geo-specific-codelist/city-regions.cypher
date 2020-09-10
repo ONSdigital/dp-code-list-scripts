@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_geography`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_city-regions`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_city-regions` { label:"geography", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_city-regions` { label:"Geography", edition:"one-off" });
 MERGE (node:`_code`:`_code_geography` { value:"E47000001" });
 MATCH (parent:`_code_list`:`_code_list_city-regions`),(node:`_code`:`_code_geography` { value:"E47000001" }) MERGE (node)-[:usedBy { label:"Greater Manchester"}]->(parent);
 MERGE (node:`_code`:`_code_geography` { value:"E47000002" });

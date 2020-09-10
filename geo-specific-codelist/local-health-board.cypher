@@ -1,0 +1,17 @@
+CREATE CONSTRAINT ON (n:`_code_geography`) ASSERT n.code IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_local-health-board`) ASSERT n.code IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_local-health-board` { label:"Geography", edition:"one-off" });
+MERGE (node:`_code`:`_code_geography` { value:"W11000023" });
+MATCH (parent:`_code_list`:`_code_list_local-health-board`),(node:`_code`:`_code_geography` { value:"W11000023" }) MERGE (node)-[:usedBy { label:"Betsi Cadwaladr University Health Board"}]->(parent);
+MERGE (node:`_code`:`_code_geography` { value:"W11000024" });
+MATCH (parent:`_code_list`:`_code_list_local-health-board`),(node:`_code`:`_code_geography` { value:"W11000024" }) MERGE (node)-[:usedBy { label:"Powys Teaching Health Board"}]->(parent);
+MERGE (node:`_code`:`_code_geography` { value:"W11000025" });
+MATCH (parent:`_code_list`:`_code_list_local-health-board`),(node:`_code`:`_code_geography` { value:"W11000025" }) MERGE (node)-[:usedBy { label:"Hywel Dda University Health Board"}]->(parent);
+MERGE (node:`_code`:`_code_geography` { value:"W11000028" });
+MATCH (parent:`_code_list`:`_code_list_local-health-board`),(node:`_code`:`_code_geography` { value:"W11000028" }) MERGE (node)-[:usedBy { label:"Aneurin Bevan University Health Board"}]->(parent);
+MERGE (node:`_code`:`_code_geography` { value:"W11000029" });
+MATCH (parent:`_code_list`:`_code_list_local-health-board`),(node:`_code`:`_code_geography` { value:"W11000029" }) MERGE (node)-[:usedBy { label:"Cardiff and Vale University Health Board"}]->(parent);
+MERGE (node:`_code`:`_code_geography` { value:"W11000030" });
+MATCH (parent:`_code_list`:`_code_list_local-health-board`),(node:`_code`:`_code_geography` { value:"W11000030" }) MERGE (node)-[:usedBy { label:"Cwm Taf Morgannwg University Health Board"}]->(parent);
+MERGE (node:`_code`:`_code_geography` { value:"W11000031" });
+MATCH (parent:`_code_list`:`_code_list_local-health-board`),(node:`_code`:`_code_geography` { value:"W11000031" }) MERGE (node)-[:usedBy { label:"Swansea Bay University Health Board"}]->(parent);
