@@ -3,7 +3,7 @@
 g.V().has('_code_list', 'listID', 'shipping-port').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "shipping-port").
-    property(single, 'label', "port").
+    property(single, 'label', "Port").
     property(single, 'edition', "one-off")
   ).next()
 

@@ -3,7 +3,7 @@
 g.V().has('_code_list', 'listID', 'unit-of-measure').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "unit-of-measure").
-    property(single, 'label', "unitofmeasure").
+    property(single, 'label', "Unit Of Measure").
     property(single, 'edition', "one-off")
   ).next()
 

@@ -3,7 +3,7 @@
 g.V().has('_code_list', 'listID', 'sector').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "sector").
-    property(single, 'label', "sectortype").
+    property(single, 'label', "Sector").
     property(single, 'edition', "one-off")
   ).next()
 

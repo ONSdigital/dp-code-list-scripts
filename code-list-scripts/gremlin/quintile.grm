@@ -1,0 +1,69 @@
+
+
+g.V().has('_code_list', 'listID', 'quintile').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', "quintile").
+    property(single, 'label', "Quintile").
+    property(single, 'edition', "one-off")
+  ).next()
+
+
+g.V().has('_code','listID', 'quintile').has('value', "1st").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'quintile').property(single, 'value', "1st")
+  ).next()
+g.V().has('_code', 'listID', 'quintile').has('value', "1st").as('code').
+  V().has('_code_list', 'listID', 'quintile').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1st").next()
+
+
+g.V().has('_code','listID', 'quintile').has('value', "2nd").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'quintile').property(single, 'value', "2nd")
+  ).next()
+g.V().has('_code', 'listID', 'quintile').has('value', "2nd").as('code').
+  V().has('_code_list', 'listID', 'quintile').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2nd").next()
+
+
+g.V().has('_code','listID', 'quintile').has('value', "3rd").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'quintile').property(single, 'value', "3rd")
+  ).next()
+g.V().has('_code', 'listID', 'quintile').has('value', "3rd").as('code').
+  V().has('_code_list', 'listID', 'quintile').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "3rd").next()
+
+
+g.V().has('_code','listID', 'quintile').has('value', "4th").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'quintile').property(single, 'value', "4th")
+  ).next()
+g.V().has('_code', 'listID', 'quintile').has('value', "4th").as('code').
+  V().has('_code_list', 'listID', 'quintile').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "4th").next()
+
+
+g.V().has('_code','listID', 'quintile').has('value', "5th").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'quintile').property(single, 'value', "5th")
+  ).next()
+g.V().has('_code', 'listID', 'quintile').has('value', "5th").as('code').
+  V().has('_code_list', 'listID', 'quintile').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "5th").next()
+
+
+g.V().has('_code','listID', 'quintile').has('value', "all").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'quintile').property(single, 'value', "all")
+  ).next()
+g.V().has('_code', 'listID', 'quintile').has('value', "all").as('code').
+  V().has('_code_list', 'listID', 'quintile').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "All").next()
+

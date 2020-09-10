@@ -3,7 +3,7 @@
 g.V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "adzuna-jobs-category").
-    property(single, 'label', "adzunajobscategory").
+    property(single, 'label', "Adzuna Jobs Category").
     property(single, 'edition', "one-off")
   ).next()
 

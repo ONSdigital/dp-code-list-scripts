@@ -3,7 +3,7 @@
 g.V().has('_code_list', 'listID', 'value-deflation').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "value-deflation").
-    property(single, 'label', "deflation").
+    property(single, 'label', "Deflation").
     property(single, 'edition', "one-off")
   ).next()
 

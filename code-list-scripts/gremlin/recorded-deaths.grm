@@ -3,7 +3,7 @@
 g.V().has('_code_list', 'listID', 'recorded-deaths').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "recorded-deaths").
-    property(single, 'label', "deaths").
+    property(single, 'label', "Deaths").
     property(single, 'edition', "one-off")
   ).next()
 

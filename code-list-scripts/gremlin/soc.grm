@@ -3,7 +3,7 @@
 g.V().has('_code_list', 'listID', 'soc').has('edition', '2010').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "soc").
-    property(single, 'label', "standardoccupationalclassification").
+    property(single, 'label', "Standard Occupational Classification").
     property(single, 'edition', "2010")
   ).next()
 

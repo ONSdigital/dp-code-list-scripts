@@ -3,8 +3,8 @@
 g.V().has('_code_list', 'listID', 'tax-benefit-type').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "tax-benefit-type").
-    property(single, 'edition', "one-off").
-    property(single, 'label', "typeoftaxorbenefit")
+    property(single, 'label', "Type Of Tax Or Benefit").
+    property(single, 'edition', "one-off")
   ).next()
 
 

@@ -3,7 +3,7 @@
 g.V().has('_code_list', 'listID', 'week-number').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "week-number").
-    property(single, 'label', "week").
+    property(single, 'label', "Week").
     property(single, 'edition', "one-off")
   ).next()
 

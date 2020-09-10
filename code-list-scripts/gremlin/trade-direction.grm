@@ -3,7 +3,7 @@
 g.V().has('_code_list', 'listID', 'trade-direction').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "trade-direction").
-    property(single, 'label', "direction").
+    property(single, 'label', "Direction").
     property(single, 'edition', "one-off")
   ).next()
 

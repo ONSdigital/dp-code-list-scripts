@@ -1,8 +1,8 @@
 g.V().has('_code_list', 'listID', 'crime-sex').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "crime-sex").
-    property(single, 'label', "sex").
-    property(single, 'edition', "one-off")
+    property(single, 'edition', "one-off").
+    property(single, 'label', "sex")
   ).next()
 
 

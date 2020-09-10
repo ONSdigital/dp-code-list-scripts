@@ -3,7 +3,7 @@
 g.V().has('_code_list', 'listID', 'seasonal-adjustment').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "seasonal-adjustment").
-    property(single, 'label', "seasonaladjustment").
+    property(single, 'label', "Seasonal Adjustment").
     property(single, 'edition', "one-off")
   ).next()
 

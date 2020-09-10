@@ -1,0 +1,2739 @@
+
+g.V().has('_code_list', 'listID', 'countries-and-territories').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', "countries-and-territories").
+    property(single, 'label', "Countries And Territories").
+    property(single, 'edition', "one-off")
+  ).next()
+
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "DZ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "DZ")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "DZ").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "DZ - Algeria").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "EG").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "EG")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "EG").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "EG - Egypt").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "LY").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "LY")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "LY").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "LY - Libya").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "MR").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "MR")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "MR").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "MR - Mauritania").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "MA").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "MA")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "MA").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "MA - Morocco").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SD").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SD")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SD").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SD - Sudan").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "sudan-ex").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "sudan-ex")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "sudan-ex").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Sudan (Ex)").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "TN").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "TN")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "TN").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "TN - Tunisia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "western-sahara").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "western-sahara")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "western-sahara").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Western Sahara").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "AO").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "AO")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "AO").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "AO - Angola").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BJ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BJ")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BJ").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BJ - Benin").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BW").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BW")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BW").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BW - Botswana").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BF").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BF")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BF").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BF - Burkina Faso").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BI").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BI")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BI").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BI - Burundi").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CM").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CM")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CM").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CM - Cameroon").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CV").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CV")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CV").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CV - Cape Verde").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CF").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CF")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CF").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CF - Central African Republic").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "TD").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "TD")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "TD").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "TD - Chad").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "KM").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "KM")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "KM").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "KM - Comoros").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CD").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CD")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CD").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CD - Congo (Democratic Republic)").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CG").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CG")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CG").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CG - Congo (Republic)").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "DJ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "DJ")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "DJ").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "DJ - Djibouti").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "GQ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "GQ")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "GQ").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "GQ - Equatorial Guinea").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "ER").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "ER")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "ER").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "ER - Eritrea").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "ET").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "ET")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "ET").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "ET - Ethiopia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "GA").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "GA")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "GA").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "GA - Gabon").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "GM").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "GM")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "GM").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "GM - Gambia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "GH").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "GH")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "GH").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "GH - Ghana").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "GN").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "GN")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "GN").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "GN - Guinea").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "GW").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "GW")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "GW").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "GW - Guinea Bissau").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CI").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CI")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CI").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CI - Ivory Coast").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "KE").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "KE")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "KE").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "KE - Kenya").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "LS").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "LS")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "LS").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "LS - Lesotho").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "LR").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "LR")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "LR").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "LR - Liberia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "MG").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "MG")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "MG").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "MG - Madagascar").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "MW").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "MW")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "MW").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "MW - Malawi").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "ML").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "ML")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "ML").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "ML - Mali").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "MU").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "MU")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "MU").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "MU - Mauritius").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "mayotte").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "mayotte")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "mayotte").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Mayotte").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "MZ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "MZ")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "MZ").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "MZ - Mozambique").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "NA").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "NA")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "NA").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "NA - Namibia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "NE").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "NE")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "NE").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "NE - Niger").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "NG").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "NG")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "NG").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "NG - Nigeria").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "reunion").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "reunion")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "reunion").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Reunion").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "RW").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "RW")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "RW").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "RW - Rwanda").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "ST").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "ST")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "ST").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "ST - Sao Tome & Principe").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SN").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SN")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SN").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SN - Senegal").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SC").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SC")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SC").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SC - Seychelles").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SL").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SL")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SL").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SL - Sierra Leone").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SO").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SO")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SO").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SO - Somalia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "ZA").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "ZA")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "ZA").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "ZA - South Africa").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SS").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SS")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SS").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SS - South Sudan").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SH").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SH")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SH").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SH - St. Helena").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SZ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SZ")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SZ").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SZ - Swaziland").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "TZ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "TZ")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "TZ").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "TZ - Tanzania").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "TG").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "TG")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "TG").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "TG - Togo").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "UG").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "UG")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "UG").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "UG - Uganda").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "ZM").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "ZM")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "ZM").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "ZM - Zambia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "ZW").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "ZW")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "ZW").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "ZW - Zimbabwe").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CN").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CN")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CN").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CN - China").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "HK").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "HK")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "HK").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "HK - Hong Kong").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "JP").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "JP")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "JP").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "JP - Japan").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "MO").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "MO")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "MO").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "MO - Macao").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "MN").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "MN")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "MN").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "MN - Mongolia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "KP").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "KP")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "KP").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "KP - North Korea").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "KR").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "KR")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "KR").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "KR - South Korea").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "TW").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "TW")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "TW").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "TW - Taiwan").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "AF").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "AF")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "AF").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "AF - Afghanistan").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BH").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BH")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BH").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BH - Bahrain").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "IR").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "IR")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "IR").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "IR - Iran").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "IQ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "IQ")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "IQ").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "IQ - Iraq").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "IL").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "IL")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "IL").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "IL - Israel").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "JO").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "JO")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "JO").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "JO - Jordan").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "KZ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "KZ")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "KZ").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "KZ - Kazakhstan").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "KW").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "KW")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "KW").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "KW - Kuwait").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "KG").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "KG")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "KG").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "KG - Kyrgyz Republic").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "LB").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "LB")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "LB").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "LB - Lebanon").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "PS").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "PS")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "PS").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "PS - Occupied Palestinian Territory").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "OM").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "OM")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "OM").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "OM - Oman").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "QA").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "QA")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "QA").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "QA - Qatar").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SA").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SA")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SA").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SA - Saudi Arabia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SY").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SY")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SY").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SY - Syria").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "TJ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "TJ")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "TJ").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "TJ - Tajikistan").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "TM").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "TM")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "TM").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "TM - Turkmenistan").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "AE").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "AE")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "AE").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "AE - United Arab Emirates").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "UZ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "UZ")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "UZ").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "UZ - Uzbekistan").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "YE").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "YE")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "YE").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "YE - Yemen").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BD").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BD")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BD").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BD - Bangladesh").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BT").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BT")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BT").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BT - Bhutan").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "IO").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "IO")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "IO").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "IO - British Indian Ocean Territory").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "IN").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "IN")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "IN").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "IN - India").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "MV").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "MV")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "MV").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "MV - Maldives").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "NP").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "NP")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "NP").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "NP - Nepal").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "PK").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "PK")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "PK").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "PK - Pakistan").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "LK").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "LK")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "LK").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "LK - Sri Lanka").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BN").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BN")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BN").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BN - Brunei").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "KH").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "KH")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "KH").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "KH - Cambodia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "TL").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "TL")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "TL").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "TL - East Timor").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "ID").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "ID")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "ID").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "ID - Indonesia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "LA").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "LA")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "LA").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "LA - Laos").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "MY").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "MY")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "MY").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "MY - Malaysia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "MM").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "MM")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "MM").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "MM - Myanmar").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "PH").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "PH")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "PH").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "PH - Philippines").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SG").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SG")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SG").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SG - Singapore").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "TH").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "TH")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "TH").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "TH - Thailand").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "VN").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "VN")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "VN").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "VN - Vietnam").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "european-union-eu15").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "european-union-eu15")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "european-union-eu15").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "European Union EU15").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "european-union-eu2").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "european-union-eu2")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "european-union-eu2").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "European Union EU2").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "european-union-eu8").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "european-union-eu8")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "european-union-eu8").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "European Union EU8").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "other-european-union").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "other-european-union")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "other-european-union").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Other European Union").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "aland-islands").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "aland-islands")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "aland-islands").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Aland Islands").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "AT").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "AT")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "AT").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "AT - Austria").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "azores-and-madeira").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "azores-and-madeira")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "azores-and-madeira").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Azores and Madeira").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BE").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BE")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BE").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BE - Belgium").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "canary-islands").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "canary-islands")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "canary-islands").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Canary Islands").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "DK").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "DK")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "DK").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "DK - Denmark").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "FI").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "FI")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "FI").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "FI - Finland").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "FR").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "FR")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "FR").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "FR - France").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "DE").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "DE")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "DE").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "DE - Germany").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "GI").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "GI")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "GI").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "GI - Gibraltar").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "GR").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "GR")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "GR").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "GR - Greece").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "IE").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "IE")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "IE").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "IE - Ireland").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "IT").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "IT")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "IT").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "IT - Italy").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "JE").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "JE")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "JE").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "JE - Jersey").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "LU").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "LU")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "LU").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "LU - Luxembourg").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "NL").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "NL")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "NL").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "NL - Netherlands").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "PT").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "PT")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "PT").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "PT - Portugal").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "ES").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "ES")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "ES").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "ES - Spain").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "spain-and-balearic-islands").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "spain-and-balearic-islands")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "spain-and-balearic-islands").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Spain and Balearic Islands").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SE").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SE")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SE").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SE - Sweden").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BG").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BG")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BG").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BG - Bulgaria").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "RO").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "RO")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "RO").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "RO - Romania").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CZ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CZ")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CZ").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CZ - Czech Republic").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "EE").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "EE")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "EE").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "EE - Estonia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "HU").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "HU")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "HU").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "HU - Hungary").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "LV").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "LV")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "LV").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "LV - Latvia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "LT").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "LT")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "LT").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "LT - Lithuania").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "PL").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "PL")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "PL").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "PL - Poland").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SK").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SK")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SK").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SK - Slovakia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SI").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SI")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SI").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SI - Slovenia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "HR").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "HR")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "HR").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "HR - Croatia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CY").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CY")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CY").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CY - Cyprus").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "cyprus-ex").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "cyprus-ex")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "cyprus-ex").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Cyprus (Ex)").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "MT").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "MT")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "MT").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "MT - Malta").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "AI").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "AI")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "AI").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "AI - Anguilla").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "AG").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "AG")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "AG").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "AG - Antigua & Barbuda").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "AR").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "AR")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "AR").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "AR - Argentina").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "AW").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "AW")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "AW").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "AW - Aruba").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BS").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BS")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BS").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BS - Bahamas").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BB").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BB")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BB").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BB - Barbados").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BZ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BZ")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BZ").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BZ - Belize").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BM").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BM")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BM").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BM - Bermuda").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BO").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BO")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BO").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BO - Bolivia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BQ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BQ")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BQ").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BQ - Bonaire, Sint Eustatius and Saba").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BR").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BR")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BR").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BR - Brazil").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "VG").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "VG")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "VG").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "VG - British Virgin Islands").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "KY").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "KY")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "KY").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "KY - Cayman Islands").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CL").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CL")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CL").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CL - Chile").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CO").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CO")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CO").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CO - Colombia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CR").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CR")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CR").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CR - Costa Rica").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CU").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CU")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CU").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CU - Cuba").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CW").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CW")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CW").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CW - Curacao").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "DM").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "DM")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "DM").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "DM - Dominica").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "DO").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "DO")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "DO").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "DO - Dominican Republic").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "EC").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "EC")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "EC").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "EC - Ecuador").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SV").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SV")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SV").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SV - El Salvador").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "FK").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "FK")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "FK").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "FK - Falkland Islands").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "french-guiana").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "french-guiana")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "french-guiana").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "French Guiana").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "GD").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "GD")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "GD").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "GD - Grenada").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "guadeloupe").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "guadeloupe")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "guadeloupe").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Guadeloupe").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "GT").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "GT")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "GT").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "GT - Guatemala").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "GY").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "GY")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "GY").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "GY - Guyana").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "HT").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "HT")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "HT").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "HT - Haiti").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "HN").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "HN")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "HN").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "HN - Honduras").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "JM").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "JM")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "JM").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "JM - Jamaica").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "martinique").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "martinique")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "martinique").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Martinique").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "MX").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "MX")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "MX").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "MX - Mexico").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "MS").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "MS")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "MS").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "MS - Montserrat").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "NI").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "NI")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "NI").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "NI - Nicaragua").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "PA").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "PA")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "PA").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "PA - Panama").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "PY").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "PY")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "PY").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "PY - Paraguay").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "PE").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "PE")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "PE").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "PE - Peru").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SX").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SX")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SX").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SX - Sint Maarten").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "GS").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "GS")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "GS").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "GS - South Georgia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "st-barthelemy").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "st-barthelemy")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "st-barthelemy").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "St Barthelemy").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "KN").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "KN")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "KN").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "KN - St Kitts & Nevis").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "LC").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "LC")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "LC").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "LC - St Lucia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "st-martin").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "st-martin")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "st-martin").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "St Martin").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "st-pierre-and-miquelon").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "st-pierre-and-miquelon")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "st-pierre-and-miquelon").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "St Pierre and Miquelon").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "VC").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "VC")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "VC").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "VC - St Vincent").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SR").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SR")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SR").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SR - Suriname").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "TT").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "TT")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "TT").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "TT - Trinidad & Tobago").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "TC").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "TC")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "TC").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "TC - Turks & Caicos Islands").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "UY").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "UY")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "UY").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "UY - Uruguay").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "VE").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "VE")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "VE").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "VE - Venezuela").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "asia").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "asia")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "asia").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Asia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "central-and-south-america").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "central-and-south-america")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "central-and-south-america").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Central and South America").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "europe-exc-european-union").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "europe-exc-european-union")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "europe-exc-european-union").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Europe exc European Union").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "north-america").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "north-america")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "north-america").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "North America").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "australia-oceania-and-polar-regions").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "australia-oceania-and-polar-regions")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "australia-oceania-and-polar-regions").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Australia, Oceania and Polar Regions").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "africa").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "africa")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "africa").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Africa").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "AL").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "AL")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "AL").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "AL - Albania").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "AD").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "AD")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "AD").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "AD - Andorra").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "AM").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "AM")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "AM").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "AM - Armenia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "AZ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "AZ")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "AZ").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "AZ - Azerbaijan").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BY").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BY")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BY").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BY - Belarus").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BA").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BA")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BA").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BA - Bosnia & Herzegovina").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "BV").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "BV")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "BV").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "BV - Bouvet Island").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "cyprus-northern").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "cyprus-northern")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "cyprus-northern").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Cyprus, Northern").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "czechoslovakia-ex").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "czechoslovakia-ex")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "czechoslovakia-ex").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Czechoslovakia (Ex)").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "FO").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "FO")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "FO").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "FO - Faroe Islands").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "MK").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "MK")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "MK").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "MK - FYR Macedonia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "GE").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "GE")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "GE").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "GE - Georgia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "GL").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "GL")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "GL").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "GL - Greenland").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "IS").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "IS")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "IS").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "IS - Iceland").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "XK").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "XK")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "XK").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "XK - Kosovo").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "LI").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "LI")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "LI").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "LI - Liechtenstein").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "MD").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "MD")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "MD").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "MD - Moldova").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "monaco").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "monaco")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "monaco").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Monaco").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "ME").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "ME")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "ME").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "ME - Montenegro").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "NO").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "NO")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "NO").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "NO - Norway").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "RU").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "RU")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "RU").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "RU - Russia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SM").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SM")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SM").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SM - San Marino").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "RS").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "RS")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "RS").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "RS - Serbia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "svalbard-and-jan-mayen").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "svalbard-and-jan-mayen")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "svalbard-and-jan-mayen").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Svalbard and Jan Mayen").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CH").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CH")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CH").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CH - Switzerland").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "TR").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "TR")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "TR").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "TR - Turkey").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "UA").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "UA")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "UA").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "UA - Ukraine").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "ussr-ex").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "ussr-ex")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "ussr-ex").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "USSR (Ex)").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "VA").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "VA")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "VA").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "VA - Vatican City").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "yugoslavia-ex").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "yugoslavia-ex")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "yugoslavia-ex").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Yugoslavia (Ex)").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "yugoslavia-not-otherwise-specified").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "yugoslavia-not-otherwise-specified")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "yugoslavia-not-otherwise-specified").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Yugoslavia (not otherwise specified)").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CA").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CA")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CA").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CA - Canada").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "puerto-rico").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "puerto-rico")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "puerto-rico").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "puerto-rico - Puerto Rico").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "US").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "US")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "US").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "US - United States inc Puerto Rico").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "UM").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "UM")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "UM").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "UM - US Minor Outlying Islands").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "VI").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "VI")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "VI").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "VI - US Virgin Islands").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "AS").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "AS")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "AS").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "AS - American Samoa").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "AQ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "AQ")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "AQ").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "AQ - Antarctica").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "AU").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "AU")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "AU").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "AU - Australia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CX").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CX")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CX").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CX - Christmas Island").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CC").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CC")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CC").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CC - Cocos Islands").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "CK").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "CK")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "CK").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "CK - Cook Islands").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "FJ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "FJ")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "FJ").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "FJ - Fiji").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "PF").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "PF")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "PF").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "PF - French Polynesia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "TF").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "TF")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "TF").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "TF - French Southern Territories").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "GU").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "GU")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "GU").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "GU - Guam").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "HM").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "HM")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "HM").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "HM - Heard & McDonald Islands").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "KI").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "KI")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "KI").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "KI - Kiribati").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "MH").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "MH")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "MH").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "MH - Marshall Islands").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "FM").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "FM")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "FM").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "FM - Micronesia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "NR").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "NR")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "NR").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "NR - Nauru").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "NC").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "NC")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "NC").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "NC - New Caledonia").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "NZ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "NZ")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "NZ").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "NZ - New Zealand").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "NU").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "NU")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "NU").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "NU - Niue Island").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "NF").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "NF")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "NF").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "NF - Norfolk Island").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "MP").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "MP")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "MP").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "MP - Northern Mariana Islands").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "pacific-islands-inc-palau").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "pacific-islands-inc-palau")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "pacific-islands-inc-palau").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Pacific Islands (inc Palau)").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "PW").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "PW")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "PW").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "PW - Palau").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "PG").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "PG")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "PG").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "PG - Papua New Guinea").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "PN").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "PN")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "PN").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "PN - Pitcairn").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "WS").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "WS")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "WS").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "WS - Samoa").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "SB").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "SB")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "SB").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "SB - Solomon Islands").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "TK").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "TK")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "TK").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "TK - Tokelau Islands").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "TO").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "TO")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "TO").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "TO - Tonga").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "TV").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "TV")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "TV").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "TV - Tuvalu").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "VU").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "VU")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "VU").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "VU - Vanuatu").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "WF").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "WF")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "WF").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "WF - Wallis & Futuna").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "D5").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "D5")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "D5").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "D5 - Non-EU (Rest of World)").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "non-european-union").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "non-european-union")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "non-european-union").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Non European Union").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "other-groupings").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "other-groupings")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "other-groupings").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Other Groupings").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "B5").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "B5")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "B5").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "B5 - EU(28)").next()
+
+
+g.V().has('_code','listID', 'countries-and-territories').has('value', "W1").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'countries-and-territories').property(single, 'value', "W1")
+  ).next()
+g.V().has('_code', 'listID', 'countries-and-territories').has('value', "W1").as('code').
+  V().has('_code_list', 'listID', 'countries-and-territories').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "W1 - Whole world").next()
+

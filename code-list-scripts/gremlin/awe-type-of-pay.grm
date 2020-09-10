@@ -3,8 +3,8 @@
 g.V().has('_code_list', 'listID', 'awe-type-of-pay').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "awe-type-of-pay").
-    property(single, 'edition', "one-off").
-    property(single, 'label', "typeofpay")
+    property(single, 'label', "typeofpay").
+    property(single, 'edition', "one-off")
   ).next()
 
 

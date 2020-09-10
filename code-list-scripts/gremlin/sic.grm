@@ -3,7 +3,7 @@
 g.V().has('_code_list', 'listID', 'sic').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "sic").
-    property(single, 'label', "standardindustrialclassification").
+    property(single, 'label', "Standard Industrial Classification").
     property(single, 'edition', "one-off")
   ).next()
 
@@ -375,7 +375,7 @@ g.V().has('_code','listID', 'sic').has('value', "01-621").
 g.V().has('_code', 'listID', 'sic').has('value', "01-621").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "01.621 : Farm animal boarding and care").next()
+       addE('usedBy').from('code')).property('label', "01.62/1 : Farm animal boarding and care").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "01-629").
@@ -385,7 +385,7 @@ g.V().has('_code','listID', 'sic').has('value', "01-629").
 g.V().has('_code', 'listID', 'sic').has('value', "01-629").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "01.629 : Support activities for animal production (other than farm animal boarding and care) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "01.62/9 : Support activities for animal production (other than farm animal boarding and care) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "01-63").
@@ -635,7 +635,7 @@ g.V().has('_code','listID', 'sic').has('value', "05-101").
 g.V().has('_code', 'listID', 'sic').has('value', "05-101").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "05.101 : Mining of hard coal from deep coal mines (underground mining)").next()
+       addE('usedBy').from('code')).property('label', "05.10/1 : Mining of hard coal from deep coal mines (underground mining)").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "05-102").
@@ -645,7 +645,7 @@ g.V().has('_code','listID', 'sic').has('value', "05-102").
 g.V().has('_code', 'listID', 'sic').has('value', "05-102").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "05.102 : Mining of hard coal from open cast coal working (surface mining)").next()
+       addE('usedBy').from('code')).property('label', "05.10/2 : Mining of hard coal from open cast coal working (surface mining)").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "05-2").
@@ -1095,7 +1095,7 @@ g.V().has('_code','listID', 'sic').has('value', "10-511").
 g.V().has('_code', 'listID', 'sic').has('value', "10-511").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "10.511 : Liquid milk and cream production").next()
+       addE('usedBy').from('code')).property('label', "10.51/1 : Liquid milk and cream production").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "10-512").
@@ -1105,7 +1105,7 @@ g.V().has('_code','listID', 'sic').has('value', "10-512").
 g.V().has('_code', 'listID', 'sic').has('value', "10-512").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "10.512 : Butter and cheese production").next()
+       addE('usedBy').from('code')).property('label', "10.51/2 : Butter and cheese production").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "10-519").
@@ -1115,7 +1115,7 @@ g.V().has('_code','listID', 'sic').has('value', "10-519").
 g.V().has('_code', 'listID', 'sic').has('value', "10-519").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "10.519 : Manufacture of milk products (other than liquid milk and cream, butter, cheese) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "10.51/9 : Manufacture of milk products (other than liquid milk and cream, butter, cheese) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "10-52").
@@ -1155,7 +1155,7 @@ g.V().has('_code','listID', 'sic').has('value', "10-611").
 g.V().has('_code', 'listID', 'sic').has('value', "10-611").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "10.611 : Grain milling").next()
+       addE('usedBy').from('code')).property('label', "10.61/1 : Grain milling").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "10-612").
@@ -1165,7 +1165,7 @@ g.V().has('_code','listID', 'sic').has('value', "10-612").
 g.V().has('_code', 'listID', 'sic').has('value', "10-612").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "10.612 : Manufacture of breakfast cereals and cereals-based foods").next()
+       addE('usedBy').from('code')).property('label', "10.61/2 : Manufacture of breakfast cereals and cereals-based foods").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "10-62").
@@ -1255,7 +1255,7 @@ g.V().has('_code','listID', 'sic').has('value', "10-821").
 g.V().has('_code', 'listID', 'sic').has('value', "10-821").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "10.821 : Manufacture of cocoa, and chocolate confectionery").next()
+       addE('usedBy').from('code')).property('label', "10.82/1 : Manufacture of cocoa, and chocolate confectionery").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "10-822").
@@ -1265,7 +1265,7 @@ g.V().has('_code','listID', 'sic').has('value', "10-822").
 g.V().has('_code', 'listID', 'sic').has('value', "10-822").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "10.822 : Manufacture of sugar confectionery").next()
+       addE('usedBy').from('code')).property('label', "10.82/2 : Manufacture of sugar confectionery").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "10-83").
@@ -1285,7 +1285,7 @@ g.V().has('_code','listID', 'sic').has('value', "10-831").
 g.V().has('_code', 'listID', 'sic').has('value', "10-831").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "10.831 : Tea processing").next()
+       addE('usedBy').from('code')).property('label', "10.83/1 : Tea processing").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "10-832").
@@ -1295,7 +1295,7 @@ g.V().has('_code','listID', 'sic').has('value', "10-832").
 g.V().has('_code', 'listID', 'sic').has('value', "10-832").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "10.832 : Production of coffee and coffee substitutes").next()
+       addE('usedBy').from('code')).property('label', "10.83/2 : Production of coffee and coffee substitutes").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "10-84").
@@ -1355,7 +1355,7 @@ g.V().has('_code','listID', 'sic').has('value', "10-91").
 g.V().has('_code', 'listID', 'sic').has('value', "10-91").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "10.91 : Manufacture of prepared animal feeds for farm animals").next()
+       addE('usedBy').from('code')).property('label', "10.91 : Manufacture of prepared feeds for farm animals").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "10-92").
@@ -1595,7 +1595,7 @@ g.V().has('_code','listID', 'sic').has('value', "13-921").
 g.V().has('_code', 'listID', 'sic').has('value', "13-921").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "13.921 : Manufacture of soft furnishings").next()
+       addE('usedBy').from('code')).property('label', "13.92/1 : Manufacture of soft furnishings").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "13-922").
@@ -1605,7 +1605,7 @@ g.V().has('_code','listID', 'sic').has('value', "13-922").
 g.V().has('_code', 'listID', 'sic').has('value', "13-922").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "13.922 : Manufacture of canvas goods, sacks etc.").next()
+       addE('usedBy').from('code')).property('label', "13.92/2 : Manufacture of canvas goods, sacks etc.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "13-923").
@@ -1615,7 +1615,7 @@ g.V().has('_code','listID', 'sic').has('value', "13-923").
 g.V().has('_code', 'listID', 'sic').has('value', "13-923").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "13.923 : Manufacture of household textiles (other than soft furnishings of 13.92/1)").next()
+       addE('usedBy').from('code')).property('label', "13.92/3 : Manufacture of household textiles (other than soft furnishings of 13.92/1)").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "13-93").
@@ -1635,7 +1635,7 @@ g.V().has('_code','listID', 'sic').has('value', "13-931").
 g.V().has('_code', 'listID', 'sic').has('value', "13-931").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "13.931 : Manufacture of woven or tufted carpets and rugs").next()
+       addE('usedBy').from('code')).property('label', "13.93/1 : Manufacture of woven or tufted carpets and rugs").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "13-939").
@@ -1645,7 +1645,7 @@ g.V().has('_code','listID', 'sic').has('value', "13-939").
 g.V().has('_code', 'listID', 'sic').has('value', "13-939").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "13.939 : Manufacture of carpets and rugs (other than woven or tufted) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "13.93/9 : Manufacture of carpets and rugs (other than woven or tufted) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "13-94").
@@ -1745,7 +1745,7 @@ g.V().has('_code','listID', 'sic').has('value', "14-131").
 g.V().has('_code', 'listID', 'sic').has('value', "14-131").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "14.131 : Manufacture of men&#39;s outerwear, other than leather clothes and workwear").next()
+       addE('usedBy').from('code')).property('label', "14.13/1 : Manufacture of men's outerwear, other than leather clothes and workwear").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "14-132").
@@ -1755,7 +1755,7 @@ g.V().has('_code','listID', 'sic').has('value', "14-132").
 g.V().has('_code', 'listID', 'sic').has('value', "14-132").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "14.132 : Manufacture of women&#39;s outerwear, other than leather clothes and workwear").next()
+       addE('usedBy').from('code')).property('label', "14.13/2 : Manufacture of women's outerwear, other than leather clothes and workwear").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "14-14").
@@ -1775,7 +1775,7 @@ g.V().has('_code','listID', 'sic').has('value', "14-141").
 g.V().has('_code', 'listID', 'sic').has('value', "14-141").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "14.141 : Manufacture of men&#39;s underwear").next()
+       addE('usedBy').from('code')).property('label', "14.14/1 : Manufacture of men's underwear").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "14-142").
@@ -1785,7 +1785,7 @@ g.V().has('_code','listID', 'sic').has('value', "14-142").
 g.V().has('_code', 'listID', 'sic').has('value', "14-142").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "14.142 : Manufacture of women&#39;s underwear").next()
+       addE('usedBy').from('code')).property('label', "14.14/2 : Manufacture of women's underwear").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "14-19").
@@ -1795,7 +1795,7 @@ g.V().has('_code','listID', 'sic').has('value', "14-19").
 g.V().has('_code', 'listID', 'sic').has('value', "14-19").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "14.19 : Manufacture of other wearing apparel and accessories n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "14.19 : Manufacture of other wearing apparel and accessories").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "14-2").
@@ -1975,7 +1975,7 @@ g.V().has('_code','listID', 'sic').has('value', "16-23").
 g.V().has('_code', 'listID', 'sic').has('value', "16-23").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "16.23 : Manufacture of other builders&#39; carpentry and joinery").next()
+       addE('usedBy').from('code')).property('label', "16.23 : Manufacture of other builders' carpentry and joinery").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "16-24").
@@ -2065,7 +2065,7 @@ g.V().has('_code','listID', 'sic').has('value', "17-211").
 g.V().has('_code', 'listID', 'sic').has('value', "17-211").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "17.211 : Manufacture of corrugated paper and paperboard; manufacture of sacks and bags of paper").next()
+       addE('usedBy').from('code')).property('label', "17.21/1 : Manufacture of corrugated paper and paperboard; manufacture of sacks and bags of paper").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "17-219").
@@ -2075,7 +2075,7 @@ g.V().has('_code','listID', 'sic').has('value', "17-219").
 g.V().has('_code', 'listID', 'sic').has('value', "17-219").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "17.219 : Manufacture of paper and paperboard containers other than sacks and bags").next()
+       addE('usedBy').from('code')).property('label', "17.21/9 : Manufacture of paper and paperboard containers other than sacks and bags").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "17-22").
@@ -2165,7 +2165,7 @@ g.V().has('_code','listID', 'sic').has('value', "18-121").
 g.V().has('_code', 'listID', 'sic').has('value', "18-121").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "18.121 : Manufacture of printed labels").next()
+       addE('usedBy').from('code')).property('label', "18.12/1 : Manufacture of printed labels").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "18-129").
@@ -2175,7 +2175,7 @@ g.V().has('_code','listID', 'sic').has('value', "18-129").
 g.V().has('_code', 'listID', 'sic').has('value', "18-129").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "18.129 : Printing (other than printing of newspapers and printing on labels and tags) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "18.12/9 : Printing (other than printing of newspapers and printing on labels and tags) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "18-13").
@@ -2225,7 +2225,7 @@ g.V().has('_code','listID', 'sic').has('value', "18-201").
 g.V().has('_code', 'listID', 'sic').has('value', "18-201").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "18.201 : Reproduction of sound recording").next()
+       addE('usedBy').from('code')).property('label', "18.20/1 : Reproduction of sound recording").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "18-202").
@@ -2235,7 +2235,7 @@ g.V().has('_code','listID', 'sic').has('value', "18-202").
 g.V().has('_code', 'listID', 'sic').has('value', "18-202").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "18.202 : Reproduction of video recording").next()
+       addE('usedBy').from('code')).property('label', "18.20/2 : Reproduction of video recording").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "18-203").
@@ -2245,7 +2245,7 @@ g.V().has('_code','listID', 'sic').has('value', "18-203").
 g.V().has('_code', 'listID', 'sic').has('value', "18-203").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "18.203 : Reproduction of computer media").next()
+       addE('usedBy').from('code')).property('label', "18.20/3 : Reproduction of computer media").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "19").
@@ -2305,7 +2305,7 @@ g.V().has('_code','listID', 'sic').has('value', "19-201").
 g.V().has('_code', 'listID', 'sic').has('value', "19-201").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "19.201 : Mineral oil refining").next()
+       addE('usedBy').from('code')).property('label', "19.20/1 : Mineral oil refining").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "19-209").
@@ -2315,7 +2315,7 @@ g.V().has('_code','listID', 'sic').has('value', "19-209").
 g.V().has('_code', 'listID', 'sic').has('value', "19-209").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "19.209 : Other treatment of petroleum products (excluding mineral oil refining/petrochemicals manufacture)").next()
+       addE('usedBy').from('code')).property('label', "19.20/9 : Other treatment of petroleum products (excluding mineral oil refining/petrochemicals manufacture)").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "20").
@@ -2455,7 +2455,7 @@ g.V().has('_code','listID', 'sic').has('value', "20-301").
 g.V().has('_code', 'listID', 'sic').has('value', "20-301").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "20.301 : Manufacture of paints, varnishes and similar coatings, mastics and sealants").next()
+       addE('usedBy').from('code')).property('label', "20.30/1 : Manufacture of paints, varnishes and similar coatings, mastics and sealants").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "20-302").
@@ -2465,7 +2465,7 @@ g.V().has('_code','listID', 'sic').has('value', "20-302").
 g.V().has('_code', 'listID', 'sic').has('value', "20-302").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "20.302 : Manufacture of printing ink").next()
+       addE('usedBy').from('code')).property('label', "20.30/2 : Manufacture of printing ink").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "20-4").
@@ -2495,7 +2495,7 @@ g.V().has('_code','listID', 'sic').has('value', "20-411").
 g.V().has('_code', 'listID', 'sic').has('value', "20-411").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "20.411 : Manufacture of soap and detergents").next()
+       addE('usedBy').from('code')).property('label', "20.41/1 : Manufacture of soap and detergents").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "20-412").
@@ -2505,7 +2505,7 @@ g.V().has('_code','listID', 'sic').has('value', "20-412").
 g.V().has('_code', 'listID', 'sic').has('value', "20-412").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "20.412 : Manufacture of cleaning and polishing preparations").next()
+       addE('usedBy').from('code')).property('label', "20.41/2 : Manufacture of cleaning and polishing preparations").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "20-42").
@@ -2715,7 +2715,7 @@ g.V().has('_code','listID', 'sic').has('value', "22-23").
 g.V().has('_code', 'listID', 'sic').has('value', "22-23").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "22.23 : Manufacture of builders ware of plastic").next()
+       addE('usedBy').from('code')).property('label', "22.23 : Manufacture of builders’ ware of plastic").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "22-29").
@@ -3625,7 +3625,7 @@ g.V().has('_code','listID', 'sic').has('value', "26-301").
 g.V().has('_code', 'listID', 'sic').has('value', "26-301").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "26.301 : Manufacture of telegraph and telephone apparatus and equipment").next()
+       addE('usedBy').from('code')).property('label', "26.30/1 : Manufacture of telegraph and telephone apparatus and equipment").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "26-309").
@@ -3635,7 +3635,7 @@ g.V().has('_code','listID', 'sic').has('value', "26-309").
 g.V().has('_code', 'listID', 'sic').has('value', "26-309").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "26.309 : Manufacture of communication equipment (other than telegraph and telephone apparatus and equipment)").next()
+       addE('usedBy').from('code')).property('label', "26.30/9 : Manufacture of communication equipment (other than telegraph and telephone apparatus and equipment)").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "26-4").
@@ -3685,7 +3685,7 @@ g.V().has('_code','listID', 'sic').has('value', "26-511").
 g.V().has('_code', 'listID', 'sic').has('value', "26-511").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "26.511 : Manufacture of electronic instruments and appliances for measuring, testing, and navigation, except industrial process control equipment").next()
+       addE('usedBy').from('code')).property('label', "26.51/1 : Manufacture of electronic instruments and appliances for measuring, testing, and navigation, except industrial process control equipment").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "26-512").
@@ -3695,7 +3695,7 @@ g.V().has('_code','listID', 'sic').has('value', "26-512").
 g.V().has('_code', 'listID', 'sic').has('value', "26-512").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "26.512 : Manufacture of electronic industrial process control equipment").next()
+       addE('usedBy').from('code')).property('label', "26.51/2 : Manufacture of electronic industrial process control equipment").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "26-513").
@@ -3705,7 +3705,7 @@ g.V().has('_code','listID', 'sic').has('value', "26-513").
 g.V().has('_code', 'listID', 'sic').has('value', "26-513").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "26.513 : Manufacture of non-electronic instruments and appliances for measuring, testing and navigation, except industrial process control equipment").next()
+       addE('usedBy').from('code')).property('label', "26.51/3 : Manufacture of non-electronic instruments and appliances for measuring, testing and navigation, except industrial process control equipment").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "26-514").
@@ -3715,7 +3715,7 @@ g.V().has('_code','listID', 'sic').has('value', "26-514").
 g.V().has('_code', 'listID', 'sic').has('value', "26-514").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "26.514 : Manufacture of non-electronic industrial process control equipment").next()
+       addE('usedBy').from('code')).property('label', "26.51/4 : Manufacture of non-electronic industrial process control equipment").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "26-52").
@@ -3775,7 +3775,7 @@ g.V().has('_code','listID', 'sic').has('value', "26-701").
 g.V().has('_code', 'listID', 'sic').has('value', "26-701").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "26.701 : Manufacture of optical precision instruments").next()
+       addE('usedBy').from('code')).property('label', "26.70/1 : Manufacture of optical precision instruments").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "26-702").
@@ -3785,7 +3785,7 @@ g.V().has('_code','listID', 'sic').has('value', "26-702").
 g.V().has('_code', 'listID', 'sic').has('value', "26-702").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "26.702 : Manufacture of photographic and cinematographic equipment").next()
+       addE('usedBy').from('code')).property('label', "26.70/2 : Manufacture of photographic and cinematographic equipment").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "26-8").
@@ -3995,7 +3995,7 @@ g.V().has('_code','listID', 'sic').has('value', "28-1").
 g.V().has('_code', 'listID', 'sic').has('value', "28-1").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "28.1 : Manufacture of general purpose machinery").next()
+       addE('usedBy').from('code')).property('label', "28.1 : Manufacture of general-purpose machinery").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "28-11").
@@ -4035,7 +4035,7 @@ g.V().has('_code','listID', 'sic').has('value', "28-131").
 g.V().has('_code', 'listID', 'sic').has('value', "28-131").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "28.131 : Manufacture of pumps").next()
+       addE('usedBy').from('code')).property('label', "28.13/1 : Manufacture of pumps").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "28-132").
@@ -4045,7 +4045,7 @@ g.V().has('_code','listID', 'sic').has('value', "28-132").
 g.V().has('_code', 'listID', 'sic').has('value', "28-132").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "28.132 : Manufacture of compressors").next()
+       addE('usedBy').from('code')).property('label', "28.13/2 : Manufacture of compressors").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "28-14").
@@ -4165,7 +4165,7 @@ g.V().has('_code','listID', 'sic').has('value', "28-301").
 g.V().has('_code', 'listID', 'sic').has('value', "28-301").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "28.301 : Manufacture of agricultural tractors").next()
+       addE('usedBy').from('code')).property('label', "28.30/1 : Manufacture of agricultural tractors").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "28-302").
@@ -4175,7 +4175,7 @@ g.V().has('_code','listID', 'sic').has('value', "28-302").
 g.V().has('_code', 'listID', 'sic').has('value', "28-302").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "28.302 : Manufacture of agricultural and forestry machinery (other than agricultural tractors)").next()
+       addE('usedBy').from('code')).property('label', "28.30/2 : Manufacture of agricultural and forestry machinery (other than agricultural tractors)").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "28-4").
@@ -4245,7 +4245,7 @@ g.V().has('_code','listID', 'sic').has('value', "28-921").
 g.V().has('_code', 'listID', 'sic').has('value', "28-921").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "28.921 : Manufacture of machinery for mining").next()
+       addE('usedBy').from('code')).property('label', "28.92/1 : Manufacture of machinery for mining").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "28-922").
@@ -4255,7 +4255,7 @@ g.V().has('_code','listID', 'sic').has('value', "28-922").
 g.V().has('_code', 'listID', 'sic').has('value', "28-922").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "28.922 : Manufacture of earthmoving equipment").next()
+       addE('usedBy').from('code')).property('label', "28.92/2 : Manufacture of earthmoving equipment").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "28-923").
@@ -4265,7 +4265,7 @@ g.V().has('_code','listID', 'sic').has('value', "28-923").
 g.V().has('_code', 'listID', 'sic').has('value', "28-923").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "28.923 : Manufacture of equipment for concrete crushing and screening roadworks").next()
+       addE('usedBy').from('code')).property('label', "28.92/3 : Manufacture of equipment for concrete crushing and screening roadworks").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "28-93").
@@ -4375,7 +4375,7 @@ g.V().has('_code','listID', 'sic').has('value', "29-201").
 g.V().has('_code', 'listID', 'sic').has('value', "29-201").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "29.201 : Manufacture of bodies (coachwork) for motor vehicles (except caravans)").next()
+       addE('usedBy').from('code')).property('label', "29.20/1 : Manufacture of bodies (coachwork) for motor vehicles (except caravans)").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "29-202").
@@ -4385,7 +4385,7 @@ g.V().has('_code','listID', 'sic').has('value', "29-202").
 g.V().has('_code', 'listID', 'sic').has('value', "29-202").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "29.202 : Manufacture of trailers and semi-trailers").next()
+       addE('usedBy').from('code')).property('label', "29.20/2 : Manufacture of trailers and semi-trailers").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "29-203").
@@ -4395,7 +4395,7 @@ g.V().has('_code','listID', 'sic').has('value', "29-203").
 g.V().has('_code', 'listID', 'sic').has('value', "29-203").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "29.203 : Manufacture of caravans").next()
+       addE('usedBy').from('code')).property('label', "29.20/3 : Manufacture of caravans").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "29-3").
@@ -4745,7 +4745,7 @@ g.V().has('_code','listID', 'sic').has('value', "32-401").
 g.V().has('_code', 'listID', 'sic').has('value', "32-401").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "32.401 : Manufacture of professional and arcade games and toys").next()
+       addE('usedBy').from('code')).property('label', "32.40/1 : Manufacture of professional and arcade games and toys").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "32-409").
@@ -4755,7 +4755,7 @@ g.V().has('_code','listID', 'sic').has('value', "32-409").
 g.V().has('_code', 'listID', 'sic').has('value', "32-409").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "32.409 : Manufacture of games and toys (other than professional and arcade games and toys) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "32.40/9 : Manufacture of games and toys (other than professional and arcade games and toys) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "32-5").
@@ -4785,7 +4785,7 @@ g.V().has('_code','listID', 'sic').has('value', "32-9").
 g.V().has('_code', 'listID', 'sic').has('value', "32-9").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "32.9 : Manufacturing n.e.c").next()
+       addE('usedBy').from('code')).property('label', "32.9 : Other manufacturing n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "32-91").
@@ -4875,7 +4875,7 @@ g.V().has('_code','listID', 'sic').has('value', "33-15").
 g.V().has('_code', 'listID', 'sic').has('value', "33-15").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "33.15 : Repair and maintenance of ships and boats").next()
+       addE('usedBy').from('code')).property('label', "33.15 : Repair and mainte*ce of ships and boats").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "33-16").
@@ -4885,7 +4885,7 @@ g.V().has('_code','listID', 'sic').has('value', "33-16").
 g.V().has('_code', 'listID', 'sic').has('value', "33-16").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "33.16 : Repair and maintenance of aircraft and spacecraft").next()
+       addE('usedBy').from('code')).property('label', "33.16 : Repair and mainte*ce of aircraft and spacecraft").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "33-17").
@@ -4895,7 +4895,7 @@ g.V().has('_code','listID', 'sic').has('value', "33-17").
 g.V().has('_code', 'listID', 'sic').has('value', "33-17").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "33.17 : Repair and maintenance of other transport equipment").next()
+       addE('usedBy').from('code')).property('label', "33.17 : Repair and mainte*ce of other transport equipment").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "33-19").
@@ -5235,7 +5235,7 @@ g.V().has('_code','listID', 'sic').has('value', "39").
 g.V().has('_code', 'listID', 'sic').has('value', "39").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "39 : Remediation activities and other waste management services").next()
+       addE('usedBy').from('code')).property('label', "39 : Remediation activities and other waste management services.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "39-0").
@@ -5315,7 +5315,7 @@ g.V().has('_code','listID', 'sic').has('value', "41-20").
 g.V().has('_code', 'listID', 'sic').has('value', "41-20").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "41.20 : Construction of buildings").next()
+       addE('usedBy').from('code')).property('label', "41.20 : Construction of residential and non-residential buildings").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "41-201").
@@ -5325,7 +5325,7 @@ g.V().has('_code','listID', 'sic').has('value', "41-201").
 g.V().has('_code', 'listID', 'sic').has('value', "41-201").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "41.201 : Construction of commercial buildings").next()
+       addE('usedBy').from('code')).property('label', "41.20/1 : Construction of commercial buildings").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "41-202").
@@ -5335,7 +5335,7 @@ g.V().has('_code','listID', 'sic').has('value', "41-202").
 g.V().has('_code', 'listID', 'sic').has('value', "41-202").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "41.202 : Construction of domestic buildings").next()
+       addE('usedBy').from('code')).property('label', "41.20/2 : Construction of domestic buildings").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "42").
@@ -5595,7 +5595,7 @@ g.V().has('_code','listID', 'sic').has('value', "43-341").
 g.V().has('_code', 'listID', 'sic').has('value', "43-341").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "43.341 : Painting").next()
+       addE('usedBy').from('code')).property('label', "43.34/1 : Painting").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "43-342").
@@ -5605,7 +5605,7 @@ g.V().has('_code','listID', 'sic').has('value', "43-342").
 g.V().has('_code', 'listID', 'sic').has('value', "43-342").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "43.342 : Glazing").next()
+       addE('usedBy').from('code')).property('label', "43.34/2 : Glazing").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "43-39").
@@ -5655,7 +5655,7 @@ g.V().has('_code','listID', 'sic').has('value', "43-991").
 g.V().has('_code', 'listID', 'sic').has('value', "43-991").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "43.991 : Scaffold erection").next()
+       addE('usedBy').from('code')).property('label', "43.99/1 : Scaffold erection").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "43-999").
@@ -5665,7 +5665,7 @@ g.V().has('_code','listID', 'sic').has('value', "43-999").
 g.V().has('_code', 'listID', 'sic').has('value', "43-999").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "43.999 : Specialised construction activities (other than scaffold erection) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "43.99/9 : Specialised construction activities (other than scaffold erection) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "G").
@@ -5715,7 +5715,7 @@ g.V().has('_code','listID', 'sic').has('value', "45-111").
 g.V().has('_code', 'listID', 'sic').has('value', "45-111").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "45.111 : Sale of new cars and light motor vehicles").next()
+       addE('usedBy').from('code')).property('label', "45.11/1 : Sale of new cars and light motor vehicles").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "45-112").
@@ -5725,7 +5725,7 @@ g.V().has('_code','listID', 'sic').has('value', "45-112").
 g.V().has('_code', 'listID', 'sic').has('value', "45-112").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "45.112 : Sale of used cars and light motor vehicles").next()
+       addE('usedBy').from('code')).property('label', "45.11/2 : Sale of used cars and light motor vehicles").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "45-19").
@@ -5745,7 +5745,7 @@ g.V().has('_code','listID', 'sic').has('value', "45-2").
 g.V().has('_code', 'listID', 'sic').has('value', "45-2").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "45.2 : Maintenance and repair of motor vehicles").next()
+       addE('usedBy').from('code')).property('label', "45.2 : Mainte*ce and repair of motor vehicles").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "45-20").
@@ -5755,7 +5755,7 @@ g.V().has('_code','listID', 'sic').has('value', "45-20").
 g.V().has('_code', 'listID', 'sic').has('value', "45-20").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "45.20 : Maintenance and repair of motor vehicles").next()
+       addE('usedBy').from('code')).property('label', "45.20 : Mainte*ce and repair of motor vehicles").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "45-3").
@@ -5795,7 +5795,7 @@ g.V().has('_code','listID', 'sic').has('value', "45-4").
 g.V().has('_code', 'listID', 'sic').has('value', "45-4").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "45.4 : Sale, maintenance and repair of motorcycles and related parts and accessories").next()
+       addE('usedBy').from('code')).property('label', "45.4 : Sale, mainte*ce and repair of motorcycles and related parts and accessories").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "45-40").
@@ -5805,7 +5805,7 @@ g.V().has('_code','listID', 'sic').has('value', "45-40").
 g.V().has('_code', 'listID', 'sic').has('value', "45-40").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "45.40 : Sale, maintenance and repair of motorcycles and related parts and accessories").next()
+       addE('usedBy').from('code')).property('label', "45.40 : Sale, mainte*ce and repair of motorcycles and related parts and accessories").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "46").
@@ -6015,7 +6015,7 @@ g.V().has('_code','listID', 'sic').has('value', "46-34").
 g.V().has('_code', 'listID', 'sic').has('value', "46-34").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "46.34 : Wholesale of alcoholic and other beverages").next()
+       addE('usedBy').from('code')).property('label', "46.34 : Wholesale of beverages").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "46-341").
@@ -6025,7 +6025,7 @@ g.V().has('_code','listID', 'sic').has('value', "46-341").
 g.V().has('_code', 'listID', 'sic').has('value', "46-341").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "46.341 : Wholesale of fruit and vegetable juices, mineral waters and soft drinks").next()
+       addE('usedBy').from('code')).property('label', "46.34/1 : Wholesale of fruit and vegetable juices, mineral waters and soft drinks").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "46-342").
@@ -6035,7 +6035,7 @@ g.V().has('_code','listID', 'sic').has('value', "46-342").
 g.V().has('_code', 'listID', 'sic').has('value', "46-342").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "46.342 : Wholesale of wine, beer, spirits and other alcoholic beverages").next()
+       addE('usedBy').from('code')).property('label', "46.34/2 : Wholesale of wine, beer, spirits and other alcoholic beverages").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "46-35").
@@ -6135,7 +6135,7 @@ g.V().has('_code','listID', 'sic').has('value', "46-431").
 g.V().has('_code', 'listID', 'sic').has('value', "46-431").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "46.431 : Wholesale of gramophone records, audio tapes, compact discs and video tapes and of the equipment on which these are played").next()
+       addE('usedBy').from('code')).property('label', "46.43/1 : Wholesale of gramophone records, audio tapes, compact discs and video tapes and of the equipment on which these are played").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "46-439").
@@ -6145,7 +6145,7 @@ g.V().has('_code','listID', 'sic').has('value', "46-439").
 g.V().has('_code', 'listID', 'sic').has('value', "46-439").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "46.439 : Wholesale of radio and television goods and of electrical household appliances (other than of gramophone records, audio tapes, compact discs and video tapes and the equipment on which these are played) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "46.43/9 : Wholesale of radio and television goods and of electrical household appliances (other than of gramophone records, audio tapes, compact discs and video tapes and the equipment on which these are played) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "46-44").
@@ -6215,7 +6215,7 @@ g.V().has('_code','listID', 'sic').has('value', "46-491").
 g.V().has('_code', 'listID', 'sic').has('value', "46-491").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "46.491 : Wholesale of musical instruments").next()
+       addE('usedBy').from('code')).property('label', "46.49/1 : Wholesale of musical instruments").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "46-499").
@@ -6225,7 +6225,7 @@ g.V().has('_code','listID', 'sic').has('value', "46-499").
 g.V().has('_code', 'listID', 'sic').has('value', "46-499").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "46.499 : Wholesale of household goods (other than musical instruments) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "46.49/9 : Wholesale of household goods (other than musical instruments) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "46-5").
@@ -6365,7 +6365,7 @@ g.V().has('_code','listID', 'sic').has('value', "46-711").
 g.V().has('_code', 'listID', 'sic').has('value', "46-711").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "46.711 : Wholesale of petroleum and petroleum products").next()
+       addE('usedBy').from('code')).property('label', "46.71/1 : Wholesale of petroleum and petroleum products").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "46-719").
@@ -6375,7 +6375,7 @@ g.V().has('_code','listID', 'sic').has('value', "46-719").
 g.V().has('_code', 'listID', 'sic').has('value', "46-719").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "46.719 : Wholesale of fuels and related products (other than petroleum and petroleum products)").next()
+       addE('usedBy').from('code')).property('label', "46.71/9 : Wholesale of fuels and related products (other than petroleum and petroleum products)").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "46-72").
@@ -6635,7 +6635,7 @@ g.V().has('_code','listID', 'sic').has('value', "47-421").
 g.V().has('_code', 'listID', 'sic').has('value', "47-421").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "47.421 : Retail sale of mobile telephones in specialised stores").next()
+       addE('usedBy').from('code')).property('label', "47.42/1 : Retail sale of mobile telephones in specialised stores").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "47-429").
@@ -6645,7 +6645,7 @@ g.V().has('_code','listID', 'sic').has('value', "47-429").
 g.V().has('_code', 'listID', 'sic').has('value', "47-429").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "47.429 : Retail sale of telecommunications equipment (other than mobile telephones) n.e.c., in specialised stores").next()
+       addE('usedBy').from('code')).property('label', "47.42/9 : Retail sale of telecommunications equipment (other than mobile telephones) n.e.c., in specialised stores").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "47-43").
@@ -6725,7 +6725,7 @@ g.V().has('_code','listID', 'sic').has('value', "47-591").
 g.V().has('_code', 'listID', 'sic').has('value', "47-591").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "47.591 : Retail sale of musical instruments and scores in specialised stores").next()
+       addE('usedBy').from('code')).property('label', "47.59/1 : Retail sale of musical instruments and scores in specialised stores").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "47-599").
@@ -6735,7 +6735,7 @@ g.V().has('_code','listID', 'sic').has('value', "47-599").
 g.V().has('_code', 'listID', 'sic').has('value', "47-599").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "47.599 : Retail sale of furniture, lighting equipment and other household articles (other than musical instruments) n.e.c., in specialised stores").next()
+       addE('usedBy').from('code')).property('label', "47.59/9 : Retail sale of furniture, lighting equipment and other household articles (other than musical instruments) n.e.c., in specialised stores").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "47-6").
@@ -6835,7 +6835,7 @@ g.V().has('_code','listID', 'sic').has('value', "47-721").
 g.V().has('_code', 'listID', 'sic').has('value', "47-721").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "47.721 : Retail sale of footwear in specialised stores").next()
+       addE('usedBy').from('code')).property('label', "47.72/1 : Retail sale of footwear in specialised stores").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "47-722").
@@ -6845,7 +6845,7 @@ g.V().has('_code','listID', 'sic').has('value', "47-722").
 g.V().has('_code', 'listID', 'sic').has('value', "47-722").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "47.722 : Retail sale of leather goods in specialised stores").next()
+       addE('usedBy').from('code')).property('label', "47.72/2 : Retail sale of leather goods in specialised stores").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "47-73").
@@ -6875,7 +6875,7 @@ g.V().has('_code','listID', 'sic').has('value', "47-741").
 g.V().has('_code', 'listID', 'sic').has('value', "47-741").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "47.741 : Retail sale of hearing aids in specialised stores").next()
+       addE('usedBy').from('code')).property('label', "47.74/1 : Retail sale of hearing aids in specialised stores").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "47-749").
@@ -6885,7 +6885,7 @@ g.V().has('_code','listID', 'sic').has('value', "47-749").
 g.V().has('_code', 'listID', 'sic').has('value', "47-749").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "47.749 : Retail sale of medical and orthopaedic goods (other than hearing aids) n.e.c., in specialised stores").next()
+       addE('usedBy').from('code')).property('label', "47.74/9 : Retail sale of medical and orthopaedic goods (other than hearing aids) n.e.c., in specialised stores").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "47-75").
@@ -6935,7 +6935,7 @@ g.V().has('_code','listID', 'sic').has('value', "47-781").
 g.V().has('_code', 'listID', 'sic').has('value', "47-781").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "47.781 : Retail sale in commercial art galleries").next()
+       addE('usedBy').from('code')).property('label', "47.78/1 : Retail sale in commercial art galleries").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "47-782").
@@ -6945,7 +6945,7 @@ g.V().has('_code','listID', 'sic').has('value', "47-782").
 g.V().has('_code', 'listID', 'sic').has('value', "47-782").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "47.782 : Retail sale by opticians").next()
+       addE('usedBy').from('code')).property('label', "47.78/2 : Retail sale by opticians").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "47-789").
@@ -6955,7 +6955,7 @@ g.V().has('_code','listID', 'sic').has('value', "47-789").
 g.V().has('_code', 'listID', 'sic').has('value', "47-789").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "47.789 : Other retail sale of new goods in specialised stores (other than by opticians or commercial art galleries), n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "47.78/9 : Other retail sale of new goods in specialised stores (other than by opticians or commercial art galleries), n.e.c").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "47-79").
@@ -6975,7 +6975,7 @@ g.V().has('_code','listID', 'sic').has('value', "47-791").
 g.V().has('_code', 'listID', 'sic').has('value', "47-791").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "47.791 : Retail sale of antiques including antique books, in stores").next()
+       addE('usedBy').from('code')).property('label', "47.79/1 : Retail sale of antiques including antique books, in stores").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "47-799").
@@ -6985,7 +6985,7 @@ g.V().has('_code','listID', 'sic').has('value', "47-799").
 g.V().has('_code', 'listID', 'sic').has('value', "47-799").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "47.799 : Retail sale of second-hand goods (other than antiques and antique books) in stores").next()
+       addE('usedBy').from('code')).property('label', "47.79/9 : Retail sale of second-hand goods (other than antiques and antique books) in stores").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "47-8").
@@ -7145,7 +7145,7 @@ g.V().has('_code','listID', 'sic').has('value', "49-311").
 g.V().has('_code', 'listID', 'sic').has('value', "49-311").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "49.311 : Urban, suburban or metropolitan area passenger railway transportation by underground, metro and similar systems").next()
+       addE('usedBy').from('code')).property('label', "49.31/1 : Urban, suburban or metropolitan area passenger railway transportation by underground, metro and similar systems").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "49-319").
@@ -7155,7 +7155,7 @@ g.V().has('_code','listID', 'sic').has('value', "49-319").
 g.V().has('_code', 'listID', 'sic').has('value', "49-319").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "49.319 : Urban, suburban or metropolitan area passenger land transport other than railway transportation by underground, metro and similar systems").next()
+       addE('usedBy').from('code')).property('label', "49.31/9 : Urban, suburban or metropolitan area passenger land transport other than railway transportation by underground, metro and similar systems").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "49-32").
@@ -7355,7 +7355,7 @@ g.V().has('_code','listID', 'sic').has('value', "51-101").
 g.V().has('_code', 'listID', 'sic').has('value', "51-101").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "51.101 : Scheduled passenger air transport").next()
+       addE('usedBy').from('code')).property('label', "51.10/1 : Scheduled passenger air transport").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "51-102").
@@ -7365,7 +7365,7 @@ g.V().has('_code','listID', 'sic').has('value', "51-102").
 g.V().has('_code', 'listID', 'sic').has('value', "51-102").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "51.102 : Non-scheduled passenger air transport").next()
+       addE('usedBy').from('code')).property('label', "51.10/2 : Non-scheduled passenger air transport").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "51-2").
@@ -7435,7 +7435,7 @@ g.V().has('_code','listID', 'sic').has('value', "52-101").
 g.V().has('_code', 'listID', 'sic').has('value', "52-101").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "52.101 : Operation of warehousing and storage facilities for water transport activities of division").next()
+       addE('usedBy').from('code')).property('label', "52.10/1 : Operation of warehousing and storage facilities for water transport activities of division 50").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "52-102").
@@ -7445,7 +7445,7 @@ g.V().has('_code','listID', 'sic').has('value', "52-102").
 g.V().has('_code', 'listID', 'sic').has('value', "52-102").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "52.102 : Operation of warehousing and storage facilities for air transport activities of division").next()
+       addE('usedBy').from('code')).property('label', "52.10/2 : Operation of warehousing and storage facilities for air transport activities of division 51").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "52-103").
@@ -7455,7 +7455,7 @@ g.V().has('_code','listID', 'sic').has('value', "52-103").
 g.V().has('_code', 'listID', 'sic').has('value', "52-103").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "52.103 : Operation of warehousing and storage facilities for land transport activities of division").next()
+       addE('usedBy').from('code')).property('label', "52.10/3 : Operation of warehousing and storage facilities for land transport activities of division 49").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "52-2").
@@ -7485,7 +7485,7 @@ g.V().has('_code','listID', 'sic').has('value', "52-211").
 g.V().has('_code', 'listID', 'sic').has('value', "52-211").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "52.211 : Operation of rail freight terminals").next()
+       addE('usedBy').from('code')).property('label', "52.21/1 : Operation of rail freight terminals").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "52-212").
@@ -7495,7 +7495,7 @@ g.V().has('_code','listID', 'sic').has('value', "52-212").
 g.V().has('_code', 'listID', 'sic').has('value', "52-212").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "52.212 : Operation of rail passenger facilities at railway stations").next()
+       addE('usedBy').from('code')).property('label', "52.21/2 : Operation of rail passenger facilities at railway stations").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "52-213").
@@ -7505,7 +7505,7 @@ g.V().has('_code','listID', 'sic').has('value', "52-213").
 g.V().has('_code', 'listID', 'sic').has('value', "52-213").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "52.213 : Operation of bus and coach passenger facilities at bus and coach stations").next()
+       addE('usedBy').from('code')).property('label', "52.21/3 : Operation of bus and coach passenger facilities at bus and coach stations").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "52-219").
@@ -7515,7 +7515,7 @@ g.V().has('_code','listID', 'sic').has('value', "52-219").
 g.V().has('_code', 'listID', 'sic').has('value', "52-219").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "52.219 : Other service activities incidental to land transportation, n.e.c. (not including operation of rail freight terminals, passenger facilities at railway stations or passenger facilities at bus and coach stations)").next()
+       addE('usedBy').from('code')).property('label', "52.21/9 : Other service activities incidental to land transportation, n.e.c. (not including operation of rail freight terminals, passenger facilities at railway stations or passenger facilities at bus and coach stations)").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "52-22").
@@ -7555,7 +7555,7 @@ g.V().has('_code','listID', 'sic').has('value', "52-241").
 g.V().has('_code', 'listID', 'sic').has('value', "52-241").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "52.241 : Cargo handling for water transport activities of division").next()
+       addE('usedBy').from('code')).property('label', "52.24/1 : Cargo handling for water transport activities of division 50").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "52-242").
@@ -7565,7 +7565,7 @@ g.V().has('_code','listID', 'sic').has('value', "52-242").
 g.V().has('_code', 'listID', 'sic').has('value', "52-242").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "52.242 : Cargo handling for air transport activities of division").next()
+       addE('usedBy').from('code')).property('label', "52.24/2 : Cargo handling for air transport activities of division 51").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "52-243").
@@ -7575,7 +7575,7 @@ g.V().has('_code','listID', 'sic').has('value', "52-243").
 g.V().has('_code', 'listID', 'sic').has('value', "52-243").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "52.243 : Cargo handling for land transport activities of division").next()
+       addE('usedBy').from('code')).property('label', "52.24/3 : Cargo handling for land transport activities of division 49").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "52-29").
@@ -7645,7 +7645,7 @@ g.V().has('_code','listID', 'sic').has('value', "53-201").
 g.V().has('_code', 'listID', 'sic').has('value', "53-201").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "53.201 : Licensed carriers").next()
+       addE('usedBy').from('code')).property('label', "53.20/1 : Licensed carriers").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "53-202").
@@ -7655,7 +7655,7 @@ g.V().has('_code','listID', 'sic').has('value', "53-202").
 g.V().has('_code', 'listID', 'sic').has('value', "53-202").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "53.202 : Unlicensed carriers").next()
+       addE('usedBy').from('code')).property('label', "53.20/2 : Unlicensed carriers").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "I").
@@ -7725,7 +7725,7 @@ g.V().has('_code','listID', 'sic').has('value', "55-201").
 g.V().has('_code', 'listID', 'sic').has('value', "55-201").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "55.201 : Holiday centres and villages").next()
+       addE('usedBy').from('code')).property('label', "55.20/1 : Holiday centres and villages").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "55-202").
@@ -7735,7 +7735,7 @@ g.V().has('_code','listID', 'sic').has('value', "55-202").
 g.V().has('_code', 'listID', 'sic').has('value', "55-202").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "55.202 : Youth hostels").next()
+       addE('usedBy').from('code')).property('label', "55.20/2 : Youth hostels").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "55-209").
@@ -7745,7 +7745,7 @@ g.V().has('_code','listID', 'sic').has('value', "55-209").
 g.V().has('_code', 'listID', 'sic').has('value', "55-209").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "55.209 : Other holiday and other short stay accommodation (not including holiday centres and villages or youth hostels) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "55.20/9 : Other holiday and other short-stay accommodation (not including holiday centres and villages or youth hostels) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "55-3").
@@ -7825,7 +7825,7 @@ g.V().has('_code','listID', 'sic').has('value', "56-101").
 g.V().has('_code', 'listID', 'sic').has('value', "56-101").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "56.101 : Licensed restaurants").next()
+       addE('usedBy').from('code')).property('label', "56.10/1 : Licensed restaurants").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "56-102").
@@ -7835,7 +7835,7 @@ g.V().has('_code','listID', 'sic').has('value', "56-102").
 g.V().has('_code', 'listID', 'sic').has('value', "56-102").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "56.102 : Unlicensed restaurants and cafes").next()
+       addE('usedBy').from('code')).property('label', "56.10/2 : Unlicensed restaurants and cafes").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "56-103").
@@ -7845,7 +7845,7 @@ g.V().has('_code','listID', 'sic').has('value', "56-103").
 g.V().has('_code', 'listID', 'sic').has('value', "56-103").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "56.103 : Take away food shops and mobile food stands").next()
+       addE('usedBy').from('code')).property('label', "56.10/3 : Take away food shops and mobile food stands").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "56-2").
@@ -7905,7 +7905,7 @@ g.V().has('_code','listID', 'sic').has('value', "56-301").
 g.V().has('_code', 'listID', 'sic').has('value', "56-301").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "56.301 : Licensed clubs").next()
+       addE('usedBy').from('code')).property('label', "56.30/1 : Licensed clubs").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "56-302").
@@ -7915,7 +7915,7 @@ g.V().has('_code','listID', 'sic').has('value', "56-302").
 g.V().has('_code', 'listID', 'sic').has('value', "56-302").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "56.302 : Public houses and bars").next()
+       addE('usedBy').from('code')).property('label', "56.30/2 : Public houses and bars").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "J").
@@ -7995,7 +7995,7 @@ g.V().has('_code','listID', 'sic').has('value', "58-141").
 g.V().has('_code', 'listID', 'sic').has('value', "58-141").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "58.141 : Publishing of learned journals").next()
+       addE('usedBy').from('code')).property('label', "58.14/1 : Publishing of learned journals").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "58-142").
@@ -8005,7 +8005,7 @@ g.V().has('_code','listID', 'sic').has('value', "58-142").
 g.V().has('_code', 'listID', 'sic').has('value', "58-142").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "58.142 : Publishing of consumer, business and professional journals and periodicals").next()
+       addE('usedBy').from('code')).property('label', "58.14/2 : Publishing of consumer, business and professional journals and periodicals").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "58-19").
@@ -8085,7 +8085,7 @@ g.V().has('_code','listID', 'sic').has('value', "59-111").
 g.V().has('_code', 'listID', 'sic').has('value', "59-111").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "59.111 : Motion picture production activities").next()
+       addE('usedBy').from('code')).property('label', "59.11/1 : Motion picture production activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "59-112").
@@ -8095,7 +8095,7 @@ g.V().has('_code','listID', 'sic').has('value', "59-112").
 g.V().has('_code', 'listID', 'sic').has('value', "59-112").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "59.112 : Video production activities").next()
+       addE('usedBy').from('code')).property('label', "59.11/2 : Video production activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "59-113").
@@ -8105,7 +8105,7 @@ g.V().has('_code','listID', 'sic').has('value', "59-113").
 g.V().has('_code', 'listID', 'sic').has('value', "59-113").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "59.113 : Television programme production activities").next()
+       addE('usedBy').from('code')).property('label', "59.11/3 : Television programme production activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "59-12").
@@ -8135,7 +8135,7 @@ g.V().has('_code','listID', 'sic').has('value', "59-131").
 g.V().has('_code', 'listID', 'sic').has('value', "59-131").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "59.131 : Motion picture distribution activities").next()
+       addE('usedBy').from('code')).property('label', "59.13/1 : Motion picture distribution activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "59-132").
@@ -8145,7 +8145,7 @@ g.V().has('_code','listID', 'sic').has('value', "59-132").
 g.V().has('_code', 'listID', 'sic').has('value', "59-132").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "59.132 : Video distribution activities").next()
+       addE('usedBy').from('code')).property('label', "59.13/2 : Video distribution activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "59-133").
@@ -8155,7 +8155,7 @@ g.V().has('_code','listID', 'sic').has('value', "59-133").
 g.V().has('_code', 'listID', 'sic').has('value', "59-133").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "59.133 : Television programme distribution activities").next()
+       addE('usedBy').from('code')).property('label', "59.13/3 : Television programme distribution activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "59-14").
@@ -8365,7 +8365,7 @@ g.V().has('_code','listID', 'sic').has('value', "62-011").
 g.V().has('_code', 'listID', 'sic').has('value', "62-011").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "62.011 : Ready-made interactive leisure and entertainment software development").next()
+       addE('usedBy').from('code')).property('label', "62.01/1 : Ready-made interactive leisure and entertainment software development").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "62-012").
@@ -8375,7 +8375,7 @@ g.V().has('_code','listID', 'sic').has('value', "62-012").
 g.V().has('_code', 'listID', 'sic').has('value', "62-012").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "62.012 : Business and domestic software development").next()
+       addE('usedBy').from('code')).property('label', "62.01/2 : Business and domestic software development").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "62-02").
@@ -8405,7 +8405,7 @@ g.V().has('_code','listID', 'sic').has('value', "62-09").
 g.V().has('_code', 'listID', 'sic').has('value', "62-09").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "62.09 : Other information technology and computed service activities").next()
+       addE('usedBy').from('code')).property('label', "62.09 : Other information technology and computer service activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "63").
@@ -8495,7 +8495,7 @@ g.V().has('_code','listID', 'sic').has('value', "64").
 g.V().has('_code', 'listID', 'sic').has('value', "64").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64 : Financial service activities, except insurance and pension funding").next()
+       addE('usedBy').from('code')).property('label', "64 : Fi*cial service activities, except insurance and pension funding").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-1").
@@ -8535,7 +8535,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-191").
 g.V().has('_code', 'listID', 'sic').has('value', "64-191").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.191 : Banks").next()
+       addE('usedBy').from('code')).property('label', "64.19/1 : Banks").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-192").
@@ -8545,7 +8545,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-192").
 g.V().has('_code', 'listID', 'sic').has('value', "64-192").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.192 : Building societies").next()
+       addE('usedBy').from('code')).property('label', "64.19/2 : Building societies").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-2").
@@ -8575,7 +8575,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-201").
 g.V().has('_code', 'listID', 'sic').has('value', "64-201").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.201 : Activities of agricultural holding companies").next()
+       addE('usedBy').from('code')).property('label', "64.20/1 : Activities of agricultural holding companies").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-202").
@@ -8585,7 +8585,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-202").
 g.V().has('_code', 'listID', 'sic').has('value', "64-202").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.202 : Activities of production holding companies").next()
+       addE('usedBy').from('code')).property('label', "64.20/2 : Activities of production holding companies").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-203").
@@ -8595,7 +8595,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-203").
 g.V().has('_code', 'listID', 'sic').has('value', "64-203").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.203 : Activities of construction holding companies").next()
+       addE('usedBy').from('code')).property('label', "64.20/3 : Activities of construction holding companies").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-204").
@@ -8605,7 +8605,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-204").
 g.V().has('_code', 'listID', 'sic').has('value', "64-204").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.204 : Activities of distribution holding companies").next()
+       addE('usedBy').from('code')).property('label', "64.20/4 : Activities of distribution holding companies").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-205").
@@ -8615,7 +8615,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-205").
 g.V().has('_code', 'listID', 'sic').has('value', "64-205").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.205 : Activities of financial services holding companies").next()
+       addE('usedBy').from('code')).property('label', "64.20/5 : Activities of fi*cial services holding companies").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-209").
@@ -8625,7 +8625,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-209").
 g.V().has('_code', 'listID', 'sic').has('value', "64-209").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.209 : Activities of other holding companies (not including agricultural, production, construction, distribution and financial services holding companies) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "64.20/9 : Activities of other holding companies (not including agricultural, production, construction, distribution and fi*cial services holding companies) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-3").
@@ -8635,7 +8635,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-3").
 g.V().has('_code', 'listID', 'sic').has('value', "64-3").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.3 : Trusts, funds and similar financial entities").next()
+       addE('usedBy').from('code')).property('label', "64.3 : Trusts, funds and similar fi*cial entities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-30").
@@ -8645,7 +8645,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-30").
 g.V().has('_code', 'listID', 'sic').has('value', "64-30").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.30 : Trusts, funds and similar financial entities").next()
+       addE('usedBy').from('code')).property('label', "64.30 : Trusts, funds and similar fi*cial entities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-301").
@@ -8655,7 +8655,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-301").
 g.V().has('_code', 'listID', 'sic').has('value', "64-301").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.301 : Activities of investment trusts").next()
+       addE('usedBy').from('code')).property('label', "64.30/1 : Activities of investment trusts").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-302").
@@ -8665,7 +8665,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-302").
 g.V().has('_code', 'listID', 'sic').has('value', "64-302").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.302 : Activities of unit trusts").next()
+       addE('usedBy').from('code')).property('label', "64.30/2 : Activities of unit trusts").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-303").
@@ -8675,7 +8675,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-303").
 g.V().has('_code', 'listID', 'sic').has('value', "64-303").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.303 : Activities of venture and development capital companies").next()
+       addE('usedBy').from('code')).property('label', "64.30/3 : Activities of venture and development capital companies").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-304").
@@ -8685,7 +8685,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-304").
 g.V().has('_code', 'listID', 'sic').has('value', "64-304").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.304 : Activities of open-ended investment companies").next()
+       addE('usedBy').from('code')).property('label', "64.30/4 : Activities of open-ended investment companies").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-305").
@@ -8695,7 +8695,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-305").
 g.V().has('_code', 'listID', 'sic').has('value', "64-305").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.305 : Activities of property unit trusts").next()
+       addE('usedBy').from('code')).property('label', "64.30/5 : Activities of property unit trusts").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-306").
@@ -8705,7 +8705,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-306").
 g.V().has('_code', 'listID', 'sic').has('value', "64-306").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.306 : Activities of real estate investment trusts").next()
+       addE('usedBy').from('code')).property('label', "64.30/6 : Activities of real estate investment trusts").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-9").
@@ -8715,7 +8715,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-9").
 g.V().has('_code', 'listID', 'sic').has('value', "64-9").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.9 : Other financial service activities, except insurance and pension funding").next()
+       addE('usedBy').from('code')).property('label', "64.9 : Other fi*cial service activities, except insurance and pension funding").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-91").
@@ -8725,7 +8725,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-91").
 g.V().has('_code', 'listID', 'sic').has('value', "64-91").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.91 : Financial leasing").next()
+       addE('usedBy').from('code')).property('label', "64.91 : Fi*cial leasing").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-92").
@@ -8745,7 +8745,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-921").
 g.V().has('_code', 'listID', 'sic').has('value', "64-921").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.921 : Credit granting by non-deposit taking finance houses and other specialist consumer credit grantors").next()
+       addE('usedBy').from('code')).property('label', "64.92/1 : Credit granting by non-deposit taking fi*ce houses and other specialist consumer credit grantors").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-922").
@@ -8755,7 +8755,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-922").
 g.V().has('_code', 'listID', 'sic').has('value', "64-922").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.922 : Activities of mortgage finance companies").next()
+       addE('usedBy').from('code')).property('label', "64.92/2 : Activities of mortgage fi*ce companies").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-929").
@@ -8765,7 +8765,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-929").
 g.V().has('_code', 'listID', 'sic').has('value', "64-929").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.929 : Other credit granting (not including credit granting by non-deposit taking finance houses and other specialist consumer credit grantors and activities of mortgage finance companies) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "64.92/9 : Other credit granting (not including credit granting by non-deposit taking fi*ce houses and other specialist consumer credit grantors and activities of mortgage fi*ce companies) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-99").
@@ -8775,7 +8775,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-99").
 g.V().has('_code', 'listID', 'sic').has('value', "64-99").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.99 : Other financial service activities, except insurance and pension funding, n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "64.99 : Other fi*cial service activities, except insurance and pension funding, n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-991").
@@ -8785,7 +8785,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-991").
 g.V().has('_code', 'listID', 'sic').has('value', "64-991").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.991 : Security dealing on own account").next()
+       addE('usedBy').from('code')).property('label', "64.99/1 : Security dealing on own account").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-992").
@@ -8795,7 +8795,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-992").
 g.V().has('_code', 'listID', 'sic').has('value', "64-992").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.992 : Factoring").next()
+       addE('usedBy').from('code')).property('label', "64.99/2 : Factoring").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "64-999").
@@ -8805,7 +8805,7 @@ g.V().has('_code','listID', 'sic').has('value', "64-999").
 g.V().has('_code', 'listID', 'sic').has('value', "64-999").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64.999 : Other financial service activities, except insurance and pension funding, (not including security dealing on own account and factoring) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "64.99/9 : Other fi*cial service activities, except insurance and pension funding, (not including security dealing on own account and factoring) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "65").
@@ -8875,7 +8875,7 @@ g.V().has('_code','listID', 'sic').has('value', "65-201").
 g.V().has('_code', 'listID', 'sic').has('value', "65-201").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "65.201 : Life reinsurance").next()
+       addE('usedBy').from('code')).property('label', "65.20/1 : Life reinsurance").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "65-202").
@@ -8885,7 +8885,7 @@ g.V().has('_code','listID', 'sic').has('value', "65-202").
 g.V().has('_code', 'listID', 'sic').has('value', "65-202").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "65.202 : Non-life reinsurance").next()
+       addE('usedBy').from('code')).property('label', "65.20/2 : Non-life reinsurance").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "65-3").
@@ -8915,7 +8915,7 @@ g.V().has('_code','listID', 'sic').has('value', "66").
 g.V().has('_code', 'listID', 'sic').has('value', "66").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "66 : Activities auxiliary to financial services and insurance activities").next()
+       addE('usedBy').from('code')).property('label', "66 : Activities auxiliary to fi*cial services and insurance activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "66-1").
@@ -8925,7 +8925,7 @@ g.V().has('_code','listID', 'sic').has('value', "66-1").
 g.V().has('_code', 'listID', 'sic').has('value', "66-1").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "66.1 : Activities auxiliary to financial services, except insurance and pension funding").next()
+       addE('usedBy').from('code')).property('label', "66.1 : Activities auxiliary to fi*cial services, except insurance and pension funding").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "66-11").
@@ -8935,7 +8935,7 @@ g.V().has('_code','listID', 'sic').has('value', "66-11").
 g.V().has('_code', 'listID', 'sic').has('value', "66-11").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "66.11 : Administration of financial markets").next()
+       addE('usedBy').from('code')).property('label', "66.11 : Administration of fi*cial markets").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "66-12").
@@ -8955,7 +8955,7 @@ g.V().has('_code','listID', 'sic').has('value', "66-19").
 g.V().has('_code', 'listID', 'sic').has('value', "66-19").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "66.19 : Other activities auxiliary to financial services, except insurance and pension funding").next()
+       addE('usedBy').from('code')).property('label', "66.19 : Other activities auxiliary to fi*cial services, except insurance and pension funding").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "66-2").
@@ -9085,7 +9085,7 @@ g.V().has('_code','listID', 'sic').has('value', "68-201").
 g.V().has('_code', 'listID', 'sic').has('value', "68-201").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "68.201 : Renting and operating of housing association real estate").next()
+       addE('usedBy').from('code')).property('label', "68.20/1 : Renting and operating of housing association real estate").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "68-202").
@@ -9095,7 +9095,7 @@ g.V().has('_code','listID', 'sic').has('value', "68-202").
 g.V().has('_code', 'listID', 'sic').has('value', "68-202").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "68.202 : Letting and operating of conference and exhibition centres").next()
+       addE('usedBy').from('code')).property('label', "68.20/2 : Letting and operating of conference and exhibition centres").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "68-209").
@@ -9105,7 +9105,7 @@ g.V().has('_code','listID', 'sic').has('value', "68-209").
 g.V().has('_code', 'listID', 'sic').has('value', "68-209").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "68.209 : Letting and operating of own or leased real estate (other than housing association real estate and conference and exhibition services) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "68.20/9 : Letting and operating of own or leased real estate (other than housing association real estate and conference and exhibition services) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "68-3").
@@ -9185,7 +9185,7 @@ g.V().has('_code','listID', 'sic').has('value', "69-101").
 g.V().has('_code', 'listID', 'sic').has('value', "69-101").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "69.101 : Barristers at law").next()
+       addE('usedBy').from('code')).property('label', "69.10/1 : Barristers at law").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "69-102").
@@ -9195,7 +9195,7 @@ g.V().has('_code','listID', 'sic').has('value', "69-102").
 g.V().has('_code', 'listID', 'sic').has('value', "69-102").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "69.102 : Solicitors").next()
+       addE('usedBy').from('code')).property('label', "69.10/2 : Solicitors").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "69-109").
@@ -9205,7 +9205,7 @@ g.V().has('_code','listID', 'sic').has('value', "69-109").
 g.V().has('_code', 'listID', 'sic').has('value', "69-109").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "69.109 : Activities of patent and copyright agents; other legal activities (other than those of barristers and solicitors) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "69.10/9 : Activities of patent and copyright agents; other legal activities (other than those of barristers and solicitors) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "69-2").
@@ -9235,7 +9235,7 @@ g.V().has('_code','listID', 'sic').has('value', "69-201").
 g.V().has('_code', 'listID', 'sic').has('value', "69-201").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "69.201 : Accounting, and auditing activities").next()
+       addE('usedBy').from('code')).property('label', "69.20/1 : Accounting, and auditing activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "69-202").
@@ -9245,7 +9245,7 @@ g.V().has('_code','listID', 'sic').has('value', "69-202").
 g.V().has('_code', 'listID', 'sic').has('value', "69-202").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "69.202 : Bookkeeping activities").next()
+       addE('usedBy').from('code')).property('label', "69.20/2 : Bookkeeping activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "69-203").
@@ -9255,7 +9255,7 @@ g.V().has('_code','listID', 'sic').has('value', "69-203").
 g.V().has('_code', 'listID', 'sic').has('value', "69-203").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "69.203 : Tax consultancy").next()
+       addE('usedBy').from('code')).property('label', "69.20/3 : Tax consultancy").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "70").
@@ -9325,7 +9325,7 @@ g.V().has('_code','listID', 'sic').has('value', "70-221").
 g.V().has('_code', 'listID', 'sic').has('value', "70-221").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "70.221 : Financial management").next()
+       addE('usedBy').from('code')).property('label', "70.22/1 : Fi*cial management").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "70-229").
@@ -9335,7 +9335,7 @@ g.V().has('_code','listID', 'sic').has('value', "70-229").
 g.V().has('_code', 'listID', 'sic').has('value', "70-229").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "70.229 : Management consultancy activities (other than financial management)").next()
+       addE('usedBy').from('code')).property('label', "70.22/9 : Management consultancy activities (other than fi*cial management)").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "71").
@@ -9375,7 +9375,7 @@ g.V().has('_code','listID', 'sic').has('value', "71-111").
 g.V().has('_code', 'listID', 'sic').has('value', "71-111").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "71.111 : Architectural activities").next()
+       addE('usedBy').from('code')).property('label', "71.11/1 : Architectural activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "71-112").
@@ -9385,7 +9385,7 @@ g.V().has('_code','listID', 'sic').has('value', "71-112").
 g.V().has('_code', 'listID', 'sic').has('value', "71-112").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "71.112 : Urban planning and landscape architectural activities").next()
+       addE('usedBy').from('code')).property('label', "71.11/2 : Urban planning and landscape architectural activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "71-12").
@@ -9405,7 +9405,7 @@ g.V().has('_code','listID', 'sic').has('value', "71-121").
 g.V().has('_code', 'listID', 'sic').has('value', "71-121").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "71.121 : Engineering design activities for industrial process and production").next()
+       addE('usedBy').from('code')).property('label', "71.12/1 : Engineering design activities for industrial process and production").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "71-122").
@@ -9415,7 +9415,7 @@ g.V().has('_code','listID', 'sic').has('value', "71-122").
 g.V().has('_code', 'listID', 'sic').has('value', "71-122").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "71.122 : Engineering related scientific and technical consulting activities").next()
+       addE('usedBy').from('code')).property('label', "71.12/2 : Engineering related scientific and technical consulting activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "71-129").
@@ -9425,7 +9425,7 @@ g.V().has('_code','listID', 'sic').has('value', "71-129").
 g.V().has('_code', 'listID', 'sic').has('value', "71-129").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "71.129 : Other engineering activities (not including engineering design for industrial process and production or engineering related scientific and technical consulting activities)").next()
+       addE('usedBy').from('code')).property('label', "71.12/9 : Other engineering activities (not including engineering design for industrial process and production or engineering related scientific and technical consulting activities)").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "71-2").
@@ -9625,7 +9625,7 @@ g.V().has('_code','listID', 'sic').has('value', "74-201").
 g.V().has('_code', 'listID', 'sic').has('value', "74-201").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "74.201 : Portrait photographic activities").next()
+       addE('usedBy').from('code')).property('label', "74.20/1 : Portrait photographic activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "74-202").
@@ -9635,7 +9635,7 @@ g.V().has('_code','listID', 'sic').has('value', "74-202").
 g.V().has('_code', 'listID', 'sic').has('value', "74-202").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "74.202 : Other specialist photography (not including portrait photography)").next()
+       addE('usedBy').from('code')).property('label', "74.20/2 : Other specialist photography (not including portrait photography)").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "74-203").
@@ -9645,7 +9645,7 @@ g.V().has('_code','listID', 'sic').has('value', "74-203").
 g.V().has('_code', 'listID', 'sic').has('value', "74-203").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "74.203 : Film processing").next()
+       addE('usedBy').from('code')).property('label', "74.20/3 : Film processing").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "74-209").
@@ -9655,7 +9655,7 @@ g.V().has('_code','listID', 'sic').has('value', "74-209").
 g.V().has('_code', 'listID', 'sic').has('value', "74-209").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "74.209 : Other photographic activities (not including portrait and other specialist photography and film processing) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "74.20/9 : Other photographic activities (not including portrait and other specialist photography and film processing) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "74-3").
@@ -9705,7 +9705,7 @@ g.V().has('_code','listID', 'sic').has('value', "74-901").
 g.V().has('_code', 'listID', 'sic').has('value', "74-901").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "74.901 : Environmental consulting activities").next()
+       addE('usedBy').from('code')).property('label', "74.90/1 : Environmental consulting activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "74-902").
@@ -9715,7 +9715,7 @@ g.V().has('_code','listID', 'sic').has('value', "74-902").
 g.V().has('_code', 'listID', 'sic').has('value', "74-902").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "74.902 : Quantity surveying activities").next()
+       addE('usedBy').from('code')).property('label', "74.90/2 : Quantity surveying activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "74-909").
@@ -9725,7 +9725,7 @@ g.V().has('_code','listID', 'sic').has('value', "74-909").
 g.V().has('_code', 'listID', 'sic').has('value', "74-909").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "74.909 : Other professional, scientific and technical activities (not including environmental consultancy or quantity surveying) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "74.90/9 : Other professional, scientific and technical activities (not including environmental consultancy or quantity surveying) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "75").
@@ -9855,7 +9855,7 @@ g.V().has('_code','listID', 'sic').has('value', "77-291").
 g.V().has('_code', 'listID', 'sic').has('value', "77-291").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "77.291 : Renting and leasing of media entertainment equipment").next()
+       addE('usedBy').from('code')).property('label', "77.29/1 : Renting and leasing of media entertainment equipment").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "77-299").
@@ -9865,7 +9865,7 @@ g.V().has('_code','listID', 'sic').has('value', "77-299").
 g.V().has('_code', 'listID', 'sic').has('value', "77-299").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "77.299 : Renting and leasing of other personal and household goods (other than media entertainment equipment)").next()
+       addE('usedBy').from('code')).property('label', "77.29/9 : Renting and leasing of other personal and household goods (other than media entertainment equipment)").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "77-3").
@@ -9925,7 +9925,7 @@ g.V().has('_code','listID', 'sic').has('value', "77-341").
 g.V().has('_code', 'listID', 'sic').has('value', "77-341").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "77.341 : Renting and leasing of passenger water transport equipment").next()
+       addE('usedBy').from('code')).property('label', "77.34/1 : Renting and leasing of passenger water transport equipment").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "77-342").
@@ -9935,7 +9935,7 @@ g.V().has('_code','listID', 'sic').has('value', "77-342").
 g.V().has('_code', 'listID', 'sic').has('value', "77-342").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "77.342 : Renting and leasing of freight water transport equipment").next()
+       addE('usedBy').from('code')).property('label', "77.34/2 : Renting and leasing of freight water transport equipment").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "77-35").
@@ -9955,7 +9955,7 @@ g.V().has('_code','listID', 'sic').has('value', "77-351").
 g.V().has('_code', 'listID', 'sic').has('value', "77-351").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "77.351 : Renting and leasing of passenger air transport equipment").next()
+       addE('usedBy').from('code')).property('label', "77.35/1 : Renting and leasing of passenger air transport equipment").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "77-352").
@@ -9965,7 +9965,7 @@ g.V().has('_code','listID', 'sic').has('value', "77-352").
 g.V().has('_code', 'listID', 'sic').has('value', "77-352").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "77.352 : Renting and leasing of freight air transport equipment").next()
+       addE('usedBy').from('code')).property('label', "77.35/2 : Renting and leasing of freight air transport equipment").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "77-39").
@@ -10035,7 +10035,7 @@ g.V().has('_code','listID', 'sic').has('value', "78-101").
 g.V().has('_code', 'listID', 'sic').has('value', "78-101").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "78.101 : Motion picture, television and other theatrical casting").next()
+       addE('usedBy').from('code')).property('label', "78.10/1 : Motion picture, television and other theatrical casting").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "78-109").
@@ -10045,7 +10045,7 @@ g.V().has('_code','listID', 'sic').has('value', "78-109").
 g.V().has('_code', 'listID', 'sic').has('value', "78-109").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "78.109 : Activities of employment placement agencies (other than motion picture, television and other theatrical casting) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "78.10/9 : Activities of employment placement agencies (other than motion picture, television and other theatrical casting) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "78-2").
@@ -10085,7 +10085,7 @@ g.V().has('_code','listID', 'sic').has('value', "78-30").
 g.V().has('_code', 'listID', 'sic').has('value', "78-30").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "78.30 : Human resources provision").next()
+       addE('usedBy').from('code')).property('label', "78.30 : Other human resources provision").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "79").
@@ -10155,7 +10155,7 @@ g.V().has('_code','listID', 'sic').has('value', "79-901").
 g.V().has('_code', 'listID', 'sic').has('value', "79-901").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "79.901 : Activities of tourist guides").next()
+       addE('usedBy').from('code')).property('label', "79.90/1 : Activities of tourist guides").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "79-909").
@@ -10165,7 +10165,7 @@ g.V().has('_code','listID', 'sic').has('value', "79-909").
 g.V().has('_code', 'listID', 'sic').has('value', "79-909").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "79.909 : Other reservation service and related activities (not including activities of tourist guides)").next()
+       addE('usedBy').from('code')).property('label', "79.90/9 : Other reservation service and related activities (not including activities of tourist guides)").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "80").
@@ -10305,7 +10305,7 @@ g.V().has('_code','listID', 'sic').has('value', "81-221").
 g.V().has('_code', 'listID', 'sic').has('value', "81-221").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "81.221 : Window cleaning services").next()
+       addE('usedBy').from('code')).property('label', "81.22/1 : Window cleaning services").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "81-222").
@@ -10315,7 +10315,7 @@ g.V().has('_code','listID', 'sic').has('value', "81-222").
 g.V().has('_code', 'listID', 'sic').has('value', "81-222").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "81.222 : Specialised cleaning services").next()
+       addE('usedBy').from('code')).property('label', "81.22/2 : Specialised cleaning services").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "81-223").
@@ -10325,7 +10325,7 @@ g.V().has('_code','listID', 'sic').has('value', "81-223").
 g.V().has('_code', 'listID', 'sic').has('value', "81-223").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "81.223 : Furnace and chimney cleaning services").next()
+       addE('usedBy').from('code')).property('label', "81.22/3 : Furnace and chimney cleaning services").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "81-229").
@@ -10335,7 +10335,7 @@ g.V().has('_code','listID', 'sic').has('value', "81-229").
 g.V().has('_code', 'listID', 'sic').has('value', "81-229").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "81.229 : Building and industrial cleaning activities (other than window cleaning, specialised cleaning and furnace and chimney cleaning services) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "81.22/9 : Building and industrial cleaning activities (other than window cleaning, specialised cleaning and furnace and chimney cleaning services) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "81-29").
@@ -10345,7 +10345,7 @@ g.V().has('_code','listID', 'sic').has('value', "81-29").
 g.V().has('_code', 'listID', 'sic').has('value', "81-29").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "81.29 : Other cleaning services").next()
+       addE('usedBy').from('code')).property('label', "81.29 : Other cleaning activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "81-291").
@@ -10355,7 +10355,7 @@ g.V().has('_code','listID', 'sic').has('value', "81-291").
 g.V().has('_code', 'listID', 'sic').has('value', "81-291").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "81.291 : Disinfecting and extermination services").next()
+       addE('usedBy').from('code')).property('label', "81.29/1 : Disinfecting and extermination services").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "81-299").
@@ -10365,7 +10365,7 @@ g.V().has('_code','listID', 'sic').has('value', "81-299").
 g.V().has('_code', 'listID', 'sic').has('value', "81-299").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "81.299 : Cleaning services (other than disinfecting and extermination services) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "81.29/9 : Cleaning services (other than disinfecting and extermination services) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "81-3").
@@ -10475,7 +10475,7 @@ g.V().has('_code','listID', 'sic').has('value', "82-301").
 g.V().has('_code', 'listID', 'sic').has('value', "82-301").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "82.301 : Activities of exhibition and fairorganisers").next()
+       addE('usedBy').from('code')).property('label', "82.30/1 : Activities of exhibition and fair organizers").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "82-302").
@@ -10485,7 +10485,7 @@ g.V().has('_code','listID', 'sic').has('value', "82-302").
 g.V().has('_code', 'listID', 'sic').has('value', "82-302").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "82.302 : Activities of conference organisers").next()
+       addE('usedBy').from('code')).property('label', "82.30/2 : Activities of conference organizers").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "82-9").
@@ -10515,7 +10515,7 @@ g.V().has('_code','listID', 'sic').has('value', "82-911").
 g.V().has('_code', 'listID', 'sic').has('value', "82-911").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "82.911 : Activities of collection agencies").next()
+       addE('usedBy').from('code')).property('label', "82.91/1 : Activities of collection agencies").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "82-912").
@@ -10525,7 +10525,7 @@ g.V().has('_code','listID', 'sic').has('value', "82-912").
 g.V().has('_code', 'listID', 'sic').has('value', "82-912").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "82.912 : Activities of credit bureaus").next()
+       addE('usedBy').from('code')).property('label', "82.91/2 : Activities of credit bureaus").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "82-92").
@@ -10815,7 +10815,7 @@ g.V().has('_code','listID', 'sic').has('value', "85-421").
 g.V().has('_code', 'listID', 'sic').has('value', "85-421").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "85.421 : First-degree level higher education").next()
+       addE('usedBy').from('code')).property('label', "85.42/1 : First-degree level higher education").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "85-422").
@@ -10825,7 +10825,7 @@ g.V().has('_code','listID', 'sic').has('value', "85-422").
 g.V().has('_code', 'listID', 'sic').has('value', "85-422").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "85.422 : Post-graduate level higher education").next()
+       addE('usedBy').from('code')).property('label', "85.42/2 : Post-graduate level higher education").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "85-5").
@@ -10945,7 +10945,7 @@ g.V().has('_code','listID', 'sic').has('value', "86-101").
 g.V().has('_code', 'listID', 'sic').has('value', "86-101").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "86.101 : Hospital activities").next()
+       addE('usedBy').from('code')).property('label', "86.10/1 : Hospital activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "86-102").
@@ -10955,7 +10955,7 @@ g.V().has('_code','listID', 'sic').has('value', "86-102").
 g.V().has('_code', 'listID', 'sic').has('value', "86-102").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "86.102 : Medical nursing home activities").next()
+       addE('usedBy').from('code')).property('label', "86.10/2 : Medical nursing home activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "86-2").
@@ -11275,7 +11275,7 @@ g.V().has('_code','listID', 'sic').has('value', "91-011").
 g.V().has('_code', 'listID', 'sic').has('value', "91-011").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "91.011 : Library activities").next()
+       addE('usedBy').from('code')).property('label', "91.01/1 : Library activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "91-012").
@@ -11285,7 +11285,7 @@ g.V().has('_code','listID', 'sic').has('value', "91-012").
 g.V().has('_code', 'listID', 'sic').has('value', "91-012").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "91.012 : Archive activities").next()
+       addE('usedBy').from('code')).property('label', "91.01/2 : Archive activities").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "91-02").
@@ -11415,7 +11415,7 @@ g.V().has('_code','listID', 'sic').has('value', "93-191").
 g.V().has('_code', 'listID', 'sic').has('value', "93-191").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "93.191 : Activities of racehorse owners").next()
+       addE('usedBy').from('code')).property('label', "93.19/1 : Activities of racehorse owners").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "93-199").
@@ -11425,7 +11425,7 @@ g.V().has('_code','listID', 'sic').has('value', "93-199").
 g.V().has('_code', 'listID', 'sic').has('value', "93-199").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "93.199 : Other sports activities (not including activities of racehorse owners) n.e.c.").next()
+       addE('usedBy').from('code')).property('label', "93.19/9 : Other sports activities (not including activities of racehorse owners) n.e.c.").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "93-2").
@@ -11755,7 +11755,7 @@ g.V().has('_code','listID', 'sic').has('value', "T").
 g.V().has('_code', 'listID', 'sic').has('value', "T").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "T : Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use").next()
+       addE('usedBy').from('code')).property('label', "T : Activities of households as employers; undifferentiated goods-and services-producing activities of households for own use").next()
 
 
 g.V().has('_code','listID', 'sic').has('value', "97").
@@ -11886,134 +11886,4 @@ g.V().has('_code', 'listID', 'sic').has('value', "total").as('code').
   V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
     coalesce(__.inE('usedBy').where(outV().as('code')),
        addE('usedBy').from('code')).property('label', "Total").next()
-
-
-g.V().has('_code','listID', 'sic').has('value', "all-industries-and-services").
-  fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sic').property(single, 'value', "all-industries-and-services")
-  ).next()
-g.V().has('_code', 'listID', 'sic').has('value', "all-industries-and-services").as('code').
-  V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "All Industries and Services").next()
-
-
-g.V().has('_code','listID', 'sic').has('value', "all-index-of-production-industries").
-  fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sic').property(single, 'value', "all-index-of-production-industries")
-  ).next()
-g.V().has('_code', 'listID', 'sic').has('value', "all-index-of-production-industries").as('code').
-  V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "All Index of Production Industries").next()
-
-
-g.V().has('_code','listID', 'sic').has('value', "all-manufacturing").
-  fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sic').property(single, 'value', "all-manufacturing")
-  ).next()
-g.V().has('_code', 'listID', 'sic').has('value', "all-manufacturing").as('code').
-  V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "All Manufacturing").next()
-
-
-g.V().has('_code','listID', 'sic').has('value', "all-service-industries").
-  fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sic').property(single, 'value', "all-service-industries")
-  ).next()
-g.V().has('_code', 'listID', 'sic').has('value', "all-service-industries").as('code').
-  V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "All Service Industries").next()
-
-
-g.V().has('_code','listID', 'sic').has('value', "A-S").
-  fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sic').property(single, 'value', "A-S")
-  ).next()
-g.V().has('_code', 'listID', 'sic').has('value', "A-S").as('code').
-  V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "A-S : Agriculture, Fishing, Production, Construction, Distribution and Non-Financial Service Industries").next()
-
-
-g.V().has('_code','listID', 'sic').has('value', "whole-economy").
-  fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sic').property(single, 'value', "whole-economy")
-  ).next()
-g.V().has('_code', 'listID', 'sic').has('value', "whole-economy").as('code').
-  V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Whole Economy").next()
-
-
-g.V().has('_code','listID', 'sic').has('value', "private-sector").
-  fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sic').property(single, 'value', "private-sector")
-  ).next()
-g.V().has('_code', 'listID', 'sic').has('value', "private-sector").as('code').
-  V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Private sector").next()
-
-
-g.V().has('_code','listID', 'sic').has('value', "public-sector").
-  fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sic').property(single, 'value', "public-sector")
-  ).next()
-g.V().has('_code', 'listID', 'sic').has('value', "public-sector").as('code').
-  V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Public sector").next()
-
-
-g.V().has('_code','listID', 'sic').has('value', "G-S").
-  fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sic').property(single, 'value', "G-S")
-  ).next()
-g.V().has('_code', 'listID', 'sic').has('value', "G-S").as('code').
-  V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "G-S : Services").next()
-
-
-g.V().has('_code','listID', 'sic').has('value', "K-N").
-  fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sic').property(single, 'value', "K-N")
-  ).next()
-g.V().has('_code', 'listID', 'sic').has('value', "K-N").as('code').
-  V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "K-N : Finance and Business Services").next()
-
-
-g.V().has('_code','listID', 'sic').has('value', "public-sector-excluding-financial-services").
-  fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sic').property(single, 'value', "public-sector-excluding-financial-services")
-  ).next()
-g.V().has('_code', 'listID', 'sic').has('value', "public-sector-excluding-financial-services").as('code').
-  V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Public sector excluding financial services").next()
-
-
-g.V().has('_code','listID', 'sic').has('value', "G-and-I").
-  fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sic').property(single, 'value', "G-and-I")
-  ).next()
-g.V().has('_code', 'listID', 'sic').has('value', "G-and-I").as('code').
-  V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "G & I : Wholesaling, Retailing, Hotels & Restaurants").next()
-
-
-g.V().has('_code','listID', 'sic').has('value', "top-level").
-  fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'sic').property(single, 'value', "top-level")
-  ).next()
-g.V().has('_code', 'listID', 'sic').has('value', "top-level").as('code').
-  V().has('_code_list', 'listID', 'sic').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Top Level").next()
 

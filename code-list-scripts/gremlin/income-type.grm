@@ -3,7 +3,7 @@
 g.V().has('_code_list', 'listID', 'income-type').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "income-type").
-    property(single, 'label', "income").
+    property(single, 'label', "Income").
     property(single, 'edition', "one-off")
   ).next()
 

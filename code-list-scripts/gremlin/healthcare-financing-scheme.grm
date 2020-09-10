@@ -3,7 +3,7 @@
 g.V().has('_code_list', 'listID', 'healthcare-financing-scheme').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "healthcare-financing-scheme").
-    property(single, 'label', "financingscheme").
+    property(single, 'label', "Financing Scheme").
     property(single, 'edition', "one-off")
   ).next()
 

@@ -4,7 +4,7 @@ g.V().has('_code_list', 'listID', 'registration-or-occurrence').has('edition', '
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "registration-or-occurrence").
     property(single, 'edition', "one-off").
-    property(single, 'label', "registrationoroccurrence")
+    property(single, 'label', "Registration Or Occurrence")
   ).next()
 
 

@@ -1,7 +1,7 @@
 g.V().has('_code_list', 'listID', 'cpih1dim1aggid').has('edition', 'one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(single, 'listID', "cpih1dim1aggid").
-    property(single, 'label', "aggregate").
+    property(single, 'label', "Aggregate").
     property(single, 'edition', "one-off")
   ).next()
 
