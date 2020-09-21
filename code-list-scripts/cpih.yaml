@@ -9,5 +9,5 @@ imports:
   - language: gremlin
     files:
       - gremlin/cpih1dim1aggid.grm
-      - gremlin/uk-only.grm
+      - ../geo-specific-codelist/gremlin/uk-only.grm
       - gremlin/mmm-yy.grm
