@@ -1,0 +1,389 @@
+
+
+g.V().has('_code_list', 'listID', 'type-of-prices').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', "type-of-prices").
+    property(single, 'label', "Prices").
+    property(single, 'edition', "one-off")
+  ).next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "cp").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "cp")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "cp").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Current prices").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "cvmpub").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "cvmpub")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "cvmpub").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Chained Volume Measure for Publish").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "idef").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "idef")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "idef").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Implied deflator").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "cvm").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "cvm")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "cvm").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Chained Volume Measure").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "chained-volume-measures-index").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "chained-volume-measures-index")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "chained-volume-measures-index").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Chained volume measures index").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "chained-volume-measures-in-2016-money-value").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "chained-volume-measures-in-2016-money-value")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "chained-volume-measures-in-2016-money-value").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Chained volume measures in 2016 money value").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "current-prices").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "current-prices")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "current-prices").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Current prices").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "implied-deflator").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "implied-deflator")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "implied-deflator").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Implied deflator").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "current-price-estimates").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "current-price-estimates")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "current-price-estimates").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Current price estimates").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "gross-value-added-at-current-basic-prices").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "gross-value-added-at-current-basic-prices")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "gross-value-added-at-current-basic-prices").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gross value added at current basic prices").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "gross-value-added-per-head-of-population-at-current-basic-prices").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "gross-value-added-per-head-of-population-at-current-basic-prices")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "gross-value-added-per-head-of-population-at-current-basic-prices").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gross value added per head of population at current basic prices").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "gross-value-added-per-head-indices").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "gross-value-added-per-head-indices")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "gross-value-added-per-head-indices").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gross value added per head indices").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "gross-value-added-annual-growth-rates").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "gross-value-added-annual-growth-rates")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "gross-value-added-annual-growth-rates").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gross value added annual growth rates").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "gross-value-added-per-head-annual-growth-rates").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "gross-value-added-per-head-annual-growth-rates")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "gross-value-added-per-head-annual-growth-rates").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gross value added per head annual growth rates").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "gross-value-added-by-industry-at-current-basic-prices").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "gross-value-added-by-industry-at-current-basic-prices")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "gross-value-added-by-industry-at-current-basic-prices").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gross value added by industry at current basic prices").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "compensation-of-employees-by-industry-at-current-basic-prices").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "compensation-of-employees-by-industry-at-current-basic-prices")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "compensation-of-employees-by-industry-at-current-basic-prices").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Compensation of employees by industry at current basic prices").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "mixed-income-by-industry-at-current-basic-prices").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "mixed-income-by-industry-at-current-basic-prices")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "mixed-income-by-industry-at-current-basic-prices").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Mixed income by industry at current basic prices").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "rental-income-by-industry-at-current-basic-prices").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "rental-income-by-industry-at-current-basic-prices")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "rental-income-by-industry-at-current-basic-prices").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Rental income by industry at current basic prices").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "non-market-capital-consumption-by-industry-at-current-basic-prices").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "non-market-capital-consumption-by-industry-at-current-basic-prices")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "non-market-capital-consumption-by-industry-at-current-basic-prices").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Non-market capital consumption by industry at current basic prices").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "holding-gains-by-industry-at-current-basic-prices").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "holding-gains-by-industry-at-current-basic-prices")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "holding-gains-by-industry-at-current-basic-prices").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Holding gains by industry at current basic prices").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "gross-trading-profits-by-industry-at-current-basic-prices").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "gross-trading-profits-by-industry-at-current-basic-prices")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "gross-trading-profits-by-industry-at-current-basic-prices").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gross trading profits by industry at current basic prices").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "gross-trading-surplus-by-industry-at-current-basic-prices").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "gross-trading-surplus-by-industry-at-current-basic-prices")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "gross-trading-surplus-by-industry-at-current-basic-prices").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gross trading surplus by industry at current basic prices").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "taxes-on-production-by-industry-at-current-basic-prices").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "taxes-on-production-by-industry-at-current-basic-prices")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "taxes-on-production-by-industry-at-current-basic-prices").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Taxes on production by industry at current basic prices").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "subsidies-on-production-by-industry-at-current-basic-prices").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "subsidies-on-production-by-industry-at-current-basic-prices")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "subsidies-on-production-by-industry-at-current-basic-prices").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Subsidies on production by industry at current basic prices").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "statistical-discrepancy-between-income-components-and-balanced-gva-total").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "statistical-discrepancy-between-income-components-and-balanced-gva-total")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "statistical-discrepancy-between-income-components-and-balanced-gva-total").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Statistical discrepancy between income components and balanced GVA total").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "value-added-tax-on-products").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "value-added-tax-on-products")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "value-added-tax-on-products").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Value added tax on products").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "other-taxes-on-products").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "other-taxes-on-products")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "other-taxes-on-products").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Other taxes on products").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "subsidies-on-products").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "subsidies-on-products")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "subsidies-on-products").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Subsidies on products").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "gross-domestic-product-at-current-market-prices").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "gross-domestic-product-at-current-market-prices")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "gross-domestic-product-at-current-market-prices").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gross domestic product at current market prices").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "gross-domestic-product-per-head-at-current-market-prices").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "gross-domestic-product-per-head-at-current-market-prices")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "gross-domestic-product-per-head-at-current-market-prices").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gross domestic product per head at current market prices").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "whole-economy-gva-implied-deflators").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "whole-economy-gva-implied-deflators")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "whole-economy-gva-implied-deflators").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Whole economy GVA implied deflators").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "gross-domestic-product-chained-volume-measures-index").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "gross-domestic-product-chained-volume-measures-index")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "gross-domestic-product-chained-volume-measures-index").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gross domestic product chained volume measures index").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "gross-domestic-product-chained-volume-measures-in-2016-money-value").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "gross-domestic-product-chained-volume-measures-in-2016-money-value")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "gross-domestic-product-chained-volume-measures-in-2016-money-value").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gross domestic product chained volume measures in 2016 money value").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "gross-domestic-product-chained-volume-measures-per-head").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "gross-domestic-product-chained-volume-measures-per-head")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "gross-domestic-product-chained-volume-measures-per-head").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gross domestic product chained volume measures per head").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "gross-domestic-product-chained-volume-measures-annual-growth-rates").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "gross-domestic-product-chained-volume-measures-annual-growth-rates")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "gross-domestic-product-chained-volume-measures-annual-growth-rates").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gross domestic product chained volume measures annual growth rates").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "gross-domestic-product-chained-volume-measures-per-head-annual-growth-rates").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "gross-domestic-product-chained-volume-measures-per-head-annual-growth-rates")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "gross-domestic-product-chained-volume-measures-per-head-annual-growth-rates").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gross domestic product chained volume measures per head annual growth rates").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "2017-prices").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "2017-prices")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "2017-prices").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2017 prices").next()
+
+
+g.V().has('_code','listID', 'type-of-prices').has('value', "kp").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'type-of-prices').property(single, 'value', "kp")
+  ).next()
+g.V().has('_code', 'listID', 'type-of-prices').has('value', "kp").as('code').
+  V().has('_code_list', 'listID', 'type-of-prices').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Real terms").next()
+

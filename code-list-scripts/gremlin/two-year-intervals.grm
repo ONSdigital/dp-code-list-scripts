@@ -1,0 +1,340 @@
+
+
+g.V().has('_code_list', 'listID', 'two-year-intervals').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', "two-year-intervals").
+    property(single, 'label', "Time").
+    property(single, 'edition', "one-off")
+  ).next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2001–03").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2001–03")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2001–03").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2001–03").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2002-04").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2002-04")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2002-04").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2002-04").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2003-05").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2003-05")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2003-05").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2003-05").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2004-06").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2004-06")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2004-06").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2004-06").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2005-07").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2005-07")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2005-07").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2005-07").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2006-08").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2006-08")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2006-08").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2006-08").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2007-09").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2007-09")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2007-09").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2007-09").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2008-10").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2008-10")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2008-10").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2008-10").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2009-11").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2009-11")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2009-11").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2009-11").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2010-12").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2010-12")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2010-12").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2010-12").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2011-13").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2011-13")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2011-13").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2011-13").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2012-14").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2012-14")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2012-14").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2012-14").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2013-15").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2013-15")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2013-15").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2013-15").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2014-16").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2014-16")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2014-16").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2014-16").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2015-17").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2015-17")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2015-17").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2015-17").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2016-18").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2016-18")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2016-18").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2016-18").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2017-19").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2017-19")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2017-19").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2017-19").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2018-20").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2018-20")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2018-20").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2018-20").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2019-21").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2019-21")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2019-21").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2019-21").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2020-22").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2020-22")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2020-22").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2020-22").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2021-23").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2021-23")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2021-23").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2021-23").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2022-24").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2022-24")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2022-24").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2022-24").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "1990–92").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "1990–92")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "1990–92").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1990–92").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "1992–94").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "1992–94")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "1992–94").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1992–94").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "1994–96").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "1994–96")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "1994–96").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1994–96").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "1996–98").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "1996–98")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "1996–98").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1996–98").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "1991–93").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "1991–93")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "1991–93").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1991–93").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "1993–95").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "1993–95")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "1993–95").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1993–95").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "1995–97").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "1995–97")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "1995–97").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1995–97").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "1997–99").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "1997–99")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "1997–99").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1997–99").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "1998–00").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "1998–00")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "1998–00").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1998–00").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "1999–01").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "1999–01")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "1999–01").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "1999–01").next()
+
+
+g.V().has('_code','listID', 'two-year-intervals').has('value', "2000-02").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'two-year-intervals').property(single, 'value', "2000-02")
+  ).next()
+g.V().has('_code', 'listID', 'two-year-intervals').has('value', "2000-02").as('code').
+  V().has('_code_list', 'listID', 'two-year-intervals').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "2000-02").next()
+
+

@@ -1,0 +1,29 @@
+
+
+g.V().has('_code_list', 'listID', 'value-deflation').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', "value-deflation").
+    property(single, 'label', "Deflation").
+    property(single, 'edition', "one-off")
+  ).next()
+
+
+g.V().has('_code','listID', 'value-deflation').has('value', "deflated-value").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'value-deflation').property(single, 'value', "deflated-value")
+  ).next()
+g.V().has('_code', 'listID', 'value-deflation').has('value', "deflated-value").as('code').
+  V().has('_code_list', 'listID', 'value-deflation').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Deflated value").next()
+
+
+g.V().has('_code','listID', 'value-deflation').has('value', "undeflated-value").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'value-deflation').property(single, 'value', "undeflated-value")
+  ).next()
+g.V().has('_code', 'listID', 'value-deflation').has('value', "undeflated-value").as('code').
+  V().has('_code_list', 'listID', 'value-deflation').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Undeflated value").next()
+

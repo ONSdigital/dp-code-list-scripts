@@ -1,0 +1,2370 @@
+
+
+g.V().has('_code_list', 'listID', 'nuts').has('edition', 'one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(single, 'listID', "nuts").
+    property(single, 'geography', true).
+    property(single, 'label', "Geography").
+    property(single, 'edition', "one-off")
+  ).next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKC11").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKC11")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKC11").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Hartlepool and Stockton-on-Tees").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKC12").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKC12")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKC12").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "South Teesside").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKC13").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKC13")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKC13").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Darlington").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKC14").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKC14")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKC14").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Durham CC").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKC21").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKC21")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKC21").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Northumberland").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKC22").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKC22")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKC22").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Tyneside").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKC23").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKC23")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKC23").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Sunderland").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD11").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD11")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD11").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "West Cumbria").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD12").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD12")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD12").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "East Cumbria").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD33").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD33")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD33").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Manchester").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD34").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD34")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD34").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Greater Manchester South West").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD35").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD35")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD35").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Greater Manchester South East").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD36").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD36")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD36").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Greater Manchester North West").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD37").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD37")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD37").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Greater Manchester North East").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD41").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD41")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD41").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Blackburn with Darwen").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD42").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD42")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD42").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Blackpool").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD44").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD44")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD44").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Lancaster and Wyre").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD45").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD45")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD45").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Mid Lancashire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD46").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD46")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD46").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "East Lancashire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD47").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD47")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD47").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Chorley and West Lancashire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD61").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD61")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD61").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Warrington").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD62").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD62")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD62").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Cheshire East").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD63").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD63")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD63").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Cheshire West and Chester").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD71").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD71")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD71").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "East Merseyside").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD72").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD72")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD72").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Liverpool").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD73").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD73")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD73").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Sefton").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD74").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD74")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD74").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Wirral").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKE11").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKE11")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKE11").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Kingston upon Hull, City of").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKE12").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKE12")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKE12").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "East Riding of Yorkshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKE13").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKE13")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKE13").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "North and North East Lincolnshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKE21").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKE21")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKE21").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "York").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKE22").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKE22")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKE22").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "North Yorkshire CC").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKE31").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKE31")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKE31").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Barnsley, Doncaster and Rotherham").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKE32").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKE32")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKE32").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Sheffield").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKE41").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKE41")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKE41").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Bradford").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKE42").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKE42")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKE42").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Leeds").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKE44").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKE44")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKE44").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Calderdale and Kirklees").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKE45").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKE45")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKE45").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Wakefield").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKF11").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKF11")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKF11").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Derby").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKF12").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKF12")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKF12").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "East Derbyshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKF13").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKF13")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKF13").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "South and West Derbyshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKF14").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKF14")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKF14").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Nottingham").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKF15").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKF15")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKF15").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "North Nottinghamshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKF16").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKF16")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKF16").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "South Nottinghamshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKF21").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKF21")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKF21").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Leicester").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKF22").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKF22")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKF22").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Leicestershire CC and Rutland").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKF24").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKF24")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKF24").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "West Northamptonshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKF25").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKF25")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKF25").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "North Northamptonshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKF30").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKF30")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKF30").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Lincolnshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKG11").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKG11")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKG11").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Herefordshire, County of").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKG12").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKG12")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKG12").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Worcestershire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKG13").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKG13")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKG13").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Warwickshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKG21").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKG21")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKG21").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Telford and Wrekin").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKG22").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKG22")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKG22").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Shropshire CC").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKG23").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKG23")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKG23").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Stoke-on-Trent").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKG24").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKG24")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKG24").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Staffordshire CC").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKG31").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKG31")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKG31").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Birmingham").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKG32").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKG32")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKG32").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Solihull").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKG33").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKG33")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKG33").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Coventry").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKG36").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKG36")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKG36").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Dudley").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKG37").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKG37")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKG37").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Sandwell").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKG38").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKG38")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKG38").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Walsall").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKG39").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKG39")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKG39").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Wolverhampton").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH11").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH11")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH11").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Peterborough").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH12").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH12")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH12").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Cambridgeshire CC").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH14").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH14")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH14").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Suffolk").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH15").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH15")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH15").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Norwich and East Norfolk").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH16").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH16")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH16").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "North and West Norfolk").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH17").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH17")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH17").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Breckland and South Norfolk").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH21").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH21")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH21").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Luton").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH23").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH23")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH23").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Hertfordshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH24").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH24")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH24").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Bedford").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH25").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH25")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH25").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Central Bedfordshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH31").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH31")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH31").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Southend-on-Sea").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH32").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH32")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH32").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Thurrock").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH34").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH34")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH34").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Essex Haven Gateway").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH35").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH35")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH35").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "West Essex").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH36").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH36")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH36").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Heart of Essex").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH37").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH37")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH37").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Essex Thames Gateway").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI31").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI31")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI31").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Camden and City of London").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI32").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI32")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI32").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Westminster").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI33").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI33")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI33").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Kensington & Chelsea and Hammersmith & Fulham").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI34").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI34")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI34").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Wandsworth").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI41").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI41")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI41").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Hackney and Newham").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI42").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI42")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI42").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Tower Hamlets").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI43").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI43")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI43").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Haringey and Islington").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI44").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI44")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI44").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Lewisham and Southwark").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI45").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI45")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI45").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Lambeth").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI51").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI51")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI51").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Bexley and Greenwich").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI52").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI52")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI52").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Barking & Dagenham and Havering").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI53").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI53")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI53").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Redbridge and Waltham Forest").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI54").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI54")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI54").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Enfield").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI61").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI61")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI61").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Bromley").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI62").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI62")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI62").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Croydon").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI63").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI63")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI63").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Merton, Kingston upon Thames and Sutton").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI71").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI71")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI71").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Barnet").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI72").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI72")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI72").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Brent").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI73").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI73")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI73").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Ealing").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI74").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI74")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI74").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Harrow and Hillingdon").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI75").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI75")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI75").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Hounslow and Richmond upon Thames").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ11").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ11")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ11").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Berkshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ12").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ12")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ12").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Milton Keynes").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ13").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ13")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ13").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Buckinghamshire CC").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ14").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ14")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ14").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Oxfordshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ21").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ21")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ21").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Brighton and Hove").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ22").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ22")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ22").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "East Sussex CC").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ25").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ25")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ25").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "West Surrey").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ26").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ26")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ26").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "East Surrey").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ27").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ27")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ27").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "West Sussex (South West)").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ28").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ28")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ28").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "West Sussex (North East)").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ31").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ31")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ31").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Portsmouth").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ32").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ32")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ32").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Southampton").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ34").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ34")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ34").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Isle of Wight").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ35").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ35")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ35").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "South Hampshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ36").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ36")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ36").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Central Hampshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ37").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ37")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ37").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "North Hampshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ41").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ41")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ41").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Medway").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ43").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ43")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ43").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Kent Thames Gateway").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ44").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ44")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ44").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "East Kent").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ45").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ45")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ45").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Mid Kent").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ46").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ46")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ46").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "West Kent").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKK11").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKK11")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKK11").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Bristol, City of").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKK12").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKK12")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKK12").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Bath and North East Somerset, North Somerset and South Gloucestershire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKK13").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKK13")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKK13").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gloucestershire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKK14").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKK14")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKK14").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Swindon").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKK15").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKK15")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKK15").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Wiltshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKK21").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKK21")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKK21").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Bournemouth and Poole").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKK22").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKK22")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKK22").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Dorset CC").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKK23").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKK23")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKK23").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Somerset").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKK30").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKK30")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKK30").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Cornwall and Isles of Scilly").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKK41").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKK41")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKK41").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Plymouth").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKK42").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKK42")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKK42").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Torbay").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKK43").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKK43")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKK43").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Devon CC").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKL11").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKL11")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKL11").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Isle of Anglesey").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKL12").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKL12")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKL12").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gwynedd").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKL13").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKL13")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKL13").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Conwy and Denbighshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKL14").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKL14")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKL14").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "South West Wales").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKL15").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKL15")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKL15").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Central Valleys").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKL16").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKL16")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKL16").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gwent Valleys").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKL17").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKL17")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKL17").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Bridgend and Neath Port Talbot").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKL18").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKL18")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKL18").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Swansea").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKL21").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKL21")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKL21").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Monmouthshire and Newport").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKL22").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKL22")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKL22").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Cardiff and Vale of Glamorgan").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKL23").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKL23")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKL23").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Flintshire and Wrexham").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKL24").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKL24")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKL24").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Powys").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM50").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM50")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM50").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Aberdeen City and Aberdeenshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM61").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM61")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM61").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Caithness and Sutherland and Ross and Cromarty").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM62").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM62")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM62").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Inverness and Nairn and Moray, Badenoch and Strathspey").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM63").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM63")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM63").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Lochaber, Skye and Lochalsh, Arran and Cumbrae and Argyll and Bute").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM64").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM64")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM64").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Na h-Eileanan Siar").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM65").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM65")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM65").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Orkney Islands").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM66").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM66")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM66").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Shetland Islands").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM71").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM71")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM71").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Angus and Dundee City").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM72").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM72")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM72").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Clackmannanshire and Fife").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM73").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM73")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM73").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "East Lothian and Midlothian").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM75").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM75")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM75").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "City of Edinburgh").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM76").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM76")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM76").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Falkirk").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM77").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM77")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM77").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Perth and Kinross and Stirling").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM78").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM78")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM78").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "West Lothian").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM81").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM81")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM81").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "East Dunbartonshire, West Dunbartonshire and Helensburgh and Lomond").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM82").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM82")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM82").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Glasgow City").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM83").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM83")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM83").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Inverclyde, East Renfrewshire and Renfrewshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM84").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM84")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM84").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "North Lanarkshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM91").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM91")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM91").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Scottish Borders").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM92").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM92")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM92").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Dumfries and Galloway").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM93").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM93")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM93").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "East Ayrshire and North Ayrshire mainland").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM94").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM94")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM94").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "South Ayrshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM95").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM95")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM95").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "South Lanarkshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKN06").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKN06")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKN06").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Belfast").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKN07").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKN07")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKN07").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Armagh City, Banbridge and Craigavon").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKN08").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKN08")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKN08").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Newry, Mourne and Down").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKN09").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKN09")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKN09").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Ards and North Down").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKN10").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKN10")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKN10").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Derry City and Strabane").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKN11").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKN11")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKN11").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Mid Ulster").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKN12").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKN12")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKN12").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Causeway Coast and Glens").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKN13").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKN13")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKN13").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Antrim and Newtownabbey").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKN14").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKN14")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKN14").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Lisburn and Castlereagh").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKN15").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKN15")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKN15").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Mid and East Antrim").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKN16").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKN16")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKN16").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Fermanagh and Omagh").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKC1").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKC1")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKC1").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Tees Valley and Durham").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKC2").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKC2")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKC2").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Northumberland and Tyne and Wear").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD1").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD1")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD1").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Cumbria").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD3").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD3")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD3").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Greater Manchester").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD4").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD4")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD4").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Lancashire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD6").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD6")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD6").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Cheshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD7").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD7")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD7").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Merseyside").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKE1").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKE1")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKE1").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "East Yorkshire and Northern Lincolnshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKE2").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKE2")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKE2").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "North Yorkshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKE3").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKE3")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKE3").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "South Yorkshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKE4").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKE4")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKE4").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "West Yorkshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKF1").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKF1")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKF1").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Derbyshire and Nottinghamshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKF2").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKF2")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKF2").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Leicestershire, Rutland and Northamptonshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKF3").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKF3")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKF3").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Lincolnshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKG1").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKG1")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKG1").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Herefordshire, Worcestershire and Warwickshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKG2").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKG2")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKG2").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Shropshire and Staffordshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKG3").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKG3")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKG3").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "West Midlands").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH1").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH1")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH1").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "East Anglia").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH2").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH2")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH2").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Bedfordshire and Hertfordshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH3").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH3")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH3").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Essex").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI3").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI3")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI3").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Inner London - West").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI4").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI4")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI4").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Inner London - East").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI5").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI5")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI5").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Outer London - East and North East").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI6").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI6")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI6").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Outer London - South").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI7").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI7")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI7").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Outer London - West and North West").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ1").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ1")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ1").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Berkshire, Buckinghamshire and Oxfordshire").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ2").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ2")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ2").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Surrey, East and West Sussex").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ3").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ3")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ3").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Hampshire and Isle of Wight").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ4").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ4")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ4").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Kent").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKK1").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKK1")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKK1").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Gloucestershire, Wiltshire and Bath/Bristol area").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKK2").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKK2")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKK2").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Dorset and Somerset").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKK3").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKK3")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKK3").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Cornwall and Isles of Scilly").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKK4").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKK4")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKK4").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Devon").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKL1").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKL1")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKL1").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "West Wales and The Valleys").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKL2").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKL2")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKL2").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "East Wales").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM5").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM5")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM5").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "North Eastern Scotland").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM6").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM6")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM6").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Highlands and Islands").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM7").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM7")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM7").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Eastern Scotland").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM8").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM8")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM8").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "West Central Scotland").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM9").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM9")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM9").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Southern Scotland").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKN0").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKN0")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKN0").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Northern Ireland").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKC").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKC")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKC").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "North East").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKD").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKD")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKD").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "North West").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKE").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKE")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKE").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Yorkshire and The Humber").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKF").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKF")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKF").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "East Midlands").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKG").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKG")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKG").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "West Midlands").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKH").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKH")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKH").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "East of England").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKI").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKI")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKI").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "London").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKJ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKJ")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKJ").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "South East").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKK").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKK")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKK").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "South West").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKL").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKL")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKL").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Wales").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKM").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKM")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKM").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Scotland").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKN").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKN")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKN").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Northern Ireland").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UK").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UK")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UK").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "United Kingdom").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKZ").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKZ")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKZ").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "Extra-regio").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UK0").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UK0")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UK0").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "England").next()
+
+
+g.V().has('_code','listID', 'geography').has('value', "UKX").
+  fold().coalesce(unfold(), addV('_code').
+    property(single, 'listID', 'geography').property(single, 'value', "UKX")
+  ).next()
+g.V().has('_code', 'listID', 'geography').has('value', "UKX").as('code').
+  V().has('_code_list', 'listID', 'nuts').has('edition', "one-off").
+    coalesce(__.inE('usedBy').where(outV().as('code')),
+       addE('usedBy').from('code')).property('label', "UK less extra-regio").next()
+
