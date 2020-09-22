@@ -1,0 +1,11 @@
+CREATE CONSTRAINT ON (n:`_code_quarter`) ASSERT n.code IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_quarter`) ASSERT n.code IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_quarter` { label:"Quarter", edition:"one-off" });
+MERGE (node:`_code`:`_code_quarter` { value:"q1" });
+MATCH (parent:`_code_list`:`_code_list_quarter`),(node:`_code`:`_code_quarter` { value:"q1" }) MERGE (node)-[:usedBy { label:"Q1"}]->(parent);
+MERGE (node:`_code`:`_code_quarter` { value:"q4" });
+MATCH (parent:`_code_list`:`_code_list_quarter`),(node:`_code`:`_code_quarter` { value:"q4" }) MERGE (node)-[:usedBy { label:"Q4"}]->(parent);
+MERGE (node:`_code`:`_code_quarter` { value:"q3" });
+MATCH (parent:`_code_list`:`_code_list_quarter`),(node:`_code`:`_code_quarter` { value:"q3" }) MERGE (node)-[:usedBy { label:"Q3"}]->(parent);
+MERGE (node:`_code`:`_code_quarter` { value:"q2" });
+MATCH (parent:`_code_list`:`_code_list_quarter`),(node:`_code`:`_code_quarter` { value:"q2" }) MERGE (node)-[:usedBy { label:"Q2"}]->(parent);

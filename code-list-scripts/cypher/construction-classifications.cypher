@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_construction-classifications`) ASSERT n.code IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_construction-classifications`) ASSERT n.code IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_construction-classifications` { label:"typeofwork", edition:"one-off" });
+CREATE (node:`_code_list`:`_code_list_construction-classifications` { label:"Type Of Work", edition:"one-off" });
 MERGE (node:`_code`:`_code_construction-classifications` { value:"1" });
 MATCH (parent:`_code_list`:`_code_list_construction-classifications`),(node:`_code`:`_code_construction-classifications` { value:"1" }) MERGE (node)-[:usedBy { label:"Total All Work"}]->(parent);
 MERGE (node:`_code`:`_code_construction-classifications` { value:"1-1" });

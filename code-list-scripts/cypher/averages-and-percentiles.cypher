@@ -1,4 +1,4 @@
-CREATE (node:`_code_list`:`_code_list_averages-and-percentiles` { label:'Average And Percentiles', edition:'one-off' });
+CREATE (node:`_code_list`:`_code_list_averages-and-percentiles` { label:'Averages And Percentiles', edition:'one-off' });
 CREATE CONSTRAINT ON (n:`_code_list_averages-and-percentiles`) ASSERT n.value IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_averages-and-percentiles`) ASSERT n.value IS UNIQUE;
 MERGE (node:`_code`:`_code_averages-and-percentiles` { value:'80' });

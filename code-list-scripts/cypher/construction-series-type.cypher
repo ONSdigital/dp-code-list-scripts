@@ -1,6 +1,6 @@
 CREATE CONSTRAINT ON (n:`_code_construction-series-type`) ASSERT n.value IS UNIQUE;
 CREATE CONSTRAINT ON (n:`_code_list_construction-series-type`) ASSERT n.value IS UNIQUE;
-CREATE (node:`_code_list`:`_code_list_construction-series-type` { label:'seriestype', edition:'one-off' });
+CREATE (node:`_code_list`:`_code_list_construction-series-type` { label:'Series Type', edition:'one-off' });
 MERGE (node:`_code`:`_code_construction-series-type` { value:"g11-4dp" });
 MATCH (parent:`_code_list`:`_code_list_construction-series-type`),(node:`_code`:`_code_construction-series-type` { value:"g11-4dp" }) MERGE (node)-[:usedBy { label:"Period on period"}]->(parent);
 MERGE (node:`_code`:`_code_construction-series-type` { value:"g121-4dp" });
