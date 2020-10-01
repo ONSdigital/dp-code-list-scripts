@@ -1,109 +1,100 @@
 
 
-g.V().has('_code_list', 'listID', 'wellbeing-estimate').has('edition', 'one-off').
+g.V().hasId('_code_list_wellbeing-estimate_one-off').
   fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_wellbeing-estimate_one-off').
     property(single, 'listID', "wellbeing-estimate").
     property(single, 'label', "Estimate").
     property(single, 'edition', "one-off")
   ).next()
 
 
-g.V().has('_code','listID', 'wellbeing-estimate').has('value', "average-mean").
+g.V().hasId('_code_wellbeing-estimate_average-mean').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "average-mean")
+    property(id, '_code_wellbeing-estimate_average-mean').property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "average-mean")
   ).next()
-g.V().has('_code', 'listID', 'wellbeing-estimate').has('value', "average-mean").as('code').
-  V().has('_code_list', 'listID', 'wellbeing-estimate').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Average (mean)").next()
+  g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_average-mean').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Average (mean)").next()
 
 
-g.V().has('_code','listID', 'wellbeing-estimate').has('value', "poor").
+g.V().hasId('_code_wellbeing-estimate_poor').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "poor")
+    property(id, '_code_wellbeing-estimate_poor').property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "poor")
   ).next()
-g.V().has('_code', 'listID', 'wellbeing-estimate').has('value', "poor").as('code').
-  V().has('_code_list', 'listID', 'wellbeing-estimate').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Poor").next()
+  g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_poor').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Poor").next()
 
 
-g.V().has('_code','listID', 'wellbeing-estimate').has('value', "good").
+g.V().hasId('_code_wellbeing-estimate_good').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "good")
+    property(id, '_code_wellbeing-estimate_good').property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "good")
   ).next()
-g.V().has('_code', 'listID', 'wellbeing-estimate').has('value', "good").as('code').
-  V().has('_code_list', 'listID', 'wellbeing-estimate').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Good").next()
+  g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_good').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Good").next()
 
 
-g.V().has('_code','listID', 'wellbeing-estimate').has('value', "fair").
+g.V().hasId('_code_wellbeing-estimate_fair').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "fair")
+    property(id, '_code_wellbeing-estimate_fair').property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "fair")
   ).next()
-g.V().has('_code', 'listID', 'wellbeing-estimate').has('value', "fair").as('code').
-  V().has('_code_list', 'listID', 'wellbeing-estimate').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Fair").next()
+  g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_fair').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Fair").next()
 
 
-g.V().has('_code','listID', 'wellbeing-estimate').has('value', "very-good").
+g.V().hasId('_code_wellbeing-estimate_very-good').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "very-good")
+    property(id, '_code_wellbeing-estimate_very-good').property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "very-good")
   ).next()
-g.V().has('_code', 'listID', 'wellbeing-estimate').has('value', "very-good").as('code').
-  V().has('_code_list', 'listID', 'wellbeing-estimate').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Very good").next()
+  g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_very-good').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Very good").next()
 
 
-g.V().has('_code','listID', 'wellbeing-estimate').has('value', "low").
+g.V().hasId('_code_wellbeing-estimate_low').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "low")
+    property(id, '_code_wellbeing-estimate_low').property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "low")
   ).next()
-g.V().has('_code', 'listID', 'wellbeing-estimate').has('value', "low").as('code').
-  V().has('_code_list', 'listID', 'wellbeing-estimate').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Low").next()
+  g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_low').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Low").next()
 
 
-g.V().has('_code','listID', 'wellbeing-estimate').has('value', "medium").
+g.V().hasId('_code_wellbeing-estimate_medium').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "medium")
+    property(id, '_code_wellbeing-estimate_medium').property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "medium")
   ).next()
-g.V().has('_code', 'listID', 'wellbeing-estimate').has('value', "medium").as('code').
-  V().has('_code_list', 'listID', 'wellbeing-estimate').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Medium").next()
+  g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_medium').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Medium").next()
 
 
-g.V().has('_code','listID', 'wellbeing-estimate').has('value', "high").
+g.V().hasId('_code_wellbeing-estimate_high').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "high")
+    property(id, '_code_wellbeing-estimate_high').property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "high")
   ).next()
-g.V().has('_code', 'listID', 'wellbeing-estimate').has('value', "high").as('code').
-  V().has('_code_list', 'listID', 'wellbeing-estimate').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "High").next()
+  g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_high').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "High").next()
 
 
-g.V().has('_code','listID', 'wellbeing-estimate').has('value', "very-high").
+g.V().hasId('_code_wellbeing-estimate_very-high').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "very-high")
+    property(id, '_code_wellbeing-estimate_very-high').property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "very-high")
   ).next()
-g.V().has('_code', 'listID', 'wellbeing-estimate').has('value', "very-high").as('code').
-  V().has('_code_list', 'listID', 'wellbeing-estimate').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Very high").next()
+  g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_very-high').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Very high").next()
 
 
-g.V().has('_code','listID', 'wellbeing-estimate').has('value', "high-or-very-high").
+g.V().hasId('_code_wellbeing-estimate_high-or-very-high').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "high-or-very-high")
+    property(id, '_code_wellbeing-estimate_high-or-very-high').property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "high-or-very-high")
   ).next()
-g.V().has('_code', 'listID', 'wellbeing-estimate').has('value', "high-or-very-high").as('code').
-  V().has('_code_list', 'listID', 'wellbeing-estimate').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "High or very high").next()
+  g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_high-or-very-high').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "High or very high").next()
 

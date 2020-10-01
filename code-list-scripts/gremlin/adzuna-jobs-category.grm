@@ -1,309 +1,280 @@
 
 
-g.V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', 'one-off').
+g.V().hasId('_code_list_adzuna-jobs-category_one-off').
   fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_adzuna-jobs-category_one-off').
     property(single, 'listID', "adzuna-jobs-category").
-    property(single, 'label', "Adzuna Jobs Category").
-    property(single, 'edition', "one-off")
+    property(single, 'edition', "one-off").
+    property(single, 'label', "Adzuna Jobs Category")
   ).next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "manufacturing").
+g.V().hasId('_code_adzuna-jobs-category_manufacturing').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "manufacturing")
+    property(id, '_code_adzuna-jobs-category_manufacturing').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "manufacturing")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "manufacturing").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Manufacturing").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_manufacturing').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Manufacturing").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "energy-oil-and-gas").
+g.V().hasId('_code_adzuna-jobs-category_energy-oil-and-gas').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "energy-oil-and-gas")
+    property(id, '_code_adzuna-jobs-category_energy-oil-and-gas').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "energy-oil-and-gas")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "energy-oil-and-gas").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Energy / oil & gas").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_energy-oil-and-gas').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Energy / oil & gas").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "construction-trades").
+g.V().hasId('_code_adzuna-jobs-category_construction-trades').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "construction-trades")
+    property(id, '_code_adzuna-jobs-category_construction-trades').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "construction-trades")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "construction-trades").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Construction / trades").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_construction-trades').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Construction / trades").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "wholesale-and-retail").
+g.V().hasId('_code_adzuna-jobs-category_wholesale-and-retail').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "wholesale-and-retail")
+    property(id, '_code_adzuna-jobs-category_wholesale-and-retail').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "wholesale-and-retail")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "wholesale-and-retail").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Wholesale and retail").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_wholesale-and-retail').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Wholesale and retail").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "graduate").
+g.V().hasId('_code_adzuna-jobs-category_graduate').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "graduate")
+    property(id, '_code_adzuna-jobs-category_graduate').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "graduate")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "graduate").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Graduate").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_graduate').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Graduate").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "transport-logistics-warehouse").
+g.V().hasId('_code_adzuna-jobs-category_transport-logistics-warehouse').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "transport-logistics-warehouse")
+    property(id, '_code_adzuna-jobs-category_transport-logistics-warehouse').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "transport-logistics-warehouse")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "transport-logistics-warehouse").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Transport / logistics / warehouse").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_transport-logistics-warehouse').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Transport / logistics / warehouse").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "travel-tourism").
+g.V().hasId('_code_adzuna-jobs-category_travel-tourism').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "travel-tourism")
+    property(id, '_code_adzuna-jobs-category_travel-tourism').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "travel-tourism")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "travel-tourism").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Travel / tourism").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_travel-tourism').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Travel / tourism").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "catering-and-hospitality").
+g.V().hasId('_code_adzuna-jobs-category_catering-and-hospitality').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "catering-and-hospitality")
+    property(id, '_code_adzuna-jobs-category_catering-and-hospitality').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "catering-and-hospitality")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "catering-and-hospitality").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Catering and hospitality").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_catering-and-hospitality').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Catering and hospitality").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "it-computing-software").
+g.V().hasId('_code_adzuna-jobs-category_it-computing-software').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "it-computing-software")
+    property(id, '_code_adzuna-jobs-category_it-computing-software').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "it-computing-software")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "it-computing-software").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "IT / Computing / Software").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_it-computing-software').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "IT / Computing / Software").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "accounting-finance").
+g.V().hasId('_code_adzuna-jobs-category_accounting-finance').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "accounting-finance")
+    property(id, '_code_adzuna-jobs-category_accounting-finance').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "accounting-finance")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "accounting-finance").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Accounting / Finance").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_accounting-finance').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Accounting / Finance").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "property").
+g.V().hasId('_code_adzuna-jobs-category_property').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "property")
+    property(id, '_code_adzuna-jobs-category_property').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "property")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "property").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Property").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_property').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Property").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "engineering").
+g.V().hasId('_code_adzuna-jobs-category_engineering').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "engineering")
+    property(id, '_code_adzuna-jobs-category_engineering').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "engineering")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "engineering").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Engineering").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_engineering').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Engineering").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "legal").
+g.V().hasId('_code_adzuna-jobs-category_legal').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "legal")
+    property(id, '_code_adzuna-jobs-category_legal').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "legal")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "legal").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Legal").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_legal').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Legal").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "management-exec-consulting").
+g.V().hasId('_code_adzuna-jobs-category_management-exec-consulting').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "management-exec-consulting")
+    property(id, '_code_adzuna-jobs-category_management-exec-consulting').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "management-exec-consulting")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "management-exec-consulting").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Management / exec / consulting").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_management-exec-consulting').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Management / exec / consulting").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "marketing-advertising-pr").
+g.V().hasId('_code_adzuna-jobs-category_marketing-advertising-pr').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "marketing-advertising-pr")
+    property(id, '_code_adzuna-jobs-category_marketing-advertising-pr').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "marketing-advertising-pr")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "marketing-advertising-pr").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Marketing / advertising / PR").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_marketing-advertising-pr').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Marketing / advertising / PR").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "scientific-qa").
+g.V().hasId('_code_adzuna-jobs-category_scientific-qa').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "scientific-qa")
+    property(id, '_code_adzuna-jobs-category_scientific-qa').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "scientific-qa")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "scientific-qa").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Scientific / QA").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_scientific-qa').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Scientific / QA").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "admin-clerical-secretarial").
+g.V().hasId('_code_adzuna-jobs-category_admin-clerical-secretarial').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "admin-clerical-secretarial")
+    property(id, '_code_adzuna-jobs-category_admin-clerical-secretarial').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "admin-clerical-secretarial")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "admin-clerical-secretarial").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Admin / clerical / secretarial").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_admin-clerical-secretarial').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Admin / clerical / secretarial").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "customer-service-support").
+g.V().hasId('_code_adzuna-jobs-category_customer-service-support').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "customer-service-support")
+    property(id, '_code_adzuna-jobs-category_customer-service-support').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "customer-service-support")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "customer-service-support").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Customer service / support").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_customer-service-support').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Customer service / support").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "facilities-maintenance").
+g.V().hasId('_code_adzuna-jobs-category_facilities-maintenance').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "facilities-maintenance")
+    property(id, '_code_adzuna-jobs-category_facilities-maintenance').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "facilities-maintenance")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "facilities-maintenance").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Facilities / maintenance").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_facilities-maintenance').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Facilities / maintenance").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "hr-and-recruitment").
+g.V().hasId('_code_adzuna-jobs-category_hr-and-recruitment').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "hr-and-recruitment")
+    property(id, '_code_adzuna-jobs-category_hr-and-recruitment').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "hr-and-recruitment")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "hr-and-recruitment").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "HR & recruitment").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_hr-and-recruitment').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "HR & recruitment").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "education").
+g.V().hasId('_code_adzuna-jobs-category_education').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "education")
+    property(id, '_code_adzuna-jobs-category_education').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "education")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "education").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Education").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_education').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Education").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "part-time-weekend").
+g.V().hasId('_code_adzuna-jobs-category_part-time-weekend').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "part-time-weekend")
+    property(id, '_code_adzuna-jobs-category_part-time-weekend').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "part-time-weekend")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "part-time-weekend").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Part-time / weekend").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_part-time-weekend').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Part-time / weekend").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "charity-voluntary").
+g.V().hasId('_code_adzuna-jobs-category_charity-voluntary').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "charity-voluntary")
+    property(id, '_code_adzuna-jobs-category_charity-voluntary').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "charity-voluntary")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "charity-voluntary").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Charity / voluntary").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_charity-voluntary').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Charity / voluntary").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "healthcare-and-social-care").
+g.V().hasId('_code_adzuna-jobs-category_healthcare-and-social-care').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "healthcare-and-social-care")
+    property(id, '_code_adzuna-jobs-category_healthcare-and-social-care').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "healthcare-and-social-care")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "healthcare-and-social-care").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Healthcare and Social care").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_healthcare-and-social-care').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Healthcare and Social care").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "creative-design-arts-and-media").
+g.V().hasId('_code_adzuna-jobs-category_creative-design-arts-and-media').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "creative-design-arts-and-media")
+    property(id, '_code_adzuna-jobs-category_creative-design-arts-and-media').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "creative-design-arts-and-media")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "creative-design-arts-and-media").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Creative / design / arts & media").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_creative-design-arts-and-media').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Creative / design / arts & media").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "other-general").
+g.V().hasId('_code_adzuna-jobs-category_other-general').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "other-general")
+    property(id, '_code_adzuna-jobs-category_other-general').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "other-general")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "other-general").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Other / general").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_other-general').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Other / general").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "sales").
+g.V().hasId('_code_adzuna-jobs-category_sales').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "sales")
+    property(id, '_code_adzuna-jobs-category_sales').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "sales")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "sales").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Sales").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_sales').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Sales").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "domestic-help").
+g.V().hasId('_code_adzuna-jobs-category_domestic-help').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "domestic-help")
+    property(id, '_code_adzuna-jobs-category_domestic-help').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "domestic-help")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "domestic-help").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Domestic help").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_domestic-help').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Domestic help").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "unknown").
+g.V().hasId('_code_adzuna-jobs-category_unknown').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "unknown")
+    property(id, '_code_adzuna-jobs-category_unknown').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "unknown")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "unknown").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Unknown").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_unknown').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Unknown").next()
 
 
-g.V().has('_code','listID', 'adzuna-jobs-category').has('value', "all-industries").
+g.V().hasId('_code_adzuna-jobs-category_all-industries').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "all-industries")
+    property(id, '_code_adzuna-jobs-category_all-industries').property(single, 'listID', 'adzuna-jobs-category').property(single, 'value', "all-industries")
   ).next()
-g.V().has('_code', 'listID', 'adzuna-jobs-category').has('value', "all-industries").as('code').
-  V().has('_code_list', 'listID', 'adzuna-jobs-category').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "All industries").next()
+  g.V().hasId('_code_list_adzuna-jobs-category_one-off').as('codeList').V().hasId('_code_adzuna-jobs-category_all-industries').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "All industries").next()
 

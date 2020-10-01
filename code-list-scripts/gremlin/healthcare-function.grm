@@ -1,309 +1,280 @@
 
 
-g.V().has('_code_list', 'listID', 'healthcare-function').has('edition', 'one-off').
+g.V().hasId('_code_list_healthcare-function_one-off').
   fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_healthcare-function_one-off').
     property(single, 'listID', "healthcare-function").
     property(single, 'label', "Healthcare Function").
     property(single, 'edition', "one-off")
   ).next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HCTOT").
+g.V().hasId('_code_healthcare-function_HCTOT').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HCTOT")
+    property(id, '_code_healthcare-function_HCTOT').property(single, 'listID', 'healthcare-function').property(single, 'value', "HCTOT")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HCTOT").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Total functions").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HCTOT').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Total functions").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC1HC2").
+g.V().hasId('_code_healthcare-function_HC1HC2').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC1HC2")
+    property(id, '_code_healthcare-function_HC1HC2').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC1HC2")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC1HC2").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Curative/rehabilitative care").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC1HC2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Curative/rehabilitative care").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC11HC21").
+g.V().hasId('_code_healthcare-function_HC11HC21').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC11HC21")
+    property(id, '_code_healthcare-function_HC11HC21').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC11HC21")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC11HC21").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Curative/rehabilitative inpatient care").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC11HC21').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Curative/rehabilitative inpatient care").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC12HC22").
+g.V().hasId('_code_healthcare-function_HC12HC22').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC12HC22")
+    property(id, '_code_healthcare-function_HC12HC22').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC12HC22")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC12HC22").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Curative/rehabilitative day care").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC12HC22').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Curative/rehabilitative day care").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC13HC23").
+g.V().hasId('_code_healthcare-function_HC13HC23').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC13HC23")
+    property(id, '_code_healthcare-function_HC13HC23').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC13HC23")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC13HC23").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Curative/rehabilitative outpatient care").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC13HC23').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Curative/rehabilitative outpatient care").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC14HC24").
+g.V().hasId('_code_healthcare-function_HC14HC24').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC14HC24")
+    property(id, '_code_healthcare-function_HC14HC24').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC14HC24")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC14HC24").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Curative/rehabilitative home-based care").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC14HC24').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Curative/rehabilitative home-based care").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC3").
+g.V().hasId('_code_healthcare-function_HC3').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC3")
+    property(id, '_code_healthcare-function_HC3').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC3")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC3").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Long-term care").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Long-term care").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC31").
+g.V().hasId('_code_healthcare-function_HC31').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC31")
+    property(id, '_code_healthcare-function_HC31').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC31")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC31").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Long-term inpatient care").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC31').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Long-term inpatient care").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC32").
+g.V().hasId('_code_healthcare-function_HC32').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC32")
+    property(id, '_code_healthcare-function_HC32').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC32")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC32").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Long-term day care").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC32').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Long-term day care").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC33").
+g.V().hasId('_code_healthcare-function_HC33').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC33")
+    property(id, '_code_healthcare-function_HC33').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC33")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC33").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Long-term outpatient care").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC33').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Long-term outpatient care").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC34").
+g.V().hasId('_code_healthcare-function_HC34').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC34")
+    property(id, '_code_healthcare-function_HC34').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC34")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC34").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Long-term home-based care").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC34').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Long-term home-based care").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC4").
+g.V().hasId('_code_healthcare-function_HC4').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC4")
+    property(id, '_code_healthcare-function_HC4').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC4")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC4").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Ancillary services").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Ancillary services").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC5").
+g.V().hasId('_code_healthcare-function_HC5').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC5")
+    property(id, '_code_healthcare-function_HC5').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC5")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC5").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Medical goods").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC5').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Medical goods").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC51").
+g.V().hasId('_code_healthcare-function_HC51').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC51")
+    property(id, '_code_healthcare-function_HC51').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC51")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC51").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Pharmaceuticals and other medical non-durable goods").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC51').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Pharmaceuticals and other medical non-durable goods").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC511").
+g.V().hasId('_code_healthcare-function_HC511').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC511")
+    property(id, '_code_healthcare-function_HC511').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC511")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC511").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Prescribed medicines").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC511').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Prescribed medicines").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC512").
+g.V().hasId('_code_healthcare-function_HC512').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC512")
+    property(id, '_code_healthcare-function_HC512').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC512")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC512").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Over-the-counter medicines").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC512').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Over-the-counter medicines").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC513").
+g.V().hasId('_code_healthcare-function_HC513').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC513")
+    property(id, '_code_healthcare-function_HC513').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC513")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC513").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Other medical non-durable goods").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC513').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Other medical non-durable goods").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC52").
+g.V().hasId('_code_healthcare-function_HC52').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC52")
+    property(id, '_code_healthcare-function_HC52').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC52")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC52").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Therapeutic appliances and other medical goods").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC52').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Therapeutic appliances and other medical goods").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC6").
+g.V().hasId('_code_healthcare-function_HC6').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC6")
+    property(id, '_code_healthcare-function_HC6').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC6")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC6").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Preventive care").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC6').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Preventive care").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC61").
+g.V().hasId('_code_healthcare-function_HC61').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC61")
+    property(id, '_code_healthcare-function_HC61').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC61")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC61").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Information, education and counseling programmes").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC61').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Information, education and counseling programmes").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC62").
+g.V().hasId('_code_healthcare-function_HC62').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC62")
+    property(id, '_code_healthcare-function_HC62').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC62")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC62").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Immunisation programmes").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC62').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Immunisation programmes").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC63").
+g.V().hasId('_code_healthcare-function_HC63').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC63")
+    property(id, '_code_healthcare-function_HC63').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC63")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC63").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Early disease detection programmes").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC63').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Early disease detection programmes").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC64").
+g.V().hasId('_code_healthcare-function_HC64').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC64")
+    property(id, '_code_healthcare-function_HC64').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC64")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC64").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Healthy condition monitoring programmes").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC64').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Healthy condition monitoring programmes").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC65").
+g.V().hasId('_code_healthcare-function_HC65').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC65")
+    property(id, '_code_healthcare-function_HC65').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC65")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC65").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Epidemiological surveillance and risk and disease control programmes").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC65').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Epidemiological surveillance and risk and disease control programmes").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC7").
+g.V().hasId('_code_healthcare-function_HC7').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC7")
+    property(id, '_code_healthcare-function_HC7').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC7")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC7").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Governance and health system and financing administration").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC7').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Governance and health system and financing administration").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC71").
+g.V().hasId('_code_healthcare-function_HC71').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC71")
+    property(id, '_code_healthcare-function_HC71').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC71")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC71").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Governance and health system administration").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC71').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Governance and health system administration").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC72").
+g.V().hasId('_code_healthcare-function_HC72').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC72")
+    property(id, '_code_healthcare-function_HC72').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC72")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC72").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Administration of health system financing").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC72').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Administration of health system financing").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HC0").
+g.V().hasId('_code_healthcare-function_HC0').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HC0")
+    property(id, '_code_healthcare-function_HC0').property(single, 'listID', 'healthcare-function').property(single, 'value', "HC0")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HC0").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Not elsewhere classified").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HC0').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Not elsewhere classified").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "HCR1").
+g.V().hasId('_code_healthcare-function_HCR1').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "HCR1")
+    property(id, '_code_healthcare-function_HCR1').property(single, 'listID', 'healthcare-function').property(single, 'value', "HCR1")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "HCR1").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Long-term care (social)").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_HCR1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Long-term care (social)").next()
 
 
-g.V().has('_code','listID', 'healthcare-function').has('value', "LTC_TOT").
+g.V().hasId('_code_healthcare-function_LTC_TOT').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'healthcare-function').property(single, 'value', "LTC_TOT")
+    property(id, '_code_healthcare-function_LTC_TOT').property(single, 'listID', 'healthcare-function').property(single, 'value', "LTC_TOT")
   ).next()
-g.V().has('_code', 'listID', 'healthcare-function').has('value', "LTC_TOT").as('code').
-  V().has('_code_list', 'listID', 'healthcare-function').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Total long-term care").next()
+  g.V().hasId('_code_list_healthcare-function_one-off').as('codeList').V().hasId('_code_healthcare-function_LTC_TOT').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Total long-term care").next()
 

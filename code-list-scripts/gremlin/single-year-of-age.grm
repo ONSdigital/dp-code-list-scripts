@@ -1,5 +1,6 @@
-g.V().has('_code_list', 'listID', 'single-year-of-age').has('edition', 'one-off').
+g.V().hasId('_code_list_single-year-of-age_one-off').
   fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_single-year-of-age_one-off').
     property(single, 'listID', "single-year-of-age").
     property(single, 'label', "Age").
     property(single, 'edition', "one-off")
@@ -9,922 +10,830 @@ g.V().has('_code_list', 'listID', 'single-year-of-age').has('edition', 'one-off'
 
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "44").
+g.V().hasId('_code_single-year-of-age_44').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "44")
+    property(id, '_code_single-year-of-age_44').property(single, 'listID', 'single-year-of-age').property(single, 'value', "44")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "44").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "44").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_44').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "44").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "1").
+g.V().hasId('_code_single-year-of-age_1').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "1")
+    property(id, '_code_single-year-of-age_1').property(single, 'listID', 'single-year-of-age').property(single, 'value', "1")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "1").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "1").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "1").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "5").
+g.V().hasId('_code_single-year-of-age_5').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "5")
+    property(id, '_code_single-year-of-age_5').property(single, 'listID', 'single-year-of-age').property(single, 'value', "5")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "5").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "5").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_5').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "5").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "6").
+g.V().hasId('_code_single-year-of-age_6').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "6")
+    property(id, '_code_single-year-of-age_6').property(single, 'listID', 'single-year-of-age').property(single, 'value', "6")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "6").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "6").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_6').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "6").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "0").
+g.V().hasId('_code_single-year-of-age_0').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "0")
+    property(id, '_code_single-year-of-age_0').property(single, 'listID', 'single-year-of-age').property(single, 'value', "0")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "0").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "0").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_0').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "0").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "31").
+g.V().hasId('_code_single-year-of-age_31').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "31")
+    property(id, '_code_single-year-of-age_31').property(single, 'listID', 'single-year-of-age').property(single, 'value', "31")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "31").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "31").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_31').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "31").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "20").
+g.V().hasId('_code_single-year-of-age_20').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "20")
+    property(id, '_code_single-year-of-age_20').property(single, 'listID', 'single-year-of-age').property(single, 'value', "20")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "20").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "20").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_20').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "20").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "26").
+g.V().hasId('_code_single-year-of-age_26').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "26")
+    property(id, '_code_single-year-of-age_26').property(single, 'listID', 'single-year-of-age').property(single, 'value', "26")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "26").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "26").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_26').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "26").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "3").
+g.V().hasId('_code_single-year-of-age_3').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "3")
+    property(id, '_code_single-year-of-age_3').property(single, 'listID', 'single-year-of-age').property(single, 'value', "3")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "3").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "3").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "3").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "23").
+g.V().hasId('_code_single-year-of-age_23').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "23")
+    property(id, '_code_single-year-of-age_23').property(single, 'listID', 'single-year-of-age').property(single, 'value', "23")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "23").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "23").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_23').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "23").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "37").
+g.V().hasId('_code_single-year-of-age_37').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "37")
+    property(id, '_code_single-year-of-age_37').property(single, 'listID', 'single-year-of-age').property(single, 'value', "37")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "37").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "37").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_37').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "37").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "14").
+g.V().hasId('_code_single-year-of-age_14').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "14")
+    property(id, '_code_single-year-of-age_14').property(single, 'listID', 'single-year-of-age').property(single, 'value', "14")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "14").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "14").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_14').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "14").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "21").
+g.V().hasId('_code_single-year-of-age_21').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "21")
+    property(id, '_code_single-year-of-age_21').property(single, 'listID', 'single-year-of-age').property(single, 'value', "21")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "21").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "21").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_21').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "21").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "8").
+g.V().hasId('_code_single-year-of-age_8').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "8")
+    property(id, '_code_single-year-of-age_8').property(single, 'listID', 'single-year-of-age').property(single, 'value', "8")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "8").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "8").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_8').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "8").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "2").
+g.V().hasId('_code_single-year-of-age_2').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "2")
+    property(id, '_code_single-year-of-age_2').property(single, 'listID', 'single-year-of-age').property(single, 'value', "2")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "2").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "2").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "2").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "18").
+g.V().hasId('_code_single-year-of-age_18').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "18")
+    property(id, '_code_single-year-of-age_18').property(single, 'listID', 'single-year-of-age').property(single, 'value', "18")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "18").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "18").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_18').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "18").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "22").
+g.V().hasId('_code_single-year-of-age_22').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "22")
+    property(id, '_code_single-year-of-age_22').property(single, 'listID', 'single-year-of-age').property(single, 'value', "22")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "22").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "22").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_22').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "22").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "27").
+g.V().hasId('_code_single-year-of-age_27').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "27")
+    property(id, '_code_single-year-of-age_27').property(single, 'listID', 'single-year-of-age').property(single, 'value', "27")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "27").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "27").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_27').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "27").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "39").
+g.V().hasId('_code_single-year-of-age_39').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "39")
+    property(id, '_code_single-year-of-age_39').property(single, 'listID', 'single-year-of-age').property(single, 'value', "39")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "39").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "39").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_39').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "39").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "12").
+g.V().hasId('_code_single-year-of-age_12').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "12")
+    property(id, '_code_single-year-of-age_12').property(single, 'listID', 'single-year-of-age').property(single, 'value', "12")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "12").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "12").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_12').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "12").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "38").
+g.V().hasId('_code_single-year-of-age_38').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "38")
+    property(id, '_code_single-year-of-age_38').property(single, 'listID', 'single-year-of-age').property(single, 'value', "38")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "38").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "38").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_38').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "38").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "34").
+g.V().hasId('_code_single-year-of-age_34').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "34")
+    property(id, '_code_single-year-of-age_34').property(single, 'listID', 'single-year-of-age').property(single, 'value', "34")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "34").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "34").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_34').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "34").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "36").
+g.V().hasId('_code_single-year-of-age_36').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "36")
+    property(id, '_code_single-year-of-age_36').property(single, 'listID', 'single-year-of-age').property(single, 'value', "36")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "36").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "36").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_36').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "36").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "7").
+g.V().hasId('_code_single-year-of-age_7').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "7")
+    property(id, '_code_single-year-of-age_7').property(single, 'listID', 'single-year-of-age').property(single, 'value', "7")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "7").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "7").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_7').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "7").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "9").
+g.V().hasId('_code_single-year-of-age_9').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "9")
+    property(id, '_code_single-year-of-age_9').property(single, 'listID', 'single-year-of-age').property(single, 'value', "9")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "9").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "9").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_9').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "9").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "35").
+g.V().hasId('_code_single-year-of-age_35').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "35")
+    property(id, '_code_single-year-of-age_35').property(single, 'listID', 'single-year-of-age').property(single, 'value', "35")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "35").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "35").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_35').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "35").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "53").
+g.V().hasId('_code_single-year-of-age_53').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "53")
+    property(id, '_code_single-year-of-age_53').property(single, 'listID', 'single-year-of-age').property(single, 'value', "53")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "53").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "53").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_53').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "53").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "4").
+g.V().hasId('_code_single-year-of-age_4').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "4")
+    property(id, '_code_single-year-of-age_4').property(single, 'listID', 'single-year-of-age').property(single, 'value', "4")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "4").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "4").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "4").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "11").
+g.V().hasId('_code_single-year-of-age_11').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "11")
+    property(id, '_code_single-year-of-age_11').property(single, 'listID', 'single-year-of-age').property(single, 'value', "11")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "11").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "11").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_11').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "11").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "32").
+g.V().hasId('_code_single-year-of-age_32').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "32")
+    property(id, '_code_single-year-of-age_32').property(single, 'listID', 'single-year-of-age').property(single, 'value', "32")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "32").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "32").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_32').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "32").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "13").
+g.V().hasId('_code_single-year-of-age_13').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "13")
+    property(id, '_code_single-year-of-age_13').property(single, 'listID', 'single-year-of-age').property(single, 'value', "13")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "13").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "13").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_13').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "13").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "33").
+g.V().hasId('_code_single-year-of-age_33').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "33")
+    property(id, '_code_single-year-of-age_33').property(single, 'listID', 'single-year-of-age').property(single, 'value', "33")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "33").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "33").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_33').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "33").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "30").
+g.V().hasId('_code_single-year-of-age_30').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "30")
+    property(id, '_code_single-year-of-age_30').property(single, 'listID', 'single-year-of-age').property(single, 'value', "30")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "30").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "30").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_30').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "30").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "19").
+g.V().hasId('_code_single-year-of-age_19').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "19")
+    property(id, '_code_single-year-of-age_19').property(single, 'listID', 'single-year-of-age').property(single, 'value', "19")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "19").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "19").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_19').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "19").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "24").
+g.V().hasId('_code_single-year-of-age_24').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "24")
+    property(id, '_code_single-year-of-age_24').property(single, 'listID', 'single-year-of-age').property(single, 'value', "24")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "24").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "24").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_24').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "24").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "10").
+g.V().hasId('_code_single-year-of-age_10').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "10")
+    property(id, '_code_single-year-of-age_10').property(single, 'listID', 'single-year-of-age').property(single, 'value', "10")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "10").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "10").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_10').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "10").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "15").
+g.V().hasId('_code_single-year-of-age_15').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "15")
+    property(id, '_code_single-year-of-age_15').property(single, 'listID', 'single-year-of-age').property(single, 'value', "15")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "15").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "15").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_15').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "15").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "16").
+g.V().hasId('_code_single-year-of-age_16').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "16")
+    property(id, '_code_single-year-of-age_16').property(single, 'listID', 'single-year-of-age').property(single, 'value', "16")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "16").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "16").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_16').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "16").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "17").
+g.V().hasId('_code_single-year-of-age_17').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "17")
+    property(id, '_code_single-year-of-age_17').property(single, 'listID', 'single-year-of-age').property(single, 'value', "17")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "17").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "17").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_17').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "17").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "40").
+g.V().hasId('_code_single-year-of-age_40').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "40")
+    property(id, '_code_single-year-of-age_40').property(single, 'listID', 'single-year-of-age').property(single, 'value', "40")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "40").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "40").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_40').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "40").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "60").
+g.V().hasId('_code_single-year-of-age_60').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "60")
+    property(id, '_code_single-year-of-age_60').property(single, 'listID', 'single-year-of-age').property(single, 'value', "60")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "60").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "60").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_60').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "60").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "41").
+g.V().hasId('_code_single-year-of-age_41').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "41")
+    property(id, '_code_single-year-of-age_41').property(single, 'listID', 'single-year-of-age').property(single, 'value', "41")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "41").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "41").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_41').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "41").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "42").
+g.V().hasId('_code_single-year-of-age_42').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "42")
+    property(id, '_code_single-year-of-age_42').property(single, 'listID', 'single-year-of-age').property(single, 'value', "42")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "42").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "42").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_42').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "42").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "54").
+g.V().hasId('_code_single-year-of-age_54').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "54")
+    property(id, '_code_single-year-of-age_54').property(single, 'listID', 'single-year-of-age').property(single, 'value', "54")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "54").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "54").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_54').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "54").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "55").
+g.V().hasId('_code_single-year-of-age_55').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "55")
+    property(id, '_code_single-year-of-age_55').property(single, 'listID', 'single-year-of-age').property(single, 'value', "55")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "55").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "55").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_55').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "55").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "43").
+g.V().hasId('_code_single-year-of-age_43').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "43")
+    property(id, '_code_single-year-of-age_43').property(single, 'listID', 'single-year-of-age').property(single, 'value', "43")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "43").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "43").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_43').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "43").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "56").
+g.V().hasId('_code_single-year-of-age_56').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "56")
+    property(id, '_code_single-year-of-age_56').property(single, 'listID', 'single-year-of-age').property(single, 'value', "56")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "56").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "56").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_56').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "56").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "49").
+g.V().hasId('_code_single-year-of-age_49').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "49")
+    property(id, '_code_single-year-of-age_49').property(single, 'listID', 'single-year-of-age').property(single, 'value', "49")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "49").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "49").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_49').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "49").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "58").
+g.V().hasId('_code_single-year-of-age_58').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "58")
+    property(id, '_code_single-year-of-age_58').property(single, 'listID', 'single-year-of-age').property(single, 'value', "58")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "58").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "58").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_58').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "58").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "50").
+g.V().hasId('_code_single-year-of-age_50').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "50")
+    property(id, '_code_single-year-of-age_50').property(single, 'listID', 'single-year-of-age').property(single, 'value', "50")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "50").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "50").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_50').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "50").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "57").
+g.V().hasId('_code_single-year-of-age_57').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "57")
+    property(id, '_code_single-year-of-age_57').property(single, 'listID', 'single-year-of-age').property(single, 'value', "57")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "57").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "57").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_57').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "57").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "51").
+g.V().hasId('_code_single-year-of-age_51').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "51")
+    property(id, '_code_single-year-of-age_51').property(single, 'listID', 'single-year-of-age').property(single, 'value', "51")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "51").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "51").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_51').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "51").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "63").
+g.V().hasId('_code_single-year-of-age_63').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "63")
+    property(id, '_code_single-year-of-age_63').property(single, 'listID', 'single-year-of-age').property(single, 'value', "63")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "63").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "63").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_63').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "63").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "52").
+g.V().hasId('_code_single-year-of-age_52').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "52")
+    property(id, '_code_single-year-of-age_52').property(single, 'listID', 'single-year-of-age').property(single, 'value', "52")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "52").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "52").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_52').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "52").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "65").
+g.V().hasId('_code_single-year-of-age_65').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "65")
+    property(id, '_code_single-year-of-age_65').property(single, 'listID', 'single-year-of-age').property(single, 'value', "65")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "65").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "65").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_65').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "65").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "61").
+g.V().hasId('_code_single-year-of-age_61').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "61")
+    property(id, '_code_single-year-of-age_61').property(single, 'listID', 'single-year-of-age').property(single, 'value', "61")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "61").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "61").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_61').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "61").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "62").
+g.V().hasId('_code_single-year-of-age_62').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "62")
+    property(id, '_code_single-year-of-age_62').property(single, 'listID', 'single-year-of-age').property(single, 'value', "62")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "62").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "62").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_62').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "62").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "66").
+g.V().hasId('_code_single-year-of-age_66').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "66")
+    property(id, '_code_single-year-of-age_66').property(single, 'listID', 'single-year-of-age').property(single, 'value', "66")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "66").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "66").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_66').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "66").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "25").
+g.V().hasId('_code_single-year-of-age_25').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "25")
+    property(id, '_code_single-year-of-age_25').property(single, 'listID', 'single-year-of-age').property(single, 'value', "25")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "25").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "25").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_25').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "25").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "46").
+g.V().hasId('_code_single-year-of-age_46').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "46")
+    property(id, '_code_single-year-of-age_46').property(single, 'listID', 'single-year-of-age').property(single, 'value', "46")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "46").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "46").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_46').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "46").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "69").
+g.V().hasId('_code_single-year-of-age_69').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "69")
+    property(id, '_code_single-year-of-age_69').property(single, 'listID', 'single-year-of-age').property(single, 'value', "69")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "69").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "69").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_69').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "69").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "45").
+g.V().hasId('_code_single-year-of-age_45').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "45")
+    property(id, '_code_single-year-of-age_45').property(single, 'listID', 'single-year-of-age').property(single, 'value', "45")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "45").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "45").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_45').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "45").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "67").
+g.V().hasId('_code_single-year-of-age_67').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "67")
+    property(id, '_code_single-year-of-age_67').property(single, 'listID', 'single-year-of-age').property(single, 'value', "67")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "67").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "67").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_67').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "67").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "28").
+g.V().hasId('_code_single-year-of-age_28').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "28")
+    property(id, '_code_single-year-of-age_28').property(single, 'listID', 'single-year-of-age').property(single, 'value', "28")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "28").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "28").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_28').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "28").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "68").
+g.V().hasId('_code_single-year-of-age_68').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "68")
+    property(id, '_code_single-year-of-age_68').property(single, 'listID', 'single-year-of-age').property(single, 'value', "68")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "68").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "68").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_68').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "68").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "64").
+g.V().hasId('_code_single-year-of-age_64').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "64")
+    property(id, '_code_single-year-of-age_64').property(single, 'listID', 'single-year-of-age').property(single, 'value', "64")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "64").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "64").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_64').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "64").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "72").
+g.V().hasId('_code_single-year-of-age_72').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "72")
+    property(id, '_code_single-year-of-age_72').property(single, 'listID', 'single-year-of-age').property(single, 'value', "72")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "72").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "72").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_72').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "72").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "70").
+g.V().hasId('_code_single-year-of-age_70').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "70")
+    property(id, '_code_single-year-of-age_70').property(single, 'listID', 'single-year-of-age').property(single, 'value', "70")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "70").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "70").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_70').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "70").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "47").
+g.V().hasId('_code_single-year-of-age_47').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "47")
+    property(id, '_code_single-year-of-age_47').property(single, 'listID', 'single-year-of-age').property(single, 'value', "47")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "47").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "47").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_47').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "47").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "59").
+g.V().hasId('_code_single-year-of-age_59').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "59")
+    property(id, '_code_single-year-of-age_59').property(single, 'listID', 'single-year-of-age').property(single, 'value', "59")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "59").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "59").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_59').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "59").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "48").
+g.V().hasId('_code_single-year-of-age_48').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "48")
+    property(id, '_code_single-year-of-age_48').property(single, 'listID', 'single-year-of-age').property(single, 'value', "48")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "48").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "48").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_48').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "48").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "71").
+g.V().hasId('_code_single-year-of-age_71').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "71")
+    property(id, '_code_single-year-of-age_71').property(single, 'listID', 'single-year-of-age').property(single, 'value', "71")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "71").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "71").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_71').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "71").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "81").
+g.V().hasId('_code_single-year-of-age_81').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "81")
+    property(id, '_code_single-year-of-age_81').property(single, 'listID', 'single-year-of-age').property(single, 'value', "81")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "81").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "81").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_81').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "81").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "76").
+g.V().hasId('_code_single-year-of-age_76').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "76")
+    property(id, '_code_single-year-of-age_76').property(single, 'listID', 'single-year-of-age').property(single, 'value', "76")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "76").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "76").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_76').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "76").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "77").
+g.V().hasId('_code_single-year-of-age_77').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "77")
+    property(id, '_code_single-year-of-age_77').property(single, 'listID', 'single-year-of-age').property(single, 'value', "77")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "77").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "77").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_77').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "77").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "29").
+g.V().hasId('_code_single-year-of-age_29').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "29")
+    property(id, '_code_single-year-of-age_29').property(single, 'listID', 'single-year-of-age').property(single, 'value', "29")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "29").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "29").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_29').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "29").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "90+").
+g.V().hasId('_code_single-year-of-age_90+').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "90+")
+    property(id, '_code_single-year-of-age_90+').property(single, 'listID', 'single-year-of-age').property(single, 'value', "90+")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "90+").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "90+").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_90+').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "90+").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "75").
+g.V().hasId('_code_single-year-of-age_75').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "75")
+    property(id, '_code_single-year-of-age_75').property(single, 'listID', 'single-year-of-age').property(single, 'value', "75")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "75").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "75").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_75').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "75").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "78").
+g.V().hasId('_code_single-year-of-age_78').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "78")
+    property(id, '_code_single-year-of-age_78').property(single, 'listID', 'single-year-of-age').property(single, 'value', "78")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "78").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "78").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_78').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "78").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "74").
+g.V().hasId('_code_single-year-of-age_74').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "74")
+    property(id, '_code_single-year-of-age_74').property(single, 'listID', 'single-year-of-age').property(single, 'value', "74")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "74").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "74").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_74').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "74").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "82").
+g.V().hasId('_code_single-year-of-age_82').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "82")
+    property(id, '_code_single-year-of-age_82').property(single, 'listID', 'single-year-of-age').property(single, 'value', "82")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "82").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "82").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_82').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "82").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "73").
+g.V().hasId('_code_single-year-of-age_73').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "73")
+    property(id, '_code_single-year-of-age_73').property(single, 'listID', 'single-year-of-age').property(single, 'value', "73")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "73").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "73").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_73').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "73").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "86").
+g.V().hasId('_code_single-year-of-age_86').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "86")
+    property(id, '_code_single-year-of-age_86').property(single, 'listID', 'single-year-of-age').property(single, 'value', "86")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "86").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "86").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_86').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "86").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "79").
+g.V().hasId('_code_single-year-of-age_79').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "79")
+    property(id, '_code_single-year-of-age_79').property(single, 'listID', 'single-year-of-age').property(single, 'value', "79")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "79").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "79").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_79').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "79").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "87").
+g.V().hasId('_code_single-year-of-age_87').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "87")
+    property(id, '_code_single-year-of-age_87').property(single, 'listID', 'single-year-of-age').property(single, 'value', "87")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "87").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "87").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_87').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "87").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "83").
+g.V().hasId('_code_single-year-of-age_83').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "83")
+    property(id, '_code_single-year-of-age_83').property(single, 'listID', 'single-year-of-age').property(single, 'value', "83")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "83").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "83").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_83').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "83").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "80").
+g.V().hasId('_code_single-year-of-age_80').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "80")
+    property(id, '_code_single-year-of-age_80').property(single, 'listID', 'single-year-of-age').property(single, 'value', "80")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "80").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "80").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_80').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "80").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "89").
+g.V().hasId('_code_single-year-of-age_89').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "89")
+    property(id, '_code_single-year-of-age_89').property(single, 'listID', 'single-year-of-age').property(single, 'value', "89")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "89").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "89").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_89').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "89").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "88").
+g.V().hasId('_code_single-year-of-age_88').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "88")
+    property(id, '_code_single-year-of-age_88').property(single, 'listID', 'single-year-of-age').property(single, 'value', "88")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "88").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "88").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_88').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "88").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "84").
+g.V().hasId('_code_single-year-of-age_84').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "84")
+    property(id, '_code_single-year-of-age_84').property(single, 'listID', 'single-year-of-age').property(single, 'value', "84")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "84").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "84").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_84').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "84").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "85").
+g.V().hasId('_code_single-year-of-age_85').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "85")
+    property(id, '_code_single-year-of-age_85').property(single, 'listID', 'single-year-of-age').property(single, 'value', "85")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "85").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "85").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_85').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "85").next()
 
 
-g.V().has('_code','listID', 'single-year-of-age').has('value', "total").
+g.V().hasId('_code_single-year-of-age_total').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'single-year-of-age').property(single, 'value', "total")
+    property(id, '_code_single-year-of-age_total').property(single, 'listID', 'single-year-of-age').property(single, 'value', "total")
   ).next()
-g.V().has('_code', 'listID', 'single-year-of-age').has('value', "total").as('code').
-  V().has('_code_list', 'listID', 'single-year-of-age').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Total").next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_total').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Total").next()
 

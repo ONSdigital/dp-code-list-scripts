@@ -1,29 +1,28 @@
 
 
-g.V().has('_code_list', 'listID', 'workplace-or-residence').has('edition', 'one-off').
+g.V().hasId('_code_list_workplace-or-residence_one-off').
   fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_workplace-or-residence_one-off').
     property(single, 'listID', "workplace-or-residence").
     property(single, 'label', "Workplace Or Residence").
     property(single, 'edition', "one-off")
   ).next()
 
 
-g.V().has('_code','listID', 'workplace-or-residence').has('value', "residence").
+g.V().hasId('_code_workplace-or-residence_residence').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'workplace-or-residence').property(single, 'value', "residence")
+    property(id, '_code_workplace-or-residence_residence').property(single, 'listID', 'workplace-or-residence').property(single, 'value', "residence")
   ).next()
-g.V().has('_code', 'listID', 'workplace-or-residence').has('value', "residence").as('code').
-  V().has('_code_list', 'listID', 'workplace-or-residence').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Residence").next()
+  g.V().hasId('_code_list_workplace-or-residence_one-off').as('codeList').V().hasId('_code_workplace-or-residence_residence').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Residence").next()
 
 
-g.V().has('_code','listID', 'workplace-or-residence').has('value', "workplace").
+g.V().hasId('_code_workplace-or-residence_workplace').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'workplace-or-residence').property(single, 'value', "workplace")
+    property(id, '_code_workplace-or-residence_workplace').property(single, 'listID', 'workplace-or-residence').property(single, 'value', "workplace")
   ).next()
-g.V().has('_code', 'listID', 'workplace-or-residence').has('value', "workplace").as('code').
-  V().has('_code_list', 'listID', 'workplace-or-residence').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Workplace").next()
+  g.V().hasId('_code_list_workplace-or-residence_one-off').as('codeList').V().hasId('_code_workplace-or-residence_workplace').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Workplace").next()
 

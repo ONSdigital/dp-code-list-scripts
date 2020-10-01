@@ -1,49 +1,46 @@
 
 
-g.V().has('_code_list', 'listID', 'quarter').has('edition', 'one-off').
+g.V().hasId('_code_list_quarter_one-off').
   fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_quarter_one-off').
     property(single, 'listID', "quarter").
     property(single, 'label', "Quarter").
     property(single, 'edition', "one-off")
   ).next()
 
 
-g.V().has('_code','listID', 'quarter').has('value', "q1").
+g.V().hasId('_code_quarter_q1').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'quarter').property(single, 'value', "q1")
+    property(id, '_code_quarter_q1').property(single, 'listID', 'quarter').property(single, 'value', "q1")
   ).next()
-g.V().has('_code', 'listID', 'quarter').has('value', "q1").as('code').
-  V().has('_code_list', 'listID', 'quarter').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Q1").next()
+  g.V().hasId('_code_list_quarter_one-off').as('codeList').V().hasId('_code_quarter_q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Q1").next()
 
 
-g.V().has('_code','listID', 'quarter').has('value', "q4").
+g.V().hasId('_code_quarter_q4').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'quarter').property(single, 'value', "q4")
+    property(id, '_code_quarter_q4').property(single, 'listID', 'quarter').property(single, 'value', "q4")
   ).next()
-g.V().has('_code', 'listID', 'quarter').has('value', "q4").as('code').
-  V().has('_code_list', 'listID', 'quarter').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Q4").next()
+  g.V().hasId('_code_list_quarter_one-off').as('codeList').V().hasId('_code_quarter_q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Q4").next()
 
 
-g.V().has('_code','listID', 'quarter').has('value', "q3").
+g.V().hasId('_code_quarter_q3').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'quarter').property(single, 'value', "q3")
+    property(id, '_code_quarter_q3').property(single, 'listID', 'quarter').property(single, 'value', "q3")
   ).next()
-g.V().has('_code', 'listID', 'quarter').has('value', "q3").as('code').
-  V().has('_code_list', 'listID', 'quarter').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Q3").next()
+  g.V().hasId('_code_list_quarter_one-off').as('codeList').V().hasId('_code_quarter_q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Q3").next()
 
 
-g.V().has('_code','listID', 'quarter').has('value', "q2").
+g.V().hasId('_code_quarter_q2').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'quarter').property(single, 'value', "q2")
+    property(id, '_code_quarter_q2').property(single, 'listID', 'quarter').property(single, 'value', "q2")
   ).next()
-g.V().has('_code', 'listID', 'quarter').has('value', "q2").as('code').
-  V().has('_code_list', 'listID', 'quarter').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Q2").next()
+  g.V().hasId('_code_list_quarter_one-off').as('codeList').V().hasId('_code_quarter_q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Q2").next()
 

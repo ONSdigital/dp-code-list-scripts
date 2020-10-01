@@ -1,59 +1,55 @@
 
 
-g.V().has('_code_list', 'listID', 'quarterly-index-and-growth-rate').has('edition', 'one-off').
+g.V().hasId('_code_list_quarterly-index-and-growth-rate_one-off').
   fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_quarterly-index-and-growth-rate_one-off').
     property(single, 'listID', "quarterly-index-and-growth-rate").
     property(single, 'label', "Growth Rate").
     property(single, 'edition', "one-off")
   ).next()
 
 
-g.V().has('_code','listID', 'quarterly-index-and-growth-rate').has('value', "gra").
+g.V().hasId('_code_quarterly-index-and-growth-rate_gra').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'quarterly-index-and-growth-rate').property(single, 'value', "gra")
+    property(id, '_code_quarterly-index-and-growth-rate_gra').property(single, 'listID', 'quarterly-index-and-growth-rate').property(single, 'value', "gra")
   ).next()
-g.V().has('_code', 'listID', 'quarterly-index-and-growth-rate').has('value', "gra").as('code').
-  V().has('_code_list', 'listID', 'quarterly-index-and-growth-rate').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Annual growth rate").next()
+  g.V().hasId('_code_list_quarterly-index-and-growth-rate_one-off').as('codeList').V().hasId('_code_quarterly-index-and-growth-rate_gra').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Annual growth rate").next()
 
 
-g.V().has('_code','listID', 'quarterly-index-and-growth-rate').has('value', "qix").
+g.V().hasId('_code_quarterly-index-and-growth-rate_qix').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'quarterly-index-and-growth-rate').property(single, 'value', "qix")
+    property(id, '_code_quarterly-index-and-growth-rate_qix').property(single, 'listID', 'quarterly-index-and-growth-rate').property(single, 'value', "qix")
   ).next()
-g.V().has('_code', 'listID', 'quarterly-index-and-growth-rate').has('value', "qix").as('code').
-  V().has('_code_list', 'listID', 'quarterly-index-and-growth-rate').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Quarterly index").next()
+  g.V().hasId('_code_list_quarterly-index-and-growth-rate_one-off').as('codeList').V().hasId('_code_quarterly-index-and-growth-rate_qix').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Quarterly index").next()
 
 
-g.V().has('_code','listID', 'quarterly-index-and-growth-rate').has('value', "grq").
+g.V().hasId('_code_quarterly-index-and-growth-rate_grq').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'quarterly-index-and-growth-rate').property(single, 'value', "grq")
+    property(id, '_code_quarterly-index-and-growth-rate_grq').property(single, 'listID', 'quarterly-index-and-growth-rate').property(single, 'value', "grq")
   ).next()
-g.V().has('_code', 'listID', 'quarterly-index-and-growth-rate').has('value', "grq").as('code').
-  V().has('_code_list', 'listID', 'quarterly-index-and-growth-rate').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Quarterly growth rate on previous quarter").next()
+  g.V().hasId('_code_list_quarterly-index-and-growth-rate_one-off').as('codeList').V().hasId('_code_quarterly-index-and-growth-rate_grq').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Quarterly growth rate on previous quarter").next()
 
 
-g.V().has('_code','listID', 'quarterly-index-and-growth-rate').has('value', "grqa").
+g.V().hasId('_code_quarterly-index-and-growth-rate_grqa').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'quarterly-index-and-growth-rate').property(single, 'value', "grqa")
+    property(id, '_code_quarterly-index-and-growth-rate_grqa').property(single, 'listID', 'quarterly-index-and-growth-rate').property(single, 'value', "grqa")
   ).next()
-g.V().has('_code', 'listID', 'quarterly-index-and-growth-rate').has('value', "grqa").as('code').
-  V().has('_code_list', 'listID', 'quarterly-index-and-growth-rate').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Quarterly growth rate on same quarter of previous year").next()
+  g.V().hasId('_code_list_quarterly-index-and-growth-rate_one-off').as('codeList').V().hasId('_code_quarterly-index-and-growth-rate_grqa').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Quarterly growth rate on same quarter of previous year").next()
 
 
-g.V().has('_code','listID', 'quarterly-index-and-growth-rate').has('value', "aix").
+g.V().hasId('_code_quarterly-index-and-growth-rate_aix').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'quarterly-index-and-growth-rate').property(single, 'value', "aix")
+    property(id, '_code_quarterly-index-and-growth-rate_aix').property(single, 'listID', 'quarterly-index-and-growth-rate').property(single, 'value', "aix")
   ).next()
-g.V().has('_code', 'listID', 'quarterly-index-and-growth-rate').has('value', "aix").as('code').
-  V().has('_code_list', 'listID', 'quarterly-index-and-growth-rate').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Annual index").next()
+  g.V().hasId('_code_list_quarterly-index-and-growth-rate_one-off').as('codeList').V().hasId('_code_quarterly-index-and-growth-rate_aix').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Annual index").next()
 
