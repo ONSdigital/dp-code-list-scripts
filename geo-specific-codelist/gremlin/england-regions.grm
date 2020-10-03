@@ -1,7 +1,8 @@
 
 
-g.V().has('_code_list', 'listID', 'england-regions').has('edition', 'one-off').
+g.V().hasId('_code_list_england-regions_one-off').
   fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_england-regions_one-off').
     property(single, 'listID', "england-regions").
     property(single, 'geography', true).
     property(single, 'label', "Geography").
@@ -9,92 +10,83 @@ g.V().has('_code_list', 'listID', 'england-regions').has('edition', 'one-off').
   ).next()
 
 
-g.V().has('_code','listID', 'geography').has('value', "E12000001").
+g.V().hasId('_code_geography_E12000001').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'geography').property(single, 'value', "E12000001")
+    property(id, '_code_geography_E12000001').property(single, 'listID', 'geography').property(single, 'value', "E12000001")
   ).next()
-g.V().has('_code', 'listID', 'geography').has('value', "E12000001").as('code').
-  V().has('_code_list', 'listID', 'england-regions').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "North East").next()
+  g.V().hasId('_code_list_england-regions_one-off').as('codeList').V().hasId('_code_geography_E12000001').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "North East").next()
 
 
-g.V().has('_code','listID', 'geography').has('value', "E12000002").
+g.V().hasId('_code_geography_E12000002').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'geography').property(single, 'value', "E12000002")
+    property(id, '_code_geography_E12000002').property(single, 'listID', 'geography').property(single, 'value', "E12000002")
   ).next()
-g.V().has('_code', 'listID', 'geography').has('value', "E12000002").as('code').
-  V().has('_code_list', 'listID', 'england-regions').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "North West").next()
+  g.V().hasId('_code_list_england-regions_one-off').as('codeList').V().hasId('_code_geography_E12000002').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "North West").next()
 
 
-g.V().has('_code','listID', 'geography').has('value', "E12000003").
+g.V().hasId('_code_geography_E12000003').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'geography').property(single, 'value', "E12000003")
+    property(id, '_code_geography_E12000003').property(single, 'listID', 'geography').property(single, 'value', "E12000003")
   ).next()
-g.V().has('_code', 'listID', 'geography').has('value', "E12000003").as('code').
-  V().has('_code_list', 'listID', 'england-regions').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "Yorkshire and The Humber").next()
+  g.V().hasId('_code_list_england-regions_one-off').as('codeList').V().hasId('_code_geography_E12000003').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Yorkshire and The Humber").next()
 
 
-g.V().has('_code','listID', 'geography').has('value', "E12000004").
+g.V().hasId('_code_geography_E12000004').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'geography').property(single, 'value', "E12000004")
+    property(id, '_code_geography_E12000004').property(single, 'listID', 'geography').property(single, 'value', "E12000004")
   ).next()
-g.V().has('_code', 'listID', 'geography').has('value', "E12000004").as('code').
-  V().has('_code_list', 'listID', 'england-regions').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "East Midlands").next()
+  g.V().hasId('_code_list_england-regions_one-off').as('codeList').V().hasId('_code_geography_E12000004').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "East Midlands").next()
 
 
-g.V().has('_code','listID', 'geography').has('value', "E12000005").
+g.V().hasId('_code_geography_E12000005').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'geography').property(single, 'value', "E12000005")
+    property(id, '_code_geography_E12000005').property(single, 'listID', 'geography').property(single, 'value', "E12000005")
   ).next()
-g.V().has('_code', 'listID', 'geography').has('value', "E12000005").as('code').
-  V().has('_code_list', 'listID', 'england-regions').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "West Midlands").next()
+  g.V().hasId('_code_list_england-regions_one-off').as('codeList').V().hasId('_code_geography_E12000005').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "West Midlands").next()
 
 
-g.V().has('_code','listID', 'geography').has('value', "E12000006").
+g.V().hasId('_code_geography_E12000006').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'geography').property(single, 'value', "E12000006")
+    property(id, '_code_geography_E12000006').property(single, 'listID', 'geography').property(single, 'value', "E12000006")
   ).next()
-g.V().has('_code', 'listID', 'geography').has('value', "E12000006").as('code').
-  V().has('_code_list', 'listID', 'england-regions').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "East of England").next()
+  g.V().hasId('_code_list_england-regions_one-off').as('codeList').V().hasId('_code_geography_E12000006').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "East of England").next()
 
 
-g.V().has('_code','listID', 'geography').has('value', "E12000007").
+g.V().hasId('_code_geography_E12000007').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'geography').property(single, 'value', "E12000007")
+    property(id, '_code_geography_E12000007').property(single, 'listID', 'geography').property(single, 'value', "E12000007")
   ).next()
-g.V().has('_code', 'listID', 'geography').has('value', "E12000007").as('code').
-  V().has('_code_list', 'listID', 'england-regions').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "London").next()
+  g.V().hasId('_code_list_england-regions_one-off').as('codeList').V().hasId('_code_geography_E12000007').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "London").next()
 
 
-g.V().has('_code','listID', 'geography').has('value', "E12000008").
+g.V().hasId('_code_geography_E12000008').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'geography').property(single, 'value', "E12000008")
+    property(id, '_code_geography_E12000008').property(single, 'listID', 'geography').property(single, 'value', "E12000008")
   ).next()
-g.V().has('_code', 'listID', 'geography').has('value', "E12000008").as('code').
-  V().has('_code_list', 'listID', 'england-regions').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "South East").next()
+  g.V().hasId('_code_list_england-regions_one-off').as('codeList').V().hasId('_code_geography_E12000008').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "South East").next()
 
 
-g.V().has('_code','listID', 'geography').has('value', "E12000009").
+g.V().hasId('_code_geography_E12000009').
   fold().coalesce(unfold(), addV('_code').
-    property(single, 'listID', 'geography').property(single, 'value', "E12000009")
+    property(id, '_code_geography_E12000009').property(single, 'listID', 'geography').property(single, 'value', "E12000009")
   ).next()
-g.V().has('_code', 'listID', 'geography').has('value', "E12000009").as('code').
-  V().has('_code_list', 'listID', 'england-regions').has('edition', "one-off").
-    coalesce(__.inE('usedBy').where(outV().as('code')),
-       addE('usedBy').from('code')).property('label', "South West").next()
+  g.V().hasId('_code_list_england-regions_one-off').as('codeList').V().hasId('_code_geography_E12000009').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "South West").next()
 
