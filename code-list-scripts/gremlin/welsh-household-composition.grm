@@ -1,0 +1,91 @@
+
+
+g.V().hasId('_code_list_welsh-household-composition_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_welsh-household-composition_one-off').
+    property(single, 'listID', "welsh-household-composition").
+    property(single, 'label', "welshhouseholdcomposition").
+    property(single, 'edition', "one-off")
+  ).next()
+
+
+g.V().hasId('_code_welsh-household-composition_all-categories-welsh-household-composition').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_welsh-household-composition_all-categories-welsh-household-composition').property(single, 'listID', 'welsh-household-composition').property(single, 'value', "all-categories-welsh-household-composition")
+  ).next()
+  g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_all-categories-welsh-household-composition').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "All categories: Welsh household composition").next()
+
+
+g.V().hasId('_code_welsh-household-composition_couple-household-total').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_welsh-household-composition_couple-household-total').property(single, 'listID', 'welsh-household-composition').property(single, 'value', "couple-household-total")
+  ).next()
+  g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_couple-household-total').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Couple household: Total").next()
+
+
+g.V().hasId('_code_welsh-household-composition_couple-household-no-adults-can-speak-welsh').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_welsh-household-composition_couple-household-no-adults-can-speak-welsh').property(single, 'listID', 'welsh-household-composition').property(single, 'value', "couple-household-no-adults-can-speak-welsh")
+  ).next()
+  g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_couple-household-no-adults-can-speak-welsh').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Couple household: No adults can speak Welsh").next()
+
+
+g.V().hasId('_code_welsh-household-composition_couple-household-one-adult-can-speak-welsh').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_welsh-household-composition_couple-household-one-adult-can-speak-welsh').property(single, 'listID', 'welsh-household-composition').property(single, 'value', "couple-household-one-adult-can-speak-welsh")
+  ).next()
+  g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_couple-household-one-adult-can-speak-welsh').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Couple household: One adult can speak Welsh").next()
+
+
+g.V().hasId('_code_welsh-household-composition_couple-household-two-or-more-adults-can-speak-welsh').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_welsh-household-composition_couple-household-two-or-more-adults-can-speak-welsh').property(single, 'listID', 'welsh-household-composition').property(single, 'value', "couple-household-two-or-more-adults-can-speak-welsh")
+  ).next()
+  g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_couple-household-two-or-more-adults-can-speak-welsh').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Couple household: Two or more adults can speak Welsh").next()
+
+
+g.V().hasId('_code_welsh-household-composition_lone-parent-household-total').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_welsh-household-composition_lone-parent-household-total').property(single, 'listID', 'welsh-household-composition').property(single, 'value', "lone-parent-household-total")
+  ).next()
+  g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_lone-parent-household-total').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Lone parent household: Total").next()
+
+
+g.V().hasId('_code_welsh-household-composition_lone-parent-household-no-adults-can-speak-welsh').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_welsh-household-composition_lone-parent-household-no-adults-can-speak-welsh').property(single, 'listID', 'welsh-household-composition').property(single, 'value', "lone-parent-household-no-adults-can-speak-welsh")
+  ).next()
+  g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_lone-parent-household-no-adults-can-speak-welsh').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Lone parent household: No adults can speak Welsh").next()
+
+
+g.V().hasId('_code_welsh-household-composition_lone-parent-household-one-adult-can-speak-welsh').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_welsh-household-composition_lone-parent-household-one-adult-can-speak-welsh').property(single, 'listID', 'welsh-household-composition').property(single, 'value', "lone-parent-household-one-adult-can-speak-welsh")
+  ).next()
+  g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_lone-parent-household-one-adult-can-speak-welsh').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Lone parent household: One adult can speak Welsh").next()
+
+
+g.V().hasId('_code_welsh-household-composition_lone-parent-household-two-or-more-adults-can-speak-welsh').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_welsh-household-composition_lone-parent-household-two-or-more-adults-can-speak-welsh').property(single, 'listID', 'welsh-household-composition').property(single, 'value', "lone-parent-household-two-or-more-adults-can-speak-welsh")
+  ).next()
+  g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_lone-parent-household-two-or-more-adults-can-speak-welsh').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Lone parent household: Two or more adults can speak Welsh").next()
+
