@@ -3,13 +3,13 @@ definition:
 imports:
   - language: cypher
     files:
-      - ../geo-specific-codelist/admin-geography.cypher
+      - ../geo-specific-codelist/administrative-geography.cypher
       - cypher/two-year-intervals.cypher
-      - cypher/birth-cohort.cypher
-      - cypher/life-expectancy-variable.cypher
+      - cypher/sex.cypher
+      - cypher/age-groups.cypher
   - language: gremlin
     files:
-      - ../geo-specific-codelist/gremlin/admin-geography.grm
+      - ../geo-specific-codelist/gremlin/administrative-geography.grm
       - gremlin/two-year-intervals.grm
-      - gremlin/birth-cohort.grm
-      - gremlin/life-expectancy-variable.grm
+      - gremlin/sex.grm
+      - gremlin/age-groups.grm

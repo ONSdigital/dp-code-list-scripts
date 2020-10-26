@@ -3,31 +3,15 @@ definition:
 imports:
   - language: cypher
     files:
-      - cypher/lms-average-actual-hours-of-work.cypher
-      - cypher/lms-economic-inactivity-reason.cypher
-      - cypher/lms-jobseekers-duration.cypher
-      - cypher/lms-sic.cypher
-      - cypher/lms-work-type.cypher
       - cypher/mmm-mmm-yyyy.cypher
-      - cypher/lms-age-bracket.cypher
-      - cypher/unit-of-measure.cypher
-      - cypher/lms-economic-status.cypher
-      - cypher/mmm-yy.cypher
-      - cypher/seasonal-adjustment.cypher
-      - migration-scripts/ashe-sex.cypher
-      - ../geo-specific-codelist/admin-geography.cypher
+      - ../geo-specific-codelist/administrative-geography.cypher
+      - cypher/economic-activity.cypher
+      - cypher/age-groups.cypher
+      - cypher/sex.cypher
   - language: gremlin
     files:
-      - gremlin/lms-average-actual-hours-of-work.grm
-      - gremlin/lms-economic-inactivity-reason.grm
-      - gremlin/lms-jobseekers-duration.grm
-      - gremlin/lms-sic.grm
-      - gremlin/lms-work-type.grm
       - gremlin/mmm-mmm-yyyy.grm
-      - gremlin/lms-age-bracket.grm
-      - gremlin/unit-of-measure.grm
-      - gremlin/lms-economic-status.grm
-      - gremlin/mmm-yy.grm
-      - gremlin/seasonal-adjustment.grm
-      - gremlin/ashe-sex.grm
-      - ../geo-specific-codelist/gremlin/admin-geography.grm
+      - ../geo-specific-codelist/gremlin/administrative-geography.grm
+      - gremlin/economic-activity.grm
+      - gremlin/age-groups.grm
+      - gremlin/sex.grm

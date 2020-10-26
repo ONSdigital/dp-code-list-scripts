@@ -8,6 +8,7 @@ imports:
       - cypher/seasonal-adjustment.cypher
       - cypher/construction-series-type.cypher
       - cypher/construction-classifications.cypher
+      - ../geo-specific-codelist/uk-only.cypher
   - language: gremlin
     files:
       - gremlin/mmm-yy.grm
@@ -15,3 +16,4 @@ imports:
       - gremlin/seasonal-adjustment.grm
       - gremlin/construction-series-type.grm
       - gremlin/construction-classifications.grm
+      - ../geo-specific-codelist/gremlin/uk-only.grm

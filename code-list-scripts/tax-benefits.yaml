@@ -3,23 +3,17 @@ definition:
 imports:
   - language: cypher
     files:
-      - cypher/calendar-years.cypher
-      - cypher/yyyy-yy.cypher
-      - cypher/income-quintile.cypher
+      - cypher/financial-and-calendar-years.cypher
+      - cypher/averages-and-percentiles.cypher
+      - cypher/quintile.cypher
       - cypher/income-type.cypher
-      - cypher/ashe-statistics.cypher
-      - cypher/mid-year-pop-age.cypher
-      - cypher/tax-benefit-type.cypher
-      - cypher/decades.cypher
+      - cypher/value-deflation.cypher
       - ../geo-specific-codelist/uk-only.cypher
   - language: gremlin
     files:
-      - gremlin/calendar-years.grm
-      - gremlin/yyyy-yy.grm
-      - gremlin/income-quintile.grm
+      - gremlin/financial-and-calendar-years.grm
+      - gremlin/averages-and-percentiles.grm
+      - gremlin/quintile.grm
       - gremlin/income-type.grm
-      - gremlin/ashe-statistics.grm
-      - gremlin/mid-year-pop-age.grm
-      - gremlin/tax-benefit-type.grm
-      - gremlin/decades.grm
+      - gremlin/value-deflation.grm
       - ../geo-specific-codelist/gremlin/uk-only.grm

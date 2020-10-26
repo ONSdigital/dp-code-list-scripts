@@ -4,10 +4,10 @@ imports:
   - language: cypher
     files:
       - cypher/mmm-yy.cypher
-      - ../geo-specific-codelist/admin-geography.cypher
-      - cypher/housing-rental-prices-variable.cypher
+      - ../geo-specific-codelist/administrative-geography.cypher
+      - cypher/index-and-year-change.cypher
   - language: gremlin
     files:
       - gremlin/mmm-yy.grm
-      - ../geo-specific-codelist/gremlin/admin-geography.grm
-      - gremlin/housing-rental-prices-variable.grm
+      - ../geo-specific-codelist/gremlin/administrative-geography.grm
+      - gremlin/index-and-year-change.grm

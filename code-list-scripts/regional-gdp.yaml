@@ -5,24 +5,27 @@ imports:
     files:
       - cypher/calendar-years.cypher
       - cypher/yyyy-qq.cypher
-      - cypher/gdp-sic.cypher
-      - cypher/sic-test.cypher
-      - cypher/gdp-measure.cypher
+      - cypher/mmm-yy.cypher
+      - cypher/sic-unofficial.cypher
+      - cypher/quarterly-index-and-growth-rate.cypher
       - cypher/type-of-prices.cypher
-      - ../geo-specific-codelist/nuts-geography.cypher
-      - ../geo-specific-codelist/admin-geography.cypher
-      - ../geo-specific-codelist/local-enterprise-partnership-geography.cypher
+      - ../geo-specific-codelist/nuts.cypher
+      - ../geo-specific-codelist/administrative-geography.cypher
+      - ../geo-specific-codelist/uk-only.cypher
+      - ../geo-specific-codelist/enterprise-regions.cypher
       - ../geo-specific-codelist/city-regions.cypher
   - language: gremlin
     files:
       - gremlin/calendar-years.grm
       - gremlin/yyyy-qq.grm
-      - gremlin/gdp-sic.grm
-      - gremlin/sic-test.grm
-      - gremlin/gdp-measure.grm
+      - gremlin/mmm-yy.grm
+      - gremlin/sic-unofficial.grm
+      - gremlin/quarterly-index-and-growth-rate.grm
       - gremlin/type-of-prices.grm
-      - ../geo-specific-codelist/gremlin/nuts-geography.grm
-      - ../geo-specific-codelist/admin-geography.grm
-      - ../geo-specific-codelist/local-enterprise-partnership-geography.grm
-      - ../geo-specific-codelist/city-regions.grm
-      
+      - ../geo-specific-codelist/gremlin/nuts.grm
+      - ../geo-specific-codelist/gremlin/administrative-geography.grm
+      - ../geo-specific-codelist/gremlin/uk-only.grm
+      - ../geo-specific-codelist/gremlin/enterprise-regions.grm
+      - ../geo-specific-codelist/gremlin/city-regions.grm
+
+

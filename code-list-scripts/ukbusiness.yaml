@@ -3,13 +3,13 @@ definition:
 imports:
   - language: cypher
     files:
-      - migration-scripts/calendar-years.cypher
-      - ../geo-specific-codelist/admin-geography.cypher
-      - cypher/uk-business-broad-industry-group.cypher
+      - cypher/calendar-years.cypher
+      - ../geo-specific-codelist/administrative-geography.cypher
+      - cypher/sic-unofficial.cypher
       - cypher/uk-business-unit.cypher
   - language: gremlin
     files:
       - gremlin/calendar-years.grm
-      - ../geo-specific-codelist/gremlin/admin-geography.grm
-      - gremlin/uk-business-broad-industry-group.grm
+      - ../geo-specific-codelist/gremlin/administrative-geography.grm
+      - gremlin/sic-unofficial.grm
       - gremlin/uk-business-unit.grm

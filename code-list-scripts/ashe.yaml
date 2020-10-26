@@ -4,19 +4,17 @@ definition:
 imports:
   - language: cypher
     files:
-      - migration-scripts/calendar-years.cypher
-      - migration-scripts/ashe-sex.cypher
-      - cypher/ashe-working-pattern.cypher
-      - cypher/ashe-hours.cypher
-      - cypher/ashe-earnings.cypher
-      - cypher/ashe-statistics.cypher
-      - migration-scripts/ashe-geography.cypher
-      - cypher/ashe-hours-and-earnings.cypher
-      - cypher/ashe-workplace-or-residence.cypher
-      - ../geo-specific-codelist/admin-geography.cypher
-      - ../geo-specific-codelist/parliamentary-geography.cypher
-      - ../geo-specific-codelist/travel-to-work-geography.cypher
-      - ../geo-specific-codelist/local-enterprise-partnership-geography.cypher
+      - cypher/calendar-years.cypher
+      - cypher/sex.cypher
+      - cypher/working-pattern.cypher
+      - cypher/hours-and-earnings.cypher
+      - cypher/averages-and-percentiles.cypher
+      - cypher/workplace-or-residence.cypher
+      - ../geo-specific-codelist/administrative-geography.cypher
+      - ../geo-specific-codelist/parliamentary-constituencies.cypher
+      - ../geo-specific-codelist/travel-to-work-area.cypher
+      - ../geo-specific-codelist/enterprise-regions.cypher
+      - ../geo-specific-codelist/uk-only.cypher
       - cypher/sic.cypher
       - cypher/soc.cypher
       - cypher/sector.cypher
@@ -24,18 +22,16 @@ imports:
   - language: gremlin
     files:
       - gremlin/calendar-years.grm
-      - gremlin/ashe-sex.grm
-      - gremlin/ashe-working-pattern.grm
-      - gremlin/ashe-hours.grm
-      - gremlin/ashe-earnings.grm
-      - gremlin/ashe-statistics.grm
-      - gremlin/ashe-geography.grm
-      - gremlin/ashe-hours-and-earnings.grm
-      - gremlin/ashe-workplace-or-residence.grm
-      - ../geo-specific-codelist/gremlin/admin-geography.grm
-      - ../geo-specific-codelist/gremlin/parliamentary-geography.grm
-      - ../geo-specific-codelist/gremlin/travel-to-work-geography.grm
-      - ../geo-specific-codelist/local-enterprise-partnership-geography.grm
+      - gremlin/sex.grm
+      - gremlin/working-pattern.grm
+      - gremlin/hours-and-earnings.grm
+      - gremlin/averages-and-percentiles.grm
+      - gremlin/workplace-or-residence.grm
+      - ../geo-specific-codelist/gremlin/administrative-geography.grm
+      - ../geo-specific-codelist/gremlin/parliamentary-constituencies.grm
+      - ../geo-specific-codelist/gremlin/travel-to-work-area.grm
+      - ../geo-specific-codelist/gremlin/enterprise-regions.grm
+      - ../geo-specific-codelist/gremlin/uk-only.grm
       - gremlin/sic.grm
       - gremlin/soc.grm
       - gremlin/sector.grm

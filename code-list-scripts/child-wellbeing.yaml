@@ -4,15 +4,15 @@ imports:
   - language: cypher
     files:
       - cypher/calendar-years.cypher
-      - cypher/children-sex.cypher
+      - cypher/sex.cypher
       - cypher/wellbeing-estimate.cypher
-      - cypher/wellbeing-measureofwellbeing.cypher
+      - cypher/measure-of-wellbeing.cypher
       - ../geo-specific-codelist/countries.cypher
   - language: gremlin
     files:
       - gremlin/calendar-years.grm
-      - gremlin/children-sex.grm
+      - gremlin/sex.grm
       - gremlin/wellbeing-estimate.grm
-      - gremlin/wellbeing-measureofwellbeing.grm
+      - gremlin/measure-of-wellbeing.grm
       - ../geo-specific-codelist/gremlin/countries.grm
 

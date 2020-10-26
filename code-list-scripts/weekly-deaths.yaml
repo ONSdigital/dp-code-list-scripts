@@ -10,8 +10,8 @@ imports:
       - cypher/registration-or-occurrence.cypher
       - cypher/recorded-deaths.cypher
       - cypher/age-groups.cypher
-      - cypher/ashe-sex.cypher
-      - ../geo-specific-codelist/admin-geography.cypher
+      - cypher/sex.cypher
+      - ../geo-specific-codelist/administrative-geography.cypher
       - ../geo-specific-codelist/health-board.cypher
   - language: gremlin
     files:
@@ -22,6 +22,6 @@ imports:
       - gremlin/registration-or-occurrence.grm
       - gremlin/recorded-deaths.grm
       - gremlin/age-groups.grm
-      - gremlin/ashe-sex.grm
-      - ../geo-specific-codelist/gremlin/admin-geography.grm
+      - gremlin/sex.grm
+      - ../geo-specific-codelist/gremlin/administrative-geography.grm
       - ../geo-specific-codelist/gremlin/health-board.grm

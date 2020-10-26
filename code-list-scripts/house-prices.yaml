@@ -3,15 +3,17 @@ definition:
 imports:
   - language: cypher
     files:
+      - cypher/calendar-years.cypher
+      - cypher/mmm.cypher
       - cypher/property-type.cypher
-      - migration-scripts/mmm-yy.cypher
-      - ../geo-specific-codelist/admin-geography.cypher
-      - cypher/house-price-variable.cypher
-      - cypher/house-price-age.cypher
+      - ../geo-specific-codelist/administrative-geography.cypher
+      - cypher/property-type.cypher
+      - cypher/build-status.cypher
   - language: gremlin
     files:
+      - gremlin/calendar-years.grm
+      - gremlin/mmm.grm
       - gremlin/property-type.grm
-      - gremlin/mmm-yy.grm
-      - ../geo-specific-codelist/gremlin/admin-geography.grm
-      - gremlin/house-price-variable.grm
-      - gremlin/house-price-age.grm
+      - ../geo-specific-codelist/gremlin/administrative-geography.grm
+      - gremlin/property-type.grm
+      - gremlin/build-status.grm

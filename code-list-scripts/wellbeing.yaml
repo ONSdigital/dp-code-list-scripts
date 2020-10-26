@@ -3,15 +3,21 @@ definition:
 imports:
   - language: cypher
     files:
-      - migration-scripts/year-ending.cypher
-      - migration-scripts/wellbeing-geography.cypher
+      - cypher/year-ending.cypher
+      - ../geo-specific-codelist/administrative-geography.cypher
+      - ../geo-specific-codelist/uk-only.cypher
       - cypher/wellbeing-estimate.cypher
-      - cypher/wellbeing-measureofwellbeing.cypher
+      - cypher/measure-of-wellbeing.cypher
+      - cypher/seasonal-adjustment.cypher
       - cypher/yyyy-yy.cypher
+      - cypher/yyyy-qq.cypher
   - language: gremlin
     files:
       - gremlin/year-ending.grm
-      - gremlin/wellbeing-geography.grm
+      - ../geo-specific-codelist/gremlin/administrative-geography.grm
+      - ../geo-specific-codelist/gremlin/uk-only.grm
       - gremlin/wellbeing-estimate.grm
-      - gremlin/wellbeing-measureofwellbeing.grm
+      - gremlin/measure-of-wellbeing.grm
+      - gremlin/seasonal-adjustment.grm
       - gremlin/yyyy-yy.grm
+      - gremlin/yyyy-qq.grm

@@ -4,14 +4,14 @@ imports:
   - language: cypher
     files:
       - cypher/mmm-yy.cypher
-      - migration-scripts/uk-only.cypher
-      - cypher/trade-commodity.cypher
-      - cypher/trade-country.cypher
+      - cypher/uk-only.cypher
+      - cypher/sitc.cypher
+      - cypher/countries-and-territories.cypher
       - cypher/trade-direction.cypher
   - language: gremlin
     files:
       - gremlin/mmm-yy.grm
       - gremlin/uk-only.grm
-      - gremlin/trade-commodity.grm
-      - gremlin/trade-country.grm
+      - gremlin/sitc.grm
+      - gremlin/countries-and-territories.grm
       - gremlin/trade-direction.grm

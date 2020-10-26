@@ -5,13 +5,13 @@ imports:
     files:
       - cypher/calendar-years.cypher
       - cypher/age-groups.cypher
-      - cypher/ashe-sex.cypher
+      - cypher/sex.cypher
       - cypher/economic-activity.cypher
-      - ../geo-specific-codelist/admin-geography.cypher
+      - ../geo-specific-codelist/administrative-geography.cypher
   - language: gremlin
     files:
       - gremlin/calendar-years.grm
       - gremlin/age-groups.grm
-      - gremlin/ashe-sex.grm
+      - gremlin/sex.grm
       - gremlin/economic-activity.grm
-      - ../geo-specific-codelist/gremlin/admin-geography.grm
+      - ../geo-specific-codelist/gremlin/administrative-geography.grm

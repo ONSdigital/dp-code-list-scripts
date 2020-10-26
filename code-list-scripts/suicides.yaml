@@ -4,8 +4,8 @@ imports:
   - language: cypher
     files:
       - cypher/calendar-years.cypher
-      - ../geo-specific-codelist/admin-geography.cypher
+      - ../geo-specific-codelist/administrative-geography.cypher
   - language: gremlin
     files:
       - gremlin/calendar-years.grm
-      - ../geo-specific-codelist/gremlin/admin-geography.grm
+      - ../geo-specific-codelist/gremlin/administrative-geography.grm

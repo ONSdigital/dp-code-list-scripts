@@ -4,12 +4,12 @@ imports:
   - language: cypher
     files:
       - cypher/calendar-years.cypher
-      - ../geo-specific-codelist/mid-year-pop-geography.cypher
-      - cypher/mid-year-pop-sex.cypher
-      - cypher/mid-year-pop-age.cypher
+      - ../geo-specific-codelist/administrative-geography.cypher
+      - cypher/sex.cypher
+      - cypher/single-year-of-age.cypher
   - language: gremlin
     files:
       - gremlin/calendar-years.grm
-      - ../geo-specific-codelist/gremlin/mid-year-pop-geography.grm
-      - gremlin/mid-year-pop-sex.grm
-      - gremlin/mid-year-pop-age.grm
+      - ../geo-specific-codelist/gremlin/administrative-geography.grm
+      - gremlin/sex.grm
+      - gremlin/single-year-of-age.grm
