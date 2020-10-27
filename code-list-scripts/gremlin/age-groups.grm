@@ -468,13 +468,13 @@ g.V().hasId('_code_age-groups_median').
        addE('usedBy').to('codeList')).property('label', "Median").next()
 
 
-g.V().hasId('_code_age-groups_old-age-dependancy-ratio').
+g.V().hasId('_code_age-groups_old-age-dependency-ratio').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_age-groups_old-age-dependancy-ratio').property(single, 'listID', 'age-groups').property(single, 'value', "old-age-dependancy-ratio")
+    property(id, '_code_age-groups_old-age-dependency-ratio').property(single, 'listID', 'age-groups').property(single, 'value', "old-age-dependency-ratio")
   ).next()
-  g.V().hasId('_code_list_age-groups_one-off').as('codeList').V().hasId('_code_age-groups_old-age-dependancy-ratio').as('code').
+  g.V().hasId('_code_list_age-groups_one-off').as('codeList').V().hasId('_code_age-groups_old-age-dependency-ratio').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Old age dependancy ratio").next()
+       addE('usedBy').to('codeList')).property('label', "Old age dependency ratio").next()
 
 
 g.V().hasId('_code_age-groups_spa+').

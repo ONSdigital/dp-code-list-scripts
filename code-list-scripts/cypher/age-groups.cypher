@@ -103,7 +103,7 @@ MERGE (node:`_code`:`_code_age-groups` { value:"directly-age-standardised-rate" 
 MATCH (parent:`_code_list`:`_code_list_age-groups`),(node:`_code`:`_code_age-groups` { value:"directly-age-standardised-rate" }) MERGE (node)-[:usedBy { label:"Directly age-standardised rate"}]->(parent);
 MERGE (node:`_code`:`_code_age-groups` { value:"median" });
 MATCH (parent:`_code_list`:`_code_list_age-groups`),(node:`_code`:`_code_age-groups` { value:"median" }) MERGE (node)-[:usedBy { label:"Median"}]->(parent);
-MERGE (node:`_code`:`_code_age-groups` { value:"old-age-dependancy-ratio" });
-MATCH (parent:`_code_list`:`_code_list_age-groups`),(node:`_code`:`_code_age-groups` { value:"old-age-dependancy-ratio" }) MERGE (node)-[:usedBy { label:"Old age dependancy ratio"}]->(parent);
+MERGE (node:`_code`:`_code_age-groups` { value:"old-age-dependency-ratio" });
+MATCH (parent:`_code_list`:`_code_list_age-groups`),(node:`_code`:`_code_age-groups` { value:"old-age-dependency-ratio" }) MERGE (node)-[:usedBy { label:"Old age dependency ratio"}]->(parent);
 MERGE (node:`_code`:`_code_age-groups` { value:"spa+" });
 MATCH (parent:`_code_list`:`_code_list_age-groups`),(node:`_code`:`_code_age-groups` { value:"spa+" }) MERGE (node)-[:usedBy { label:"State pension age+"}]->(parent);
