@@ -1,0 +1,17 @@
+CREATE CONSTRAINT ON (n:`_code_traffic-camera-area`) ASSERT n.code IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_traffic-camera-area`) ASSERT n.code IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_traffic-camera-area` { label:"Traffic Camera Area", edition:"one-off" });
+MERGE (node:`_code`:`_code_traffic-camera-area` { value:"london" });
+MATCH (parent:`_code_list`:`_code_list_traffic-camera-area`),(node:`_code`:`_code_traffic-camera-area` { value:"london" }) MERGE (node)-[:usedBy { label:"London"}]->(parent);
+MERGE (node:`_code`:`_code_traffic-camera-area` { value:"north-east" });
+MATCH (parent:`_code_list`:`_code_list_traffic-camera-area`),(node:`_code`:`_code_traffic-camera-area` { value:"north-east" }) MERGE (node)-[:usedBy { label:"North East"}]->(parent);
+MERGE (node:`_code`:`_code_traffic-camera-area` { value:"durham" });
+MATCH (parent:`_code_list`:`_code_list_traffic-camera-area`),(node:`_code`:`_code_traffic-camera-area` { value:"durham" }) MERGE (node)-[:usedBy { label:"Durham"}]->(parent);
+MERGE (node:`_code`:`_code_traffic-camera-area` { value:"northern-ireland" });
+MATCH (parent:`_code_list`:`_code_list_traffic-camera-area`),(node:`_code`:`_code_traffic-camera-area` { value:"northern-ireland" }) MERGE (node)-[:usedBy { label:"Northern Ireland"}]->(parent);
+MERGE (node:`_code`:`_code_traffic-camera-area` { value:"southend" });
+MATCH (parent:`_code_list`:`_code_list_traffic-camera-area`),(node:`_code`:`_code_traffic-camera-area` { value:"southend" }) MERGE (node)-[:usedBy { label:"Southend"}]->(parent);
+MERGE (node:`_code`:`_code_traffic-camera-area` { value:"greater-manchester" });
+MATCH (parent:`_code_list`:`_code_list_traffic-camera-area`),(node:`_code`:`_code_traffic-camera-area` { value:"greater-manchester" }) MERGE (node)-[:usedBy { label:"Greater Manchester"}]->(parent);
+MERGE (node:`_code`:`_code_traffic-camera-area` { value:"reading" });
+MATCH (parent:`_code_list`:`_code_list_traffic-camera-area`),(node:`_code`:`_code_traffic-camera-area` { value:"reading" }) MERGE (node)-[:usedBy { label:"Reading"}]->(parent);

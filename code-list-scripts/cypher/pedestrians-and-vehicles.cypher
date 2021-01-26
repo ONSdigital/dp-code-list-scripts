@@ -1,0 +1,15 @@
+CREATE CONSTRAINT ON (n:`_code_pedestrians-and-vehicles`) ASSERT n.code IS UNIQUE;
+CREATE CONSTRAINT ON (n:`_code_list_pedestrians-and-vehicles`) ASSERT n.code IS UNIQUE;
+CREATE (node:`_code_list`:`_code_list_pedestrians-and-vehicles` { label:"Pedestrians and Vehicles", edition:"one-off" });
+MERGE (node:`_code`:`_code_pedestrians-and-vehicles` { value:"cars" });
+MATCH (parent:`_code_list`:`_code_list_pedestrians-and-vehicles`),(node:`_code`:`_code_pedestrians-and-vehicles` { value:"cars" }) MERGE (node)-[:usedBy { label:"Cars"}]->(parent);
+MERGE (node:`_code`:`_code_pedestrians-and-vehicles` { value:"motorbikes" });
+MATCH (parent:`_code_list`:`_code_list_pedestrians-and-vehicles`),(node:`_code`:`_code_pedestrians-and-vehicles` { value:"motorbikes" }) MERGE (node)-[:usedBy { label:"Motorbikes"}]->(parent);
+MERGE (node:`_code`:`_code_pedestrians-and-vehicles` { value:"buses" });
+MATCH (parent:`_code_list`:`_code_list_pedestrians-and-vehicles`),(node:`_code`:`_code_pedestrians-and-vehicles` { value:"buses" }) MERGE (node)-[:usedBy { label:"Buses"}]->(parent);
+MERGE (node:`_code`:`_code_pedestrians-and-vehicles` { value:"trucks" });
+MATCH (parent:`_code_list`:`_code_list_pedestrians-and-vehicles`),(node:`_code`:`_code_pedestrians-and-vehicles` { value:"trucks" }) MERGE (node)-[:usedBy { label:"Trucks"}]->(parent);
+MERGE (node:`_code`:`_code_pedestrians-and-vehicles` { value:"vans" });
+MATCH (parent:`_code_list`:`_code_list_pedestrians-and-vehicles`),(node:`_code`:`_code_pedestrians-and-vehicles` { value:"vans" }) MERGE (node)-[:usedBy { label:"Vans"}]->(parent);
+MERGE (node:`_code`:`_code_pedestrians-and-vehicles` { value:"pedestrians-and-cyclists" });
+MATCH (parent:`_code_list`:`_code_list_pedestrians-and-vehicles`),(node:`_code`:`_code_pedestrians-and-vehicles` { value:"pedestrians-and-cyclists" }) MERGE (node)-[:usedBy { label:"Pedestrians & cyclists"}]->(parent);
