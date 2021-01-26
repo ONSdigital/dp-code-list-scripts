@@ -1,0 +1,73 @@
+
+
+g.V().hasId('_code_list_traffic-camera-area_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_traffic-camera-area_one-off').
+    property(single, 'listID', "traffic-camera-area").
+    property(single, 'label', "Traffic Camera Area").
+    property(single, 'edition', "one-off")
+  ).next()
+
+
+g.V().hasId('_code_traffic-camera-area_london').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_traffic-camera-area_london').property(single, 'listID', 'traffic-camera-area').property(single, 'value', "london")
+  ).next()
+  g.V().hasId('_code_list_traffic-camera-area_one-off').as('codeList').V().hasId('_code_traffic-camera-area_london').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "London").next()
+
+
+g.V().hasId('_code_traffic-camera-area_north-east').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_traffic-camera-area_north-east').property(single, 'listID', 'traffic-camera-area').property(single, 'value', "north-east")
+  ).next()
+  g.V().hasId('_code_list_traffic-camera-area_one-off').as('codeList').V().hasId('_code_traffic-camera-area_north-east').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "North East").next()
+
+
+g.V().hasId('_code_traffic-camera-area_durham').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_traffic-camera-area_durham').property(single, 'listID', 'traffic-camera-area').property(single, 'value', "durham")
+  ).next()
+  g.V().hasId('_code_list_traffic-camera-area_one-off').as('codeList').V().hasId('_code_traffic-camera-area_durham').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Durham").next()
+
+
+g.V().hasId('_code_traffic-camera-area_northern-ireland').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_traffic-camera-area_northern-ireland').property(single, 'listID', 'traffic-camera-area').property(single, 'value', "northern-ireland")
+  ).next()
+  g.V().hasId('_code_list_traffic-camera-area_one-off').as('codeList').V().hasId('_code_traffic-camera-area_northern-ireland').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Northern Ireland").next()
+
+
+g.V().hasId('_code_traffic-camera-area_southend').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_traffic-camera-area_southend').property(single, 'listID', 'traffic-camera-area').property(single, 'value', "southend")
+  ).next()
+  g.V().hasId('_code_list_traffic-camera-area_one-off').as('codeList').V().hasId('_code_traffic-camera-area_southend').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Southend").next()
+
+
+g.V().hasId('_code_traffic-camera-area_greater-manchester').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_traffic-camera-area_greater-manchester').property(single, 'listID', 'traffic-camera-area').property(single, 'value', "greater-manchester")
+  ).next()
+  g.V().hasId('_code_list_traffic-camera-area_one-off').as('codeList').V().hasId('_code_traffic-camera-area_greater-manchester').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Greater Manchester").next()
+
+
+g.V().hasId('_code_traffic-camera-area_reading').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_traffic-camera-area_reading').property(single, 'listID', 'traffic-camera-area').property(single, 'value', "reading")
+  ).next()
+  g.V().hasId('_code_list_traffic-camera-area_one-off').as('codeList').V().hasId('_code_traffic-camera-area_reading').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Reading").next()
+
