@@ -1,0 +1,23 @@
+g.V().hasId('_code_list_2011-census-residence-type_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_2011-census-residence-type_one-off').
+    property(single, 'listID', "2011-census-residence-type").
+    property(single, 'label', "Residence type").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_2011-census-residence-type_resident-in-a-communal-establishment').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-residence-type_resident-in-a-communal-establishment').property(single, 'listID', '2011-census-residence-type').property(single, 'value', "resident-in-a-communal-establishment")
+  ).next()
+  g.V().hasId('_code_list_2011-census-residence-type_one-off').as('codeList').V().hasId('_code_2011-census-residence-type_resident-in-a-communal-establishment').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "resident-in-a-communal-establishment").next()
+
+g.V().hasId('_code_2011-census-residence-type_not-resident-in-a-communal-establishment').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-residence-type_not-resident-in-a-communal-establishment').property(single, 'listID', '2011-census-residence-type').property(single, 'value', "not-resident-in-a-communal-establishment")
+  ).next()
+  g.V().hasId('_code_list_2011-census-residence-type_one-off').as('codeList').V().hasId('_code_2011-census-residence-type_not-resident-in-a-communal-establishment').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "not-resident-in-a-communal-establishment").next()

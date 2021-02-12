@@ -1,0 +1,23 @@
+g.V().hasId('_code_list_2011-census-student_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_2011-census-student_one-off').
+    property(single, 'listID', "2011-census-student").
+    property(single, 'label', "Student (Schoolchild or full-time student)").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_2011-census-student_yes').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-student_yes').property(single, 'listID', '2011-census-student').property(single, 'value', "yes")
+  ).next()
+  g.V().hasId('_code_list_2011-census-student_one-off').as('codeList').V().hasId('_code_2011-census-student_yes').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "yes").next()
+
+g.V().hasId('_code_2011-census-student_no').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-student_no').property(single, 'listID', '2011-census-student').property(single, 'value', "no")
+  ).next()
+  g.V().hasId('_code_list_2011-census-student_one-off').as('codeList').V().hasId('_code_2011-census-student_no').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "no").next()

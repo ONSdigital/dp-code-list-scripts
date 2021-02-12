@@ -1,0 +1,87 @@
+g.V().hasId('_code_list_2011-census-economic-activity_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_2011-census-economic-activity_one-off').
+    property(single, 'listID', "2011-census-economic-activity").
+    property(single, 'label', "Economic activity ").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_2011-census-economic-activity_economically-active-employee').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-economic-activity_economically-active-employee').property(single, 'listID', '2011-census-economic-activity').property(single, 'value', "economically-active-employee")
+  ).next()
+  g.V().hasId('_code_list_2011-census-economic-activity_one-off').as('codeList').V().hasId('_code_2011-census-economic-activity_economically-active-employee').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "economically-active-employee").next()
+
+g.V().hasId('_code_2011-census-economic-activity_economically-active-self-employed').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-economic-activity_economically-active-self-employed').property(single, 'listID', '2011-census-economic-activity').property(single, 'value', "economically-active-self-employed")
+  ).next()
+  g.V().hasId('_code_list_2011-census-economic-activity_one-off').as('codeList').V().hasId('_code_2011-census-economic-activity_economically-active-self-employed').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "economically-active-self-employed").next()
+
+g.V().hasId('_code_2011-census-economic-activity_economically-active-unemployed').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-economic-activity_economically-active-unemployed').property(single, 'listID', '2011-census-economic-activity').property(single, 'value', "economically-active-unemployed")
+  ).next()
+  g.V().hasId('_code_list_2011-census-economic-activity_one-off').as('codeList').V().hasId('_code_2011-census-economic-activity_economically-active-unemployed').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "economically-active-unemployed").next()
+
+g.V().hasId('_code_2011-census-economic-activity_economically-active-full-time-student').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-economic-activity_economically-active-full-time-student').property(single, 'listID', '2011-census-economic-activity').property(single, 'value', "economically-active-full-time-student")
+  ).next()
+  g.V().hasId('_code_list_2011-census-economic-activity_one-off').as('codeList').V().hasId('_code_2011-census-economic-activity_economically-active-full-time-student').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "economically-active-full-time-student").next()
+
+g.V().hasId('_code_2011-census-economic-activity_economically-inactive-retired').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-economic-activity_economically-inactive-retired').property(single, 'listID', '2011-census-economic-activity').property(single, 'value', "economically-inactive-retired")
+  ).next()
+  g.V().hasId('_code_list_2011-census-economic-activity_one-off').as('codeList').V().hasId('_code_2011-census-economic-activity_economically-inactive-retired').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "economically-inactive-retired").next()
+
+g.V().hasId('_code_2011-census-economic-activity_economically-inactive-student').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-economic-activity_economically-inactive-student').property(single, 'listID', '2011-census-economic-activity').property(single, 'value', "economically-inactive-student")
+  ).next()
+  g.V().hasId('_code_list_2011-census-economic-activity_one-off').as('codeList').V().hasId('_code_2011-census-economic-activity_economically-inactive-student').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "economically-inactive-student").next()
+
+g.V().hasId('_code_2011-census-economic-activity_economically-inactive-looking-after-home-or-family').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-economic-activity_economically-inactive-looking-after-home-or-family').property(single, 'listID', '2011-census-economic-activity').property(single, 'value', "economically-inactive-looking-after-home-or-family")
+  ).next()
+  g.V().hasId('_code_list_2011-census-economic-activity_one-off').as('codeList').V().hasId('_code_2011-census-economic-activity_economically-inactive-looking-after-home-or-family').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "economically-inactive-looking-after-home-or-family").next()
+
+g.V().hasId('_code_2011-census-economic-activity_economically-inactive-long-term-sick-or-disabled').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-economic-activity_economically-inactive-long-term-sick-or-disabled').property(single, 'listID', '2011-census-economic-activity').property(single, 'value', "economically-inactive-long-term-sick-or-disabled")
+  ).next()
+  g.V().hasId('_code_list_2011-census-economic-activity_one-off').as('codeList').V().hasId('_code_2011-census-economic-activity_economically-inactive-long-term-sick-or-disabled').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "economically-inactive-long-term-sick-or-disabled").next()
+
+g.V().hasId('_code_2011-census-economic-activity_economically-inactive-other').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-economic-activity_economically-inactive-other').property(single, 'listID', '2011-census-economic-activity').property(single, 'value', "economically-inactive-other")
+  ).next()
+  g.V().hasId('_code_list_2011-census-economic-activity_one-off').as('codeList').V().hasId('_code_2011-census-economic-activity_economically-inactive-other').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "economically-inactive-other").next()
+
+g.V().hasId('_code_2011-census-economic-activity_no-code-required-aged-under-16-or-students-or-schoolchildren-living-away-during-term-time').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-economic-activity_no-code-required-aged-under-16-or-students-or-schoolchildren-living-away-during-term-time').property(single, 'listID', '2011-census-economic-activity').property(single, 'value', "no-code-required-aged-under-16-or-students-or-schoolchildren-living-away-during-term-time")
+  ).next()
+  g.V().hasId('_code_list_2011-census-economic-activity_one-off').as('codeList').V().hasId('_code_2011-census-economic-activity_no-code-required-aged-under-16-or-students-or-schoolchildren-living-away-during-term-time').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "no-code-required-aged-under-16-or-students-or-schoolchildren-living-away-during-term-time").next()

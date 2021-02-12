@@ -1,0 +1,31 @@
+g.V().hasId('_code_list_2011-census-country-of-birth_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_2011-census-country-of-birth_one-off').
+    property(single, 'listID', "2011-census-country-of-birth").
+    property(single, 'label', "Country of birth").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_2011-census-country-of-birth_uk').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-country-of-birth_uk').property(single, 'listID', '2011-census-country-of-birth').property(single, 'value', "uk")
+  ).next()
+  g.V().hasId('_code_list_2011-census-country-of-birth_one-off').as('codeList').V().hasId('_code_2011-census-country-of-birth_uk').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "uk").next()
+
+g.V().hasId('_code_2011-census-country-of-birth_non-uk').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-country-of-birth_non-uk').property(single, 'listID', '2011-census-country-of-birth').property(single, 'value', "non-uk")
+  ).next()
+  g.V().hasId('_code_list_2011-census-country-of-birth_one-off').as('codeList').V().hasId('_code_2011-census-country-of-birth_non-uk').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "non-uk").next()
+
+g.V().hasId('_code_2011-census-country-of-birth_no-code-required-students-or-schoolchildren-living-away-during-term-time').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-country-of-birth_no-code-required-students-or-schoolchildren-living-away-during-term-time').property(single, 'listID', '2011-census-country-of-birth').property(single, 'value', "no-code-required-students-or-schoolchildren-living-away-during-term-time")
+  ).next()
+  g.V().hasId('_code_list_2011-census-country-of-birth_one-off').as('codeList').V().hasId('_code_2011-census-country-of-birth_no-code-required-students-or-schoolchildren-living-away-during-term-time').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "no-code-required-students-or-schoolchildren-living-away-during-term-time").next()

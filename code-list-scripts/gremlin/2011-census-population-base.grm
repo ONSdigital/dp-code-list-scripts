@@ -1,0 +1,31 @@
+g.V().hasId('_code_list_2011-census-population-base_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_2011-census-population-base_one-off').
+    property(single, 'listID', "2011-census-population-base").
+    property(single, 'label', "Population base").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_2011-census-population-base_usual-resident').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-population-base_usual-resident').property(single, 'listID', '2011-census-population-base').property(single, 'value', "usual-resident")
+  ).next()
+  g.V().hasId('_code_list_2011-census-population-base_one-off').as('codeList').V().hasId('_code_2011-census-population-base_usual-resident').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "usual-resident").next()
+
+g.V().hasId('_code_2011-census-population-base_student-living-away-from-home-during-term-time').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-population-base_student-living-away-from-home-during-term-time').property(single, 'listID', '2011-census-population-base').property(single, 'value', "student-living-away-from-home-during-term-time")
+  ).next()
+  g.V().hasId('_code_list_2011-census-population-base_one-off').as('codeList').V().hasId('_code_2011-census-population-base_student-living-away-from-home-during-term-time').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "student-living-away-from-home-during-term-time").next()
+
+g.V().hasId('_code_2011-census-population-base_short-term-resident').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-population-base_short-term-resident').property(single, 'listID', '2011-census-population-base').property(single, 'value', "short-term-resident")
+  ).next()
+  g.V().hasId('_code_list_2011-census-population-base_one-off').as('codeList').V().hasId('_code_2011-census-population-base_short-term-resident').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "short-term-resident").next()

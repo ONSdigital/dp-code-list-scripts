@@ -1,0 +1,47 @@
+g.V().hasId('_code_list_2011-census-hours-worked-per-week_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_2011-census-hours-worked-per-week_one-off').
+    property(single, 'listID', "2011-census-hours-worked-per-week").
+    property(single, 'label', "Hours worked per week").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_2011-census-hours-worked-per-week_part-time-15-or-less-hours-worked').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-hours-worked-per-week_part-time-15-or-less-hours-worked').property(single, 'listID', '2011-census-hours-worked-per-week').property(single, 'value', "part-time-15-or-less-hours-worked")
+  ).next()
+  g.V().hasId('_code_list_2011-census-hours-worked-per-week_one-off').as('codeList').V().hasId('_code_2011-census-hours-worked-per-week_part-time-15-or-less-hours-worked').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "part-time-15-or-less-hours-worked").next()
+
+g.V().hasId('_code_2011-census-hours-worked-per-week_part-time-16-to-30-hours-worked').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-hours-worked-per-week_part-time-16-to-30-hours-worked').property(single, 'listID', '2011-census-hours-worked-per-week').property(single, 'value', "part-time-16-to-30-hours-worked")
+  ).next()
+  g.V().hasId('_code_list_2011-census-hours-worked-per-week_one-off').as('codeList').V().hasId('_code_2011-census-hours-worked-per-week_part-time-16-to-30-hours-worked').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "part-time-16-to-30-hours-worked").next()
+
+g.V().hasId('_code_2011-census-hours-worked-per-week_full-time-31-to-48-hours-worked').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-hours-worked-per-week_full-time-31-to-48-hours-worked').property(single, 'listID', '2011-census-hours-worked-per-week').property(single, 'value', "full-time-31-to-48-hours-worked")
+  ).next()
+  g.V().hasId('_code_list_2011-census-hours-worked-per-week_one-off').as('codeList').V().hasId('_code_2011-census-hours-worked-per-week_full-time-31-to-48-hours-worked').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "full-time-31-to-48-hours-worked").next()
+
+g.V().hasId('_code_2011-census-hours-worked-per-week_full-time-49-or-more-hours-worked').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-hours-worked-per-week_full-time-49-or-more-hours-worked').property(single, 'listID', '2011-census-hours-worked-per-week').property(single, 'value', "full-time-49-or-more-hours-worked")
+  ).next()
+  g.V().hasId('_code_list_2011-census-hours-worked-per-week_one-off').as('codeList').V().hasId('_code_2011-census-hours-worked-per-week_full-time-49-or-more-hours-worked').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "full-time-49-or-more-hours-worked").next()
+
+g.V().hasId('_code_2011-census-hours-worked-per-week_no-code-required-people-aged-under-16-people-not-working-and-students-or-schoolchildren-living-away-during-term-time').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-hours-worked-per-week_no-code-required-people-aged-under-16-people-not-working-and-students-or-schoolchildren-living-away-during-term-time').property(single, 'listID', '2011-census-hours-worked-per-week').property(single, 'value', "no-code-required-people-aged-under-16-people-not-working-and-students-or-schoolchildren-living-away-during-term-time")
+  ).next()
+  g.V().hasId('_code_list_2011-census-hours-worked-per-week_one-off').as('codeList').V().hasId('_code_2011-census-hours-worked-per-week_no-code-required-people-aged-under-16-people-not-working-and-students-or-schoolchildren-living-away-during-term-time').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "no-code-required-people-aged-under-16-people-not-working-and-students-or-schoolchildren-living-away-during-term-time").next()
