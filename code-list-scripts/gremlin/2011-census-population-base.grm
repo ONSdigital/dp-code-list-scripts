@@ -12,7 +12,7 @@ g.V().hasId('_code_2011-census-population-base_usual-resident').
   ).next()
   g.V().hasId('_code_list_2011-census-population-base_one-off').as('codeList').V().hasId('_code_2011-census-population-base_usual-resident').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "usual-resident").next()
+      addE('usedBy').to('codeList')).property('label', "Usual resident").next()
 
 g.V().hasId('_code_2011-census-population-base_student-living-away-from-home-during-term-time').
   fold().coalesce(unfold(), addV('_code').
@@ -20,7 +20,7 @@ g.V().hasId('_code_2011-census-population-base_student-living-away-from-home-dur
   ).next()
   g.V().hasId('_code_list_2011-census-population-base_one-off').as('codeList').V().hasId('_code_2011-census-population-base_student-living-away-from-home-during-term-time').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "student-living-away-from-home-during-term-time").next()
+      addE('usedBy').to('codeList')).property('label', "Student living away from home during term-time").next()
 
 g.V().hasId('_code_2011-census-population-base_short-term-resident').
   fold().coalesce(unfold(), addV('_code').
@@ -28,4 +28,4 @@ g.V().hasId('_code_2011-census-population-base_short-term-resident').
   ).next()
   g.V().hasId('_code_list_2011-census-population-base_one-off').as('codeList').V().hasId('_code_2011-census-population-base_short-term-resident').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "short-term-resident").next()
+      addE('usedBy').to('codeList')).property('label', "Short-term resident").next()

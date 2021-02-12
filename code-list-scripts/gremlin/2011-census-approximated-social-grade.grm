@@ -12,7 +12,7 @@ g.V().hasId('_code_2011-census-approximated-social-grade_ab').
   ).next()
   g.V().hasId('_code_list_2011-census-approximated-social-grade_one-off').as('codeList').V().hasId('_code_2011-census-approximated-social-grade_ab').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "ab").next()
+      addE('usedBy').to('codeList')).property('label', "AB").next()
 
 g.V().hasId('_code_2011-census-approximated-social-grade_c1').
   fold().coalesce(unfold(), addV('_code').
@@ -20,7 +20,7 @@ g.V().hasId('_code_2011-census-approximated-social-grade_c1').
   ).next()
   g.V().hasId('_code_list_2011-census-approximated-social-grade_one-off').as('codeList').V().hasId('_code_2011-census-approximated-social-grade_c1').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "c1").next()
+      addE('usedBy').to('codeList')).property('label', "C1").next()
 
 g.V().hasId('_code_2011-census-approximated-social-grade_c2').
   fold().coalesce(unfold(), addV('_code').
@@ -28,7 +28,7 @@ g.V().hasId('_code_2011-census-approximated-social-grade_c2').
   ).next()
   g.V().hasId('_code_list_2011-census-approximated-social-grade_one-off').as('codeList').V().hasId('_code_2011-census-approximated-social-grade_c2').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "c2").next()
+      addE('usedBy').to('codeList')).property('label', "C2").next()
 
 g.V().hasId('_code_2011-census-approximated-social-grade_de').
   fold().coalesce(unfold(), addV('_code').
@@ -36,7 +36,7 @@ g.V().hasId('_code_2011-census-approximated-social-grade_de').
   ).next()
   g.V().hasId('_code_list_2011-census-approximated-social-grade_one-off').as('codeList').V().hasId('_code_2011-census-approximated-social-grade_de').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "de").next()
+      addE('usedBy').to('codeList')).property('label', "DE").next()
 
 g.V().hasId('_code_2011-census-approximated-social-grade_no-code-required-people-aged-under-16-people-resident-in-communal-establishments-and-students-or-schoolchildren-living-away-during-term-time').
   fold().coalesce(unfold(), addV('_code').
@@ -44,4 +44,4 @@ g.V().hasId('_code_2011-census-approximated-social-grade_no-code-required-people
   ).next()
   g.V().hasId('_code_list_2011-census-approximated-social-grade_one-off').as('codeList').V().hasId('_code_2011-census-approximated-social-grade_no-code-required-people-aged-under-16-people-resident-in-communal-establishments-and-students-or-schoolchildren-living-away-during-term-time').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "no-code-required-people-aged-under-16-people-resident-in-communal-establishments-and-students-or-schoolchildren-living-away-during-term-time").next()
+      addE('usedBy').to('codeList')).property('label', "No code required (People aged under 16, people resident in communal establishments, and students or schoolchildren living away during term-time)").next()

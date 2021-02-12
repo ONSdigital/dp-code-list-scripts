@@ -12,7 +12,7 @@ g.V().hasId('_code_2011-census-residence-type_resident-in-a-communal-establishme
   ).next()
   g.V().hasId('_code_list_2011-census-residence-type_one-off').as('codeList').V().hasId('_code_2011-census-residence-type_resident-in-a-communal-establishment').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "resident-in-a-communal-establishment").next()
+      addE('usedBy').to('codeList')).property('label', "Resident in a communal establishment").next()
 
 g.V().hasId('_code_2011-census-residence-type_not-resident-in-a-communal-establishment').
   fold().coalesce(unfold(), addV('_code').
@@ -20,4 +20,4 @@ g.V().hasId('_code_2011-census-residence-type_not-resident-in-a-communal-establi
   ).next()
   g.V().hasId('_code_list_2011-census-residence-type_one-off').as('codeList').V().hasId('_code_2011-census-residence-type_not-resident-in-a-communal-establishment').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "not-resident-in-a-communal-establishment").next()
+      addE('usedBy').to('codeList')).property('label', "Not resident in a communal establishment").next()

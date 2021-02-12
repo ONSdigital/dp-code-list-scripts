@@ -12,7 +12,7 @@ g.V().hasId('_code_2011-census-ethnic-group_white').
   ).next()
   g.V().hasId('_code_list_2011-census-ethnic-group_one-off').as('codeList').V().hasId('_code_2011-census-ethnic-group_white').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "white").next()
+      addE('usedBy').to('codeList')).property('label', "White").next()
 
 g.V().hasId('_code_2011-census-ethnic-group_mixed').
   fold().coalesce(unfold(), addV('_code').
@@ -20,7 +20,7 @@ g.V().hasId('_code_2011-census-ethnic-group_mixed').
   ).next()
   g.V().hasId('_code_list_2011-census-ethnic-group_one-off').as('codeList').V().hasId('_code_2011-census-ethnic-group_mixed').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "mixed").next()
+      addE('usedBy').to('codeList')).property('label', "Mixed").next()
 
 g.V().hasId('_code_2011-census-ethnic-group_asian-and-asian-british').
   fold().coalesce(unfold(), addV('_code').
@@ -28,7 +28,7 @@ g.V().hasId('_code_2011-census-ethnic-group_asian-and-asian-british').
   ).next()
   g.V().hasId('_code_list_2011-census-ethnic-group_one-off').as('codeList').V().hasId('_code_2011-census-ethnic-group_asian-and-asian-british').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "asian-and-asian-british").next()
+      addE('usedBy').to('codeList')).property('label', "Asian and Asian British").next()
 
 g.V().hasId('_code_2011-census-ethnic-group_black-or-black-british').
   fold().coalesce(unfold(), addV('_code').
@@ -36,7 +36,7 @@ g.V().hasId('_code_2011-census-ethnic-group_black-or-black-british').
   ).next()
   g.V().hasId('_code_list_2011-census-ethnic-group_one-off').as('codeList').V().hasId('_code_2011-census-ethnic-group_black-or-black-british').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "black-or-black-british").next()
+      addE('usedBy').to('codeList')).property('label', "Black or Black British").next()
 
 g.V().hasId('_code_2011-census-ethnic-group_chinese-or-other-ethnic-group').
   fold().coalesce(unfold(), addV('_code').
@@ -44,7 +44,7 @@ g.V().hasId('_code_2011-census-ethnic-group_chinese-or-other-ethnic-group').
   ).next()
   g.V().hasId('_code_list_2011-census-ethnic-group_one-off').as('codeList').V().hasId('_code_2011-census-ethnic-group_chinese-or-other-ethnic-group').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "chinese-or-other-ethnic-group").next()
+      addE('usedBy').to('codeList')).property('label', "Chinese or Other ethnic group").next()
 
 g.V().hasId('_code_2011-census-ethnic-group_no-code-required-not-resident-in-england-or-wales-students-or-schoolchildren-living-away-during-term-time').
   fold().coalesce(unfold(), addV('_code').
@@ -52,4 +52,4 @@ g.V().hasId('_code_2011-census-ethnic-group_no-code-required-not-resident-in-eng
   ).next()
   g.V().hasId('_code_list_2011-census-ethnic-group_one-off').as('codeList').V().hasId('_code_2011-census-ethnic-group_no-code-required-not-resident-in-england-or-wales-students-or-schoolchildren-living-away-during-term-time').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "no-code-required-not-resident-in-england-or-wales-students-or-schoolchildren-living-away-during-term-time").next()
+      addE('usedBy').to('codeList')).property('label', "No code required (Not resident in England or Wales, students or schoolchildren living away during term-time)").next()

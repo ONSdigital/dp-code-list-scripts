@@ -12,7 +12,7 @@ g.V().hasId('_code_2011-census-family-composition_not-in-a-family').
   ).next()
   g.V().hasId('_code_list_2011-census-family-composition_one-off').as('codeList').V().hasId('_code_2011-census-family-composition_not-in-a-family').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "not-in-a-family").next()
+      addE('usedBy').to('codeList')).property('label', "Not in a family").next()
 
 g.V().hasId('_code_2011-census-family-composition_married-same-sex-civil-partnership-couple-family').
   fold().coalesce(unfold(), addV('_code').
@@ -20,7 +20,7 @@ g.V().hasId('_code_2011-census-family-composition_married-same-sex-civil-partner
   ).next()
   g.V().hasId('_code_list_2011-census-family-composition_one-off').as('codeList').V().hasId('_code_2011-census-family-composition_married-same-sex-civil-partnership-couple-family').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "married-same-sex-civil-partnership-couple-family").next()
+      addE('usedBy').to('codeList')).property('label', "Married/same-sex civil partnership couple family").next()
 
 g.V().hasId('_code_2011-census-family-composition_cohabiting-couple-family').
   fold().coalesce(unfold(), addV('_code').
@@ -28,7 +28,7 @@ g.V().hasId('_code_2011-census-family-composition_cohabiting-couple-family').
   ).next()
   g.V().hasId('_code_list_2011-census-family-composition_one-off').as('codeList').V().hasId('_code_2011-census-family-composition_cohabiting-couple-family').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "cohabiting-couple-family").next()
+      addE('usedBy').to('codeList')).property('label', "Cohabiting couple family").next()
 
 g.V().hasId('_code_2011-census-family-composition_lone-parent-family-male-head').
   fold().coalesce(unfold(), addV('_code').
@@ -36,7 +36,7 @@ g.V().hasId('_code_2011-census-family-composition_lone-parent-family-male-head')
   ).next()
   g.V().hasId('_code_list_2011-census-family-composition_one-off').as('codeList').V().hasId('_code_2011-census-family-composition_lone-parent-family-male-head').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "lone-parent-family-male-head").next()
+      addE('usedBy').to('codeList')).property('label', "Lone parent family (male head)").next()
 
 g.V().hasId('_code_2011-census-family-composition_lone-parent-family-female-head').
   fold().coalesce(unfold(), addV('_code').
@@ -44,7 +44,7 @@ g.V().hasId('_code_2011-census-family-composition_lone-parent-family-female-head
   ).next()
   g.V().hasId('_code_list_2011-census-family-composition_one-off').as('codeList').V().hasId('_code_2011-census-family-composition_lone-parent-family-female-head').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "lone-parent-family-female-head").next()
+      addE('usedBy').to('codeList')).property('label', "Lone parent family (female head)").next()
 
 g.V().hasId('_code_2011-census-family-composition_other-related-family').
   fold().coalesce(unfold(), addV('_code').
@@ -52,7 +52,7 @@ g.V().hasId('_code_2011-census-family-composition_other-related-family').
   ).next()
   g.V().hasId('_code_list_2011-census-family-composition_one-off').as('codeList').V().hasId('_code_2011-census-family-composition_other-related-family').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "other-related-family").next()
+      addE('usedBy').to('codeList')).property('label', "Other related family").next()
 
 g.V().hasId('_code_2011-census-family-composition_no-code-required-resident-of-a-communal-establishment-students-or-schoolchildren-living-away-during-term-time-or-a-short-term-resident').
   fold().coalesce(unfold(), addV('_code').
@@ -60,4 +60,4 @@ g.V().hasId('_code_2011-census-family-composition_no-code-required-resident-of-a
   ).next()
   g.V().hasId('_code_list_2011-census-family-composition_one-off').as('codeList').V().hasId('_code_2011-census-family-composition_no-code-required-resident-of-a-communal-establishment-students-or-schoolchildren-living-away-during-term-time-or-a-short-term-resident').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "no-code-required-resident-of-a-communal-establishment-students-or-schoolchildren-living-away-during-term-time-or-a-short-term-resident").next()
+      addE('usedBy').to('codeList')).property('label', "No code required (Resident of a communal establishment, students or schoolchildren living away during term-time, or a short-term resident)").next()

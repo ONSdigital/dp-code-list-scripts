@@ -12,7 +12,7 @@ g.V().hasId('_code_2011-census-age_0-to-15').
   ).next()
   g.V().hasId('_code_list_2011-census-age_one-off').as('codeList').V().hasId('_code_2011-census-age_0-to-15').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "0-to-15").next()
+      addE('usedBy').to('codeList')).property('label', "0 to 15").next()
 
 g.V().hasId('_code_2011-census-age_16-to-24').
   fold().coalesce(unfold(), addV('_code').
@@ -20,7 +20,7 @@ g.V().hasId('_code_2011-census-age_16-to-24').
   ).next()
   g.V().hasId('_code_list_2011-census-age_one-off').as('codeList').V().hasId('_code_2011-census-age_16-to-24').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "16-to-24").next()
+      addE('usedBy').to('codeList')).property('label', "16 to 24").next()
 
 g.V().hasId('_code_2011-census-age_25-to-34').
   fold().coalesce(unfold(), addV('_code').
@@ -28,7 +28,7 @@ g.V().hasId('_code_2011-census-age_25-to-34').
   ).next()
   g.V().hasId('_code_list_2011-census-age_one-off').as('codeList').V().hasId('_code_2011-census-age_25-to-34').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "25-to-34").next()
+      addE('usedBy').to('codeList')).property('label', "25 to 34").next()
 
 g.V().hasId('_code_2011-census-age_35-to-44').
   fold().coalesce(unfold(), addV('_code').
@@ -36,7 +36,7 @@ g.V().hasId('_code_2011-census-age_35-to-44').
   ).next()
   g.V().hasId('_code_list_2011-census-age_one-off').as('codeList').V().hasId('_code_2011-census-age_35-to-44').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "35-to-44").next()
+      addE('usedBy').to('codeList')).property('label', "35 to 44").next()
 
 g.V().hasId('_code_2011-census-age_45-to-54').
   fold().coalesce(unfold(), addV('_code').
@@ -44,7 +44,7 @@ g.V().hasId('_code_2011-census-age_45-to-54').
   ).next()
   g.V().hasId('_code_list_2011-census-age_one-off').as('codeList').V().hasId('_code_2011-census-age_45-to-54').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "45-to-54").next()
+      addE('usedBy').to('codeList')).property('label', "45 to 54").next()
 
 g.V().hasId('_code_2011-census-age_55-to-64').
   fold().coalesce(unfold(), addV('_code').
@@ -52,7 +52,7 @@ g.V().hasId('_code_2011-census-age_55-to-64').
   ).next()
   g.V().hasId('_code_list_2011-census-age_one-off').as('codeList').V().hasId('_code_2011-census-age_55-to-64').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "55-to-64").next()
+      addE('usedBy').to('codeList')).property('label', "55 to 64").next()
 
 g.V().hasId('_code_2011-census-age_65-to-74').
   fold().coalesce(unfold(), addV('_code').
@@ -60,7 +60,7 @@ g.V().hasId('_code_2011-census-age_65-to-74').
   ).next()
   g.V().hasId('_code_list_2011-census-age_one-off').as('codeList').V().hasId('_code_2011-census-age_65-to-74').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "65-to-74").next()
+      addE('usedBy').to('codeList')).property('label', "65 to 74").next()
 
 g.V().hasId('_code_2011-census-age_75-and-over').
   fold().coalesce(unfold(), addV('_code').
@@ -68,4 +68,4 @@ g.V().hasId('_code_2011-census-age_75-and-over').
   ).next()
   g.V().hasId('_code_list_2011-census-age_one-off').as('codeList').V().hasId('_code_2011-census-age_75-and-over').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "75-and-over").next()
+      addE('usedBy').to('codeList')).property('label', "75 and over").next()

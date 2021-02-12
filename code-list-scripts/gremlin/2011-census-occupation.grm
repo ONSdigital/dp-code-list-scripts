@@ -12,7 +12,7 @@ g.V().hasId('_code_2011-census-occupation_managers-directors-and-senior-official
   ).next()
   g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_managers-directors-and-senior-officials').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "managers-directors-and-senior-officials").next()
+      addE('usedBy').to('codeList')).property('label', "Managers, Directors and Senior Officials").next()
 
 g.V().hasId('_code_2011-census-occupation_professional-occupations').
   fold().coalesce(unfold(), addV('_code').
@@ -20,7 +20,7 @@ g.V().hasId('_code_2011-census-occupation_professional-occupations').
   ).next()
   g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_professional-occupations').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "professional-occupations").next()
+      addE('usedBy').to('codeList')).property('label', "Professional Occupations").next()
 
 g.V().hasId('_code_2011-census-occupation_associate-professional-and-technical-occupations').
   fold().coalesce(unfold(), addV('_code').
@@ -28,7 +28,7 @@ g.V().hasId('_code_2011-census-occupation_associate-professional-and-technical-o
   ).next()
   g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_associate-professional-and-technical-occupations').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "associate-professional-and-technical-occupations").next()
+      addE('usedBy').to('codeList')).property('label', "Associate Professional and Technical Occupations").next()
 
 g.V().hasId('_code_2011-census-occupation_administrative-and-secretarial-occupations').
   fold().coalesce(unfold(), addV('_code').
@@ -36,7 +36,7 @@ g.V().hasId('_code_2011-census-occupation_administrative-and-secretarial-occupat
   ).next()
   g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_administrative-and-secretarial-occupations').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "administrative-and-secretarial-occupations").next()
+      addE('usedBy').to('codeList')).property('label', "Administrative and Secretarial Occupations").next()
 
 g.V().hasId('_code_2011-census-occupation_skilled-trades-occupations').
   fold().coalesce(unfold(), addV('_code').
@@ -44,7 +44,7 @@ g.V().hasId('_code_2011-census-occupation_skilled-trades-occupations').
   ).next()
   g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_skilled-trades-occupations').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "skilled-trades-occupations").next()
+      addE('usedBy').to('codeList')).property('label', "Skilled Trades Occupations").next()
 
 g.V().hasId('_code_2011-census-occupation_caring-leisure-and-other-service-occupations').
   fold().coalesce(unfold(), addV('_code').
@@ -52,7 +52,7 @@ g.V().hasId('_code_2011-census-occupation_caring-leisure-and-other-service-occup
   ).next()
   g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_caring-leisure-and-other-service-occupations').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "caring-leisure-and-other-service-occupations").next()
+      addE('usedBy').to('codeList')).property('label', "Caring, Leisure and Other Service Occupations").next()
 
 g.V().hasId('_code_2011-census-occupation_sales-and-customer-service-occupations').
   fold().coalesce(unfold(), addV('_code').
@@ -60,7 +60,7 @@ g.V().hasId('_code_2011-census-occupation_sales-and-customer-service-occupations
   ).next()
   g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_sales-and-customer-service-occupations').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "sales-and-customer-service-occupations").next()
+      addE('usedBy').to('codeList')).property('label', "Sales and Customer Service Occupations").next()
 
 g.V().hasId('_code_2011-census-occupation_process-plant-and-machine-operatives').
   fold().coalesce(unfold(), addV('_code').
@@ -68,7 +68,7 @@ g.V().hasId('_code_2011-census-occupation_process-plant-and-machine-operatives')
   ).next()
   g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_process-plant-and-machine-operatives').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "process-plant-and-machine-operatives").next()
+      addE('usedBy').to('codeList')).property('label', "Process, Plant and Machine Operatives").next()
 
 g.V().hasId('_code_2011-census-occupation_elementary-occupations').
   fold().coalesce(unfold(), addV('_code').
@@ -76,7 +76,7 @@ g.V().hasId('_code_2011-census-occupation_elementary-occupations').
   ).next()
   g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_elementary-occupations').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "elementary-occupations").next()
+      addE('usedBy').to('codeList')).property('label', "Elementary Occupations").next()
 
 g.V().hasId('_code_2011-census-occupation_no-code-required-people-aged-under-16-people-who-have-never-worked-and-students-or-schoolchildren-living-away-during-term-time').
   fold().coalesce(unfold(), addV('_code').
@@ -84,4 +84,4 @@ g.V().hasId('_code_2011-census-occupation_no-code-required-people-aged-under-16-
   ).next()
   g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_no-code-required-people-aged-under-16-people-who-have-never-worked-and-students-or-schoolchildren-living-away-during-term-time').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "no-code-required-people-aged-under-16-people-who-have-never-worked-and-students-or-schoolchildren-living-away-during-term-time").next()
+      addE('usedBy').to('codeList')).property('label', "No code required (People aged under 16, people who have never worked and students or schoolchildren living away during term-time)").next()

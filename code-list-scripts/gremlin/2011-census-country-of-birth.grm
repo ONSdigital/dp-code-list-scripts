@@ -12,7 +12,7 @@ g.V().hasId('_code_2011-census-country-of-birth_uk').
   ).next()
   g.V().hasId('_code_list_2011-census-country-of-birth_one-off').as('codeList').V().hasId('_code_2011-census-country-of-birth_uk').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "uk").next()
+      addE('usedBy').to('codeList')).property('label', "UK").next()
 
 g.V().hasId('_code_2011-census-country-of-birth_non-uk').
   fold().coalesce(unfold(), addV('_code').
@@ -20,7 +20,7 @@ g.V().hasId('_code_2011-census-country-of-birth_non-uk').
   ).next()
   g.V().hasId('_code_list_2011-census-country-of-birth_one-off').as('codeList').V().hasId('_code_2011-census-country-of-birth_non-uk').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "non-uk").next()
+      addE('usedBy').to('codeList')).property('label', "Non UK").next()
 
 g.V().hasId('_code_2011-census-country-of-birth_no-code-required-students-or-schoolchildren-living-away-during-term-time').
   fold().coalesce(unfold(), addV('_code').
@@ -28,4 +28,4 @@ g.V().hasId('_code_2011-census-country-of-birth_no-code-required-students-or-sch
   ).next()
   g.V().hasId('_code_list_2011-census-country-of-birth_one-off').as('codeList').V().hasId('_code_2011-census-country-of-birth_no-code-required-students-or-schoolchildren-living-away-during-term-time').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "no-code-required-students-or-schoolchildren-living-away-during-term-time").next()
+      addE('usedBy').to('codeList')).property('label', "No Code required (Students or schoolchildren living away during term-time)").next()

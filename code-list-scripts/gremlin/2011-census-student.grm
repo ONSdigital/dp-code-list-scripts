@@ -12,7 +12,7 @@ g.V().hasId('_code_2011-census-student_yes').
   ).next()
   g.V().hasId('_code_list_2011-census-student_one-off').as('codeList').V().hasId('_code_2011-census-student_yes').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "yes").next()
+      addE('usedBy').to('codeList')).property('label', "Yes").next()
 
 g.V().hasId('_code_2011-census-student_no').
   fold().coalesce(unfold(), addV('_code').
@@ -20,4 +20,4 @@ g.V().hasId('_code_2011-census-student_no').
   ).next()
   g.V().hasId('_code_list_2011-census-student_one-off').as('codeList').V().hasId('_code_2011-census-student_no').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "no").next()
+      addE('usedBy').to('codeList')).property('label', "No").next()
