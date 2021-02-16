@@ -1,0 +1,55 @@
+g.V().hasId('_code_list_2011-census-ethnic-group_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_2011-census-ethnic-group_one-off').
+    property(single, 'listID', "2011-census-ethnic-group").
+    property(single, 'label', "Ethnic group").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_2011-census-ethnic-group_white').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-ethnic-group_white').property(single, 'listID', '2011-census-ethnic-group').property(single, 'value', "white")
+  ).next()
+  g.V().hasId('_code_list_2011-census-ethnic-group_one-off').as('codeList').V().hasId('_code_2011-census-ethnic-group_white').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "White").next()
+
+g.V().hasId('_code_2011-census-ethnic-group_mixed').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-ethnic-group_mixed').property(single, 'listID', '2011-census-ethnic-group').property(single, 'value', "mixed")
+  ).next()
+  g.V().hasId('_code_list_2011-census-ethnic-group_one-off').as('codeList').V().hasId('_code_2011-census-ethnic-group_mixed').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Mixed").next()
+
+g.V().hasId('_code_2011-census-ethnic-group_asian-and-asian-british').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-ethnic-group_asian-and-asian-british').property(single, 'listID', '2011-census-ethnic-group').property(single, 'value', "asian-and-asian-british")
+  ).next()
+  g.V().hasId('_code_list_2011-census-ethnic-group_one-off').as('codeList').V().hasId('_code_2011-census-ethnic-group_asian-and-asian-british').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Asian and Asian British").next()
+
+g.V().hasId('_code_2011-census-ethnic-group_black-or-black-british').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-ethnic-group_black-or-black-british').property(single, 'listID', '2011-census-ethnic-group').property(single, 'value', "black-or-black-british")
+  ).next()
+  g.V().hasId('_code_list_2011-census-ethnic-group_one-off').as('codeList').V().hasId('_code_2011-census-ethnic-group_black-or-black-british').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Black or Black British").next()
+
+g.V().hasId('_code_2011-census-ethnic-group_chinese-or-other-ethnic-group').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-ethnic-group_chinese-or-other-ethnic-group').property(single, 'listID', '2011-census-ethnic-group').property(single, 'value', "chinese-or-other-ethnic-group")
+  ).next()
+  g.V().hasId('_code_list_2011-census-ethnic-group_one-off').as('codeList').V().hasId('_code_2011-census-ethnic-group_chinese-or-other-ethnic-group').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Chinese or Other ethnic group").next()
+
+g.V().hasId('_code_2011-census-ethnic-group_no-code-required-not-resident-in-england-or-wales-students-or-schoolchildren-living-away-during-term-time').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-ethnic-group_no-code-required-not-resident-in-england-or-wales-students-or-schoolchildren-living-away-during-term-time').property(single, 'listID', '2011-census-ethnic-group').property(single, 'value', "no-code-required-not-resident-in-england-or-wales-students-or-schoolchildren-living-away-during-term-time")
+  ).next()
+  g.V().hasId('_code_list_2011-census-ethnic-group_one-off').as('codeList').V().hasId('_code_2011-census-ethnic-group_no-code-required-not-resident-in-england-or-wales-students-or-schoolchildren-living-away-during-term-time').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "No code required (Not resident in England or Wales, students or schoolchildren living away during term-time)").next()

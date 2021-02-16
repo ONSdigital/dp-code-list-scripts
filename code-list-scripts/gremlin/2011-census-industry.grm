@@ -1,0 +1,111 @@
+g.V().hasId('_code_list_2011-census-industry_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_2011-census-industry_one-off').
+    property(single, 'listID', "2011-census-industry").
+    property(single, 'label', "Industry").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_2011-census-industry_agriculture-forestry-and-fishing').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-industry_agriculture-forestry-and-fishing').property(single, 'listID', '2011-census-industry').property(single, 'value', "agriculture-forestry-and-fishing")
+  ).next()
+  g.V().hasId('_code_list_2011-census-industry_one-off').as('codeList').V().hasId('_code_2011-census-industry_agriculture-forestry-and-fishing').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Agriculture, forestry and fishing").next()
+
+g.V().hasId('_code_2011-census-industry_mining-and-quarrying;-manufacturing;-electricity-gas-steam-and-air-conditioning-system;-water-supply').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-industry_mining-and-quarrying;-manufacturing;-electricity-gas-steam-and-air-conditioning-system;-water-supply').property(single, 'listID', '2011-census-industry').property(single, 'value', "mining-and-quarrying;-manufacturing;-electricity-gas-steam-and-air-conditioning-system;-water-supply")
+  ).next()
+  g.V().hasId('_code_list_2011-census-industry_one-off').as('codeList').V().hasId('_code_2011-census-industry_mining-and-quarrying;-manufacturing;-electricity-gas-steam-and-air-conditioning-system;-water-supply').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Mining and quarrying; Manufacturing; Electricity, gas, steam and air conditioning system; Water supply").next()
+
+g.V().hasId('_code_2011-census-industry_construction').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-industry_construction').property(single, 'listID', '2011-census-industry').property(single, 'value', "construction")
+  ).next()
+  g.V().hasId('_code_list_2011-census-industry_one-off').as('codeList').V().hasId('_code_2011-census-industry_construction').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Construction").next()
+
+g.V().hasId('_code_2011-census-industry_wholesale-and-retail-trade;-repair-of-motor-vehicles-and-motorcycles').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-industry_wholesale-and-retail-trade;-repair-of-motor-vehicles-and-motorcycles').property(single, 'listID', '2011-census-industry').property(single, 'value', "wholesale-and-retail-trade;-repair-of-motor-vehicles-and-motorcycles")
+  ).next()
+  g.V().hasId('_code_list_2011-census-industry_one-off').as('codeList').V().hasId('_code_2011-census-industry_wholesale-and-retail-trade;-repair-of-motor-vehicles-and-motorcycles').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Wholesale and retail trade; Repair of motor vehicles and motorcycles").next()
+
+g.V().hasId('_code_2011-census-industry_accommodation-and-food-service-activities').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-industry_accommodation-and-food-service-activities').property(single, 'listID', '2011-census-industry').property(single, 'value', "accommodation-and-food-service-activities")
+  ).next()
+  g.V().hasId('_code_list_2011-census-industry_one-off').as('codeList').V().hasId('_code_2011-census-industry_accommodation-and-food-service-activities').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Accommodation and food service activities").next()
+
+g.V().hasId('_code_2011-census-industry_transport-and-storage;-information-and-communication').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-industry_transport-and-storage;-information-and-communication').property(single, 'listID', '2011-census-industry').property(single, 'value', "transport-and-storage;-information-and-communication")
+  ).next()
+  g.V().hasId('_code_list_2011-census-industry_one-off').as('codeList').V().hasId('_code_2011-census-industry_transport-and-storage;-information-and-communication').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Transport and storage; Information and communication").next()
+
+g.V().hasId('_code_2011-census-industry_financial-and-insurance-activities;-intermediation').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-industry_financial-and-insurance-activities;-intermediation').property(single, 'listID', '2011-census-industry').property(single, 'value', "financial-and-insurance-activities;-intermediation")
+  ).next()
+  g.V().hasId('_code_list_2011-census-industry_one-off').as('codeList').V().hasId('_code_2011-census-industry_financial-and-insurance-activities;-intermediation').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Financial and insurance activities; Intermediation").next()
+
+g.V().hasId('_code_2011-census-industry_real-estate-activities;-professional-scientific-and-technical-activities;-administrative-and-support-service-activities').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-industry_real-estate-activities;-professional-scientific-and-technical-activities;-administrative-and-support-service-activities').property(single, 'listID', '2011-census-industry').property(single, 'value', "real-estate-activities;-professional-scientific-and-technical-activities;-administrative-and-support-service-activities")
+  ).next()
+  g.V().hasId('_code_list_2011-census-industry_one-off').as('codeList').V().hasId('_code_2011-census-industry_real-estate-activities;-professional-scientific-and-technical-activities;-administrative-and-support-service-activities').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Real estate activities; Professional, scientific and technical activities; Administrative and support service activities").next()
+
+g.V().hasId('_code_2011-census-industry_public-administration-and-defence;-compulsory-social-security').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-industry_public-administration-and-defence;-compulsory-social-security').property(single, 'listID', '2011-census-industry').property(single, 'value', "public-administration-and-defence;-compulsory-social-security")
+  ).next()
+  g.V().hasId('_code_list_2011-census-industry_one-off').as('codeList').V().hasId('_code_2011-census-industry_public-administration-and-defence;-compulsory-social-security').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Public administration and defence; compulsory social security").next()
+
+g.V().hasId('_code_2011-census-industry_education').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-industry_education').property(single, 'listID', '2011-census-industry').property(single, 'value', "education")
+  ).next()
+  g.V().hasId('_code_list_2011-census-industry_one-off').as('codeList').V().hasId('_code_2011-census-industry_education').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Education").next()
+
+g.V().hasId('_code_2011-census-industry_human-health-and-social-work-activities').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-industry_human-health-and-social-work-activities').property(single, 'listID', '2011-census-industry').property(single, 'value', "human-health-and-social-work-activities")
+  ).next()
+  g.V().hasId('_code_list_2011-census-industry_one-off').as('codeList').V().hasId('_code_2011-census-industry_human-health-and-social-work-activities').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Human health and social work activities").next()
+
+g.V().hasId('_code_2011-census-industry_other-community-social-and-personal-service-activities;-private-households-employing-domestic-staff;-extra-territorial-organisations-and-bodies').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-industry_other-community-social-and-personal-service-activities;-private-households-employing-domestic-staff;-extra-territorial-organisations-and-bodies').property(single, 'listID', '2011-census-industry').property(single, 'value', "other-community-social-and-personal-service-activities;-private-households-employing-domestic-staff;-extra-territorial-organisations-and-bodies")
+  ).next()
+  g.V().hasId('_code_list_2011-census-industry_one-off').as('codeList').V().hasId('_code_2011-census-industry_other-community-social-and-personal-service-activities;-private-households-employing-domestic-staff;-extra-territorial-organisations-and-bodies').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Other community, social and personal service activities; Private households employing domestic staff; Extra-territorial organisations and bodies").next()
+
+g.V().hasId('_code_2011-census-industry_no-code-required-people-aged-under-16-people-who-have-never-worked-and-students-or-schoolchildren-living-away-during-term-time').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-industry_no-code-required-people-aged-under-16-people-who-have-never-worked-and-students-or-schoolchildren-living-away-during-term-time').property(single, 'listID', '2011-census-industry').property(single, 'value', "no-code-required-people-aged-under-16-people-who-have-never-worked-and-students-or-schoolchildren-living-away-during-term-time")
+  ).next()
+  g.V().hasId('_code_list_2011-census-industry_one-off').as('codeList').V().hasId('_code_2011-census-industry_no-code-required-people-aged-under-16-people-who-have-never-worked-and-students-or-schoolchildren-living-away-during-term-time').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "No code required (People aged under 16, people who have never worked, and students or schoolchildren living away during term-time)").next()

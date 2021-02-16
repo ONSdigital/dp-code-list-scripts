@@ -1,0 +1,55 @@
+g.V().hasId('_code_list_2011-census-health_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_2011-census-health_one-off').
+    property(single, 'listID', "2011-census-health").
+    property(single, 'label', "Health (General health)").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_2011-census-health_very-good-health').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-health_very-good-health').property(single, 'listID', '2011-census-health').property(single, 'value', "very-good-health")
+  ).next()
+  g.V().hasId('_code_list_2011-census-health_one-off').as('codeList').V().hasId('_code_2011-census-health_very-good-health').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Very good health").next()
+
+g.V().hasId('_code_2011-census-health_good-health').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-health_good-health').property(single, 'listID', '2011-census-health').property(single, 'value', "good-health")
+  ).next()
+  g.V().hasId('_code_list_2011-census-health_one-off').as('codeList').V().hasId('_code_2011-census-health_good-health').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Good health").next()
+
+g.V().hasId('_code_2011-census-health_fair-health').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-health_fair-health').property(single, 'listID', '2011-census-health').property(single, 'value', "fair-health")
+  ).next()
+  g.V().hasId('_code_list_2011-census-health_one-off').as('codeList').V().hasId('_code_2011-census-health_fair-health').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Fair health").next()
+
+g.V().hasId('_code_2011-census-health_bad-health').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-health_bad-health').property(single, 'listID', '2011-census-health').property(single, 'value', "bad-health")
+  ).next()
+  g.V().hasId('_code_list_2011-census-health_one-off').as('codeList').V().hasId('_code_2011-census-health_bad-health').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Bad health").next()
+
+g.V().hasId('_code_2011-census-health_very-bad-health').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-health_very-bad-health').property(single, 'listID', '2011-census-health').property(single, 'value', "very-bad-health")
+  ).next()
+  g.V().hasId('_code_list_2011-census-health_one-off').as('codeList').V().hasId('_code_2011-census-health_very-bad-health').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Very bad health").next()
+
+g.V().hasId('_code_2011-census-health_no-code-required-students-or-schoolchildren-living-away-during-term-time').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-health_no-code-required-students-or-schoolchildren-living-away-during-term-time').property(single, 'listID', '2011-census-health').property(single, 'value', "no-code-required-students-or-schoolchildren-living-away-during-term-time")
+  ).next()
+  g.V().hasId('_code_list_2011-census-health_one-off').as('codeList').V().hasId('_code_2011-census-health_no-code-required-students-or-schoolchildren-living-away-during-term-time').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "No code required (Students or schoolchildren living away during term-time)").next()

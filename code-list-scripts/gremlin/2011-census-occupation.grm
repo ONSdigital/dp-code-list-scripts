@@ -1,0 +1,87 @@
+g.V().hasId('_code_list_2011-census-occupation_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_2011-census-occupation_one-off').
+    property(single, 'listID', "2011-census-occupation").
+    property(single, 'label', "Occupation").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_2011-census-occupation_managers-directors-and-senior-officials').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-occupation_managers-directors-and-senior-officials').property(single, 'listID', '2011-census-occupation').property(single, 'value', "managers-directors-and-senior-officials")
+  ).next()
+  g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_managers-directors-and-senior-officials').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Managers, Directors and Senior Officials").next()
+
+g.V().hasId('_code_2011-census-occupation_professional-occupations').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-occupation_professional-occupations').property(single, 'listID', '2011-census-occupation').property(single, 'value', "professional-occupations")
+  ).next()
+  g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_professional-occupations').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Professional Occupations").next()
+
+g.V().hasId('_code_2011-census-occupation_associate-professional-and-technical-occupations').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-occupation_associate-professional-and-technical-occupations').property(single, 'listID', '2011-census-occupation').property(single, 'value', "associate-professional-and-technical-occupations")
+  ).next()
+  g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_associate-professional-and-technical-occupations').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Associate Professional and Technical Occupations").next()
+
+g.V().hasId('_code_2011-census-occupation_administrative-and-secretarial-occupations').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-occupation_administrative-and-secretarial-occupations').property(single, 'listID', '2011-census-occupation').property(single, 'value', "administrative-and-secretarial-occupations")
+  ).next()
+  g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_administrative-and-secretarial-occupations').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Administrative and Secretarial Occupations").next()
+
+g.V().hasId('_code_2011-census-occupation_skilled-trades-occupations').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-occupation_skilled-trades-occupations').property(single, 'listID', '2011-census-occupation').property(single, 'value', "skilled-trades-occupations")
+  ).next()
+  g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_skilled-trades-occupations').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Skilled Trades Occupations").next()
+
+g.V().hasId('_code_2011-census-occupation_caring-leisure-and-other-service-occupations').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-occupation_caring-leisure-and-other-service-occupations').property(single, 'listID', '2011-census-occupation').property(single, 'value', "caring-leisure-and-other-service-occupations")
+  ).next()
+  g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_caring-leisure-and-other-service-occupations').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Caring, Leisure and Other Service Occupations").next()
+
+g.V().hasId('_code_2011-census-occupation_sales-and-customer-service-occupations').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-occupation_sales-and-customer-service-occupations').property(single, 'listID', '2011-census-occupation').property(single, 'value', "sales-and-customer-service-occupations")
+  ).next()
+  g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_sales-and-customer-service-occupations').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Sales and Customer Service Occupations").next()
+
+g.V().hasId('_code_2011-census-occupation_process-plant-and-machine-operatives').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-occupation_process-plant-and-machine-operatives').property(single, 'listID', '2011-census-occupation').property(single, 'value', "process-plant-and-machine-operatives")
+  ).next()
+  g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_process-plant-and-machine-operatives').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Process, Plant and Machine Operatives").next()
+
+g.V().hasId('_code_2011-census-occupation_elementary-occupations').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-occupation_elementary-occupations').property(single, 'listID', '2011-census-occupation').property(single, 'value', "elementary-occupations")
+  ).next()
+  g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_elementary-occupations').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Elementary Occupations").next()
+
+g.V().hasId('_code_2011-census-occupation_no-code-required-people-aged-under-16-people-who-have-never-worked-and-students-or-schoolchildren-living-away-during-term-time').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-occupation_no-code-required-people-aged-under-16-people-who-have-never-worked-and-students-or-schoolchildren-living-away-during-term-time').property(single, 'listID', '2011-census-occupation').property(single, 'value', "no-code-required-people-aged-under-16-people-who-have-never-worked-and-students-or-schoolchildren-living-away-during-term-time")
+  ).next()
+  g.V().hasId('_code_list_2011-census-occupation_one-off').as('codeList').V().hasId('_code_2011-census-occupation_no-code-required-people-aged-under-16-people-who-have-never-worked-and-students-or-schoolchildren-living-away-during-term-time').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "No code required (People aged under 16, people who have never worked and students or schoolchildren living away during term-time)").next()

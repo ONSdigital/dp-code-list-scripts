@@ -1,0 +1,87 @@
+g.V().hasId('_code_list_2011-census-religion_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_2011-census-religion_one-off').
+    property(single, 'listID', "2011-census-religion").
+    property(single, 'label', "Religion").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_2011-census-religion_no-religion').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-religion_no-religion').property(single, 'listID', '2011-census-religion').property(single, 'value', "no-religion")
+  ).next()
+  g.V().hasId('_code_list_2011-census-religion_one-off').as('codeList').V().hasId('_code_2011-census-religion_no-religion').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "No religion").next()
+
+g.V().hasId('_code_2011-census-religion_christian').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-religion_christian').property(single, 'listID', '2011-census-religion').property(single, 'value', "christian")
+  ).next()
+  g.V().hasId('_code_list_2011-census-religion_one-off').as('codeList').V().hasId('_code_2011-census-religion_christian').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Christian").next()
+
+g.V().hasId('_code_2011-census-religion_buddhist').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-religion_buddhist').property(single, 'listID', '2011-census-religion').property(single, 'value', "buddhist")
+  ).next()
+  g.V().hasId('_code_list_2011-census-religion_one-off').as('codeList').V().hasId('_code_2011-census-religion_buddhist').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Buddhist").next()
+
+g.V().hasId('_code_2011-census-religion_hindu').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-religion_hindu').property(single, 'listID', '2011-census-religion').property(single, 'value', "hindu")
+  ).next()
+  g.V().hasId('_code_list_2011-census-religion_one-off').as('codeList').V().hasId('_code_2011-census-religion_hindu').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Hindu").next()
+
+g.V().hasId('_code_2011-census-religion_jewish').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-religion_jewish').property(single, 'listID', '2011-census-religion').property(single, 'value', "jewish")
+  ).next()
+  g.V().hasId('_code_list_2011-census-religion_one-off').as('codeList').V().hasId('_code_2011-census-religion_jewish').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Jewish").next()
+
+g.V().hasId('_code_2011-census-religion_muslim').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-religion_muslim').property(single, 'listID', '2011-census-religion').property(single, 'value', "muslim")
+  ).next()
+  g.V().hasId('_code_list_2011-census-religion_one-off').as('codeList').V().hasId('_code_2011-census-religion_muslim').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Muslim").next()
+
+g.V().hasId('_code_2011-census-religion_sikh').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-religion_sikh').property(single, 'listID', '2011-census-religion').property(single, 'value', "sikh")
+  ).next()
+  g.V().hasId('_code_list_2011-census-religion_one-off').as('codeList').V().hasId('_code_2011-census-religion_sikh').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Sikh").next()
+
+g.V().hasId('_code_2011-census-religion_other-religion').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-religion_other-religion').property(single, 'listID', '2011-census-religion').property(single, 'value', "other-religion")
+  ).next()
+  g.V().hasId('_code_list_2011-census-religion_one-off').as('codeList').V().hasId('_code_2011-census-religion_other-religion').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Other religion").next()
+
+g.V().hasId('_code_2011-census-religion_not-stated').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-religion_not-stated').property(single, 'listID', '2011-census-religion').property(single, 'value', "not-stated")
+  ).next()
+  g.V().hasId('_code_list_2011-census-religion_one-off').as('codeList').V().hasId('_code_2011-census-religion_not-stated').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Not stated").next()
+
+g.V().hasId('_code_2011-census-religion_no-code-required-not-resident-in-england-or-wales-students-or-schoolchildren-living-away-during-term-time').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-religion_no-code-required-not-resident-in-england-or-wales-students-or-schoolchildren-living-away-during-term-time').property(single, 'listID', '2011-census-religion').property(single, 'value', "no-code-required-not-resident-in-england-or-wales-students-or-schoolchildren-living-away-during-term-time")
+  ).next()
+  g.V().hasId('_code_list_2011-census-religion_one-off').as('codeList').V().hasId('_code_2011-census-religion_no-code-required-not-resident-in-england-or-wales-students-or-schoolchildren-living-away-during-term-time').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "No code required (Not resident in England or Wales, students or schoolchildren living away during term-time)").next()

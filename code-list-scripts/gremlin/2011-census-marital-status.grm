@@ -1,0 +1,47 @@
+g.V().hasId('_code_list_2011-census-marital-status_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_2011-census-marital-status_one-off').
+    property(single, 'listID', "2011-census-marital-status").
+    property(single, 'label', "Marital status").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_2011-census-marital-status_single-never-married-or-never-registered-a-same-sex-civil-partnership').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-marital-status_single-never-married-or-never-registered-a-same-sex-civil-partnership').property(single, 'listID', '2011-census-marital-status').property(single, 'value', "single-never-married-or-never-registered-a-same-sex-civil-partnership")
+  ).next()
+  g.V().hasId('_code_list_2011-census-marital-status_one-off').as('codeList').V().hasId('_code_2011-census-marital-status_single-never-married-or-never-registered-a-same-sex-civil-partnership').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Single (never married or never registered a same-sex civil partnership)").next()
+
+g.V().hasId('_code_2011-census-marital-status_married-or-in-a-registered-same-sex-civil-partnership').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-marital-status_married-or-in-a-registered-same-sex-civil-partnership').property(single, 'listID', '2011-census-marital-status').property(single, 'value', "married-or-in-a-registered-same-sex-civil-partnership")
+  ).next()
+  g.V().hasId('_code_list_2011-census-marital-status_one-off').as('codeList').V().hasId('_code_2011-census-marital-status_married-or-in-a-registered-same-sex-civil-partnership').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Married or in a registered same-sex civil partnership").next()
+
+g.V().hasId('_code_2011-census-marital-status_separated-but-still-legally-married-or-separated-but-still-legally-in-a-same-sex-civil-partnership').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-marital-status_separated-but-still-legally-married-or-separated-but-still-legally-in-a-same-sex-civil-partnership').property(single, 'listID', '2011-census-marital-status').property(single, 'value', "separated-but-still-legally-married-or-separated-but-still-legally-in-a-same-sex-civil-partnership")
+  ).next()
+  g.V().hasId('_code_list_2011-census-marital-status_one-off').as('codeList').V().hasId('_code_2011-census-marital-status_separated-but-still-legally-married-or-separated-but-still-legally-in-a-same-sex-civil-partnership').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Separated but still legally married or separated but still legally in a same-sex civil partnership").next()
+
+g.V().hasId('_code_2011-census-marital-status_divorced-or-formerly-in-a-same-sex-civil-partnership-which-is-now-legally-dissolved').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-marital-status_divorced-or-formerly-in-a-same-sex-civil-partnership-which-is-now-legally-dissolved').property(single, 'listID', '2011-census-marital-status').property(single, 'value', "divorced-or-formerly-in-a-same-sex-civil-partnership-which-is-now-legally-dissolved")
+  ).next()
+  g.V().hasId('_code_list_2011-census-marital-status_one-off').as('codeList').V().hasId('_code_2011-census-marital-status_divorced-or-formerly-in-a-same-sex-civil-partnership-which-is-now-legally-dissolved').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Divorced or formerly in a same-sex civil partnership which is now legally dissolved").next()
+
+g.V().hasId('_code_2011-census-marital-status_widowed-or-surviving-partner-from-a-same-sex-civil-partnership').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_2011-census-marital-status_widowed-or-surviving-partner-from-a-same-sex-civil-partnership').property(single, 'listID', '2011-census-marital-status').property(single, 'value', "widowed-or-surviving-partner-from-a-same-sex-civil-partnership")
+  ).next()
+  g.V().hasId('_code_list_2011-census-marital-status_one-off').as('codeList').V().hasId('_code_2011-census-marital-status_widowed-or-surviving-partner-from-a-same-sex-civil-partnership').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Widowed or surviving partner from a same-sex civil partnership").next()
