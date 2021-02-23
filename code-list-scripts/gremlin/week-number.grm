@@ -15,7 +15,7 @@ g.V().hasId('_code_week-number_week-1').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-1').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 1").next()
+       addE('usedBy').to('codeList')).property('label', "Week 1").property(‘order’, 0).next()
 
 
 g.V().hasId('_code_week-number_week-2').
@@ -24,7 +24,7 @@ g.V().hasId('_code_week-number_week-2').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-2').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 2").next()
+       addE('usedBy').to('codeList')).property('label', "Week 2").property(‘order’, 1).next()
 
 
 g.V().hasId('_code_week-number_week-3').
@@ -33,7 +33,7 @@ g.V().hasId('_code_week-number_week-3').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-3').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 3").next()
+       addE('usedBy').to('codeList')).property('label', "Week 3").property(‘order’, 2).next()
 
 
 g.V().hasId('_code_week-number_week-4').
@@ -42,7 +42,7 @@ g.V().hasId('_code_week-number_week-4').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-4').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 4").next()
+       addE('usedBy').to('codeList')).property('label', "Week 4").property(‘order’, 3).next()
 
 
 g.V().hasId('_code_week-number_week-5').
@@ -51,7 +51,7 @@ g.V().hasId('_code_week-number_week-5').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-5').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 5").next()
+       addE('usedBy').to('codeList')).property('label', "Week 5").property(‘order’, 4).next()
 
 
 g.V().hasId('_code_week-number_week-6').
@@ -60,7 +60,7 @@ g.V().hasId('_code_week-number_week-6').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-6').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 6").next()
+       addE('usedBy').to('codeList')).property('label', "Week 6").property(‘order’, 5).next()
 
 
 g.V().hasId('_code_week-number_week-7').
@@ -69,7 +69,7 @@ g.V().hasId('_code_week-number_week-7').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-7').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 7").next()
+       addE('usedBy').to('codeList')).property('label', "Week 7").property(‘order’, 6).next()
 
 
 g.V().hasId('_code_week-number_week-8').
@@ -78,7 +78,7 @@ g.V().hasId('_code_week-number_week-8').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-8').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 8").next()
+       addE('usedBy').to('codeList')).property('label', "Week 8").property(‘order’, 7).next()
 
 
 g.V().hasId('_code_week-number_week-9').
@@ -87,7 +87,7 @@ g.V().hasId('_code_week-number_week-9').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-9').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 9").next()
+       addE('usedBy').to('codeList')).property('label', "Week 9").property(‘order’, 8).next()
 
 
 g.V().hasId('_code_week-number_week-10').
@@ -96,7 +96,7 @@ g.V().hasId('_code_week-number_week-10').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-10').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 10").next()
+       addE('usedBy').to('codeList')).property('label', "Week 10").property(‘order’, 9).next()
 
 
 g.V().hasId('_code_week-number_week-11').
@@ -105,7 +105,7 @@ g.V().hasId('_code_week-number_week-11').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-11').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 11").next()
+       addE('usedBy').to('codeList')).property('label', "Week 11").property(‘order’, 10).next()
 
 
 g.V().hasId('_code_week-number_week-12').
@@ -114,7 +114,7 @@ g.V().hasId('_code_week-number_week-12').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-12').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 12").next()
+       addE('usedBy').to('codeList')).property('label', "Week 12").property(‘order’, 11).next()
 
 
 g.V().hasId('_code_week-number_week-13').
@@ -123,7 +123,7 @@ g.V().hasId('_code_week-number_week-13').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-13').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 13").next()
+       addE('usedBy').to('codeList')).property('label', "Week 13").property(‘order’, 12).next()
 
 
 g.V().hasId('_code_week-number_week-14').
@@ -132,7 +132,7 @@ g.V().hasId('_code_week-number_week-14').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-14').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 14").next()
+       addE('usedBy').to('codeList')).property('label', "Week 14").property(‘order’, 13).next()
 
 
 g.V().hasId('_code_week-number_week-15').
@@ -141,7 +141,7 @@ g.V().hasId('_code_week-number_week-15').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-15').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 15").next()
+       addE('usedBy').to('codeList')).property('label', "Week 15").property(‘order’, 14).next()
 
 
 g.V().hasId('_code_week-number_week-16').
@@ -150,7 +150,7 @@ g.V().hasId('_code_week-number_week-16').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-16').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 16").next()
+       addE('usedBy').to('codeList')).property('label', "Week 16").property(‘order’, 15).next()
 
 
 g.V().hasId('_code_week-number_week-17').
@@ -159,7 +159,7 @@ g.V().hasId('_code_week-number_week-17').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-17').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 17").next()
+       addE('usedBy').to('codeList')).property('label', "Week 17").property(‘order’, 16).next()
 
 
 g.V().hasId('_code_week-number_week-18').
@@ -168,7 +168,7 @@ g.V().hasId('_code_week-number_week-18').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-18').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 18").next()
+       addE('usedBy').to('codeList')).property('label', "Week 18").property(‘order’, 17).next()
 
 
 g.V().hasId('_code_week-number_week-19').
@@ -177,7 +177,7 @@ g.V().hasId('_code_week-number_week-19').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-19').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 19").next()
+       addE('usedBy').to('codeList')).property('label', "Week 19").property(‘order’, 18).next()
 
 
 g.V().hasId('_code_week-number_week-20').
@@ -186,7 +186,7 @@ g.V().hasId('_code_week-number_week-20').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-20').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 20").next()
+       addE('usedBy').to('codeList')).property('label', "Week 20").property(‘order’, 19).next()
 
 
 g.V().hasId('_code_week-number_week-21').
@@ -195,7 +195,7 @@ g.V().hasId('_code_week-number_week-21').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-21').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 21").next()
+       addE('usedBy').to('codeList')).property('label', "Week 21").property(‘order’, 20).next()
 
 
 g.V().hasId('_code_week-number_week-22').
@@ -204,7 +204,7 @@ g.V().hasId('_code_week-number_week-22').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-22').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 22").next()
+       addE('usedBy').to('codeList')).property('label', "Week 22").property(‘order’, 21).next()
 
 
 g.V().hasId('_code_week-number_week-23').
@@ -213,7 +213,7 @@ g.V().hasId('_code_week-number_week-23').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-23').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 23").next()
+       addE('usedBy').to('codeList')).property('label', "Week 23").property(‘order’, 22).next()
 
 
 g.V().hasId('_code_week-number_week-24').
@@ -222,7 +222,7 @@ g.V().hasId('_code_week-number_week-24').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-24').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 24").next()
+       addE('usedBy').to('codeList')).property('label', "Week 24").property(‘order’, 23).next()
 
 
 g.V().hasId('_code_week-number_week-25').
@@ -231,7 +231,7 @@ g.V().hasId('_code_week-number_week-25').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-25').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 25").next()
+       addE('usedBy').to('codeList')).property('label', "Week 25").property(‘order’, 24).next()
 
 
 g.V().hasId('_code_week-number_week-26').
@@ -240,7 +240,7 @@ g.V().hasId('_code_week-number_week-26').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-26').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 26").next()
+       addE('usedBy').to('codeList')).property('label', "Week 26").property(‘order’, 25).next()
 
 
 g.V().hasId('_code_week-number_week-27').
@@ -249,7 +249,7 @@ g.V().hasId('_code_week-number_week-27').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-27').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 27").next()
+       addE('usedBy').to('codeList')).property('label', "Week 27").property(‘order’, 26).next()
 
 
 g.V().hasId('_code_week-number_week-28').
@@ -258,7 +258,7 @@ g.V().hasId('_code_week-number_week-28').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-28').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 28").next()
+       addE('usedBy').to('codeList')).property('label', "Week 28").property(‘order’, 27).next()
 
 
 g.V().hasId('_code_week-number_week-29').
@@ -267,7 +267,7 @@ g.V().hasId('_code_week-number_week-29').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-29').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 29").next()
+       addE('usedBy').to('codeList')).property('label', "Week 29").property(‘order’, 28).next()
 
 
 g.V().hasId('_code_week-number_week-30').
@@ -276,7 +276,7 @@ g.V().hasId('_code_week-number_week-30').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-30').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 30").next()
+       addE('usedBy').to('codeList')).property('label', "Week 30").property(‘order’, 29).next()
 
 
 g.V().hasId('_code_week-number_week-31').
@@ -285,7 +285,7 @@ g.V().hasId('_code_week-number_week-31').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-31').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 31").next()
+       addE('usedBy').to('codeList')).property('label', "Week 31").property(‘order’, 30).next()
 
 
 g.V().hasId('_code_week-number_week-32').
@@ -294,7 +294,7 @@ g.V().hasId('_code_week-number_week-32').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-32').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 32").next()
+       addE('usedBy').to('codeList')).property('label', "Week 32").property(‘order’, 31).next()
 
 
 g.V().hasId('_code_week-number_week-33').
@@ -303,7 +303,7 @@ g.V().hasId('_code_week-number_week-33').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-33').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 33").next()
+       addE('usedBy').to('codeList')).property('label', "Week 33").property(‘order’, 32).next()
 
 
 g.V().hasId('_code_week-number_week-34').
@@ -312,7 +312,7 @@ g.V().hasId('_code_week-number_week-34').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-34').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 34").next()
+       addE('usedBy').to('codeList')).property('label', "Week 34").property(‘order’, 33).next()
 
 
 g.V().hasId('_code_week-number_week-35').
@@ -321,7 +321,7 @@ g.V().hasId('_code_week-number_week-35').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-35').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 35").next()
+       addE('usedBy').to('codeList')).property('label', "Week 35").property(‘order’, 34).next()
 
 
 g.V().hasId('_code_week-number_week-36').
@@ -330,7 +330,7 @@ g.V().hasId('_code_week-number_week-36').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-36').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 36").next()
+       addE('usedBy').to('codeList')).property('label', "Week 36").property(‘order’, 35).next()
 
 
 g.V().hasId('_code_week-number_week-37').
@@ -339,7 +339,7 @@ g.V().hasId('_code_week-number_week-37').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-37').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 37").next()
+       addE('usedBy').to('codeList')).property('label', "Week 37").property(‘order’, 36).next()
 
 
 g.V().hasId('_code_week-number_week-38').
@@ -348,7 +348,7 @@ g.V().hasId('_code_week-number_week-38').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-38').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 38").next()
+       addE('usedBy').to('codeList')).property('label', "Week 38").property(‘order’, 37).next()
 
 
 g.V().hasId('_code_week-number_week-39').
@@ -357,7 +357,7 @@ g.V().hasId('_code_week-number_week-39').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-39').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 39").next()
+       addE('usedBy').to('codeList')).property('label', "Week 39").property(‘order’, 38).next()
 
 
 g.V().hasId('_code_week-number_week-40').
@@ -366,7 +366,7 @@ g.V().hasId('_code_week-number_week-40').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-40').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 40").next()
+       addE('usedBy').to('codeList')).property('label', "Week 40").property(‘order’, 39).next()
 
 
 g.V().hasId('_code_week-number_week-41').
@@ -375,7 +375,7 @@ g.V().hasId('_code_week-number_week-41').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-41').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 41").next()
+       addE('usedBy').to('codeList')).property('label', "Week 41").property(‘order’, 40).next()
 
 
 g.V().hasId('_code_week-number_week-42').
@@ -384,7 +384,7 @@ g.V().hasId('_code_week-number_week-42').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-42').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 42").next()
+       addE('usedBy').to('codeList')).property('label', "Week 42").property(‘order’, 41).next()
 
 
 g.V().hasId('_code_week-number_week-43').
@@ -393,7 +393,7 @@ g.V().hasId('_code_week-number_week-43').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-43').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 43").next()
+       addE('usedBy').to('codeList')).property('label', "Week 43").property(‘order’, 42).next()
 
 
 g.V().hasId('_code_week-number_week-44').
@@ -402,7 +402,7 @@ g.V().hasId('_code_week-number_week-44').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-44').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 44").next()
+       addE('usedBy').to('codeList')).property('label', "Week 44").property(‘order’, 43).next()
 
 
 g.V().hasId('_code_week-number_week-45').
@@ -411,7 +411,7 @@ g.V().hasId('_code_week-number_week-45').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-45').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 45").next()
+       addE('usedBy').to('codeList')).property('label', "Week 45").property(‘order’, 44).next()
 
 
 g.V().hasId('_code_week-number_week-46').
@@ -420,7 +420,7 @@ g.V().hasId('_code_week-number_week-46').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-46').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 46").next()
+       addE('usedBy').to('codeList')).property('label', "Week 46").property(‘order’, 45).next()
 
 
 g.V().hasId('_code_week-number_week-47').
@@ -429,7 +429,7 @@ g.V().hasId('_code_week-number_week-47').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-47').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 47").next()
+       addE('usedBy').to('codeList')).property('label', "Week 47").property(‘order’, 46).next()
 
 
 g.V().hasId('_code_week-number_week-48').
@@ -438,7 +438,7 @@ g.V().hasId('_code_week-number_week-48').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-48').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 48").next()
+       addE('usedBy').to('codeList')).property('label', "Week 48").property(‘order’, 47).next()
 
 
 g.V().hasId('_code_week-number_week-49').
@@ -447,7 +447,7 @@ g.V().hasId('_code_week-number_week-49').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-49').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 49").next()
+       addE('usedBy').to('codeList')).property('label', "Week 49").property(‘order’, 48).next()
 
 
 g.V().hasId('_code_week-number_week-50').
@@ -456,7 +456,7 @@ g.V().hasId('_code_week-number_week-50').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-50').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 50").next()
+       addE('usedBy').to('codeList')).property('label', "Week 50").property(‘order’, 49).next()
 
 
 g.V().hasId('_code_week-number_week-51').
@@ -465,7 +465,7 @@ g.V().hasId('_code_week-number_week-51').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-51').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 51").next()
+       addE('usedBy').to('codeList')).property('label', "Week 51").property(‘order’, 50).next()
 
 
 g.V().hasId('_code_week-number_week-52').
@@ -474,7 +474,7 @@ g.V().hasId('_code_week-number_week-52').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-52').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 52").next()
+       addE('usedBy').to('codeList')).property('label', "Week 52").property(‘order’, 51).next()
 
 
 g.V().hasId('_code_week-number_week-53').
@@ -483,5 +483,5 @@ g.V().hasId('_code_week-number_week-53').
   ).next()
   g.V().hasId('_code_list_week-number_one-off').as('codeList').V().hasId('_code_week-number_week-53').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Week 53").next()
+       addE('usedBy').to('codeList')).property('label', "Week 53").property(‘order’, 52).next()
 

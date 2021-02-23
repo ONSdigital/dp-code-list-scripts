@@ -16,7 +16,7 @@ g.V().hasId('_code_working-pattern_all').
   ).next()
   g.V().hasId('_code_list_working-pattern_one-off').as('codeList').V().hasId('_code_working-pattern_all').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "All").next()
+       addE('usedBy').to('codeList')).property('label', "All").property(‘order’, 2).next()
 
 
 g.V().hasId('_code_working-pattern_full-time').
@@ -25,7 +25,7 @@ g.V().hasId('_code_working-pattern_full-time').
   ).next()
   g.V().hasId('_code_list_working-pattern_one-off').as('codeList').V().hasId('_code_working-pattern_full-time').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Full-Time").next()
+       addE('usedBy').to('codeList')).property('label', "Full-Time").property(‘order’, 1).next()
 
 
 g.V().hasId('_code_working-pattern_part-time').
@@ -34,5 +34,5 @@ g.V().hasId('_code_working-pattern_part-time').
   ).next()
   g.V().hasId('_code_list_working-pattern_one-off').as('codeList').V().hasId('_code_working-pattern_part-time').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Part-Time").next()
+       addE('usedBy').to('codeList')).property('label', "Part-Time").property(‘order’, 0).next()
 
