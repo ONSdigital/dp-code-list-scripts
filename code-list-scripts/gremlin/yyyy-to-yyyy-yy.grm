@@ -1,0 +1,31 @@
+g.V().hasId('_code_list_yyyy-to-yyyy-yy_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_yyyy-to-yyyy-yy_one-off').
+    property(single, 'listID', "yyyy-to-yyyy-yy").
+    property(single, 'label', "Time").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_yyyy-to-yyyy-yy_1978-to-2018-19').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-to-yyyy-yy_1978-to-2018-19').property(single, 'listID', 'yyyy-to-yyyy-yy').property(single, 'value', "1978-to-2018-19")
+  ).next()
+  g.V().hasId('_code_list_yyyy-to-yyyy-yy_one-off').as('codeList').V().hasId('_code_yyyy-to-yyyy-yy_1978-to-2018-19').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "1978 to 2018-19").next()
+
+g.V().hasId('_code_yyyy-to-yyyy-yy_1978-to-2019-20').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-to-yyyy-yy_1978-to-2019-20').property(single, 'listID', 'yyyy-to-yyyy-yy').property(single, 'value', "1978-to-2019-20")
+  ).next()
+  g.V().hasId('_code_list_yyyy-to-yyyy-yy_one-off').as('codeList').V().hasId('_code_yyyy-to-yyyy-yy_1978-to-2019-20').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "1978 to 2019-20").next()
+
+g.V().hasId('_code_yyyy-to-yyyy-yy_1978-to-2020-21').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-to-yyyy-yy_1978-to-2020-21').property(single, 'listID', 'yyyy-to-yyyy-yy').property(single, 'value', "1978-to-2020-21")
+  ).next()
+  g.V().hasId('_code_list_yyyy-to-yyyy-yy_one-off').as('codeList').V().hasId('_code_yyyy-to-yyyy-yy_1978-to-2020-21').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "1978 to 2020-21").next()
