@@ -67,7 +67,10 @@ Note: Some code list scripts do not properly set their constraints, and code lis
 
 To load code lists to any environment you will need:
 
-- SSH access to the environment (open a tunnel)
+- SSH access to the environment (open a tunnel) e.g. 
+
+    `dp ssh sandbox publishing 1 -p 8182:sandbox-neptune-cluster...amazonaws.com:8182`
+
 - the console or shell command for the query language you plan on using, either:
   - `gremlin.sh` (for Neptune), see [Install Gremlin Console](https://github.com/ONSdigital/dp/blob/main/guides/NEPTUNE.md#install-gremlin-console)
   - `cypher-shell` (for legacy/Neo4J)
