@@ -83,11 +83,11 @@ Loading each code list is a 3-step process from that point:
 
   a. Pass the relevant code list file into the query command - this is where cypher and gremlin diverge:
 
-- for cypher, use the cypher shell e.g.
+  - for cypher, use the cypher shell e.g.
 
     `cypher-shell < code-list-scripts/cypher/ashe-earnings.cypher`
 
-- for gremlin, use the [`gremlin-import.sh`](gremlin-import.sh) script, which wraps the `gremlin.sh` command (see above) e.g.
+  - for gremlin, use the [`gremlin-import.sh`](gremlin-import.sh) script, which wraps the `gremlin.sh` command (see above) e.g.
 
     `./gremlin-import.sh geo-specific-codelist/gremlin/ctry17.grm`
 
