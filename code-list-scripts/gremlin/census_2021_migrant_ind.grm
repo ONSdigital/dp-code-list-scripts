@@ -1,0 +1,48 @@
+g.V().hasId('_code_list_census_2021_migrant_ind_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_census_2021_migrant_ind_one-off').
+    property(single, 'listID', "census_2021_migrant_ind").
+    property(single, 'label', "Migrant Indicator").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_census_2021_migrant_ind_0').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_migrant_ind_0').property(single, 'listID','census_2021_migrant_ind').property(single, 'value', "0")
+  ).next()
+  g.V().hasId('_code_list_census_2021_migrant_ind_one-off').as('codeList').V().hasId('_code_census_2021_migrant_ind_0').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Address one year ago is the same as the address of enumeration").property('order', 1).next()
+
+g.V().hasId('_code_census_2021_migrant_ind_1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_migrant_ind_1').property(single, 'listID','census_2021_migrant_ind').property(single, 'value', "1")
+  ).next()
+  g.V().hasId('_code_list_census_2021_migrant_ind_one-off').as('codeList').V().hasId('_code_census_2021_migrant_ind_1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Address one year ago is student term-time or boarding school address in the UK").property('order', 2).next()
+
+g.V().hasId('_code_census_2021_migrant_ind_2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_migrant_ind_2').property(single, 'listID','census_2021_migrant_ind').property(single, 'value', "2")
+  ).next()
+  g.V().hasId('_code_list_census_2021_migrant_ind_one-off').as('codeList').V().hasId('_code_census_2021_migrant_ind_2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Migrant from within the UK: Address one year ago was in the UK").property('order', 3).next()
+
+g.V().hasId('_code_census_2021_migrant_ind_3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_migrant_ind_3').property(single, 'listID','census_2021_migrant_ind').property(single, 'value', "3")
+  ).next()
+  g.V().hasId('_code_list_census_2021_migrant_ind_one-off').as('codeList').V().hasId('_code_census_2021_migrant_ind_3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Migrant from outside the UK: Address one year ago was outside the UK").property('order', 4).next()
+
+g.V().hasId('_code_census_2021_migrant_ind_-8').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_migrant_ind_-8').property(single, 'listID','census_2021_migrant_ind').property(single, 'value', "-8")
+  ).next()
+  g.V().hasId('_code_list_census_2021_migrant_ind_one-off').as('codeList').V().hasId('_code_census_2021_migrant_ind_-8').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Does not apply").property('order', 5).next()
+

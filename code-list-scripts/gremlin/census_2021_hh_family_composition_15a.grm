@@ -1,0 +1,128 @@
+g.V().hasId('_code_list_census_2021_hh_family_composition_15a_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_census_2021_hh_family_composition_15a_one-off').
+    property(single, 'listID', "census_2021_hh_family_composition_15a").
+    property(single, 'label', "Household family composition").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_census_2021_hh_family_composition_15a_1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_family_composition_15a_1').property(single, 'listID','census_2021_hh_family_composition_15a').property(single, 'value', "1")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_family_composition_15a_one-off').as('codeList').V().hasId('_code_census_2021_hh_family_composition_15a_1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"One person household: Aged 66 years and over").property('order', 1).next()
+
+g.V().hasId('_code_census_2021_hh_family_composition_15a_2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_family_composition_15a_2').property(single, 'listID','census_2021_hh_family_composition_15a').property(single, 'value', "2")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_family_composition_15a_one-off').as('codeList').V().hasId('_code_census_2021_hh_family_composition_15a_2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"One person household: Other").property('order', 2).next()
+
+g.V().hasId('_code_census_2021_hh_family_composition_15a_3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_family_composition_15a_3').property(single, 'listID','census_2021_hh_family_composition_15a').property(single, 'value', "3")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_family_composition_15a_one-off').as('codeList').V().hasId('_code_census_2021_hh_family_composition_15a_3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Single family household: All aged 66 years and over").property('order', 3).next()
+
+g.V().hasId('_code_census_2021_hh_family_composition_15a_4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_family_composition_15a_4').property(single, 'listID','census_2021_hh_family_composition_15a').property(single, 'value', "4")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_family_composition_15a_one-off').as('codeList').V().hasId('_code_census_2021_hh_family_composition_15a_4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Single family household: Married or civil partnership couple: No children").property('order', 4).next()
+
+g.V().hasId('_code_census_2021_hh_family_composition_15a_5').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_family_composition_15a_5').property(single, 'listID','census_2021_hh_family_composition_15a').property(single, 'value', "5")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_family_composition_15a_one-off').as('codeList').V().hasId('_code_census_2021_hh_family_composition_15a_5').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Single family household: Married or civil partnership couple: Dependent children").property('order', 5).next()
+
+g.V().hasId('_code_census_2021_hh_family_composition_15a_6').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_family_composition_15a_6').property(single, 'listID','census_2021_hh_family_composition_15a').property(single, 'value', "6")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_family_composition_15a_one-off').as('codeList').V().hasId('_code_census_2021_hh_family_composition_15a_6').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Single family household: Married or civil partnership couple: All children non-dependent").property('order', 6).next()
+
+g.V().hasId('_code_census_2021_hh_family_composition_15a_7').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_family_composition_15a_7').property(single, 'listID','census_2021_hh_family_composition_15a').property(single, 'value', "7")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_family_composition_15a_one-off').as('codeList').V().hasId('_code_census_2021_hh_family_composition_15a_7').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Single family household: Cohabiting couple family: No children").property('order', 7).next()
+
+g.V().hasId('_code_census_2021_hh_family_composition_15a_8').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_family_composition_15a_8').property(single, 'listID','census_2021_hh_family_composition_15a').property(single, 'value', "8")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_family_composition_15a_one-off').as('codeList').V().hasId('_code_census_2021_hh_family_composition_15a_8').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Single family household: Cohabiting couple family: With dependent children").property('order', 8).next()
+
+g.V().hasId('_code_census_2021_hh_family_composition_15a_9').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_family_composition_15a_9').property(single, 'listID','census_2021_hh_family_composition_15a').property(single, 'value', "9")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_family_composition_15a_one-off').as('codeList').V().hasId('_code_census_2021_hh_family_composition_15a_9').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Single family household: Cohabiting couple family: All children non-dependent").property('order', 9).next()
+
+g.V().hasId('_code_census_2021_hh_family_composition_15a_10').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_family_composition_15a_10').property(single, 'listID','census_2021_hh_family_composition_15a').property(single, 'value', "10")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_family_composition_15a_one-off').as('codeList').V().hasId('_code_census_2021_hh_family_composition_15a_10').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Single family household: Lone parent family: With dependent children").property('order', 10).next()
+
+g.V().hasId('_code_census_2021_hh_family_composition_15a_11').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_family_composition_15a_11').property(single, 'listID','census_2021_hh_family_composition_15a').property(single, 'value', "11")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_family_composition_15a_one-off').as('codeList').V().hasId('_code_census_2021_hh_family_composition_15a_11').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Single family household: Lone parent family: All children non-dependent").property('order', 11).next()
+
+g.V().hasId('_code_census_2021_hh_family_composition_15a_12').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_family_composition_15a_12').property(single, 'listID','census_2021_hh_family_composition_15a').property(single, 'value', "12")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_family_composition_15a_one-off').as('codeList').V().hasId('_code_census_2021_hh_family_composition_15a_12').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Single family household: Other single family household: Other family composition").property('order', 12).next()
+
+g.V().hasId('_code_census_2021_hh_family_composition_15a_13').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_family_composition_15a_13').property(single, 'listID','census_2021_hh_family_composition_15a').property(single, 'value', "13")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_family_composition_15a_one-off').as('codeList').V().hasId('_code_census_2021_hh_family_composition_15a_13').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Multiple-family household: With dependent children").property('order', 13).next()
+
+g.V().hasId('_code_census_2021_hh_family_composition_15a_14').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_family_composition_15a_14').property(single, 'listID','census_2021_hh_family_composition_15a').property(single, 'value', "14")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_family_composition_15a_one-off').as('codeList').V().hasId('_code_census_2021_hh_family_composition_15a_14').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Multiple-family household: Other, including all full-time students and all aged 66 years and over").property('order', 14).next()
+
+g.V().hasId('_code_census_2021_hh_family_composition_15a_-8').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_family_composition_15a_-8').property(single, 'listID','census_2021_hh_family_composition_15a').property(single, 'value', "-8")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_family_composition_15a_one-off').as('codeList').V().hasId('_code_census_2021_hh_family_composition_15a_-8').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Does not apply").property('order', 15).next()
+
