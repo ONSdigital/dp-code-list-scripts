@@ -1,0 +1,24 @@
+g.V().hasId('_code_list_census_2021_sex_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_census_2021_sex_one-off').
+    property(single, 'listID', "census_2021_sex").
+    property(single, 'label', "Sex").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_census_2021_sex_1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_sex_1').property(single, 'listID','census_2021_sex').property(single, 'value', "1")
+  ).next()
+  g.V().hasId('_code_list_census_2021_sex_one-off').as('codeList').V().hasId('_code_census_2021_sex_1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Female").property('order', 1).next()
+
+g.V().hasId('_code_census_2021_sex_2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_sex_2').property(single, 'listID','census_2021_sex').property(single, 'value', "2")
+  ).next()
+  g.V().hasId('_code_list_census_2021_sex_one-off').as('codeList').V().hasId('_code_census_2021_sex_2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Male").property('order', 2).next()
+

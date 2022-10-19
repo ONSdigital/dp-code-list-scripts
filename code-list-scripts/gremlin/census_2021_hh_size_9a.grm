@@ -1,0 +1,80 @@
+g.V().hasId('_code_list_census_2021_hh_size_9a_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_census_2021_hh_size_9a_one-off').
+    property(single, 'listID', "census_2021_hh_size_9a").
+    property(single, 'label', "Household size").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_census_2021_hh_size_9a_0').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_size_9a_0').property(single, 'listID','census_2021_hh_size_9a').property(single, 'value', "0")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_size_9a_one-off').as('codeList').V().hasId('_code_census_2021_hh_size_9a_0').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"0 people in household").property('order', 1).next()
+
+g.V().hasId('_code_census_2021_hh_size_9a_1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_size_9a_1').property(single, 'listID','census_2021_hh_size_9a').property(single, 'value', "1")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_size_9a_one-off').as('codeList').V().hasId('_code_census_2021_hh_size_9a_1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"1 person in household").property('order', 2).next()
+
+g.V().hasId('_code_census_2021_hh_size_9a_2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_size_9a_2').property(single, 'listID','census_2021_hh_size_9a').property(single, 'value', "2")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_size_9a_one-off').as('codeList').V().hasId('_code_census_2021_hh_size_9a_2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"2 people in household").property('order', 3).next()
+
+g.V().hasId('_code_census_2021_hh_size_9a_3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_size_9a_3').property(single, 'listID','census_2021_hh_size_9a').property(single, 'value', "3")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_size_9a_one-off').as('codeList').V().hasId('_code_census_2021_hh_size_9a_3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"3 people in household").property('order', 4).next()
+
+g.V().hasId('_code_census_2021_hh_size_9a_4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_size_9a_4').property(single, 'listID','census_2021_hh_size_9a').property(single, 'value', "4")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_size_9a_one-off').as('codeList').V().hasId('_code_census_2021_hh_size_9a_4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"4 people in household").property('order', 5).next()
+
+g.V().hasId('_code_census_2021_hh_size_9a_5').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_size_9a_5').property(single, 'listID','census_2021_hh_size_9a').property(single, 'value', "5")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_size_9a_one-off').as('codeList').V().hasId('_code_census_2021_hh_size_9a_5').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"5 people in household").property('order', 6).next()
+
+g.V().hasId('_code_census_2021_hh_size_9a_6').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_size_9a_6').property(single, 'listID','census_2021_hh_size_9a').property(single, 'value', "6")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_size_9a_one-off').as('codeList').V().hasId('_code_census_2021_hh_size_9a_6').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"6 people in household").property('order', 7).next()
+
+g.V().hasId('_code_census_2021_hh_size_9a_7').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_size_9a_7').property(single, 'listID','census_2021_hh_size_9a').property(single, 'value', "7")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_size_9a_one-off').as('codeList').V().hasId('_code_census_2021_hh_size_9a_7').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"7 people in household").property('order', 8).next()
+
+g.V().hasId('_code_census_2021_hh_size_9a_8').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_hh_size_9a_8').property(single, 'listID','census_2021_hh_size_9a').property(single, 'value', "8")
+  ).next()
+  g.V().hasId('_code_list_census_2021_hh_size_9a_one-off').as('codeList').V().hasId('_code_census_2021_hh_size_9a_8').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"8 or more people in household").property('order', 9).next()
+

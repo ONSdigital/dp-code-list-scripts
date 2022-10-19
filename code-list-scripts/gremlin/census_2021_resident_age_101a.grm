@@ -1,0 +1,816 @@
+g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_census_2021_resident_age_101a_one-off').
+    property(single, 'listID', "census_2021_resident_age_101a").
+    property(single, 'label', "Age by single year (101 categories)").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_0').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_0').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "0")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_0').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged under 1 year").property('order', 1).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_1').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "1")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 1 year").property('order', 2).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_2').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "2")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 2 years").property('order', 3).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_3').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "3")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 3 years").property('order', 4).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_4').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "4")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 4 years").property('order', 5).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_5').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_5').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "5")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_5').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 5 years").property('order', 6).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_6').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_6').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "6")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_6').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 6 years").property('order', 7).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_7').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_7').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "7")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_7').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 7 years").property('order', 8).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_8').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_8').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "8")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_8').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 8 years").property('order', 9).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_9').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_9').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "9")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_9').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 9 years").property('order', 10).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_10').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_10').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "10")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_10').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 10 years").property('order', 11).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_11').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_11').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "11")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_11').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 11 years").property('order', 12).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_12').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_12').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "12")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_12').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 12 years").property('order', 13).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_13').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_13').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "13")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_13').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 13 years").property('order', 14).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_14').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_14').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "14")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_14').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 14 years").property('order', 15).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_15').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_15').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "15")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_15').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 15 years").property('order', 16).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_16').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_16').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "16")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_16').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 16 years").property('order', 17).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_17').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_17').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "17")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_17').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 17 years").property('order', 18).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_18').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_18').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "18")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_18').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 18 years").property('order', 19).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_19').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_19').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "19")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_19').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 19 years").property('order', 20).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_20').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_20').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "20")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_20').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 20 years").property('order', 21).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_21').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_21').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "21")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_21').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 21 years").property('order', 22).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_22').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_22').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "22")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_22').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 22 years").property('order', 23).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_23').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_23').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "23")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_23').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 23 years").property('order', 24).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_24').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_24').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "24")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_24').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 24 years").property('order', 25).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_25').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_25').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "25")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_25').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 25 years").property('order', 26).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_26').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_26').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "26")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_26').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 26 years").property('order', 27).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_27').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_27').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "27")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_27').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 27 years").property('order', 28).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_28').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_28').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "28")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_28').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 28 years").property('order', 29).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_29').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_29').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "29")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_29').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 29 years").property('order', 30).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_30').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_30').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "30")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_30').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 30 years").property('order', 31).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_31').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_31').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "31")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_31').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 31 years").property('order', 32).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_32').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_32').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "32")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_32').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 32 years").property('order', 33).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_33').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_33').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "33")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_33').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 33 years").property('order', 34).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_34').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_34').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "34")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_34').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 34 years").property('order', 35).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_35').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_35').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "35")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_35').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 35 years").property('order', 36).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_36').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_36').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "36")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_36').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 36 years").property('order', 37).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_37').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_37').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "37")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_37').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 37 years").property('order', 38).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_38').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_38').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "38")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_38').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 38 years").property('order', 39).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_39').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_39').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "39")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_39').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 39 years").property('order', 40).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_40').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_40').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "40")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_40').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 40 years").property('order', 41).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_41').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_41').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "41")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_41').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 41 years").property('order', 42).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_42').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_42').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "42")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_42').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 42 years").property('order', 43).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_43').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_43').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "43")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_43').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 43 years").property('order', 44).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_44').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_44').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "44")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_44').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 44 years").property('order', 45).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_45').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_45').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "45")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_45').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 45 years").property('order', 46).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_46').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_46').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "46")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_46').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 46 years").property('order', 47).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_47').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_47').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "47")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_47').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 47 years").property('order', 48).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_48').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_48').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "48")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_48').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 48 years").property('order', 49).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_49').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_49').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "49")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_49').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 49 years").property('order', 50).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_50').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_50').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "50")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_50').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 50 years").property('order', 51).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_51').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_51').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "51")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_51').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 51 years").property('order', 52).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_52').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_52').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "52")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_52').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 52 years").property('order', 53).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_53').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_53').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "53")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_53').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 53 years").property('order', 54).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_54').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_54').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "54")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_54').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 54 years").property('order', 55).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_55').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_55').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "55")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_55').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 55 years").property('order', 56).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_56').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_56').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "56")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_56').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 56 years").property('order', 57).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_57').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_57').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "57")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_57').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 57 years").property('order', 58).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_58').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_58').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "58")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_58').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 58 years").property('order', 59).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_59').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_59').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "59")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_59').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 59 years").property('order', 60).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_60').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_60').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "60")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_60').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 60 years").property('order', 61).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_61').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_61').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "61")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_61').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 61 years").property('order', 62).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_62').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_62').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "62")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_62').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 62 years").property('order', 63).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_63').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_63').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "63")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_63').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 63 years").property('order', 64).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_64').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_64').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "64")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_64').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 64 years").property('order', 65).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_65').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_65').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "65")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_65').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 65 years").property('order', 66).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_66').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_66').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "66")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_66').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 66 years").property('order', 67).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_67').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_67').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "67")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_67').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 67 years").property('order', 68).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_68').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_68').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "68")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_68').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 68 years").property('order', 69).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_69').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_69').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "69")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_69').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 69 years").property('order', 70).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_70').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_70').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "70")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_70').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 70 years").property('order', 71).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_71').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_71').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "71")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_71').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 71 years").property('order', 72).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_72').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_72').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "72")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_72').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 72 years").property('order', 73).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_73').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_73').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "73")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_73').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 73 years").property('order', 74).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_74').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_74').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "74")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_74').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 74 years").property('order', 75).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_75').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_75').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "75")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_75').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 75 years").property('order', 76).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_76').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_76').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "76")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_76').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 76 years").property('order', 77).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_77').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_77').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "77")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_77').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 77 years").property('order', 78).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_78').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_78').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "78")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_78').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 78 years").property('order', 79).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_79').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_79').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "79")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_79').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 79 years").property('order', 80).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_80').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_80').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "80")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_80').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 80 years").property('order', 81).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_81').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_81').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "81")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_81').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 81 years").property('order', 82).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_82').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_82').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "82")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_82').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 82 years").property('order', 83).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_83').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_83').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "83")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_83').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 83 years").property('order', 84).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_84').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_84').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "84")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_84').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 84 years").property('order', 85).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_85').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_85').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "85")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_85').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 85 years").property('order', 86).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_86').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_86').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "86")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_86').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 86 years").property('order', 87).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_87').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_87').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "87")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_87').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 87 years").property('order', 88).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_88').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_88').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "88")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_88').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 88 years").property('order', 89).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_89').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_89').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "89")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_89').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 89 years").property('order', 90).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_90').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_90').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "90")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_90').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 90 years").property('order', 91).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_91').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_91').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "91")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_91').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 91 years").property('order', 92).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_92').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_92').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "92")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_92').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 92 years").property('order', 93).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_93').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_93').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "93")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_93').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 93 years").property('order', 94).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_94').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_94').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "94")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_94').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 94 years").property('order', 95).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_95').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_95').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "95")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_95').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 95 years").property('order', 96).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_96').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_96').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "96")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_96').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 96 years").property('order', 97).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_97').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_97').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "97")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_97').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 97 years").property('order', 98).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_98').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_98').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "98")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_98').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 98 years").property('order', 99).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_99').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_99').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "99")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_99').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 99 years").property('order', 100).next()
+
+g.V().hasId('_code_census_2021_resident_age_101a_100').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_resident_age_101a_100').property(single, 'listID','census_2021_resident_age_101a').property(single, 'value', "100")
+  ).next()
+  g.V().hasId('_code_list_census_2021_resident_age_101a_one-off').as('codeList').V().hasId('_code_census_2021_resident_age_101a_100').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Aged 100 years and over").property('order', 101).next()
+

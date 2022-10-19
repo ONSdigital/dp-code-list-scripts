@@ -1,0 +1,488 @@
+g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_census_2021_country_of_birth_60a_one-off').
+    property(single, 'listID', "census_2021_country_of_birth_60a").
+    property(single, 'label', "Country of birth (detailed)").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_1').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "1")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: United Kingdom: England").property('order', 1).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_2').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "2")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: United Kingdom: Northern Ireland").property('order', 2).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_3').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "3")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: United Kingdom: Scotland").property('order', 3).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_4').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "4")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: United Kingdom: Wales").property('order', 4).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_5').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_5').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "5")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_5').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: United Kingdom: Great Britain not otherwise specified").property('order', 5).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_6').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_6').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "6")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_6').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: United Kingdom: United Kingdom not otherwise specified").property('order', 6).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_7').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_7').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "7")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_7').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: Other Europe: EU countries: Member countries in March 2001: Ireland").property('order', 7).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_8').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_8').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "8")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_8').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: Other Europe: EU countries: Member countries in March 2001: France").property('order', 8).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_9').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_9').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "9")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_9').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: Other Europe: EU countries: Member countries in March 2001: Germany").property('order', 9).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_10').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_10').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "10")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_10').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: Other Europe: EU countries: Member countries in March 2001: Italy").property('order', 10).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_11').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_11').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "11")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_11').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: Other Europe: EU countries: Member countries in March 2001: Portugal (including Madeira and the Azores)").property('order', 11).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_12').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_12').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "12")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_12').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: Other Europe: EU countries: Member countries in March 2001: Spain (including Canary Islands)").property('order', 12).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_13').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_13').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "13")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_13').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: Other Europe: EU countries: Member countries in March 2001: Other member countries in March 2001").property('order', 13).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_14').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_14').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "14")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_14').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: Other Europe: EU countries: Countries that joined the EU between April 2001 and March 2011: Lithuania").property('order', 14).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_15').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_15').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "15")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_15').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: Other Europe: EU countries: Countries that joined the EU between April 2001 and March 2011: Poland").property('order', 15).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_16').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_16').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "16")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_16').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: Other Europe: EU countries: Countries that joined the EU between April 2001 and March 2011: Romania").property('order', 16).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_17').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_17').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "17")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_17').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: Other Europe: EU countries: Countries that joined the EU between April 2001 and March 2011: Other EU countries").property('order', 17).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_18').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_18').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "18")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_18').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: Other Europe: EU countries: Countries that joined the EU between April 2011 and March 2021: Croatia").property('order', 18).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_19').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_19').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "19")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_19').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: Other Europe: Rest of Europe: Turkey").property('order', 19).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_20').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_20').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "20")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_20').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Europe: Other Europe: Rest of Europe: Other Europe").property('order', 20).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_21').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_21').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "21")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_21').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Africa: North Africa").property('order', 21).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_22').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_22').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "22")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_22').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Africa: Central and Western Africa: Ghana").property('order', 22).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_23').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_23').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "23")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_23').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Africa: Central and Western Africa: Nigeria").property('order', 23).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_24').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_24').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "24")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_24').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Africa: Central and Western Africa: Other Central and Western Africa").property('order', 24).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_25').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_25').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "25")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_25').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Africa: South and Eastern Africa: Kenya").property('order', 25).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_26').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_26').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "26")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_26').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Africa: South and Eastern Africa: Somalia").property('order', 26).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_27').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_27').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "27")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_27').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Africa: South and Eastern Africa: South Africa").property('order', 27).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_28').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_28').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "28")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_28').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Africa: South and Eastern Africa: Zimbabwe").property('order', 28).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_29').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_29').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "29")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_29').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Africa: South and Eastern Africa: Other South and Eastern Africa").property('order', 29).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_30').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_30').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "30")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_30').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Africa: Africa not otherwise specified").property('order', 30).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_31').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_31').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "31")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_31').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Middle East and Asia: Middle East: Iran").property('order', 31).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_32').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_32').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "32")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_32').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Middle East and Asia: Middle East: Iraq").property('order', 32).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_33').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_33').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "33")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_33').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Middle East and Asia: Middle East: Other Middle East").property('order', 33).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_34').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_34').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "34")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_34').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Middle East and Asia: Eastern Asia: China").property('order', 34).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_35').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_35').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "35")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_35').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Middle East and Asia: Eastern Asia: Hong Kong (Special Administrative Region of China)").property('order', 35).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_36').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_36').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "36")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_36').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Middle East and Asia: Eastern Asia: Other Eastern Asia").property('order', 36).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_37').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_37').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "37")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_37').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Middle East and Asia: Southern Asia: Afghanistan").property('order', 37).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_38').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_38').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "38")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_38').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Middle East and Asia: Southern Asia: India").property('order', 38).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_39').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_39').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "39")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_39').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Middle East and Asia: Southern Asia: Pakistan").property('order', 39).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_40').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_40').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "40")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_40').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Middle East and Asia: Southern Asia: Bangladesh").property('order', 40).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_41').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_41').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "41")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_41').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Middle East and Asia: Southern Asia: Sri Lanka").property('order', 41).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_42').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_42').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "42")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_42').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Middle East and Asia: Southern Asia: Other Southern Asia").property('order', 42).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_43').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_43').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "43")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_43').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Middle East and Asia: South-East Asia: Philippines").property('order', 43).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_44').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_44').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "44")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_44').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Middle East and Asia: South-East Asia: Malaysia").property('order', 44).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_45').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_45').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "45")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_45').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Middle East and Asia: South-East Asia: Singapore").property('order', 45).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_46').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_46').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "46")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_46').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Middle East and Asia: South-East Asia: Other South-East Asia").property('order', 46).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_47').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_47').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "47")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_47').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Middle East and Asia: Central Asia").property('order', 47).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_48').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_48').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "48")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_48').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"The Americas and the Caribbean: North America: United States").property('order', 48).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_49').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_49').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "49")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_49').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"The Americas and the Caribbean: North America: Canada").property('order', 49).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_50').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_50').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "50")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_50').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"The Americas and the Caribbean: North America: Other North America").property('order', 50).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_51').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_51').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "51")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_51').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"The Americas and the Caribbean: Central America: All Central American countries").property('order', 51).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_52').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_52').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "52")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_52').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"The Americas and the Caribbean: South America: All South American countries").property('order', 52).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_53').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_53').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "53")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_53').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"The Americas and the Caribbean: The Caribbean: Jamaica").property('order', 53).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_54').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_54').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "54")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_54').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"The Americas and the Caribbean: The Caribbean: Other Caribbean").property('order', 54).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_55').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_55').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "55")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_55').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Antarctica and Oceania: Australasia: Australia").property('order', 55).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_56').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_56').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "56")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_56').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Antarctica and Oceania: Australasia: New Zealand").property('order', 56).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_57').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_57').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "57")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_57').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Antarctica and Oceania: Australasia: Other Australasia").property('order', 57).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_58').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_58').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "58")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_58').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Antarctica and Oceania: Other Oceania and Antarctica").property('order', 58).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_59').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_59').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "59")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_59').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Other").property('order', 59).next()
+
+g.V().hasId('_code_census_2021_country_of_birth_60a_-8').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_country_of_birth_60a_-8').property(single, 'listID','census_2021_country_of_birth_60a').property(single, 'value', "-8")
+  ).next()
+  g.V().hasId('_code_list_census_2021_country_of_birth_60a_one-off').as('codeList').V().hasId('_code_census_2021_country_of_birth_60a_-8').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Does not apply").property('order', 60).next()
+

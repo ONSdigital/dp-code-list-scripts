@@ -1,0 +1,152 @@
+g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_census_2021_age_arrival_uk_18a_one-off').
+    property(single, 'listID', "census_2021_age_arrival_uk_18a").
+    property(single, 'label', "Age of arrival in the UK").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_census_2021_age_arrival_uk_18a_1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_age_arrival_uk_18a_1').property(single, 'listID','census_2021_age_arrival_uk_18a').property(single, 'value', "1")
+  ).next()
+  g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').as('codeList').V().hasId('_code_census_2021_age_arrival_uk_18a_1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Born in the UK").property('order', 1).next()
+
+g.V().hasId('_code_census_2021_age_arrival_uk_18a_2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_age_arrival_uk_18a_2').property(single, 'listID','census_2021_age_arrival_uk_18a').property(single, 'value', "2")
+  ).next()
+  g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').as('codeList').V().hasId('_code_census_2021_age_arrival_uk_18a_2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Arrived in the UK: Aged 0 to 4 years").property('order', 2).next()
+
+g.V().hasId('_code_census_2021_age_arrival_uk_18a_3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_age_arrival_uk_18a_3').property(single, 'listID','census_2021_age_arrival_uk_18a').property(single, 'value', "3")
+  ).next()
+  g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').as('codeList').V().hasId('_code_census_2021_age_arrival_uk_18a_3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Arrived in the UK: Aged 5 to 7 years").property('order', 3).next()
+
+g.V().hasId('_code_census_2021_age_arrival_uk_18a_4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_age_arrival_uk_18a_4').property(single, 'listID','census_2021_age_arrival_uk_18a').property(single, 'value', "4")
+  ).next()
+  g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').as('codeList').V().hasId('_code_census_2021_age_arrival_uk_18a_4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Arrived in the UK: Aged 8 to 9 years").property('order', 4).next()
+
+g.V().hasId('_code_census_2021_age_arrival_uk_18a_5').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_age_arrival_uk_18a_5').property(single, 'listID','census_2021_age_arrival_uk_18a').property(single, 'value', "5")
+  ).next()
+  g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').as('codeList').V().hasId('_code_census_2021_age_arrival_uk_18a_5').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Arrived in the UK: Aged 10 to 14 years").property('order', 5).next()
+
+g.V().hasId('_code_census_2021_age_arrival_uk_18a_6').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_age_arrival_uk_18a_6').property(single, 'listID','census_2021_age_arrival_uk_18a').property(single, 'value', "6")
+  ).next()
+  g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').as('codeList').V().hasId('_code_census_2021_age_arrival_uk_18a_6').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Arrived in the UK: Aged 15 years").property('order', 6).next()
+
+g.V().hasId('_code_census_2021_age_arrival_uk_18a_7').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_age_arrival_uk_18a_7').property(single, 'listID','census_2021_age_arrival_uk_18a').property(single, 'value', "7")
+  ).next()
+  g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').as('codeList').V().hasId('_code_census_2021_age_arrival_uk_18a_7').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Arrived in the UK: Aged 16 to 17 years").property('order', 7).next()
+
+g.V().hasId('_code_census_2021_age_arrival_uk_18a_8').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_age_arrival_uk_18a_8').property(single, 'listID','census_2021_age_arrival_uk_18a').property(single, 'value', "8")
+  ).next()
+  g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').as('codeList').V().hasId('_code_census_2021_age_arrival_uk_18a_8').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Arrived in the UK: Aged 18 to 19 years").property('order', 8).next()
+
+g.V().hasId('_code_census_2021_age_arrival_uk_18a_9').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_age_arrival_uk_18a_9').property(single, 'listID','census_2021_age_arrival_uk_18a').property(single, 'value', "9")
+  ).next()
+  g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').as('codeList').V().hasId('_code_census_2021_age_arrival_uk_18a_9').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Arrived in the UK: Aged 20 to 24 years").property('order', 9).next()
+
+g.V().hasId('_code_census_2021_age_arrival_uk_18a_10').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_age_arrival_uk_18a_10').property(single, 'listID','census_2021_age_arrival_uk_18a').property(single, 'value', "10")
+  ).next()
+  g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').as('codeList').V().hasId('_code_census_2021_age_arrival_uk_18a_10').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Arrived in the UK: Aged 25 to 29 years").property('order', 10).next()
+
+g.V().hasId('_code_census_2021_age_arrival_uk_18a_11').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_age_arrival_uk_18a_11').property(single, 'listID','census_2021_age_arrival_uk_18a').property(single, 'value', "11")
+  ).next()
+  g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').as('codeList').V().hasId('_code_census_2021_age_arrival_uk_18a_11').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Arrived in the UK: Aged 30 to 44 years").property('order', 11).next()
+
+g.V().hasId('_code_census_2021_age_arrival_uk_18a_12').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_age_arrival_uk_18a_12').property(single, 'listID','census_2021_age_arrival_uk_18a').property(single, 'value', "12")
+  ).next()
+  g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').as('codeList').V().hasId('_code_census_2021_age_arrival_uk_18a_12').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Arrived in the UK: Aged 45 to 59 years").property('order', 12).next()
+
+g.V().hasId('_code_census_2021_age_arrival_uk_18a_13').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_age_arrival_uk_18a_13').property(single, 'listID','census_2021_age_arrival_uk_18a').property(single, 'value', "13")
+  ).next()
+  g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').as('codeList').V().hasId('_code_census_2021_age_arrival_uk_18a_13').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Arrived in the UK: Aged 60 to 64 years").property('order', 13).next()
+
+g.V().hasId('_code_census_2021_age_arrival_uk_18a_14').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_age_arrival_uk_18a_14').property(single, 'listID','census_2021_age_arrival_uk_18a').property(single, 'value', "14")
+  ).next()
+  g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').as('codeList').V().hasId('_code_census_2021_age_arrival_uk_18a_14').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Arrived in the UK: Aged 65 to 74 years").property('order', 14).next()
+
+g.V().hasId('_code_census_2021_age_arrival_uk_18a_15').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_age_arrival_uk_18a_15').property(single, 'listID','census_2021_age_arrival_uk_18a').property(single, 'value', "15")
+  ).next()
+  g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').as('codeList').V().hasId('_code_census_2021_age_arrival_uk_18a_15').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Arrived in the UK: Aged 75 to 84 years").property('order', 15).next()
+
+g.V().hasId('_code_census_2021_age_arrival_uk_18a_16').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_age_arrival_uk_18a_16').property(single, 'listID','census_2021_age_arrival_uk_18a').property(single, 'value', "16")
+  ).next()
+  g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').as('codeList').V().hasId('_code_census_2021_age_arrival_uk_18a_16').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Arrived in the UK: Aged 85 to 89 years").property('order', 16).next()
+
+g.V().hasId('_code_census_2021_age_arrival_uk_18a_17').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_age_arrival_uk_18a_17').property(single, 'listID','census_2021_age_arrival_uk_18a').property(single, 'value', "17")
+  ).next()
+  g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').as('codeList').V().hasId('_code_census_2021_age_arrival_uk_18a_17').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Arrived in the UK: Aged 90 years and over").property('order', 17).next()
+
+g.V().hasId('_code_census_2021_age_arrival_uk_18a_-8').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_age_arrival_uk_18a_-8').property(single, 'listID','census_2021_age_arrival_uk_18a').property(single, 'value', "-8")
+  ).next()
+  g.V().hasId('_code_list_census_2021_age_arrival_uk_18a_one-off').as('codeList').V().hasId('_code_census_2021_age_arrival_uk_18a_-8').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Does not apply").property('order', 18).next()
+

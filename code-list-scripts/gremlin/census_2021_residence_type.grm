@@ -1,0 +1,24 @@
+g.V().hasId('_code_list_census_2021_residence_type_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_census_2021_residence_type_one-off').
+    property(single, 'listID', "census_2021_residence_type").
+    property(single, 'label', "Usual residents in households and communal establishments").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_census_2021_residence_type_1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_residence_type_1').property(single, 'listID','census_2021_residence_type').property(single, 'value', "1")
+  ).next()
+  g.V().hasId('_code_list_census_2021_residence_type_one-off').as('codeList').V().hasId('_code_census_2021_residence_type_1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Lives in a household").property('order', 1).next()
+
+g.V().hasId('_code_census_2021_residence_type_2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census_2021_residence_type_2').property(single, 'listID','census_2021_residence_type').property(single, 'value', "2")
+  ).next()
+  g.V().hasId('_code_list_census_2021_residence_type_one-off').as('codeList').V().hasId('_code_census_2021_residence_type_2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label',"Lives in a communal establishment").property('order', 2).next()
+
