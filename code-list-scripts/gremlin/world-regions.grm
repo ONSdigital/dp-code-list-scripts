@@ -1,0 +1,175 @@
+g.V().hasId('_code_list_world-regions_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_world-regions_one-off').
+    property(single, 'listID', "world-regions").
+    property(single, 'label', "World Regions").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_world-regions_all').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_all').property(single, 'listID', 'world-regions').property(single, 'value', "all")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_all').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "All").next()
+
+g.V().hasId('_code_world-regions_united-kingdom').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_united-kingdom').property(single, 'listID', 'world-regions').property(single, 'value', "united-kingdom")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_united-kingdom').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "United Kingdom").next()
+
+g.V().hasId('_code_world-regions_non-united-kingdom').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_non-united-kingdom').property(single, 'listID', 'world-regions').property(single, 'value', "non-united-kingdom")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_non-united-kingdom').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Non-United Kingdom").next()
+
+g.V().hasId('_code_world-regions_european-union').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_european-union').property(single, 'listID', 'world-regions').property(single, 'value', "european-union")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_european-union').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "European Union").next()
+
+g.V().hasId('_code_world-regions_european-union-eu14').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_european-union-eu14').property(single, 'listID', 'world-regions').property(single, 'value', "european-union-eu14")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_european-union-eu14').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "European Union EU14").next()
+
+g.V().hasId('_code_world-regions_european-union-eu8').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_european-union-eu8').property(single, 'listID', 'world-regions').property(single, 'value', "european-union-eu8")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_european-union-eu8').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "European Union EU8").next()
+
+g.V().hasId('_code_world-regions_european-union-eu2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_european-union-eu2').property(single, 'listID', 'world-regions').property(single, 'value', "european-union-eu2")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_european-union-eu2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "European Union EU2").next()
+
+g.V().hasId('_code_world-regions_european-union-other').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_european-union-other').property(single, 'listID', 'world-regions').property(single, 'value', "european-union-other")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_european-union-other').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "European Union Other").next()
+
+g.V().hasId('_code_world-regions_non-european-union').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_non-european-union').property(single, 'listID', 'world-regions').property(single, 'value', "non-european-union")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_non-european-union').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Non-European Union").next()
+
+g.V().hasId('_code_world-regions_other-europe').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_other-europe').property(single, 'listID', 'world-regions').property(single, 'value', "other-europe")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_other-europe').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Other Europe").next()
+
+g.V().hasId('_code_world-regions_asia').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_asia').property(single, 'listID', 'world-regions').property(single, 'value', "asia")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_asia').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Asia").next()
+
+g.V().hasId('_code_world-regions_middle-east-and-central-asia').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_middle-east-and-central-asia').property(single, 'listID', 'world-regions').property(single, 'value', "middle-east-and-central-asia")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_middle-east-and-central-asia').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Middle East and Central Asia").next()
+
+g.V().hasId('_code_world-regions_east-asia').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_east-asia').property(single, 'listID', 'world-regions').property(single, 'value', "east-asia")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_east-asia').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "East Asia").next()
+
+g.V().hasId('_code_world-regions_south-asia').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_south-asia').property(single, 'listID', 'world-regions').property(single, 'value', "south-asia")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_south-asia').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "South Asia").next()
+
+g.V().hasId('_code_world-regions_south-east-asia').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_south-east-asia').property(single, 'listID', 'world-regions').property(single, 'value', "south-east-asia")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_south-east-asia').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "South East Asia").next()
+
+g.V().hasId('_code_world-regions_rest-of-the-world').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_rest-of-the-world').property(single, 'listID', 'world-regions').property(single, 'value', "rest-of-the-world")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_rest-of-the-world').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Rest of the World").next()
+
+g.V().hasId('_code_world-regions_sub-saharan-africa').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_sub-saharan-africa').property(single, 'listID', 'world-regions').property(single, 'value', "sub-saharan-africa")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_sub-saharan-africa').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Sub-Saharan Africa").next()
+
+g.V().hasId('_code_world-regions_north-africa').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_north-africa').property(single, 'listID', 'world-regions').property(single, 'value', "north-africa")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_north-africa').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "North Africa").next()
+
+g.V().hasId('_code_world-regions_north-america').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_north-america').property(single, 'listID', 'world-regions').property(single, 'value', "north-america")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_north-america').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "North America").next()
+
+g.V().hasId('_code_world-regions_central-and-south-america').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_central-and-south-america').property(single, 'listID', 'world-regions').property(single, 'value', "central-and-south-america")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_central-and-south-america').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Central and South America").next()
+
+g.V().hasId('_code_world-regions_oceania').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_world-regions_oceania').property(single, 'listID', 'world-regions').property(single, 'value', "oceania")
+  ).next()
+  g.V().hasId('_code_list_world-regions_one-off').as('codeList').V().hasId('_code_world-regions_oceania').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Oceania").next()

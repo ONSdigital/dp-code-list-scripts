@@ -1,0 +1,23 @@
+g.V().hasId('_code_list_country-of-origin_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_country-of-origin_one-off').
+    property(single, 'listID', "country-of-origin").
+    property(single, 'label', "Country Of Origin").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_country-of-origin_country-of-birth').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_country-of-origin_country-of-birth').property(single, 'listID', 'country-of-origin').property(single, 'value', "country-of-birth")
+  ).next()
+  g.V().hasId('_code_list_country-of-origin_one-off').as('codeList').V().hasId('_code_country-of-origin_country-of-birth').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Country of birth").next()
+
+g.V().hasId('_code_country-of-origin_nationality').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_country-of-origin_nationality').property(single, 'listID', 'country-of-origin').property(single, 'value', "nationality")
+  ).next()
+  g.V().hasId('_code_list_country-of-origin_one-off').as('codeList').V().hasId('_code_country-of-origin_nationality').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Nationality").next()

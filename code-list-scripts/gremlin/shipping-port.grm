@@ -1,13 +1,10 @@
-
-
 g.V().hasId('_code_list_shipping-port_one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(id, '_code_list_shipping-port_one-off').
     property(single, 'listID', "shipping-port").
-    property(single, 'edition', "one-off").
-    property(single, 'label', "Port")
+    property(single, 'label', "Port").
+    property(single, 'edition', "one-off")
   ).next()
-
 
 g.V().hasId('_code_shipping-port_all-of-uk').
   fold().coalesce(unfold(), addV('_code').
@@ -15,89 +12,7 @@ g.V().hasId('_code_shipping-port_all-of-uk').
   ).next()
   g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_all-of-uk').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "All of UK").next()
-
-
-g.V().hasId('_code_shipping-port_grimsby-immingham').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_shipping-port_grimsby-immingham').property(single, 'listID', 'shipping-port').property(single, 'value', "grimsby-immingham")
-  ).next()
-  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_grimsby-immingham').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Grimsby & Immingham").next()
-
-
-g.V().hasId('_code_shipping-port_london').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_shipping-port_london').property(single, 'listID', 'shipping-port').property(single, 'value', "london")
-  ).next()
-  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_london').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "London").next()
-
-
-g.V().hasId('_code_shipping-port_southampton').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_shipping-port_southampton').property(single, 'listID', 'shipping-port').property(single, 'value', "southampton")
-  ).next()
-  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_southampton').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Southampton").next()
-
-
-g.V().hasId('_code_shipping-port_liverpool').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_shipping-port_liverpool').property(single, 'listID', 'shipping-port').property(single, 'value', "liverpool")
-  ).next()
-  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_liverpool').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Liverpool").next()
-
-
-g.V().hasId('_code_shipping-port_milford-haven').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_shipping-port_milford-haven').property(single, 'listID', 'shipping-port').property(single, 'value', "milford-haven")
-  ).next()
-  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_milford-haven').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Milford Haven").next()
-
-
-g.V().hasId('_code_shipping-port_felixstowe').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_shipping-port_felixstowe').property(single, 'listID', 'shipping-port').property(single, 'value', "felixstowe")
-  ).next()
-  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_felixstowe').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Felixstowe").next()
-
-
-g.V().hasId('_code_shipping-port_tees-hartlepool').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_shipping-port_tees-hartlepool').property(single, 'listID', 'shipping-port').property(single, 'value', "tees-hartlepool")
-  ).next()
-  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_tees-hartlepool').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Tees & Hartlepool").next()
-
-
-g.V().hasId('_code_shipping-port_forth').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_shipping-port_forth').property(single, 'listID', 'shipping-port').property(single, 'value', "forth")
-  ).next()
-  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_forth').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Forth").next()
-
-
-g.V().hasId('_code_shipping-port_dover').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_shipping-port_dover').property(single, 'listID', 'shipping-port').property(single, 'value', "dover")
-  ).next()
-  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_dover').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Dover").next()
-
+      addE('usedBy').to('codeList')).property('label', "All of UK").property('order', 1).next()
 
 g.V().hasId('_code_shipping-port_belfast').
   fold().coalesce(unfold(), addV('_code').
@@ -105,8 +20,47 @@ g.V().hasId('_code_shipping-port_belfast').
   ).next()
   g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_belfast').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Belfast").next()
+      addE('usedBy').to('codeList')).property('label', "Belfast").property('order', 2).next()
 
+g.V().hasId('_code_shipping-port_dover').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_shipping-port_dover').property(single, 'listID', 'shipping-port').property(single, 'value', "dover")
+  ).next()
+  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_dover').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Dover").property('order', 3).next()
+
+g.V().hasId('_code_shipping-port_felixstowe').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_shipping-port_felixstowe').property(single, 'listID', 'shipping-port').property(single, 'value', "felixstowe")
+  ).next()
+  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_felixstowe').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Felixstowe").property('order', 4).next()
+
+g.V().hasId('_code_shipping-port_forth').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_shipping-port_forth').property(single, 'listID', 'shipping-port').property(single, 'value', "forth")
+  ).next()
+  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_forth').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Forth").property('order', 5).next()
+
+g.V().hasId('_code_shipping-port_grimsby-immingham').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_shipping-port_grimsby-immingham').property(single, 'listID', 'shipping-port').property(single, 'value', "grimsby-immingham")
+  ).next()
+  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_grimsby-immingham').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Grimsby & Immingham").property('order', 6).next()
+
+g.V().hasId('_code_shipping-port_grimsby').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_shipping-port_grimsby').property(single, 'listID', 'shipping-port').property(single, 'value', "grimsby")
+  ).next()
+  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_grimsby').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Grimsby").property('order', 7).next()
 
 g.V().hasId('_code_shipping-port_holyhead').
   fold().coalesce(unfold(), addV('_code').
@@ -114,44 +68,7 @@ g.V().hasId('_code_shipping-port_holyhead').
   ).next()
   g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_holyhead').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Holyhead").next()
-
-
-g.V().hasId('_code_shipping-port_larne').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_shipping-port_larne').property(single, 'listID', 'shipping-port').property(single, 'value', "larne")
-  ).next()
-  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_larne').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Larne").next()
-
-
-g.V().hasId('_code_shipping-port_warrenpoint').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_shipping-port_warrenpoint').property(single, 'listID', 'shipping-port').property(single, 'value', "warrenpoint")
-  ).next()
-  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_warrenpoint').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Warrenpoint").next()
-
-
-g.V().hasId('_code_shipping-port_portsmouth').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_shipping-port_portsmouth').property(single, 'listID', 'shipping-port').property(single, 'value', "portsmouth")
-  ).next()
-  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_portsmouth').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Portsmouth").next()
-
-
-g.V().hasId('_code_shipping-port_tyne').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_shipping-port_tyne').property(single, 'listID', 'shipping-port').property(single, 'value', "tyne")
-  ).next()
-  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_tyne').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Tyne").next()
-
+      addE('usedBy').to('codeList')).property('label', "Holyhead").property('order', 8).next()
 
 g.V().hasId('_code_shipping-port_hull').
   fold().coalesce(unfold(), addV('_code').
@@ -159,6 +76,84 @@ g.V().hasId('_code_shipping-port_hull').
   ).next()
   g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_hull').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Hull").next()
+      addE('usedBy').to('codeList')).property('label', "Hull").property('order', 9).next()
 
+g.V().hasId('_code_shipping-port_larne').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_shipping-port_larne').property(single, 'listID', 'shipping-port').property(single, 'value', "larne")
+  ).next()
+  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_larne').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Larne").property('order', 10).next()
 
+g.V().hasId('_code_shipping-port_liverpool').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_shipping-port_liverpool').property(single, 'listID', 'shipping-port').property(single, 'value', "liverpool")
+  ).next()
+  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_liverpool').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Liverpool").property('order', 11).next()
+
+g.V().hasId('_code_shipping-port_london').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_shipping-port_london').property(single, 'listID', 'shipping-port').property(single, 'value', "london")
+  ).next()
+  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_london').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "London").property('order', 12).next()
+
+g.V().hasId('_code_shipping-port_milford-haven').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_shipping-port_milford-haven').property(single, 'listID', 'shipping-port').property(single, 'value', "milford-haven")
+  ).next()
+  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_milford-haven').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Milford Haven").property('order', 13).next()
+
+g.V().hasId('_code_shipping-port_portsmouth').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_shipping-port_portsmouth').property(single, 'listID', 'shipping-port').property(single, 'value', "portsmouth")
+  ).next()
+  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_portsmouth').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Portsmouth").property('order', 14).next()
+
+g.V().hasId('_code_shipping-port_southampton').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_shipping-port_southampton').property(single, 'listID', 'shipping-port').property(single, 'value', "southampton")
+  ).next()
+  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_southampton').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Southampton").property('order', 15).next()
+
+g.V().hasId('_code_shipping-port_tees-hartlepool').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_shipping-port_tees-hartlepool').property(single, 'listID', 'shipping-port').property(single, 'value', "tees-hartlepool")
+  ).next()
+  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_tees-hartlepool').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Tees & Hartlepool").property('order', 16).next()
+
+g.V().hasId('_code_shipping-port_teesport').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_shipping-port_teesport').property(single, 'listID', 'shipping-port').property(single, 'value', "teesport")
+  ).next()
+  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_teesport').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Teesport").property('order', 17).next()
+
+g.V().hasId('_code_shipping-port_tyne').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_shipping-port_tyne').property(single, 'listID', 'shipping-port').property(single, 'value', "tyne")
+  ).next()
+  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_tyne').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Tyne").property('order', 18).next()
+
+g.V().hasId('_code_shipping-port_warrenpoint').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_shipping-port_warrenpoint').property(single, 'listID', 'shipping-port').property(single, 'value', "warrenpoint")
+  ).next()
+  g.V().hasId('_code_list_shipping-port_one-off').as('codeList').V().hasId('_code_shipping-port_warrenpoint').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Warrenpoint").property('order', 19).next()

@@ -1,5 +1,3 @@
-
-
 g.V().hasId('_code_list_countries_one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(id, '_code_list_countries_one-off').
@@ -9,24 +7,13 @@ g.V().hasId('_code_list_countries_one-off').
     property(single, 'edition', "one-off")
   ).next()
 
-
-g.V().hasId('_code_geography_E92000001').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E92000001').property(single, 'listID', 'geography').property(single, 'value', "E92000001")
-  ).next()
-  g.V().hasId('_code_list_countries_one-off').as('codeList').V().hasId('_code_geography_E92000001').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "England").next()
-
-
 g.V().hasId('_code_geography_K02000001').
   fold().coalesce(unfold(), addV('_code').
     property(id, '_code_geography_K02000001').property(single, 'listID', 'geography').property(single, 'value', "K02000001")
   ).next()
   g.V().hasId('_code_list_countries_one-off').as('codeList').V().hasId('_code_geography_K02000001').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "United Kingdom").next()
-
+      addE('usedBy').to('codeList')).property('label', "United Kingdom").property('order', 1).next()
 
 g.V().hasId('_code_geography_K03000001').
   fold().coalesce(unfold(), addV('_code').
@@ -34,8 +21,7 @@ g.V().hasId('_code_geography_K03000001').
   ).next()
   g.V().hasId('_code_list_countries_one-off').as('codeList').V().hasId('_code_geography_K03000001').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Great Britain").next()
-
+      addE('usedBy').to('codeList')).property('label', "Great Britain").property('order', 2).next()
 
 g.V().hasId('_code_geography_K04000001').
   fold().coalesce(unfold(), addV('_code').
@@ -43,26 +29,15 @@ g.V().hasId('_code_geography_K04000001').
   ).next()
   g.V().hasId('_code_list_countries_one-off').as('codeList').V().hasId('_code_geography_K04000001').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "England and Wales").next()
+      addE('usedBy').to('codeList')).property('label', "England and Wales").property('order', 3).next()
 
-
-g.V().hasId('_code_geography_N92000002').
+g.V().hasId('_code_geography_E92000001').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_N92000002').property(single, 'listID', 'geography').property(single, 'value', "N92000002")
+    property(id, '_code_geography_E92000001').property(single, 'listID', 'geography').property(single, 'value', "E92000001")
   ).next()
-  g.V().hasId('_code_list_countries_one-off').as('codeList').V().hasId('_code_geography_N92000002').as('code').
+  g.V().hasId('_code_list_countries_one-off').as('codeList').V().hasId('_code_geography_E92000001').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Northern Ireland").next()
-
-
-g.V().hasId('_code_geography_S92000003').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S92000003').property(single, 'listID', 'geography').property(single, 'value', "S92000003")
-  ).next()
-  g.V().hasId('_code_list_countries_one-off').as('codeList').V().hasId('_code_geography_S92000003').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Scotland").next()
-
+      addE('usedBy').to('codeList')).property('label', "England").property('order', 4).next()
 
 g.V().hasId('_code_geography_W92000004').
   fold().coalesce(unfold(), addV('_code').
@@ -70,5 +45,20 @@ g.V().hasId('_code_geography_W92000004').
   ).next()
   g.V().hasId('_code_list_countries_one-off').as('codeList').V().hasId('_code_geography_W92000004').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Wales").next()
+      addE('usedBy').to('codeList')).property('label', "Wales").property('order', 5).next()
 
+g.V().hasId('_code_geography_S92000003').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S92000003').property(single, 'listID', 'geography').property(single, 'value', "S92000003")
+  ).next()
+  g.V().hasId('_code_list_countries_one-off').as('codeList').V().hasId('_code_geography_S92000003').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Scotland").property('order', 6).next()
+
+g.V().hasId('_code_geography_N92000002').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_N92000002').property(single, 'listID', 'geography').property(single, 'value', "N92000002")
+  ).next()
+  g.V().hasId('_code_list_countries_one-off').as('codeList').V().hasId('_code_geography_N92000002').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Northern Ireland").property('order', 7).next()

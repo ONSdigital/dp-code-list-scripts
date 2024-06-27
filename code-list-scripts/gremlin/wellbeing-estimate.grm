@@ -1,5 +1,3 @@
-
-
 g.V().hasId('_code_list_wellbeing-estimate_one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(id, '_code_list_wellbeing-estimate_one-off').
@@ -8,15 +6,13 @@ g.V().hasId('_code_list_wellbeing-estimate_one-off').
     property(single, 'edition', "one-off")
   ).next()
 
-
 g.V().hasId('_code_wellbeing-estimate_average-mean').
   fold().coalesce(unfold(), addV('_code').
     property(id, '_code_wellbeing-estimate_average-mean').property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "average-mean")
   ).next()
   g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_average-mean').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Average (mean)").property('order', 20).next()
-
+      addE('usedBy').to('codeList')).property('label', "Average (mean)").property('order', 1).next()
 
 g.V().hasId('_code_wellbeing-estimate_poor').
   fold().coalesce(unfold(), addV('_code').
@@ -24,17 +20,7 @@ g.V().hasId('_code_wellbeing-estimate_poor').
   ).next()
   g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_poor').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Poor").property('order', 0).next()
-
-
-g.V().hasId('_code_wellbeing-estimate_good').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_wellbeing-estimate_good').property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "good")
-  ).next()
-  g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_good').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Good").property('order', 2).next()
-
+      addE('usedBy').to('codeList')).property('label', "Poor").property('order', 2).next()
 
 g.V().hasId('_code_wellbeing-estimate_fair').
   fold().coalesce(unfold(), addV('_code').
@@ -42,8 +28,15 @@ g.V().hasId('_code_wellbeing-estimate_fair').
   ).next()
   g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_fair').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Fair").property('order', 1).next()
+      addE('usedBy').to('codeList')).property('label', "Fair").property('order', 3).next()
 
+g.V().hasId('_code_wellbeing-estimate_good').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_wellbeing-estimate_good').property(single, 'listID', 'wellbeing-estimate').property(single, 'value', "good")
+  ).next()
+  g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_good').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Good").property('order', 4).next()
 
 g.V().hasId('_code_wellbeing-estimate_very-good').
   fold().coalesce(unfold(), addV('_code').
@@ -51,8 +44,7 @@ g.V().hasId('_code_wellbeing-estimate_very-good').
   ).next()
   g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_very-good').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Very good").property('order', 3).next()
-
+      addE('usedBy').to('codeList')).property('label', "Very good").property('order', 5).next()
 
 g.V().hasId('_code_wellbeing-estimate_low').
   fold().coalesce(unfold(), addV('_code').
@@ -60,8 +52,7 @@ g.V().hasId('_code_wellbeing-estimate_low').
   ).next()
   g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_low').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Low").property('order', 10).next()
-
+      addE('usedBy').to('codeList')).property('label', "Low").property('order', 6).next()
 
 g.V().hasId('_code_wellbeing-estimate_medium').
   fold().coalesce(unfold(), addV('_code').
@@ -69,8 +60,7 @@ g.V().hasId('_code_wellbeing-estimate_medium').
   ).next()
   g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_medium').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Medium").property('order', 11).next()
-
+      addE('usedBy').to('codeList')).property('label', "Medium").property('order', 7).next()
 
 g.V().hasId('_code_wellbeing-estimate_high').
   fold().coalesce(unfold(), addV('_code').
@@ -78,8 +68,7 @@ g.V().hasId('_code_wellbeing-estimate_high').
   ).next()
   g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_high').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "High").property('order', 12).next()
-
+      addE('usedBy').to('codeList')).property('label', "High").property('order', 8).next()
 
 g.V().hasId('_code_wellbeing-estimate_very-high').
   fold().coalesce(unfold(), addV('_code').
@@ -87,8 +76,7 @@ g.V().hasId('_code_wellbeing-estimate_very-high').
   ).next()
   g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_very-high').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Very high").property('order', 14).next()
-
+      addE('usedBy').to('codeList')).property('label', "Very high").property('order', 9).next()
 
 g.V().hasId('_code_wellbeing-estimate_high-or-very-high').
   fold().coalesce(unfold(), addV('_code').
@@ -96,5 +84,4 @@ g.V().hasId('_code_wellbeing-estimate_high-or-very-high').
   ).next()
   g.V().hasId('_code_list_wellbeing-estimate_one-off').as('codeList').V().hasId('_code_wellbeing-estimate_high-or-very-high').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "High or very high").property('order', 13).next()
-
+      addE('usedBy').to('codeList')).property('label', "High or very high").property('order', 10).next()

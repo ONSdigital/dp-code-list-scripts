@@ -1,0 +1,47 @@
+g.V().hasId('_code_list_sexual-orientation_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_sexual-orientation_one-off').
+    property(single, 'listID', "sexual-orientation").
+    property(single, 'label', "Sexual Orientation").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_sexual-orientation_heterosexual-or-straight').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sexual-orientation_heterosexual-or-straight').property(single, 'listID', 'sexual-orientation').property(single, 'value', "heterosexual-or-straight")
+  ).next()
+  g.V().hasId('_code_list_sexual-orientation_one-off').as('codeList').V().hasId('_code_sexual-orientation_heterosexual-or-straight').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Heterosexual or straight").property('order', 1).next()
+
+g.V().hasId('_code_sexual-orientation_gay-or-lesbian').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sexual-orientation_gay-or-lesbian').property(single, 'listID', 'sexual-orientation').property(single, 'value', "gay-or-lesbian")
+  ).next()
+  g.V().hasId('_code_list_sexual-orientation_one-off').as('codeList').V().hasId('_code_sexual-orientation_gay-or-lesbian').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Gay or lesbian").property('order', 2).next()
+
+g.V().hasId('_code_sexual-orientation_bisexual').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sexual-orientation_bisexual').property(single, 'listID', 'sexual-orientation').property(single, 'value', "bisexual")
+  ).next()
+  g.V().hasId('_code_list_sexual-orientation_one-off').as('codeList').V().hasId('_code_sexual-orientation_bisexual').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Bisexual").property('order', 3).next()
+
+g.V().hasId('_code_sexual-orientation_other').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sexual-orientation_other').property(single, 'listID', 'sexual-orientation').property(single, 'value', "other")
+  ).next()
+  g.V().hasId('_code_list_sexual-orientation_one-off').as('codeList').V().hasId('_code_sexual-orientation_other').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Other").property('order', 4).next()
+
+g.V().hasId('_code_sexual-orientation_dont-know-or-refuse').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sexual-orientation_dont-know-or-refuse').property(single, 'listID', 'sexual-orientation').property(single, 'value', "dont-know-or-refuse")
+  ).next()
+  g.V().hasId('_code_list_sexual-orientation_one-off').as('codeList').V().hasId('_code_sexual-orientation_dont-know-or-refuse').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Don't know or refuse").property('order', 5).next()

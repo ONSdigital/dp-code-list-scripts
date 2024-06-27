@@ -1,73 +1,39 @@
-
-
 g.V().hasId('_code_list_construction-series-type_one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(id, '_code_list_construction-series-type_one-off').
     property(single, 'listID', "construction-series-type").
-    property(single, 'label', "Series Type").
+    property(single, 'label', "SeriesType").
     property(single, 'edition', "one-off")
   ).next()
 
-
-g.V().hasId('_code_construction-series-type_g11-4dp').
+g.V().hasId('_code_construction-series-type_index-numbers').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-series-type_g11-4dp').property(single, 'listID', 'construction-series-type').property(single, 'value', "g11-4dp")
+    property(id, '_code_construction-series-type_index-numbers').property(single, 'listID', 'construction-series-type').property(single, 'value', "index-numbers")
   ).next()
-  g.V().hasId('_code_list_construction-series-type_one-off').as('codeList').V().hasId('_code_construction-series-type_g11-4dp').as('code').
+  g.V().hasId('_code_list_construction-series-type_one-off').as('codeList').V().hasId('_code_construction-series-type_index-numbers').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Period on period").next()
+      addE('usedBy').to('codeList')).property('label', "Index numbers (2019=100)").property('order', 1).next()
 
-
-g.V().hasId('_code_construction-series-type_g121-4dp').
+g.V().hasId('_code_construction-series-type_pounds-million').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-series-type_g121-4dp').property(single, 'listID', 'construction-series-type').property(single, 'value', "g121-4dp")
+    property(id, '_code_construction-series-type_pounds-million').property(single, 'listID', 'construction-series-type').property(single, 'value', "pounds-million")
   ).next()
-  g.V().hasId('_code_list_construction-series-type_one-off').as('codeList').V().hasId('_code_construction-series-type_g121-4dp').as('code').
+  g.V().hasId('_code_list_construction-series-type_one-off').as('codeList').V().hasId('_code_construction-series-type_pounds-million').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Month on month a year ago").next()
+      addE('usedBy').to('codeList')).property('label', "£million").property('order', 2).next()
 
-
-g.V().hasId('_code_construction-series-type_g33-4dp').
+g.V().hasId('_code_construction-series-type_percentage-change-period-on-period').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-series-type_g33-4dp').property(single, 'listID', 'construction-series-type').property(single, 'value', "g33-4dp")
+    property(id, '_code_construction-series-type_percentage-change-period-on-period').property(single, 'listID', 'construction-series-type').property(single, 'value', "percentage-change-period-on-period")
   ).next()
-  g.V().hasId('_code_list_construction-series-type_one-off').as('codeList').V().hasId('_code_construction-series-type_g33-4dp').as('code').
+  g.V().hasId('_code_list_construction-series-type_one-off').as('codeList').V().hasId('_code_construction-series-type_percentage-change-period-on-period').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Three months on previous three months").next()
+      addE('usedBy').to('codeList')).property('label', "Percentage change period on period").property('order', 3).next()
 
-
-g.V().hasId('_code_construction-series-type_g123-4dp').
+g.V().hasId('_code_construction-series-type_percentage-change-period-on-period-a-year-earlier').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-series-type_g123-4dp').property(single, 'listID', 'construction-series-type').property(single, 'value', "g123-4dp")
+    property(id, '_code_construction-series-type_percentage-change-period-on-period-a-year-earlier').property(single, 'listID', 'construction-series-type').property(single, 'value', "percentage-change-period-on-period-a-year-earlier")
   ).next()
-  g.V().hasId('_code_list_construction-series-type_one-off').as('codeList').V().hasId('_code_construction-series-type_g123-4dp').as('code').
+  g.V().hasId('_code_list_construction-series-type_one-off').as('codeList').V().hasId('_code_construction-series-type_percentage-change-period-on-period-a-year-earlier').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Three months on three months a year ago").next()
-
-
-g.V().hasId('_code_construction-series-type_g41-4dp').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-series-type_g41-4dp').property(single, 'listID', 'construction-series-type').property(single, 'value', "g41-4dp")
-  ).next()
-  g.V().hasId('_code_list_construction-series-type_one-off').as('codeList').V().hasId('_code_construction-series-type_g41-4dp').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Quarter on quarter a year ago").next()
-
-
-g.V().hasId('_code_construction-series-type_oc').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-series-type_oc').property(single, 'listID', 'construction-series-type').property(single, 'value', "oc")
-  ).next()
-  g.V().hasId('_code_list_construction-series-type_one-off').as('codeList').V().hasId('_code_construction-series-type_oc').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Output Constrained").next()
-
-
-g.V().hasId('_code_construction-series-type_ic').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-series-type_ic').property(single, 'listID', 'construction-series-type').property(single, 'value', "ic")
-  ).next()
-  g.V().hasId('_code_list_construction-series-type_one-off').as('codeList').V().hasId('_code_construction-series-type_ic').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Index Constrained").next()
-
+      addE('usedBy').to('codeList')).property('label', "Percentage change period on period a year earlier").property('order', 4).next()

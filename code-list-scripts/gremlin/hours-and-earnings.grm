@@ -1,5 +1,3 @@
-
-
 g.V().hasId('_code_list_hours-and-earnings_one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(id, '_code_list_hours-and-earnings_one-off').
@@ -8,87 +6,13 @@ g.V().hasId('_code_list_hours-and-earnings_one-off').
     property(single, 'edition', "one-off")
   ).next()
 
-
-g.V().hasId('_code_hours-and-earnings_paid-hours-worked-basic').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_hours-and-earnings_paid-hours-worked-basic').property(single, 'listID', 'hours-and-earnings').property(single, 'value', "paid-hours-worked-basic")
-  ).next()
-  g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_paid-hours-worked-basic').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Paid hours worked - Basic").next()
-
-
-g.V().hasId('_code_hours-and-earnings_paid-hours-worked-overtime').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_hours-and-earnings_paid-hours-worked-overtime').property(single, 'listID', 'hours-and-earnings').property(single, 'value', "paid-hours-worked-overtime")
-  ).next()
-  g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_paid-hours-worked-overtime').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Paid hours worked - Overtime").next()
-
-
-g.V().hasId('_code_hours-and-earnings_weekly-pay-gross').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_hours-and-earnings_weekly-pay-gross').property(single, 'listID', 'hours-and-earnings').property(single, 'value', "weekly-pay-gross")
-  ).next()
-  g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_weekly-pay-gross').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Weekly pay - Gross").next()
-
-
-g.V().hasId('_code_hours-and-earnings_weekly-pay-excluding-overtime').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_hours-and-earnings_weekly-pay-excluding-overtime').property(single, 'listID', 'hours-and-earnings').property(single, 'value', "weekly-pay-excluding-overtime")
-  ).next()
-  g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_weekly-pay-excluding-overtime').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Weekly pay - Excluding overtime").next()
-
-
-g.V().hasId('_code_hours-and-earnings_basic-pay-including-other-pay').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_hours-and-earnings_basic-pay-including-other-pay').property(single, 'listID', 'hours-and-earnings').property(single, 'value', "basic-pay-including-other-pay")
-  ).next()
-  g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_basic-pay-including-other-pay').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Basic pay - Including other pay").next()
-
-
-g.V().hasId('_code_hours-and-earnings_overtime-pay').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_hours-and-earnings_overtime-pay').property(single, 'listID', 'hours-and-earnings').property(single, 'value', "overtime-pay")
-  ).next()
-  g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_overtime-pay').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Overtime pay").next()
-
-
-g.V().hasId('_code_hours-and-earnings_hourly-pay-gross').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_hours-and-earnings_hourly-pay-gross').property(single, 'listID', 'hours-and-earnings').property(single, 'value', "hourly-pay-gross")
-  ).next()
-  g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_hourly-pay-gross').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Hourly pay - Gross").next()
-
-
-g.V().hasId('_code_hours-and-earnings_hourly-pay-excluding-overtime').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_hours-and-earnings_hourly-pay-excluding-overtime').property(single, 'listID', 'hours-and-earnings').property(single, 'value', "hourly-pay-excluding-overtime")
-  ).next()
-  g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_hourly-pay-excluding-overtime').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Hourly pay - Excluding overtime").next()
-
-
 g.V().hasId('_code_hours-and-earnings_annual-pay-gross').
   fold().coalesce(unfold(), addV('_code').
     property(id, '_code_hours-and-earnings_annual-pay-gross').property(single, 'listID', 'hours-and-earnings').property(single, 'value', "annual-pay-gross")
   ).next()
   g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_annual-pay-gross').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Annual pay - Gross").next()
-
+      addE('usedBy').to('codeList')).property('label', "Annual pay - Gross").property('order', 1).next()
 
 g.V().hasId('_code_hours-and-earnings_annual-pay-incentive').
   fold().coalesce(unfold(), addV('_code').
@@ -96,8 +20,55 @@ g.V().hasId('_code_hours-and-earnings_annual-pay-incentive').
   ).next()
   g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_annual-pay-incentive').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Annual pay - Incentive").next()
+      addE('usedBy').to('codeList')).property('label', "Annual pay - Incentive").property('order', 2).next()
 
+g.V().hasId('_code_hours-and-earnings_basic-pay-including-other-pay').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_hours-and-earnings_basic-pay-including-other-pay').property(single, 'listID', 'hours-and-earnings').property(single, 'value', "basic-pay-including-other-pay")
+  ).next()
+  g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_basic-pay-including-other-pay').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Basic pay - Including other pay").property('order', 3).next()
+
+g.V().hasId('_code_hours-and-earnings_hourly-pay-excluding-overtime').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_hours-and-earnings_hourly-pay-excluding-overtime').property(single, 'listID', 'hours-and-earnings').property(single, 'value', "hourly-pay-excluding-overtime")
+  ).next()
+  g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_hourly-pay-excluding-overtime').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Hourly pay - Excluding overtime").property('order', 4).next()
+
+g.V().hasId('_code_hours-and-earnings_hourly-pay-gross').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_hours-and-earnings_hourly-pay-gross').property(single, 'listID', 'hours-and-earnings').property(single, 'value', "hourly-pay-gross")
+  ).next()
+  g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_hourly-pay-gross').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Hourly pay - Gross").property('order', 5).next()
+
+g.V().hasId('_code_hours-and-earnings_overtime-pay').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_hours-and-earnings_overtime-pay').property(single, 'listID', 'hours-and-earnings').property(single, 'value', "overtime-pay")
+  ).next()
+  g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_overtime-pay').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Overtime pay").property('order', 6).next()
+
+g.V().hasId('_code_hours-and-earnings_paid-hours-worked-basic').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_hours-and-earnings_paid-hours-worked-basic').property(single, 'listID', 'hours-and-earnings').property(single, 'value', "paid-hours-worked-basic")
+  ).next()
+  g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_paid-hours-worked-basic').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Paid hours worked - Basic").property('order', 7).next()
+
+g.V().hasId('_code_hours-and-earnings_paid-hours-worked-overtime').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_hours-and-earnings_paid-hours-worked-overtime').property(single, 'listID', 'hours-and-earnings').property(single, 'value', "paid-hours-worked-overtime")
+  ).next()
+  g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_paid-hours-worked-overtime').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Paid hours worked - Overtime").property('order', 8).next()
 
 g.V().hasId('_code_hours-and-earnings_paid-hours-worked-total').
   fold().coalesce(unfold(), addV('_code').
@@ -105,5 +76,20 @@ g.V().hasId('_code_hours-and-earnings_paid-hours-worked-total').
   ).next()
   g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_paid-hours-worked-total').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Paid hours worked - Total").next()
+      addE('usedBy').to('codeList')).property('label', "Paid hours worked - Total").property('order', 9).next()
 
+g.V().hasId('_code_hours-and-earnings_weekly-pay-excluding-overtime').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_hours-and-earnings_weekly-pay-excluding-overtime').property(single, 'listID', 'hours-and-earnings').property(single, 'value', "weekly-pay-excluding-overtime")
+  ).next()
+  g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_weekly-pay-excluding-overtime').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Weekly pay - Excluding overtime").property('order', 10).next()
+
+g.V().hasId('_code_hours-and-earnings_weekly-pay-gross').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_hours-and-earnings_weekly-pay-gross').property(single, 'listID', 'hours-and-earnings').property(single, 'value', "weekly-pay-gross")
+  ).next()
+  g.V().hasId('_code_list_hours-and-earnings_one-off').as('codeList').V().hasId('_code_hours-and-earnings_weekly-pay-gross').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Weekly pay - Gross").property('order', 11).next()

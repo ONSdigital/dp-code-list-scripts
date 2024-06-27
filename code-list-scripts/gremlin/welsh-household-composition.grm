@@ -1,13 +1,10 @@
-
-
 g.V().hasId('_code_list_welsh-household-composition_one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(id, '_code_list_welsh-household-composition_one-off').
     property(single, 'listID', "welsh-household-composition").
-    property(single, 'label', "welshhouseholdcomposition").
+    property(single, 'label', "Welsh Household Composition").
     property(single, 'edition', "one-off")
   ).next()
-
 
 g.V().hasId('_code_welsh-household-composition_all-categories-welsh-household-composition').
   fold().coalesce(unfold(), addV('_code').
@@ -15,17 +12,7 @@ g.V().hasId('_code_welsh-household-composition_all-categories-welsh-household-co
   ).next()
   g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_all-categories-welsh-household-composition').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "All categories: Welsh household composition").next()
-
-
-g.V().hasId('_code_welsh-household-composition_couple-household-total').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_welsh-household-composition_couple-household-total').property(single, 'listID', 'welsh-household-composition').property(single, 'value', "couple-household-total")
-  ).next()
-  g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_couple-household-total').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Couple household: Total").next()
-
+      addE('usedBy').to('codeList')).property('label', "All categories: Welsh household composition").property('order', 1).next()
 
 g.V().hasId('_code_welsh-household-composition_couple-household-no-adults-can-speak-welsh').
   fold().coalesce(unfold(), addV('_code').
@@ -33,8 +20,7 @@ g.V().hasId('_code_welsh-household-composition_couple-household-no-adults-can-sp
   ).next()
   g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_couple-household-no-adults-can-speak-welsh').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Couple household: No adults can speak Welsh").next()
-
+      addE('usedBy').to('codeList')).property('label', "Couple household: No adults can speak Welsh").property('order', 2).next()
 
 g.V().hasId('_code_welsh-household-composition_couple-household-one-adult-can-speak-welsh').
   fold().coalesce(unfold(), addV('_code').
@@ -42,8 +28,15 @@ g.V().hasId('_code_welsh-household-composition_couple-household-one-adult-can-sp
   ).next()
   g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_couple-household-one-adult-can-speak-welsh').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Couple household: One adult can speak Welsh").next()
+      addE('usedBy').to('codeList')).property('label', "Couple household: One adult can speak Welsh").property('order', 3).next()
 
+g.V().hasId('_code_welsh-household-composition_couple-household-total').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_welsh-household-composition_couple-household-total').property(single, 'listID', 'welsh-household-composition').property(single, 'value', "couple-household-total")
+  ).next()
+  g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_couple-household-total').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Couple household: Total").property('order', 4).next()
 
 g.V().hasId('_code_welsh-household-composition_couple-household-two-or-more-adults-can-speak-welsh').
   fold().coalesce(unfold(), addV('_code').
@@ -51,17 +44,7 @@ g.V().hasId('_code_welsh-household-composition_couple-household-two-or-more-adul
   ).next()
   g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_couple-household-two-or-more-adults-can-speak-welsh').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Couple household: Two or more adults can speak Welsh").next()
-
-
-g.V().hasId('_code_welsh-household-composition_lone-parent-household-total').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_welsh-household-composition_lone-parent-household-total').property(single, 'listID', 'welsh-household-composition').property(single, 'value', "lone-parent-household-total")
-  ).next()
-  g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_lone-parent-household-total').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Lone parent household: Total").next()
-
+      addE('usedBy').to('codeList')).property('label', "Couple household: Two or more adults can speak Welsh").property('order', 5).next()
 
 g.V().hasId('_code_welsh-household-composition_lone-parent-household-no-adults-can-speak-welsh').
   fold().coalesce(unfold(), addV('_code').
@@ -69,8 +52,7 @@ g.V().hasId('_code_welsh-household-composition_lone-parent-household-no-adults-c
   ).next()
   g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_lone-parent-household-no-adults-can-speak-welsh').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Lone parent household: No adults can speak Welsh").next()
-
+      addE('usedBy').to('codeList')).property('label', "Lone parent household: No adults can speak Welsh").property('order', 6).next()
 
 g.V().hasId('_code_welsh-household-composition_lone-parent-household-one-adult-can-speak-welsh').
   fold().coalesce(unfold(), addV('_code').
@@ -78,8 +60,15 @@ g.V().hasId('_code_welsh-household-composition_lone-parent-household-one-adult-c
   ).next()
   g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_lone-parent-household-one-adult-can-speak-welsh').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Lone parent household: One adult can speak Welsh").next()
+      addE('usedBy').to('codeList')).property('label', "Lone parent household: One adult can speak Welsh").property('order', 7).next()
 
+g.V().hasId('_code_welsh-household-composition_lone-parent-household-total').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_welsh-household-composition_lone-parent-household-total').property(single, 'listID', 'welsh-household-composition').property(single, 'value', "lone-parent-household-total")
+  ).next()
+  g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_lone-parent-household-total').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Lone parent household: Total").property('order', 8).next()
 
 g.V().hasId('_code_welsh-household-composition_lone-parent-household-two-or-more-adults-can-speak-welsh').
   fold().coalesce(unfold(), addV('_code').
@@ -87,5 +76,4 @@ g.V().hasId('_code_welsh-household-composition_lone-parent-household-two-or-more
   ).next()
   g.V().hasId('_code_list_welsh-household-composition_one-off').as('codeList').V().hasId('_code_welsh-household-composition_lone-parent-household-two-or-more-adults-can-speak-welsh').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Lone parent household: Two or more adults can speak Welsh").next()
-
+      addE('usedBy').to('codeList')).property('label', "Lone parent household: Two or more adults can speak Welsh").property('order', 9).next()

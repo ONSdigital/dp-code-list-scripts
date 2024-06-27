@@ -1,5 +1,3 @@
-
-
 g.V().hasId('_code_list_quarterly-index-and-growth-rate_one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(id, '_code_list_quarterly-index-and-growth-rate_one-off').
@@ -8,6 +6,13 @@ g.V().hasId('_code_list_quarterly-index-and-growth-rate_one-off').
     property(single, 'edition', "one-off")
   ).next()
 
+g.V().hasId('_code_quarterly-index-and-growth-rate_aix').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_quarterly-index-and-growth-rate_aix').property(single, 'listID', 'quarterly-index-and-growth-rate').property(single, 'value', "aix")
+  ).next()
+  g.V().hasId('_code_list_quarterly-index-and-growth-rate_one-off').as('codeList').V().hasId('_code_quarterly-index-and-growth-rate_aix').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Annual index").property('order', 1).next()
 
 g.V().hasId('_code_quarterly-index-and-growth-rate_gra').
   fold().coalesce(unfold(), addV('_code').
@@ -15,17 +20,7 @@ g.V().hasId('_code_quarterly-index-and-growth-rate_gra').
   ).next()
   g.V().hasId('_code_list_quarterly-index-and-growth-rate_one-off').as('codeList').V().hasId('_code_quarterly-index-and-growth-rate_gra').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Annual growth rate").next()
-
-
-g.V().hasId('_code_quarterly-index-and-growth-rate_qix').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_quarterly-index-and-growth-rate_qix').property(single, 'listID', 'quarterly-index-and-growth-rate').property(single, 'value', "qix")
-  ).next()
-  g.V().hasId('_code_list_quarterly-index-and-growth-rate_one-off').as('codeList').V().hasId('_code_quarterly-index-and-growth-rate_qix').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Quarterly index").next()
-
+      addE('usedBy').to('codeList')).property('label', "Annual growth rate").property('order', 2).next()
 
 g.V().hasId('_code_quarterly-index-and-growth-rate_grq').
   fold().coalesce(unfold(), addV('_code').
@@ -33,8 +28,7 @@ g.V().hasId('_code_quarterly-index-and-growth-rate_grq').
   ).next()
   g.V().hasId('_code_list_quarterly-index-and-growth-rate_one-off').as('codeList').V().hasId('_code_quarterly-index-and-growth-rate_grq').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Quarterly growth rate on previous quarter").next()
-
+      addE('usedBy').to('codeList')).property('label', "Quarterly growth rate on previous quarter").property('order', 3).next()
 
 g.V().hasId('_code_quarterly-index-and-growth-rate_grqa').
   fold().coalesce(unfold(), addV('_code').
@@ -42,14 +36,12 @@ g.V().hasId('_code_quarterly-index-and-growth-rate_grqa').
   ).next()
   g.V().hasId('_code_list_quarterly-index-and-growth-rate_one-off').as('codeList').V().hasId('_code_quarterly-index-and-growth-rate_grqa').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Quarterly growth rate on same quarter of previous year").next()
+      addE('usedBy').to('codeList')).property('label', "Quarterly growth rate on same quarter of previous year").property('order', 4).next()
 
-
-g.V().hasId('_code_quarterly-index-and-growth-rate_aix').
+g.V().hasId('_code_quarterly-index-and-growth-rate_qix').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_quarterly-index-and-growth-rate_aix').property(single, 'listID', 'quarterly-index-and-growth-rate').property(single, 'value', "aix")
+    property(id, '_code_quarterly-index-and-growth-rate_qix').property(single, 'listID', 'quarterly-index-and-growth-rate').property(single, 'value', "qix")
   ).next()
-  g.V().hasId('_code_list_quarterly-index-and-growth-rate_one-off').as('codeList').V().hasId('_code_quarterly-index-and-growth-rate_aix').as('code').
+  g.V().hasId('_code_list_quarterly-index-and-growth-rate_one-off').as('codeList').V().hasId('_code_quarterly-index-and-growth-rate_qix').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Annual index").next()
-
+      addE('usedBy').to('codeList')).property('label', "Quarterly index").property('order', 5).next()

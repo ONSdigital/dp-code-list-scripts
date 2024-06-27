@@ -1,0 +1,47 @@
+g.V().hasId('_code_list_spend-category_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_spend-category_one-off').
+    property(single, 'listID', "spend-category").
+    property(single, 'label', "Category").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_spend-category_aggregate').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_spend-category_aggregate').property(single, 'listID', 'spend-category').property(single, 'value', "aggregate")
+  ).next()
+  g.V().hasId('_code_list_spend-category_one-off').as('codeList').V().hasId('_code_spend-category_aggregate').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Aggregate").property('order', 1).next()
+
+g.V().hasId('_code_spend-category_delayable').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_spend-category_delayable').property(single, 'listID', 'spend-category').property(single, 'value', "delayable")
+  ).next()
+  g.V().hasId('_code_list_spend-category_one-off').as('codeList').V().hasId('_code_spend-category_delayable').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Delayable").property('order', 2).next()
+
+g.V().hasId('_code_spend-category_social').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_spend-category_social').property(single, 'listID', 'spend-category').property(single, 'value', "social")
+  ).next()
+  g.V().hasId('_code_list_spend-category_one-off').as('codeList').V().hasId('_code_spend-category_social').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Social").property('order', 3).next()
+
+g.V().hasId('_code_spend-category_staple').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_spend-category_staple').property(single, 'listID', 'spend-category').property(single, 'value', "staple")
+  ).next()
+  g.V().hasId('_code_list_spend-category_one-off').as('codeList').V().hasId('_code_spend-category_staple').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Staple").property('order', 4).next()
+
+g.V().hasId('_code_spend-category_work-related').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_spend-category_work-related').property(single, 'listID', 'spend-category').property(single, 'value', "work-related")
+  ).next()
+  g.V().hasId('_code_list_spend-category_one-off').as('codeList').V().hasId('_code_spend-category_work-related').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Work Related").property('order', 5).next()

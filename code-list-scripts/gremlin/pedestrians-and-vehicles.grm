@@ -1,31 +1,10 @@
-
-
 g.V().hasId('_code_list_pedestrians-and-vehicles_one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(id, '_code_list_pedestrians-and-vehicles_one-off').
     property(single, 'listID', "pedestrians-and-vehicles").
-    property(single, 'edition', "one-off").
-    property(single, 'label', "Pedestrians and Vehicles")
+    property(single, 'label', "Pedestrians And Vehicles").
+    property(single, 'edition', "one-off")
   ).next()
-
-
-g.V().hasId('_code_pedestrians-and-vehicles_cars').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_pedestrians-and-vehicles_cars').property(single, 'listID', 'pedestrians-and-vehicles').property(single, 'value', "cars")
-  ).next()
-  g.V().hasId('_code_list_pedestrians-and-vehicles_one-off').as('codeList').V().hasId('_code_pedestrians-and-vehicles_cars').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Cars").next()
-
-
-g.V().hasId('_code_pedestrians-and-vehicles_motorbikes').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_pedestrians-and-vehicles_motorbikes').property(single, 'listID', 'pedestrians-and-vehicles').property(single, 'value', "motorbikes")
-  ).next()
-  g.V().hasId('_code_list_pedestrians-and-vehicles_one-off').as('codeList').V().hasId('_code_pedestrians-and-vehicles_motorbikes').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Motorbikes").next()
-
 
 g.V().hasId('_code_pedestrians-and-vehicles_buses').
   fold().coalesce(unfold(), addV('_code').
@@ -33,26 +12,23 @@ g.V().hasId('_code_pedestrians-and-vehicles_buses').
   ).next()
   g.V().hasId('_code_list_pedestrians-and-vehicles_one-off').as('codeList').V().hasId('_code_pedestrians-and-vehicles_buses').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Buses").next()
+      addE('usedBy').to('codeList')).property('label', "Buses").property('order', 1).next()
 
-
-g.V().hasId('_code_pedestrians-and-vehicles_trucks').
+g.V().hasId('_code_pedestrians-and-vehicles_cars').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_pedestrians-and-vehicles_trucks').property(single, 'listID', 'pedestrians-and-vehicles').property(single, 'value', "trucks")
+    property(id, '_code_pedestrians-and-vehicles_cars').property(single, 'listID', 'pedestrians-and-vehicles').property(single, 'value', "cars")
   ).next()
-  g.V().hasId('_code_list_pedestrians-and-vehicles_one-off').as('codeList').V().hasId('_code_pedestrians-and-vehicles_trucks').as('code').
+  g.V().hasId('_code_list_pedestrians-and-vehicles_one-off').as('codeList').V().hasId('_code_pedestrians-and-vehicles_cars').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Trucks").next()
+      addE('usedBy').to('codeList')).property('label', "Cars").property('order', 2).next()
 
-
-g.V().hasId('_code_pedestrians-and-vehicles_vans').
+g.V().hasId('_code_pedestrians-and-vehicles_motorbikes').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_pedestrians-and-vehicles_vans').property(single, 'listID', 'pedestrians-and-vehicles').property(single, 'value', "vans")
+    property(id, '_code_pedestrians-and-vehicles_motorbikes').property(single, 'listID', 'pedestrians-and-vehicles').property(single, 'value', "motorbikes")
   ).next()
-  g.V().hasId('_code_list_pedestrians-and-vehicles_one-off').as('codeList').V().hasId('_code_pedestrians-and-vehicles_vans').as('code').
+  g.V().hasId('_code_list_pedestrians-and-vehicles_one-off').as('codeList').V().hasId('_code_pedestrians-and-vehicles_motorbikes').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Vans").next()
-
+      addE('usedBy').to('codeList')).property('label', "Motorbikes").property('order', 3).next()
 
 g.V().hasId('_code_pedestrians-and-vehicles_pedestrians-and-cyclists').
   fold().coalesce(unfold(), addV('_code').
@@ -60,5 +36,20 @@ g.V().hasId('_code_pedestrians-and-vehicles_pedestrians-and-cyclists').
   ).next()
   g.V().hasId('_code_list_pedestrians-and-vehicles_one-off').as('codeList').V().hasId('_code_pedestrians-and-vehicles_pedestrians-and-cyclists').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Pedestrians & cyclists").next()
+      addE('usedBy').to('codeList')).property('label', "Pedestrians & cyclists").property('order', 4).next()
 
+g.V().hasId('_code_pedestrians-and-vehicles_trucks').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_pedestrians-and-vehicles_trucks').property(single, 'listID', 'pedestrians-and-vehicles').property(single, 'value', "trucks")
+  ).next()
+  g.V().hasId('_code_list_pedestrians-and-vehicles_one-off').as('codeList').V().hasId('_code_pedestrians-and-vehicles_trucks').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Trucks").property('order', 5).next()
+
+g.V().hasId('_code_pedestrians-and-vehicles_vans').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_pedestrians-and-vehicles_vans').property(single, 'listID', 'pedestrians-and-vehicles').property(single, 'value', "vans")
+  ).next()
+  g.V().hasId('_code_list_pedestrians-and-vehicles_one-off').as('codeList').V().hasId('_code_pedestrians-and-vehicles_vans').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Vans").property('order', 6).next()

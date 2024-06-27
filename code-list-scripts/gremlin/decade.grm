@@ -1,5 +1,3 @@
-
-
 g.V().hasId('_code_list_decade_one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(id, '_code_list_decade_one-off').
@@ -8,114 +6,13 @@ g.V().hasId('_code_list_decade_one-off').
     property(single, 'edition', "one-off")
   ).next()
 
-
-g.V().hasId('_code_decade_1960s').
+g.V().hasId('_code_decade_2090s').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_decade_1960s').property(single, 'listID', 'decade').property(single, 'value', "1960s")
+    property(id, '_code_decade_2090s').property(single, 'listID', 'decade').property(single, 'value', "2090s")
   ).next()
-  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1960s').as('code').
+  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_2090s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1960s").next()
-
-
-g.V().hasId('_code_decade_1970s').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_decade_1970s').property(single, 'listID', 'decade').property(single, 'value', "1970s")
-  ).next()
-  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1970s').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1970s").next()
-
-
-g.V().hasId('_code_decade_1980s').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_decade_1980s').property(single, 'listID', 'decade').property(single, 'value', "1980s")
-  ).next()
-  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1980s').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1980s").next()
-
-
-g.V().hasId('_code_decade_1990s').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_decade_1990s').property(single, 'listID', 'decade').property(single, 'value', "1990s")
-  ).next()
-  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1990s').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1990s").next()
-
-
-g.V().hasId('_code_decade_1950s').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_decade_1950s').property(single, 'listID', 'decade').property(single, 'value', "1950s")
-  ).next()
-  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1950s').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1950s").next()
-
-
-g.V().hasId('_code_decade_1940s').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_decade_1940s').property(single, 'listID', 'decade').property(single, 'value', "1940s")
-  ).next()
-  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1940s').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1940s").next()
-
-
-g.V().hasId('_code_decade_1930s').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_decade_1930s').property(single, 'listID', 'decade').property(single, 'value', "1930s")
-  ).next()
-  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1930s').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1930s").next()
-
-
-g.V().hasId('_code_decade_1920s').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_decade_1920s').property(single, 'listID', 'decade').property(single, 'value', "1920s")
-  ).next()
-  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1920s').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1920s").next()
-
-
-g.V().hasId('_code_decade_1910s').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_decade_1910s').property(single, 'listID', 'decade').property(single, 'value', "1910s")
-  ).next()
-  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1910s').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1910s").next()
-
-
-g.V().hasId('_code_decade_1900s').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_decade_1900s').property(single, 'listID', 'decade').property(single, 'value', "1900s")
-  ).next()
-  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1900s').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1900s").next()
-
-
-g.V().hasId('_code_decade_2060s').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_decade_2060s').property(single, 'listID', 'decade').property(single, 'value', "2060s")
-  ).next()
-  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_2060s').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2060s").next()
-
-
-g.V().hasId('_code_decade_2070s').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_decade_2070s').property(single, 'listID', 'decade').property(single, 'value', "2070s")
-  ).next()
-  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_2070s').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2070s").next()
-
+      addE('usedBy').to('codeList')).property('label', "2090s").property('order', 1).next()
 
 g.V().hasId('_code_decade_2080s').
   fold().coalesce(unfold(), addV('_code').
@@ -123,17 +20,23 @@ g.V().hasId('_code_decade_2080s').
   ).next()
   g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_2080s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2080s").next()
+      addE('usedBy').to('codeList')).property('label', "2080s").property('order', 2).next()
 
-
-g.V().hasId('_code_decade_2090s').
+g.V().hasId('_code_decade_2070s').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_decade_2090s').property(single, 'listID', 'decade').property(single, 'value', "2090s")
+    property(id, '_code_decade_2070s').property(single, 'listID', 'decade').property(single, 'value', "2070s")
   ).next()
-  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_2090s').as('code').
+  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_2070s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2090s").next()
+      addE('usedBy').to('codeList')).property('label', "2070s").property('order', 3).next()
 
+g.V().hasId('_code_decade_2060s').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_decade_2060s').property(single, 'listID', 'decade').property(single, 'value', "2060s")
+  ).next()
+  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_2060s').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2060s").property('order', 4).next()
 
 g.V().hasId('_code_decade_2050s').
   fold().coalesce(unfold(), addV('_code').
@@ -141,8 +44,7 @@ g.V().hasId('_code_decade_2050s').
   ).next()
   g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_2050s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2050s").next()
-
+      addE('usedBy').to('codeList')).property('label', "2050s").property('order', 5).next()
 
 g.V().hasId('_code_decade_2040s').
   fold().coalesce(unfold(), addV('_code').
@@ -150,8 +52,7 @@ g.V().hasId('_code_decade_2040s').
   ).next()
   g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_2040s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2040s").next()
-
+      addE('usedBy').to('codeList')).property('label', "2040s").property('order', 6).next()
 
 g.V().hasId('_code_decade_2030s').
   fold().coalesce(unfold(), addV('_code').
@@ -159,8 +60,7 @@ g.V().hasId('_code_decade_2030s').
   ).next()
   g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_2030s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2030s").next()
-
+      addE('usedBy').to('codeList')).property('label', "2030s").property('order', 7).next()
 
 g.V().hasId('_code_decade_2020s').
   fold().coalesce(unfold(), addV('_code').
@@ -168,8 +68,7 @@ g.V().hasId('_code_decade_2020s').
   ).next()
   g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_2020s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2020s").next()
-
+      addE('usedBy').to('codeList')).property('label', "2020s").property('order', 8).next()
 
 g.V().hasId('_code_decade_2010s').
   fold().coalesce(unfold(), addV('_code').
@@ -177,8 +76,7 @@ g.V().hasId('_code_decade_2010s').
   ).next()
   g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_2010s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2010s").next()
-
+      addE('usedBy').to('codeList')).property('label', "2010s").property('order', 9).next()
 
 g.V().hasId('_code_decade_2000s').
   fold().coalesce(unfold(), addV('_code').
@@ -186,35 +84,87 @@ g.V().hasId('_code_decade_2000s').
   ).next()
   g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_2000s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2000s").next()
+      addE('usedBy').to('codeList')).property('label', "2000s").property('order', 10).next()
 
-
-g.V().hasId('_code_decade_1860s').
+g.V().hasId('_code_decade_1990s').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_decade_1860s').property(single, 'listID', 'decade').property(single, 'value', "1860s")
+    property(id, '_code_decade_1990s').property(single, 'listID', 'decade').property(single, 'value', "1990s")
   ).next()
-  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1860s').as('code').
+  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1990s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1860s").next()
+      addE('usedBy').to('codeList')).property('label', "1990s").property('order', 11).next()
 
-
-g.V().hasId('_code_decade_1870s').
+g.V().hasId('_code_decade_1980s').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_decade_1870s').property(single, 'listID', 'decade').property(single, 'value', "1870s")
+    property(id, '_code_decade_1980s').property(single, 'listID', 'decade').property(single, 'value', "1980s")
   ).next()
-  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1870s').as('code').
+  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1980s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1870s").next()
+      addE('usedBy').to('codeList')).property('label', "1980s").property('order', 12).next()
 
-
-g.V().hasId('_code_decade_1880s').
+g.V().hasId('_code_decade_1970s').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_decade_1880s').property(single, 'listID', 'decade').property(single, 'value', "1880s")
+    property(id, '_code_decade_1970s').property(single, 'listID', 'decade').property(single, 'value', "1970s")
   ).next()
-  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1880s').as('code').
+  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1970s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1880s").next()
+      addE('usedBy').to('codeList')).property('label', "1970s").property('order', 13).next()
 
+g.V().hasId('_code_decade_1960s').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_decade_1960s').property(single, 'listID', 'decade').property(single, 'value', "1960s")
+  ).next()
+  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1960s').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "1960s").property('order', 14).next()
+
+g.V().hasId('_code_decade_1950s').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_decade_1950s').property(single, 'listID', 'decade').property(single, 'value', "1950s")
+  ).next()
+  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1950s').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "1950s").property('order', 15).next()
+
+g.V().hasId('_code_decade_1940s').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_decade_1940s').property(single, 'listID', 'decade').property(single, 'value', "1940s")
+  ).next()
+  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1940s').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "1940s").property('order', 16).next()
+
+g.V().hasId('_code_decade_1930s').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_decade_1930s').property(single, 'listID', 'decade').property(single, 'value', "1930s")
+  ).next()
+  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1930s').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "1930s").property('order', 17).next()
+
+g.V().hasId('_code_decade_1920s').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_decade_1920s').property(single, 'listID', 'decade').property(single, 'value', "1920s")
+  ).next()
+  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1920s').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "1920s").property('order', 18).next()
+
+g.V().hasId('_code_decade_1910s').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_decade_1910s').property(single, 'listID', 'decade').property(single, 'value', "1910s")
+  ).next()
+  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1910s').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "1910s").property('order', 19).next()
+
+g.V().hasId('_code_decade_1900s').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_decade_1900s').property(single, 'listID', 'decade').property(single, 'value', "1900s")
+  ).next()
+  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1900s').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "1900s").property('order', 20).next()
 
 g.V().hasId('_code_decade_1890s').
   fold().coalesce(unfold(), addV('_code').
@@ -222,8 +172,31 @@ g.V().hasId('_code_decade_1890s').
   ).next()
   g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1890s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1890s").next()
+      addE('usedBy').to('codeList')).property('label', "1890s").property('order', 21).next()
 
+g.V().hasId('_code_decade_1880s').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_decade_1880s').property(single, 'listID', 'decade').property(single, 'value', "1880s")
+  ).next()
+  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1880s').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "1880s").property('order', 22).next()
+
+g.V().hasId('_code_decade_1870s').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_decade_1870s').property(single, 'listID', 'decade').property(single, 'value', "1870s")
+  ).next()
+  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1870s').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "1870s").property('order', 23).next()
+
+g.V().hasId('_code_decade_1860s').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_decade_1860s').property(single, 'listID', 'decade').property(single, 'value', "1860s")
+  ).next()
+  g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1860s').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "1860s").property('order', 24).next()
 
 g.V().hasId('_code_decade_1850s').
   fold().coalesce(unfold(), addV('_code').
@@ -231,8 +204,7 @@ g.V().hasId('_code_decade_1850s').
   ).next()
   g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1850s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1850s").next()
-
+      addE('usedBy').to('codeList')).property('label', "1850s").property('order', 25).next()
 
 g.V().hasId('_code_decade_1840s').
   fold().coalesce(unfold(), addV('_code').
@@ -240,8 +212,7 @@ g.V().hasId('_code_decade_1840s').
   ).next()
   g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1840s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1840s").next()
-
+      addE('usedBy').to('codeList')).property('label', "1840s").property('order', 26).next()
 
 g.V().hasId('_code_decade_1830s').
   fold().coalesce(unfold(), addV('_code').
@@ -249,8 +220,7 @@ g.V().hasId('_code_decade_1830s').
   ).next()
   g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1830s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1830s").next()
-
+      addE('usedBy').to('codeList')).property('label', "1830s").property('order', 27).next()
 
 g.V().hasId('_code_decade_1820s').
   fold().coalesce(unfold(), addV('_code').
@@ -258,8 +228,7 @@ g.V().hasId('_code_decade_1820s').
   ).next()
   g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1820s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1820s").next()
-
+      addE('usedBy').to('codeList')).property('label', "1820s").property('order', 28).next()
 
 g.V().hasId('_code_decade_1810s').
   fold().coalesce(unfold(), addV('_code').
@@ -267,8 +236,7 @@ g.V().hasId('_code_decade_1810s').
   ).next()
   g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1810s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1810s").next()
-
+      addE('usedBy').to('codeList')).property('label', "1810s").property('order', 29).next()
 
 g.V().hasId('_code_decade_1800s').
   fold().coalesce(unfold(), addV('_code').
@@ -276,7 +244,4 @@ g.V().hasId('_code_decade_1800s').
   ).next()
   g.V().hasId('_code_list_decade_one-off').as('codeList').V().hasId('_code_decade_1800s').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1800s").next()
-
-
-
+      addE('usedBy').to('codeList')).property('label', "1800s").property('order', 30).next()

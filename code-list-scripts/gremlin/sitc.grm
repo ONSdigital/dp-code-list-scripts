@@ -1,5 +1,3 @@
-
-
 g.V().hasId('_code_list_sitc_one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(id, '_code_list_sitc_one-off').
@@ -8,6 +6,13 @@ g.V().hasId('_code_list_sitc_one-off').
     property(single, 'edition', "one-off")
   ).next()
 
+g.V().hasId('_code_sitc_T').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_T').property(single, 'listID', 'sitc').property(single, 'value', "T")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_T').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "T: Total").property('order', 1).next()
 
 g.V().hasId('_code_sitc_0').
   fold().coalesce(unfold(), addV('_code').
@@ -15,98 +20,7 @@ g.V().hasId('_code_sitc_0').
   ).next()
   g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_0').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "0 - Food & live animals").next()
-
-
-g.V().hasId('_code_sitc_00').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_00').property(single, 'listID', 'sitc').property(single, 'value', "00")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_00').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "00 - Live animals").next()
-
-
-g.V().hasId('_code_sitc_01').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_01').property(single, 'listID', 'sitc').property(single, 'value', "01")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_01').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "01 - Meat & meat preparations").next()
-
-
-g.V().hasId('_code_sitc_02').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_02').property(single, 'listID', 'sitc').property(single, 'value', "02")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_02').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "02 - Dairy products & eggs").next()
-
-
-g.V().hasId('_code_sitc_03').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_03').property(single, 'listID', 'sitc').property(single, 'value', "03")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_03').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "03 - Fish & shellfish").next()
-
-
-g.V().hasId('_code_sitc_04').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_04').property(single, 'listID', 'sitc').property(single, 'value', "04")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_04').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "04 - Cereals").next()
-
-
-g.V().hasId('_code_sitc_05').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_05').property(single, 'listID', 'sitc').property(single, 'value', "05")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_05').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "05 - Vegetables & fruit").next()
-
-
-g.V().hasId('_code_sitc_06').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_06').property(single, 'listID', 'sitc').property(single, 'value', "06")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_06').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "06 - Sugar").next()
-
-
-g.V().hasId('_code_sitc_07').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_07').property(single, 'listID', 'sitc').property(single, 'value', "07")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_07').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "07 - Coffee, tea, cocoa etc").next()
-
-
-g.V().hasId('_code_sitc_08').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_08').property(single, 'listID', 'sitc').property(single, 'value', "08")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_08').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "08 - Animal feeding stuffs").next()
-
-
-g.V().hasId('_code_sitc_09').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_09').property(single, 'listID', 'sitc').property(single, 'value', "09")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_09').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "09 - Miscellaneous foods").next()
-
+      addE('usedBy').to('codeList')).property('label', "0: Food & live animals").property('order', 2).next()
 
 g.V().hasId('_code_sitc_1').
   fold().coalesce(unfold(), addV('_code').
@@ -114,26 +28,7 @@ g.V().hasId('_code_sitc_1').
   ).next()
   g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_1').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1 - Beverages & tobacco").next()
-
-
-g.V().hasId('_code_sitc_11').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_11').property(single, 'listID', 'sitc').property(single, 'value', "11")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_11').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "11 - Beverages").next()
-
-
-g.V().hasId('_code_sitc_12').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_12').property(single, 'listID', 'sitc').property(single, 'value', "12")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_12').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "12 - Tobacco").next()
-
+      addE('usedBy').to('codeList')).property('label', "1: Beverages & tobacco").property('order', 3).next()
 
 g.V().hasId('_code_sitc_2').
   fold().coalesce(unfold(), addV('_code').
@@ -141,89 +36,7 @@ g.V().hasId('_code_sitc_2').
   ).next()
   g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_2').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2 - Crude materials").next()
-
-
-g.V().hasId('_code_sitc_21').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_21').property(single, 'listID', 'sitc').property(single, 'value', "21")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_21').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "21 - Hides, skins & furskins").next()
-
-
-g.V().hasId('_code_sitc_22').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_22').property(single, 'listID', 'sitc').property(single, 'value', "22")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_22').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "22 - Oil-seeds & oleaginous fruits").next()
-
-
-g.V().hasId('_code_sitc_23').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_23').property(single, 'listID', 'sitc').property(single, 'value', "23")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_23').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "23 - Crude rubber").next()
-
-
-g.V().hasId('_code_sitc_24').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_24').property(single, 'listID', 'sitc').property(single, 'value', "24")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_24').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "24 - Wood & cork").next()
-
-
-g.V().hasId('_code_sitc_25').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_25').property(single, 'listID', 'sitc').property(single, 'value', "25")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_25').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "25 - Pulp & waste paper").next()
-
-
-g.V().hasId('_code_sitc_26').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_26').property(single, 'listID', 'sitc').property(single, 'value', "26")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_26').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "26 - Textile fibres").next()
-
-
-g.V().hasId('_code_sitc_27').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_27').property(single, 'listID', 'sitc').property(single, 'value', "27")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_27').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "27 - Crude minerals & fertilisers").next()
-
-
-g.V().hasId('_code_sitc_28').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_28').property(single, 'listID', 'sitc').property(single, 'value', "28")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_28').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "28 - Metal ores & scrap").next()
-
-
-g.V().hasId('_code_sitc_29').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_29').property(single, 'listID', 'sitc').property(single, 'value', "29")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_29').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "29 - Other crude animal & vegetable materials").next()
-
+      addE('usedBy').to('codeList')).property('label', "2: Crude materials").property('order', 4).next()
 
 g.V().hasId('_code_sitc_3').
   fold().coalesce(unfold(), addV('_code').
@@ -231,71 +44,7 @@ g.V().hasId('_code_sitc_3').
   ).next()
   g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_3').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "3 - Fuels").next()
-
-
-g.V().hasId('_code_sitc_32').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_32').property(single, 'listID', 'sitc').property(single, 'value', "32")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_32').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "32 - Coal, coke & briquettes").next()
-
-
-g.V().hasId('_code_sitc_33').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_33').property(single, 'listID', 'sitc').property(single, 'value', "33")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_33').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "33 - Oil").next()
-
-
-g.V().hasId('_code_sitc_33O').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_33O').property(single, 'listID', 'sitc').property(single, 'value', "33O")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_33O').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "33O - Crude oil").next()
-
-
-g.V().hasId('_code_sitc_33R').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_33R').property(single, 'listID', 'sitc').property(single, 'value', "33R")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_33R').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "33R - Refined oil").next()
-
-
-g.V().hasId('_code_sitc_34').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_34').property(single, 'listID', 'sitc').property(single, 'value', "34")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_34').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "34 - Gas").next()
-
-
-g.V().hasId('_code_sitc_35').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_35').property(single, 'listID', 'sitc').property(single, 'value', "35")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_35').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "35 - Electricity").next()
-
-
-g.V().hasId('_code_sitc_3OF').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_3OF').property(single, 'listID', 'sitc').property(single, 'value', "3OF")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_3OF').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "3OF - Fuels other than oil").next()
-
+      addE('usedBy').to('codeList')).property('label', "3: Fuels").property('order', 5).next()
 
 g.V().hasId('_code_sitc_4').
   fold().coalesce(unfold(), addV('_code').
@@ -303,35 +52,7 @@ g.V().hasId('_code_sitc_4').
   ).next()
   g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_4').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "4 - Animal & vegetable oils & fats").next()
-
-
-g.V().hasId('_code_sitc_41').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_41').property(single, 'listID', 'sitc').property(single, 'value', "41")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_41').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "41 - Animal oils & fats").next()
-
-
-g.V().hasId('_code_sitc_42').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_42').property(single, 'listID', 'sitc').property(single, 'value', "42")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_42').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "42 - Vegetable oils & fats").next()
-
-
-g.V().hasId('_code_sitc_43').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_43').property(single, 'listID', 'sitc').property(single, 'value', "43")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_43').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "43 - Processed oils & fats").next()
-
+      addE('usedBy').to('codeList')).property('label', "4: Animal & vegetable oils & fats").property('order', 6).next()
 
 g.V().hasId('_code_sitc_5').
   fold().coalesce(unfold(), addV('_code').
@@ -339,89 +60,7 @@ g.V().hasId('_code_sitc_5').
   ).next()
   g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_5').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "5 - Chemicals").next()
-
-
-g.V().hasId('_code_sitc_51').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_51').property(single, 'listID', 'sitc').property(single, 'value', "51")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_51').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "51 - Organic chemicals").next()
-
-
-g.V().hasId('_code_sitc_52').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_52').property(single, 'listID', 'sitc').property(single, 'value', "52")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_52').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "52 - Inorganic chemicals").next()
-
-
-g.V().hasId('_code_sitc_53').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_53').property(single, 'listID', 'sitc').property(single, 'value', "53")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_53').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "53 - Dyeing, tanning & colouring materials").next()
-
-
-g.V().hasId('_code_sitc_54').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_54').property(single, 'listID', 'sitc').property(single, 'value', "54")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_54').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "54 - Medicinal & pharmaceutical products").next()
-
-
-g.V().hasId('_code_sitc_55').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_55').property(single, 'listID', 'sitc').property(single, 'value', "55")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_55').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "55 - Toilet & cleansing preparations").next()
-
-
-g.V().hasId('_code_sitc_56').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_56').property(single, 'listID', 'sitc').property(single, 'value', "56")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_56').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "56 - Processed fertilisers").next()
-
-
-g.V().hasId('_code_sitc_57').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_57').property(single, 'listID', 'sitc').property(single, 'value', "57")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_57').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "57 - Plastics in primary forms").next()
-
-
-g.V().hasId('_code_sitc_58').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_58').property(single, 'listID', 'sitc').property(single, 'value', "58")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_58').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "58 - Plastics in non-primary forms").next()
-
-
-g.V().hasId('_code_sitc_59').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_59').property(single, 'listID', 'sitc').property(single, 'value', "59")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_59').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "59 - Other chemicals").next()
-
+      addE('usedBy').to('codeList')).property('label', "5: Chemicals").property('order', 7).next()
 
 g.V().hasId('_code_sitc_6').
   fold().coalesce(unfold(), addV('_code').
@@ -429,89 +68,7 @@ g.V().hasId('_code_sitc_6').
   ).next()
   g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_6').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "6 - Material manufactures").next()
-
-
-g.V().hasId('_code_sitc_61').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_61').property(single, 'listID', 'sitc').property(single, 'value', "61")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_61').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "61 - Leather manufactures").next()
-
-
-g.V().hasId('_code_sitc_62').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_62').property(single, 'listID', 'sitc').property(single, 'value', "62")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_62').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "62 - Rubber manufactures").next()
-
-
-g.V().hasId('_code_sitc_63').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_63').property(single, 'listID', 'sitc').property(single, 'value', "63")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_63').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "63 - Wood & cork manufactures").next()
-
-
-g.V().hasId('_code_sitc_64').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_64').property(single, 'listID', 'sitc').property(single, 'value', "64")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_64').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "64 - Paper & paperboard").next()
-
-
-g.V().hasId('_code_sitc_65').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_65').property(single, 'listID', 'sitc').property(single, 'value', "65")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_65').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "65 - Textile fabrics").next()
-
-
-g.V().hasId('_code_sitc_66').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_66').property(single, 'listID', 'sitc').property(single, 'value', "66")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_66').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "66 - Mineral manufactures").next()
-
-
-g.V().hasId('_code_sitc_67').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_67').property(single, 'listID', 'sitc').property(single, 'value', "67")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_67').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "67 - Iron & steel").next()
-
-
-g.V().hasId('_code_sitc_68').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_68').property(single, 'listID', 'sitc').property(single, 'value', "68")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_68').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "68 - Non-ferrous metals").next()
-
-
-g.V().hasId('_code_sitc_69').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_69').property(single, 'listID', 'sitc').property(single, 'value', "69")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_69').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "69 - Miscellaneous metal manufactures").next()
-
+      addE('usedBy').to('codeList')).property('label', "6: Material manufactures").property('order', 8).next()
 
 g.V().hasId('_code_sitc_7').
   fold().coalesce(unfold(), addV('_code').
@@ -519,377 +76,7 @@ g.V().hasId('_code_sitc_7').
   ).next()
   g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_7').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "7 - Machinery & transport equipment").next()
-
-
-g.V().hasId('_code_sitc_71EI').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_71EI').property(single, 'listID', 'sitc').property(single, 'value', "71EI")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_71EI').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "71EI - Electric motors (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_71EK').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_71EK').property(single, 'listID', 'sitc').property(single, 'value', "71EK")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_71EK').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "71EK - Electric motors (capital)").next()
-
-
-g.V().hasId('_code_sitc_71MC').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_71MC').property(single, 'listID', 'sitc').property(single, 'value', "71MC")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_71MC').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "71MC - Mechanical power generators (consumer)").next()
-
-
-g.V().hasId('_code_sitc_71MI').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_71MI').property(single, 'listID', 'sitc').property(single, 'value', "71MI")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_71MI').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "71MI - Mechanical power generators (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_71MK').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_71MK').property(single, 'listID', 'sitc').property(single, 'value', "71MK")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_71MK').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "71MK - Mechanical power generators (capital)").next()
-
-
-g.V().hasId('_code_sitc_72C').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_72C').property(single, 'listID', 'sitc').property(single, 'value', "72C")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_72C').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "72C - Specialised machinery (consumer)").next()
-
-
-g.V().hasId('_code_sitc_72I').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_72I').property(single, 'listID', 'sitc').property(single, 'value', "72I")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_72I').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "72I - Specialised machinery (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_72K').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_72K').property(single, 'listID', 'sitc').property(single, 'value', "72K")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_72K').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "72K - Specialised machinery (capital)").next()
-
-
-g.V().hasId('_code_sitc_73I').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_73I').property(single, 'listID', 'sitc').property(single, 'value', "73I")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_73I').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "73I - Metal working machinery (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_73K').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_73K').property(single, 'listID', 'sitc').property(single, 'value', "73K")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_73K').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "73K - Metal working machinery (capital)").next()
-
-
-g.V().hasId('_code_sitc_74C').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_74C').property(single, 'listID', 'sitc').property(single, 'value', "74C")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_74C').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "74C - General industrial machinery (consumer)").next()
-
-
-g.V().hasId('_code_sitc_74I').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_74I').property(single, 'listID', 'sitc').property(single, 'value', "74I")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_74I').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "74I - General industrial machinery (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_74K').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_74K').property(single, 'listID', 'sitc').property(single, 'value', "74K")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_74K').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "74K - General industrial machinery (capital)").next()
-
-
-g.V().hasId('_code_sitc_75C').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_75C').property(single, 'listID', 'sitc').property(single, 'value', "75C")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_75C').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "75C - Office machinery (consumer)").next()
-
-
-g.V().hasId('_code_sitc_75I').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_75I').property(single, 'listID', 'sitc').property(single, 'value', "75I")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_75I').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "75I - Office machinery (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_75K').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_75K').property(single, 'listID', 'sitc').property(single, 'value', "75K")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_75K').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "75K - Office machinery (capital)").next()
-
-
-g.V().hasId('_code_sitc_76C').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_76C').property(single, 'listID', 'sitc').property(single, 'value', "76C")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_76C').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "76C - Telecoms & sound equipment (consumer)").next()
-
-
-g.V().hasId('_code_sitc_76I').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_76I').property(single, 'listID', 'sitc').property(single, 'value', "76I")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_76I').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "76I - Telecoms & sound equipment (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_76K').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_76K').property(single, 'listID', 'sitc').property(single, 'value', "76K")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_76K').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "76K - Telecoms & sound equipment (capital)").next()
-
-
-g.V().hasId('_code_sitc_77C').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_77C').property(single, 'listID', 'sitc').property(single, 'value', "77C")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_77C').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "77C - Miscellaneous electrical goods (consumer)").next()
-
-
-g.V().hasId('_code_sitc_77I').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_77I').property(single, 'listID', 'sitc').property(single, 'value', "77I")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_77I').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "77I - Miscellaneous electrical goods (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_77K').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_77K').property(single, 'listID', 'sitc').property(single, 'value', "77K")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_77K').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "77K - Miscellaneous electrical goods (capital)").next()
-
-
-g.V().hasId('_code_sitc_78').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_78').property(single, 'listID', 'sitc').property(single, 'value', "78")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_78').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "78 - Road vehicles").next()
-
-
-g.V().hasId('_code_sitc_78C').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_78C').property(single, 'listID', 'sitc').property(single, 'value', "78C")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_78C').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "78C - Road vehicles other than cars (consumer)").next()
-
-
-g.V().hasId('_code_sitc_78I').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_78I').property(single, 'listID', 'sitc').property(single, 'value', "78I")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_78I').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "78I - Road vehicles other than cars (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_78K').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_78K').property(single, 'listID', 'sitc').property(single, 'value', "78K")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_78K').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "78K - Road vehicles other than cars (capital)").next()
-
-
-g.V().hasId('_code_sitc_78M').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_78M').property(single, 'listID', 'sitc').property(single, 'value', "78M")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_78M').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "78M - Cars").next()
-
-
-g.V().hasId('_code_sitc_79').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_79').property(single, 'listID', 'sitc').property(single, 'value', "79")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_79').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "79 - Other transport equipment").next()
-
-
-g.V().hasId('_code_sitc_791I').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_791I').property(single, 'listID', 'sitc').property(single, 'value', "791I")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_791I').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "791I - Road vehicles other than cars (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_791K').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_791K').property(single, 'listID', 'sitc').property(single, 'value', "791K")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_791K').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "791K - Railway equipment (capital)").next()
-
-
-g.V().hasId('_code_sitc_792').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_792').property(single, 'listID', 'sitc').property(single, 'value', "792")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_792').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "792 - Aircraft").next()
-
-
-g.V().hasId('_code_sitc_792-3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_792-3').property(single, 'listID', 'sitc').property(single, 'value', "792-3")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_792-3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "792-3 - Ships & aircraft").next()
-
-
-g.V().hasId('_code_sitc_793').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_793').property(single, 'listID', 'sitc').property(single, 'value', "793")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_793').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "793 - Ships").next()
-
-
-g.V().hasId('_code_sitc_7E').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_7E').property(single, 'listID', 'sitc').property(single, 'value', "7E")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_7E').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "7E - Electrical machinery").next()
-
-
-g.V().hasId('_code_sitc_7EC').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_7EC').property(single, 'listID', 'sitc').property(single, 'value', "7EC")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_7EC').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "7EC - Electrical machinery (consumer)").next()
-
-
-g.V().hasId('_code_sitc_7EI').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_7EI').property(single, 'listID', 'sitc').property(single, 'value', "7EI")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_7EI').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "7EI - Electrical machinery (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_7EK').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_7EK').property(single, 'listID', 'sitc').property(single, 'value', "7EK")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_7EK').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "7EK - Electrical machinery (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_7M').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_7M').property(single, 'listID', 'sitc').property(single, 'value', "7M")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_7M').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "7M - Mechanical machinery").next()
-
-
-g.V().hasId('_code_sitc_7MC').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_7MC').property(single, 'listID', 'sitc').property(single, 'value', "7MC")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_7MC').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "7MC - Mechanical machinery (consumer)").next()
-
-
-g.V().hasId('_code_sitc_7MI').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_7MI').property(single, 'listID', 'sitc').property(single, 'value', "7MI")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_7MI').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "7MI - Mechanical machinery (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_7MK').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_7MK').property(single, 'listID', 'sitc').property(single, 'value', "7MK")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_7MK').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "7MK - Mechanical machinery (capital)").next()
-
+      addE('usedBy').to('codeList')).property('label', "7: Machinery & transport equipment").property('order', 9).next()
 
 g.V().hasId('_code_sitc_8').
   fold().coalesce(unfold(), addV('_code').
@@ -897,224 +84,7 @@ g.V().hasId('_code_sitc_8').
   ).next()
   g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_8').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "8 - Miscellaneous manufactures").next()
-
-
-g.V().hasId('_code_sitc_81C').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_81C').property(single, 'listID', 'sitc').property(single, 'value', "81C")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_81C').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "81C - Plumbing, heating & lighting fixtures (consumer)").next()
-
-
-g.V().hasId('_code_sitc_81I').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_81I').property(single, 'listID', 'sitc').property(single, 'value', "81I")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_81I').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "81I - Plumbing, heating & lighting fixtures (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_81K').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_81K').property(single, 'listID', 'sitc').property(single, 'value', "81K")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_81K').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "81K - Plumbing, heating & lighting fixtures (capital)").next()
-
-
-g.V().hasId('_code_sitc_82C').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_82C').property(single, 'listID', 'sitc').property(single, 'value', "82C")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_82C').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "82C - Furniture (consumer)").next()
-
-
-g.V().hasId('_code_sitc_82I').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_82I').property(single, 'listID', 'sitc').property(single, 'value', "82I")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_82I').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "82I - Furniture (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_82K').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_82K').property(single, 'listID', 'sitc').property(single, 'value', "82K")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_82K').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "82K - Furniture (capital)").next()
-
-
-g.V().hasId('_code_sitc_83').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_83').property(single, 'listID', 'sitc').property(single, 'value', "83")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_83').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "83 - Travel goods, handbags etc").next()
-
-
-g.V().hasId('_code_sitc_84').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_84').property(single, 'listID', 'sitc').property(single, 'value', "84")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_84').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "84 - Clothing").next()
-
-
-g.V().hasId('_code_sitc_85').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_85').property(single, 'listID', 'sitc').property(single, 'value', "85")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_85').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "85 - Footwear").next()
-
-
-g.V().hasId('_code_sitc_87C').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_87C').property(single, 'listID', 'sitc').property(single, 'value', "87C")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_87C').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "87C - Scientific instruments (consumer)").next()
-
-
-g.V().hasId('_code_sitc_87I').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_87I').property(single, 'listID', 'sitc').property(single, 'value', "87I")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_87I').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "87I - Scientific instruments (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_87K').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_87K').property(single, 'listID', 'sitc').property(single, 'value', "87K")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_87K').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "87K - Scientific instruments (capital)").next()
-
-
-g.V().hasId('_code_sitc_88C').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_88C').property(single, 'listID', 'sitc').property(single, 'value', "88C")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_88C').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "88C - Photographic & optical goods & clocks (consumer)").next()
-
-
-g.V().hasId('_code_sitc_88I').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_88I').property(single, 'listID', 'sitc').property(single, 'value', "88I")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_88I').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "88I - Photographic & optical goods & clocks (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_88K').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_88K').property(single, 'listID', 'sitc').property(single, 'value', "88K")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_88K').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "88K - Photographic & optical goods & clocks (capital)").next()
-
-
-g.V().hasId('_code_sitc_896').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_896').property(single, 'listID', 'sitc').property(single, 'value', "896")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_896').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "896 - Works of art").next()
-
-
-g.V().hasId('_code_sitc_897C').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_897C').property(single, 'listID', 'sitc').property(single, 'value', "897C")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_897C').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "897C - Jewellery").next()
-
-
-g.V().hasId('_code_sitc_89I').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_89I').property(single, 'listID', 'sitc').property(single, 'value', "89I")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_89I').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "89I - Other manufactures (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_89K').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_89K').property(single, 'listID', 'sitc').property(single, 'value', "89K")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_89K').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "89K - Other manufactures (capital)").next()
-
-
-g.V().hasId('_code_sitc_89OC').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_89OC').property(single, 'listID', 'sitc').property(single, 'value', "89OC")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_89OC').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "89OC - Other manufactures (consumer)").next()
-
-
-g.V().hasId('_code_sitc_8O').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_8O').property(single, 'listID', 'sitc').property(single, 'value', "8O")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_8O').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "8O - Other manufactures").next()
-
-
-g.V().hasId('_code_sitc_8OC').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_8OC').property(single, 'listID', 'sitc').property(single, 'value', "8OC")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_8OC').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "8OC - Other miscellaneous manufactures (consumer)").next()
-
-
-g.V().hasId('_code_sitc_8OI').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_8OI').property(single, 'listID', 'sitc').property(single, 'value', "8OI")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_8OI').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "8OI - Other miscellaneous manufactures (intermediate)").next()
-
-
-g.V().hasId('_code_sitc_8OK').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_8OK').property(single, 'listID', 'sitc').property(single, 'value', "8OK")
-  ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_8OK').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "8OK - Other miscellaneous manufactures (capital)").next()
-
+      addE('usedBy').to('codeList')).property('label', "8: Miscellaneous manufactures").property('order', 10).next()
 
 g.V().hasId('_code_sitc_9').
   fold().coalesce(unfold(), addV('_code').
@@ -1122,14 +92,916 @@ g.V().hasId('_code_sitc_9').
   ).next()
   g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_9').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "9 - Unspecified goods").next()
+      addE('usedBy').to('codeList')).property('label', "9: Unspecified goods").property('order', 11).next()
 
-
-g.V().hasId('_code_sitc_T').
+g.V().hasId('_code_sitc_00').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_sitc_T').property(single, 'listID', 'sitc').property(single, 'value', "T")
+    property(id, '_code_sitc_00').property(single, 'listID', 'sitc').property(single, 'value', "00")
   ).next()
-  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_T').as('code').
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_00').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "T - Total").next()
+      addE('usedBy').to('codeList')).property('label', "00: Live animals").property('order', 12).next()
 
+g.V().hasId('_code_sitc_01').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_01').property(single, 'listID', 'sitc').property(single, 'value', "01")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_01').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "01: Meat & meat preparations").property('order', 13).next()
+
+g.V().hasId('_code_sitc_02').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_02').property(single, 'listID', 'sitc').property(single, 'value', "02")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_02').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "02: Dairy products & eggs").property('order', 14).next()
+
+g.V().hasId('_code_sitc_03').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_03').property(single, 'listID', 'sitc').property(single, 'value', "03")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_03').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "03: Fish & shellfish").property('order', 15).next()
+
+g.V().hasId('_code_sitc_04').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_04').property(single, 'listID', 'sitc').property(single, 'value', "04")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_04').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "04: Cereals").property('order', 16).next()
+
+g.V().hasId('_code_sitc_05').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_05').property(single, 'listID', 'sitc').property(single, 'value', "05")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_05').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "05: Vegetables & fruit").property('order', 17).next()
+
+g.V().hasId('_code_sitc_06').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_06').property(single, 'listID', 'sitc').property(single, 'value', "06")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_06').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "06: Sugar").property('order', 18).next()
+
+g.V().hasId('_code_sitc_07').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_07').property(single, 'listID', 'sitc').property(single, 'value', "07")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_07').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "07: Coffee, tea, cocoa etc").property('order', 19).next()
+
+g.V().hasId('_code_sitc_08').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_08').property(single, 'listID', 'sitc').property(single, 'value', "08")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_08').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "08: Animal feeding stuffs").property('order', 20).next()
+
+g.V().hasId('_code_sitc_09').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_09').property(single, 'listID', 'sitc').property(single, 'value', "09")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_09').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "09: Miscellaneous foods").property('order', 21).next()
+
+g.V().hasId('_code_sitc_11').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_11').property(single, 'listID', 'sitc').property(single, 'value', "11")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_11').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "11: Beverages").property('order', 22).next()
+
+g.V().hasId('_code_sitc_12').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_12').property(single, 'listID', 'sitc').property(single, 'value', "12")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_12').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "12: Tobacco").property('order', 23).next()
+
+g.V().hasId('_code_sitc_21').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_21').property(single, 'listID', 'sitc').property(single, 'value', "21")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_21').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "21: Hides, skins & furskins").property('order', 24).next()
+
+g.V().hasId('_code_sitc_22').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_22').property(single, 'listID', 'sitc').property(single, 'value', "22")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_22').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "22: Oil-seeds & oleaginous fruits").property('order', 25).next()
+
+g.V().hasId('_code_sitc_23').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_23').property(single, 'listID', 'sitc').property(single, 'value', "23")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_23').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "23: Crude rubber").property('order', 26).next()
+
+g.V().hasId('_code_sitc_24').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_24').property(single, 'listID', 'sitc').property(single, 'value', "24")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_24').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "24: Wood & cork").property('order', 27).next()
+
+g.V().hasId('_code_sitc_25').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_25').property(single, 'listID', 'sitc').property(single, 'value', "25")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_25').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "25: Pulp & waste paper").property('order', 28).next()
+
+g.V().hasId('_code_sitc_26').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_26').property(single, 'listID', 'sitc').property(single, 'value', "26")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_26').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "26: Textile fibres").property('order', 29).next()
+
+g.V().hasId('_code_sitc_27').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_27').property(single, 'listID', 'sitc').property(single, 'value', "27")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_27').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "27: Crude minerals & fertilisers").property('order', 30).next()
+
+g.V().hasId('_code_sitc_28').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_28').property(single, 'listID', 'sitc').property(single, 'value', "28")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_28').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "28: Metal ores & scrap").property('order', 31).next()
+
+g.V().hasId('_code_sitc_29').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_29').property(single, 'listID', 'sitc').property(single, 'value', "29")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_29').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "29: Other crude animal & vegetable materials").property('order', 32).next()
+
+g.V().hasId('_code_sitc_32').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_32').property(single, 'listID', 'sitc').property(single, 'value', "32")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_32').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "32: Coal, coke & briquettes").property('order', 33).next()
+
+g.V().hasId('_code_sitc_33').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_33').property(single, 'listID', 'sitc').property(single, 'value', "33")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_33').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "33: Oil").property('order', 34).next()
+
+g.V().hasId('_code_sitc_33O').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_33O').property(single, 'listID', 'sitc').property(single, 'value', "33O")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_33O').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "33O: Crude oil").property('order', 35).next()
+
+g.V().hasId('_code_sitc_33R').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_33R').property(single, 'listID', 'sitc').property(single, 'value', "33R")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_33R').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "33R: Refined oil").property('order', 36).next()
+
+g.V().hasId('_code_sitc_34').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_34').property(single, 'listID', 'sitc').property(single, 'value', "34")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_34').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "34: Gas").property('order', 37).next()
+
+g.V().hasId('_code_sitc_35').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_35').property(single, 'listID', 'sitc').property(single, 'value', "35")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_35').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "35: Electricity").property('order', 38).next()
+
+g.V().hasId('_code_sitc_3OF').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_3OF').property(single, 'listID', 'sitc').property(single, 'value', "3OF")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_3OF').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "3OF: Fuels other than oil").property('order', 39).next()
+
+g.V().hasId('_code_sitc_41').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_41').property(single, 'listID', 'sitc').property(single, 'value', "41")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_41').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "41: Animal oils & fats").property('order', 40).next()
+
+g.V().hasId('_code_sitc_42').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_42').property(single, 'listID', 'sitc').property(single, 'value', "42")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_42').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "42: Vegetable oils & fats").property('order', 41).next()
+
+g.V().hasId('_code_sitc_43').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_43').property(single, 'listID', 'sitc').property(single, 'value', "43")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_43').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "43: Processed oils & fats").property('order', 42).next()
+
+g.V().hasId('_code_sitc_51').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_51').property(single, 'listID', 'sitc').property(single, 'value', "51")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_51').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "51: Organic chemicals").property('order', 43).next()
+
+g.V().hasId('_code_sitc_52').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_52').property(single, 'listID', 'sitc').property(single, 'value', "52")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_52').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "52: Inorganic chemicals").property('order', 44).next()
+
+g.V().hasId('_code_sitc_53').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_53').property(single, 'listID', 'sitc').property(single, 'value', "53")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_53').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "53: Dyeing, tanning & colouring materials").property('order', 45).next()
+
+g.V().hasId('_code_sitc_54').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_54').property(single, 'listID', 'sitc').property(single, 'value', "54")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_54').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "54: Medicinal & pharmaceutical products").property('order', 46).next()
+
+g.V().hasId('_code_sitc_55').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_55').property(single, 'listID', 'sitc').property(single, 'value', "55")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_55').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "55: Toilet & cleansing preparations").property('order', 47).next()
+
+g.V().hasId('_code_sitc_56').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_56').property(single, 'listID', 'sitc').property(single, 'value', "56")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_56').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "56: Processed fertilisers").property('order', 48).next()
+
+g.V().hasId('_code_sitc_57').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_57').property(single, 'listID', 'sitc').property(single, 'value', "57")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_57').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "57: Plastics in primary forms").property('order', 49).next()
+
+g.V().hasId('_code_sitc_58').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_58').property(single, 'listID', 'sitc').property(single, 'value', "58")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_58').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "58: Plastics in non-primary forms").property('order', 50).next()
+
+g.V().hasId('_code_sitc_59').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_59').property(single, 'listID', 'sitc').property(single, 'value', "59")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_59').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "59: Other chemicals").property('order', 51).next()
+
+g.V().hasId('_code_sitc_61').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_61').property(single, 'listID', 'sitc').property(single, 'value', "61")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_61').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "61: Leather manufactures").property('order', 52).next()
+
+g.V().hasId('_code_sitc_62').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_62').property(single, 'listID', 'sitc').property(single, 'value', "62")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_62').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "62: Rubber manufactures").property('order', 53).next()
+
+g.V().hasId('_code_sitc_63').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_63').property(single, 'listID', 'sitc').property(single, 'value', "63")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_63').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "63: Wood & cork manufactures").property('order', 54).next()
+
+g.V().hasId('_code_sitc_64').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_64').property(single, 'listID', 'sitc').property(single, 'value', "64")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_64').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "64: Paper & paperboard").property('order', 55).next()
+
+g.V().hasId('_code_sitc_65').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_65').property(single, 'listID', 'sitc').property(single, 'value', "65")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_65').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "65: Textile fabrics").property('order', 56).next()
+
+g.V().hasId('_code_sitc_66').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_66').property(single, 'listID', 'sitc').property(single, 'value', "66")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_66').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "66: Mineral manufactures").property('order', 57).next()
+
+g.V().hasId('_code_sitc_67').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_67').property(single, 'listID', 'sitc').property(single, 'value', "67")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_67').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "67: Iron & steel").property('order', 58).next()
+
+g.V().hasId('_code_sitc_68').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_68').property(single, 'listID', 'sitc').property(single, 'value', "68")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_68').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "68: Non-ferrous metals").property('order', 59).next()
+
+g.V().hasId('_code_sitc_69').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_69').property(single, 'listID', 'sitc').property(single, 'value', "69")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_69').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "69: Miscellaneous metal manufactures").property('order', 60).next()
+
+g.V().hasId('_code_sitc_71EI').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_71EI').property(single, 'listID', 'sitc').property(single, 'value', "71EI")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_71EI').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "71EI: Electric motors (intermediate)").property('order', 61).next()
+
+g.V().hasId('_code_sitc_71EK').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_71EK').property(single, 'listID', 'sitc').property(single, 'value', "71EK")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_71EK').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "71EK: Electric motors (capital)").property('order', 62).next()
+
+g.V().hasId('_code_sitc_71MC').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_71MC').property(single, 'listID', 'sitc').property(single, 'value', "71MC")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_71MC').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "71MC: Mechanical power generators (consumer)").property('order', 63).next()
+
+g.V().hasId('_code_sitc_71MI').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_71MI').property(single, 'listID', 'sitc').property(single, 'value', "71MI")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_71MI').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "71MI: Mechanical power generators (intermediate)").property('order', 64).next()
+
+g.V().hasId('_code_sitc_71MK').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_71MK').property(single, 'listID', 'sitc').property(single, 'value', "71MK")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_71MK').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "71MK: Mechanical power generators (capital)").property('order', 65).next()
+
+g.V().hasId('_code_sitc_72C').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_72C').property(single, 'listID', 'sitc').property(single, 'value', "72C")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_72C').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "72C: Specialised machinery (consumer)").property('order', 66).next()
+
+g.V().hasId('_code_sitc_72I').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_72I').property(single, 'listID', 'sitc').property(single, 'value', "72I")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_72I').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "72I: Specialised machinery (intermediate)").property('order', 67).next()
+
+g.V().hasId('_code_sitc_72K').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_72K').property(single, 'listID', 'sitc').property(single, 'value', "72K")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_72K').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "72K: Specialised machinery (capital)").property('order', 68).next()
+
+g.V().hasId('_code_sitc_73I').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_73I').property(single, 'listID', 'sitc').property(single, 'value', "73I")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_73I').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "73I: Metal working machinery (intermediate)").property('order', 69).next()
+
+g.V().hasId('_code_sitc_73K').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_73K').property(single, 'listID', 'sitc').property(single, 'value', "73K")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_73K').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "73K: Metal working machinery (capital)").property('order', 70).next()
+
+g.V().hasId('_code_sitc_74C').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_74C').property(single, 'listID', 'sitc').property(single, 'value', "74C")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_74C').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "74C: General industrial machinery (consumer)").property('order', 71).next()
+
+g.V().hasId('_code_sitc_74I').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_74I').property(single, 'listID', 'sitc').property(single, 'value', "74I")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_74I').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "74I: General industrial machinery (intermediate)").property('order', 72).next()
+
+g.V().hasId('_code_sitc_74K').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_74K').property(single, 'listID', 'sitc').property(single, 'value', "74K")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_74K').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "74K: General industrial machinery (capital)").property('order', 73).next()
+
+g.V().hasId('_code_sitc_75C').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_75C').property(single, 'listID', 'sitc').property(single, 'value', "75C")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_75C').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "75C: Office machinery (consumer)").property('order', 74).next()
+
+g.V().hasId('_code_sitc_75I').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_75I').property(single, 'listID', 'sitc').property(single, 'value', "75I")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_75I').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "75I: Office machinery (intermediate)").property('order', 75).next()
+
+g.V().hasId('_code_sitc_75K').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_75K').property(single, 'listID', 'sitc').property(single, 'value', "75K")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_75K').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "75K: Office machinery (capital)").property('order', 76).next()
+
+g.V().hasId('_code_sitc_76C').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_76C').property(single, 'listID', 'sitc').property(single, 'value', "76C")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_76C').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "76C: Telecoms & sound equipment (consumer)").property('order', 77).next()
+
+g.V().hasId('_code_sitc_76I').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_76I').property(single, 'listID', 'sitc').property(single, 'value', "76I")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_76I').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "76I: Telecoms & sound equipment (intermediate)").property('order', 78).next()
+
+g.V().hasId('_code_sitc_76K').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_76K').property(single, 'listID', 'sitc').property(single, 'value', "76K")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_76K').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "76K: Telecoms & sound equipment (capital)").property('order', 79).next()
+
+g.V().hasId('_code_sitc_77C').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_77C').property(single, 'listID', 'sitc').property(single, 'value', "77C")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_77C').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "77C: Miscellaneous electrical goods (consumer)").property('order', 80).next()
+
+g.V().hasId('_code_sitc_77I').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_77I').property(single, 'listID', 'sitc').property(single, 'value', "77I")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_77I').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "77I: Miscellaneous electrical goods (intermediate)").property('order', 81).next()
+
+g.V().hasId('_code_sitc_77K').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_77K').property(single, 'listID', 'sitc').property(single, 'value', "77K")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_77K').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "77K: Miscellaneous electrical goods (capital)").property('order', 82).next()
+
+g.V().hasId('_code_sitc_78').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_78').property(single, 'listID', 'sitc').property(single, 'value', "78")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_78').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "78: Road vehicles").property('order', 83).next()
+
+g.V().hasId('_code_sitc_78C').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_78C').property(single, 'listID', 'sitc').property(single, 'value', "78C")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_78C').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "78C: Road vehicles other than cars (consumer)").property('order', 84).next()
+
+g.V().hasId('_code_sitc_78I').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_78I').property(single, 'listID', 'sitc').property(single, 'value', "78I")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_78I').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "78I: Road vehicles other than cars (intermediate)").property('order', 85).next()
+
+g.V().hasId('_code_sitc_78K').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_78K').property(single, 'listID', 'sitc').property(single, 'value', "78K")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_78K').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "78K: Road vehicles other than cars (capital)").property('order', 86).next()
+
+g.V().hasId('_code_sitc_78M').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_78M').property(single, 'listID', 'sitc').property(single, 'value', "78M")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_78M').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "78M: Cars").property('order', 87).next()
+
+g.V().hasId('_code_sitc_79').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_79').property(single, 'listID', 'sitc').property(single, 'value', "79")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_79').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "79: Other transport equipment").property('order', 88).next()
+
+g.V().hasId('_code_sitc_791I').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_791I').property(single, 'listID', 'sitc').property(single, 'value', "791I")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_791I').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "791I: Road vehicles other than cars (intermediate)").property('order', 89).next()
+
+g.V().hasId('_code_sitc_791K').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_791K').property(single, 'listID', 'sitc').property(single, 'value', "791K")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_791K').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "791K: Railway equipment (capital)").property('order', 90).next()
+
+g.V().hasId('_code_sitc_792-3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_792-3').property(single, 'listID', 'sitc').property(single, 'value', "792-3")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_792-3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "792-3: Ships & aircraft").property('order', 91).next()
+
+g.V().hasId('_code_sitc_792').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_792').property(single, 'listID', 'sitc').property(single, 'value', "792")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_792').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "792: Aircraft").property('order', 92).next()
+
+g.V().hasId('_code_sitc_793').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_793').property(single, 'listID', 'sitc').property(single, 'value', "793")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_793').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "793: Ships").property('order', 93).next()
+
+g.V().hasId('_code_sitc_7E').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_7E').property(single, 'listID', 'sitc').property(single, 'value', "7E")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_7E').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "7E: Electrical machinery").property('order', 94).next()
+
+g.V().hasId('_code_sitc_7EC').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_7EC').property(single, 'listID', 'sitc').property(single, 'value', "7EC")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_7EC').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "7EC: Electrical machinery (consumer)").property('order', 95).next()
+
+g.V().hasId('_code_sitc_7EI').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_7EI').property(single, 'listID', 'sitc').property(single, 'value', "7EI")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_7EI').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "7EI: Electrical machinery (intermediate)").property('order', 96).next()
+
+g.V().hasId('_code_sitc_7EK').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_7EK').property(single, 'listID', 'sitc').property(single, 'value', "7EK")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_7EK').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "7EK: Electrical machinery (intermediate)").property('order', 97).next()
+
+g.V().hasId('_code_sitc_7M').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_7M').property(single, 'listID', 'sitc').property(single, 'value', "7M")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_7M').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "7M: Mechanical machinery").property('order', 98).next()
+
+g.V().hasId('_code_sitc_7MC').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_7MC').property(single, 'listID', 'sitc').property(single, 'value', "7MC")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_7MC').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "7MC: Mechanical machinery (consumer)").property('order', 99).next()
+
+g.V().hasId('_code_sitc_7MI').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_7MI').property(single, 'listID', 'sitc').property(single, 'value', "7MI")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_7MI').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "7MI: Mechanical machinery (intermediate)").property('order', 100).next()
+
+g.V().hasId('_code_sitc_7MK').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_7MK').property(single, 'listID', 'sitc').property(single, 'value', "7MK")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_7MK').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "7MK: Mechanical machinery (capital)").property('order', 101).next()
+
+g.V().hasId('_code_sitc_81C').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_81C').property(single, 'listID', 'sitc').property(single, 'value', "81C")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_81C').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "81C: Plumbing, heating & lighting fixtures (consumer)").property('order', 102).next()
+
+g.V().hasId('_code_sitc_81I').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_81I').property(single, 'listID', 'sitc').property(single, 'value', "81I")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_81I').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "81I: Plumbing, heating & lighting fixtures (intermediate)").property('order', 103).next()
+
+g.V().hasId('_code_sitc_81K').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_81K').property(single, 'listID', 'sitc').property(single, 'value', "81K")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_81K').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "81K: Plumbing, heating & lighting fixtures (capital)").property('order', 104).next()
+
+g.V().hasId('_code_sitc_82C').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_82C').property(single, 'listID', 'sitc').property(single, 'value', "82C")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_82C').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "82C: Furniture (consumer)").property('order', 105).next()
+
+g.V().hasId('_code_sitc_82I').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_82I').property(single, 'listID', 'sitc').property(single, 'value', "82I")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_82I').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "82I: Furniture (intermediate)").property('order', 106).next()
+
+g.V().hasId('_code_sitc_82K').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_82K').property(single, 'listID', 'sitc').property(single, 'value', "82K")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_82K').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "82K: Furniture (capital)").property('order', 107).next()
+
+g.V().hasId('_code_sitc_83').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_83').property(single, 'listID', 'sitc').property(single, 'value', "83")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_83').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "83: Travel goods, handbags etc").property('order', 108).next()
+
+g.V().hasId('_code_sitc_84').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_84').property(single, 'listID', 'sitc').property(single, 'value', "84")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_84').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "84: Clothing").property('order', 109).next()
+
+g.V().hasId('_code_sitc_85').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_85').property(single, 'listID', 'sitc').property(single, 'value', "85")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_85').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "85: Footwear").property('order', 110).next()
+
+g.V().hasId('_code_sitc_87C').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_87C').property(single, 'listID', 'sitc').property(single, 'value', "87C")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_87C').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "87C: Scientific instruments (consumer)").property('order', 111).next()
+
+g.V().hasId('_code_sitc_87I').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_87I').property(single, 'listID', 'sitc').property(single, 'value', "87I")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_87I').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "87I: Scientific instruments (intermediate)").property('order', 112).next()
+
+g.V().hasId('_code_sitc_87K').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_87K').property(single, 'listID', 'sitc').property(single, 'value', "87K")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_87K').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "87K: Scientific instruments (capital)").property('order', 113).next()
+
+g.V().hasId('_code_sitc_88C').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_88C').property(single, 'listID', 'sitc').property(single, 'value', "88C")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_88C').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "88C: Photographic & optical goods & clocks (consumer)").property('order', 114).next()
+
+g.V().hasId('_code_sitc_88I').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_88I').property(single, 'listID', 'sitc').property(single, 'value', "88I")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_88I').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "88I: Photographic & optical goods & clocks (intermediate)").property('order', 115).next()
+
+g.V().hasId('_code_sitc_88K').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_88K').property(single, 'listID', 'sitc').property(single, 'value', "88K")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_88K').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "88K: Photographic & optical goods & clocks (capital)").property('order', 116).next()
+
+g.V().hasId('_code_sitc_896').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_896').property(single, 'listID', 'sitc').property(single, 'value', "896")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_896').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "896: Works of art").property('order', 117).next()
+
+g.V().hasId('_code_sitc_897C').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_897C').property(single, 'listID', 'sitc').property(single, 'value', "897C")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_897C').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "897C: Jewellery").property('order', 118).next()
+
+g.V().hasId('_code_sitc_89I').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_89I').property(single, 'listID', 'sitc').property(single, 'value', "89I")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_89I').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "89I: Other manufactures (intermediate)").property('order', 119).next()
+
+g.V().hasId('_code_sitc_89K').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_89K').property(single, 'listID', 'sitc').property(single, 'value', "89K")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_89K').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "89K: Other manufactures (capital)").property('order', 120).next()
+
+g.V().hasId('_code_sitc_89OC').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_89OC').property(single, 'listID', 'sitc').property(single, 'value', "89OC")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_89OC').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "89OC: Other manufactures (consumer)").property('order', 121).next()
+
+g.V().hasId('_code_sitc_8O').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_8O').property(single, 'listID', 'sitc').property(single, 'value', "8O")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_8O').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "8O: Other manufactures").property('order', 122).next()
+
+g.V().hasId('_code_sitc_8OC').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_8OC').property(single, 'listID', 'sitc').property(single, 'value', "8OC")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_8OC').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "8OC: Other miscellaneous manufactures (consumer)").property('order', 123).next()
+
+g.V().hasId('_code_sitc_8OI').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_8OI').property(single, 'listID', 'sitc').property(single, 'value', "8OI")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_8OI').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "8OI: Other miscellaneous manufactures (intermediate)").property('order', 124).next()
+
+g.V().hasId('_code_sitc_8OK').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_sitc_8OK').property(single, 'listID', 'sitc').property(single, 'value', "8OK")
+  ).next()
+  g.V().hasId('_code_list_sitc_one-off').as('codeList').V().hasId('_code_sitc_8OK').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "8OK: Other miscellaneous manufactures (capital)").property('order', 125).next()

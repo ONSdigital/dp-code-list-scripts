@@ -1,5 +1,3 @@
-
-
 g.V().hasId('_code_list_house-sales-and-prices_one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(id, '_code_list_house-sales-and-prices_one-off').
@@ -8,24 +6,13 @@ g.V().hasId('_code_list_house-sales-and-prices_one-off').
     property(single, 'edition', "one-off")
   ).next()
 
-
-g.V().hasId('_code_house-sales-and-prices_mean').
+g.V().hasId('_code_house-sales-and-prices_sales').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_house-sales-and-prices_mean').property(single, 'listID', 'house-sales-and-prices').property(single, 'value', "mean")
+    property(id, '_code_house-sales-and-prices_sales').property(single, 'listID', 'house-sales-and-prices').property(single, 'value', "sales")
   ).next()
-  g.V().hasId('_code_list_house-sales-and-prices_one-off').as('codeList').V().hasId('_code_house-sales-and-prices_mean').as('code').
+  g.V().hasId('_code_list_house-sales-and-prices_one-off').as('codeList').V().hasId('_code_house-sales-and-prices_sales').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Mean price").next()
-
-
-g.V().hasId('_code_house-sales-and-prices_median').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_house-sales-and-prices_median').property(single, 'listID', 'house-sales-and-prices').property(single, 'value', "median")
-  ).next()
-  g.V().hasId('_code_list_house-sales-and-prices_one-off').as('codeList').V().hasId('_code_house-sales-and-prices_median').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Median price").next()
-
+      addE('usedBy').to('codeList')).property('label', "Count of sales").property('order', 1).next()
 
 g.V().hasId('_code_house-sales-and-prices_lower-quartile').
   fold().coalesce(unfold(), addV('_code').
@@ -33,8 +20,23 @@ g.V().hasId('_code_house-sales-and-prices_lower-quartile').
   ).next()
   g.V().hasId('_code_list_house-sales-and-prices_one-off').as('codeList').V().hasId('_code_house-sales-and-prices_lower-quartile').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Lower quartile price").next()
+      addE('usedBy').to('codeList')).property('label', "Lower quartile price").property('order', 2).next()
 
+g.V().hasId('_code_house-sales-and-prices_mean').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_house-sales-and-prices_mean').property(single, 'listID', 'house-sales-and-prices').property(single, 'value', "mean")
+  ).next()
+  g.V().hasId('_code_list_house-sales-and-prices_one-off').as('codeList').V().hasId('_code_house-sales-and-prices_mean').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Mean price").property('order', 3).next()
+
+g.V().hasId('_code_house-sales-and-prices_median').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_house-sales-and-prices_median').property(single, 'listID', 'house-sales-and-prices').property(single, 'value', "median")
+  ).next()
+  g.V().hasId('_code_list_house-sales-and-prices_one-off').as('codeList').V().hasId('_code_house-sales-and-prices_median').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Median price").property('order', 4).next()
 
 g.V().hasId('_code_house-sales-and-prices_tenth-percentile').
   fold().coalesce(unfold(), addV('_code').
@@ -42,14 +44,4 @@ g.V().hasId('_code_house-sales-and-prices_tenth-percentile').
   ).next()
   g.V().hasId('_code_list_house-sales-and-prices_one-off').as('codeList').V().hasId('_code_house-sales-and-prices_tenth-percentile').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Tenth percentile price").next()
-
-
-g.V().hasId('_code_house-sales-and-prices_sales').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_house-sales-and-prices_sales').property(single, 'listID', 'house-sales-and-prices').property(single, 'value', "sales")
-  ).next()
-  g.V().hasId('_code_list_house-sales-and-prices_one-off').as('codeList').V().hasId('_code_house-sales-and-prices_sales').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Count of sales").next()
-
+      addE('usedBy').to('codeList')).property('label', "Tenth percentile price").property('order', 5).next()

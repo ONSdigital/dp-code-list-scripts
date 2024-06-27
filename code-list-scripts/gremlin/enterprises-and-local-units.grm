@@ -1,0 +1,23 @@
+g.V().hasId('_code_list_enterprises-and-local-units_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_enterprises-and-local-units_one-off').
+    property(single, 'listID', "enterprises-and-local-units").
+    property(single, 'label', "Enterprises And Local Units").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_enterprises-and-local-units_enterprises').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_enterprises-and-local-units_enterprises').property(single, 'listID', 'enterprises-and-local-units').property(single, 'value', "enterprises")
+  ).next()
+  g.V().hasId('_code_list_enterprises-and-local-units_one-off').as('codeList').V().hasId('_code_enterprises-and-local-units_enterprises').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Enterprises").property('order', 1).next()
+
+g.V().hasId('_code_enterprises-and-local-units_local-units').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_enterprises-and-local-units_local-units').property(single, 'listID', 'enterprises-and-local-units').property(single, 'value', "local-units")
+  ).next()
+  g.V().hasId('_code_list_enterprises-and-local-units_one-off').as('codeList').V().hasId('_code_enterprises-and-local-units_local-units').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Local Units").property('order', 2).next()

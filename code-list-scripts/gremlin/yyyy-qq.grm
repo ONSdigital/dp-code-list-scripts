@@ -1,5 +1,3 @@
-
-
 g.V().hasId('_code_list_yyyy-qq_one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(id, '_code_list_yyyy-qq_one-off').
@@ -8,1068 +6,13 @@ g.V().hasId('_code_list_yyyy-qq_one-off').
     property(single, 'edition', "one-off")
   ).next()
 
-
-g.V().hasId('_code_yyyy-qq_2000-q1').
+g.V().hasId('_code_yyyy-qq_2029-q4').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2000-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2000-q1")
+    property(id, '_code_yyyy-qq_2029-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2029-q4")
   ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2000-q1').as('code').
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2029-q4').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2000 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2000-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2000-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2000-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2000-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2000 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2000-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2000-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2000-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2000-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2000 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2000-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2000-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2000-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2000-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2000 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2001-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2001-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2001-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2001-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2001 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2001-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2001-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2001-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2001-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2001 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2001-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2001-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2001-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2001-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2001 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2001-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2001-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2001-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2001-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2001 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2002-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2002-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2002-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2002-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2002 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2002-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2002-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2002-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2002-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2002 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2002-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2002-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2002-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2002-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2002 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2002-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2002-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2002-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2002-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2002 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2003-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2003-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2003-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2003-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2003 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2003-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2003-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2003-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2003-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2003 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2003-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2003-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2003-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2003-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2003 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2003-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2003-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2003-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2003-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2003 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2004-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2004-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2004-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2004-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2004 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2004-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2004-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2004-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2004-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2004 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2004-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2004-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2004-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2004-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2004 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2004-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2004-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2004-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2004-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2004 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2005-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2005-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2005-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2005-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2005 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2005-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2005-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2005-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2005-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2005 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2005-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2005-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2005-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2005-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2005 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2005-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2005-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2005-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2005-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2005 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2006-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2006-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2006-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2006-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2006 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2006-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2006-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2006-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2006-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2006 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2006-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2006-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2006-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2006-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2006 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2006-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2006-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2006-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2006-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2006 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2007-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2007-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2007-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2007-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2007 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2007-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2007-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2007-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2007-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2007 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2007-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2007-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2007-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2007-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2007 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2007-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2007-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2007-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2007-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2007 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2008-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2008-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2008-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2008-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2008 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2008-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2008-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2008-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2008-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2008 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2008-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2008-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2008-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2008-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2008 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2008-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2008-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2008-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2008-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2008 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2009-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2009-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2009-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2009-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2009 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2009-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2009-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2009-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2009-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2009 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2009-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2009-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2009-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2009-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2009 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2009-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2009-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2009-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2009-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2009 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2010-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2010-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2010-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2010-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2010 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2010-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2010-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2010-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2010-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2010 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2010-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2010-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2010-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2010-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2010 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2010-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2010-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2010-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2010-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2010 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2011-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2011-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2011-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2011-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2011 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2011-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2011-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2011-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2011-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2011 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2011-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2011-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2011-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2011-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2011 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2011-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2011-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2011-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2011-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2011 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2012-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2012-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2012-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2012-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2012 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2012-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2012-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2012-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2012-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2012 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2012-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2012-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2012-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2012-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2012 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2012-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2012-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2012-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2012-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2012 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2013-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2013-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2013-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2013-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2013 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2013-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2013-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2013-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2013-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2013 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2013-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2013-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2013-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2013-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2013 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2013-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2013-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2013-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2013-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2013 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2014-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2014-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2014-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2014-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2014 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2014-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2014-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2014-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2014-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2014 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2014-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2014-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2014-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2014-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2014 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2014-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2014-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2014-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2014-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2014 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2015-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2015-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2015-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2015-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2015 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2015-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2015-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2015-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2015-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2015 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2015-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2015-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2015-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2015-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2015 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2015-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2015-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2015-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2015-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2015 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2016-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2016-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2016-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2016-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2016 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2016-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2016-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2016-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2016-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2016 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2016-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2016-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2016-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2016-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2016 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2016-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2016-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2016-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2016-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2016 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2017-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2017-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2017-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2017-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2017 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2017-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2017-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2017-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2017-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2017 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2017-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2017-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2017-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2017-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2017 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2017-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2017-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2017-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2017-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2017 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2018-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2018-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2018-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2018-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2018 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2018-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2018-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2018-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2018-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2018 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2018-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2018-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2018-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2018-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2018 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2018-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2018-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2018-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2018-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2018 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2019-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2019-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2019-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2019-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2019 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2019-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2019-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2019-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2019-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2019 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2019-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2019-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2019-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2019-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2019 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2019-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2019-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2019-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2019-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2019 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2020-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2020-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2020-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2020-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2020 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2020-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2020-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2020-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2020-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2020 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2020-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2020-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2020-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2020-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2020 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2020-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2020-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2020-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2020-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2020 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2021-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2021-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2021-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2021-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2021 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2021-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2021-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2021-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2021-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2021 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2021-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2021-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2021-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2021-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2021 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2021-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2021-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2021-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2021-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2021 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2022-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2022-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2022-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2022-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2022 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2022-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2022-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2022-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2022-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2022 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2022-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2022-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2022-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2022-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2022 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2022-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2022-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2022-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2022-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2022 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2023-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2023-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2023-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2023-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2023 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2023-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2023-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2023-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2023-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2023 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2023-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2023-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2023-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2023-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2023 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2023-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2023-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2023-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2023-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2023 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2024-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2024-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2024-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2024-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2024 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2024-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2024-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2024-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2024-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2024 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2024-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2024-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2024-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2024-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2024 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2024-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2024-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2024-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2024-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2024 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2025-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2025-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2025-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2025-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2025 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2025-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2025-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2025-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2025-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2025 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2025-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2025-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2025-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2025-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2025 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2025-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2025-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2025-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2025-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2025 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2026-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2026-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2026-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2026-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2026 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2026-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2026-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2026-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2026-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2026 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2026-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2026-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2026-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2026-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2026 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2026-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2026-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2026-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2026-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2026 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2027-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2027-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2027-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2027-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2027 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2027-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2027-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2027-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2027-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2027 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2027-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2027-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2027-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2027-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2027 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2027-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2027-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2027-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2027-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2027 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2028-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2028-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2028-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2028-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2028 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2028-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2028-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2028-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2028-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2028 Q2").next()
-
-
-g.V().hasId('_code_yyyy-qq_2028-q3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2028-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2028-q3")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2028-q3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2028 Q3").next()
-
-
-g.V().hasId('_code_yyyy-qq_2028-q4').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2028-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2028-q4")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2028-q4').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2028 Q4").next()
-
-
-g.V().hasId('_code_yyyy-qq_2029-q1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2029-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2029-q1")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2029-q1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2029 Q1").next()
-
-
-g.V().hasId('_code_yyyy-qq_2029-q2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2029-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2029-q2")
-  ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2029-q2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2029 Q2").next()
-
+      addE('usedBy').to('codeList')).property('label', "2029 Q4").property('order', 1).next()
 
 g.V().hasId('_code_yyyy-qq_2029-q3').
   fold().coalesce(unfold(), addV('_code').
@@ -1077,134 +20,311 @@ g.V().hasId('_code_yyyy-qq_2029-q3').
   ).next()
   g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2029-q3').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2029 Q3").next()
+      addE('usedBy').to('codeList')).property('label', "2029 Q3").property('order', 2).next()
 
-
-g.V().hasId('_code_yyyy-qq_2029-q4').
+g.V().hasId('_code_yyyy-qq_2029-q2').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2029-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2029-q4")
+    property(id, '_code_yyyy-qq_2029-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2029-q2")
   ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2029-q4').as('code').
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2029-q2').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2029 Q4").next()
+      addE('usedBy').to('codeList')).property('label', "2029 Q2").property('order', 3).next()
 
-
-g.V().hasId('_code_yyyy-qq_2007-q0').
+g.V().hasId('_code_yyyy-qq_2029-q1').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2007-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2007-q0")
+    property(id, '_code_yyyy-qq_2029-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2029-q1")
   ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2007-q0').as('code').
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2029-q1').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2007").next()
+      addE('usedBy').to('codeList')).property('label', "2029 Q1").property('order', 4).next()
 
-
-g.V().hasId('_code_yyyy-qq_2008-q0').
+g.V().hasId('_code_yyyy-qq_2028-q4').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2008-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2008-q0")
+    property(id, '_code_yyyy-qq_2028-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2028-q4")
   ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2008-q0').as('code').
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2028-q4').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2008").next()
+      addE('usedBy').to('codeList')).property('label', "2028 Q4").property('order', 5).next()
 
-
-g.V().hasId('_code_yyyy-qq_2009-q0').
+g.V().hasId('_code_yyyy-qq_2028-q3').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2009-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2009-q0")
+    property(id, '_code_yyyy-qq_2028-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2028-q3")
   ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2009-q0').as('code').
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2028-q3').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2009").next()
+      addE('usedBy').to('codeList')).property('label', "2028 Q3").property('order', 6).next()
 
-
-g.V().hasId('_code_yyyy-qq_2010-q0').
+g.V().hasId('_code_yyyy-qq_2028-q2').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2010-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2010-q0")
+    property(id, '_code_yyyy-qq_2028-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2028-q2")
   ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2010-q0').as('code').
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2028-q2').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2010").next()
+      addE('usedBy').to('codeList')).property('label', "2028 Q2").property('order', 7).next()
 
-
-g.V().hasId('_code_yyyy-qq_2011-q0').
+g.V().hasId('_code_yyyy-qq_2028-q1').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2011-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2011-q0")
+    property(id, '_code_yyyy-qq_2028-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2028-q1")
   ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2011-q0').as('code').
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2028-q1').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2011").next()
+      addE('usedBy').to('codeList')).property('label', "2028 Q1").property('order', 8).next()
 
-
-g.V().hasId('_code_yyyy-qq_2012-q0').
+g.V().hasId('_code_yyyy-qq_2027-q4').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2012-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2012-q0")
+    property(id, '_code_yyyy-qq_2027-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2027-q4")
   ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2012-q0').as('code').
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2027-q4').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2012").next()
+      addE('usedBy').to('codeList')).property('label', "2027 Q4").property('order', 9).next()
 
-
-g.V().hasId('_code_yyyy-qq_2013-q0').
+g.V().hasId('_code_yyyy-qq_2027-q3').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2013-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2013-q0")
+    property(id, '_code_yyyy-qq_2027-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2027-q3")
   ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2013-q0').as('code').
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2027-q3').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2013").next()
+      addE('usedBy').to('codeList')).property('label', "2027 Q3").property('order', 10).next()
 
-
-g.V().hasId('_code_yyyy-qq_2014-q0').
+g.V().hasId('_code_yyyy-qq_2027-q2').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2014-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2014-q0")
+    property(id, '_code_yyyy-qq_2027-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2027-q2")
   ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2014-q0').as('code').
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2027-q2').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2014").next()
+      addE('usedBy').to('codeList')).property('label', "2027 Q2").property('order', 11).next()
 
-
-g.V().hasId('_code_yyyy-qq_2015-q0').
+g.V().hasId('_code_yyyy-qq_2027-q1').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2015-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2015-q0")
+    property(id, '_code_yyyy-qq_2027-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2027-q1")
   ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2015-q0').as('code').
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2027-q1').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2015").next()
+      addE('usedBy').to('codeList')).property('label', "2027 Q1").property('order', 12).next()
 
-
-g.V().hasId('_code_yyyy-qq_2016-q0').
+g.V().hasId('_code_yyyy-qq_2026-q4').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2016-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2016-q0")
+    property(id, '_code_yyyy-qq_2026-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2026-q4")
   ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2016-q0').as('code').
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2026-q4').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2016").next()
+      addE('usedBy').to('codeList')).property('label', "2026 Q4").property('order', 13).next()
 
-
-g.V().hasId('_code_yyyy-qq_2017-q0').
+g.V().hasId('_code_yyyy-qq_2026-q3').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2017-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2017-q0")
+    property(id, '_code_yyyy-qq_2026-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2026-q3")
   ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2017-q0').as('code').
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2026-q3').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2017").next()
+      addE('usedBy').to('codeList')).property('label', "2026 Q3").property('order', 14).next()
 
-
-g.V().hasId('_code_yyyy-qq_2018-q0').
+g.V().hasId('_code_yyyy-qq_2026-q2').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2018-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2018-q0")
+    property(id, '_code_yyyy-qq_2026-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2026-q2")
   ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2018-q0').as('code').
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2026-q2').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2018").next()
+      addE('usedBy').to('codeList')).property('label', "2026 Q2").property('order', 15).next()
 
-
-g.V().hasId('_code_yyyy-qq_2019-q0').
+g.V().hasId('_code_yyyy-qq_2026-q1').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_yyyy-qq_2019-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2019-q0")
+    property(id, '_code_yyyy-qq_2026-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2026-q1")
   ).next()
-  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2019-q0').as('code').
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2026-q1').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2019").next()
+      addE('usedBy').to('codeList')).property('label', "2026 Q1").property('order', 16).next()
 
+g.V().hasId('_code_yyyy-qq_2025-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2025-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2025-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2025-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2025 Q4").property('order', 17).next()
+
+g.V().hasId('_code_yyyy-qq_2025-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2025-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2025-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2025-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2025 Q3").property('order', 18).next()
+
+g.V().hasId('_code_yyyy-qq_2025-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2025-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2025-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2025-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2025 Q2").property('order', 19).next()
+
+g.V().hasId('_code_yyyy-qq_2025-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2025-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2025-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2025-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2025 Q1").property('order', 20).next()
+
+g.V().hasId('_code_yyyy-qq_2024-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2024-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2024-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2024-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2024 Q4").property('order', 21).next()
+
+g.V().hasId('_code_yyyy-qq_2024-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2024-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2024-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2024-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2024 Q3").property('order', 22).next()
+
+g.V().hasId('_code_yyyy-qq_2024-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2024-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2024-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2024-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2024 Q2").property('order', 23).next()
+
+g.V().hasId('_code_yyyy-qq_2024-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2024-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2024-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2024-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2024 Q1").property('order', 24).next()
+
+g.V().hasId('_code_yyyy-qq_2023-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2023-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2023-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2023-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2023 Q4").property('order', 25).next()
+
+g.V().hasId('_code_yyyy-qq_2023-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2023-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2023-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2023-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2023 Q3").property('order', 26).next()
+
+g.V().hasId('_code_yyyy-qq_2023-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2023-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2023-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2023-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2023 Q2").property('order', 27).next()
+
+g.V().hasId('_code_yyyy-qq_2023-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2023-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2023-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2023-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2023 Q1").property('order', 28).next()
+
+g.V().hasId('_code_yyyy-qq_2022-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2022-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2022-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2022-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2022 Q4").property('order', 29).next()
+
+g.V().hasId('_code_yyyy-qq_2022-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2022-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2022-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2022-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2022 Q3").property('order', 30).next()
+
+g.V().hasId('_code_yyyy-qq_2022-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2022-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2022-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2022-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2022 Q2").property('order', 31).next()
+
+g.V().hasId('_code_yyyy-qq_2022-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2022-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2022-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2022-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2022 Q1").property('order', 32).next()
+
+g.V().hasId('_code_yyyy-qq_2021-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2021-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2021-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2021-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2021 Q4").property('order', 33).next()
+
+g.V().hasId('_code_yyyy-qq_2021-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2021-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2021-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2021-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2021 Q3").property('order', 34).next()
+
+g.V().hasId('_code_yyyy-qq_2021-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2021-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2021-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2021-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2021 Q2").property('order', 35).next()
+
+g.V().hasId('_code_yyyy-qq_2021-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2021-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2021-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2021-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2021 Q1").property('order', 36).next()
+
+g.V().hasId('_code_yyyy-qq_2020-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2020-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2020-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2020-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2020 Q4").property('order', 37).next()
+
+g.V().hasId('_code_yyyy-qq_2020-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2020-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2020-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2020-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2020 Q3").property('order', 38).next()
+
+g.V().hasId('_code_yyyy-qq_2020-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2020-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2020-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2020-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2020 Q2").property('order', 39).next()
+
+g.V().hasId('_code_yyyy-qq_2020-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2020-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2020-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2020-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2020 Q1").property('order', 40).next()
 
 g.V().hasId('_code_yyyy-qq_2020-q0').
   fold().coalesce(unfold(), addV('_code').
@@ -1212,6 +332,748 @@ g.V().hasId('_code_yyyy-qq_2020-q0').
   ).next()
   g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2020-q0').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2020").next()
+      addE('usedBy').to('codeList')).property('label', "2020").property('order', 41).next()
 
+g.V().hasId('_code_yyyy-qq_2019-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2019-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2019-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2019-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2019 Q4").property('order', 42).next()
 
+g.V().hasId('_code_yyyy-qq_2019-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2019-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2019-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2019-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2019 Q3").property('order', 43).next()
+
+g.V().hasId('_code_yyyy-qq_2019-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2019-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2019-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2019-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2019 Q2").property('order', 44).next()
+
+g.V().hasId('_code_yyyy-qq_2019-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2019-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2019-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2019-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2019 Q1").property('order', 45).next()
+
+g.V().hasId('_code_yyyy-qq_2019-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2019-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2019-q0")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2019-q0').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2019").property('order', 46).next()
+
+g.V().hasId('_code_yyyy-qq_2018-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2018-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2018-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2018-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2018 Q4").property('order', 47).next()
+
+g.V().hasId('_code_yyyy-qq_2018-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2018-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2018-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2018-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2018 Q3").property('order', 48).next()
+
+g.V().hasId('_code_yyyy-qq_2018-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2018-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2018-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2018-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2018 Q2").property('order', 49).next()
+
+g.V().hasId('_code_yyyy-qq_2018-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2018-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2018-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2018-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2018 Q1").property('order', 50).next()
+
+g.V().hasId('_code_yyyy-qq_2018-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2018-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2018-q0")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2018-q0').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2018").property('order', 51).next()
+
+g.V().hasId('_code_yyyy-qq_2017-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2017-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2017-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2017-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2017 Q4").property('order', 52).next()
+
+g.V().hasId('_code_yyyy-qq_2017-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2017-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2017-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2017-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2017 Q3").property('order', 53).next()
+
+g.V().hasId('_code_yyyy-qq_2017-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2017-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2017-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2017-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2017 Q2").property('order', 54).next()
+
+g.V().hasId('_code_yyyy-qq_2017-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2017-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2017-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2017-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2017 Q1").property('order', 55).next()
+
+g.V().hasId('_code_yyyy-qq_2017-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2017-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2017-q0")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2017-q0').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2017").property('order', 56).next()
+
+g.V().hasId('_code_yyyy-qq_2016-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2016-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2016-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2016-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2016 Q4").property('order', 57).next()
+
+g.V().hasId('_code_yyyy-qq_2016-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2016-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2016-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2016-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2016 Q3").property('order', 58).next()
+
+g.V().hasId('_code_yyyy-qq_2016-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2016-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2016-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2016-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2016 Q2").property('order', 59).next()
+
+g.V().hasId('_code_yyyy-qq_2016-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2016-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2016-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2016-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2016 Q1").property('order', 60).next()
+
+g.V().hasId('_code_yyyy-qq_2016-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2016-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2016-q0")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2016-q0').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2016").property('order', 61).next()
+
+g.V().hasId('_code_yyyy-qq_2015-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2015-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2015-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2015-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2015 Q4").property('order', 62).next()
+
+g.V().hasId('_code_yyyy-qq_2015-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2015-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2015-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2015-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2015 Q3").property('order', 63).next()
+
+g.V().hasId('_code_yyyy-qq_2015-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2015-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2015-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2015-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2015 Q2").property('order', 64).next()
+
+g.V().hasId('_code_yyyy-qq_2015-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2015-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2015-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2015-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2015 Q1").property('order', 65).next()
+
+g.V().hasId('_code_yyyy-qq_2015-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2015-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2015-q0")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2015-q0').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2015").property('order', 66).next()
+
+g.V().hasId('_code_yyyy-qq_2014-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2014-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2014-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2014-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2014 Q4").property('order', 67).next()
+
+g.V().hasId('_code_yyyy-qq_2014-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2014-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2014-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2014-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2014 Q3").property('order', 68).next()
+
+g.V().hasId('_code_yyyy-qq_2014-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2014-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2014-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2014-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2014 Q2").property('order', 69).next()
+
+g.V().hasId('_code_yyyy-qq_2014-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2014-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2014-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2014-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2014 Q1").property('order', 70).next()
+
+g.V().hasId('_code_yyyy-qq_2014-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2014-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2014-q0")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2014-q0').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2014").property('order', 71).next()
+
+g.V().hasId('_code_yyyy-qq_2013-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2013-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2013-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2013-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2013 Q4").property('order', 72).next()
+
+g.V().hasId('_code_yyyy-qq_2013-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2013-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2013-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2013-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2013 Q3").property('order', 73).next()
+
+g.V().hasId('_code_yyyy-qq_2013-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2013-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2013-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2013-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2013 Q2").property('order', 74).next()
+
+g.V().hasId('_code_yyyy-qq_2013-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2013-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2013-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2013-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2013 Q1").property('order', 75).next()
+
+g.V().hasId('_code_yyyy-qq_2013-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2013-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2013-q0")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2013-q0').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2013").property('order', 76).next()
+
+g.V().hasId('_code_yyyy-qq_2012-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2012-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2012-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2012-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2012 Q4").property('order', 77).next()
+
+g.V().hasId('_code_yyyy-qq_2012-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2012-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2012-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2012-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2012 Q3").property('order', 78).next()
+
+g.V().hasId('_code_yyyy-qq_2012-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2012-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2012-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2012-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2012 Q2").property('order', 79).next()
+
+g.V().hasId('_code_yyyy-qq_2012-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2012-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2012-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2012-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2012 Q1").property('order', 80).next()
+
+g.V().hasId('_code_yyyy-qq_2012-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2012-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2012-q0")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2012-q0').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2012").property('order', 81).next()
+
+g.V().hasId('_code_yyyy-qq_2011-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2011-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2011-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2011-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2011 Q4").property('order', 82).next()
+
+g.V().hasId('_code_yyyy-qq_2011-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2011-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2011-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2011-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2011 Q3").property('order', 83).next()
+
+g.V().hasId('_code_yyyy-qq_2011-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2011-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2011-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2011-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2011 Q2").property('order', 84).next()
+
+g.V().hasId('_code_yyyy-qq_2011-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2011-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2011-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2011-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2011 Q1").property('order', 85).next()
+
+g.V().hasId('_code_yyyy-qq_2011-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2011-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2011-q0")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2011-q0').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2011").property('order', 86).next()
+
+g.V().hasId('_code_yyyy-qq_2010-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2010-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2010-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2010-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2010 Q4").property('order', 87).next()
+
+g.V().hasId('_code_yyyy-qq_2010-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2010-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2010-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2010-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2010 Q3").property('order', 88).next()
+
+g.V().hasId('_code_yyyy-qq_2010-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2010-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2010-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2010-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2010 Q2").property('order', 89).next()
+
+g.V().hasId('_code_yyyy-qq_2010-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2010-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2010-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2010-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2010 Q1").property('order', 90).next()
+
+g.V().hasId('_code_yyyy-qq_2010-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2010-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2010-q0")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2010-q0').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2010").property('order', 91).next()
+
+g.V().hasId('_code_yyyy-qq_2009-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2009-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2009-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2009-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2009 Q4").property('order', 92).next()
+
+g.V().hasId('_code_yyyy-qq_2009-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2009-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2009-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2009-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2009 Q3").property('order', 93).next()
+
+g.V().hasId('_code_yyyy-qq_2009-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2009-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2009-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2009-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2009 Q2").property('order', 94).next()
+
+g.V().hasId('_code_yyyy-qq_2009-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2009-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2009-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2009-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2009 Q1").property('order', 95).next()
+
+g.V().hasId('_code_yyyy-qq_2009-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2009-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2009-q0")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2009-q0').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2009").property('order', 96).next()
+
+g.V().hasId('_code_yyyy-qq_2008-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2008-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2008-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2008-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2008 Q4").property('order', 97).next()
+
+g.V().hasId('_code_yyyy-qq_2008-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2008-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2008-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2008-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2008 Q3").property('order', 98).next()
+
+g.V().hasId('_code_yyyy-qq_2008-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2008-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2008-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2008-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2008 Q2").property('order', 99).next()
+
+g.V().hasId('_code_yyyy-qq_2008-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2008-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2008-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2008-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2008 Q1").property('order', 100).next()
+
+g.V().hasId('_code_yyyy-qq_2008-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2008-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2008-q0")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2008-q0').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2008").property('order', 101).next()
+
+g.V().hasId('_code_yyyy-qq_2007-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2007-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2007-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2007-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2007 Q4").property('order', 102).next()
+
+g.V().hasId('_code_yyyy-qq_2007-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2007-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2007-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2007-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2007 Q3").property('order', 103).next()
+
+g.V().hasId('_code_yyyy-qq_2007-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2007-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2007-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2007-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2007 Q2").property('order', 104).next()
+
+g.V().hasId('_code_yyyy-qq_2007-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2007-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2007-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2007-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2007 Q1").property('order', 105).next()
+
+g.V().hasId('_code_yyyy-qq_2007-q0').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2007-q0').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2007-q0")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2007-q0').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2007").property('order', 106).next()
+
+g.V().hasId('_code_yyyy-qq_2006-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2006-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2006-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2006-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2006 Q4").property('order', 107).next()
+
+g.V().hasId('_code_yyyy-qq_2006-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2006-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2006-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2006-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2006 Q3").property('order', 108).next()
+
+g.V().hasId('_code_yyyy-qq_2006-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2006-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2006-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2006-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2006 Q2").property('order', 109).next()
+
+g.V().hasId('_code_yyyy-qq_2006-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2006-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2006-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2006-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2006 Q1").property('order', 110).next()
+
+g.V().hasId('_code_yyyy-qq_2005-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2005-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2005-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2005-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2005 Q4").property('order', 111).next()
+
+g.V().hasId('_code_yyyy-qq_2005-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2005-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2005-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2005-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2005 Q3").property('order', 112).next()
+
+g.V().hasId('_code_yyyy-qq_2005-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2005-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2005-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2005-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2005 Q2").property('order', 113).next()
+
+g.V().hasId('_code_yyyy-qq_2005-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2005-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2005-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2005-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2005 Q1").property('order', 114).next()
+
+g.V().hasId('_code_yyyy-qq_2004-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2004-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2004-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2004-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2004 Q4").property('order', 115).next()
+
+g.V().hasId('_code_yyyy-qq_2004-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2004-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2004-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2004-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2004 Q3").property('order', 116).next()
+
+g.V().hasId('_code_yyyy-qq_2004-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2004-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2004-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2004-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2004 Q2").property('order', 117).next()
+
+g.V().hasId('_code_yyyy-qq_2004-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2004-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2004-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2004-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2004 Q1").property('order', 118).next()
+
+g.V().hasId('_code_yyyy-qq_2003-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2003-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2003-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2003-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2003 Q4").property('order', 119).next()
+
+g.V().hasId('_code_yyyy-qq_2003-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2003-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2003-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2003-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2003 Q3").property('order', 120).next()
+
+g.V().hasId('_code_yyyy-qq_2003-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2003-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2003-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2003-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2003 Q2").property('order', 121).next()
+
+g.V().hasId('_code_yyyy-qq_2003-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2003-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2003-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2003-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2003 Q1").property('order', 122).next()
+
+g.V().hasId('_code_yyyy-qq_2002-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2002-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2002-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2002-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2002 Q4").property('order', 123).next()
+
+g.V().hasId('_code_yyyy-qq_2002-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2002-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2002-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2002-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2002 Q3").property('order', 124).next()
+
+g.V().hasId('_code_yyyy-qq_2002-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2002-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2002-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2002-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2002 Q2").property('order', 125).next()
+
+g.V().hasId('_code_yyyy-qq_2002-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2002-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2002-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2002-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2002 Q1").property('order', 126).next()
+
+g.V().hasId('_code_yyyy-qq_2001-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2001-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2001-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2001-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2001 Q4").property('order', 127).next()
+
+g.V().hasId('_code_yyyy-qq_2001-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2001-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2001-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2001-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2001 Q3").property('order', 128).next()
+
+g.V().hasId('_code_yyyy-qq_2001-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2001-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2001-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2001-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2001 Q2").property('order', 129).next()
+
+g.V().hasId('_code_yyyy-qq_2001-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2001-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2001-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2001-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2001 Q1").property('order', 130).next()
+
+g.V().hasId('_code_yyyy-qq_2000-q4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2000-q4').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2000-q4")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2000-q4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2000 Q4").property('order', 131).next()
+
+g.V().hasId('_code_yyyy-qq_2000-q3').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2000-q3').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2000-q3")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2000-q3').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2000 Q3").property('order', 132).next()
+
+g.V().hasId('_code_yyyy-qq_2000-q2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2000-q2').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2000-q2")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2000-q2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2000 Q2").property('order', 133).next()
+
+g.V().hasId('_code_yyyy-qq_2000-q1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_yyyy-qq_2000-q1').property(single, 'listID', 'yyyy-qq').property(single, 'value', "2000-q1")
+  ).next()
+  g.V().hasId('_code_list_yyyy-qq_one-off').as('codeList').V().hasId('_code_yyyy-qq_2000-q1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "2000 Q1").property('order', 134).next()

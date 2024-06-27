@@ -1,22 +1,10 @@
-
-
 g.V().hasId('_code_list_life-expectancy-cohort_one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(id, '_code_list_life-expectancy-cohort_one-off').
     property(single, 'listID', "life-expectancy-cohort").
-    property(single, 'edition', "one-off").
-    property(single, 'label', "Life Expectancy Cohort")
+    property(single, 'label', "Life Expectancy Cohort").
+    property(single, 'edition', "one-off")
   ).next()
-
-
-g.V().hasId('_code_life-expectancy-cohort_males-at-birth').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_life-expectancy-cohort_males-at-birth').property(single, 'listID', 'life-expectancy-cohort').property(single, 'value', "males-at-birth")
-  ).next()
-  g.V().hasId('_code_list_life-expectancy-cohort_one-off').as('codeList').V().hasId('_code_life-expectancy-cohort_males-at-birth').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Males at birth").next()
-
 
 g.V().hasId('_code_life-expectancy-cohort_females-at-birth').
   fold().coalesce(unfold(), addV('_code').
@@ -24,17 +12,15 @@ g.V().hasId('_code_life-expectancy-cohort_females-at-birth').
   ).next()
   g.V().hasId('_code_list_life-expectancy-cohort_one-off').as('codeList').V().hasId('_code_life-expectancy-cohort_females-at-birth').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Females at birth").next()
+      addE('usedBy').to('codeList')).property('label', "Females at birth").property('order', 1).next()
 
-
-g.V().hasId('_code_life-expectancy-cohort_males-at-age-65').
+g.V().hasId('_code_life-expectancy-cohort_males-at-birth').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_life-expectancy-cohort_males-at-age-65').property(single, 'listID', 'life-expectancy-cohort').property(single, 'value', "males-at-age-65")
+    property(id, '_code_life-expectancy-cohort_males-at-birth').property(single, 'listID', 'life-expectancy-cohort').property(single, 'value', "males-at-birth")
   ).next()
-  g.V().hasId('_code_list_life-expectancy-cohort_one-off').as('codeList').V().hasId('_code_life-expectancy-cohort_males-at-age-65').as('code').
+  g.V().hasId('_code_list_life-expectancy-cohort_one-off').as('codeList').V().hasId('_code_life-expectancy-cohort_males-at-birth').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Males at age 65").next()
-
+      addE('usedBy').to('codeList')).property('label', "Males at birth").property('order', 2).next()
 
 g.V().hasId('_code_life-expectancy-cohort_females-at-age-65').
   fold().coalesce(unfold(), addV('_code').
@@ -42,5 +28,12 @@ g.V().hasId('_code_life-expectancy-cohort_females-at-age-65').
   ).next()
   g.V().hasId('_code_list_life-expectancy-cohort_one-off').as('codeList').V().hasId('_code_life-expectancy-cohort_females-at-age-65').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Females at age 65").next()
+      addE('usedBy').to('codeList')).property('label', "Females at age 65").property('order', 3).next()
 
+g.V().hasId('_code_life-expectancy-cohort_males-at-age-65').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_life-expectancy-cohort_males-at-age-65').property(single, 'listID', 'life-expectancy-cohort').property(single, 'value', "males-at-age-65")
+  ).next()
+  g.V().hasId('_code_list_life-expectancy-cohort_one-off').as('codeList').V().hasId('_code_life-expectancy-cohort_males-at-age-65').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Males at age 65").property('order', 4).next()

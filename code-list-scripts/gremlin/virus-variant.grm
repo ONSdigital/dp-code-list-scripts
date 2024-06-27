@@ -1,0 +1,39 @@
+g.V().hasId('_code_list_virus-variant_one-off').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_virus-variant_one-off').
+    property(single, 'listID', "virus-variant").
+    property(single, 'label', "VirusVariant").
+    property(single, 'edition', "one-off")
+  ).next()
+
+g.V().hasId('_code_virus-variant_ct4').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_virus-variant_ct4').property(single, 'listID', 'virus-variant').property(single, 'value', "ct4")
+  ).next()
+  g.V().hasId('_code_list_virus-variant_one-off').as('codeList').V().hasId('_code_virus-variant_ct4').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "ct4").property('order', 1).next()
+
+g.V().hasId('_code_virus-variant_ct7').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_virus-variant_ct7').property(single, 'listID', 'virus-variant').property(single, 'value', "ct7")
+  ).next()
+  g.V().hasId('_code_list_virus-variant_one-off').as('codeList').V().hasId('_code_virus-variant_ct7').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "ct7").property('order', 2).next()
+
+g.V().hasId('_code_virus-variant_ctall').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_virus-variant_ctall').property(single, 'listID', 'virus-variant').property(single, 'value', "ctall")
+  ).next()
+  g.V().hasId('_code_list_virus-variant_one-off').as('codeList').V().hasId('_code_virus-variant_ctall').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "ctall").property('order', 3).next()
+
+g.V().hasId('_code_virus-variant_ctnot4not7').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_virus-variant_ctnot4not7').property(single, 'listID', 'virus-variant').property(single, 'value', "ctnot4not7")
+  ).next()
+  g.V().hasId('_code_list_virus-variant_one-off').as('codeList').V().hasId('_code_virus-variant_ctnot4not7').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "ctnot4not7").property('order', 4).next()

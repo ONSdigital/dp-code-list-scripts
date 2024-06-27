@@ -1,5 +1,3 @@
-
-
 g.V().hasId('_code_list_local-enterprise-partnership_one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(id, '_code_list_local-enterprise-partnership_one-off').
@@ -9,15 +7,13 @@ g.V().hasId('_code_list_local-enterprise-partnership_one-off').
     property(single, 'edition', "one-off")
   ).next()
 
-
 g.V().hasId('_code_geography_E37000001').
   fold().coalesce(unfold(), addV('_code').
     property(id, '_code_geography_E37000001').property(single, 'listID', 'geography').property(single, 'value', "E37000001")
   ).next()
   g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000001').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Black Country").next()
-
+      addE('usedBy').to('codeList')).property('label', "Black Country").property('order', 1).next()
 
 g.V().hasId('_code_geography_E37000002').
   fold().coalesce(unfold(), addV('_code').
@@ -25,8 +21,7 @@ g.V().hasId('_code_geography_E37000002').
   ).next()
   g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000002').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Buckinghamshire Thames Valley").next()
-
+      addE('usedBy').to('codeList')).property('label', "Buckinghamshire Thames Valley").property('order', 2).next()
 
 g.V().hasId('_code_geography_E37000003').
   fold().coalesce(unfold(), addV('_code').
@@ -34,8 +29,7 @@ g.V().hasId('_code_geography_E37000003').
   ).next()
   g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000003').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Cheshire and Warrington").next()
-
+      addE('usedBy').to('codeList')).property('label', "Cheshire and Warrington").property('order', 3).next()
 
 g.V().hasId('_code_geography_E37000004').
   fold().coalesce(unfold(), addV('_code').
@@ -43,8 +37,7 @@ g.V().hasId('_code_geography_E37000004').
   ).next()
   g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000004').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Coast to Capital").next()
-
+      addE('usedBy').to('codeList')).property('label', "Coast to Capital").property('order', 4).next()
 
 g.V().hasId('_code_geography_E37000005').
   fold().coalesce(unfold(), addV('_code').
@@ -52,8 +45,7 @@ g.V().hasId('_code_geography_E37000005').
   ).next()
   g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000005').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Cornwall and Isles of Scilly").next()
-
+      addE('usedBy').to('codeList')).property('label', "Cornwall and Isles of Scilly").property('order', 5).next()
 
 g.V().hasId('_code_geography_E37000006').
   fold().coalesce(unfold(), addV('_code').
@@ -61,8 +53,7 @@ g.V().hasId('_code_geography_E37000006').
   ).next()
   g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000006').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Coventry and Warwickshire").next()
-
+      addE('usedBy').to('codeList')).property('label', "Coventry and Warwickshire").property('order', 6).next()
 
 g.V().hasId('_code_geography_E37000007').
   fold().coalesce(unfold(), addV('_code').
@@ -70,8 +61,7 @@ g.V().hasId('_code_geography_E37000007').
   ).next()
   g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000007').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Cumbria").next()
-
+      addE('usedBy').to('codeList')).property('label', "Cumbria").property('order', 7).next()
 
 g.V().hasId('_code_geography_E37000008').
   fold().coalesce(unfold(), addV('_code').
@@ -79,8 +69,7 @@ g.V().hasId('_code_geography_E37000008').
   ).next()
   g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000008').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Derby, Derbyshire, Nottingham and Nottinghamshire").next()
-
+      addE('usedBy').to('codeList')).property('label', "Derby, Derbyshire, Nottingham and Nottinghamshire").property('order', 8).next()
 
 g.V().hasId('_code_geography_E37000009').
   fold().coalesce(unfold(), addV('_code').
@@ -88,8 +77,7 @@ g.V().hasId('_code_geography_E37000009').
   ).next()
   g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000009').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Dorset").next()
-
+      addE('usedBy').to('codeList')).property('label', "Dorset").property('order', 9).next()
 
 g.V().hasId('_code_geography_E37000010').
   fold().coalesce(unfold(), addV('_code').
@@ -97,8 +85,7 @@ g.V().hasId('_code_geography_E37000010').
   ).next()
   g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000010').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Enterprise M3").next()
-
+      addE('usedBy').to('codeList')).property('label', "Enterprise M3").property('order', 10).next()
 
 g.V().hasId('_code_geography_E37000011').
   fold().coalesce(unfold(), addV('_code').
@@ -106,8 +93,7 @@ g.V().hasId('_code_geography_E37000011').
   ).next()
   g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000011').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Gloucestershire").next()
-
+      addE('usedBy').to('codeList')).property('label', "Gloucestershire").property('order', 11).next()
 
 g.V().hasId('_code_geography_E37000012').
   fold().coalesce(unfold(), addV('_code').
@@ -115,386 +101,7 @@ g.V().hasId('_code_geography_E37000012').
   ).next()
   g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000012').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Greater Birmingham and Solihull").next()
-
-
-g.V().hasId('_code_geography_E37000014').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000014').property(single, 'listID', 'geography').property(single, 'value', "E37000014")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000014').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Greater Lincolnshire").next()
-
-
-g.V().hasId('_code_geography_E37000015').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000015').property(single, 'listID', 'geography').property(single, 'value', "E37000015")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000015').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Greater Manchester").next()
-
-
-g.V().hasId('_code_geography_E37000016').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000016').property(single, 'listID', 'geography').property(single, 'value', "E37000016")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000016').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Heart of the South West").next()
-
-
-g.V().hasId('_code_geography_E37000017').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000017').property(single, 'listID', 'geography').property(single, 'value', "E37000017")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000017').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Hertfordshire").next()
-
-
-g.V().hasId('_code_geography_E37000018').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000018').property(single, 'listID', 'geography').property(single, 'value', "E37000018")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000018').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Humber").next()
-
-
-g.V().hasId('_code_geography_E37000019').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000019').property(single, 'listID', 'geography').property(single, 'value', "E37000019")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000019').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Lancashire").next()
-
-
-g.V().hasId('_code_geography_E37000020').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000020').property(single, 'listID', 'geography').property(single, 'value', "E37000020")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000020').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Leeds City Region").next()
-
-
-g.V().hasId('_code_geography_E37000021').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000021').property(single, 'listID', 'geography').property(single, 'value', "E37000021")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000021').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Leicester and Leicestershire").next()
-
-
-g.V().hasId('_code_geography_E37000022').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000022').property(single, 'listID', 'geography').property(single, 'value', "E37000022")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000022').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Liverpool City Region").next()
-
-
-g.V().hasId('_code_geography_E37000023').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000023').property(single, 'listID', 'geography').property(single, 'value', "E37000023")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000023').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "London").next()
-
-
-g.V().hasId('_code_geography_E37000024').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000024').property(single, 'listID', 'geography').property(single, 'value', "E37000024")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000024').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "New Anglia").next()
-
-
-g.V().hasId('_code_geography_E37000025').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000025').property(single, 'listID', 'geography').property(single, 'value', "E37000025")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000025').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "North East").next()
-
-
-g.V().hasId('_code_geography_E37000027').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000027').property(single, 'listID', 'geography').property(single, 'value', "E37000027")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000027').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Oxfordshire").next()
-
-
-g.V().hasId('_code_geography_E37000029').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000029').property(single, 'listID', 'geography').property(single, 'value', "E37000029")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000029').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Solent").next()
-
-
-g.V().hasId('_code_geography_E37000030').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000030').property(single, 'listID', 'geography').property(single, 'value', "E37000030")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000030').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "South East").next()
-
-
-g.V().hasId('_code_geography_E37000032').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000032').property(single, 'listID', 'geography').property(single, 'value', "E37000032")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000032').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Stoke-on-Trent and Staffordshire").next()
-
-
-g.V().hasId('_code_geography_E37000033').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000033').property(single, 'listID', 'geography').property(single, 'value', "E37000033")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000033').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Swindon and Wiltshire").next()
-
-
-g.V().hasId('_code_geography_E37000034').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000034').property(single, 'listID', 'geography').property(single, 'value', "E37000034")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000034').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Tees Valley").next()
-
-
-g.V().hasId('_code_geography_E37000035').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000035').property(single, 'listID', 'geography').property(single, 'value', "E37000035")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000035').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Thames Valley Berkshire").next()
-
-
-g.V().hasId('_code_geography_E37000036').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000036').property(single, 'listID', 'geography').property(single, 'value', "E37000036")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000036').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "The Marches").next()
-
-
-g.V().hasId('_code_geography_E37000037').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000037').property(single, 'listID', 'geography').property(single, 'value', "E37000037")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000037').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "West of England").next()
-
-
-g.V().hasId('_code_geography_E37000038').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000038').property(single, 'listID', 'geography').property(single, 'value', "E37000038")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000038').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Worcestershire").next()
-
-
-g.V().hasId('_code_geography_E37000039').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000039').property(single, 'listID', 'geography').property(single, 'value', "E37000039")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000039').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "York, North Yorkshire and East Riding").next()
-
-
-g.V().hasId('_code_geography_E37000040').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000040').property(single, 'listID', 'geography').property(single, 'value', "E37000040")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000040').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Sheffield City Region").next()
-
-
-g.V().hasId('_code_geography_E37000041').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000041').property(single, 'listID', 'geography').property(single, 'value', "E37000041")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000041').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "South East Midlands").next()
-
-
-g.V().hasId('_code_geography_E37000042').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000042').property(single, 'listID', 'geography').property(single, 'value', "E37000042")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000042').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Greater Cambridge and Greater Peterborough").next()
-
-
-g.V().hasId('_code_geography_E37000043').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000043').property(single, 'listID', 'geography').property(single, 'value', "E37000043")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000043').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Buckinghamshire Thames Valley").next()
-
-
-g.V().hasId('_code_geography_E37000044').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000044').property(single, 'listID', 'geography').property(single, 'value', "E37000044")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000044').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Coast to Capital").next()
-
-
-g.V().hasId('_code_geography_E37000045').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000045').property(single, 'listID', 'geography').property(single, 'value', "E37000045")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000045').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Derby, Derbyshire, Nottingham and Nottinghamshire").next()
-
-
-g.V().hasId('_code_geography_E37000046').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000046').property(single, 'listID', 'geography').property(single, 'value', "E37000046")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000046').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Enterprise M3").next()
-
-
-g.V().hasId('_code_geography_E37000047').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000047').property(single, 'listID', 'geography').property(single, 'value', "E37000047")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000047').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Greater Cambridge and Greater Peterborough").next()
-
-
-g.V().hasId('_code_geography_E37000048').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000048').property(single, 'listID', 'geography').property(single, 'value', "E37000048")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000048').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Hertfordshire").next()
-
-
-g.V().hasId('_code_geography_E37000049').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000049').property(single, 'listID', 'geography').property(single, 'value', "E37000049")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000049').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Humber").next()
-
-
-g.V().hasId('_code_geography_E37000050').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000050').property(single, 'listID', 'geography').property(single, 'value', "E37000050")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000050').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Leeds City Region").next()
-
-
-g.V().hasId('_code_geography_E37000051').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000051').property(single, 'listID', 'geography').property(single, 'value', "E37000051")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000051').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "London").next()
-
-
-g.V().hasId('_code_geography_E37000052').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000052').property(single, 'listID', 'geography').property(single, 'value', "E37000052")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000052').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "New Anglia").next()
-
-
-g.V().hasId('_code_geography_E37000053').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000053').property(single, 'listID', 'geography').property(single, 'value', "E37000053")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000053').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Oxfordshire").next()
-
-
-g.V().hasId('_code_geography_E37000054').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000054').property(single, 'listID', 'geography').property(single, 'value', "E37000054")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000054').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Sheffield City Region").next()
-
-
-g.V().hasId('_code_geography_E37000055').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000055').property(single, 'listID', 'geography').property(single, 'value', "E37000055")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000055').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Solent").next()
-
-
-g.V().hasId('_code_geography_E37000056').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000056').property(single, 'listID', 'geography').property(single, 'value', "E37000056")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000056').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "South East").next()
-
-
-g.V().hasId('_code_geography_E37000057').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000057').property(single, 'listID', 'geography').property(single, 'value', "E37000057")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000057').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "South East Midlands").next()
-
-
-g.V().hasId('_code_geography_E37000058').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E37000058').property(single, 'listID', 'geography').property(single, 'value', "E37000058")
-  ).next()
-  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000058').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "York, North Yorkshire and East Riding").next()
-
+      addE('usedBy').to('codeList')).property('label', "Greater Birmingham and Solihull").property('order', 12).next()
 
 g.V().hasId('_code_geography_E37000013').
   fold().coalesce(unfold(), addV('_code').
@@ -502,8 +109,103 @@ g.V().hasId('_code_geography_E37000013').
   ).next()
   g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000013').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Greater Cambridge and Greater Peterborough").next()
+      addE('usedBy').to('codeList')).property('label', "Greater Cambridge and Greater Peterborough").property('order', 13).next()
 
+g.V().hasId('_code_geography_E37000014').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000014').property(single, 'listID', 'geography').property(single, 'value', "E37000014")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000014').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Greater Lincolnshire").property('order', 14).next()
+
+g.V().hasId('_code_geography_E37000015').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000015').property(single, 'listID', 'geography').property(single, 'value', "E37000015")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000015').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Greater Manchester").property('order', 15).next()
+
+g.V().hasId('_code_geography_E37000016').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000016').property(single, 'listID', 'geography').property(single, 'value', "E37000016")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000016').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Heart of the South West").property('order', 16).next()
+
+g.V().hasId('_code_geography_E37000017').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000017').property(single, 'listID', 'geography').property(single, 'value', "E37000017")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000017').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Hertfordshire").property('order', 17).next()
+
+g.V().hasId('_code_geography_E37000018').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000018').property(single, 'listID', 'geography').property(single, 'value', "E37000018")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000018').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Humber").property('order', 18).next()
+
+g.V().hasId('_code_geography_E37000019').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000019').property(single, 'listID', 'geography').property(single, 'value', "E37000019")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000019').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Lancashire").property('order', 19).next()
+
+g.V().hasId('_code_geography_E37000020').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000020').property(single, 'listID', 'geography').property(single, 'value', "E37000020")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000020').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Leeds City Region").property('order', 20).next()
+
+g.V().hasId('_code_geography_E37000021').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000021').property(single, 'listID', 'geography').property(single, 'value', "E37000021")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000021').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Leicester and Leicestershire").property('order', 21).next()
+
+g.V().hasId('_code_geography_E37000022').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000022').property(single, 'listID', 'geography').property(single, 'value', "E37000022")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000022').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Liverpool City Region").property('order', 22).next()
+
+g.V().hasId('_code_geography_E37000023').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000023').property(single, 'listID', 'geography').property(single, 'value', "E37000023")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000023').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "London").property('order', 23).next()
+
+g.V().hasId('_code_geography_E37000024').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000024').property(single, 'listID', 'geography').property(single, 'value', "E37000024")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000024').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "New Anglia").property('order', 24).next()
+
+g.V().hasId('_code_geography_E37000025').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000025').property(single, 'listID', 'geography').property(single, 'value', "E37000025")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000025').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "North East").property('order', 25).next()
 
 g.V().hasId('_code_geography_E37000026').
   fold().coalesce(unfold(), addV('_code').
@@ -511,8 +213,31 @@ g.V().hasId('_code_geography_E37000026').
   ).next()
   g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000026').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Northamptonshire").next()
+      addE('usedBy').to('codeList')).property('label', "Northamptonshire").property('order', 26).next()
 
+g.V().hasId('_code_geography_E37000027').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000027').property(single, 'listID', 'geography').property(single, 'value', "E37000027")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000027').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Oxfordshire").property('order', 27).next()
+
+g.V().hasId('_code_geography_E37000029').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000029').property(single, 'listID', 'geography').property(single, 'value', "E37000029")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000029').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Solent").property('order', 28).next()
+
+g.V().hasId('_code_geography_E37000030').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000030').property(single, 'listID', 'geography').property(single, 'value', "E37000030")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000030').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "South East").property('order', 29).next()
 
 g.V().hasId('_code_geography_E37000031').
   fold().coalesce(unfold(), addV('_code').
@@ -520,5 +245,220 @@ g.V().hasId('_code_geography_E37000031').
   ).next()
   g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000031').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "South East Midlands").next()
+      addE('usedBy').to('codeList')).property('label', "South East Midlands").property('order', 30).next()
 
+g.V().hasId('_code_geography_E37000032').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000032').property(single, 'listID', 'geography').property(single, 'value', "E37000032")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000032').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Stoke-on-Trent and Staffordshire").property('order', 31).next()
+
+g.V().hasId('_code_geography_E37000033').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000033').property(single, 'listID', 'geography').property(single, 'value', "E37000033")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000033').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Swindon and Wiltshire").property('order', 32).next()
+
+g.V().hasId('_code_geography_E37000034').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000034').property(single, 'listID', 'geography').property(single, 'value', "E37000034")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000034').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Tees Valley").property('order', 33).next()
+
+g.V().hasId('_code_geography_E37000035').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000035').property(single, 'listID', 'geography').property(single, 'value', "E37000035")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000035').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Thames Valley Berkshire").property('order', 34).next()
+
+g.V().hasId('_code_geography_E37000036').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000036').property(single, 'listID', 'geography').property(single, 'value', "E37000036")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000036').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "The Marches").property('order', 35).next()
+
+g.V().hasId('_code_geography_E37000037').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000037').property(single, 'listID', 'geography').property(single, 'value', "E37000037")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000037').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "West of England").property('order', 36).next()
+
+g.V().hasId('_code_geography_E37000038').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000038').property(single, 'listID', 'geography').property(single, 'value', "E37000038")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000038').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Worcestershire").property('order', 37).next()
+
+g.V().hasId('_code_geography_E37000039').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000039').property(single, 'listID', 'geography').property(single, 'value', "E37000039")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000039').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "York, North Yorkshire and East Riding").property('order', 38).next()
+
+g.V().hasId('_code_geography_E37000040').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000040').property(single, 'listID', 'geography').property(single, 'value', "E37000040")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000040').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Sheffield City Region").property('order', 39).next()
+
+g.V().hasId('_code_geography_E37000041').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000041').property(single, 'listID', 'geography').property(single, 'value', "E37000041")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000041').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "South East Midlands").property('order', 40).next()
+
+g.V().hasId('_code_geography_E37000042').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000042').property(single, 'listID', 'geography').property(single, 'value', "E37000042")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000042').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Greater Cambridge and Greater Peterborough").property('order', 41).next()
+
+g.V().hasId('_code_geography_E37000043').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000043').property(single, 'listID', 'geography').property(single, 'value', "E37000043")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000043').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Buckinghamshire Thames Valley").property('order', 42).next()
+
+g.V().hasId('_code_geography_E37000044').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000044').property(single, 'listID', 'geography').property(single, 'value', "E37000044")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000044').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Coast to Capital").property('order', 43).next()
+
+g.V().hasId('_code_geography_E37000045').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000045').property(single, 'listID', 'geography').property(single, 'value', "E37000045")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000045').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Derby, Derbyshire, Nottingham and Nottinghamshire").property('order', 44).next()
+
+g.V().hasId('_code_geography_E37000046').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000046').property(single, 'listID', 'geography').property(single, 'value', "E37000046")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000046').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Enterprise M3").property('order', 45).next()
+
+g.V().hasId('_code_geography_E37000047').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000047').property(single, 'listID', 'geography').property(single, 'value', "E37000047")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000047').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Greater Cambridge and Greater Peterborough").property('order', 46).next()
+
+g.V().hasId('_code_geography_E37000048').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000048').property(single, 'listID', 'geography').property(single, 'value', "E37000048")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000048').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Hertfordshire").property('order', 47).next()
+
+g.V().hasId('_code_geography_E37000049').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000049').property(single, 'listID', 'geography').property(single, 'value', "E37000049")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000049').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Humber").property('order', 48).next()
+
+g.V().hasId('_code_geography_E37000050').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000050').property(single, 'listID', 'geography').property(single, 'value', "E37000050")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000050').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Leeds City Region").property('order', 49).next()
+
+g.V().hasId('_code_geography_E37000051').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000051').property(single, 'listID', 'geography').property(single, 'value', "E37000051")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000051').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "London").property('order', 50).next()
+
+g.V().hasId('_code_geography_E37000052').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000052').property(single, 'listID', 'geography').property(single, 'value', "E37000052")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000052').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "New Anglia").property('order', 51).next()
+
+g.V().hasId('_code_geography_E37000053').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000053').property(single, 'listID', 'geography').property(single, 'value', "E37000053")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000053').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Oxfordshire").property('order', 52).next()
+
+g.V().hasId('_code_geography_E37000054').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000054').property(single, 'listID', 'geography').property(single, 'value', "E37000054")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000054').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Sheffield City Region").property('order', 53).next()
+
+g.V().hasId('_code_geography_E37000055').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000055').property(single, 'listID', 'geography').property(single, 'value', "E37000055")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000055').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Solent").property('order', 54).next()
+
+g.V().hasId('_code_geography_E37000056').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000056').property(single, 'listID', 'geography').property(single, 'value', "E37000056")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000056').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "South East").property('order', 55).next()
+
+g.V().hasId('_code_geography_E37000057').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000057').property(single, 'listID', 'geography').property(single, 'value', "E37000057")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000057').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "South East Midlands").property('order', 56).next()
+
+g.V().hasId('_code_geography_E37000058').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_E37000058').property(single, 'listID', 'geography').property(single, 'value', "E37000058")
+  ).next()
+  g.V().hasId('_code_list_local-enterprise-partnership_one-off').as('codeList').V().hasId('_code_geography_E37000058').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "York, North Yorkshire and East Riding").property('order', 57).next()

@@ -1,5 +1,3 @@
-
-
 g.V().hasId('_code_list_calendar-month_one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(id, '_code_list_calendar-month_one-off').
@@ -8,87 +6,13 @@ g.V().hasId('_code_list_calendar-month_one-off').
     property(single, 'edition', "one-off")
   ).next()
 
-
-g.V().hasId('_code_calendar-month_april').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_calendar-month_april').property(single, 'listID', 'calendar-month').property(single, 'value', "april")
-  ).next()
-  g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_april').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "April").next()
-
-
-g.V().hasId('_code_calendar-month_august').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_calendar-month_august').property(single, 'listID', 'calendar-month').property(single, 'value', "august")
-  ).next()
-  g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_august').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "August").next()
-
-
 g.V().hasId('_code_calendar-month_december').
   fold().coalesce(unfold(), addV('_code').
     property(id, '_code_calendar-month_december').property(single, 'listID', 'calendar-month').property(single, 'value', "december")
   ).next()
   g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_december').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "December").next()
-
-
-g.V().hasId('_code_calendar-month_february').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_calendar-month_february').property(single, 'listID', 'calendar-month').property(single, 'value', "february")
-  ).next()
-  g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_february').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "February").next()
-
-
-g.V().hasId('_code_calendar-month_january').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_calendar-month_january').property(single, 'listID', 'calendar-month').property(single, 'value', "january")
-  ).next()
-  g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_january').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "January").next()
-
-
-g.V().hasId('_code_calendar-month_july').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_calendar-month_july').property(single, 'listID', 'calendar-month').property(single, 'value', "july")
-  ).next()
-  g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_july').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "July").next()
-
-
-g.V().hasId('_code_calendar-month_june').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_calendar-month_june').property(single, 'listID', 'calendar-month').property(single, 'value', "june")
-  ).next()
-  g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_june').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "June").next()
-
-
-g.V().hasId('_code_calendar-month_march').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_calendar-month_march').property(single, 'listID', 'calendar-month').property(single, 'value', "march")
-  ).next()
-  g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_march').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "March").next()
-
-
-g.V().hasId('_code_calendar-month_may').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_calendar-month_may').property(single, 'listID', 'calendar-month').property(single, 'value', "may")
-  ).next()
-  g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_may').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "May").next()
-
+      addE('usedBy').to('codeList')).property('label', "December").property('order', 1).next()
 
 g.V().hasId('_code_calendar-month_november').
   fold().coalesce(unfold(), addV('_code').
@@ -96,8 +20,7 @@ g.V().hasId('_code_calendar-month_november').
   ).next()
   g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_november').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "November").next()
-
+      addE('usedBy').to('codeList')).property('label', "November").property('order', 2).next()
 
 g.V().hasId('_code_calendar-month_october').
   fold().coalesce(unfold(), addV('_code').
@@ -105,8 +28,7 @@ g.V().hasId('_code_calendar-month_october').
   ).next()
   g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_october').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "October").next()
-
+      addE('usedBy').to('codeList')).property('label', "October").property('order', 3).next()
 
 g.V().hasId('_code_calendar-month_september').
   fold().coalesce(unfold(), addV('_code').
@@ -114,5 +36,68 @@ g.V().hasId('_code_calendar-month_september').
   ).next()
   g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_september').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "September").next()
+      addE('usedBy').to('codeList')).property('label', "September").property('order', 4).next()
 
+g.V().hasId('_code_calendar-month_august').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_calendar-month_august').property(single, 'listID', 'calendar-month').property(single, 'value', "august")
+  ).next()
+  g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_august').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "August").property('order', 5).next()
+
+g.V().hasId('_code_calendar-month_july').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_calendar-month_july').property(single, 'listID', 'calendar-month').property(single, 'value', "july")
+  ).next()
+  g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_july').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "July").property('order', 6).next()
+
+g.V().hasId('_code_calendar-month_june').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_calendar-month_june').property(single, 'listID', 'calendar-month').property(single, 'value', "june")
+  ).next()
+  g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_june').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "June").property('order', 7).next()
+
+g.V().hasId('_code_calendar-month_may').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_calendar-month_may').property(single, 'listID', 'calendar-month').property(single, 'value', "may")
+  ).next()
+  g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_may').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "May").property('order', 8).next()
+
+g.V().hasId('_code_calendar-month_april').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_calendar-month_april').property(single, 'listID', 'calendar-month').property(single, 'value', "april")
+  ).next()
+  g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_april').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "April").property('order', 9).next()
+
+g.V().hasId('_code_calendar-month_march').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_calendar-month_march').property(single, 'listID', 'calendar-month').property(single, 'value', "march")
+  ).next()
+  g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_march').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "March").property('order', 10).next()
+
+g.V().hasId('_code_calendar-month_february').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_calendar-month_february').property(single, 'listID', 'calendar-month').property(single, 'value', "february")
+  ).next()
+  g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_february').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "February").property('order', 11).next()
+
+g.V().hasId('_code_calendar-month_january').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_calendar-month_january').property(single, 'listID', 'calendar-month').property(single, 'value', "january")
+  ).next()
+  g.V().hasId('_code_list_calendar-month_one-off').as('codeList').V().hasId('_code_calendar-month_january').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "January").property('order', 12).next()

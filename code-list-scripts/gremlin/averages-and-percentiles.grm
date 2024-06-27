@@ -6,107 +6,13 @@ g.V().hasId('_code_list_averages-and-percentiles_one-off').
     property(single, 'edition', "one-off")
   ).next()
 
-
-
-
-g.V().hasId('_code_averages-and-percentiles_80').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_averages-and-percentiles_80').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "80")
-  ).next()
-  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_80').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "80").next()
-
-
-g.V().hasId('_code_averages-and-percentiles_60').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_averages-and-percentiles_60').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "60")
-  ).next()
-  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_60').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "60").next()
-
-
-g.V().hasId('_code_averages-and-percentiles_median').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_averages-and-percentiles_median').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "median")
-  ).next()
-  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_median').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Median").next()
-
-
-g.V().hasId('_code_averages-and-percentiles_25').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_averages-and-percentiles_25').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "25")
-  ).next()
-  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_25').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "25").next()
-
-
-g.V().hasId('_code_averages-and-percentiles_70').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_averages-and-percentiles_70').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "70")
-  ).next()
-  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_70').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "70").next()
-
-
-g.V().hasId('_code_averages-and-percentiles_75').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_averages-and-percentiles_75').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "75")
-  ).next()
-  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_75').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "75").next()
-
-
-g.V().hasId('_code_averages-and-percentiles_90').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_averages-and-percentiles_90').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "90")
-  ).next()
-  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_90').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "90").next()
-
-
-g.V().hasId('_code_averages-and-percentiles_30').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_averages-and-percentiles_30').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "30")
-  ).next()
-  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_30').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "30").next()
-
-
 g.V().hasId('_code_averages-and-percentiles_10').
   fold().coalesce(unfold(), addV('_code').
     property(id, '_code_averages-and-percentiles_10').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "10")
   ).next()
   g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_10').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "10").next()
-
-
-g.V().hasId('_code_averages-and-percentiles_40').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_averages-and-percentiles_40').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "40")
-  ).next()
-  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_40').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "40").next()
-
-
-g.V().hasId('_code_averages-and-percentiles_mean').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_averages-and-percentiles_mean').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "mean")
-  ).next()
-  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_mean').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Mean").next()
-
+      addE('usedBy').to('codeList')).property('label', "10").property('order', 1).next()
 
 g.V().hasId('_code_averages-and-percentiles_20').
   fold().coalesce(unfold(), addV('_code').
@@ -114,5 +20,84 @@ g.V().hasId('_code_averages-and-percentiles_20').
   ).next()
   g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_20').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "20").next()
+      addE('usedBy').to('codeList')).property('label', "20").property('order', 2).next()
 
+g.V().hasId('_code_averages-and-percentiles_25').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_averages-and-percentiles_25').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "25")
+  ).next()
+  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_25').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "25").property('order', 3).next()
+
+g.V().hasId('_code_averages-and-percentiles_30').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_averages-and-percentiles_30').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "30")
+  ).next()
+  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_30').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "30").property('order', 4).next()
+
+g.V().hasId('_code_averages-and-percentiles_40').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_averages-and-percentiles_40').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "40")
+  ).next()
+  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_40').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "40").property('order', 5).next()
+
+g.V().hasId('_code_averages-and-percentiles_60').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_averages-and-percentiles_60').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "60")
+  ).next()
+  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_60').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "60").property('order', 6).next()
+
+g.V().hasId('_code_averages-and-percentiles_70').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_averages-and-percentiles_70').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "70")
+  ).next()
+  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_70').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "70").property('order', 7).next()
+
+g.V().hasId('_code_averages-and-percentiles_75').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_averages-and-percentiles_75').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "75")
+  ).next()
+  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_75').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "75").property('order', 8).next()
+
+g.V().hasId('_code_averages-and-percentiles_80').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_averages-and-percentiles_80').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "80")
+  ).next()
+  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_80').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "80").property('order', 9).next()
+
+g.V().hasId('_code_averages-and-percentiles_90').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_averages-and-percentiles_90').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "90")
+  ).next()
+  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_90').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "90").property('order', 10).next()
+
+g.V().hasId('_code_averages-and-percentiles_mean').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_averages-and-percentiles_mean').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "mean")
+  ).next()
+  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_mean').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Mean").property('order', 11).next()
+
+g.V().hasId('_code_averages-and-percentiles_median').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_averages-and-percentiles_median').property(single, 'listID', 'averages-and-percentiles').property(single, 'value', "median")
+  ).next()
+  g.V().hasId('_code_list_averages-and-percentiles_one-off').as('codeList').V().hasId('_code_averages-and-percentiles_median').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Median").property('order', 12).next()

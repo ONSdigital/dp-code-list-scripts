@@ -1,0 +1,73 @@
+
+
+g.V().hasId('_code_list_census-2011-tenure_2011').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_census-2011-tenure_2011').
+    property(single, 'listID', "census-2011-tenure").
+    property(single, 'edition', "2011").
+    property(single, 'label', "Tenure")
+  ).next()
+
+
+g.V().hasId('_code_census-2011-tenure_all-categories-tenure').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census-2011-tenure_all-categories-tenure').property(single, 'listID', 'census-2011-tenure').property(single, 'value', "all-categories-tenure")
+  ).next()
+  g.V().hasId('_code_list_census-2011-tenure_2011').as('codeList').V().hasId('_code_census-2011-tenure_all-categories-tenure').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "All categories: Tenure").next()
+
+
+g.V().hasId('_code_census-2011-tenure_owned-or-shared-ownership-total').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census-2011-tenure_owned-or-shared-ownership-total').property(single, 'listID', 'census-2011-tenure').property(single, 'value', "owned-or-shared-ownership-total")
+  ).next()
+  g.V().hasId('_code_list_census-2011-tenure_2011').as('codeList').V().hasId('_code_census-2011-tenure_owned-or-shared-ownership-total').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Owned or shared ownership: Total").next()
+
+
+g.V().hasId('_code_census-2011-tenure_owned-owned-outright').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census-2011-tenure_owned-owned-outright').property(single, 'listID', 'census-2011-tenure').property(single, 'value', "owned-owned-outright")
+  ).next()
+  g.V().hasId('_code_list_census-2011-tenure_2011').as('codeList').V().hasId('_code_census-2011-tenure_owned-owned-outright').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Owned: Owned outright").next()
+
+
+g.V().hasId('_code_census-2011-tenure_owned-owned-with-a-mortgage-or-loan-or-shared-ownership').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census-2011-tenure_owned-owned-with-a-mortgage-or-loan-or-shared-ownership').property(single, 'listID', 'census-2011-tenure').property(single, 'value', "owned-owned-with-a-mortgage-or-loan-or-shared-ownership")
+  ).next()
+  g.V().hasId('_code_list_census-2011-tenure_2011').as('codeList').V().hasId('_code_census-2011-tenure_owned-owned-with-a-mortgage-or-loan-or-shared-ownership').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Owned: Owned with a mortgage or loan or shared ownership").next()
+
+
+g.V().hasId('_code_census-2011-tenure_rented-or-living-rent-free-total').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census-2011-tenure_rented-or-living-rent-free-total').property(single, 'listID', 'census-2011-tenure').property(single, 'value', "rented-or-living-rent-free-total")
+  ).next()
+  g.V().hasId('_code_list_census-2011-tenure_2011').as('codeList').V().hasId('_code_census-2011-tenure_rented-or-living-rent-free-total').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Rented or living rent free: Total").next()
+
+
+g.V().hasId('_code_census-2011-tenure_rented-social-rented').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census-2011-tenure_rented-social-rented').property(single, 'listID', 'census-2011-tenure').property(single, 'value', "rented-social-rented")
+  ).next()
+  g.V().hasId('_code_list_census-2011-tenure_2011').as('codeList').V().hasId('_code_census-2011-tenure_rented-social-rented').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Rented: Social rented").next()
+
+
+g.V().hasId('_code_census-2011-tenure_rented-private-rented-or-living-rent-free').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census-2011-tenure_rented-private-rented-or-living-rent-free').property(single, 'listID', 'census-2011-tenure').property(single, 'value', "rented-private-rented-or-living-rent-free")
+  ).next()
+  g.V().hasId('_code_list_census-2011-tenure_2011').as('codeList').V().hasId('_code_census-2011-tenure_rented-private-rented-or-living-rent-free').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Rented: Private rented or living rent free").next()
+

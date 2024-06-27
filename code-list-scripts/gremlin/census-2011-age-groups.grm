@@ -1,0 +1,55 @@
+
+
+g.V().hasId('_code_list_census-2011-age-groups_2011').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_census-2011-age-groups_2011').
+    property(single, 'listID', "census-2011-age-groups").
+    property(single, 'label', "AgeGroups").
+    property(single, 'edition', "2011")
+  ).next()
+
+
+g.V().hasId('_code_census-2011-age-groups_all-ages').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census-2011-age-groups_all-ages').property(single, 'listID', 'census-2011-age-groups').property(single, 'value', "all-ages")
+  ).next()
+  g.V().hasId('_code_list_census-2011-age-groups_2011').as('codeList').V().hasId('_code_census-2011-age-groups_all-ages').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "All ages").next()
+
+
+g.V().hasId('_code_census-2011-age-groups_0-15').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census-2011-age-groups_0-15').property(single, 'listID', 'census-2011-age-groups').property(single, 'value', "0-15")
+  ).next()
+  g.V().hasId('_code_list_census-2011-age-groups_2011').as('codeList').V().hasId('_code_census-2011-age-groups_0-15').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "0 to 15").next()
+
+
+g.V().hasId('_code_census-2011-age-groups_16-49').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census-2011-age-groups_16-49').property(single, 'listID', 'census-2011-age-groups').property(single, 'value', "16-49")
+  ).next()
+  g.V().hasId('_code_list_census-2011-age-groups_2011').as('codeList').V().hasId('_code_census-2011-age-groups_16-49').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "16 to 49").next()
+
+
+g.V().hasId('_code_census-2011-age-groups_50-64').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census-2011-age-groups_50-64').property(single, 'listID', 'census-2011-age-groups').property(single, 'value', "50-64")
+  ).next()
+  g.V().hasId('_code_list_census-2011-age-groups_2011').as('codeList').V().hasId('_code_census-2011-age-groups_50-64').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "50 to 64").next()
+
+
+g.V().hasId('_code_census-2011-age-groups_65+').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census-2011-age-groups_65+').property(single, 'listID', 'census-2011-age-groups').property(single, 'value', "65+")
+  ).next()
+  g.V().hasId('_code_list_census-2011-age-groups_2011').as('codeList').V().hasId('_code_census-2011-age-groups_65+').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "65 and over").next()
+

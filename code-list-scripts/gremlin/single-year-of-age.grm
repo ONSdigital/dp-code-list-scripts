@@ -6,45 +6,13 @@ g.V().hasId('_code_list_single-year-of-age_one-off').
     property(single, 'edition', "one-off")
   ).next()
 
-
-
-
-
-g.V().hasId('_code_single-year-of-age_44').
+g.V().hasId('_code_single-year-of-age_total').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_44').property(single, 'listID', 'single-year-of-age').property(single, 'value', "44")
+    property(id, '_code_single-year-of-age_total').property(single, 'listID', 'single-year-of-age').property(single, 'value', "total")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_44').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_total').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "44").next()
-
-
-g.V().hasId('_code_single-year-of-age_1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_1').property(single, 'listID', 'single-year-of-age').property(single, 'value', "1")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1").next()
-
-
-g.V().hasId('_code_single-year-of-age_5').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_5').property(single, 'listID', 'single-year-of-age').property(single, 'value', "5")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_5').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "5").next()
-
-
-g.V().hasId('_code_single-year-of-age_6').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_6').property(single, 'listID', 'single-year-of-age').property(single, 'value', "6")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_6').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "6").next()
-
+      addE('usedBy').to('codeList')).property('label', "Total").property('order', 1).next()
 
 g.V().hasId('_code_single-year-of-age_0').
   fold().coalesce(unfold(), addV('_code').
@@ -52,89 +20,15 @@ g.V().hasId('_code_single-year-of-age_0').
   ).next()
   g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_0').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "0").next()
+      addE('usedBy').to('codeList')).property('label', "0").property('order', 2).next()
 
-
-g.V().hasId('_code_single-year-of-age_31').
+g.V().hasId('_code_single-year-of-age_1').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_31').property(single, 'listID', 'single-year-of-age').property(single, 'value', "31")
+    property(id, '_code_single-year-of-age_1').property(single, 'listID', 'single-year-of-age').property(single, 'value', "1")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_31').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_1').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "31").next()
-
-
-g.V().hasId('_code_single-year-of-age_20').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_20').property(single, 'listID', 'single-year-of-age').property(single, 'value', "20")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_20').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "20").next()
-
-
-g.V().hasId('_code_single-year-of-age_26').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_26').property(single, 'listID', 'single-year-of-age').property(single, 'value', "26")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_26').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "26").next()
-
-
-g.V().hasId('_code_single-year-of-age_3').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_3').property(single, 'listID', 'single-year-of-age').property(single, 'value', "3")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_3').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "3").next()
-
-
-g.V().hasId('_code_single-year-of-age_23').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_23').property(single, 'listID', 'single-year-of-age').property(single, 'value', "23")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_23').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "23").next()
-
-
-g.V().hasId('_code_single-year-of-age_37').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_37').property(single, 'listID', 'single-year-of-age').property(single, 'value', "37")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_37').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "37").next()
-
-
-g.V().hasId('_code_single-year-of-age_14').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_14').property(single, 'listID', 'single-year-of-age').property(single, 'value', "14")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_14').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "14").next()
-
-
-g.V().hasId('_code_single-year-of-age_21').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_21').property(single, 'listID', 'single-year-of-age').property(single, 'value', "21")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_21').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "21").next()
-
-
-g.V().hasId('_code_single-year-of-age_8').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_8').property(single, 'listID', 'single-year-of-age').property(single, 'value', "8")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_8').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "8").next()
-
+      addE('usedBy').to('codeList')).property('label', "1").property('order', 3).next()
 
 g.V().hasId('_code_single-year-of-age_2').
   fold().coalesce(unfold(), addV('_code').
@@ -142,116 +36,15 @@ g.V().hasId('_code_single-year-of-age_2').
   ).next()
   g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_2').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "2").next()
+      addE('usedBy').to('codeList')).property('label', "2").property('order', 4).next()
 
-
-g.V().hasId('_code_single-year-of-age_18').
+g.V().hasId('_code_single-year-of-age_3').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_18').property(single, 'listID', 'single-year-of-age').property(single, 'value', "18")
+    property(id, '_code_single-year-of-age_3').property(single, 'listID', 'single-year-of-age').property(single, 'value', "3")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_18').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_3').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "18").next()
-
-
-g.V().hasId('_code_single-year-of-age_22').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_22').property(single, 'listID', 'single-year-of-age').property(single, 'value', "22")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_22').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "22").next()
-
-
-g.V().hasId('_code_single-year-of-age_27').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_27').property(single, 'listID', 'single-year-of-age').property(single, 'value', "27")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_27').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "27").next()
-
-
-g.V().hasId('_code_single-year-of-age_39').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_39').property(single, 'listID', 'single-year-of-age').property(single, 'value', "39")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_39').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "39").next()
-
-
-g.V().hasId('_code_single-year-of-age_12').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_12').property(single, 'listID', 'single-year-of-age').property(single, 'value', "12")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_12').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "12").next()
-
-
-g.V().hasId('_code_single-year-of-age_38').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_38').property(single, 'listID', 'single-year-of-age').property(single, 'value', "38")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_38').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "38").next()
-
-
-g.V().hasId('_code_single-year-of-age_34').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_34').property(single, 'listID', 'single-year-of-age').property(single, 'value', "34")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_34').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "34").next()
-
-
-g.V().hasId('_code_single-year-of-age_36').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_36').property(single, 'listID', 'single-year-of-age').property(single, 'value', "36")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_36').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "36").next()
-
-
-g.V().hasId('_code_single-year-of-age_7').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_7').property(single, 'listID', 'single-year-of-age').property(single, 'value', "7")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_7').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "7").next()
-
-
-g.V().hasId('_code_single-year-of-age_9').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_9').property(single, 'listID', 'single-year-of-age').property(single, 'value', "9")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_9').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "9").next()
-
-
-g.V().hasId('_code_single-year-of-age_35').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_35').property(single, 'listID', 'single-year-of-age').property(single, 'value', "35")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_35').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "35").next()
-
-
-g.V().hasId('_code_single-year-of-age_53').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_53').property(single, 'listID', 'single-year-of-age').property(single, 'value', "53")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_53').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "53").next()
-
+      addE('usedBy').to('codeList')).property('label', "3").property('order', 5).next()
 
 g.V().hasId('_code_single-year-of-age_4').
   fold().coalesce(unfold(), addV('_code').
@@ -259,71 +52,47 @@ g.V().hasId('_code_single-year-of-age_4').
   ).next()
   g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_4').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "4").next()
+      addE('usedBy').to('codeList')).property('label', "4").property('order', 6).next()
 
-
-g.V().hasId('_code_single-year-of-age_11').
+g.V().hasId('_code_single-year-of-age_5').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_11').property(single, 'listID', 'single-year-of-age').property(single, 'value', "11")
+    property(id, '_code_single-year-of-age_5').property(single, 'listID', 'single-year-of-age').property(single, 'value', "5")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_11').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_5').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "11").next()
+      addE('usedBy').to('codeList')).property('label', "5").property('order', 7).next()
 
-
-g.V().hasId('_code_single-year-of-age_32').
+g.V().hasId('_code_single-year-of-age_6').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_32').property(single, 'listID', 'single-year-of-age').property(single, 'value', "32")
+    property(id, '_code_single-year-of-age_6').property(single, 'listID', 'single-year-of-age').property(single, 'value', "6")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_32').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_6').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "32").next()
+      addE('usedBy').to('codeList')).property('label', "6").property('order', 8).next()
 
-
-g.V().hasId('_code_single-year-of-age_13').
+g.V().hasId('_code_single-year-of-age_7').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_13').property(single, 'listID', 'single-year-of-age').property(single, 'value', "13")
+    property(id, '_code_single-year-of-age_7').property(single, 'listID', 'single-year-of-age').property(single, 'value', "7")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_13').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_7').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "13").next()
+      addE('usedBy').to('codeList')).property('label', "7").property('order', 9).next()
 
-
-g.V().hasId('_code_single-year-of-age_33').
+g.V().hasId('_code_single-year-of-age_8').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_33').property(single, 'listID', 'single-year-of-age').property(single, 'value', "33")
+    property(id, '_code_single-year-of-age_8').property(single, 'listID', 'single-year-of-age').property(single, 'value', "8")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_33').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_8').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "33").next()
+      addE('usedBy').to('codeList')).property('label', "8").property('order', 10).next()
 
-
-g.V().hasId('_code_single-year-of-age_30').
+g.V().hasId('_code_single-year-of-age_9').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_30').property(single, 'listID', 'single-year-of-age').property(single, 'value', "30")
+    property(id, '_code_single-year-of-age_9').property(single, 'listID', 'single-year-of-age').property(single, 'value', "9")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_30').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_9').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "30").next()
-
-
-g.V().hasId('_code_single-year-of-age_19').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_19').property(single, 'listID', 'single-year-of-age').property(single, 'value', "19")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_19').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "19").next()
-
-
-g.V().hasId('_code_single-year-of-age_24').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_24').property(single, 'listID', 'single-year-of-age').property(single, 'value', "24")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_24').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "24").next()
-
+      addE('usedBy').to('codeList')).property('label', "9").property('order', 11).next()
 
 g.V().hasId('_code_single-year-of-age_10').
   fold().coalesce(unfold(), addV('_code').
@@ -331,8 +100,39 @@ g.V().hasId('_code_single-year-of-age_10').
   ).next()
   g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_10').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "10").next()
+      addE('usedBy').to('codeList')).property('label', "10").property('order', 12).next()
 
+g.V().hasId('_code_single-year-of-age_11').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_11').property(single, 'listID', 'single-year-of-age').property(single, 'value', "11")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_11').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "11").property('order', 13).next()
+
+g.V().hasId('_code_single-year-of-age_12').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_12').property(single, 'listID', 'single-year-of-age').property(single, 'value', "12")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_12').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "12").property('order', 14).next()
+
+g.V().hasId('_code_single-year-of-age_13').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_13').property(single, 'listID', 'single-year-of-age').property(single, 'value', "13")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_13').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "13").property('order', 15).next()
+
+g.V().hasId('_code_single-year-of-age_14').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_14').property(single, 'listID', 'single-year-of-age').property(single, 'value', "14")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_14').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "14").property('order', 16).next()
 
 g.V().hasId('_code_single-year-of-age_15').
   fold().coalesce(unfold(), addV('_code').
@@ -340,8 +140,7 @@ g.V().hasId('_code_single-year-of-age_15').
   ).next()
   g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_15').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "15").next()
-
+      addE('usedBy').to('codeList')).property('label', "15").property('order', 17).next()
 
 g.V().hasId('_code_single-year-of-age_16').
   fold().coalesce(unfold(), addV('_code').
@@ -349,8 +148,7 @@ g.V().hasId('_code_single-year-of-age_16').
   ).next()
   g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_16').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "16").next()
-
+      addE('usedBy').to('codeList')).property('label', "16").property('order', 18).next()
 
 g.V().hasId('_code_single-year-of-age_17').
   fold().coalesce(unfold(), addV('_code').
@@ -358,179 +156,63 @@ g.V().hasId('_code_single-year-of-age_17').
   ).next()
   g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_17').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "17").next()
+      addE('usedBy').to('codeList')).property('label', "17").property('order', 19).next()
 
-
-g.V().hasId('_code_single-year-of-age_40').
+g.V().hasId('_code_single-year-of-age_18').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_40').property(single, 'listID', 'single-year-of-age').property(single, 'value', "40")
+    property(id, '_code_single-year-of-age_18').property(single, 'listID', 'single-year-of-age').property(single, 'value', "18")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_40').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_18').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "40").next()
+      addE('usedBy').to('codeList')).property('label', "18").property('order', 20).next()
 
-
-g.V().hasId('_code_single-year-of-age_60').
+g.V().hasId('_code_single-year-of-age_19').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_60').property(single, 'listID', 'single-year-of-age').property(single, 'value', "60")
+    property(id, '_code_single-year-of-age_19').property(single, 'listID', 'single-year-of-age').property(single, 'value', "19")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_60').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_19').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "60").next()
+      addE('usedBy').to('codeList')).property('label', "19").property('order', 21).next()
 
-
-g.V().hasId('_code_single-year-of-age_41').
+g.V().hasId('_code_single-year-of-age_20').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_41').property(single, 'listID', 'single-year-of-age').property(single, 'value', "41")
+    property(id, '_code_single-year-of-age_20').property(single, 'listID', 'single-year-of-age').property(single, 'value', "20")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_41').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_20').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "41").next()
+      addE('usedBy').to('codeList')).property('label', "20").property('order', 22).next()
 
-
-g.V().hasId('_code_single-year-of-age_42').
+g.V().hasId('_code_single-year-of-age_21').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_42').property(single, 'listID', 'single-year-of-age').property(single, 'value', "42")
+    property(id, '_code_single-year-of-age_21').property(single, 'listID', 'single-year-of-age').property(single, 'value', "21")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_42').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_21').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "42").next()
+      addE('usedBy').to('codeList')).property('label', "21").property('order', 23).next()
 
-
-g.V().hasId('_code_single-year-of-age_54').
+g.V().hasId('_code_single-year-of-age_22').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_54').property(single, 'listID', 'single-year-of-age').property(single, 'value', "54")
+    property(id, '_code_single-year-of-age_22').property(single, 'listID', 'single-year-of-age').property(single, 'value', "22")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_54').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_22').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "54").next()
+      addE('usedBy').to('codeList')).property('label', "22").property('order', 24).next()
 
-
-g.V().hasId('_code_single-year-of-age_55').
+g.V().hasId('_code_single-year-of-age_23').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_55').property(single, 'listID', 'single-year-of-age').property(single, 'value', "55")
+    property(id, '_code_single-year-of-age_23').property(single, 'listID', 'single-year-of-age').property(single, 'value', "23")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_55').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_23').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "55").next()
+      addE('usedBy').to('codeList')).property('label', "23").property('order', 25).next()
 
-
-g.V().hasId('_code_single-year-of-age_43').
+g.V().hasId('_code_single-year-of-age_24').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_43').property(single, 'listID', 'single-year-of-age').property(single, 'value', "43")
+    property(id, '_code_single-year-of-age_24').property(single, 'listID', 'single-year-of-age').property(single, 'value', "24")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_43').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_24').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "43").next()
-
-
-g.V().hasId('_code_single-year-of-age_56').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_56').property(single, 'listID', 'single-year-of-age').property(single, 'value', "56")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_56').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "56").next()
-
-
-g.V().hasId('_code_single-year-of-age_49').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_49').property(single, 'listID', 'single-year-of-age').property(single, 'value', "49")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_49').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "49").next()
-
-
-g.V().hasId('_code_single-year-of-age_58').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_58').property(single, 'listID', 'single-year-of-age').property(single, 'value', "58")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_58').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "58").next()
-
-
-g.V().hasId('_code_single-year-of-age_50').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_50').property(single, 'listID', 'single-year-of-age').property(single, 'value', "50")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_50').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "50").next()
-
-
-g.V().hasId('_code_single-year-of-age_57').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_57').property(single, 'listID', 'single-year-of-age').property(single, 'value', "57")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_57').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "57").next()
-
-
-g.V().hasId('_code_single-year-of-age_51').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_51').property(single, 'listID', 'single-year-of-age').property(single, 'value', "51")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_51').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "51").next()
-
-
-g.V().hasId('_code_single-year-of-age_63').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_63').property(single, 'listID', 'single-year-of-age').property(single, 'value', "63")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_63').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "63").next()
-
-
-g.V().hasId('_code_single-year-of-age_52').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_52').property(single, 'listID', 'single-year-of-age').property(single, 'value', "52")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_52').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "52").next()
-
-
-g.V().hasId('_code_single-year-of-age_65').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_65').property(single, 'listID', 'single-year-of-age').property(single, 'value', "65")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_65').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "65").next()
-
-
-g.V().hasId('_code_single-year-of-age_61').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_61').property(single, 'listID', 'single-year-of-age').property(single, 'value', "61")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_61').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "61").next()
-
-
-g.V().hasId('_code_single-year-of-age_62').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_62').property(single, 'listID', 'single-year-of-age').property(single, 'value', "62")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_62').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "62").next()
-
-
-g.V().hasId('_code_single-year-of-age_66').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_66').property(single, 'listID', 'single-year-of-age').property(single, 'value', "66")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_66').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "66").next()
-
+      addE('usedBy').to('codeList')).property('label', "24").property('order', 26).next()
 
 g.V().hasId('_code_single-year-of-age_25').
   fold().coalesce(unfold(), addV('_code').
@@ -538,44 +220,23 @@ g.V().hasId('_code_single-year-of-age_25').
   ).next()
   g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_25').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "25").next()
+      addE('usedBy').to('codeList')).property('label', "25").property('order', 27).next()
 
-
-g.V().hasId('_code_single-year-of-age_46').
+g.V().hasId('_code_single-year-of-age_26').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_46').property(single, 'listID', 'single-year-of-age').property(single, 'value', "46")
+    property(id, '_code_single-year-of-age_26').property(single, 'listID', 'single-year-of-age').property(single, 'value', "26")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_46').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_26').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "46").next()
+      addE('usedBy').to('codeList')).property('label', "26").property('order', 28).next()
 
-
-g.V().hasId('_code_single-year-of-age_69').
+g.V().hasId('_code_single-year-of-age_27').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_69').property(single, 'listID', 'single-year-of-age').property(single, 'value', "69")
+    property(id, '_code_single-year-of-age_27').property(single, 'listID', 'single-year-of-age').property(single, 'value', "27")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_69').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_27').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "69").next()
-
-
-g.V().hasId('_code_single-year-of-age_45').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_45').property(single, 'listID', 'single-year-of-age').property(single, 'value', "45")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_45').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "45").next()
-
-
-g.V().hasId('_code_single-year-of-age_67').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_67').property(single, 'listID', 'single-year-of-age').property(single, 'value', "67")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_67').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "67").next()
-
+      addE('usedBy').to('codeList')).property('label', "27").property('order', 29).next()
 
 g.V().hasId('_code_single-year-of-age_28').
   fold().coalesce(unfold(), addV('_code').
@@ -583,107 +244,7 @@ g.V().hasId('_code_single-year-of-age_28').
   ).next()
   g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_28').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "28").next()
-
-
-g.V().hasId('_code_single-year-of-age_68').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_68').property(single, 'listID', 'single-year-of-age').property(single, 'value', "68")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_68').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "68").next()
-
-
-g.V().hasId('_code_single-year-of-age_64').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_64').property(single, 'listID', 'single-year-of-age').property(single, 'value', "64")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_64').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "64").next()
-
-
-g.V().hasId('_code_single-year-of-age_72').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_72').property(single, 'listID', 'single-year-of-age').property(single, 'value', "72")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_72').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "72").next()
-
-
-g.V().hasId('_code_single-year-of-age_70').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_70').property(single, 'listID', 'single-year-of-age').property(single, 'value', "70")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_70').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "70").next()
-
-
-g.V().hasId('_code_single-year-of-age_47').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_47').property(single, 'listID', 'single-year-of-age').property(single, 'value', "47")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_47').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "47").next()
-
-
-g.V().hasId('_code_single-year-of-age_59').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_59').property(single, 'listID', 'single-year-of-age').property(single, 'value', "59")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_59').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "59").next()
-
-
-g.V().hasId('_code_single-year-of-age_48').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_48').property(single, 'listID', 'single-year-of-age').property(single, 'value', "48")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_48').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "48").next()
-
-
-g.V().hasId('_code_single-year-of-age_71').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_71').property(single, 'listID', 'single-year-of-age').property(single, 'value', "71")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_71').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "71").next()
-
-
-g.V().hasId('_code_single-year-of-age_81').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_81').property(single, 'listID', 'single-year-of-age').property(single, 'value', "81")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_81').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "81").next()
-
-
-g.V().hasId('_code_single-year-of-age_76').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_76').property(single, 'listID', 'single-year-of-age').property(single, 'value', "76")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_76').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "76").next()
-
-
-g.V().hasId('_code_single-year-of-age_77').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_77').property(single, 'listID', 'single-year-of-age').property(single, 'value', "77")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_77').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "77").next()
-
+      addE('usedBy').to('codeList')).property('label', "28").property('order', 30).next()
 
 g.V().hasId('_code_single-year-of-age_29').
   fold().coalesce(unfold(), addV('_code').
@@ -691,53 +252,351 @@ g.V().hasId('_code_single-year-of-age_29').
   ).next()
   g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_29').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "29").next()
+      addE('usedBy').to('codeList')).property('label', "29").property('order', 31).next()
 
-
-g.V().hasId('_code_single-year-of-age_90+').
+g.V().hasId('_code_single-year-of-age_30').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_90+').property(single, 'listID', 'single-year-of-age').property(single, 'value', "90+")
+    property(id, '_code_single-year-of-age_30').property(single, 'listID', 'single-year-of-age').property(single, 'value', "30")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_90+').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_30').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "90+").next()
+      addE('usedBy').to('codeList')).property('label', "30").property('order', 32).next()
 
-
-g.V().hasId('_code_single-year-of-age_75').
+g.V().hasId('_code_single-year-of-age_31').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_75').property(single, 'listID', 'single-year-of-age').property(single, 'value', "75")
+    property(id, '_code_single-year-of-age_31').property(single, 'listID', 'single-year-of-age').property(single, 'value', "31")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_75').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_31').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "75").next()
+      addE('usedBy').to('codeList')).property('label', "31").property('order', 33).next()
 
-
-g.V().hasId('_code_single-year-of-age_78').
+g.V().hasId('_code_single-year-of-age_32').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_78').property(single, 'listID', 'single-year-of-age').property(single, 'value', "78")
+    property(id, '_code_single-year-of-age_32').property(single, 'listID', 'single-year-of-age').property(single, 'value', "32")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_78').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_32').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "78").next()
+      addE('usedBy').to('codeList')).property('label', "32").property('order', 34).next()
 
-
-g.V().hasId('_code_single-year-of-age_74').
+g.V().hasId('_code_single-year-of-age_33').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_74').property(single, 'listID', 'single-year-of-age').property(single, 'value', "74")
+    property(id, '_code_single-year-of-age_33').property(single, 'listID', 'single-year-of-age').property(single, 'value', "33")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_74').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_33').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "74").next()
+      addE('usedBy').to('codeList')).property('label', "33").property('order', 35).next()
 
-
-g.V().hasId('_code_single-year-of-age_82').
+g.V().hasId('_code_single-year-of-age_34').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_82').property(single, 'listID', 'single-year-of-age').property(single, 'value', "82")
+    property(id, '_code_single-year-of-age_34').property(single, 'listID', 'single-year-of-age').property(single, 'value', "34")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_82').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_34').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "82").next()
+      addE('usedBy').to('codeList')).property('label', "34").property('order', 36).next()
 
+g.V().hasId('_code_single-year-of-age_35').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_35').property(single, 'listID', 'single-year-of-age').property(single, 'value', "35")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_35').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "35").property('order', 37).next()
+
+g.V().hasId('_code_single-year-of-age_36').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_36').property(single, 'listID', 'single-year-of-age').property(single, 'value', "36")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_36').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "36").property('order', 38).next()
+
+g.V().hasId('_code_single-year-of-age_37').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_37').property(single, 'listID', 'single-year-of-age').property(single, 'value', "37")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_37').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "37").property('order', 39).next()
+
+g.V().hasId('_code_single-year-of-age_38').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_38').property(single, 'listID', 'single-year-of-age').property(single, 'value', "38")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_38').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "38").property('order', 40).next()
+
+g.V().hasId('_code_single-year-of-age_39').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_39').property(single, 'listID', 'single-year-of-age').property(single, 'value', "39")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_39').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "39").property('order', 41).next()
+
+g.V().hasId('_code_single-year-of-age_40').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_40').property(single, 'listID', 'single-year-of-age').property(single, 'value', "40")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_40').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "40").property('order', 42).next()
+
+g.V().hasId('_code_single-year-of-age_41').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_41').property(single, 'listID', 'single-year-of-age').property(single, 'value', "41")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_41').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "41").property('order', 43).next()
+
+g.V().hasId('_code_single-year-of-age_42').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_42').property(single, 'listID', 'single-year-of-age').property(single, 'value', "42")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_42').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "42").property('order', 44).next()
+
+g.V().hasId('_code_single-year-of-age_43').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_43').property(single, 'listID', 'single-year-of-age').property(single, 'value', "43")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_43').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "43").property('order', 45).next()
+
+g.V().hasId('_code_single-year-of-age_44').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_44').property(single, 'listID', 'single-year-of-age').property(single, 'value', "44")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_44').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "44").property('order', 46).next()
+
+g.V().hasId('_code_single-year-of-age_45').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_45').property(single, 'listID', 'single-year-of-age').property(single, 'value', "45")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_45').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "45").property('order', 47).next()
+
+g.V().hasId('_code_single-year-of-age_46').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_46').property(single, 'listID', 'single-year-of-age').property(single, 'value', "46")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_46').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "46").property('order', 48).next()
+
+g.V().hasId('_code_single-year-of-age_47').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_47').property(single, 'listID', 'single-year-of-age').property(single, 'value', "47")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_47').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "47").property('order', 49).next()
+
+g.V().hasId('_code_single-year-of-age_48').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_48').property(single, 'listID', 'single-year-of-age').property(single, 'value', "48")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_48').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "48").property('order', 50).next()
+
+g.V().hasId('_code_single-year-of-age_49').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_49').property(single, 'listID', 'single-year-of-age').property(single, 'value', "49")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_49').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "49").property('order', 51).next()
+
+g.V().hasId('_code_single-year-of-age_50').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_50').property(single, 'listID', 'single-year-of-age').property(single, 'value', "50")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_50').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "50").property('order', 52).next()
+
+g.V().hasId('_code_single-year-of-age_51').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_51').property(single, 'listID', 'single-year-of-age').property(single, 'value', "51")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_51').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "51").property('order', 53).next()
+
+g.V().hasId('_code_single-year-of-age_52').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_52').property(single, 'listID', 'single-year-of-age').property(single, 'value', "52")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_52').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "52").property('order', 54).next()
+
+g.V().hasId('_code_single-year-of-age_53').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_53').property(single, 'listID', 'single-year-of-age').property(single, 'value', "53")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_53').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "53").property('order', 55).next()
+
+g.V().hasId('_code_single-year-of-age_54').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_54').property(single, 'listID', 'single-year-of-age').property(single, 'value', "54")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_54').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "54").property('order', 56).next()
+
+g.V().hasId('_code_single-year-of-age_55').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_55').property(single, 'listID', 'single-year-of-age').property(single, 'value', "55")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_55').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "55").property('order', 57).next()
+
+g.V().hasId('_code_single-year-of-age_56').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_56').property(single, 'listID', 'single-year-of-age').property(single, 'value', "56")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_56').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "56").property('order', 58).next()
+
+g.V().hasId('_code_single-year-of-age_57').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_57').property(single, 'listID', 'single-year-of-age').property(single, 'value', "57")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_57').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "57").property('order', 59).next()
+
+g.V().hasId('_code_single-year-of-age_58').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_58').property(single, 'listID', 'single-year-of-age').property(single, 'value', "58")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_58').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "58").property('order', 60).next()
+
+g.V().hasId('_code_single-year-of-age_59').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_59').property(single, 'listID', 'single-year-of-age').property(single, 'value', "59")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_59').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "59").property('order', 61).next()
+
+g.V().hasId('_code_single-year-of-age_60').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_60').property(single, 'listID', 'single-year-of-age').property(single, 'value', "60")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_60').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "60").property('order', 62).next()
+
+g.V().hasId('_code_single-year-of-age_61').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_61').property(single, 'listID', 'single-year-of-age').property(single, 'value', "61")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_61').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "61").property('order', 63).next()
+
+g.V().hasId('_code_single-year-of-age_62').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_62').property(single, 'listID', 'single-year-of-age').property(single, 'value', "62")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_62').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "62").property('order', 64).next()
+
+g.V().hasId('_code_single-year-of-age_63').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_63').property(single, 'listID', 'single-year-of-age').property(single, 'value', "63")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_63').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "63").property('order', 65).next()
+
+g.V().hasId('_code_single-year-of-age_64').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_64').property(single, 'listID', 'single-year-of-age').property(single, 'value', "64")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_64').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "64").property('order', 66).next()
+
+g.V().hasId('_code_single-year-of-age_65').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_65').property(single, 'listID', 'single-year-of-age').property(single, 'value', "65")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_65').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "65").property('order', 67).next()
+
+g.V().hasId('_code_single-year-of-age_66').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_66').property(single, 'listID', 'single-year-of-age').property(single, 'value', "66")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_66').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "66").property('order', 68).next()
+
+g.V().hasId('_code_single-year-of-age_67').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_67').property(single, 'listID', 'single-year-of-age').property(single, 'value', "67")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_67').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "67").property('order', 69).next()
+
+g.V().hasId('_code_single-year-of-age_68').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_68').property(single, 'listID', 'single-year-of-age').property(single, 'value', "68")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_68').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "68").property('order', 70).next()
+
+g.V().hasId('_code_single-year-of-age_69').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_69').property(single, 'listID', 'single-year-of-age').property(single, 'value', "69")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_69').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "69").property('order', 71).next()
+
+g.V().hasId('_code_single-year-of-age_70').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_70').property(single, 'listID', 'single-year-of-age').property(single, 'value', "70")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_70').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "70").property('order', 72).next()
+
+g.V().hasId('_code_single-year-of-age_71').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_71').property(single, 'listID', 'single-year-of-age').property(single, 'value', "71")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_71').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "71").property('order', 73).next()
+
+g.V().hasId('_code_single-year-of-age_72').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_72').property(single, 'listID', 'single-year-of-age').property(single, 'value', "72")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_72').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "72").property('order', 74).next()
 
 g.V().hasId('_code_single-year-of-age_73').
   fold().coalesce(unfold(), addV('_code').
@@ -745,17 +604,47 @@ g.V().hasId('_code_single-year-of-age_73').
   ).next()
   g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_73').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "73").next()
+      addE('usedBy').to('codeList')).property('label', "73").property('order', 75).next()
 
-
-g.V().hasId('_code_single-year-of-age_86').
+g.V().hasId('_code_single-year-of-age_74').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_86').property(single, 'listID', 'single-year-of-age').property(single, 'value', "86")
+    property(id, '_code_single-year-of-age_74').property(single, 'listID', 'single-year-of-age').property(single, 'value', "74")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_86').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_74').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "86").next()
+      addE('usedBy').to('codeList')).property('label', "74").property('order', 76).next()
 
+g.V().hasId('_code_single-year-of-age_75').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_75').property(single, 'listID', 'single-year-of-age').property(single, 'value', "75")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_75').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "75").property('order', 77).next()
+
+g.V().hasId('_code_single-year-of-age_76').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_76').property(single, 'listID', 'single-year-of-age').property(single, 'value', "76")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_76').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "76").property('order', 78).next()
+
+g.V().hasId('_code_single-year-of-age_77').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_77').property(single, 'listID', 'single-year-of-age').property(single, 'value', "77")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_77').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "77").property('order', 79).next()
+
+g.V().hasId('_code_single-year-of-age_78').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_78').property(single, 'listID', 'single-year-of-age').property(single, 'value', "78")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_78').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "78").property('order', 80).next()
 
 g.V().hasId('_code_single-year-of-age_79').
   fold().coalesce(unfold(), addV('_code').
@@ -763,26 +652,7 @@ g.V().hasId('_code_single-year-of-age_79').
   ).next()
   g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_79').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "79").next()
-
-
-g.V().hasId('_code_single-year-of-age_87').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_87').property(single, 'listID', 'single-year-of-age').property(single, 'value', "87")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_87').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "87").next()
-
-
-g.V().hasId('_code_single-year-of-age_83').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_83').property(single, 'listID', 'single-year-of-age').property(single, 'value', "83")
-  ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_83').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "83").next()
-
+      addE('usedBy').to('codeList')).property('label', "79").property('order', 81).next()
 
 g.V().hasId('_code_single-year-of-age_80').
   fold().coalesce(unfold(), addV('_code').
@@ -790,26 +660,31 @@ g.V().hasId('_code_single-year-of-age_80').
   ).next()
   g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_80').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "80").next()
+      addE('usedBy').to('codeList')).property('label', "80").property('order', 82).next()
 
-
-g.V().hasId('_code_single-year-of-age_89').
+g.V().hasId('_code_single-year-of-age_81').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_89').property(single, 'listID', 'single-year-of-age').property(single, 'value', "89")
+    property(id, '_code_single-year-of-age_81').property(single, 'listID', 'single-year-of-age').property(single, 'value', "81")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_89').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_81').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "89").next()
+      addE('usedBy').to('codeList')).property('label', "81").property('order', 83).next()
 
-
-g.V().hasId('_code_single-year-of-age_88').
+g.V().hasId('_code_single-year-of-age_82').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_88').property(single, 'listID', 'single-year-of-age').property(single, 'value', "88")
+    property(id, '_code_single-year-of-age_82').property(single, 'listID', 'single-year-of-age').property(single, 'value', "82")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_88').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_82').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "88").next()
+      addE('usedBy').to('codeList')).property('label', "82").property('order', 84).next()
 
+g.V().hasId('_code_single-year-of-age_83').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_83').property(single, 'listID', 'single-year-of-age').property(single, 'value', "83")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_83').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "83").property('order', 85).next()
 
 g.V().hasId('_code_single-year-of-age_84').
   fold().coalesce(unfold(), addV('_code').
@@ -817,8 +692,7 @@ g.V().hasId('_code_single-year-of-age_84').
   ).next()
   g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_84').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "84").next()
-
+      addE('usedBy').to('codeList')).property('label', "84").property('order', 86).next()
 
 g.V().hasId('_code_single-year-of-age_85').
   fold().coalesce(unfold(), addV('_code').
@@ -826,14 +700,44 @@ g.V().hasId('_code_single-year-of-age_85').
   ).next()
   g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_85').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "85").next()
+      addE('usedBy').to('codeList')).property('label', "85").property('order', 87).next()
 
-
-g.V().hasId('_code_single-year-of-age_total').
+g.V().hasId('_code_single-year-of-age_86').
   fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_single-year-of-age_total').property(single, 'listID', 'single-year-of-age').property(single, 'value', "total")
+    property(id, '_code_single-year-of-age_86').property(single, 'listID', 'single-year-of-age').property(single, 'value', "86")
   ).next()
-  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_total').as('code').
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_86').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Total").next()
+      addE('usedBy').to('codeList')).property('label', "86").property('order', 88).next()
 
+g.V().hasId('_code_single-year-of-age_87').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_87').property(single, 'listID', 'single-year-of-age').property(single, 'value', "87")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_87').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "87").property('order', 89).next()
+
+g.V().hasId('_code_single-year-of-age_88').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_88').property(single, 'listID', 'single-year-of-age').property(single, 'value', "88")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_88').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "88").property('order', 90).next()
+
+g.V().hasId('_code_single-year-of-age_89').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_89').property(single, 'listID', 'single-year-of-age').property(single, 'value', "89")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_89').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "89").property('order', 91).next()
+
+g.V().hasId('_code_single-year-of-age_90+').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_single-year-of-age_90+').property(single, 'listID', 'single-year-of-age').property(single, 'value', "90+")
+  ).next()
+  g.V().hasId('_code_list_single-year-of-age_one-off').as('codeList').V().hasId('_code_single-year-of-age_90+').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "90+").property('order', 92).next()

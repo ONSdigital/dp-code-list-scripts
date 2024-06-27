@@ -1,5 +1,3 @@
-
-
 g.V().hasId('_code_list_local-health-board_one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(id, '_code_list_local-health-board_one-off').
@@ -9,15 +7,13 @@ g.V().hasId('_code_list_local-health-board_one-off').
     property(single, 'edition', "one-off")
   ).next()
 
-
 g.V().hasId('_code_geography_W11000023').
   fold().coalesce(unfold(), addV('_code').
     property(id, '_code_geography_W11000023').property(single, 'listID', 'geography').property(single, 'value', "W11000023")
   ).next()
   g.V().hasId('_code_list_local-health-board_one-off').as('codeList').V().hasId('_code_geography_W11000023').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Betsi Cadwaladr University Health Board").property('order', 6).next()
-
+      addE('usedBy').to('codeList')).property('label', "Betsi Cadwaladr University Health Board").property('order', 1).next()
 
 g.V().hasId('_code_geography_W11000024').
   fold().coalesce(unfold(), addV('_code').
@@ -25,8 +21,7 @@ g.V().hasId('_code_geography_W11000024').
   ).next()
   g.V().hasId('_code_list_local-health-board_one-off').as('codeList').V().hasId('_code_geography_W11000024').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Powys Teaching Health Board").property('order', 5).next()
-
+      addE('usedBy').to('codeList')).property('label', "Powys Teaching Health Board").property('order', 2).next()
 
 g.V().hasId('_code_geography_W11000025').
   fold().coalesce(unfold(), addV('_code').
@@ -34,8 +29,7 @@ g.V().hasId('_code_geography_W11000025').
   ).next()
   g.V().hasId('_code_list_local-health-board_one-off').as('codeList').V().hasId('_code_geography_W11000025').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Hywel Dda University Health Board").property('order', 4).next()
-
+      addE('usedBy').to('codeList')).property('label', "Hywel Dda University Health Board").property('order', 3).next()
 
 g.V().hasId('_code_geography_W11000028').
   fold().coalesce(unfold(), addV('_code').
@@ -43,8 +37,7 @@ g.V().hasId('_code_geography_W11000028').
   ).next()
   g.V().hasId('_code_list_local-health-board_one-off').as('codeList').V().hasId('_code_geography_W11000028').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Aneurin Bevan University Health Board").property('order', 1).next()
-
+      addE('usedBy').to('codeList')).property('label', "Aneurin Bevan University Health Board").property('order', 4).next()
 
 g.V().hasId('_code_geography_W11000029').
   fold().coalesce(unfold(), addV('_code').
@@ -52,8 +45,7 @@ g.V().hasId('_code_geography_W11000029').
   ).next()
   g.V().hasId('_code_list_local-health-board_one-off').as('codeList').V().hasId('_code_geography_W11000029').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Cardiff and Vale University Health Board").property('order', 0).next()
-
+      addE('usedBy').to('codeList')).property('label', "Cardiff and Vale University Health Board").property('order', 5).next()
 
 g.V().hasId('_code_geography_W11000030').
   fold().coalesce(unfold(), addV('_code').
@@ -61,8 +53,7 @@ g.V().hasId('_code_geography_W11000030').
   ).next()
   g.V().hasId('_code_list_local-health-board_one-off').as('codeList').V().hasId('_code_geography_W11000030').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Cwm Taf Morgannwg University Health Board").property('order', 2).next()
-
+      addE('usedBy').to('codeList')).property('label', "Cwm Taf Morgannwg University Health Board").property('order', 6).next()
 
 g.V().hasId('_code_geography_W11000031').
   fold().coalesce(unfold(), addV('_code').
@@ -70,5 +61,4 @@ g.V().hasId('_code_geography_W11000031').
   ).next()
   g.V().hasId('_code_list_local-health-board_one-off').as('codeList').V().hasId('_code_geography_W11000031').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Swansea Bay University Health Board").property('order', 3).next()
-
+      addE('usedBy').to('codeList')).property('label', "Swansea Bay University Health Board").property('order', 7).next()

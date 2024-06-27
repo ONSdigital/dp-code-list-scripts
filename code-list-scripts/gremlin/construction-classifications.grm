@@ -1,5 +1,3 @@
-
-
 g.V().hasId('_code_list_construction-classifications_one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(id, '_code_list_construction-classifications_one-off').
@@ -8,15 +6,13 @@ g.V().hasId('_code_list_construction-classifications_one-off').
     property(single, 'edition', "one-off")
   ).next()
 
-
 g.V().hasId('_code_construction-classifications_1').
   fold().coalesce(unfold(), addV('_code').
     property(id, '_code_construction-classifications_1').property(single, 'listID', 'construction-classifications').property(single, 'value', "1")
   ).next()
   g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Total All Work").next()
-
+      addE('usedBy').to('codeList')).property('label', "Total All Work").property('order', 1).next()
 
 g.V().hasId('_code_construction-classifications_1-1').
   fold().coalesce(unfold(), addV('_code').
@@ -24,71 +20,7 @@ g.V().hasId('_code_construction-classifications_1-1').
   ).next()
   g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-1').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Repair & Maintenance").next()
-
-
-g.V().hasId('_code_construction-classifications_1-1-1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-classifications_1-1-1').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-1-1")
-  ).next()
-  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-1-1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Housing R & M").next()
-
-
-g.V().hasId('_code_construction-classifications_1-1-1-1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-classifications_1-1-1-1').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-1-1-1")
-  ).next()
-  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-1-1-1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Public housing R & M").next()
-
-
-g.V().hasId('_code_construction-classifications_1-1-1-2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-classifications_1-1-1-2').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-1-1-2")
-  ).next()
-  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-1-1-2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Private housing R & M").next()
-
-
-g.V().hasId('_code_construction-classifications_1-1-2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-classifications_1-1-2').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-1-2")
-  ).next()
-  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-1-2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Non-housing R & M").next()
-
-
-g.V().hasId('_code_construction-classifications_1-1-2-1-1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-classifications_1-1-2-1-1').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-1-2-1-1")
-  ).next()
-  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-1-2-1-1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Public other work R & M").next()
-
-
-g.V().hasId('_code_construction-classifications_1-1-2-1-2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-classifications_1-1-2-1-2').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-1-2-1-2")
-  ).next()
-  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-1-2-1-2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Private other work R & M").next()
-
-
-g.V().hasId('_code_construction-classifications_1-1-2-2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-classifications_1-1-2-2').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-1-2-2")
-  ).next()
-  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-1-2-2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Infrastructure R & M").next()
-
+      addE('usedBy').to('codeList')).property('label', "Repair & Maintenance").property('order', 2).next()
 
 g.V().hasId('_code_construction-classifications_1-2').
   fold().coalesce(unfold(), addV('_code').
@@ -96,8 +28,23 @@ g.V().hasId('_code_construction-classifications_1-2').
   ).next()
   g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-2').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "All New Work").next()
+      addE('usedBy').to('codeList')).property('label', "All New Work").property('order', 3).next()
 
+g.V().hasId('_code_construction-classifications_1-1-1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_construction-classifications_1-1-1').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-1-1")
+  ).next()
+  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-1-1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Housing R & M").property('order', 4).next()
+
+g.V().hasId('_code_construction-classifications_1-1-2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_construction-classifications_1-1-2').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-1-2")
+  ).next()
+  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-1-2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Non-housing R & M").property('order', 5).next()
 
 g.V().hasId('_code_construction-classifications_1-2-1').
   fold().coalesce(unfold(), addV('_code').
@@ -105,53 +52,7 @@ g.V().hasId('_code_construction-classifications_1-2-1').
   ).next()
   g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-2-1').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "New Housing").next()
-
-
-g.V().hasId('_code_construction-classifications_1-2-1-1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-classifications_1-2-1-1').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-2-1-1")
-  ).next()
-  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-2-1-1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Public new housing").next()
-
-
-g.V().hasId('_code_construction-classifications_1-2-1-2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-classifications_1-2-1-2').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-2-1-2")
-  ).next()
-  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-2-1-2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Private new housing").next()
-
-
-g.V().hasId('_code_construction-classifications_1-2-2-1-1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-classifications_1-2-2-1-1').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-2-2-1-1")
-  ).next()
-  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-2-2-1-1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Public ONW").next()
-
-
-g.V().hasId('_code_construction-classifications_1-2-2-1-2-1').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-classifications_1-2-2-1-2-1').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-2-2-1-2-1")
-  ).next()
-  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-2-2-1-2-1').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Private Industrial ONW").next()
-
-
-g.V().hasId('_code_construction-classifications_1-2-2-1-2-2').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_construction-classifications_1-2-2-1-2-2').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-2-2-1-2-2")
-  ).next()
-  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-2-2-1-2-2').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Private Commercial ONW").next()
-
+      addE('usedBy').to('codeList')).property('label', "New Housing").property('order', 6).next()
 
 g.V().hasId('_code_construction-classifications_1-2-3').
   fold().coalesce(unfold(), addV('_code').
@@ -159,5 +60,84 @@ g.V().hasId('_code_construction-classifications_1-2-3').
   ).next()
   g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-2-3').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Infrastructure").next()
+      addE('usedBy').to('codeList')).property('label', "Infrastructure").property('order', 7).next()
 
+g.V().hasId('_code_construction-classifications_1-1-1-1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_construction-classifications_1-1-1-1').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-1-1-1")
+  ).next()
+  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-1-1-1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Public housing R & M").property('order', 8).next()
+
+g.V().hasId('_code_construction-classifications_1-1-1-2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_construction-classifications_1-1-1-2').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-1-1-2")
+  ).next()
+  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-1-1-2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Private housing R & M").property('order', 9).next()
+
+g.V().hasId('_code_construction-classifications_1-1-2-2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_construction-classifications_1-1-2-2').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-1-2-2")
+  ).next()
+  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-1-2-2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Infrastructure R & M").property('order', 10).next()
+
+g.V().hasId('_code_construction-classifications_1-2-1-1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_construction-classifications_1-2-1-1').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-2-1-1")
+  ).next()
+  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-2-1-1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Public new housing").property('order', 11).next()
+
+g.V().hasId('_code_construction-classifications_1-2-1-2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_construction-classifications_1-2-1-2').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-2-1-2")
+  ).next()
+  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-2-1-2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Private new housing").property('order', 12).next()
+
+g.V().hasId('_code_construction-classifications_1-1-2-1-1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_construction-classifications_1-1-2-1-1').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-1-2-1-1")
+  ).next()
+  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-1-2-1-1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Public other work R & M").property('order', 13).next()
+
+g.V().hasId('_code_construction-classifications_1-1-2-1-2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_construction-classifications_1-1-2-1-2').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-1-2-1-2")
+  ).next()
+  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-1-2-1-2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Private other work R & M").property('order', 14).next()
+
+g.V().hasId('_code_construction-classifications_1-2-2-1-1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_construction-classifications_1-2-2-1-1').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-2-2-1-1")
+  ).next()
+  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-2-2-1-1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Public ONW").property('order', 15).next()
+
+g.V().hasId('_code_construction-classifications_1-2-2-1-2-1').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_construction-classifications_1-2-2-1-2-1').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-2-2-1-2-1")
+  ).next()
+  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-2-2-1-2-1').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Private Industrial ONW").property('order', 16).next()
+
+g.V().hasId('_code_construction-classifications_1-2-2-1-2-2').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_construction-classifications_1-2-2-1-2-2').property(single, 'listID', 'construction-classifications').property(single, 'value', "1-2-2-1-2-2")
+  ).next()
+  g.V().hasId('_code_list_construction-classifications_one-off').as('codeList').V().hasId('_code_construction-classifications_1-2-2-1-2-2').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Private Commercial ONW").property('order', 17).next()

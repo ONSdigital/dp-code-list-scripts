@@ -1,0 +1,46 @@
+
+
+g.V().hasId('_code_list_census-2011-health_2011').
+  fold().coalesce(unfold(), addV('_code_list').
+    property(id, '_code_list_census-2011-health_2011').
+    property(single, 'listID', "census-2011-health").
+    property(single, 'label', "Health").
+    property(single, 'edition', "2011")
+  ).next()
+
+
+g.V().hasId('_code_census-2011-health_all-categories').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census-2011-health_all-categories').property(single, 'listID', 'census-2011-health').property(single, 'value', "all-categories")
+  ).next()
+  g.V().hasId('_code_list_census-2011-health_2011').as('codeList').V().hasId('_code_census-2011-health_all-categories').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "All categories").next()
+
+
+g.V().hasId('_code_census-2011-health_very-good-or-good-health').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census-2011-health_very-good-or-good-health').property(single, 'listID', 'census-2011-health').property(single, 'value', "very-good-or-good-health")
+  ).next()
+  g.V().hasId('_code_list_census-2011-health_2011').as('codeList').V().hasId('_code_census-2011-health_very-good-or-good-health').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Very good or good health").next()
+
+
+g.V().hasId('_code_census-2011-health_fair-health').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census-2011-health_fair-health').property(single, 'listID', 'census-2011-health').property(single, 'value', "fair-health")
+  ).next()
+  g.V().hasId('_code_list_census-2011-health_2011').as('codeList').V().hasId('_code_census-2011-health_fair-health').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Fair health").next()
+
+
+g.V().hasId('_code_census-2011-health_bad-or-very-bad-health').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_census-2011-health_bad-or-very-bad-health').property(single, 'listID', 'census-2011-health').property(single, 'value', "bad-or-very-bad-health")
+  ).next()
+  g.V().hasId('_code_list_census-2011-health_2011').as('codeList').V().hasId('_code_census-2011-health_bad-or-very-bad-health').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+       addE('usedBy').to('codeList')).property('label', "Bad or very bad health").next()
+

@@ -1,13 +1,10 @@
-
-
 g.V().hasId('_code_list_speak-welsh_one-off').
   fold().coalesce(unfold(), addV('_code_list').
     property(id, '_code_list_speak-welsh_one-off').
     property(single, 'listID', "speak-welsh").
-    property(single, 'label', "speakwelsh").
+    property(single, 'label', "Speak Welsh").
     property(single, 'edition', "one-off")
   ).next()
-
 
 g.V().hasId('_code_speak-welsh_all-categories-ability-of-dependent-child-in-a-family-to-speak-welsh').
   fold().coalesce(unfold(), addV('_code').
@@ -15,8 +12,7 @@ g.V().hasId('_code_speak-welsh_all-categories-ability-of-dependent-child-in-a-fa
   ).next()
   g.V().hasId('_code_list_speak-welsh_one-off').as('codeList').V().hasId('_code_speak-welsh_all-categories-ability-of-dependent-child-in-a-family-to-speak-welsh').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "All categories: Ability of dependent child in a family to speak Welsh").next()
-
+      addE('usedBy').to('codeList')).property('label', "All categories: Ability of dependent child in a family to speak Welsh").property('order', 1).next()
 
 g.V().hasId('_code_speak-welsh_dependent-child-can-speak-welsh').
   fold().coalesce(unfold(), addV('_code').
@@ -24,8 +20,7 @@ g.V().hasId('_code_speak-welsh_dependent-child-can-speak-welsh').
   ).next()
   g.V().hasId('_code_list_speak-welsh_one-off').as('codeList').V().hasId('_code_speak-welsh_dependent-child-can-speak-welsh').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Dependent child can speak Welsh").next()
-
+      addE('usedBy').to('codeList')).property('label', "Dependent child can speak Welsh").property('order', 2).next()
 
 g.V().hasId('_code_speak-welsh_dependent-child-cannot-speak-welsh').
   fold().coalesce(unfold(), addV('_code').
@@ -33,5 +28,4 @@ g.V().hasId('_code_speak-welsh_dependent-child-cannot-speak-welsh').
   ).next()
   g.V().hasId('_code_list_speak-welsh_one-off').as('codeList').V().hasId('_code_speak-welsh_dependent-child-cannot-speak-welsh').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "Dependent child cannot speak Welsh").next()
-
+      addE('usedBy').to('codeList')).property('label', "Dependent child cannot speak Welsh").property('order', 3).next()
