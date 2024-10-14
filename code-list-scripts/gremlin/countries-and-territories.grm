@@ -678,6 +678,14 @@ g.V().hasId('_code_countries-and-territories_GE').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
       addE('usedBy').to('codeList')).property('label', "GE - Georgia").property('order', 84).next()
 
+g.V().hasId('_code_countries-and-territories_GG').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_countries-and-territories_GG').property(single, 'listID', 'countries-and-territories').property(single, 'value', "GG")
+  ).next()
+  g.V().hasId('_code_list_countries-and-territories_one-off').as('codeList').V().hasId('_code_countries-and-territories_GG').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "GG - Guernsey").property('order', 85).next()
+
 g.V().hasId('_code_countries-and-territories_GH').
   fold().coalesce(unfold(), addV('_code').
     property(id, '_code_countries-and-territories_GH').property(single, 'listID', 'countries-and-territories').property(single, 'value', "GH")
@@ -845,6 +853,14 @@ g.V().hasId('_code_countries-and-territories_IL').
   g.V().hasId('_code_list_countries-and-territories_one-off').as('codeList').V().hasId('_code_countries-and-territories_IL').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
       addE('usedBy').to('codeList')).property('label', "IL - Israel").property('order', 106).next()
+
+g.V().hasId('_code_countries-and-territories_IM').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_countries-and-territories_IM').property(single, 'listID', 'countries-and-territories').property(single, 'value', "IM")
+  ).next()
+  g.V().hasId('_code_list_countries-and-territories_one-off').as('codeList').V().hasId('_code_countries-and-territories_IM').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "IM - Isle of Man").property('order', 107).next()
 
 g.V().hasId('_code_countries-and-territories_IN').
   fold().coalesce(unfold(), addV('_code').
@@ -1949,19 +1965,3 @@ g.V().hasId('_code_countries-and-territories_ZW').
   g.V().hasId('_code_list_countries-and-territories_one-off').as('codeList').V().hasId('_code_countries-and-territories_ZW').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
       addE('usedBy').to('codeList')).property('label', "ZW - Zimbabwe").property('order', 245).next()
-
-g.V().hasId('_code_countries-and-territories_GG').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_countries-and-territories_GG').property(single, 'listID', 'countries-and-territories').property(single, 'value', "GG")
-  ).next()
-  g.V().hasId('_code_list_countries-and-territories_one-off').as('codeList').V().hasId('_code_countries-and-territories_GG').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "GG - Guernsey").property('order', 85).next()
-
-g.V().hasId('_code_countries-and-territories_IM').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_countries-and-territories_IM').property(single, 'listID', 'countries-and-territories').property(single, 'value', "IM")
-  ).next()
-  g.V().hasId('_code_list_countries-and-territories_one-off').as('codeList').V().hasId('_code_countries-and-territories_IM').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "IM - Isle of Man").property('order', 107).next()

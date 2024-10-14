@@ -102,6 +102,14 @@ g.V().hasId('_code_type-of-prices_gross-domestic-product-chained-volume-measures
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
       addE('usedBy').to('codeList')).property('label', "Gross domestic product chained volume measures in 2016 money value").property('order', 12).next()
 
+g.V().hasId('_code_type-of-prices_gross-domestic-product-chained-volume-measures-in-2018-money-value').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_type-of-prices_gross-domestic-product-chained-volume-measures-in-2018-money-value').property(single, 'listID', 'type-of-prices').property(single, 'value', "gross-domestic-product-chained-volume-measures-in-2018-money-value")
+  ).next()
+  g.V().hasId('_code_list_type-of-prices_one-off').as('codeList').V().hasId('_code_type-of-prices_gross-domestic-product-chained-volume-measures-in-2018-money-value').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Gross domestic product chained volume measures in 2018 money value").property('order', 13).next()
+
 g.V().hasId('_code_type-of-prices_gross-domestic-product-chained-volume-measures-index').
   fold().coalesce(unfold(), addV('_code').
     property(id, '_code_type-of-prices_gross-domestic-product-chained-volume-measures-index').property(single, 'listID', 'type-of-prices').property(single, 'value', "gross-domestic-product-chained-volume-measures-index")
@@ -310,14 +318,6 @@ g.V().hasId('_code_type-of-prices_whole-economy-gva-implied-deflators').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
       addE('usedBy').to('codeList')).property('label', "Whole economy GVA implied deflators").property('order', 39).next()
 
-g.V().hasId('_code_type-of-prices_gross-domestic-product-chained-volume-measures-in-2018-money-value').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_type-of-prices_gross-domestic-product-chained-volume-measures-in-2018-money-value').property(single, 'listID', 'type-of-prices').property(single, 'value', "gross-domestic-product-chained-volume-measures-in-2018-money-value")
-  ).next()
-  g.V().hasId('_code_list_type-of-prices_one-off').as('codeList').V().hasId('_code_type-of-prices_gross-domestic-product-chained-volume-measures-in-2018-money-value').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Gross domestic product chained volume measures in 2018 money value").property('order', 13).next()
-
 g.V().hasId('_code_type-of-prices_value-of-retail-sales-at-current-prices').
   fold().coalesce(unfold(), addV('_code').
     property(id, '_code_type-of-prices_value-of-retail-sales-at-current-prices').property(single, 'listID', 'type-of-prices').property(single, 'value', "value-of-retail-sales-at-current-prices")
@@ -397,4 +397,3 @@ g.V().hasId('_code_type-of-prices_chained-volume-percentage-change-3-months-on-p
   g.V().hasId('_code_list_type-of-prices_one-off').as('codeList').V().hasId('_code_type-of-prices_chained-volume-percentage-change-3-months-on-previous-3-months').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
       addE('usedBy').to('codeList')).property('label', "Chained volume - Percentage change 3 months on previous 3 months").property('order', 49).next()
-

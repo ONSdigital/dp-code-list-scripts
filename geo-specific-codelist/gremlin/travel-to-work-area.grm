@@ -7,141 +7,13 @@ g.V().hasId('_code_list_travel-to-work-area_one-off').
     property(single, 'edition', "one-off")
   ).next()
 
-g.V().hasId('_code_geography_K02000001').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_K02000001').property(single, 'listID', 'geography').property(single, 'value', "K02000001")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_K02000001').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "United Kingdom").property('order', 1).next()
-
-g.V().hasId('_code_geography_K03000001').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_K03000001').property(single, 'listID', 'geography').property(single, 'value', "K03000001")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_K03000001').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Great Britain").property('order', 2).next()
-
-g.V().hasId('_code_geography_K04000001').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_K04000001').property(single, 'listID', 'geography').property(single, 'value', "K04000001")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_K04000001').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "England and Wales").property('order', 3).next()
-
-g.V().hasId('_code_geography_E92000001').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E92000001').property(single, 'listID', 'geography').property(single, 'value', "E92000001")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E92000001').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "England").property('order', 4).next()
-
-g.V().hasId('_code_geography_W92000004').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_W92000004').property(single, 'listID', 'geography').property(single, 'value', "W92000004")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W92000004').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Wales").property('order', 5).next()
-
-g.V().hasId('_code_geography_S92000003').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S92000003').property(single, 'listID', 'geography').property(single, 'value', "S92000003")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S92000003').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Scotland").property('order', 6).next()
-
-g.V().hasId('_code_geography_N92000002').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_N92000002').property(single, 'listID', 'geography').property(single, 'value', "N92000002")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N92000002').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Northern Ireland").property('order', 7).next()
-
-g.V().hasId('_code_geography_E12000001').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E12000001').property(single, 'listID', 'geography').property(single, 'value', "E12000001")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E12000001').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "North East").property('order', 8).next()
-
-g.V().hasId('_code_geography_E12000002').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E12000002').property(single, 'listID', 'geography').property(single, 'value', "E12000002")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E12000002').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "North West").property('order', 9).next()
-
-g.V().hasId('_code_geography_E12000003').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E12000003').property(single, 'listID', 'geography').property(single, 'value', "E12000003")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E12000003').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Yorkshire and The Humber").property('order', 10).next()
-
-g.V().hasId('_code_geography_E12000004').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E12000004').property(single, 'listID', 'geography').property(single, 'value', "E12000004")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E12000004').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "East Midlands").property('order', 11).next()
-
-g.V().hasId('_code_geography_E12000005').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E12000005').property(single, 'listID', 'geography').property(single, 'value', "E12000005")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E12000005').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "West Midlands").property('order', 12).next()
-
-g.V().hasId('_code_geography_E12000006').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E12000006').property(single, 'listID', 'geography').property(single, 'value', "E12000006")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E12000006').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "East of England").property('order', 13).next()
-
-g.V().hasId('_code_geography_E12000007').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E12000007').property(single, 'listID', 'geography').property(single, 'value', "E12000007")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E12000007').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "London").property('order', 14).next()
-
-g.V().hasId('_code_geography_E12000008').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E12000008').property(single, 'listID', 'geography').property(single, 'value', "E12000008")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E12000008').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "South East").property('order', 15).next()
-
-g.V().hasId('_code_geography_E12000009').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E12000009').property(single, 'listID', 'geography').property(single, 'value', "E12000009")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E12000009').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "South West").property('order', 16).next()
-
 g.V().hasId('_code_geography_E30000004').
   fold().coalesce(unfold(), addV('_code').
     property(id, '_code_geography_E30000004').property(single, 'listID', 'geography').property(single, 'value', "E30000004")
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000004').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Barnsley").property('order', 17).next()
+      addE('usedBy').to('codeList')).property('label', "Barnsley").property('order', 1).next()
 
 g.V().hasId('_code_geography_E30000018').
   fold().coalesce(unfold(), addV('_code').
@@ -149,7 +21,7 @@ g.V().hasId('_code_geography_E30000018').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000018').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Bradford").property('order', 18).next()
+      addE('usedBy').to('codeList')).property('label', "Bradford").property('order', 2).next()
 
 g.V().hasId('_code_geography_E30000029').
   fold().coalesce(unfold(), addV('_code').
@@ -157,7 +29,7 @@ g.V().hasId('_code_geography_E30000029').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000029').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Halifax").property('order', 19).next()
+      addE('usedBy').to('codeList')).property('label', "Halifax").property('order', 3).next()
 
 g.V().hasId('_code_geography_E30000039').
   fold().coalesce(unfold(), addV('_code').
@@ -165,7 +37,7 @@ g.V().hasId('_code_geography_E30000039').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000039').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Skipton").property('order', 20).next()
+      addE('usedBy').to('codeList')).property('label', "Skipton").property('order', 4).next()
 
 g.V().hasId('_code_geography_E30000046').
   fold().coalesce(unfold(), addV('_code').
@@ -173,7 +45,7 @@ g.V().hasId('_code_geography_E30000046').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000046').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Dorchester and Weymouth").property('order', 21).next()
+      addE('usedBy').to('codeList')).property('label', "Dorchester and Weymouth").property('order', 5).next()
 
 g.V().hasId('_code_geography_E30000051').
   fold().coalesce(unfold(), addV('_code').
@@ -181,7 +53,7 @@ g.V().hasId('_code_geography_E30000051').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000051').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Falmouth").property('order', 22).next()
+      addE('usedBy').to('codeList')).property('label', "Falmouth").property('order', 6).next()
 
 g.V().hasId('_code_geography_E30000054').
   fold().coalesce(unfold(), addV('_code').
@@ -189,7 +61,7 @@ g.V().hasId('_code_geography_E30000054').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000054').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Grantham").property('order', 23).next()
+      addE('usedBy').to('codeList')).property('label', "Grantham").property('order', 7).next()
 
 g.V().hasId('_code_geography_E30000061').
   fold().coalesce(unfold(), addV('_code').
@@ -197,7 +69,7 @@ g.V().hasId('_code_geography_E30000061').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000061').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Hastings").property('order', 24).next()
+      addE('usedBy').to('codeList')).property('label', "Hastings").property('order', 8).next()
 
 g.V().hasId('_code_geography_E30000064').
   fold().coalesce(unfold(), addV('_code').
@@ -205,7 +77,7 @@ g.V().hasId('_code_geography_E30000064').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000064').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Hexham").property('order', 25).next()
+      addE('usedBy').to('codeList')).property('label', "Hexham").property('order', 9).next()
 
 g.V().hasId('_code_geography_E30000070').
   fold().coalesce(unfold(), addV('_code').
@@ -213,7 +85,7 @@ g.V().hasId('_code_geography_E30000070').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000070').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Isle of Wight").property('order', 26).next()
+      addE('usedBy').to('codeList')).property('label', "Isle of Wight").property('order', 10).next()
 
 g.V().hasId('_code_geography_E30000076').
   fold().coalesce(unfold(), addV('_code').
@@ -221,7 +93,7 @@ g.V().hasId('_code_geography_E30000076').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000076').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Lancaster and Morecambe").property('order', 27).next()
+      addE('usedBy').to('codeList')).property('label', "Lancaster and Morecambe").property('order', 11).next()
 
 g.V().hasId('_code_geography_E30000093').
   fold().coalesce(unfold(), addV('_code').
@@ -229,7 +101,7 @@ g.V().hasId('_code_geography_E30000093').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000093').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Middlesbrough and Stockton").property('order', 28).next()
+      addE('usedBy').to('codeList')).property('label', "Middlesbrough and Stockton").property('order', 12).next()
 
 g.V().hasId('_code_geography_E30000095').
   fold().coalesce(unfold(), addV('_code').
@@ -237,7 +109,7 @@ g.V().hasId('_code_geography_E30000095').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000095').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Minehead").property('order', 29).next()
+      addE('usedBy').to('codeList')).property('label', "Minehead").property('order', 13).next()
 
 g.V().hasId('_code_geography_E30000106').
   fold().coalesce(unfold(), addV('_code').
@@ -245,7 +117,7 @@ g.V().hasId('_code_geography_E30000106').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000106').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Penrith").property('order', 30).next()
+      addE('usedBy').to('codeList')).property('label', "Penrith").property('order', 14).next()
 
 g.V().hasId('_code_geography_E30000108').
   fold().coalesce(unfold(), addV('_code').
@@ -253,7 +125,7 @@ g.V().hasId('_code_geography_E30000108').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000108').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Peterborough").property('order', 31).next()
+      addE('usedBy').to('codeList')).property('label', "Peterborough").property('order', 15).next()
 
 g.V().hasId('_code_geography_E30000110').
   fold().coalesce(unfold(), addV('_code').
@@ -261,7 +133,7 @@ g.V().hasId('_code_geography_E30000110').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000110').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Poole").property('order', 32).next()
+      addE('usedBy').to('codeList')).property('label', "Poole").property('order', 16).next()
 
 g.V().hasId('_code_geography_E30000124').
   fold().coalesce(unfold(), addV('_code').
@@ -269,7 +141,7 @@ g.V().hasId('_code_geography_E30000124').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000124').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Spalding").property('order', 33).next()
+      addE('usedBy').to('codeList')).property('label', "Spalding").property('order', 17).next()
 
 g.V().hasId('_code_geography_E30000135').
   fold().coalesce(unfold(), addV('_code').
@@ -277,7 +149,7 @@ g.V().hasId('_code_geography_E30000135').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000135').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Thetford and Mildenhall").property('order', 34).next()
+      addE('usedBy').to('codeList')).property('label', "Thetford and Mildenhall").property('order', 18).next()
 
 g.V().hasId('_code_geography_E30000147').
   fold().coalesce(unfold(), addV('_code').
@@ -285,7 +157,7 @@ g.V().hasId('_code_geography_E30000147').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000147').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Whitby").property('order', 35).next()
+      addE('usedBy').to('codeList')).property('label', "Whitby").property('order', 19).next()
 
 g.V().hasId('_code_geography_E30000159').
   fold().coalesce(unfold(), addV('_code').
@@ -293,7 +165,7 @@ g.V().hasId('_code_geography_E30000159').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000159').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Andover").property('order', 36).next()
+      addE('usedBy').to('codeList')).property('label', "Andover").property('order', 20).next()
 
 g.V().hasId('_code_geography_E30000160').
   fold().coalesce(unfold(), addV('_code').
@@ -301,7 +173,7 @@ g.V().hasId('_code_geography_E30000160').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000160').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Ashford").property('order', 37).next()
+      addE('usedBy').to('codeList')).property('label', "Ashford").property('order', 21).next()
 
 g.V().hasId('_code_geography_E30000161').
   fold().coalesce(unfold(), addV('_code').
@@ -309,7 +181,7 @@ g.V().hasId('_code_geography_E30000161').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000161').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Banbury").property('order', 38).next()
+      addE('usedBy').to('codeList')).property('label', "Banbury").property('order', 22).next()
 
 g.V().hasId('_code_geography_E30000162').
   fold().coalesce(unfold(), addV('_code').
@@ -317,7 +189,7 @@ g.V().hasId('_code_geography_E30000162').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000162').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Barnstaple").property('order', 39).next()
+      addE('usedBy').to('codeList')).property('label', "Barnstaple").property('order', 23).next()
 
 g.V().hasId('_code_geography_E30000163').
   fold().coalesce(unfold(), addV('_code').
@@ -325,7 +197,7 @@ g.V().hasId('_code_geography_E30000163').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000163').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Barrow-in-Furness").property('order', 40).next()
+      addE('usedBy').to('codeList')).property('label', "Barrow-in-Furness").property('order', 24).next()
 
 g.V().hasId('_code_geography_E30000164').
   fold().coalesce(unfold(), addV('_code').
@@ -333,7 +205,7 @@ g.V().hasId('_code_geography_E30000164').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000164').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Basingstoke").property('order', 41).next()
+      addE('usedBy').to('codeList')).property('label', "Basingstoke").property('order', 25).next()
 
 g.V().hasId('_code_geography_E30000165').
   fold().coalesce(unfold(), addV('_code').
@@ -341,7 +213,7 @@ g.V().hasId('_code_geography_E30000165').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000165').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Bath").property('order', 42).next()
+      addE('usedBy').to('codeList')).property('label', "Bath").property('order', 26).next()
 
 g.V().hasId('_code_geography_E30000166').
   fold().coalesce(unfold(), addV('_code').
@@ -349,7 +221,7 @@ g.V().hasId('_code_geography_E30000166').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000166').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Bedford").property('order', 43).next()
+      addE('usedBy').to('codeList')).property('label', "Bedford").property('order', 27).next()
 
 g.V().hasId('_code_geography_E30000167').
   fold().coalesce(unfold(), addV('_code').
@@ -357,7 +229,7 @@ g.V().hasId('_code_geography_E30000167').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000167').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Bideford").property('order', 44).next()
+      addE('usedBy').to('codeList')).property('label', "Bideford").property('order', 28).next()
 
 g.V().hasId('_code_geography_E30000168').
   fold().coalesce(unfold(), addV('_code').
@@ -365,7 +237,7 @@ g.V().hasId('_code_geography_E30000168').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000168').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Birkenhead").property('order', 45).next()
+      addE('usedBy').to('codeList')).property('label', "Birkenhead").property('order', 29).next()
 
 g.V().hasId('_code_geography_E30000169').
   fold().coalesce(unfold(), addV('_code').
@@ -373,7 +245,7 @@ g.V().hasId('_code_geography_E30000169').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000169').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Birmingham").property('order', 46).next()
+      addE('usedBy').to('codeList')).property('label', "Birmingham").property('order', 30).next()
 
 g.V().hasId('_code_geography_E30000170').
   fold().coalesce(unfold(), addV('_code').
@@ -381,7 +253,7 @@ g.V().hasId('_code_geography_E30000170').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000170').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Blackburn").property('order', 47).next()
+      addE('usedBy').to('codeList')).property('label', "Blackburn").property('order', 31).next()
 
 g.V().hasId('_code_geography_E30000171').
   fold().coalesce(unfold(), addV('_code').
@@ -389,7 +261,7 @@ g.V().hasId('_code_geography_E30000171').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000171').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Blackpool").property('order', 48).next()
+      addE('usedBy').to('codeList')).property('label', "Blackpool").property('order', 32).next()
 
 g.V().hasId('_code_geography_E30000172').
   fold().coalesce(unfold(), addV('_code').
@@ -397,7 +269,7 @@ g.V().hasId('_code_geography_E30000172').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000172').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Blandford Forum and Gillingham").property('order', 49).next()
+      addE('usedBy').to('codeList')).property('label', "Blandford Forum and Gillingham").property('order', 33).next()
 
 g.V().hasId('_code_geography_E30000173').
   fold().coalesce(unfold(), addV('_code').
@@ -405,7 +277,7 @@ g.V().hasId('_code_geography_E30000173').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000173').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Blyth and Ashington").property('order', 50).next()
+      addE('usedBy').to('codeList')).property('label', "Blyth and Ashington").property('order', 34).next()
 
 g.V().hasId('_code_geography_E30000174').
   fold().coalesce(unfold(), addV('_code').
@@ -413,7 +285,7 @@ g.V().hasId('_code_geography_E30000174').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000174').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Boston").property('order', 51).next()
+      addE('usedBy').to('codeList')).property('label', "Boston").property('order', 35).next()
 
 g.V().hasId('_code_geography_E30000175').
   fold().coalesce(unfold(), addV('_code').
@@ -421,7 +293,7 @@ g.V().hasId('_code_geography_E30000175').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000175').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Bournemouth").property('order', 52).next()
+      addE('usedBy').to('codeList')).property('label', "Bournemouth").property('order', 36).next()
 
 g.V().hasId('_code_geography_E30000176').
   fold().coalesce(unfold(), addV('_code').
@@ -429,7 +301,7 @@ g.V().hasId('_code_geography_E30000176').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000176').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Bridgwater").property('order', 53).next()
+      addE('usedBy').to('codeList')).property('label', "Bridgwater").property('order', 37).next()
 
 g.V().hasId('_code_geography_E30000177').
   fold().coalesce(unfold(), addV('_code').
@@ -437,7 +309,7 @@ g.V().hasId('_code_geography_E30000177').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000177').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Bridlington").property('order', 54).next()
+      addE('usedBy').to('codeList')).property('label', "Bridlington").property('order', 38).next()
 
 g.V().hasId('_code_geography_E30000178').
   fold().coalesce(unfold(), addV('_code').
@@ -445,7 +317,7 @@ g.V().hasId('_code_geography_E30000178').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000178').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Bridport").property('order', 55).next()
+      addE('usedBy').to('codeList')).property('label', "Bridport").property('order', 39).next()
 
 g.V().hasId('_code_geography_E30000179').
   fold().coalesce(unfold(), addV('_code').
@@ -453,7 +325,7 @@ g.V().hasId('_code_geography_E30000179').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000179').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Brighton").property('order', 56).next()
+      addE('usedBy').to('codeList')).property('label', "Brighton").property('order', 40).next()
 
 g.V().hasId('_code_geography_E30000180').
   fold().coalesce(unfold(), addV('_code').
@@ -461,7 +333,7 @@ g.V().hasId('_code_geography_E30000180').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000180').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Bristol").property('order', 57).next()
+      addE('usedBy').to('codeList')).property('label', "Bristol").property('order', 41).next()
 
 g.V().hasId('_code_geography_E30000181').
   fold().coalesce(unfold(), addV('_code').
@@ -469,7 +341,7 @@ g.V().hasId('_code_geography_E30000181').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000181').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Bude").property('order', 58).next()
+      addE('usedBy').to('codeList')).property('label', "Bude").property('order', 42).next()
 
 g.V().hasId('_code_geography_E30000182').
   fold().coalesce(unfold(), addV('_code').
@@ -477,7 +349,7 @@ g.V().hasId('_code_geography_E30000182').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000182').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Burnley").property('order', 59).next()
+      addE('usedBy').to('codeList')).property('label', "Burnley").property('order', 43).next()
 
 g.V().hasId('_code_geography_E30000183').
   fold().coalesce(unfold(), addV('_code').
@@ -485,7 +357,7 @@ g.V().hasId('_code_geography_E30000183').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000183').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Burton upon Trent").property('order', 60).next()
+      addE('usedBy').to('codeList')).property('label', "Burton upon Trent").property('order', 44).next()
 
 g.V().hasId('_code_geography_E30000184').
   fold().coalesce(unfold(), addV('_code').
@@ -493,7 +365,7 @@ g.V().hasId('_code_geography_E30000184').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000184').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Bury St Edmunds").property('order', 61).next()
+      addE('usedBy').to('codeList')).property('label', "Bury St Edmunds").property('order', 45).next()
 
 g.V().hasId('_code_geography_E30000185').
   fold().coalesce(unfold(), addV('_code').
@@ -501,7 +373,7 @@ g.V().hasId('_code_geography_E30000185').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000185').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Buxton").property('order', 62).next()
+      addE('usedBy').to('codeList')).property('label', "Buxton").property('order', 46).next()
 
 g.V().hasId('_code_geography_E30000186').
   fold().coalesce(unfold(), addV('_code').
@@ -509,7 +381,7 @@ g.V().hasId('_code_geography_E30000186').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000186').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Cambridge").property('order', 63).next()
+      addE('usedBy').to('codeList')).property('label', "Cambridge").property('order', 47).next()
 
 g.V().hasId('_code_geography_E30000187').
   fold().coalesce(unfold(), addV('_code').
@@ -517,7 +389,7 @@ g.V().hasId('_code_geography_E30000187').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000187').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Canterbury").property('order', 64).next()
+      addE('usedBy').to('codeList')).property('label', "Canterbury").property('order', 48).next()
 
 g.V().hasId('_code_geography_E30000188').
   fold().coalesce(unfold(), addV('_code').
@@ -525,7 +397,7 @@ g.V().hasId('_code_geography_E30000188').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000188').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Chelmsford").property('order', 65).next()
+      addE('usedBy').to('codeList')).property('label', "Chelmsford").property('order', 49).next()
 
 g.V().hasId('_code_geography_E30000189').
   fold().coalesce(unfold(), addV('_code').
@@ -533,7 +405,7 @@ g.V().hasId('_code_geography_E30000189').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000189').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Cheltenham").property('order', 66).next()
+      addE('usedBy').to('codeList')).property('label', "Cheltenham").property('order', 50).next()
 
 g.V().hasId('_code_geography_E30000190').
   fold().coalesce(unfold(), addV('_code').
@@ -541,7 +413,7 @@ g.V().hasId('_code_geography_E30000190').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000190').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Chesterfield").property('order', 67).next()
+      addE('usedBy').to('codeList')).property('label', "Chesterfield").property('order', 51).next()
 
 g.V().hasId('_code_geography_E30000191').
   fold().coalesce(unfold(), addV('_code').
@@ -549,7 +421,7 @@ g.V().hasId('_code_geography_E30000191').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000191').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Chichester and Bognor Regis").property('order', 68).next()
+      addE('usedBy').to('codeList')).property('label', "Chichester and Bognor Regis").property('order', 52).next()
 
 g.V().hasId('_code_geography_E30000192').
   fold().coalesce(unfold(), addV('_code').
@@ -557,7 +429,7 @@ g.V().hasId('_code_geography_E30000192').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000192').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Clacton").property('order', 69).next()
+      addE('usedBy').to('codeList')).property('label', "Clacton").property('order', 53).next()
 
 g.V().hasId('_code_geography_E30000193').
   fold().coalesce(unfold(), addV('_code').
@@ -565,7 +437,7 @@ g.V().hasId('_code_geography_E30000193').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000193').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Colchester").property('order', 70).next()
+      addE('usedBy').to('codeList')).property('label', "Colchester").property('order', 54).next()
 
 g.V().hasId('_code_geography_E30000194').
   fold().coalesce(unfold(), addV('_code').
@@ -573,7 +445,7 @@ g.V().hasId('_code_geography_E30000194').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000194').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Corby").property('order', 71).next()
+      addE('usedBy').to('codeList')).property('label', "Corby").property('order', 55).next()
 
 g.V().hasId('_code_geography_E30000195').
   fold().coalesce(unfold(), addV('_code').
@@ -581,7 +453,7 @@ g.V().hasId('_code_geography_E30000195').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000195').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Coventry").property('order', 72).next()
+      addE('usedBy').to('codeList')).property('label', "Coventry").property('order', 56).next()
 
 g.V().hasId('_code_geography_E30000196').
   fold().coalesce(unfold(), addV('_code').
@@ -589,7 +461,7 @@ g.V().hasId('_code_geography_E30000196').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000196').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Crawley").property('order', 73).next()
+      addE('usedBy').to('codeList')).property('label', "Crawley").property('order', 57).next()
 
 g.V().hasId('_code_geography_E30000197').
   fold().coalesce(unfold(), addV('_code').
@@ -597,7 +469,7 @@ g.V().hasId('_code_geography_E30000197').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000197').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Crewe").property('order', 74).next()
+      addE('usedBy').to('codeList')).property('label', "Crewe").property('order', 58).next()
 
 g.V().hasId('_code_geography_E30000198').
   fold().coalesce(unfold(), addV('_code').
@@ -605,7 +477,7 @@ g.V().hasId('_code_geography_E30000198').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000198').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Cromer and Sheringham").property('order', 75).next()
+      addE('usedBy').to('codeList')).property('label', "Cromer and Sheringham").property('order', 59).next()
 
 g.V().hasId('_code_geography_E30000199').
   fold().coalesce(unfold(), addV('_code').
@@ -613,7 +485,7 @@ g.V().hasId('_code_geography_E30000199').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000199').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Darlington").property('order', 76).next()
+      addE('usedBy').to('codeList')).property('label', "Darlington").property('order', 60).next()
 
 g.V().hasId('_code_geography_E30000200').
   fold().coalesce(unfold(), addV('_code').
@@ -621,7 +493,7 @@ g.V().hasId('_code_geography_E30000200').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000200').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Derby").property('order', 77).next()
+      addE('usedBy').to('codeList')).property('label', "Derby").property('order', 61).next()
 
 g.V().hasId('_code_geography_E30000201').
   fold().coalesce(unfold(), addV('_code').
@@ -629,7 +501,7 @@ g.V().hasId('_code_geography_E30000201').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000201').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Doncaster").property('order', 78).next()
+      addE('usedBy').to('codeList')).property('label', "Doncaster").property('order', 62).next()
 
 g.V().hasId('_code_geography_E30000202').
   fold().coalesce(unfold(), addV('_code').
@@ -637,7 +509,7 @@ g.V().hasId('_code_geography_E30000202').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000202').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Dudley").property('order', 79).next()
+      addE('usedBy').to('codeList')).property('label', "Dudley").property('order', 63).next()
 
 g.V().hasId('_code_geography_E30000203').
   fold().coalesce(unfold(), addV('_code').
@@ -645,7 +517,7 @@ g.V().hasId('_code_geography_E30000203').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000203').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Durham and Bishop Auckland").property('order', 80).next()
+      addE('usedBy').to('codeList')).property('label', "Durham and Bishop Auckland").property('order', 64).next()
 
 g.V().hasId('_code_geography_E30000204').
   fold().coalesce(unfold(), addV('_code').
@@ -653,7 +525,7 @@ g.V().hasId('_code_geography_E30000204').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000204').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Eastbourne").property('order', 81).next()
+      addE('usedBy').to('codeList')).property('label', "Eastbourne").property('order', 65).next()
 
 g.V().hasId('_code_geography_E30000205').
   fold().coalesce(unfold(), addV('_code').
@@ -661,7 +533,7 @@ g.V().hasId('_code_geography_E30000205').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000205').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Evesham").property('order', 82).next()
+      addE('usedBy').to('codeList')).property('label', "Evesham").property('order', 66).next()
 
 g.V().hasId('_code_geography_E30000206').
   fold().coalesce(unfold(), addV('_code').
@@ -669,7 +541,7 @@ g.V().hasId('_code_geography_E30000206').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000206').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Exeter").property('order', 83).next()
+      addE('usedBy').to('codeList')).property('label', "Exeter").property('order', 67).next()
 
 g.V().hasId('_code_geography_E30000208').
   fold().coalesce(unfold(), addV('_code').
@@ -677,7 +549,7 @@ g.V().hasId('_code_geography_E30000208').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000208').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Folkestone and Dover").property('order', 84).next()
+      addE('usedBy').to('codeList')).property('label', "Folkestone and Dover").property('order', 68).next()
 
 g.V().hasId('_code_geography_E30000209').
   fold().coalesce(unfold(), addV('_code').
@@ -685,7 +557,7 @@ g.V().hasId('_code_geography_E30000209').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000209').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Gloucester").property('order', 85).next()
+      addE('usedBy').to('codeList')).property('label', "Gloucester").property('order', 69).next()
 
 g.V().hasId('_code_geography_E30000210').
   fold().coalesce(unfold(), addV('_code').
@@ -693,7 +565,7 @@ g.V().hasId('_code_geography_E30000210').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000210').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Great Yarmouth").property('order', 86).next()
+      addE('usedBy').to('codeList')).property('label', "Great Yarmouth").property('order', 70).next()
 
 g.V().hasId('_code_geography_E30000211').
   fold().coalesce(unfold(), addV('_code').
@@ -701,7 +573,7 @@ g.V().hasId('_code_geography_E30000211').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000211').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Grimsby").property('order', 87).next()
+      addE('usedBy').to('codeList')).property('label', "Grimsby").property('order', 71).next()
 
 g.V().hasId('_code_geography_E30000212').
   fold().coalesce(unfold(), addV('_code').
@@ -709,7 +581,7 @@ g.V().hasId('_code_geography_E30000212').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000212').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Guildford and Aldershot").property('order', 88).next()
+      addE('usedBy').to('codeList')).property('label', "Guildford and Aldershot").property('order', 72).next()
 
 g.V().hasId('_code_geography_E30000214').
   fold().coalesce(unfold(), addV('_code').
@@ -717,7 +589,7 @@ g.V().hasId('_code_geography_E30000214').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000214').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Harrogate").property('order', 89).next()
+      addE('usedBy').to('codeList')).property('label', "Harrogate").property('order', 73).next()
 
 g.V().hasId('_code_geography_E30000215').
   fold().coalesce(unfold(), addV('_code').
@@ -725,7 +597,7 @@ g.V().hasId('_code_geography_E30000215').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000215').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Hartlepool").property('order', 90).next()
+      addE('usedBy').to('codeList')).property('label', "Hartlepool").property('order', 74).next()
 
 g.V().hasId('_code_geography_E30000216').
   fold().coalesce(unfold(), addV('_code').
@@ -733,7 +605,7 @@ g.V().hasId('_code_geography_E30000216').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000216').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Hereford").property('order', 91).next()
+      addE('usedBy').to('codeList')).property('label', "Hereford").property('order', 75).next()
 
 g.V().hasId('_code_geography_E30000218').
   fold().coalesce(unfold(), addV('_code').
@@ -741,7 +613,7 @@ g.V().hasId('_code_geography_E30000218').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000218').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "High Wycombe and Aylesbury").property('order', 92).next()
+      addE('usedBy').to('codeList')).property('label', "High Wycombe and Aylesbury").property('order', 76).next()
 
 g.V().hasId('_code_geography_E30000219').
   fold().coalesce(unfold(), addV('_code').
@@ -749,7 +621,7 @@ g.V().hasId('_code_geography_E30000219').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000219').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Huddersfield").property('order', 93).next()
+      addE('usedBy').to('codeList')).property('label', "Huddersfield").property('order', 77).next()
 
 g.V().hasId('_code_geography_E30000220').
   fold().coalesce(unfold(), addV('_code').
@@ -757,7 +629,7 @@ g.V().hasId('_code_geography_E30000220').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000220').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Hull").property('order', 94).next()
+      addE('usedBy').to('codeList')).property('label', "Hull").property('order', 78).next()
 
 g.V().hasId('_code_geography_E30000221').
   fold().coalesce(unfold(), addV('_code').
@@ -765,7 +637,7 @@ g.V().hasId('_code_geography_E30000221').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000221').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Huntingdon").property('order', 95).next()
+      addE('usedBy').to('codeList')).property('label', "Huntingdon").property('order', 79).next()
 
 g.V().hasId('_code_geography_E30000222').
   fold().coalesce(unfold(), addV('_code').
@@ -773,7 +645,7 @@ g.V().hasId('_code_geography_E30000222').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000222').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Ipswich").property('order', 96).next()
+      addE('usedBy').to('codeList')).property('label', "Ipswich").property('order', 80).next()
 
 g.V().hasId('_code_geography_E30000223').
   fold().coalesce(unfold(), addV('_code').
@@ -781,7 +653,7 @@ g.V().hasId('_code_geography_E30000223').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000223').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Kendal").property('order', 97).next()
+      addE('usedBy').to('codeList')).property('label', "Kendal").property('order', 81).next()
 
 g.V().hasId('_code_geography_E30000224').
   fold().coalesce(unfold(), addV('_code').
@@ -789,7 +661,7 @@ g.V().hasId('_code_geography_E30000224').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000224').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Kettering and Wellingborough").property('order', 98).next()
+      addE('usedBy').to('codeList')).property('label', "Kettering and Wellingborough").property('order', 82).next()
 
 g.V().hasId('_code_geography_E30000225').
   fold().coalesce(unfold(), addV('_code').
@@ -797,7 +669,7 @@ g.V().hasId('_code_geography_E30000225').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000225').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "King's Lynn").property('order', 99).next()
+      addE('usedBy').to('codeList')).property('label', "King's Lynn").property('order', 83).next()
 
 g.V().hasId('_code_geography_E30000226').
   fold().coalesce(unfold(), addV('_code').
@@ -805,7 +677,7 @@ g.V().hasId('_code_geography_E30000226').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000226').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Kingsbridge and Dartmouth").property('order', 100).next()
+      addE('usedBy').to('codeList')).property('label', "Kingsbridge and Dartmouth").property('order', 84).next()
 
 g.V().hasId('_code_geography_E30000227').
   fold().coalesce(unfold(), addV('_code').
@@ -813,7 +685,7 @@ g.V().hasId('_code_geography_E30000227').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000227').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Launceston").property('order', 101).next()
+      addE('usedBy').to('codeList')).property('label', "Launceston").property('order', 85).next()
 
 g.V().hasId('_code_geography_E30000228').
   fold().coalesce(unfold(), addV('_code').
@@ -821,7 +693,7 @@ g.V().hasId('_code_geography_E30000228').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000228').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Leamington Spa").property('order', 102).next()
+      addE('usedBy').to('codeList')).property('label', "Leamington Spa").property('order', 86).next()
 
 g.V().hasId('_code_geography_E30000229').
   fold().coalesce(unfold(), addV('_code').
@@ -829,7 +701,7 @@ g.V().hasId('_code_geography_E30000229').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000229').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Leeds").property('order', 103).next()
+      addE('usedBy').to('codeList')).property('label', "Leeds").property('order', 87).next()
 
 g.V().hasId('_code_geography_E30000230').
   fold().coalesce(unfold(), addV('_code').
@@ -837,7 +709,7 @@ g.V().hasId('_code_geography_E30000230').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000230').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Leicester").property('order', 104).next()
+      addE('usedBy').to('codeList')).property('label', "Leicester").property('order', 88).next()
 
 g.V().hasId('_code_geography_E30000231').
   fold().coalesce(unfold(), addV('_code').
@@ -845,7 +717,7 @@ g.V().hasId('_code_geography_E30000231').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000231').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Lincoln").property('order', 105).next()
+      addE('usedBy').to('codeList')).property('label', "Lincoln").property('order', 89).next()
 
 g.V().hasId('_code_geography_E30000232').
   fold().coalesce(unfold(), addV('_code').
@@ -853,7 +725,7 @@ g.V().hasId('_code_geography_E30000232').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000232').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Liskeard").property('order', 106).next()
+      addE('usedBy').to('codeList')).property('label', "Liskeard").property('order', 90).next()
 
 g.V().hasId('_code_geography_E30000233').
   fold().coalesce(unfold(), addV('_code').
@@ -861,7 +733,7 @@ g.V().hasId('_code_geography_E30000233').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000233').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Liverpool").property('order', 107).next()
+      addE('usedBy').to('codeList')).property('label', "Liverpool").property('order', 91).next()
 
 g.V().hasId('_code_geography_E30000234').
   fold().coalesce(unfold(), addV('_code').
@@ -869,7 +741,7 @@ g.V().hasId('_code_geography_E30000234').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000234').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "London").property('order', 108).next()
+      addE('usedBy').to('codeList')).property('label', "London").property('order', 92).next()
 
 g.V().hasId('_code_geography_E30000235').
   fold().coalesce(unfold(), addV('_code').
@@ -877,7 +749,7 @@ g.V().hasId('_code_geography_E30000235').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000235').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Lowestoft").property('order', 109).next()
+      addE('usedBy').to('codeList')).property('label', "Lowestoft").property('order', 93).next()
 
 g.V().hasId('_code_geography_E30000236').
   fold().coalesce(unfold(), addV('_code').
@@ -885,7 +757,7 @@ g.V().hasId('_code_geography_E30000236').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000236').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Ludlow").property('order', 110).next()
+      addE('usedBy').to('codeList')).property('label', "Ludlow").property('order', 94).next()
 
 g.V().hasId('_code_geography_E30000237').
   fold().coalesce(unfold(), addV('_code').
@@ -893,7 +765,7 @@ g.V().hasId('_code_geography_E30000237').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000237').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Luton").property('order', 111).next()
+      addE('usedBy').to('codeList')).property('label', "Luton").property('order', 95).next()
 
 g.V().hasId('_code_geography_E30000238').
   fold().coalesce(unfold(), addV('_code').
@@ -901,7 +773,7 @@ g.V().hasId('_code_geography_E30000238').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000238').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Malton").property('order', 112).next()
+      addE('usedBy').to('codeList')).property('label', "Malton").property('order', 96).next()
 
 g.V().hasId('_code_geography_E30000239').
   fold().coalesce(unfold(), addV('_code').
@@ -909,7 +781,7 @@ g.V().hasId('_code_geography_E30000239').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000239').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Manchester").property('order', 113).next()
+      addE('usedBy').to('codeList')).property('label', "Manchester").property('order', 97).next()
 
 g.V().hasId('_code_geography_E30000240').
   fold().coalesce(unfold(), addV('_code').
@@ -917,7 +789,7 @@ g.V().hasId('_code_geography_E30000240').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000240').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Mansfield").property('order', 114).next()
+      addE('usedBy').to('codeList')).property('label', "Mansfield").property('order', 98).next()
 
 g.V().hasId('_code_geography_E30000241').
   fold().coalesce(unfold(), addV('_code').
@@ -925,7 +797,7 @@ g.V().hasId('_code_geography_E30000241').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000241').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Margate and Ramsgate").property('order', 115).next()
+      addE('usedBy').to('codeList')).property('label', "Margate and Ramsgate").property('order', 99).next()
 
 g.V().hasId('_code_geography_E30000242').
   fold().coalesce(unfold(), addV('_code').
@@ -933,7 +805,7 @@ g.V().hasId('_code_geography_E30000242').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000242').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Medway").property('order', 116).next()
+      addE('usedBy').to('codeList')).property('label', "Medway").property('order', 100).next()
 
 g.V().hasId('_code_geography_E30000243').
   fold().coalesce(unfold(), addV('_code').
@@ -941,7 +813,7 @@ g.V().hasId('_code_geography_E30000243').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000243').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Milton Keynes").property('order', 117).next()
+      addE('usedBy').to('codeList')).property('label', "Milton Keynes").property('order', 101).next()
 
 g.V().hasId('_code_geography_E30000244').
   fold().coalesce(unfold(), addV('_code').
@@ -949,7 +821,7 @@ g.V().hasId('_code_geography_E30000244').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000244').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Newbury").property('order', 118).next()
+      addE('usedBy').to('codeList')).property('label', "Newbury").property('order', 102).next()
 
 g.V().hasId('_code_geography_E30000245').
   fold().coalesce(unfold(), addV('_code').
@@ -957,7 +829,7 @@ g.V().hasId('_code_geography_E30000245').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000245').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Newcastle").property('order', 119).next()
+      addE('usedBy').to('codeList')).property('label', "Newcastle").property('order', 103).next()
 
 g.V().hasId('_code_geography_E30000246').
   fold().coalesce(unfold(), addV('_code').
@@ -965,7 +837,7 @@ g.V().hasId('_code_geography_E30000246').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000246').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Northallerton").property('order', 120).next()
+      addE('usedBy').to('codeList')).property('label', "Northallerton").property('order', 104).next()
 
 g.V().hasId('_code_geography_E30000247').
   fold().coalesce(unfold(), addV('_code').
@@ -973,7 +845,7 @@ g.V().hasId('_code_geography_E30000247').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000247').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Northampton").property('order', 121).next()
+      addE('usedBy').to('codeList')).property('label', "Northampton").property('order', 105).next()
 
 g.V().hasId('_code_geography_E30000248').
   fold().coalesce(unfold(), addV('_code').
@@ -981,7 +853,7 @@ g.V().hasId('_code_geography_E30000248').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000248').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Norwich").property('order', 122).next()
+      addE('usedBy').to('codeList')).property('label', "Norwich").property('order', 106).next()
 
 g.V().hasId('_code_geography_E30000249').
   fold().coalesce(unfold(), addV('_code').
@@ -989,7 +861,7 @@ g.V().hasId('_code_geography_E30000249').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000249').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Nottingham").property('order', 123).next()
+      addE('usedBy').to('codeList')).property('label', "Nottingham").property('order', 107).next()
 
 g.V().hasId('_code_geography_E30000250').
   fold().coalesce(unfold(), addV('_code').
@@ -997,7 +869,7 @@ g.V().hasId('_code_geography_E30000250').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000250').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Oxford").property('order', 124).next()
+      addE('usedBy').to('codeList')).property('label', "Oxford").property('order', 108).next()
 
 g.V().hasId('_code_geography_E30000252').
   fold().coalesce(unfold(), addV('_code').
@@ -1005,7 +877,7 @@ g.V().hasId('_code_geography_E30000252').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000252').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Penzance").property('order', 125).next()
+      addE('usedBy').to('codeList')).property('label', "Penzance").property('order', 109).next()
 
 g.V().hasId('_code_geography_E30000253').
   fold().coalesce(unfold(), addV('_code').
@@ -1013,7 +885,7 @@ g.V().hasId('_code_geography_E30000253').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000253').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Plymouth").property('order', 126).next()
+      addE('usedBy').to('codeList')).property('label', "Plymouth").property('order', 110).next()
 
 g.V().hasId('_code_geography_E30000254').
   fold().coalesce(unfold(), addV('_code').
@@ -1021,7 +893,7 @@ g.V().hasId('_code_geography_E30000254').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000254').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Portsmouth").property('order', 127).next()
+      addE('usedBy').to('codeList')).property('label', "Portsmouth").property('order', 111).next()
 
 g.V().hasId('_code_geography_E30000255').
   fold().coalesce(unfold(), addV('_code').
@@ -1029,7 +901,7 @@ g.V().hasId('_code_geography_E30000255').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000255').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Preston").property('order', 128).next()
+      addE('usedBy').to('codeList')).property('label', "Preston").property('order', 112).next()
 
 g.V().hasId('_code_geography_E30000256').
   fold().coalesce(unfold(), addV('_code').
@@ -1037,7 +909,7 @@ g.V().hasId('_code_geography_E30000256').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000256').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Reading").property('order', 129).next()
+      addE('usedBy').to('codeList')).property('label', "Reading").property('order', 113).next()
 
 g.V().hasId('_code_geography_E30000257').
   fold().coalesce(unfold(), addV('_code').
@@ -1045,7 +917,7 @@ g.V().hasId('_code_geography_E30000257').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000257').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Redruth and Truro").property('order', 130).next()
+      addE('usedBy').to('codeList')).property('label', "Redruth and Truro").property('order', 114).next()
 
 g.V().hasId('_code_geography_E30000258').
   fold().coalesce(unfold(), addV('_code').
@@ -1053,7 +925,7 @@ g.V().hasId('_code_geography_E30000258').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000258').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Salisbury").property('order', 131).next()
+      addE('usedBy').to('codeList')).property('label', "Salisbury").property('order', 115).next()
 
 g.V().hasId('_code_geography_E30000259').
   fold().coalesce(unfold(), addV('_code').
@@ -1061,7 +933,7 @@ g.V().hasId('_code_geography_E30000259').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000259').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Scarborough").property('order', 132).next()
+      addE('usedBy').to('codeList')).property('label', "Scarborough").property('order', 116).next()
 
 g.V().hasId('_code_geography_E30000260').
   fold().coalesce(unfold(), addV('_code').
@@ -1069,7 +941,7 @@ g.V().hasId('_code_geography_E30000260').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000260').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Scunthorpe").property('order', 133).next()
+      addE('usedBy').to('codeList')).property('label', "Scunthorpe").property('order', 117).next()
 
 g.V().hasId('_code_geography_E30000261').
   fold().coalesce(unfold(), addV('_code').
@@ -1077,7 +949,7 @@ g.V().hasId('_code_geography_E30000261').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000261').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Sheffield").property('order', 134).next()
+      addE('usedBy').to('codeList')).property('label', "Sheffield").property('order', 118).next()
 
 g.V().hasId('_code_geography_E30000262').
   fold().coalesce(unfold(), addV('_code').
@@ -1085,7 +957,7 @@ g.V().hasId('_code_geography_E30000262').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000262').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Shrewsbury").property('order', 135).next()
+      addE('usedBy').to('codeList')).property('label', "Shrewsbury").property('order', 119).next()
 
 g.V().hasId('_code_geography_E30000263').
   fold().coalesce(unfold(), addV('_code').
@@ -1093,7 +965,7 @@ g.V().hasId('_code_geography_E30000263').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000263').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Sidmouth").property('order', 136).next()
+      addE('usedBy').to('codeList')).property('label', "Sidmouth").property('order', 120).next()
 
 g.V().hasId('_code_geography_E30000264').
   fold().coalesce(unfold(), addV('_code').
@@ -1101,7 +973,7 @@ g.V().hasId('_code_geography_E30000264').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000264').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Skegness and Louth").property('order', 137).next()
+      addE('usedBy').to('codeList')).property('label', "Skegness and Louth").property('order', 121).next()
 
 g.V().hasId('_code_geography_E30000266').
   fold().coalesce(unfold(), addV('_code').
@@ -1109,7 +981,7 @@ g.V().hasId('_code_geography_E30000266').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000266').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Slough and Heathrow").property('order', 138).next()
+      addE('usedBy').to('codeList')).property('label', "Slough and Heathrow").property('order', 122).next()
 
 g.V().hasId('_code_geography_E30000267').
   fold().coalesce(unfold(), addV('_code').
@@ -1117,7 +989,7 @@ g.V().hasId('_code_geography_E30000267').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000267').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Southampton").property('order', 139).next()
+      addE('usedBy').to('codeList')).property('label', "Southampton").property('order', 123).next()
 
 g.V().hasId('_code_geography_E30000268').
   fold().coalesce(unfold(), addV('_code').
@@ -1125,7 +997,7 @@ g.V().hasId('_code_geography_E30000268').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000268').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Southend").property('order', 140).next()
+      addE('usedBy').to('codeList')).property('label', "Southend").property('order', 124).next()
 
 g.V().hasId('_code_geography_E30000270').
   fold().coalesce(unfold(), addV('_code').
@@ -1133,7 +1005,7 @@ g.V().hasId('_code_geography_E30000270').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000270').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "St Austell and Newquay").property('order', 141).next()
+      addE('usedBy').to('codeList')).property('label', "St Austell and Newquay").property('order', 125).next()
 
 g.V().hasId('_code_geography_E30000271').
   fold().coalesce(unfold(), addV('_code').
@@ -1141,7 +1013,7 @@ g.V().hasId('_code_geography_E30000271').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000271').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Stafford").property('order', 142).next()
+      addE('usedBy').to('codeList')).property('label', "Stafford").property('order', 126).next()
 
 g.V().hasId('_code_geography_E30000272').
   fold().coalesce(unfold(), addV('_code').
@@ -1149,7 +1021,7 @@ g.V().hasId('_code_geography_E30000272').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000272').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Stevenage and Welwyn Garden City").property('order', 143).next()
+      addE('usedBy').to('codeList')).property('label', "Stevenage and Welwyn Garden City").property('order', 127).next()
 
 g.V().hasId('_code_geography_E30000273').
   fold().coalesce(unfold(), addV('_code').
@@ -1157,7 +1029,7 @@ g.V().hasId('_code_geography_E30000273').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000273').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Stoke-on-Trent").property('order', 144).next()
+      addE('usedBy').to('codeList')).property('label', "Stoke-on-Trent").property('order', 128).next()
 
 g.V().hasId('_code_geography_E30000274').
   fold().coalesce(unfold(), addV('_code').
@@ -1165,7 +1037,7 @@ g.V().hasId('_code_geography_E30000274').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000274').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Street and Wells").property('order', 145).next()
+      addE('usedBy').to('codeList')).property('label', "Street and Wells").property('order', 129).next()
 
 g.V().hasId('_code_geography_E30000275').
   fold().coalesce(unfold(), addV('_code').
@@ -1173,7 +1045,7 @@ g.V().hasId('_code_geography_E30000275').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000275').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Sunderland").property('order', 146).next()
+      addE('usedBy').to('codeList')).property('label', "Sunderland").property('order', 130).next()
 
 g.V().hasId('_code_geography_E30000276').
   fold().coalesce(unfold(), addV('_code').
@@ -1181,7 +1053,7 @@ g.V().hasId('_code_geography_E30000276').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000276').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Swindon").property('order', 147).next()
+      addE('usedBy').to('codeList')).property('label', "Swindon").property('order', 131).next()
 
 g.V().hasId('_code_geography_E30000277').
   fold().coalesce(unfold(), addV('_code').
@@ -1189,7 +1061,7 @@ g.V().hasId('_code_geography_E30000277').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000277').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Taunton").property('order', 148).next()
+      addE('usedBy').to('codeList')).property('label', "Taunton").property('order', 132).next()
 
 g.V().hasId('_code_geography_E30000278').
   fold().coalesce(unfold(), addV('_code').
@@ -1197,7 +1069,7 @@ g.V().hasId('_code_geography_E30000278').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000278').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Telford").property('order', 149).next()
+      addE('usedBy').to('codeList')).property('label', "Telford").property('order', 133).next()
 
 g.V().hasId('_code_geography_E30000279').
   fold().coalesce(unfold(), addV('_code').
@@ -1205,7 +1077,7 @@ g.V().hasId('_code_geography_E30000279').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000279').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Torquay and Paignton").property('order', 150).next()
+      addE('usedBy').to('codeList')).property('label', "Torquay and Paignton").property('order', 134).next()
 
 g.V().hasId('_code_geography_E30000280').
   fold().coalesce(unfold(), addV('_code').
@@ -1213,7 +1085,7 @@ g.V().hasId('_code_geography_E30000280').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000280').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Trowbridge").property('order', 151).next()
+      addE('usedBy').to('codeList')).property('label', "Trowbridge").property('order', 135).next()
 
 g.V().hasId('_code_geography_E30000281').
   fold().coalesce(unfold(), addV('_code').
@@ -1221,7 +1093,7 @@ g.V().hasId('_code_geography_E30000281').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000281').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Tunbridge Wells").property('order', 152).next()
+      addE('usedBy').to('codeList')).property('label', "Tunbridge Wells").property('order', 136).next()
 
 g.V().hasId('_code_geography_E30000282').
   fold().coalesce(unfold(), addV('_code').
@@ -1229,7 +1101,7 @@ g.V().hasId('_code_geography_E30000282').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000282').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Wadebridge").property('order', 153).next()
+      addE('usedBy').to('codeList')).property('label', "Wadebridge").property('order', 137).next()
 
 g.V().hasId('_code_geography_E30000283').
   fold().coalesce(unfold(), addV('_code').
@@ -1237,7 +1109,7 @@ g.V().hasId('_code_geography_E30000283').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000283').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Wakefield and Castleford").property('order', 154).next()
+      addE('usedBy').to('codeList')).property('label', "Wakefield and Castleford").property('order', 138).next()
 
 g.V().hasId('_code_geography_E30000284').
   fold().coalesce(unfold(), addV('_code').
@@ -1245,7 +1117,7 @@ g.V().hasId('_code_geography_E30000284').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000284').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Warrington and Wigan").property('order', 155).next()
+      addE('usedBy').to('codeList')).property('label', "Warrington and Wigan").property('order', 139).next()
 
 g.V().hasId('_code_geography_E30000285').
   fold().coalesce(unfold(), addV('_code').
@@ -1253,7 +1125,7 @@ g.V().hasId('_code_geography_E30000285').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000285').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Weston-super-Mare").property('order', 156).next()
+      addE('usedBy').to('codeList')).property('label', "Weston-super-Mare").property('order', 140).next()
 
 g.V().hasId('_code_geography_E30000286').
   fold().coalesce(unfold(), addV('_code').
@@ -1261,7 +1133,7 @@ g.V().hasId('_code_geography_E30000286').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000286').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Whitehaven").property('order', 157).next()
+      addE('usedBy').to('codeList')).property('label', "Whitehaven").property('order', 141).next()
 
 g.V().hasId('_code_geography_E30000287').
   fold().coalesce(unfold(), addV('_code').
@@ -1269,7 +1141,7 @@ g.V().hasId('_code_geography_E30000287').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000287').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Wisbech").property('order', 158).next()
+      addE('usedBy').to('codeList')).property('label', "Wisbech").property('order', 142).next()
 
 g.V().hasId('_code_geography_E30000288').
   fold().coalesce(unfold(), addV('_code').
@@ -1277,7 +1149,7 @@ g.V().hasId('_code_geography_E30000288').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000288').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Wolverhampton and Walsall").property('order', 159).next()
+      addE('usedBy').to('codeList')).property('label', "Wolverhampton and Walsall").property('order', 143).next()
 
 g.V().hasId('_code_geography_E30000289').
   fold().coalesce(unfold(), addV('_code').
@@ -1285,7 +1157,7 @@ g.V().hasId('_code_geography_E30000289').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000289').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Worcester and Kidderminster").property('order', 160).next()
+      addE('usedBy').to('codeList')).property('label', "Worcester and Kidderminster").property('order', 144).next()
 
 g.V().hasId('_code_geography_E30000290').
   fold().coalesce(unfold(), addV('_code').
@@ -1293,7 +1165,7 @@ g.V().hasId('_code_geography_E30000290').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000290').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Workington").property('order', 161).next()
+      addE('usedBy').to('codeList')).property('label', "Workington").property('order', 145).next()
 
 g.V().hasId('_code_geography_E30000291').
   fold().coalesce(unfold(), addV('_code').
@@ -1301,7 +1173,7 @@ g.V().hasId('_code_geography_E30000291').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000291').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Worksop and Retford").property('order', 162).next()
+      addE('usedBy').to('codeList')).property('label', "Worksop and Retford").property('order', 146).next()
 
 g.V().hasId('_code_geography_E30000292').
   fold().coalesce(unfold(), addV('_code').
@@ -1309,7 +1181,7 @@ g.V().hasId('_code_geography_E30000292').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000292').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Worthing").property('order', 163).next()
+      addE('usedBy').to('codeList')).property('label', "Worthing").property('order', 147).next()
 
 g.V().hasId('_code_geography_E30000293').
   fold().coalesce(unfold(), addV('_code').
@@ -1317,7 +1189,7 @@ g.V().hasId('_code_geography_E30000293').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000293').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Yeovil").property('order', 164).next()
+      addE('usedBy').to('codeList')).property('label', "Yeovil").property('order', 148).next()
 
 g.V().hasId('_code_geography_E30000294').
   fold().coalesce(unfold(), addV('_code').
@@ -1325,7 +1197,7 @@ g.V().hasId('_code_geography_E30000294').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_E30000294').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "York").property('order', 165).next()
+      addE('usedBy').to('codeList')).property('label', "York").property('order', 149).next()
 
 g.V().hasId('_code_geography_K01000005').
   fold().coalesce(unfold(), addV('_code').
@@ -1333,7 +1205,7 @@ g.V().hasId('_code_geography_K01000005').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_K01000005').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Cinderford and Ross-on-Wye").property('order', 166).next()
+      addE('usedBy').to('codeList')).property('label', "Cinderford and Ross-on-Wye").property('order', 150).next()
 
 g.V().hasId('_code_geography_K01000009').
   fold().coalesce(unfold(), addV('_code').
@@ -1341,7 +1213,7 @@ g.V().hasId('_code_geography_K01000009').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_K01000009').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Berwick").property('order', 167).next()
+      addE('usedBy').to('codeList')).property('label', "Berwick").property('order', 151).next()
 
 g.V().hasId('_code_geography_K01000010').
   fold().coalesce(unfold(), addV('_code').
@@ -1349,7 +1221,7 @@ g.V().hasId('_code_geography_K01000010').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_K01000010').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Carlisle").property('order', 168).next()
+      addE('usedBy').to('codeList')).property('label', "Carlisle").property('order', 152).next()
 
 g.V().hasId('_code_geography_K01000011').
   fold().coalesce(unfold(), addV('_code').
@@ -1357,7 +1229,7 @@ g.V().hasId('_code_geography_K01000011').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_K01000011').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Chester").property('order', 169).next()
+      addE('usedBy').to('codeList')).property('label', "Chester").property('order', 153).next()
 
 g.V().hasId('_code_geography_K01000013').
   fold().coalesce(unfold(), addV('_code').
@@ -1365,7 +1237,7 @@ g.V().hasId('_code_geography_K01000013').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_K01000013').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Newport").property('order', 170).next()
+      addE('usedBy').to('codeList')).property('label', "Newport").property('order', 154).next()
 
 g.V().hasId('_code_geography_K01000014').
   fold().coalesce(unfold(), addV('_code').
@@ -1373,447 +1245,7 @@ g.V().hasId('_code_geography_K01000014').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_K01000014').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Oswestry").property('order', 171).next()
-
-g.V().hasId('_code_geography_N12000001').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_N12000001').property(single, 'listID', 'geography').property(single, 'value', "N12000001")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000001').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Ballymena").property('order', 235).next()
-
-g.V().hasId('_code_geography_N12000002').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_N12000002').property(single, 'listID', 'geography').property(single, 'value', "N12000002")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000002').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Belfast").property('order', 236).next()
-
-g.V().hasId('_code_geography_N12000003').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_N12000003').property(single, 'listID', 'geography').property(single, 'value', "N12000003")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000003').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Coleraine").property('order', 237).next()
-
-g.V().hasId('_code_geography_N12000004').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_N12000004').property(single, 'listID', 'geography').property(single, 'value', "N12000004")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000004').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Cookstown and Magherafelt").property('order', 238).next()
-
-g.V().hasId('_code_geography_N12000005').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_N12000005').property(single, 'listID', 'geography').property(single, 'value', "N12000005")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000005').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Craigavon").property('order', 239).next()
-
-g.V().hasId('_code_geography_N12000006').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_N12000006').property(single, 'listID', 'geography').property(single, 'value', "N12000006")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000006').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Derry").property('order', 240).next()
-
-g.V().hasId('_code_geography_N12000007').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_N12000007').property(single, 'listID', 'geography').property(single, 'value', "N12000007")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000007').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Dungannon").property('order', 241).next()
-
-g.V().hasId('_code_geography_N12000008').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_N12000008').property(single, 'listID', 'geography').property(single, 'value', "N12000008")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000008').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Enniskillen").property('order', 242).next()
-
-g.V().hasId('_code_geography_N12000009').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_N12000009').property(single, 'listID', 'geography').property(single, 'value', "N12000009")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000009').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Newry and Banbridge").property('order', 243).next()
-
-g.V().hasId('_code_geography_N12000010').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_N12000010').property(single, 'listID', 'geography').property(single, 'value', "N12000010")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000010').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Omagh and Strabane").property('order', 244).next()
-
-g.V().hasId('_code_geography_S22000005').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000005').property(single, 'listID', 'geography').property(single, 'value', "S22000005")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000005').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Campbeltown").property('order', 190).next()
-
-g.V().hasId('_code_geography_S22000013').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000013').property(single, 'listID', 'geography').property(single, 'value', "S22000013")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000013').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Western Isles").property('order', 191).next()
-
-g.V().hasId('_code_geography_S22000032').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000032').property(single, 'listID', 'geography').property(single, 'value', "S22000032")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000032').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Mull and Islay").property('order', 192).next()
-
-g.V().hasId('_code_geography_S22000035').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000035').property(single, 'listID', 'geography').property(single, 'value', "S22000035")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000035').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Orkney Islands").property('order', 193).next()
-
-g.V().hasId('_code_geography_S22000039').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000039').property(single, 'listID', 'geography').property(single, 'value', "S22000039")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000039').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Shetland Islands").property('order', 194).next()
-
-g.V().hasId('_code_geography_S22000047').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000047').property(single, 'listID', 'geography').property(single, 'value', "S22000047")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000047').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Aberdeen").property('order', 195).next()
-
-g.V().hasId('_code_geography_S22000048').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000048').property(single, 'listID', 'geography').property(single, 'value', "S22000048")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000048').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Alness and Invergordon").property('order', 196).next()
-
-g.V().hasId('_code_geography_S22000049').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000049').property(single, 'listID', 'geography').property(single, 'value', "S22000049")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000049').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Arbroath and Montrose").property('order', 197).next()
-
-g.V().hasId('_code_geography_S22000050').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000050').property(single, 'listID', 'geography').property(single, 'value', "S22000050")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000050').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Aviemore and Grantown-on-Spey").property('order', 198).next()
-
-g.V().hasId('_code_geography_S22000051').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000051').property(single, 'listID', 'geography').property(single, 'value', "S22000051")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000051').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Ayr").property('order', 199).next()
-
-g.V().hasId('_code_geography_S22000052').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000052').property(single, 'listID', 'geography').property(single, 'value', "S22000052")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000052').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Broadford and Kyle of Lochalsh").property('order', 200).next()
-
-g.V().hasId('_code_geography_S22000053').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000053').property(single, 'listID', 'geography').property(single, 'value', "S22000053")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000053').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Dalbeattie and Castle Douglas").property('order', 201).next()
-
-g.V().hasId('_code_geography_S22000054').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000054').property(single, 'listID', 'geography').property(single, 'value', "S22000054")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000054').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Dumbarton and Helensburgh").property('order', 202).next()
-
-g.V().hasId('_code_geography_S22000055').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000055').property(single, 'listID', 'geography').property(single, 'value', "S22000055")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000055').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Dumfries").property('order', 203).next()
-
-g.V().hasId('_code_geography_S22000056').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000056').property(single, 'listID', 'geography').property(single, 'value', "S22000056")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000056').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Dundee").property('order', 204).next()
-
-g.V().hasId('_code_geography_S22000057').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000057').property(single, 'listID', 'geography').property(single, 'value', "S22000057")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000057').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Dunfermline and Kirkcaldy").property('order', 205).next()
-
-g.V().hasId('_code_geography_S22000058').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000058').property(single, 'listID', 'geography').property(single, 'value', "S22000058")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000058').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Dunoon and Rothesay").property('order', 206).next()
-
-g.V().hasId('_code_geography_S22000059').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000059').property(single, 'listID', 'geography').property(single, 'value', "S22000059")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000059').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Edinburgh").property('order', 207).next()
-
-g.V().hasId('_code_geography_S22000060').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000060').property(single, 'listID', 'geography').property(single, 'value', "S22000060")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000060').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Elgin").property('order', 208).next()
-
-g.V().hasId('_code_geography_S22000061').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000061').property(single, 'listID', 'geography').property(single, 'value', "S22000061")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000061').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Falkirk and Stirling").property('order', 209).next()
-
-g.V().hasId('_code_geography_S22000062').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000062').property(single, 'listID', 'geography').property(single, 'value', "S22000062")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000062').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Fort William").property('order', 210).next()
-
-g.V().hasId('_code_geography_S22000063').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000063').property(single, 'listID', 'geography').property(single, 'value', "S22000063")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000063').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Galashiels and Peebles").property('order', 211).next()
-
-g.V().hasId('_code_geography_S22000064').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000064').property(single, 'listID', 'geography').property(single, 'value', "S22000064")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000064').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Girvan").property('order', 212).next()
-
-g.V().hasId('_code_geography_S22000065').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000065').property(single, 'listID', 'geography').property(single, 'value', "S22000065")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000065').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Glasgow").property('order', 213).next()
-
-g.V().hasId('_code_geography_S22000066').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000066').property(single, 'listID', 'geography').property(single, 'value', "S22000066")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000066').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Golspie and Brora").property('order', 214).next()
-
-g.V().hasId('_code_geography_S22000067').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000067').property(single, 'listID', 'geography').property(single, 'value', "S22000067")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000067').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Hawick and Kelso").property('order', 215).next()
-
-g.V().hasId('_code_geography_S22000068').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000068').property(single, 'listID', 'geography').property(single, 'value', "S22000068")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000068').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Inverness").property('order', 216).next()
-
-g.V().hasId('_code_geography_S22000069').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000069').property(single, 'listID', 'geography').property(single, 'value', "S22000069")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000069').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Kilmarnock and Irvine").property('order', 217).next()
-
-g.V().hasId('_code_geography_S22000070').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000070').property(single, 'listID', 'geography').property(single, 'value', "S22000070")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000070').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Livingston").property('order', 218).next()
-
-g.V().hasId('_code_geography_S22000071').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000071').property(single, 'listID', 'geography').property(single, 'value', "S22000071")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000071').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Motherwell and Airdrie").property('order', 219).next()
-
-g.V().hasId('_code_geography_S22000072').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000072').property(single, 'listID', 'geography').property(single, 'value', "S22000072")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000072').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Newton Stewart").property('order', 220).next()
-
-g.V().hasId('_code_geography_S22000073').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000073').property(single, 'listID', 'geography').property(single, 'value', "S22000073")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000073').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Oban").property('order', 221).next()
-
-g.V().hasId('_code_geography_S22000074').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000074').property(single, 'listID', 'geography').property(single, 'value', "S22000074")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000074').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Perth").property('order', 222).next()
-
-g.V().hasId('_code_geography_S22000075').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000075').property(single, 'listID', 'geography').property(single, 'value', "S22000075")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000075').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Peterhead").property('order', 223).next()
-
-g.V().hasId('_code_geography_S22000076').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000076').property(single, 'listID', 'geography').property(single, 'value', "S22000076")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000076').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Pitlochry and Aberfeldy").property('order', 224).next()
-
-g.V().hasId('_code_geography_S22000077').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000077').property(single, 'listID', 'geography').property(single, 'value', "S22000077")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000077').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Portree").property('order', 225).next()
-
-g.V().hasId('_code_geography_S22000078').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000078').property(single, 'listID', 'geography').property(single, 'value', "S22000078")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000078').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "St Andrews and Cupar").property('order', 226).next()
-
-g.V().hasId('_code_geography_S22000079').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000079').property(single, 'listID', 'geography').property(single, 'value', "S22000079")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000079').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Stranraer").property('order', 227).next()
-
-g.V().hasId('_code_geography_S22000080').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000080').property(single, 'listID', 'geography').property(single, 'value', "S22000080")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000080').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Thurso").property('order', 228).next()
-
-g.V().hasId('_code_geography_S22000081').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000081').property(single, 'listID', 'geography').property(single, 'value', "S22000081")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000081').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Turriff and Banff").property('order', 229).next()
-
-g.V().hasId('_code_geography_S22000082').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000082').property(single, 'listID', 'geography').property(single, 'value', "S22000082")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000082').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Ullapool").property('order', 230).next()
-
-g.V().hasId('_code_geography_S22000083').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000083').property(single, 'listID', 'geography').property(single, 'value', "S22000083")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000083').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Wick").property('order', 231).next()
-
-g.V().hasId('_code_geography_S22000084').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000084').property(single, 'listID', 'geography').property(single, 'value', "S22000084")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000084').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Fraserburgh").property('order', 232).next()
-
-g.V().hasId('_code_geography_S22000085').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000085').property(single, 'listID', 'geography').property(single, 'value', "S22000085")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000085').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Greenock").property('order', 233).next()
-
-g.V().hasId('_code_geography_S22000086').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_S22000086').property(single, 'listID', 'geography').property(single, 'value', "S22000086")
-  ).next()
-  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000086').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Lochgilphead").property('order', 234).next()
+      addE('usedBy').to('codeList')).property('label', "Oswestry").property('order', 155).next()
 
 g.V().hasId('_code_geography_W22000003').
   fold().coalesce(unfold(), addV('_code').
@@ -1821,7 +1253,7 @@ g.V().hasId('_code_geography_W22000003').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W22000003').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Bridgend").property('order', 172).next()
+      addE('usedBy').to('codeList')).property('label', "Bridgend").property('order', 156).next()
 
 g.V().hasId('_code_geography_W22000009').
   fold().coalesce(unfold(), addV('_code').
@@ -1829,7 +1261,7 @@ g.V().hasId('_code_geography_W22000009').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W22000009').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Haverfordwest and Milford Haven").property('order', 173).next()
+      addE('usedBy').to('codeList')).property('label', "Haverfordwest and Milford Haven").property('order', 157).next()
 
 g.V().hasId('_code_geography_W22000011').
   fold().coalesce(unfold(), addV('_code').
@@ -1837,7 +1269,7 @@ g.V().hasId('_code_geography_W22000011').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W22000011').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Llandrindod Wells and Builth Wells").property('order', 174).next()
+      addE('usedBy').to('codeList')).property('label', "Llandrindod Wells and Builth Wells").property('order', 158).next()
 
 g.V().hasId('_code_geography_W22000015').
   fold().coalesce(unfold(), addV('_code').
@@ -1845,7 +1277,7 @@ g.V().hasId('_code_geography_W22000015').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W22000015').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Newtown and Welshpool").property('order', 175).next()
+      addE('usedBy').to('codeList')).property('label', "Newtown and Welshpool").property('order', 159).next()
 
 g.V().hasId('_code_geography_W22000016').
   fold().coalesce(unfold(), addV('_code').
@@ -1853,7 +1285,7 @@ g.V().hasId('_code_geography_W22000016').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W22000016').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Pembroke and Tenby").property('order', 176).next()
+      addE('usedBy').to('codeList')).property('label', "Pembroke and Tenby").property('order', 160).next()
 
 g.V().hasId('_code_geography_W22000021').
   fold().coalesce(unfold(), addV('_code').
@@ -1861,7 +1293,7 @@ g.V().hasId('_code_geography_W22000021').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W22000021').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Aberystwyth").property('order', 177).next()
+      addE('usedBy').to('codeList')).property('label', "Aberystwyth").property('order', 161).next()
 
 g.V().hasId('_code_geography_W22000022').
   fold().coalesce(unfold(), addV('_code').
@@ -1869,7 +1301,7 @@ g.V().hasId('_code_geography_W22000022').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W22000022').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Bangor and Holyhead").property('order', 178).next()
+      addE('usedBy').to('codeList')).property('label', "Bangor and Holyhead").property('order', 162).next()
 
 g.V().hasId('_code_geography_W22000023').
   fold().coalesce(unfold(), addV('_code').
@@ -1877,7 +1309,7 @@ g.V().hasId('_code_geography_W22000023').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W22000023').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Brecon").property('order', 179).next()
+      addE('usedBy').to('codeList')).property('label', "Brecon").property('order', 163).next()
 
 g.V().hasId('_code_geography_W22000024').
   fold().coalesce(unfold(), addV('_code').
@@ -1885,7 +1317,7 @@ g.V().hasId('_code_geography_W22000024').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W22000024').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Cardiff").property('order', 180).next()
+      addE('usedBy').to('codeList')).property('label', "Cardiff").property('order', 164).next()
 
 g.V().hasId('_code_geography_W22000025').
   fold().coalesce(unfold(), addV('_code').
@@ -1893,7 +1325,7 @@ g.V().hasId('_code_geography_W22000025').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W22000025').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Cardigan").property('order', 181).next()
+      addE('usedBy').to('codeList')).property('label', "Cardigan").property('order', 165).next()
 
 g.V().hasId('_code_geography_W22000026').
   fold().coalesce(unfold(), addV('_code').
@@ -1901,7 +1333,7 @@ g.V().hasId('_code_geography_W22000026').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W22000026').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Colwyn Bay").property('order', 182).next()
+      addE('usedBy').to('codeList')).property('label', "Colwyn Bay").property('order', 166).next()
 
 g.V().hasId('_code_geography_W22000028').
   fold().coalesce(unfold(), addV('_code').
@@ -1909,7 +1341,7 @@ g.V().hasId('_code_geography_W22000028').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W22000028').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Llanelli").property('order', 183).next()
+      addE('usedBy').to('codeList')).property('label', "Llanelli").property('order', 167).next()
 
 g.V().hasId('_code_geography_W22000029').
   fold().coalesce(unfold(), addV('_code').
@@ -1917,7 +1349,7 @@ g.V().hasId('_code_geography_W22000029').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W22000029').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Merthyr Tydfil").property('order', 184).next()
+      addE('usedBy').to('codeList')).property('label', "Merthyr Tydfil").property('order', 168).next()
 
 g.V().hasId('_code_geography_W22000030').
   fold().coalesce(unfold(), addV('_code').
@@ -1925,7 +1357,7 @@ g.V().hasId('_code_geography_W22000030').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W22000030').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Pwllheli and Porthmadog").property('order', 185).next()
+      addE('usedBy').to('codeList')).property('label', "Pwllheli and Porthmadog").property('order', 169).next()
 
 g.V().hasId('_code_geography_W22000031').
   fold().coalesce(unfold(), addV('_code').
@@ -1933,7 +1365,7 @@ g.V().hasId('_code_geography_W22000031').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W22000031').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Rhyl").property('order', 186).next()
+      addE('usedBy').to('codeList')).property('label', "Rhyl").property('order', 170).next()
 
 g.V().hasId('_code_geography_W22000032').
   fold().coalesce(unfold(), addV('_code').
@@ -1941,7 +1373,7 @@ g.V().hasId('_code_geography_W22000032').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W22000032').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Swansea").property('order', 187).next()
+      addE('usedBy').to('codeList')).property('label', "Swansea").property('order', 171).next()
 
 g.V().hasId('_code_geography_W22000033').
   fold().coalesce(unfold(), addV('_code').
@@ -1949,7 +1381,7 @@ g.V().hasId('_code_geography_W22000033').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W22000033').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Tywyn and Dolgellau").property('order', 188).next()
+      addE('usedBy').to('codeList')).property('label', "Tywyn and Dolgellau").property('order', 172).next()
 
 g.V().hasId('_code_geography_W22000034').
   fold().coalesce(unfold(), addV('_code').
@@ -1957,4 +1389,444 @@ g.V().hasId('_code_geography_W22000034').
   ).next()
   g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_W22000034').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Wrexham").property('order', 189).next()
+      addE('usedBy').to('codeList')).property('label', "Wrexham").property('order', 173).next()
+
+g.V().hasId('_code_geography_S22000005').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000005').property(single, 'listID', 'geography').property(single, 'value', "S22000005")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000005').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Campbeltown").property('order', 174).next()
+
+g.V().hasId('_code_geography_S22000013').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000013').property(single, 'listID', 'geography').property(single, 'value', "S22000013")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000013').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Western Isles").property('order', 175).next()
+
+g.V().hasId('_code_geography_S22000032').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000032').property(single, 'listID', 'geography').property(single, 'value', "S22000032")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000032').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Mull and Islay").property('order', 176).next()
+
+g.V().hasId('_code_geography_S22000035').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000035').property(single, 'listID', 'geography').property(single, 'value', "S22000035")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000035').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Orkney Islands").property('order', 177).next()
+
+g.V().hasId('_code_geography_S22000039').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000039').property(single, 'listID', 'geography').property(single, 'value', "S22000039")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000039').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Shetland Islands").property('order', 178).next()
+
+g.V().hasId('_code_geography_S22000047').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000047').property(single, 'listID', 'geography').property(single, 'value', "S22000047")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000047').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Aberdeen").property('order', 179).next()
+
+g.V().hasId('_code_geography_S22000048').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000048').property(single, 'listID', 'geography').property(single, 'value', "S22000048")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000048').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Alness and Invergordon").property('order', 180).next()
+
+g.V().hasId('_code_geography_S22000049').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000049').property(single, 'listID', 'geography').property(single, 'value', "S22000049")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000049').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Arbroath and Montrose").property('order', 181).next()
+
+g.V().hasId('_code_geography_S22000050').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000050').property(single, 'listID', 'geography').property(single, 'value', "S22000050")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000050').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Aviemore and Grantown-on-Spey").property('order', 182).next()
+
+g.V().hasId('_code_geography_S22000051').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000051').property(single, 'listID', 'geography').property(single, 'value', "S22000051")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000051').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Ayr").property('order', 183).next()
+
+g.V().hasId('_code_geography_S22000052').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000052').property(single, 'listID', 'geography').property(single, 'value', "S22000052")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000052').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Broadford and Kyle of Lochalsh").property('order', 184).next()
+
+g.V().hasId('_code_geography_S22000053').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000053').property(single, 'listID', 'geography').property(single, 'value', "S22000053")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000053').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Dalbeattie and Castle Douglas").property('order', 185).next()
+
+g.V().hasId('_code_geography_S22000054').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000054').property(single, 'listID', 'geography').property(single, 'value', "S22000054")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000054').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Dumbarton and Helensburgh").property('order', 186).next()
+
+g.V().hasId('_code_geography_S22000055').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000055').property(single, 'listID', 'geography').property(single, 'value', "S22000055")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000055').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Dumfries").property('order', 187).next()
+
+g.V().hasId('_code_geography_S22000056').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000056').property(single, 'listID', 'geography').property(single, 'value', "S22000056")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000056').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Dundee").property('order', 188).next()
+
+g.V().hasId('_code_geography_S22000057').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000057').property(single, 'listID', 'geography').property(single, 'value', "S22000057")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000057').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Dunfermline and Kirkcaldy").property('order', 189).next()
+
+g.V().hasId('_code_geography_S22000058').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000058').property(single, 'listID', 'geography').property(single, 'value', "S22000058")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000058').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Dunoon and Rothesay").property('order', 190).next()
+
+g.V().hasId('_code_geography_S22000059').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000059').property(single, 'listID', 'geography').property(single, 'value', "S22000059")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000059').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Edinburgh").property('order', 191).next()
+
+g.V().hasId('_code_geography_S22000060').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000060').property(single, 'listID', 'geography').property(single, 'value', "S22000060")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000060').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Elgin").property('order', 192).next()
+
+g.V().hasId('_code_geography_S22000061').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000061').property(single, 'listID', 'geography').property(single, 'value', "S22000061")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000061').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Falkirk and Stirling").property('order', 193).next()
+
+g.V().hasId('_code_geography_S22000062').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000062').property(single, 'listID', 'geography').property(single, 'value', "S22000062")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000062').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Fort William").property('order', 194).next()
+
+g.V().hasId('_code_geography_S22000063').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000063').property(single, 'listID', 'geography').property(single, 'value', "S22000063")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000063').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Galashiels and Peebles").property('order', 195).next()
+
+g.V().hasId('_code_geography_S22000064').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000064').property(single, 'listID', 'geography').property(single, 'value', "S22000064")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000064').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Girvan").property('order', 196).next()
+
+g.V().hasId('_code_geography_S22000065').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000065').property(single, 'listID', 'geography').property(single, 'value', "S22000065")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000065').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Glasgow").property('order', 197).next()
+
+g.V().hasId('_code_geography_S22000066').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000066').property(single, 'listID', 'geography').property(single, 'value', "S22000066")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000066').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Golspie and Brora").property('order', 198).next()
+
+g.V().hasId('_code_geography_S22000067').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000067').property(single, 'listID', 'geography').property(single, 'value', "S22000067")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000067').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Hawick and Kelso").property('order', 199).next()
+
+g.V().hasId('_code_geography_S22000068').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000068').property(single, 'listID', 'geography').property(single, 'value', "S22000068")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000068').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Inverness").property('order', 200).next()
+
+g.V().hasId('_code_geography_S22000069').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000069').property(single, 'listID', 'geography').property(single, 'value', "S22000069")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000069').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Kilmarnock and Irvine").property('order', 201).next()
+
+g.V().hasId('_code_geography_S22000070').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000070').property(single, 'listID', 'geography').property(single, 'value', "S22000070")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000070').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Livingston").property('order', 202).next()
+
+g.V().hasId('_code_geography_S22000071').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000071').property(single, 'listID', 'geography').property(single, 'value', "S22000071")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000071').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Motherwell and Airdrie").property('order', 203).next()
+
+g.V().hasId('_code_geography_S22000072').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000072').property(single, 'listID', 'geography').property(single, 'value', "S22000072")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000072').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Newton Stewart").property('order', 204).next()
+
+g.V().hasId('_code_geography_S22000073').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000073').property(single, 'listID', 'geography').property(single, 'value', "S22000073")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000073').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Oban").property('order', 205).next()
+
+g.V().hasId('_code_geography_S22000074').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000074').property(single, 'listID', 'geography').property(single, 'value', "S22000074")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000074').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Perth").property('order', 206).next()
+
+g.V().hasId('_code_geography_S22000075').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000075').property(single, 'listID', 'geography').property(single, 'value', "S22000075")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000075').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Peterhead").property('order', 207).next()
+
+g.V().hasId('_code_geography_S22000076').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000076').property(single, 'listID', 'geography').property(single, 'value', "S22000076")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000076').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Pitlochry and Aberfeldy").property('order', 208).next()
+
+g.V().hasId('_code_geography_S22000077').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000077').property(single, 'listID', 'geography').property(single, 'value', "S22000077")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000077').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Portree").property('order', 209).next()
+
+g.V().hasId('_code_geography_S22000078').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000078').property(single, 'listID', 'geography').property(single, 'value', "S22000078")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000078').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "St Andrews and Cupar").property('order', 210).next()
+
+g.V().hasId('_code_geography_S22000079').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000079').property(single, 'listID', 'geography').property(single, 'value', "S22000079")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000079').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Stranraer").property('order', 211).next()
+
+g.V().hasId('_code_geography_S22000080').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000080').property(single, 'listID', 'geography').property(single, 'value', "S22000080")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000080').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Thurso").property('order', 212).next()
+
+g.V().hasId('_code_geography_S22000081').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000081').property(single, 'listID', 'geography').property(single, 'value', "S22000081")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000081').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Turriff and Banff").property('order', 213).next()
+
+g.V().hasId('_code_geography_S22000082').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000082').property(single, 'listID', 'geography').property(single, 'value', "S22000082")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000082').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Ullapool").property('order', 214).next()
+
+g.V().hasId('_code_geography_S22000083').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000083').property(single, 'listID', 'geography').property(single, 'value', "S22000083")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000083').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Wick").property('order', 215).next()
+
+g.V().hasId('_code_geography_S22000084').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000084').property(single, 'listID', 'geography').property(single, 'value', "S22000084")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000084').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Fraserburgh").property('order', 216).next()
+
+g.V().hasId('_code_geography_S22000085').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000085').property(single, 'listID', 'geography').property(single, 'value', "S22000085")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000085').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Greenock").property('order', 217).next()
+
+g.V().hasId('_code_geography_S22000086').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_S22000086').property(single, 'listID', 'geography').property(single, 'value', "S22000086")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_S22000086').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Lochgilphead").property('order', 218).next()
+
+g.V().hasId('_code_geography_N12000001').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_N12000001').property(single, 'listID', 'geography').property(single, 'value', "N12000001")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000001').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Ballymena").property('order', 219).next()
+
+g.V().hasId('_code_geography_N12000002').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_N12000002').property(single, 'listID', 'geography').property(single, 'value', "N12000002")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000002').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Belfast").property('order', 220).next()
+
+g.V().hasId('_code_geography_N12000003').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_N12000003').property(single, 'listID', 'geography').property(single, 'value', "N12000003")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000003').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Coleraine").property('order', 221).next()
+
+g.V().hasId('_code_geography_N12000004').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_N12000004').property(single, 'listID', 'geography').property(single, 'value', "N12000004")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000004').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Cookstown and Magherafelt").property('order', 222).next()
+
+g.V().hasId('_code_geography_N12000005').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_N12000005').property(single, 'listID', 'geography').property(single, 'value', "N12000005")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000005').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Craigavon").property('order', 223).next()
+
+g.V().hasId('_code_geography_N12000006').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_N12000006').property(single, 'listID', 'geography').property(single, 'value', "N12000006")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000006').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Derry").property('order', 224).next()
+
+g.V().hasId('_code_geography_N12000007').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_N12000007').property(single, 'listID', 'geography').property(single, 'value', "N12000007")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000007').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Dungannon").property('order', 225).next()
+
+g.V().hasId('_code_geography_N12000008').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_N12000008').property(single, 'listID', 'geography').property(single, 'value', "N12000008")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000008').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Enniskillen").property('order', 226).next()
+
+g.V().hasId('_code_geography_N12000009').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_N12000009').property(single, 'listID', 'geography').property(single, 'value', "N12000009")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000009').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Newry and Banbridge").property('order', 227).next()
+
+g.V().hasId('_code_geography_N12000010').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_geography_N12000010').property(single, 'listID', 'geography').property(single, 'value', "N12000010")
+  ).next()
+  g.V().hasId('_code_list_travel-to-work-area_one-off').as('codeList').V().hasId('_code_geography_N12000010').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Omagh and Strabane").property('order', 228).next()

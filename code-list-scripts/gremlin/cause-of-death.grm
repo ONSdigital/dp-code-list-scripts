@@ -69,4 +69,3 @@ g.V().hasId('_code_cause-of-death_deaths-due-to-covid-19').
   g.V().hasId('_code_list_cause-of-death_one-off').as('codeList').V().hasId('_code_cause-of-death_deaths-due-to-covid-19').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
       addE('usedBy').to('codeList')).property('label', "Deaths due to COVID-19").property('order', 8).next()
-

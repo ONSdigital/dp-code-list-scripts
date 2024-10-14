@@ -7,37 +7,13 @@ g.V().hasId('_code_list_city-regions_one-off').
     property(single, 'edition', "one-off")
   ).next()
 
-g.V().hasId('_code_geography_E92000001').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_E92000001').property(single, 'listID', 'geography').property(single, 'value', "E92000001")
-  ).next()
-  g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_E92000001').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "England").property('order', 1).next()
-
-g.V().hasId('_code_geography_W92000004').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_W92000004').property(single, 'listID', 'geography').property(single, 'value', "W92000004")
-  ).next()
-  g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_W92000004').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Wales").property('order', 2).next()
-
-g.V().hasId('_code_geography_N92000002').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_geography_N92000002').property(single, 'listID', 'geography').property(single, 'value', "N92000002")
-  ).next()
-  g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_N92000002').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Northern Ireland").property('order', 3).next()
-
 g.V().hasId('_code_geography_E47000001').
   fold().coalesce(unfold(), addV('_code').
     property(id, '_code_geography_E47000001').property(single, 'listID', 'geography').property(single, 'value', "E47000001")
   ).next()
   g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_E47000001').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Greater Manchester").property('order', 11).next()
+      addE('usedBy').to('codeList')).property('label', "Greater Manchester").property('order', 1).next()
 
 g.V().hasId('_code_geography_E47000002').
   fold().coalesce(unfold(), addV('_code').
@@ -45,7 +21,7 @@ g.V().hasId('_code_geography_E47000002').
   ).next()
   g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_E47000002').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Sheffield City Region").property('order', 12).next()
+      addE('usedBy').to('codeList')).property('label', "Sheffield City Region").property('order', 2).next()
 
 g.V().hasId('_code_geography_E47000003').
   fold().coalesce(unfold(), addV('_code').
@@ -53,7 +29,7 @@ g.V().hasId('_code_geography_E47000003').
   ).next()
   g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_E47000003').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "West Yorkshire").property('order', 13).next()
+      addE('usedBy').to('codeList')).property('label', "West Yorkshire").property('order', 3).next()
 
 g.V().hasId('_code_geography_E47000004').
   fold().coalesce(unfold(), addV('_code').
@@ -61,7 +37,7 @@ g.V().hasId('_code_geography_E47000004').
   ).next()
   g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_E47000004').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Liverpool City Region").property('order', 14).next()
+      addE('usedBy').to('codeList')).property('label', "Liverpool City Region").property('order', 4).next()
 
 g.V().hasId('_code_geography_E47000006').
   fold().coalesce(unfold(), addV('_code').
@@ -69,7 +45,7 @@ g.V().hasId('_code_geography_E47000006').
   ).next()
   g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_E47000006').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Tees Valley").property('order', 15).next()
+      addE('usedBy').to('codeList')).property('label', "Tees Valley").property('order', 5).next()
 
 g.V().hasId('_code_geography_E47000007').
   fold().coalesce(unfold(), addV('_code').
@@ -77,7 +53,7 @@ g.V().hasId('_code_geography_E47000007').
   ).next()
   g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_E47000007').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "West Midlands").property('order', 16).next()
+      addE('usedBy').to('codeList')).property('label', "West Midlands").property('order', 6).next()
 
 g.V().hasId('_code_geography_E47000008').
   fold().coalesce(unfold(), addV('_code').
@@ -85,7 +61,7 @@ g.V().hasId('_code_geography_E47000008').
   ).next()
   g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_E47000008').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Cambridgeshire and Peterborough").property('order', 17).next()
+      addE('usedBy').to('codeList')).property('label', "Cambridgeshire and Peterborough").property('order', 7).next()
 
 g.V().hasId('_code_geography_E47000009').
   fold().coalesce(unfold(), addV('_code').
@@ -93,7 +69,7 @@ g.V().hasId('_code_geography_E47000009').
   ).next()
   g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_E47000009').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "West of England").property('order', 18).next()
+      addE('usedBy').to('codeList')).property('label', "West of England").property('order', 8).next()
 
 g.V().hasId('_code_geography_E47000010').
   fold().coalesce(unfold(), addV('_code').
@@ -101,7 +77,7 @@ g.V().hasId('_code_geography_E47000010').
   ).next()
   g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_E47000010').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "North East").property('order', 19).next()
+      addE('usedBy').to('codeList')).property('label', "North East").property('order', 9).next()
 
 g.V().hasId('_code_geography_E47000011').
   fold().coalesce(unfold(), addV('_code').
@@ -109,7 +85,7 @@ g.V().hasId('_code_geography_E47000011').
   ).next()
   g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_E47000011').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "North of Tyne").property('order', 20).next()
+      addE('usedBy').to('codeList')).property('label', "North of Tyne").property('order', 10).next()
 
 g.V().hasId('_code_geography_E61000001').
   fold().coalesce(unfold(), addV('_code').
@@ -117,7 +93,7 @@ g.V().hasId('_code_geography_E61000001').
   ).next()
   g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_E61000001').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Greater London Authority").property('order', 21).next()
+      addE('usedBy').to('codeList')).property('label', "Greater London Authority").property('order', 11).next()
 
 g.V().hasId('_code_geography_W42000001').
   fold().coalesce(unfold(), addV('_code').
@@ -125,7 +101,7 @@ g.V().hasId('_code_geography_W42000001').
   ).next()
   g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_W42000001').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Cardiff Capital Region").property('order', 30).next()
+      addE('usedBy').to('codeList')).property('label', "Cardiff Capital Region").property('order', 12).next()
 
 g.V().hasId('_code_geography_W42000002').
   fold().coalesce(unfold(), addV('_code').
@@ -133,7 +109,7 @@ g.V().hasId('_code_geography_W42000002').
   ).next()
   g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_W42000002').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Growing Mid Wales").property('order', 31).next()
+      addE('usedBy').to('codeList')).property('label', "Growing Mid Wales").property('order', 13).next()
 
 g.V().hasId('_code_geography_W42000003').
   fold().coalesce(unfold(), addV('_code').
@@ -141,7 +117,7 @@ g.V().hasId('_code_geography_W42000003').
   ).next()
   g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_W42000003').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "North Wales Economic Ambition Board").property('order', 32).next()
+      addE('usedBy').to('codeList')).property('label', "North Wales Economic Ambition Board").property('order', 14).next()
 
 g.V().hasId('_code_geography_W42000004').
   fold().coalesce(unfold(), addV('_code').
@@ -149,7 +125,7 @@ g.V().hasId('_code_geography_W42000004').
   ).next()
   g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_W42000004').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Swansea Bay City Region").property('order', 33).next()
+      addE('usedBy').to('codeList')).property('label', "Swansea Bay City Region").property('order', 15).next()
 
 g.V().hasId('_code_geography_N34000001').
   fold().coalesce(unfold(), addV('_code').
@@ -157,7 +133,7 @@ g.V().hasId('_code_geography_N34000001').
   ).next()
   g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_N34000001').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Belfast City Region").property('order', 40).next()
+      addE('usedBy').to('codeList')).property('label', "Belfast City Region").property('order', 16).next()
 
 g.V().hasId('_code_geography_N34000002').
   fold().coalesce(unfold(), addV('_code').
@@ -165,4 +141,4 @@ g.V().hasId('_code_geography_N34000002').
   ).next()
   g.V().hasId('_code_list_city-regions_one-off').as('codeList').V().hasId('_code_geography_N34000002').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Derry-Londonderry City Region").property('order', 41).next()
+      addE('usedBy').to('codeList')).property('label', "Derry-Londonderry City Region").property('order', 17).next()

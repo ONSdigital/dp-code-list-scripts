@@ -12,7 +12,7 @@ g.V().hasId('_code_yyyy-to-yyyy-yy_1978-to-2018-19').
   ).next()
   g.V().hasId('_code_list_yyyy-to-yyyy-yy_one-off').as('codeList').V().hasId('_code_yyyy-to-yyyy-yy_1978-to-2018-19').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1978 to 2018-19").next()
+      addE('usedBy').to('codeList')).property('label', "1978 to 2018-19").property('order', 1).next()
 
 g.V().hasId('_code_yyyy-to-yyyy-yy_1978-to-2019-20').
   fold().coalesce(unfold(), addV('_code').
@@ -20,7 +20,7 @@ g.V().hasId('_code_yyyy-to-yyyy-yy_1978-to-2019-20').
   ).next()
   g.V().hasId('_code_list_yyyy-to-yyyy-yy_one-off').as('codeList').V().hasId('_code_yyyy-to-yyyy-yy_1978-to-2019-20').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1978 to 2019-20").next()
+      addE('usedBy').to('codeList')).property('label', "1978 to 2019-20").property('order', 2).next()
 
 g.V().hasId('_code_yyyy-to-yyyy-yy_1978-to-2020-21').
   fold().coalesce(unfold(), addV('_code').
@@ -28,4 +28,4 @@ g.V().hasId('_code_yyyy-to-yyyy-yy_1978-to-2020-21').
   ).next()
   g.V().hasId('_code_list_yyyy-to-yyyy-yy_one-off').as('codeList').V().hasId('_code_yyyy-to-yyyy-yy_1978-to-2020-21').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
-       addE('usedBy').to('codeList')).property('label', "1978 to 2020-21").next()
+      addE('usedBy').to('codeList')).property('label', "1978 to 2020-21").property('order', 3).next()

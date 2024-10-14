@@ -238,14 +238,6 @@ g.V().hasId('_code_soc_62').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
       addE('usedBy').to('codeList')).property('label', "Leisure, travel and related personal service occupations").property('order', 29).next()
 
-g.V().hasId('_code_soc_63').
-  fold().coalesce(unfold(), addV('_code').
-    property(id, '_code_soc_63').property(single, 'listID', 'soc').property(single, 'value', "63")
-  ).next()
-  g.V().hasId('_code_list_soc_one-off').as('codeList').V().hasId('_code_soc_63').as('code').
-    coalesce(__.outE('usedBy').where(inV().as('codeList')),
-      addE('usedBy').to('codeList')).property('label', "Community and civil enforcement occupations").property('order', 495).next()
-
 g.V().hasId('_code_soc_71').
   fold().coalesce(unfold(), addV('_code').
     property(id, '_code_soc_71').property(single, 'listID', 'soc').property(single, 'value', "71")
@@ -3965,3 +3957,11 @@ g.V().hasId('_code_soc_9279').
   g.V().hasId('_code_list_soc_one-off').as('codeList').V().hasId('_code_soc_9279').as('code').
     coalesce(__.outE('usedBy').where(inV().as('codeList')),
       addE('usedBy').to('codeList')).property('label', "Other elementary services occupations n.e.c.").property('order', 494).next()
+
+g.V().hasId('_code_soc_63').
+  fold().coalesce(unfold(), addV('_code').
+    property(id, '_code_soc_63').property(single, 'listID', 'soc').property(single, 'value', "63")
+  ).next()
+  g.V().hasId('_code_list_soc_one-off').as('codeList').V().hasId('_code_soc_63').as('code').
+    coalesce(__.outE('usedBy').where(inV().as('codeList')),
+      addE('usedBy').to('codeList')).property('label', "Community and civil enforcement occupations").property('order', 495).next()
